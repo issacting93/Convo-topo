@@ -1,0 +1,11 @@
+Loading from sample-conversations.json...
+Found 10 conversations
+Individual files will be saved to: output
+
+Classifying with gpt-4 (OpenAI)...
+
+
+✅ Saved: sample-deep-discussion.json
+Progress: 1/10 (10%)
+✅ Saved: sample-question-answer.json
+Progress: 2/10 (20%)

@@ -1,0 +1,129 @@
+{
+  "abstain": false,
+  "interactionPattern": {
+    "category": "question-answer",
+    "confidence": 0.85,
+    "evidence": [
+      "What does machine learning mean?",
+      "Can you explain how neural networks work?"
+    ],
+    "rationale": "Human asks 5 direct questions, AI provides detailed explanations",
+    "alternative": null
+  },
+  "powerDynamics": {
+    "category": "human-led",
+    "confidence": 0.8,
+    "evidence": [
+      "User initiates all topics with questions",
+      "AI responds to user queries without redirecting"
+    ],
+    "rationale": "User controls conversation flow through question-asking",
+    "alternative": null
+  },
+  "emotionalTone": {
+    "category": "neutral",
+    "confidence": 0.7,
+    "evidence": [
+      "Factual exchange about technical concepts",
+      "No emotional markers present"
+    ],
+    "rationale": "Matter-of-fact informational exchange",
+    "alternative": "professional"
+  },
+  "engagementStyle": {
+    "category": "questioning",
+    "confidence": 0.9,
+    "evidence": [
+      "High density of question marks",
+      "Sequential questions building understanding"
+    ],
+    "rationale": "Exploration driven entirely by questions",
+    "alternative": null
+  },
+  "knowledgeExchange": {
+    "category": "factual-info",
+    "confidence": 0.85,
+    "evidence": [
+      "Definitions and technical explanations provided",
+      "Objective information shared"
+    ],
+    "rationale": "Transfer of factual knowledge about ML concepts",
+    "alternative": null
+  },
+  "conversationPurpose": {
+    "category": "information-seeking",
+    "confidence": 0.9,
+    "evidence": [
+      "Direct questions seeking specific knowledge",
+      "Clear learning objective"
+    ],
+    "rationale": "Primary goal is obtaining information",
+    "alternative": null
+  },
+  "topicDepth": {
+    "category": "moderate",
+    "confidence": 0.75,
+    "evidence": [
+      "Multiple turns exploring ML concepts",
+      "Follow-up questions for clarification"
+    ],
+    "rationale": "Some depth beyond surface level, with clarification",
+    "alternative": "deep"
+  },
+  "turnTaking": {
+    "category": "assistant-dominant",
+    "confidence": 0.8,
+    "evidence": [
+      "AI responses substantially longer than user questions"
+    ],
+    "rationale": "AI provides extensive explanations while user asks brief questions",
+    "alternative": null
+  },
+  "humanRole": {
+    "distribution": {
+      "seeker": 0.65,
+      "learner": 0.25,
+      "director": 0.0,
+      "collaborator": 0.05,
+      "sharer": 0.0,
+      "challenger": 0.05
+    },
+    "confidence": 0.75,
+    "evidence": [
+      {
+        "role": "seeker",
+        "quote": "What does machine learning mean?"
+      },
+      {
+        "role": "learner",
+        "quote": "So if I use a neural network, then it can recognize patterns?"
+      }
+    ],
+    "rationale": "Primarily seeking information (seeker) with some verification behavior (learner)",
+    "alternative": null
+  },
+  "aiRole": {
+    "distribution": {
+      "expert": 0.7,
+      "advisor": 0.15,
+      "facilitator": 0.1,
+      "reflector": 0.0,
+      "peer": 0.0,
+      "affiliative": 0.05
+    },
+    "confidence": 0.8,
+    "evidence": [
+      {
+        "role": "expert",
+        "quote": "Machine learning is a subset of artificial intelligence..."
+      },
+      {
+        "role": "advisor",
+        "quote": "I recommend starting with supervised learning"
+      }
+    ],
+    "rationale": "Primarily explains concepts (expert) with some recommendations (advisor)",
+    "alternative": null
+  }
+}
+

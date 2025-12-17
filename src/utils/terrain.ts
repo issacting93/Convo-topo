@@ -1,0 +1,391 @@
+function noise2D(x: number, y: number, seed = 0) {
+  const n = Math.sin(x * 12.9898 + y * 78.233 + seed) * 43758.5453;
+  return n - Math.floor(n);
+}
+
+function smoothNoise(x: number, y: number, seed: number) {
+  const x0 = Math.floor(x);
+  const y0 = Math.floor(y);
+  const fx = x - x0;
+  const fy = y - y0;
+  const smooth = (t: number) => t * t * (3 - 2 * t);
+  
+  const n00 = noise2D(x0, y0, seed);
+  const n10 = noise2D(x0 + 1, y0, seed);
+  const n01 = noise2D(x0, y0 + 1, seed);
+  const n11 = noise2D(x0 + 1, y0 + 1, seed);
+  
+  const nx0 = n00 * (1 - smooth(fx)) + n10 * smooth(fx);
+  const nx1 = n01 * (1 - smooth(fx)) + n11 * smooth(fx);
+  
+  return nx0 * (1 - smooth(fy)) + nx1 * smooth(fy);
+}
+
+function fractalNoise(x: number, y: number, octaves = 4, seed = 0) {
+  let value = 0, amplitude = 1, frequency = 1, maxValue = 0;
+  
+  for (let i = 0; i < octaves; i++) {
+    value += smoothNoise(x * frequency, y * frequency, seed + i * 100) * amplitude;
+    maxValue += amplitude;
+    amplitude *= 0.5;
+    frequency *= 2;
+  }
+  
+  return value / maxValue;
+}
+
+export type MetricMode = 'depth' | 'uncertainty' | 'affect' | 'composite';
+
+export interface TerrainParams {
+  seed: number;
+  topicDepth?: number; // Continuous depth score from 0.1 (shallow) to 1.0 (deep)
+  avgConfidence?: number;
+  emotionalIntensity?: number;
+  metricMode?: MetricMode; // Which metric to visualize
+}
+
+export function generateHeightmap(
+  size: number,
+  seed: number,
+  params?: Partial<TerrainParams>
+): Float32Array {
+  const data = new Float32Array(size * size);
+
+  // Extract terrain parameters
+  const topicDepth = params?.topicDepth ?? 0.5; // Default to middle depth
+  const avgConfidence = params?.avgConfidence ?? 0.7;
+  const emotionalIntensity = params?.emotionalIntensity ?? 0.5;
+  const metricMode = params?.metricMode ?? 'depth';
+
+  // Calculate parameters based on selected metric
+  let baseHeight: number;
+  let heightRange: number;
+  let complexityBoost: number;
+  let variation: number;
+  let peakBoost: number;
+
+  switch (metricMode) {
+    case 'depth':
+      // Pure depth visualization
+      baseHeight = 0.3 + (topicDepth * 0.5);  // 0.3 to 0.8
+      heightRange = 0.3 + (topicDepth * 0.4);  // 0.3 to 0.7
+      complexityBoost = 1.0 + (topicDepth * 0.8); // 1.0 to 1.8
+      variation = 0.7; // Fixed variation
+      peakBoost = 1.2; // Fixed peak boost
+      break;
+
+    case 'uncertainty':
+      // Confidence/uncertainty visualization (inverted: low confidence = high elevation)
+      const uncertainty = 1.0 - avgConfidence;
+      baseHeight = 0.3 + (uncertainty * 0.5);
+      heightRange = 0.3 + (uncertainty * 0.4);
+      complexityBoost = 1.0 + (uncertainty * 0.8); // More chaotic when uncertain
+      variation = 0.5 + (uncertainty * 0.4); // Rougher when uncertain
+      peakBoost = 1.0;
+      break;
+
+    case 'affect':
+      // Emotional intensity visualization
+      baseHeight = 0.3 + (emotionalIntensity * 0.5);
+      heightRange = 0.3 + (emotionalIntensity * 0.4);
+      complexityBoost = 1.0 + (emotionalIntensity * 0.6);
+      variation = 0.7;
+      peakBoost = 1.0 + (emotionalIntensity * 0.8); // Dramatic peaks for high affect
+      break;
+
+    case 'composite':
+    default:
+      // Original composite mode (all metrics combined)
+      baseHeight = 0.3 + (topicDepth * 0.5);
+      heightRange = 0.3 + (topicDepth * 0.4);
+      complexityBoost = 1.0 + (topicDepth * 0.8);
+      variation = 0.5 + (avgConfidence * 0.4);
+      peakBoost = 1.0 + (emotionalIntensity * 0.5);
+      break;
+  }
+  
+  for (let y = 0; y < size; y++) {
+    for (let x = 0; x < size; x++) {
+      const nx = x / size;
+      const ny = y / size;
+
+      // Multi-octave fractal noise for rich terrain detail
+      // Adjust frequency based on depth for more complex terrain
+      let height = fractalNoise(nx * 4 * complexityBoost, ny * 4 * complexityBoost, 6, seed);
+
+      // Add medium detail layer
+      height += fractalNoise(nx * 8, ny * 8, 4, seed + 50) * 0.5;
+
+      // Add fine detail layer (more pronounced for deeper conversations)
+      height += fractalNoise(nx * 16, ny * 16, 3, seed + 100) * 0.3 * topicDepth;
+
+      // Normalize to 0-1 range
+      height = height / (1.0 + 0.5 + 0.3 * topicDepth);
+
+      // Apply confidence-based variation
+      height = height * variation;
+
+      // Map to depth-based height range
+      // Center around baseHeight with heightRange determining spread
+      height = baseHeight + (height - 0.5) * heightRange * 2.0;
+
+      // Apply peak boost for emotional intensity
+      if (height > baseHeight) {
+        const peakAmount = (height - baseHeight) / (heightRange);
+        height = baseHeight + peakAmount * heightRange * peakBoost;
+      }
+
+      // Clamp to valid range (allow taller peaks for deeper conversations)
+      const maxAllowed = 1.0 + (topicDepth * 0.5); // Increased from 0.3 to 0.5 for taller peaks
+      data[y * size + x] = Math.max(0.1, Math.min(maxAllowed, height));
+    }
+  }
+  return data;
+}
+
+export type LineSegment = [{x: number, y: number}, {x: number, y: number}];
+
+export function marchingSquares(heightmap: Float32Array, size: number, threshold: number): LineSegment[] {
+  const lines: LineSegment[] = [];
+  const step = 1;
+  
+  for (let y = 0; y < size - step; y += step) {
+    for (let x = 0; x < size - step; x += step) {
+      const h00 = heightmap[y * size + x];
+      const h10 = heightmap[y * size + x + step];
+      const h01 = heightmap[(y + step) * size + x];
+      const h11 = heightmap[(y + step) * size + x + step];
+      
+      let caseIndex = 0;
+      if (h00 >= threshold) caseIndex |= 1;
+      if (h10 >= threshold) caseIndex |= 2;
+      if (h11 >= threshold) caseIndex |= 4;
+      if (h01 >= threshold) caseIndex |= 8;
+      
+      if (caseIndex === 0 || caseIndex === 15) continue;
+      
+      const lerp = (h1: number, h2: number) => {
+        if (Math.abs(h2 - h1) < 0.0001) return 0.5;
+        return (threshold - h1) / (h2 - h1);
+      };
+
+      const top = { x: x + lerp(h00, h10) * step, y: y };
+      const bottom = { x: x + lerp(h01, h11) * step, y: y + step };
+      const left = { x: x, y: y + lerp(h00, h01) * step };
+      const right = { x: x + step, y: y + lerp(h10, h11) * step };
+      
+      const segments: LineSegment[] = [];
+      switch (caseIndex) {
+        case 1: case 14: segments.push([top, left]); break;
+        case 2: case 13: segments.push([top, right]); break;
+        case 3: case 12: segments.push([left, right]); break;
+        case 4: case 11: segments.push([right, bottom]); break;
+        case 5: segments.push([top, right], [left, bottom]); break;
+        case 6: case 9: segments.push([top, bottom]); break;
+        case 7: case 8: segments.push([left, bottom]); break;
+        case 10: segments.push([top, left], [right, bottom]); break;
+      }
+      
+      segments.forEach(seg => lines.push(seg));
+    }
+  }
+  
+  return lines;
+}
+
+export interface Contour {
+  elevation: number;
+  isMajor: boolean;
+  lines: LineSegment[];
+}
+
+export function generateContours(
+  heightmap: Float32Array, 
+  size: number, 
+  numContours = 10
+): Contour[] {
+  const contours: Contour[] = [];
+  const minHeight = 0.1;
+  const maxHeight = 0.9;
+  
+  for (let i = 0; i <= numContours; i++) {
+    const threshold = minHeight + (maxHeight - minHeight) * (i / numContours);
+    const isMajor = i % 5 === 0;
+    const lines = marchingSquares(heightmap, size, threshold);
+    
+    if (lines.length > 0) {
+      contours.push({
+        elevation: threshold,
+        isMajor,
+        lines
+      });
+    }
+  }
+  
+  return contours;
+}
+
+export interface PathPoint {
+  x: number;
+  y: number;
+  height: number;
+  index: number;
+  communicationFunction: number;
+  conversationStructure: number;
+  role: 'user' | 'assistant';
+  content: string;
+  // Role-based visual encoding
+  humanRole?: string;  // Dominant human role for this message
+  aiRole?: string;     // Dominant AI role for this message
+  roleConfidence?: number; // Confidence in role assignment
+}
+
+/**
+ * Analyze a message to extract features for drift calculation
+ */
+function analyzeMessage(message: { role: 'user' | 'assistant'; content: string }): {
+  hasQuestion: boolean;
+  length: number;
+  expressiveScore: number;
+  structuredScore: number;
+} {
+  const content = message.content.toLowerCase();
+  const hasQuestion = content.includes('?');
+  const length = message.content.length;
+  
+  // Expressive indicators: personal pronouns, emotional words, casual language
+  const expressiveWords = ['i', 'my', 'me', 'feel', 'like', 'love', 'hate', 'wow', 'awesome', 'cool', 'nice', 'great', 'amazing', 'wonderful'];
+  const expressiveCount = expressiveWords.filter(word => content.includes(word)).length;
+  const hasContractions = content.includes("'");
+  const expressiveScore = Math.min(1, (expressiveCount * 0.2) + (hasContractions ? 0.3 : 0) + (length > 50 ? 0.2 : 0));
+  
+  // Structured indicators: questions, commands, formal language
+  const structuredWords = ['how', 'what', 'when', 'where', 'why', 'can', 'should', 'please', 'thank', 'could', 'would'];
+  const structuredCount = structuredWords.filter(word => content.startsWith(word) || content.includes(' ' + word)).length;
+  const structuredScore = Math.min(1, (hasQuestion ? 0.4 : 0) + (structuredCount * 0.15) + (length < 30 ? 0.2 : 0));
+  
+  return { hasQuestion, length, expressiveScore, structuredScore };
+}
+
+export function generatePathPoints(
+  heightmap: Float32Array,
+  size: number,
+  count: number,
+  messages: Array<{ 
+    role: 'user' | 'assistant'; 
+    content: string; 
+    communicationFunction: number; 
+    conversationStructure: number;
+    humanRole?: string;
+    aiRole?: string;
+    roleConfidence?: number;
+  }>
+): PathPoint[] {
+  const points: PathPoint[] = [];
+  
+  if (count === 0) return points;
+  
+  // All conversations start at the center (0.5, 0.5) - the origin point
+  const startX = 0.5;
+  const startY = 0.5;
+  
+  // Analyze all messages to calculate cumulative drift
+  const messageAnalyses = messages.map(msg => analyzeMessage(msg));
+  
+  // Calculate conversation-level target based on classification
+  // This is where the conversation "wants" to drift toward
+  const targetX = 0.1 + messages[0].communicationFunction * 0.8;
+  const targetY = 0.1 + messages[0].conversationStructure * 0.8;
+  
+  // Track cumulative position (starts at origin, drifts toward target)
+  let currentX = startX;
+  let currentY = startY;
+  
+  for (let i = 0; i < count; i++) {
+    const message = messages[i % messages.length];
+    const analysis = messageAnalyses[i % messageAnalyses.length];
+    const progress = i / Math.max(count - 1, 1); // 0 to 1
+    
+    // Calculate drift per message
+    // Drift is influenced by:
+    // 1. Message characteristics (expressive/structured scores)
+    // 2. Conversation target (where classification says it should go)
+    // 3. Temporal progression (more drift as conversation progresses)
+    
+    // Base drift toward conversation target (2x spacing)
+    const targetDriftX = (targetX - startX) * 1.2; // 120% toward target (doubled from 0.6)
+    const targetDriftY = (targetY - startY) * 1.2;
+
+    // Message-level drift based on content (2x spacing)
+    // Expressive messages drift right (toward expressive), structured messages drift forward (toward structured)
+    const messageDriftX = (analysis.expressiveScore - 0.5) * 0.5; // -0.25 to +0.25 (doubled from 0.25)
+    const messageDriftY = (analysis.structuredScore - 0.5) * 0.5;
+
+    // Role-based adjustments (2x spacing)
+    const roleDriftX = message.role === 'user' ? -0.06 : 0.06; // Doubled from 0.03
+    const roleDriftY = message.role === 'user' ? 0.06 : -0.06; // Doubled from 0.03
+
+    // Progressive drift: each message moves a bit more toward the target (2x spacing)
+    // Early messages drift less, later messages drift more
+    const driftFactor = 0.10 + (progress * 0.30); // 0.10 to 0.40 per message (doubled from 0.05-0.20)
+    
+    // Calculate drift for this message
+    const driftX = (targetDriftX + messageDriftX + roleDriftX) * driftFactor;
+    const driftY = (targetDriftY + messageDriftY + roleDriftY) * driftFactor;
+    
+    // Update position (cumulative drift)
+    currentX += driftX;
+    currentY += driftY;
+    
+    // Clamp to safe range
+    currentX = Math.max(0.05, Math.min(0.95, currentX));
+    currentY = Math.max(0.05, Math.min(0.95, currentY));
+    
+    const tx = Math.floor(currentX * (size - 1));
+    const ty = Math.floor(currentY * (size - 1));
+    const height = heightmap[ty * size + tx] ?? 0;
+    
+    points.push({ 
+      x: currentX, 
+      y: currentY, 
+      height, 
+      index: i,
+      communicationFunction: message.communicationFunction,
+      conversationStructure: message.conversationStructure,
+      role: message.role,
+      content: message.content,
+      // Include role information for visual encoding
+      humanRole: message.humanRole,
+      aiRole: message.aiRole,
+      roleConfidence: message.roleConfidence
+    });
+  }
+  return points;
+}
+
+export function getHeightAt(
+  heightmap: Float32Array,
+  size: number,
+  x: number,
+  y: number
+): number {
+  const xi = Math.floor(x);
+  const yi = Math.floor(y);
+  
+  if (xi < 0 || xi >= size - 1 || yi < 0 || yi >= size - 1) {
+    return 0;
+  }
+  
+  const fx = x - xi;
+  const fy = y - yi;
+  
+  const h00 = heightmap[yi * size + xi];
+  const h10 = heightmap[yi * size + xi + 1];
+  const h01 = heightmap[(yi + 1) * size + xi];
+  const h11 = heightmap[(yi + 1) * size + xi + 1];
+  
+  const h0 = h00 * (1 - fx) + h10 * fx;
+  const h1 = h01 * (1 - fx) + h11 * fx;
+  
+  return h0 * (1 - fy) + h1 * fy;
+}

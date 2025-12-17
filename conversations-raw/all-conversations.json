@@ -1,0 +1,164 @@
+[
+  {
+    "id": "cornell-0",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Can we make this quick?  Roxanne Korrine and Andrew Barrett are having an incredibly horrendous public break- up on the quad.  Again."
+      },
+      {
+        "role": "assistant",
+        "content": "Well, I thought we'd start with pronunciation, if that's okay with you."
+      },
+      {
+        "role": "user",
+        "content": "Not the hacking and gagging and spitting part.  Please."
+      },
+      {
+        "role": "assistant",
+        "content": "Okay... then how 'bout we try out some French cuisine.  Saturday?  Night?"
+      }
+    ]
+  },
+  {
+    "id": "cornell-1",
+    "messages": [
+      {
+        "role": "user",
+        "content": "You're asking me out.  That's so cute. What's your name again?"
+      },
+      {
+        "role": "assistant",
+        "content": "Forget it."
+      }
+    ]
+  },
+  {
+    "id": "cornell-2",
+    "messages": [
+      {
+        "role": "user",
+        "content": "No, no, it's my fault -- we didn't have a proper introduction ---"
+      },
+      {
+        "role": "assistant",
+        "content": "Cameron."
+      },
+      {
+        "role": "user",
+        "content": "The thing is, Cameron -- I'm at the mercy of a particularly hideous breed of loser.  My sister.  I can't date until she does."
+      },
+      {
+        "role": "assistant",
+        "content": "Seems like she could get a date easy enough..."
+      }
+    ]
+  },
+  {
+    "id": "cornell-3",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Why?"
+      },
+      {
+        "role": "assistant",
+        "content": "Unsolved mystery.  She used to be really popular when she started high school, then it was just like she got sick of it or something."
+      },
+      {
+        "role": "user",
+        "content": "That's a shame."
+      }
+    ]
+  },
+  {
+    "id": "cornell-4",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Gosh, if only we could find Kat a boyfriend..."
+      },
+      {
+        "role": "assistant",
+        "content": "Let me see what I can do."
+      }
+    ]
+  },
+  {
+    "id": "cornell-5",
+    "messages": [
+      {
+        "role": "user",
+        "content": "C'esc ma tete. This is my head"
+      },
+      {
+        "role": "assistant",
+        "content": "Right.  See?  You're ready for the quiz."
+      },
+      {
+        "role": "user",
+        "content": "I don't want to know how to say that though.  I want to know useful things. Like where the good stores are.  How much does champagne cost?  Stuff like Chat.  I have never in my life had to point out my head to someone."
+      },
+      {
+        "role": "assistant",
+        "content": "That's because it's such a nice one."
+      },
+      {
+        "role": "user",
+        "content": "Forget French."
+      }
+    ]
+  },
+  {
+    "id": "cornell-6",
+    "messages": [
+      {
+        "role": "user",
+        "content": "How is our little Find the Wench A Date plan progressing?"
+      },
+      {
+        "role": "assistant",
+        "content": "Well, there's someone I think might be --"
+      }
+    ]
+  },
+  {
+    "id": "cornell-7",
+    "messages": [
+      {
+        "role": "user",
+        "content": "There."
+      },
+      {
+        "role": "assistant",
+        "content": "Where?"
+      }
+    ]
+  },
+  {
+    "id": "cornell-8",
+    "messages": [
+      {
+        "role": "user",
+        "content": "You got something on your mind?"
+      },
+      {
+        "role": "assistant",
+        "content": "I counted on you to help my cause. You and that thug are obviously failing. Aren't we ever going on our date?"
+      }
+    ]
+  },
+  {
+    "id": "cornell-9",
+    "messages": [
+      {
+        "role": "user",
+        "content": "You have my word.  As a gentleman"
+      },
+      {
+        "role": "assistant",
+        "content": "You're sweet."
+      }
+    ]
+  }
+]
