@@ -41,7 +41,7 @@ python classifier-v1.1.py src/data/personaChatMessages.json classified-conversat
 ```
 
 This produces:
-- Full conversation classifications (10 dimensions)
+- Full conversation classifications (9 dimensions)
 - Windowed classifications showing role evolution
 - Confidence scores and evidence quotes
 
@@ -73,7 +73,7 @@ This produces:
 ### Current System (Simple Metrics)
 
 The visualization currently uses:
-- **X-axis (communicationFunction)**: 0 = instrumental, 1 = expressive
+- **X-axis (communicationFunction)**: 0 = functional, 1 = social
 - **Z-axis (conversationStructure)**: 0 = structured, 1 = emergent
 - **Y-axis (height)**: Based on terrain heightmap
 
@@ -94,7 +94,7 @@ interface ClassificationResult {
 }
 
 interface VisualizationParams {
-  x: number;  // Communication function (instrumental ↔ expressive)
+  x: number;  // Communication function (functional ↔ social)
   z: number;  // Conversation structure (structured ↔ emergent)
   y: number;  // Height/elevation
   color?: string;  // Based on role or emotional tone
@@ -104,7 +104,7 @@ interface VisualizationParams {
 function mapClassificationToVisualization(
   classification: ClassificationResult
 ): VisualizationParams {
-  // X-axis: Instrumental ↔ Expressive
+  // X-axis: Functional ↔ Social
   // Based on conversationPurpose and knowledgeExchange
   const x = calculateCommunicationFunction(classification);
   
@@ -120,8 +120,8 @@ function mapClassificationToVisualization(
 }
 
 function calculateCommunicationFunction(c: ClassificationResult): number {
-  // Information-seeking, problem-solving → more instrumental (low)
-  // Entertainment, relationship-building → more expressive (high)
+  // Information-seeking, problem-solving → more functional (low)
+  // Entertainment, relationship-building → more social (high)
   const purpose = c.conversationPurpose.category;
   const knowledge = c.knowledgeExchange.category;
   
@@ -173,8 +173,8 @@ function mapRoleDistributionToVisualization(
   aiRole: Record<string, number>
 ): VisualizationParams {
   // X-axis: Based on human role distribution
-  // Director + Challenger → more instrumental
-  // Sharer + Collaborator → more expressive
+  // Director + Challenger → more functional
+  // Sharer + Collaborator → more social
   const x = 
     (humanRole.director || 0) * 0.2 +
     (humanRole.challenger || 0) * 0.3 +

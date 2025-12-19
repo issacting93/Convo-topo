@@ -2,7 +2,7 @@ import fs from 'fs';
 
 // Analyze conversation characteristics to estimate communication function and conversation structure
 function analyzeMessage(content, role, historyLength) {
-  // Communication Function: 0 = instrumental/referential (task-oriented), 1 = expressive/phatic (relational)
+  // Communication Function: 0 = functional/referential (task-oriented), 1 = social/phatic (relational)
   // Heuristics:
   // - Questions, commands, factual statements = lower communicationFunction (instrumental)
   // - Emotional language, personal sharing, social bonding = higher communicationFunction (expressive)

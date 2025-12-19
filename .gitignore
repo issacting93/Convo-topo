@@ -28,6 +28,14 @@ dist/
 output/
 classified-output*.json
 
+# Temporary classifier files (can be regenerated)
+classifier/unclassified-*.json
+classifier/conversations-for-classifier.json
+
+# Archive/unrelated directories
+archive/
+temp-samantha/
+
 # IDE
 .vscode/
 .idea/
@@ -38,3 +46,4 @@ classified-output*.json
 .DS_Store
 Thumbs.db
 
+.vercel

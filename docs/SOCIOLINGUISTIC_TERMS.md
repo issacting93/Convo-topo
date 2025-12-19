@@ -4,13 +4,13 @@
 
 ### X-Axis: Functional ↔ Social
 
-#### Best Option: **INSTRUMENTAL ↔ EXPRESSIVE** (Talcott Parsons)
-- **Source**: Structural functionalism (Talcott Parsons, 1950s)
+#### Best Option: **FUNCTIONAL ↔ SOCIAL** (a.k.a. Instrumental ↔ Expressive in Parsons)
+- **Source**: Structural functionalism (Talcott Parsons, 1950s) uses instrumental/expressive; we surface the audience-friendly labels functional/social.
 - **Definition**: 
-  - **Instrumental**: Goal-oriented, task-focused, pragmatic action
-  - **Expressive**: Relationship-building, emotional, value-oriented action
-- **Why it fits**: Well-established in sociology, describes the same dimension you're measuring
-- **Usage**: "instrumentalExpressive" or "instrumentalOrientation"
+  - **Functional (Instrumental)**: Goal-oriented, task-focused, pragmatic action
+  - **Social (Expressive)**: Relationship-building, emotional, value-oriented action
+- **Why it fits**: Well-established in sociology; “functional/social” keeps the plain-language framing while aligning to the instrumental/expressive literature.
+- **Usage**: "functionalSocial" or "instrumentalExpressive" (code may still use `communicationFunction`)
 
 #### Alternative: **REFERENTIAL ↔ PHATIC** (Roman Jakobson)
 - **Source**: Functions of language (Roman Jakobson, 1960)
@@ -58,7 +58,7 @@
 
 ### Primary Recommendation:
 
-**X-Axis**: `instrumentalExpressive` or `communicationFunction`
+**X-Axis**: `functionalSocial` (a.k.a. `instrumentalExpressive`) or `communicationFunction`
 - Labels: **INSTRUMENTAL ↔ EXPRESSIVE**
 - 0 = Instrumental (task-focused, goal-oriented)
 - 1 = Expressive (relationship-focused, value-oriented)
@@ -80,8 +80,8 @@
 
 ### Frame Analysis Approach:
 - **X-Axis**: **FRONT STAGE ↔ BACK STAGE**
-  - Front Stage: Public, performative, instrumental
-  - Back Stage: Private, authentic, expressive
+  - Front Stage: Public, performative, functional/task
+  - Back Stage: Private, authentic, social/expressive
   - *Note: This is more about self-presentation than communication function*
 
 ### Keying & Footing:
@@ -96,7 +96,7 @@
 export interface Message {
   role: 'user' | 'assistant';
   content: string;
-  instrumentalExpressive: number; // 0 = instrumental, 1 = expressive
+  functionalSocial: number; // 0 = functional/instrumental, 1 = social/expressive
   discourseStructure: number; // 0 = structured, 1 = emergent
 }
 
@@ -104,7 +104,7 @@ export interface Message {
 export interface Message {
   role: 'user' | 'assistant';
   content: string;
-  communicationFunction: number; // 0 = referential/instrumental, 1 = phatic/expressive
+  communicationFunction: number; // 0 = functional/referential, 1 = social/phatic
   conversationStructure: number; // 0 = structured/prescribed, 1 = emergent/exploratory
 }
 ```
@@ -112,7 +112,7 @@ export interface Message {
 ## UI Labels Recommendation
 
 **Display in UI:**
-- **X-Axis**: "INSTRUMENTAL ↔ EXPRESSIVE" or "TASK ↔ RELATIONAL"
+- **X-Axis**: "FUNCTIONAL ↔ SOCIAL" (a.k.a. instrumental/expressive) or "TASK ↔ RELATIONAL"
 - **Z-Axis**: "STRUCTURED ↔ EMERGENT" or "PRESCRIBED ↔ EXPLORATORY"
 
 **Metric Labels:**

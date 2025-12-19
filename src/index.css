@@ -12,7 +12,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: #0a0a0f;
+  background: var(--background, #ffffff);
+  color: var(--foreground, oklch(0.145 0 0));
 }
 
 #root {

@@ -18,8 +18,8 @@
 Conversations are categorized using a **2-dimensional framework**:
 
 #### **Dimension 1: Communication Function**
-- **Instrumental (0.0-0.4):** Task-oriented, referential, problem-solving
-- **Expressive (0.45-1.0):** Relational, phatic, emotion-focused
+- **Functional (0.0-0.4):** Task-oriented, referential, problem-solving
+- **Social (0.45-1.0):** Relational, phatic, emotion-focused
 
 #### **Dimension 2: Conversation Structure**
 - **Structured (0.0-0.5):** Directive, prescribed, predictable
@@ -27,28 +27,28 @@ Conversations are categorized using a **2-dimensional framework**:
 
 ### Category Definitions
 
-#### 1. **Instrumental & Structured** 🟢
+#### 1. **Functional & Structured** 🟢
 - **ID:** `instrumental-structured`
 - **Color:** Green (#44ff66)
 - **Criteria:** Low communication function (<0.4) + Low structure (<0.5)
 - **Description:** Task-oriented, directive conversations
 - **Example:** Technical troubleshooting, instructions
 
-#### 2. **Expressive & Emergent** 🟠
+#### 2. **Social & Emergent** 🟠
 - **ID:** `expressive-emergent`
 - **Color:** Orange (#ffaa00)
 - **Criteria:** High communication function (>0.45) + High structure (>0.6)
 - **Description:** Relational, exploratory conversations
 - **Example:** Deep personal discussions, storytelling
 
-#### 3. **Instrumental & Emergent** 🔵
+#### 3. **Functional & Emergent** 🔵
 - **ID:** `instrumental-emergent`
 - **Color:** Cyan (#7ad4e8)
 - **Criteria:** Low communication function (<0.4) + High structure (>0.6)
 - **Description:** Task-focused but exploratory
 - **Example:** Brainstorming solutions, research discussions
 
-#### 4. **Expressive & Structured** 🔴
+#### 4. **Social & Structured** 🔴
 - **ID:** `expressive-structured`
 - **Color:** Orange-red (#ff8844)
 - **Criteria:** High communication function (>0.45) + Low structure (<0.5)
@@ -88,8 +88,8 @@ Conversations are categorized using a **2-dimensional framework**:
 Each message is placed on the 3D terrain based on:
 
 **X-Axis (Horizontal):** Communication Function
-- Left (0.1): Instrumental/Task-oriented
-- Right (0.9): Expressive/Relational
+- Left (0.1): Functional/Task-oriented
+- Right (0.9): Social/Relational
 
 **Z-Axis (Depth):** Conversation Structure
 - Front (0.1): Structured/Prescribed

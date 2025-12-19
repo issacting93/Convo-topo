@@ -209,10 +209,29 @@ def process_cornell_movie_dialogs(input_dir="temp-samantha/dataset", output_dir=
     print(f"✅ Processed {len(conversations)} Cornell Movie-Dialogs conversations")
     return conversations
 
+def download_kaggle_empathetic(output_dir="conversations-raw", limit=None):
+    """Download empathetic dialogues from Kaggle using kagglehub."""
+    try:
+        # Import the kaggle downloader
+        import sys
+        from pathlib import Path
+        script_dir = Path(__file__).parent
+        sys.path.insert(0, str(script_dir))
+        
+        from download_kaggle_empathetic import download_empathetic_dialogues
+        return download_empathetic_dialogues(output_dir=output_dir, limit=limit)
+    except ImportError:
+        print("⚠️  Kaggle downloader not available. Use download-kaggle-empathetic.py directly.")
+        print("   Install: pip install kagglehub[pandas-datasets]")
+        return []
+    except Exception as e:
+        print(f"❌ Error downloading from Kaggle: {e}")
+        return []
+
 def main():
     import argparse
     parser = argparse.ArgumentParser(description="Download conversation datasets")
-    parser.add_argument("--source", choices=["sharegpt", "openassistant", "cornell", "all"], 
+    parser.add_argument("--source", choices=["sharegpt", "openassistant", "cornell", "kaggle", "all"], 
                        default="cornell", help="Dataset to download")
     parser.add_argument("--limit", type=int, help="Limit number of conversations")
     parser.add_argument("--output", default="conversations-raw", help="Output directory")
@@ -233,11 +252,27 @@ def main():
         convs = download_openassistant(output_dir=args.output, limit=args.limit)
         all_conversations.extend(convs)
     
+    if args.source in ["kaggle", "all"]:
+        convs = download_kaggle_empathetic(output_dir=args.output, limit=args.limit)
+        all_conversations.extend(convs)
+    
     # Create combined file
     if all_conversations:
         combined_file = Path(args.output) / "all-conversations.json"
-        with open(combined_file, 'w') as f:
-            json.dump(all_conversations, f, indent=2)
+        
+        # Load existing conversations if file exists
+        existing_convs = []
+        if combined_file.exists():
+            try:
+                with open(combined_file, 'r', encoding='utf-8') as f:
+                    existing_convs = json.load(f)
+            except:
+                pass
+        
+        # Merge and save
+        all_conversations = existing_convs + all_conversations
+        with open(combined_file, 'w', encoding='utf-8') as f:
+            json.dump(all_conversations, f, indent=2, ensure_ascii=False)
         print(f"\n✅ Total: {len(all_conversations)} conversations saved to {args.output}/")
         print(f"   Combined file: {combined_file}")
 

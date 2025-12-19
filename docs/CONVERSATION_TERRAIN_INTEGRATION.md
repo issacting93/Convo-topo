@@ -12,7 +12,7 @@ Classified conversations from the OpenAI classifier are now used as terrain data
 
 Each classified conversation is converted to a terrain preset with:
 
-- **Seed**: Deterministically generated from classification categories (pattern, tone, purpose, depth)
+- **Seed**: Deterministically generated from classification categories (pattern, tone, purpose)
 - **Name**: Generated from interaction pattern and emotional tone (e.g., "Casual Chat Playful")
 - **Description**: Summarizes key classification dimensions and roles
 
@@ -21,8 +21,8 @@ Each classified conversation is converted to a terrain preset with:
 When a conversation terrain is selected, its messages are positioned on the terrain using:
 
 - **X-axis (communicationFunction)**: 
-  - 0.0-0.4 = Instrumental (task-oriented, problem-solving)
-  - 0.6-1.0 = Expressive (entertainment, relationship-building, self-expression)
+  - 0.0-0.4 = Functional (task-oriented, problem-solving)
+  - 0.6-1.0 = Social (entertainment, relationship-building, self-expression)
   - Mapped from `conversationPurpose` and `knowledgeExchange`
 
 - **Z-axis (conversationStructure)**:
@@ -66,9 +66,9 @@ python3 classifier-openai.py conversations-for-classifier.json classified-output
 ## Mapping Functions
 
 ### `getCommunicationFunction(conversation)`
-Maps classification to instrumental (0) ↔ expressive (1) axis:
-- High expressive: entertainment, relationship-building, self-expression
-- Low expressive: information-seeking, problem-solving
+Maps classification to functional (0) ↔ social (1) axis:
+- High social: entertainment, relationship-building, self-expression
+- Low social (functional): information-seeking, problem-solving
 - Uses `conversationPurpose` and `knowledgeExchange`
 
 ### `getConversationStructure(conversation)`
@@ -83,7 +83,6 @@ Each conversation gets a unique terrain seed based on:
 - Interaction pattern category
 - Emotional tone category
 - Conversation purpose category
-- Topic depth category
 - Conversation ID
 
 This ensures:
@@ -97,13 +96,12 @@ This ensures:
 - Pattern: `casual-chat`
 - Tone: `playful`
 - Purpose: `entertainment`
-- Depth: `surface`
 
 **Resulting Terrain:**
 - Name: "Casual Chat Playful"
 - Seed: 247 (deterministic hash)
-- Description: "casual-chat pattern, balanced dynamics, surface depth, human: sharer, ai: reflector"
-- Communication Function: ~0.75 (expressive)
+- Description: "casual-chat pattern, balanced dynamics, human: sharer, ai: reflector"
+- Communication Function: ~0.75 (social)
 - Conversation Structure: ~0.75 (emergent)
 
 ## Future Enhancements

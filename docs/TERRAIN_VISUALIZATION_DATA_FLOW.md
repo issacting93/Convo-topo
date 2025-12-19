@@ -22,14 +22,13 @@ Conversation Data → Classification → Terrain Generation → 3D Visualization
 }
 ```
 
-**Process:** OpenAI classifier analyzes the conversation across 10 dimensions:
+**Process:** OpenAI classifier analyzes the conversation across 9 dimensions:
 - Interaction Pattern (casual-chat, question-answer, etc.)
 - Power Dynamics (human-led, balanced, etc.)
 - Emotional Tone (playful, neutral, etc.)
 - Engagement Style (questioning, reactive, etc.)
 - Knowledge Exchange (personal-sharing, factual-info, etc.)
 - Conversation Purpose (entertainment, information-seeking, etc.)
-- Topic Depth (surface, moderate, deep)
 - Turn Taking (balanced, user-dominant, etc.)
 - Human Role Distribution (seeker: 0.5, sharer: 0.5, etc.)
 - AI Role Distribution (reflector: 0.8, facilitator: 0.2, etc.)
@@ -116,8 +115,8 @@ for threshold in [0.1, 0.2, ..., 0.9]:
 const message = messages[i];
 
 // X-axis: Communication Function
-// 0.0 = Instrumental (task-oriented)
-// 1.0 = Expressive (entertainment, relationship-building)
+// 0.0 = Functional (task-oriented)
+// 1.0 = Social (entertainment, relationship-building)
 const x = 0.1 + getCommunicationFunction(classification) * 0.8;
 
 // Y-axis: Conversation Structure  
@@ -131,9 +130,9 @@ const height = heightmap[floor(y * 64) * 64 + floor(x * 64)];
 
 **Mapping Logic:**
 - **Communication Function** derived from:
-  - `conversationPurpose`: entertainment/relationship → expressive (0.7-0.9)
-  - `conversationPurpose`: information-seeking/problem-solving → instrumental (0.1-0.3)
-  - `knowledgeExchange`: personal-sharing → expressive, factual-info → instrumental
+  - `conversationPurpose`: entertainment/relationship → social (0.7-0.9)
+  - `conversationPurpose`: information-seeking/problem-solving → functional (0.1-0.3)
+  - `knowledgeExchange`: personal-sharing → social, factual-info → functional
 
 - **Conversation Structure** derived from:
   - `interactionPattern`: collaborative/casual-chat → emergent (0.7-0.9)
@@ -263,7 +262,6 @@ const line = new THREE.Line(geometry, dashedMaterial);
 |-------------------------|---------|---------------|
 | `conversationPurpose` | X-axis (communicationFunction) | Left/Right position |
 | `interactionPattern` | Y-axis (conversationStructure) | Forward/Back position |
-| `topicDepth` | Terrain seed (indirect) | Terrain complexity |
 | `emotionalTone` | Terrain seed (indirect) | Terrain character |
 | `humanRole` / `aiRole` | Description text | Terrain card label |
 
@@ -282,7 +280,7 @@ AI: "I'm doing well! What about you?"
 - Purpose: `entertainment` (confidence: 0.7)
 - Tone: `playful` (confidence: 0.7)
 - Structure: `emergent` (0.75)
-- Function: `expressive` (0.75)
+- Function: `social` (0.75)
 
 **Terrain:**
 - Seed: `247` (from hash of classification)

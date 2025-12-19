@@ -18,10 +18,11 @@ export function clearConversationCache() {
  * This works in development with Vite's public folder
  */
 export async function loadClassifiedConversations(): Promise<ClassifiedConversation[]> {
-  if (cachedConversations) {
+  // Disable cache in development to always get fresh data
+  if (cachedConversations && import.meta.env.PROD) {
     return cachedConversations;
   }
-  
+
   const conversations: ClassifiedConversation[] = [];
   let index = 0;
   let hasMore = true;
@@ -81,11 +82,49 @@ export async function loadClassifiedConversations(): Promise<ClassifiedConversat
     }
   }
   
-  // Filter out abstained conversations (low confidence classifications)
-  const validConversations = conversations.filter(c => !c.classification?.abstain);
-
-  cachedConversations = validConversations;
-  return validConversations;
+  // Load emo-*.json files (empathetic dialogues)
+  // Try known emotions and indices
+  const emotions = [
+    'afraid', 'angry', 'annoyed', 'ashamed', 'confident', 'embarrassed',
+    'excited', 'faithful', 'grateful', 'guilty', 'jealous', 'joyful',
+    'lonely', 'nostalgic', 'prepared', 'proud', 'sad', 'sentimental',
+    'surprised', 'terrified'
+  ];
+  
+  for (const emotion of emotions) {
+    let emoIndex = 1;
+    let hasMoreEmo = true;
+    
+    // Try up to 10 conversations per emotion
+    while (hasMoreEmo && emoIndex <= 10) {
+      try {
+        const response = await fetch(`/output/emo-${emotion}-${emoIndex}.json`);
+        if (response.ok) {
+          const data = await response.json();
+          conversations.push(data);
+          emoIndex++;
+        } else if (response.status === 404) {
+          // No more files for this emotion
+          hasMoreEmo = false;
+        } else {
+          hasMoreEmo = false;
+        }
+      } catch (error) {
+        // File doesn't exist or other error
+        hasMoreEmo = false;
+      }
+    }
+  }
+  
+  // Return all conversations (even those with abstain or no classification)
+  // Conversations without classification will use default terrain parameters
+  if (import.meta.env.DEV) {
+    console.log(`Loaded ${conversations.length} total conversations`);
+    console.log(`  - With classification: ${conversations.filter(c => c.classification).length}`);
+    console.log(`  - Without classification: ${conversations.filter(c => !c.classification).length}`);
+  }
+  cachedConversations = conversations;
+  return conversations;
 }
 
 /**

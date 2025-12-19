@@ -1,28 +1,38 @@
 import * as THREE from 'three';
 
+// Theme colors for dark mode
+// Using chart colors for variety and visual interest
 export const COLORS = {
-  background: '#0a0a0a',
+  // Background - dark theme background
+  background: '#030213',
   terrain: {
-    // Brightened terrain palette for visibility
-    low: new THREE.Color(0x2a2a2a),
-    mid: new THREE.Color(0x4d4d33),
-    high: new THREE.Color(0x7a7a44),
+    // Terrain palette - light grays for visibility on dark background
+    low: new THREE.Color(0x404040),   // Dark gray
+    mid: new THREE.Color(0x606060),   // Medium gray  
+    high: new THREE.Color(0x808080),  // Light gray
   },
   contour: {
-    minor: '#c8d432',
-    major: '#d4e040',
-    index: '#e8f050', // Every 5th major line
+    // Light yellow-green contours for visibility on dark background
+    minor: '#a0d080',  // Light yellow-green
+    major: '#b0e090',  // Lighter for major lines
+    index: '#c0f0a0',  // Lightest for index contours
   },
-  wireframe: '#1a1a1a',
-  grid: '#2a2a1a',
-  gridDim: '#1a1a0a',
-  marker: '#44ff66',
-  markerGlow: '#66ff88',
-  path: '#44ff66',
-  pathGlow: '#22ff44',
-  fog: '#050505',
-  accent: '#c8d432',
-  label: '#c8d432',
+  wireframe: '#606060',
+  grid: '#404040',      // Dark gray for visibility on dark background
+  gridDim: '#2a2a2a',   // Very dark gray for secondary grid lines
+  // Using chart colors for markers
+  marker: '#4ade80',    // chart-2 (green) - oklch(0.696 0.17 162.48)
+  markerGlow: '#6ee89e',
+  path: '#FDD90D',      // Yellow/gold path color
+  pathGlow: '#FFE550',
+  // User vs Assistant colors using chart colors
+  userMarker: '#7b68ee',      // chart-1 (purple-blue) - user messages
+  userMarkerGlow: '#9b88f0',  // Lighter variant
+  assistantMarker: '#f97316', // chart-5 (orange) - assistant messages
+  assistantMarkerGlow: '#fb923c', // Lighter variant
+  fog: '#050810',
+  accent: new THREE.Color('#7b68ee'),     // chart-1 as primary accent
+  label: '#ffffff',      // Light text for dark background
 };
 
 /**
@@ -30,21 +40,21 @@ export const COLORS = {
  * Colors represent user positioning patterns (projections), not AI capabilities
  */
 export const ROLE_COLORS: Record<string, string> = {
-  // Human roles (user projections)
-  'director': '#ff6b6b',      // Red - instructor/leader
-  'challenger': '#ff8e53',    // Orange - evaluator
-  'seeker': '#4ecdc4',        // Cyan - dependent/inquirer
-  'learner': '#45b7d1',       // Blue - dependent/student
-  'sharer': '#96ceb4',        // Green - confidant
-  'collaborator': '#ffeaa7',  // Yellow - collaborator
+  // Human roles (user projections) - using chart colors
+  'director': '#ec4899',      // chart-4 (magenta) - instructor/leader
+  'challenger': '#f97316',    // chart-5 (orange) - evaluator
+  'seeker': '#7b68ee',        // chart-1 (purple-blue) - dependent/inquirer
+  'learner': '#4ade80',       // chart-2 (green) - dependent/student
+  'sharer': '#fbbf24',        // chart-3 (yellow) - confidant
+  'collaborator': '#7b68ee',  // chart-1 variant - collaborator
   
-  // AI roles (how user positioned AI)
-  'expert': '#a29bfe',        // Purple - authority
-  'advisor': '#6c5ce7',       // Deep purple - guidance
-  'facilitator': '#fd79a8',   // Pink - helper
-  'reflector': '#fdcb6e',     // Gold - mirror
-  'peer': '#55efc4',         // Teal - equal
-  'affiliative': '#81ecec',  // Light cyan - friend
+  // AI roles (how user positioned AI) - using chart colors
+  'expert': '#7b68ee',        // chart-1 (purple-blue) - authority
+  'advisor': '#4ade80',       // chart-2 (green) - guidance
+  'facilitator': '#ec4899',   // chart-4 (magenta) - helper
+  'reflector': '#fbbf24',     // chart-3 (yellow) - mirror
+  'peer': '#4ade80',          // chart-2 (green) - equal
+  'affiliative': '#7b68ee',   // chart-1 (purple-blue) - friend
 };
 
 /**

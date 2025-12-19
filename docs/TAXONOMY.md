@@ -297,52 +297,7 @@ CONVERSATION_PURPOSE
 
 ---
 
-## Dimension 7: Topic Depth
-**Category**: Quality Dimension
-**Domain**: Cognitive Engagement
-**Purpose**: Measures how thoroughly subjects are explored
-
-### Taxonomy
-
-```
-TOPIC_DEPTH
-├── surface
-│   ├── Definition: Brief, shallow exchanges
-│   ├── Message count: ≤2 messages
-│   ├── Message length: <40 characters average
-│   ├── Structure score: <0.5
-│   ├── Characteristics:
-│   │   ├── Single topic, minimal elaboration
-│   │   ├── Quick back-and-forth
-│   │   └── Limited development
-│   └── Example: "Hi!" → "Hello! How are you?" → "Good!"
-├── moderate
-│   ├── Definition: Some development of ideas
-│   ├── Message count: 3-5 messages
-│   ├── Message length: 40-60 characters average
-│   ├── Structure score: 0.5-0.6
-│   ├── Characteristics:
-│   │   ├── Topic with some elaboration
-│   │   ├── Follow-up questions
-│   │   └── Basic depth
-│   └── Example: Topic introduced → Details shared → Follow-up → Response
-└── deep
-    ├── Definition: Extensive exploration
-    ├── Message count: ≥6 messages
-    ├── Message length: >60 characters average
-    ├── Structure score: >0.6
-    ├── Characteristics:
-    │   ├── Multiple subtopics
-    │   ├── Rich elaboration
-    │   └── Nuanced discussion
-    └── Example: Complex multi-turn discussion with branches
-```
-
-**Measurement**: Combines message count, length, and structure score
-
----
-
-## Dimension 8: Turn Taking
+## Dimension 7: Turn Taking
 **Category**: Quality Dimension
 **Domain**: Conversational Balance
 **Purpose**: Evaluates the distribution of speaking time/effort
@@ -679,8 +634,8 @@ const rolePairs = conversations.reduce((acc, conv) => {
 
 ### Hierarchical Structure
 - **Level 1**: 4 Meta-Categories (Structural, Communicative, Content, Quality, Role)
-- **Level 2**: 10 Dimensions
-- **Level 3**: 58 Tags
+- **Level 2**: 9 Dimensions
+- **Level 3**: 55 Tags
 
 ### Tag Independence
 Most dimensions are **orthogonal** (independent), but some correlations exist:

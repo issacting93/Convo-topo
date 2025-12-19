@@ -160,5 +160,445 @@
         "content": "You're sweet."
       }
     ]
+  },
+  {
+    "id": "kaggle-emo-0",
+    "messages": [
+      {
+        "role": "user",
+        "content": "0"
+      },
+      {
+        "role": "assistant",
+        "content": "1"
+      },
+      {
+        "role": "user",
+        "content": "2"
+      },
+      {
+        "role": "assistant",
+        "content": "3"
+      },
+      {
+        "role": "user",
+        "content": "4"
+      },
+      {
+        "role": "assistant",
+        "content": "5"
+      }
+    ]
+  },
+  {
+    "id": "kaggle-emo-1",
+    "messages": [
+      {
+        "role": "user",
+        "content": "6"
+      },
+      {
+        "role": "assistant",
+        "content": "7"
+      },
+      {
+        "role": "user",
+        "content": "8"
+      },
+      {
+        "role": "assistant",
+        "content": "9"
+      },
+      {
+        "role": "user",
+        "content": "10"
+      },
+      {
+        "role": "assistant",
+        "content": "11"
+      }
+    ]
+  },
+  {
+    "id": "kaggle-emo-2",
+    "messages": [
+      {
+        "role": "user",
+        "content": "12"
+      },
+      {
+        "role": "assistant",
+        "content": "13"
+      },
+      {
+        "role": "user",
+        "content": "14"
+      },
+      {
+        "role": "assistant",
+        "content": "15"
+      },
+      {
+        "role": "user",
+        "content": "16"
+      },
+      {
+        "role": "assistant",
+        "content": "17"
+      }
+    ]
+  },
+  {
+    "id": "kaggle-emo-3",
+    "messages": [
+      {
+        "role": "user",
+        "content": "18"
+      },
+      {
+        "role": "assistant",
+        "content": "19"
+      },
+      {
+        "role": "user",
+        "content": "20"
+      },
+      {
+        "role": "assistant",
+        "content": "21"
+      },
+      {
+        "role": "user",
+        "content": "22"
+      },
+      {
+        "role": "assistant",
+        "content": "23"
+      }
+    ]
+  },
+  {
+    "id": "kaggle-emo-4",
+    "messages": [
+      {
+        "role": "user",
+        "content": "24"
+      },
+      {
+        "role": "assistant",
+        "content": "25"
+      },
+      {
+        "role": "user",
+        "content": "26"
+      },
+      {
+        "role": "assistant",
+        "content": "27"
+      },
+      {
+        "role": "user",
+        "content": "28"
+      },
+      {
+        "role": "assistant",
+        "content": "29"
+      }
+    ]
+  },
+  {
+    "id": "kaggle-emo-5",
+    "messages": [
+      {
+        "role": "user",
+        "content": "30"
+      },
+      {
+        "role": "assistant",
+        "content": "31"
+      },
+      {
+        "role": "user",
+        "content": "32"
+      },
+      {
+        "role": "assistant",
+        "content": "33"
+      },
+      {
+        "role": "user",
+        "content": "34"
+      },
+      {
+        "role": "assistant",
+        "content": "35"
+      }
+    ]
+  },
+  {
+    "id": "kaggle-emo-6",
+    "messages": [
+      {
+        "role": "user",
+        "content": "36"
+      },
+      {
+        "role": "assistant",
+        "content": "37"
+      },
+      {
+        "role": "user",
+        "content": "38"
+      },
+      {
+        "role": "assistant",
+        "content": "39"
+      },
+      {
+        "role": "user",
+        "content": "40"
+      },
+      {
+        "role": "assistant",
+        "content": "41"
+      }
+    ]
+  },
+  {
+    "id": "kaggle-emo-7",
+    "messages": [
+      {
+        "role": "user",
+        "content": "42"
+      },
+      {
+        "role": "assistant",
+        "content": "43"
+      },
+      {
+        "role": "user",
+        "content": "44"
+      },
+      {
+        "role": "assistant",
+        "content": "45"
+      },
+      {
+        "role": "user",
+        "content": "46"
+      },
+      {
+        "role": "assistant",
+        "content": "47"
+      }
+    ]
+  },
+  {
+    "id": "kaggle-emo-8",
+    "messages": [
+      {
+        "role": "user",
+        "content": "48"
+      },
+      {
+        "role": "assistant",
+        "content": "49"
+      },
+      {
+        "role": "user",
+        "content": "50"
+      },
+      {
+        "role": "assistant",
+        "content": "51"
+      },
+      {
+        "role": "user",
+        "content": "52"
+      },
+      {
+        "role": "assistant",
+        "content": "53"
+      }
+    ]
+  },
+  {
+    "id": "kaggle-emo-9",
+    "messages": [
+      {
+        "role": "user",
+        "content": "54"
+      },
+      {
+        "role": "assistant",
+        "content": "55"
+      },
+      {
+        "role": "user",
+        "content": "56"
+      },
+      {
+        "role": "assistant",
+        "content": "57"
+      },
+      {
+        "role": "user",
+        "content": "58"
+      },
+      {
+        "role": "assistant",
+        "content": "59"
+      }
+    ]
+  },
+  {
+    "id": "kaggle-emo-0",
+    "messages": [
+      {
+        "role": "user",
+        "content": "I remember going to see the fireworks with my best friend. It was the first time we ever spent time alone together. Although there was a lot of people, we felt like the only people in the world."
+      },
+      {
+        "role": "assistant",
+        "content": ""
+      }
+    ],
+    "emotion": "sentimental",
+    "situation": "I remember going to the fireworks with my best friend. There was a lot of people, but it only felt like us in the world."
+  },
+  {
+    "id": "kaggle-emo-1",
+    "messages": [
+      {
+        "role": "user",
+        "content": "This was a best friend. I miss her."
+      },
+      {
+        "role": "assistant",
+        "content": ""
+      }
+    ],
+    "emotion": "sentimental",
+    "situation": "I remember going to the fireworks with my best friend. There was a lot of people, but it only felt like us in the world."
+  },
+  {
+    "id": "kaggle-emo-2",
+    "messages": [
+      {
+        "role": "user",
+        "content": "We no longer talk."
+      },
+      {
+        "role": "assistant",
+        "content": ""
+      }
+    ],
+    "emotion": "sentimental",
+    "situation": "I remember going to the fireworks with my best friend. There was a lot of people, but it only felt like us in the world."
+  },
+  {
+    "id": "kaggle-emo-3",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Was this a friend you were in love with, or just a best friend?"
+      },
+      {
+        "role": "assistant",
+        "content": ""
+      }
+    ],
+    "emotion": "sentimental",
+    "situation": "I remember going to the fireworks with my best friend. There was a lot of people, but it only felt like us in the world."
+  },
+  {
+    "id": "kaggle-emo-4",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Where has she gone?"
+      },
+      {
+        "role": "assistant",
+        "content": ""
+      }
+    ],
+    "emotion": "sentimental",
+    "situation": "I remember going to the fireworks with my best friend. There was a lot of people, but it only felt like us in the world."
+  },
+  {
+    "id": "kaggle-emo-5",
+    "messages": [
+      {
+        "role": "user",
+        "content": "it feels like hitting to blank wall when i see the darkness"
+      },
+      {
+        "role": "assistant",
+        "content": ""
+      }
+    ],
+    "emotion": "afraid",
+    "situation": " i used to scare for darkness"
+  },
+  {
+    "id": "kaggle-emo-6",
+    "messages": [
+      {
+        "role": "user",
+        "content": "dont you feel so.. its a wonder"
+      },
+      {
+        "role": "assistant",
+        "content": ""
+      }
+    ],
+    "emotion": "afraid",
+    "situation": " i used to scare for darkness"
+  },
+  {
+    "id": "kaggle-emo-7",
+    "messages": [
+      {
+        "role": "user",
+        "content": "i virtually thought so.. and i used to get sweatings"
+      },
+      {
+        "role": "assistant",
+        "content": ""
+      }
+    ],
+    "emotion": "afraid",
+    "situation": " i used to scare for darkness"
+  },
+  {
+    "id": "kaggle-emo-8",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Oh ya? I don't really see how"
+      },
+      {
+        "role": "assistant",
+        "content": ""
+      }
+    ],
+    "emotion": "afraid",
+    "situation": " i used to scare for darkness"
+  },
+  {
+    "id": "kaggle-emo-9",
+    "messages": [
+      {
+        "role": "user",
+        "content": "I do actually hit blank walls a lot of times but i get by"
+      },
+      {
+        "role": "assistant",
+        "content": ""
+      }
+    ],
+    "emotion": "afraid",
+    "situation": " i used to scare for darkness"
   }
 ]

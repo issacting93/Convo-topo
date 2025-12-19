@@ -11,8 +11,7 @@ export interface RoleMetadata {
   knowledgeExchange: 'personal-sharing' | 'skill-sharing' | 'opinion-exchange' | 'factual-info' | 'experience-sharing';
   conversationPurpose: 'relationship-building' | 'information-seeking' | 'entertainment' | 'problem-solving' | 'self-expression';
 
-  // Depth metrics
-  topicDepth: 'surface' | 'moderate' | 'deep';
+  // Turn taking
   turnTaking: 'balanced' | 'user-dominant' | 'assistant-dominant';
 
   // Role characteristics
@@ -75,7 +74,7 @@ function getConversationStats(conv: PersonaChatConversation) {
 export const CONVERSATION_CATEGORIES: ConversationCategory[] = [
   {
     id: 'instrumental-structured',
-    name: 'Instrumental & Structured',
+    name: 'Functional & Structured',
     description: 'Task-oriented, directive conversations',
     color: '#44ff66', // Green
     criteria: (conv) => {
@@ -85,7 +84,7 @@ export const CONVERSATION_CATEGORIES: ConversationCategory[] = [
   },
   {
     id: 'expressive-emergent',
-    name: 'Expressive & Emergent',
+    name: 'Social & Emergent',
     description: 'Relational, exploratory conversations',
     color: '#ffaa00', // Orange
     criteria: (conv) => {
@@ -95,7 +94,7 @@ export const CONVERSATION_CATEGORIES: ConversationCategory[] = [
   },
   {
     id: 'instrumental-emergent',
-    name: 'Instrumental & Emergent',
+    name: 'Functional & Emergent',
     description: 'Task-focused but exploratory',
     color: '#7ad4e8', // Cyan
     criteria: (conv) => {
@@ -105,7 +104,7 @@ export const CONVERSATION_CATEGORIES: ConversationCategory[] = [
   },
   {
     id: 'expressive-structured',
-    name: 'Expressive & Structured',
+    name: 'Social & Structured',
     description: 'Relational but directive',
     color: '#ff8844', // Orange-red
     criteria: (conv) => {

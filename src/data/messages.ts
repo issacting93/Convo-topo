@@ -1,7 +1,7 @@
 export interface Message {
   role: 'user' | 'assistant';
   content: string;
-  communicationFunction: number; // 0 = instrumental/referential, 1 = expressive/phatic
+  communicationFunction: number; // 0 = functional/referential, 1 = social/phatic
   conversationStructure: number; // 0 = structured/prescribed, 1 = emergent/exploratory
 }
 

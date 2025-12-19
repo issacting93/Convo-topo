@@ -1,0 +1,766 @@
+[
+  {
+    "id": "emo-afraid-1",
+    "messages": [
+      {
+        "role": "user",
+        "content": "it feels like hitting to blank wall when i see the darkness"
+      },
+      {
+        "role": "assistant",
+        "content": "Oh ya? I don't really see how"
+      },
+      {
+        "role": "user",
+        "content": "dont you feel so.. its a wonder"
+      },
+      {
+        "role": "assistant",
+        "content": "I do actually hit blank walls a lot of times but i get by"
+      },
+      {
+        "role": "user",
+        "content": "i virtually thought so.. and i used to get sweatings"
+      },
+      {
+        "role": "assistant",
+        "content": "Wait what are sweatings"
+      }
+    ],
+    "emotion": "afraid",
+    "situation": "i used to scare for darkness",
+    "source": "empathetic_dialogues"
+  },
+  {
+    "id": "emo-afraid-2",
+    "messages": [
+      {
+        "role": "user",
+        "content": "What a difference a year makes. Last year one evening my family was at home when a tree fell on the house and broke through the ceiling."
+      },
+      {
+        "role": "assistant",
+        "content": "That's very scary. I hope no one got hurt."
+      },
+      {
+        "role": "user",
+        "content": "We were OK, though the tree broke through only a few feet away from my daughter."
+      },
+      {
+        "role": "assistant",
+        "content": "So happy everyone was fine!! Everything else can be fixed."
+      },
+      {
+        "role": "user",
+        "content": "Indeed. We were out of the house for five months while repairs were being done, but now the house is better than ever."
+      },
+      {
+        "role": "assistant",
+        "content": "So good to hear. Might want to trim some trees lol"
+      }
+    ],
+    "emotion": "afraid",
+    "situation": "Last year a tree fell on my house while my family was at home. The tree broke through the ceiling just a few feet away from my daughter. The experience was terrifying.",
+    "source": "empathetic_dialogues"
+  },
+  {
+    "id": "emo-angry-1",
+    "messages": [
+      {
+        "role": "user",
+        "content": "I lost my job last year and got really angry."
+      },
+      {
+        "role": "assistant",
+        "content": "I am sorry to hear that. Did it happen out of the blue?"
+      },
+      {
+        "role": "user",
+        "content": "Yes, it was a complete surprise."
+      },
+      {
+        "role": "assistant",
+        "content": "I am sorry to hear that. I hope it turned out to be a blessing in decise."
+      }
+    ],
+    "emotion": "angry",
+    "situation": "I once lost my job and got mad.",
+    "source": "empathetic_dialogues"
+  },
+  {
+    "id": "emo-angry-2",
+    "messages": [
+      {
+        "role": "user",
+        "content": "I never thought things would go like this."
+      },
+      {
+        "role": "assistant",
+        "content": "What happened for you to feel that way?"
+      },
+      {
+        "role": "user",
+        "content": "I was at the beach and a hurricane changed track and was coming straight at us. My boyfriend didnt want to leave because we were on the second day only of our vacation."
+      },
+      {
+        "role": "assistant",
+        "content": "Oh that does sound terrible. What did you guys decide to do?"
+      },
+      {
+        "role": "assistant",
+        "content": "Well we ended up leaving I was too scared to stay and was really upset."
+      }
+    ],
+    "emotion": "angry",
+    "situation": "I am so upset and mad. I cant believe what has happened!",
+    "source": "empathetic_dialogues"
+  },
+  {
+    "id": "emo-angry-3",
+    "messages": [
+      {
+        "role": "user",
+        "content": "I worked on my truck all weekend. Spent $215 on parts and a special tool. Still did not fix the miss in the engine."
+      },
+      {
+        "role": "assistant",
+        "content": "What is the problem with the engine?"
+      },
+      {
+        "role": "user",
+        "content": "It has a miss. Sometimes when you are driving it sputters and jerks and barely has any power. Other times it drives just fine. I have replaced so many things on it and nothing makes a difference for very long."
+      },
+      {
+        "role": "assistant",
+        "content": "Sorry to hear that. I hope you find what is the problem with the engine."
+      }
+    ],
+    "emotion": "angry",
+    "situation": "I spent all weekend working on my truck to fix a miss in the engine. Despite spending over $200 in parts, it didn't do a thing to fix the miss.",
+    "source": "empathetic_dialogues"
+  },
+  {
+    "id": "emo-annoyed-1",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Hi, I have a co work always asking me questions about how to use her mobile. It is almost always the same questions."
+      },
+      {
+        "role": "assistant",
+        "content": "It must be so frustrating to have to answer the same thing over and over. Is she older?"
+      },
+      {
+        "role": "user",
+        "content": "Yes, she is. She is telling that all the cell phone that she has been using have deleting her contacts."
+      },
+      {
+        "role": "assistant",
+        "content": "My aunt does the same thing! I think what she is doing is accidentally deleting texts, and she doesn't understand how to check her contacts list. What do you think is happening with your co-worker?"
+      }
+    ],
+    "emotion": "annoyed",
+    "situation": "I have someone always asking me questions about how to use mobile.",
+    "source": "empathetic_dialogues"
+  },
+  {
+    "id": "emo-annoyed-2",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Do you have any irritating coworkers?"
+      },
+      {
+        "role": "assistant",
+        "content": "Yes, I think that everyone does! What about you?"
+      },
+      {
+        "role": "user",
+        "content": "yes a few that drive me nuts. the janitor is the worst"
+      },
+      {
+        "role": "assistant",
+        "content": "That's too bad. Our janitor is very friendly."
+      }
+    ],
+    "emotion": "annoyed",
+    "situation": "I get irritated with a coworker that gets on my nerves all the time by coming and bothering me smelling like smoke and trying to chat itu p",
+    "source": "empathetic_dialogues"
+  },
+  {
+    "id": "emo-ashamed-1",
+    "messages": [
+      {
+        "role": "user",
+        "content": "I never took a drink before and my friends were all over me to take a drink"
+      },
+      {
+        "role": "assistant",
+        "content": "Why did you feel guilty for taking a drink?"
+      },
+      {
+        "role": "user",
+        "content": "It was not my thing and the moment I took I did wrong. Later in the night I started feeling bad."
+      },
+      {
+        "role": "assistant",
+        "content": "I can understand. I am not a big drinker myself, but I wouldn't feel guilty about it.  Not unless you promised someone you wouldn't drink."
+      },
+      {
+        "role": "user",
+        "content": "Yeah I did to my mum and dad...When I started vomiting I mess my dress and mum knew."
+      },
+      {
+        "role": "assistant",
+        "content": "Oh yea I can understand that then... Well I am sure you learned your lesson, right?"
+      },
+      {
+        "role": "assistant",
+        "content": "Yeah bad...anyway bye...Thanks for the chat."
+      }
+    ],
+    "emotion": "ashamed",
+    "situation": "I went to a party and it was real bad.",
+    "source": "empathetic_dialogues"
+  },
+  {
+    "id": "emo-confident-1",
+    "messages": [
+      {
+        "role": "user",
+        "content": "A year ago I spent a lot of time doing research for an article. Then a top journal accepted it for publication."
+      },
+      {
+        "role": "assistant",
+        "content": "what was the topic"
+      },
+      {
+        "role": "user",
+        "content": "It was about the medieval poet Geoffrey Chaucer."
+      },
+      {
+        "role": "assistant",
+        "content": "I'm not familiar with him where is he from"
+      },
+      {
+        "role": "user",
+        "content": "He was an English poet in the fourteenth century,"
+      },
+      {
+        "role": "assistant",
+        "content": "and how did you learn about him"
+      },
+      {
+        "role": "assistant",
+        "content": "He was an English poet in the fourteenth century"
+      }
+    ],
+    "emotion": "confident",
+    "situation": "Last year I placed an article in an academic journal. This was the first time in a while that I had been able to do this, and it made me feel better about myself.",
+    "source": "empathetic_dialogues"
+  },
+  {
+    "id": "emo-embarrassed-1",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Once when I was in preschool, my pants fell down in front of the whole class, I was so embarassed"
+      },
+      {
+        "role": "assistant",
+        "content": "haha yeah that would be very bad !"
+      },
+      {
+        "role": "user",
+        "content": "It was, I almost cried cause everyone was laughing at me"
+      },
+      {
+        "role": "assistant",
+        "content": "Oh no , sorry to hear that happened to you :("
+      }
+    ],
+    "emotion": "embarrassed",
+    "situation": "one time when I was in preschool, I had to write on the board. when I got up, my pants fell down in front of the class, that embarassed me",
+    "source": "empathetic_dialogues"
+  },
+  {
+    "id": "emo-excited-1",
+    "messages": [
+      {
+        "role": "user",
+        "content": "So last week we were watching the world cup, and lo and behold, Croatia beat the host country, Russia"
+      },
+      {
+        "role": "assistant",
+        "content": "I saw that game. They won on penalty kicks!"
+      },
+      {
+        "role": "user",
+        "content": "Yes! Both countries were not about to let each other win"
+      },
+      {
+        "role": "assistant",
+        "content": "It was very tense. The other game with England and Sweden was not nearly as nerve-wracking."
+      },
+      {
+        "role": "assistant",
+        "content": "You're right. I prefer nerve-wrecking matches. When both teams are great, the tension really builds."
+      }
+    ],
+    "emotion": "excited",
+    "situation": "Last week, I was watching the world cup, and watched croatia win from russia",
+    "source": "empathetic_dialogues"
+  },
+  {
+    "id": "emo-faithful-1",
+    "messages": [
+      {
+        "role": "user",
+        "content": "I have never cheated on my wife."
+      },
+      {
+        "role": "assistant",
+        "content": "And thats something you should never do, good on you."
+      },
+      {
+        "role": "user",
+        "content": "Yea it hasn't been easy but I am proud I haven't"
+      },
+      {
+        "role": "assistant",
+        "content": "What do you mean it hasn't been easy? How close have you come to cheating?"
+      }
+    ],
+    "emotion": "faithful",
+    "situation": "I have always been loyal to my wife.",
+    "source": "empathetic_dialogues"
+  },
+  {
+    "id": "emo-grateful-1",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Hi, I went to a park and I set on a bench. I didn't notice that my wallet felt. A man came to me from behind giving me back my wallet."
+      },
+      {
+        "role": "assistant",
+        "content": "Thats a sweet man, I hope you acknowledged his kind gesture."
+      },
+      {
+        "role": "user",
+        "content": "Yes, I did. I was so grateful because I have a lot of money in my wallet."
+      },
+      {
+        "role": "assistant",
+        "content": "Their aren't that many well rounded people in the world these days so when you see one you should always show appreciation!"
+      }
+    ],
+    "emotion": "grateful",
+    "situation": "I went to a park and I set on a bench. I didn't notice that my wallet felt. A man came to me from behind giving me back my wallet.",
+    "source": "empathetic_dialogues"
+  },
+  {
+    "id": "emo-guilty-1",
+    "messages": [
+      {
+        "role": "user",
+        "content": "I was only married for 4 weeks when I learned my husband was having an affair and ongoing after the wedding. I got him back by sleeping with a close family friend. I felt guilty and ashamed because it was out of character."
+      },
+      {
+        "role": "assistant",
+        "content": "Yeah that sounds really sad. I am sorry for what you went through."
+      },
+      {
+        "role": "user",
+        "content": "Well I choose to stay and work it out, but I never told him. It has been 3 years."
+      },
+      {
+        "role": "assistant",
+        "content": "Yeah maybe that was a good decision that you made."
+      },
+      {
+        "role": "assistant",
+        "content": "Well I thought I would be feel better but because I am not the cheating kind, I still feel guilty."
+      }
+    ],
+    "emotion": "guilty",
+    "situation": "After learning my husband of only 4 weeks was cheating on me I did the same to him. Not only was it before our marriage but I had found texts of him contacting her for sex after. To make it worse I slept with a close family friend of his.",
+    "source": "empathetic_dialogues"
+  },
+  {
+    "id": "emo-jealous-1",
+    "messages": [
+      {
+        "role": "user",
+        "content": "My coworker is allowed to work remotely, but I am not..."
+      },
+      {
+        "role": "assistant",
+        "content": "I work remotely, I wish that you could do something like that as well."
+      },
+      {
+        "role": "user",
+        "content": "I do too, it is unfortnuate because, unbiased, I am our best performer, so it is curious"
+      },
+      {
+        "role": "assistant",
+        "content": "Sometimes in life, it is not about performance. Some people just get a shiner spoon."
+      }
+    ],
+    "emotion": "jealous",
+    "situation": "I was at work, and my coworker was called into my bosses office. Then they were allowed to work remotely every monday. this made me jealous because I enjoy working from home",
+    "source": "empathetic_dialogues"
+  },
+  {
+    "id": "emo-joyful-1",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Hi, this year, I was the first over 300 students at my enginering school"
+      },
+      {
+        "role": "assistant",
+        "content": "Sounds great! So what's your major?"
+      },
+      {
+        "role": "user",
+        "content": "It is computer science. I am very happy of this achievement and my family is very proud."
+      },
+      {
+        "role": "assistant",
+        "content": "Well pleased. You should be having brains,man!That's a tough course,i hear."
+      }
+    ],
+    "emotion": "joyful",
+    "situation": "I am very happy to have been first over 300 students during this years at my enginering school",
+    "source": "empathetic_dialogues"
+  },
+  {
+    "id": "emo-joyful-2",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Planning out my new home has turned out to be a blast!"
+      },
+      {
+        "role": "assistant",
+        "content": "What kind of house are you building?"
+      },
+      {
+        "role": "user",
+        "content": "I just moved in so it is already built. Just working on planning out decorating and appliances and such."
+      },
+      {
+        "role": "assistant",
+        "content": "That sounds great. What are you most excited for?"
+      },
+      {
+        "role": "assistant",
+        "content": "I think I am most excited for all the space I have. I can have friends over and not feel cramped."
+      }
+    ],
+    "emotion": "joyful",
+    "situation": "I was so happy when I moved in to my new home. My girlfriend and I have been saving for awhile and we finally got the keys last month. Now we can finally move on with our life plans.",
+    "source": "empathetic_dialogues"
+  },
+  {
+    "id": "emo-lonely-1",
+    "messages": [
+      {
+        "role": "user",
+        "content": "I found myself divorced a few years ago, and for the first time in my life, I was living alone."
+      },
+      {
+        "role": "assistant",
+        "content": "I felt sad and depressed due to my insecurities and felt rejected from society"
+      },
+      {
+        "role": "user",
+        "content": "Yes, I felt that way for a while. But then I grew used to the solitude."
+      },
+      {
+        "role": "assistant",
+        "content": "The problem is I don't think you can grew out of my specific insecurity."
+      }
+    ],
+    "emotion": "lonely",
+    "situation": "A few years ago, my marriage broke up, and I found myself living alone for the first time in my life. Though I eventually grew accustomed to the solitude, it took a while to get used to it.",
+    "source": "empathetic_dialogues"
+  },
+  {
+    "id": "emo-nostalgic-1",
+    "messages": [
+      {
+        "role": "user",
+        "content": "I'm nearing 40 and I find myself thinking a lot about my teen years and early twenties. The friends I had then and the fun we had."
+      },
+      {
+        "role": "assistant",
+        "content": "That is where I am still at, I am scared I will have regrets when I get older"
+      },
+      {
+        "role": "user",
+        "content": "I don'"
+      },
+      {
+        "role": "assistant",
+        "content": "That is good, I am glad you have no regrets!"
+      }
+    ],
+    "emotion": "nostalgic",
+    "situation": "I get wistful remembering my high school days.",
+    "source": "empathetic_dialogues"
+  },
+  {
+    "id": "emo-prepared-1",
+    "messages": [
+      {
+        "role": "user",
+        "content": "I had to board my entire house when the hurricane was coming."
+      },
+      {
+        "role": "assistant",
+        "content": "WOW! Did it do any damage?"
+      },
+      {
+        "role": "user",
+        "content": "No luckily the house was ok."
+      },
+      {
+        "role": "assistant",
+        "content": "That is great. I would have been scared to death. Was it recent?"
+      }
+    ],
+    "emotion": "prepared",
+    "situation": "I had my entire house boarded up when the hurricane came.",
+    "source": "empathetic_dialogues"
+  },
+  {
+    "id": "emo-proud-1",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Hi how are you doing today"
+      },
+      {
+        "role": "assistant",
+        "content": "doing good.. how about you"
+      },
+      {
+        "role": "user",
+        "content": "Im good, trying to understand how someone can feel like hitting a blank wall when they see the darkness"
+      },
+      {
+        "role": "assistant",
+        "content": "it's quite strange that you didnt imagine it"
+      },
+      {
+        "role": "assistant",
+        "content": "i dont imagine feeling a lot, maybe your on to something"
+      }
+    ],
+    "emotion": "proud",
+    "situation": "I showed a guy how to run a good bead in welding class and he caught on quick.",
+    "source": "empathetic_dialogues"
+  },
+  {
+    "id": "emo-proud-2",
+    "messages": [
+      {
+        "role": "user",
+        "content": "I felt proud when I had accomplished a dream that I wanted to do for a long time. It was absailing!!"
+      },
+      {
+        "role": "assistant",
+        "content": "I'm not familiar with abseiling, but I'm glad that you felt good about it."
+      },
+      {
+        "role": "user",
+        "content": "absailing, its when you rappeling down a building. What have you down that amazing?"
+      },
+      {
+        "role": "assistant",
+        "content": "Oh, I see. No, I've never done that."
+      },
+      {
+        "role": "assistant",
+        "content": "so what have you done?"
+      }
+    ],
+    "emotion": "proud",
+    "situation": "I felt proud when I had accomplished a dream that I wanted to do for a long time.",
+    "source": "empathetic_dialogues"
+  },
+  {
+    "id": "emo-sad-1",
+    "messages": [
+      {
+        "role": "user",
+        "content": "During christmas a few years ago, I did not get any presents."
+      },
+      {
+        "role": "assistant",
+        "content": "Wow, that must be terrible, I cannot imagine, I lvoe christmas"
+      },
+      {
+        "role": "user",
+        "content": "Since that day christmas has not been a good time for me. As I have no family, christmas is always the worst."
+      },
+      {
+        "role": "assistant",
+        "content": "Wow, I am sorry to hear that, I wish I could make it a better holiday for you!"
+      },
+      {
+        "role": "assistant",
+        "content": "Some days are just days that you never forget. I wish you could as well."
+      }
+    ],
+    "emotion": "sad",
+    "situation": "One year during christmas, i did not get a single gift. It was a rough day for me.",
+    "source": "empathetic_dialogues"
+  },
+  {
+    "id": "emo-sad-2",
+    "messages": [
+      {
+        "role": "user",
+        "content": "People get rejected all the time but it shouldn't be an excuse to let it dissuade you from reaching your goals."
+      },
+      {
+        "role": "assistant",
+        "content": "What happened?"
+      },
+      {
+        "role": "user",
+        "content": "Got rejected from a place I wanted to work, not once but three times"
+      },
+      {
+        "role": "assistant",
+        "content": "I am sorry to hear that. I hope you find a better opportunity. Did you know why they rejected you?"
+      },
+      {
+        "role": "assistant",
+        "content": "Thanks, they gave me the same generic lines you always hear."
+      }
+    ],
+    "emotion": "sad",
+    "situation": "I got recently got three rejection letters for 3 different jobs in a matter of a week and a half. That was a painful experience.",
+    "source": "empathetic_dialogues"
+  },
+  {
+    "id": "emo-sentimental-1",
+    "messages": [
+      {
+        "role": "user",
+        "content": "I remember going to see the fireworks with my best friend. It was the first time we ever spent time alone together. Although there was a lot of people, we felt like the only people in the world."
+      },
+      {
+        "role": "assistant",
+        "content": "Was this a friend you were in love with, or just a best friend?"
+      },
+      {
+        "role": "user",
+        "content": "This was a best friend. I miss her."
+      },
+      {
+        "role": "assistant",
+        "content": "Where has she gone?"
+      },
+      {
+        "role": "user",
+        "content": "We no longer talk."
+      },
+      {
+        "role": "assistant",
+        "content": "Oh was this something that happened because of an argument?"
+      }
+    ],
+    "emotion": "sentimental",
+    "situation": "I remember going to the fireworks with my best friend. There was a lot of people, but it only felt like us in the world.",
+    "source": "empathetic_dialogues"
+  },
+  {
+    "id": "emo-sentimental-2",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Hello"
+      },
+      {
+        "role": "assistant",
+        "content": "Hello! I am in such a good mood since I got my new home."
+      },
+      {
+        "role": "user",
+        "content": "Funny - we just built a house where we used to go camping when I was a kid."
+      },
+      {
+        "role": "assistant",
+        "content": "I have a ton of backyard space that we have plans for. Camping would be a fun one."
+      },
+      {
+        "role": "user",
+        "content": "That's wonderful. Do you have any plans to have a fire?"
+      },
+      {
+        "role": "assistant",
+        "content": "I want to look in to getting a nice fire pit for the house."
+      }
+    ],
+    "emotion": "sentimental",
+    "situation": "When I spend time with my father outside by the fire when we are camping.",
+    "source": "empathetic_dialogues"
+  },
+  {
+    "id": "emo-surprised-1",
+    "messages": [
+      {
+        "role": "user",
+        "content": "When I was working my first job, my parents picked me up in my new car, I was very surprised, i thought I was gonna have to buy my own car"
+      },
+      {
+        "role": "assistant",
+        "content": "wow, that was so awesome of them!"
+      },
+      {
+        "role": "user",
+        "content": "Yeah it really was, I am still very thankful of them"
+      },
+      {
+        "role": "assistant",
+        "content": "I had to buy my first car and it wasn't until I was 21 that I could afford it."
+      }
+    ],
+    "emotion": "surprised",
+    "situation": "when I was younger, my parents picked me up from work with a new car, which really surprised me, I was so excited to have my own car!",
+    "source": "empathetic_dialogues"
+  },
+  {
+    "id": "emo-terrified-1",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Job interviews always make me sweat bullets, makes me uncomfortable in general to be looked at under a microscope like that."
+      },
+      {
+        "role": "assistant",
+        "content": "Don't be nervous. Just be prepared."
+      },
+      {
+        "role": "user",
+        "content": "I feel like getting prepared and then having a curve ball thrown at you throws you off."
+      },
+      {
+        "role": "assistant",
+        "content": "Yes but if you stay calm it will be ok."
+      },
+      {
+        "role": "assistant",
+        "content": "It's hard to stay clam. How do you do it?"
+      }
+    ],
+    "emotion": "terrified",
+    "situation": "A recent job interview that I had made me feel very anxious because I felt like I didn't come prepared.",
+    "source": "empathetic_dialogues"
+  }
+]

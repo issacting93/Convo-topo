@@ -1,4 +1,4 @@
-const CLASSIFICATION_PROMPT = `You are an academic conversation coder analyzing human–AI dialogues for research.
+export const CLASSIFICATION_PROMPT = `You are an academic conversation coder analyzing human–AI dialogues for research.
 
 RULES
 - Roles are interactional configurations observable in text, not identities or relationships.

@@ -1,9 +1,9 @@
-import React, { useState, useMemo, useCallback, useEffect } from 'react';
+import { useState, useMemo, useCallback, useEffect } from 'react';
 import { TerrainGridView } from './components/TerrainGrid';
 import { ThreeScene } from './components/ThreeScene';
 import { HUDOverlay } from './components/HUDOverlay';
 import { generateHeightmap, generateContours, generatePathPoints, type MetricMode } from './utils/terrain';
-import { TERRAIN_PRESETS, type TerrainPreset } from './data/terrainPresets';
+import { type TerrainPreset } from './data/terrainPresets';
 import { loadClassifiedConversations } from './data/classifiedConversations';
 import {
   conversationsToTerrains,
@@ -12,11 +12,54 @@ import {
   getConversationStructure,
   getTerrainParams,
   getDominantHumanRole,
-  getDominantAiRole
+  getDominantAiRole,
+  calculateMessagePAD
 } from './utils/conversationToTerrain';
 import type { TerrainParams } from './utils/terrain';
 
 type ViewMode = 'grid' | 'single';
+
+const MAX_MESSAGES = 30;
+const TERRAIN_SIZE = 64;
+
+// Helper function to process conversation messages for visualization
+function processConversationMessages(conversation: ClassifiedConversation | null, maxMessages: number) {
+  if (!conversation || !conversation.messages) {
+    return [];
+  }
+
+  const commFunc = getCommunicationFunction(conversation);
+  const convStruct = getConversationStructure(conversation);
+  const dominantHumanRole = getDominantHumanRole(conversation);
+  const dominantAiRole = getDominantAiRole(conversation);
+
+  return conversation.messages
+    .slice(0, maxMessages)
+    .map((msg, index) => {
+      // Calculate PAD scores for this message
+      const pad = conversation.classification
+        ? calculateMessagePAD(
+            msg,
+            conversation.classification,
+            index,
+            conversation.messages.length
+          )
+        : undefined;
+
+      return {
+        role: msg.role as 'user' | 'assistant',
+        content: msg.content,
+        communicationFunction: commFunc,
+        conversationStructure: convStruct,
+        humanRole: dominantHumanRole?.role,
+        aiRole: dominantAiRole?.role,
+        roleConfidence: msg.role === 'user'
+          ? dominantHumanRole?.value
+          : dominantAiRole?.value,
+        pad // Add PAD scores
+      };
+    });
+}
 
 export default function ConversationalTopography() {
   const [viewMode, setViewMode] = useState<ViewMode>('grid');
@@ -27,15 +70,13 @@ export default function ConversationalTopography() {
   const [lockedPoint, setLockedPoint] = useState<number | null>(null);
   const [contourCount, setContourCount] = useState(15);
   const [showContours, setShowContours] = useState(true);
-  const [metricMode, setMetricMode] = useState<MetricMode>('depth');
+  const metricMode: MetricMode = 'composite';
   const [classifiedConversations, setClassifiedConversations] = useState<ClassifiedConversation[]>([]);
   const [conversationTerrains, setConversationTerrains] = useState<TerrainPreset[]>([]);
   const [selectedConversation, setSelectedConversation] = useState<ClassifiedConversation | null>(null);
-  const [comparisonConversation, setComparisonConversation] = useState<ClassifiedConversation | null>(null);
+  const [comparisonConversation] = useState<ClassifiedConversation | null>(null);
   const [isDiffMode, setIsDiffMode] = useState(false);
 
-  const size = 64;
-  const terrainPresets = useMemo<TerrainPreset[]>(() => TERRAIN_PRESETS, []);
   
   // Load classified conversations on mount
   useEffect(() => {
@@ -65,78 +106,33 @@ export default function ConversationalTopography() {
   }, [selectedConversation, metricMode]);
 
   const heightmap = useMemo(() => {
-    return generateHeightmap(size, seed, terrainParams);
-  }, [seed, size, terrainParams]);
+    return generateHeightmap(TERRAIN_SIZE, seed, terrainParams);
+  }, [seed, terrainParams]);
 
-  // SAFETY LIMIT: Never load more than 30 messages to prevent rendering issues
-  const MAX_MESSAGES = 30;
   const messages = useMemo(() => {
-    // Use messages from selected classified conversation
-    if (selectedConversation && selectedConversation.messages) {
-      const commFunc = getCommunicationFunction(selectedConversation);
-      const convStruct = getConversationStructure(selectedConversation);
-      
-      // Get dominant roles for the conversation (used for visual encoding)
-      const dominantHumanRole = getDominantHumanRole(selectedConversation);
-      const dominantAiRole = getDominantAiRole(selectedConversation);
-      
-      return selectedConversation.messages
-        .slice(0, MAX_MESSAGES)
-        .map(msg => ({
-          role: msg.role as 'user' | 'assistant',
-          content: msg.content,
-          communicationFunction: commFunc,
-          conversationStructure: convStruct,
-          humanRole: dominantHumanRole?.role,
-          aiRole: dominantAiRole?.role,
-          roleConfidence: msg.role === 'user'
-            ? dominantHumanRole?.value
-            : dominantAiRole?.value
-        }));
-    }
-    
-    // No conversation selected - return empty array
-    return [];
+    return processConversationMessages(selectedConversation, MAX_MESSAGES);
   }, [selectedConversation]);
   
   const pathPoints = useMemo(
-    () => generatePathPoints(heightmap, size, messages.length, messages),
-    [heightmap, size, messages]
+    () => generatePathPoints(heightmap, TERRAIN_SIZE, messages.length, messages),
+    [heightmap, messages]
   );
 
-  // Comparison path points for diff mode
   const comparisonMessages = useMemo(() => {
-    if (!isDiffMode || !comparisonConversation || !comparisonConversation.messages) {
+    if (!isDiffMode || !comparisonConversation) {
       return [];
     }
-
-    const commFunc = getCommunicationFunction(comparisonConversation);
-    const convStruct = getConversationStructure(comparisonConversation);
-    const dominantHumanRole = getDominantHumanRole(comparisonConversation);
-    const dominantAiRole = getDominantAiRole(comparisonConversation);
-
-    return comparisonConversation.messages
-      .slice(0, MAX_MESSAGES)
-      .map(msg => ({
-        role: msg.role as 'user' | 'assistant',
-        content: msg.content,
-        communicationFunction: commFunc,
-        conversationStructure: convStruct,
-        humanRole: dominantHumanRole?.role,
-        aiRole: dominantAiRole?.role,
-        roleConfidence: msg.role === 'user'
-          ? dominantHumanRole?.value
-          : dominantAiRole?.value
-      }));
+    return processConversationMessages(comparisonConversation, MAX_MESSAGES);
   }, [comparisonConversation, isDiffMode]);
 
   const comparisonPathPoints = useMemo(
-    () => generatePathPoints(heightmap, size, comparisonMessages.length, comparisonMessages),
-    [heightmap, size, comparisonMessages]
+    () => generatePathPoints(heightmap, TERRAIN_SIZE, comparisonMessages.length, comparisonMessages),
+    [heightmap, comparisonMessages]
   );
+
   const contours = useMemo(
-    () => generateContours(heightmap, size, contourCount),
-    [heightmap, size, contourCount]
+    () => generateContours(heightmap, TERRAIN_SIZE, contourCount),
+    [heightmap, contourCount]
   );
 
   const handleAnimate = useCallback(() => {
@@ -166,17 +162,9 @@ export default function ConversationalTopography() {
     setTimelineProgress(1);
 
     // Find and set the corresponding conversation
-    if (conversationTerrains.length > 0) {
-      const convIndex = conversationTerrains.findIndex(t => t.id === terrain.id);
-      if (convIndex >= 0 && classifiedConversations[convIndex]) {
-        setSelectedConversation(classifiedConversations[convIndex]);
-        setTimelineProgress(1);
-      } else {
-        setSelectedConversation(null);
-      }
-    } else {
-      setSelectedConversation(null);
-    }
+    const convIndex = conversationTerrains.findIndex(t => t.id === terrain.id);
+    const conversation = convIndex >= 0 ? classifiedConversations[convIndex] : null;
+    setSelectedConversation(conversation || null);
   }, [conversationTerrains, classifiedConversations]);
   
   const handleBackToGrid = useCallback(() => {
@@ -190,8 +178,9 @@ export default function ConversationalTopography() {
 
   if (viewMode === 'grid') {
     return (
-      <TerrainGridView 
-        terrains={availableTerrains} 
+      <TerrainGridView
+        terrains={availableTerrains}
+        conversations={classifiedConversations}
         onSelectTerrain={handleSelectTerrain}
       />
     );
@@ -201,14 +190,13 @@ export default function ConversationalTopography() {
     <div style={{
       width: '100vw',
       height: '100vh',
-      background: '#0a0a0f',
+      background: 'var(--background, #030213)',
       position: 'relative',
       overflow: 'hidden'
     }}>
       <ThreeScene
         heightmap={heightmap}
         pathPoints={pathPoints}
-        comparisonPathPoints={isDiffMode ? comparisonPathPoints : undefined}
         contours={contours}
         hoveredPoint={hoveredPoint}
         lockedPoint={lockedPoint}
@@ -233,7 +221,6 @@ export default function ConversationalTopography() {
         onSeedChange={handleSeedChange}
         onContourCountChange={setContourCount}
         onToggleContours={setShowContours}
-        onMetricModeChange={setMetricMode}
         onToggleDiffMode={setIsDiffMode}
         onAnimate={handleAnimate}
         onBackToGrid={handleBackToGrid}

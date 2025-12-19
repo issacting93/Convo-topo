@@ -34,11 +34,10 @@ function fractalNoise(x: number, y: number, octaves = 4, seed = 0) {
   return value / maxValue;
 }
 
-export type MetricMode = 'depth' | 'uncertainty' | 'affect' | 'composite';
+export type MetricMode = 'uncertainty' | 'affect' | 'composite';
 
 export interface TerrainParams {
   seed: number;
-  topicDepth?: number; // Continuous depth score from 0.1 (shallow) to 1.0 (deep)
   avgConfidence?: number;
   emotionalIntensity?: number;
   metricMode?: MetricMode; // Which metric to visualize
@@ -52,10 +51,9 @@ export function generateHeightmap(
   const data = new Float32Array(size * size);
 
   // Extract terrain parameters
-  const topicDepth = params?.topicDepth ?? 0.5; // Default to middle depth
   const avgConfidence = params?.avgConfidence ?? 0.7;
   const emotionalIntensity = params?.emotionalIntensity ?? 0.5;
-  const metricMode = params?.metricMode ?? 'depth';
+  const metricMode = params?.metricMode ?? 'composite';
 
   // Calculate parameters based on selected metric
   let baseHeight: number;
@@ -65,15 +63,6 @@ export function generateHeightmap(
   let peakBoost: number;
 
   switch (metricMode) {
-    case 'depth':
-      // Pure depth visualization
-      baseHeight = 0.3 + (topicDepth * 0.5);  // 0.3 to 0.8
-      heightRange = 0.3 + (topicDepth * 0.4);  // 0.3 to 0.7
-      complexityBoost = 1.0 + (topicDepth * 0.8); // 1.0 to 1.8
-      variation = 0.7; // Fixed variation
-      peakBoost = 1.2; // Fixed peak boost
-      break;
-
     case 'uncertainty':
       // Confidence/uncertainty visualization (inverted: low confidence = high elevation)
       const uncertainty = 1.0 - avgConfidence;
@@ -85,22 +74,24 @@ export function generateHeightmap(
       break;
 
     case 'affect':
-      // Emotional intensity visualization
+      // Affective/Evaluative Lens: PAD model visualization
+      // Z-height increases with high Arousal (agitation) + low Pleasure (frustration)
+      // Peaks = relational friction; Valleys = affiliation
       baseHeight = 0.3 + (emotionalIntensity * 0.5);
       heightRange = 0.3 + (emotionalIntensity * 0.4);
       complexityBoost = 1.0 + (emotionalIntensity * 0.6);
       variation = 0.7;
-      peakBoost = 1.0 + (emotionalIntensity * 0.8); // Dramatic peaks for high affect
+      peakBoost = 1.0 + (emotionalIntensity * 0.8); // Dramatic peaks for frustration/agitation
       break;
 
     case 'composite':
     default:
-      // Original composite mode (all metrics combined)
-      baseHeight = 0.3 + (topicDepth * 0.5);
-      heightRange = 0.3 + (topicDepth * 0.4);
-      complexityBoost = 1.0 + (topicDepth * 0.8);
-      variation = 0.5 + (avgConfidence * 0.4);
-      peakBoost = 1.0 + (emotionalIntensity * 0.5);
+      // Default composite mode: use fixed terrain parameters
+      baseHeight = 0.5;
+      heightRange = 0.5;
+      complexityBoost = 1.5;
+      variation = 0.6;
+      peakBoost = 1.2;
       break;
   }
   
@@ -116,11 +107,11 @@ export function generateHeightmap(
       // Add medium detail layer
       height += fractalNoise(nx * 8, ny * 8, 4, seed + 50) * 0.5;
 
-      // Add fine detail layer (more pronounced for deeper conversations)
-      height += fractalNoise(nx * 16, ny * 16, 3, seed + 100) * 0.3 * topicDepth;
+      // Add fine detail layer
+      height += fractalNoise(nx * 16, ny * 16, 3, seed + 100) * 0.3;
 
       // Normalize to 0-1 range
-      height = height / (1.0 + 0.5 + 0.3 * topicDepth);
+      height = height / (1.0 + 0.5 + 0.3);
 
       // Apply confidence-based variation
       height = height * variation;
@@ -135,13 +126,19 @@ export function generateHeightmap(
         height = baseHeight + peakAmount * heightRange * peakBoost;
       }
 
-      // Clamp to valid range (allow taller peaks for deeper conversations)
-      const maxAllowed = 1.0 + (topicDepth * 0.5); // Increased from 0.3 to 0.5 for taller peaks
+      // Clamp to valid range
+      const maxAllowed = 1.2;
       data[y * size + x] = Math.max(0.1, Math.min(maxAllowed, height));
     }
   }
   return data;
 }
+
+/**
+ * Generate a heightmap where height reflects temporal persistence:
+ * regions revisited by messages (path points) become taller, with optional
+ * decay over time and small lens-driven modulation.
+ */
 
 export type LineSegment = [{x: number, y: number}, {x: number, y: number}];
 
@@ -229,6 +226,7 @@ export interface PathPoint {
   x: number;
   y: number;
   height: number;
+  padHeight?: number; // PAD-based height override for Z-axis
   index: number;
   communicationFunction: number;
   conversationStructure: number;
@@ -238,6 +236,14 @@ export interface PathPoint {
   humanRole?: string;  // Dominant human role for this message
   aiRole?: string;     // Dominant AI role for this message
   roleConfidence?: number; // Confidence in role assignment
+
+  // PAD (Pleasure-Arousal-Dominance) scores for affective/evaluative lens
+  pad?: {
+    pleasure: number;    // 0-1, low = frustration, high = satisfaction
+    arousal: number;     // 0-1, low = calm, high = agitation
+    dominance: number;   // 0-1, low = passive, high = control
+    emotionalIntensity: number; // Derived: (1 - pleasure) * 0.6 + arousal * 0.4
+  };
 }
 
 /**
@@ -267,18 +273,89 @@ function analyzeMessage(message: { role: 'user' | 'assistant'; content: string }
   return { hasQuestion, length, expressiveScore, structuredScore };
 }
 
+/**
+ * Generate 2D path points for minimap preview (without heightmap)
+ * This is a lightweight version for preview cards
+ */
+export function generate2DPathPoints(
+  messages: Array<{
+    role: 'user' | 'assistant';
+    content: string;
+    communicationFunction: number;
+    conversationStructure: number;
+  }>
+): Array<{ x: number; y: number; role: 'user' | 'assistant' }> {
+  const points: Array<{ x: number; y: number; role: 'user' | 'assistant' }> = [];
+
+  if (messages.length === 0) return points;
+
+  // All conversations start at the center (0.5, 0.5)
+  const startX = 0.5;
+  const startY = 0.5;
+
+  // Analyze all messages
+  const messageAnalyses = messages.map(msg => analyzeMessage(msg));
+
+  // Calculate conversation-level target
+  const targetX = 0.1 + messages[0].communicationFunction * 0.8;
+  const targetY = 0.1 + messages[0].conversationStructure * 0.8;
+
+  // Track cumulative position
+  let currentX = startX;
+  let currentY = startY;
+
+  for (let i = 0; i < messages.length; i++) {
+    const message = messages[i];
+    const analysis = messageAnalyses[i];
+    const progress = i / Math.max(messages.length - 1, 1);
+
+    // Calculate drift (same logic as full path points)
+    const targetDriftX = (targetX - startX) * 1.2;
+    const targetDriftY = (targetY - startY) * 1.2;
+    const messageDriftX = (analysis.expressiveScore - 0.5) * 0.5;
+    const messageDriftY = (analysis.structuredScore - 0.5) * 0.5;
+    const roleDriftX = message.role === 'user' ? -0.06 : 0.06;
+    const roleDriftY = message.role === 'user' ? 0.06 : -0.06;
+    const driftFactor = 0.10 + (progress * 0.30);
+
+    const driftX = (targetDriftX + messageDriftX + roleDriftX) * driftFactor;
+    const driftY = (targetDriftY + messageDriftY + roleDriftY) * driftFactor;
+
+    currentX += driftX;
+    currentY += driftY;
+
+    // Clamp to safe range
+    currentX = Math.max(0.05, Math.min(0.95, currentX));
+    currentY = Math.max(0.05, Math.min(0.95, currentY));
+
+    points.push({
+      x: currentX,
+      y: currentY,
+      role: message.role
+    });
+  }
+
+  return points;
+}
+
 export function generatePathPoints(
   heightmap: Float32Array,
   size: number,
   count: number,
-  messages: Array<{ 
-    role: 'user' | 'assistant'; 
-    content: string; 
-    communicationFunction: number; 
+  messages: Array<{
+    role: 'user' | 'assistant';
+    content: string;
+    communicationFunction: number;
     conversationStructure: number;
     humanRole?: string;
     aiRole?: string;
     roleConfidence?: number;
+    pad?: {
+      pleasure: number;
+      arousal: number;
+      dominance: number;
+      emotionalIntensity: number;
+    };
   }>
 ): PathPoint[] {
   const points: PathPoint[] = [];
@@ -344,11 +421,16 @@ export function generatePathPoints(
     const tx = Math.floor(currentX * (size - 1));
     const ty = Math.floor(currentY * (size - 1));
     const height = heightmap[ty * size + tx] ?? 0;
-    
-    points.push({ 
-      x: currentX, 
-      y: currentY, 
-      height, 
+
+    // Calculate PAD-based height if PAD data is available
+    // emotionalIntensity drives Z-height: high = frustration peaks, low = affiliation valleys
+    const padHeight = message.pad?.emotionalIntensity;
+
+    points.push({
+      x: currentX,
+      y: currentY,
+      height,
+      padHeight, // PAD-based height override
       index: i,
       communicationFunction: message.communicationFunction,
       conversationStructure: message.conversationStructure,
@@ -357,7 +439,9 @@ export function generatePathPoints(
       // Include role information for visual encoding
       humanRole: message.humanRole,
       aiRole: message.aiRole,
-      roleConfidence: message.roleConfidence
+      roleConfidence: message.roleConfidence,
+      // Include PAD scores for affective/evaluative lens
+      pad: message.pad
     });
   }
   return points;

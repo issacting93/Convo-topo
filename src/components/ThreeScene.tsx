@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from 'react';
+import { useRef, useEffect } from 'react';
 import * as THREE from 'three';
 import { EffectComposer } from 'three/addons/postprocessing/EffectComposer.js';
 import { RenderPass } from 'three/addons/postprocessing/RenderPass.js';
@@ -6,12 +6,89 @@ import { UnrealBloomPass } from 'three/addons/postprocessing/UnrealBloomPass.js'
 import { ShaderPass } from 'three/addons/postprocessing/ShaderPass.js';
 import { BokehPass } from 'three/addons/postprocessing/BokehPass.js';
 import type { Contour, PathPoint } from '../utils/terrain';
-import { COLORS, ChromaticAberrationShader, RGBShiftShader, getColorForRole } from '../utils/constants';
+import { COLORS, ChromaticAberrationShader, RGBShiftShader } from '../utils/constants';
+
+// Scene configuration constants
+const SCENE_CONFIG = {
+  TERRAIN_SIZE: 10,
+  TERRAIN_HEIGHT: 6.0,
+  CAMERA_FOV: 45,
+  CAMERA_NEAR: 0.1,
+  CAMERA_FAR: 100,
+  CAMERA_POSITION: { x: 12, y: 10, z: 12 },
+  CAMERA_LOOK_AT: { x: 0, y: 1, z: 0 },
+  MAX_PIXEL_RATIO: 1.5,
+  GRID_SIZE_MULTIPLIER: 1.4,
+  GRID_DIVISIONS: 28,
+  GRID_OPACITY: 0.6,
+  GRID_Y_OFFSET: -0.02,
+} as const;
+
+// Lighting configuration
+const LIGHTING_CONFIG = {
+  AMBIENT_INTENSITY: 1.2,
+  DIR_LIGHT_1_INTENSITY: 1.0,
+  DIR_LIGHT_1_POSITION: { x: 5, y: 10, z: 5 },
+  DIR_LIGHT_2_INTENSITY: 0.6,
+  DIR_LIGHT_2_POSITION: { x: -5, y: 8, z: -5 },
+  TERRAIN_BRIGHTEN: 1.5,
+  TERRAIN_EMISSIVE_INTENSITY: 0.2,
+} as const;
+
+// Marker configuration
+const MARKER_CONFIG = {
+  POLE_HEIGHT: 2.0,
+  HEAD_RADIUS: 0.12,
+  HEAD_SEGMENTS: { width: 16, height: 12 },
+  GLOW_INNER_RADIUS: 0.2,
+  GLOW_OUTER_RADIUS: 0.35,
+  GLOW_SEGMENTS: 24,
+  BASE_RADIUS: 0.15,
+  BASE_SEGMENTS: 16,
+  HITBOX_RADIUS: 0.3,
+  HITBOX_SEGMENTS: 8,
+  PATH_DASH_SIZE: 0.25,
+  PATH_GAP_SIZE: 0.12,
+  PATH_Y_OFFSET: 0.05,
+  MAX_MARKERS: 50,
+} as const;
+
+// Animation configuration
+const ANIMATION_CONFIG = {
+  TIME_STEP: 0.016,
+  ORBIT_SPEED: 0.04,
+  ORBIT_RADIUS: 15,
+  CAMERA_Y_BASE: 9,
+  CAMERA_Y_AMPLITUDE: 1.5,
+  CAMERA_Y_FREQUENCY: 0.08,
+  PULSE_FREQUENCY: 2.5,
+  PULSE_PHASE_SHIFT: 0.5,
+  MARKER_HOVER_SCALE: 1.4,
+  MARKER_NORMAL_SCALE: 1,
+  SCALE_LERP_SPEED: 0.1,
+  MARKER_FLOAT_FREQUENCY: 1.5,
+  MARKER_FLOAT_AMPLITUDE: 0.03,
+  RAYCAST_THROTTLE: 3,
+  CONTOUR_ANIMATION_THROTTLE: 2,
+} as const;
+
+// Post-processing configuration
+const POST_PROCESSING_CONFIG = {
+  BLOOM_RESOLUTION_DIVISOR: 2,
+  BLOOM_STRENGTH: 0.3,
+  BLOOM_RADIUS: 0.4,
+  BLOOM_THRESHOLD: 0.85,
+  CHROMA_AMOUNT_MAX: 0.003,
+  RGB_SHIFT_AMOUNT_MAX: 0.004,
+  BOKEH_FOCUS: 15.0,
+  BOKEH_APERTURE_MAX: 0.00015,
+  BOKEH_MAXBLUR_MAX: 0.005,
+  EFFECT_INTENSITY_LERP: 0.05,
+} as const;
 
 interface ThreeSceneProps {
   heightmap: Float32Array;
   pathPoints: PathPoint[];
-  comparisonPathPoints?: PathPoint[];
   contours: Contour[];
   hoveredPoint: number | null;
   lockedPoint: number | null;
@@ -34,7 +111,6 @@ interface MarkerRef {
 export function ThreeScene({
   heightmap,
   pathPoints,
-  comparisonPathPoints,
   contours,
   hoveredPoint,
   lockedPoint,
@@ -49,24 +125,25 @@ export function ThreeScene({
   const cameraRef = useRef<THREE.PerspectiveCamera | null>(null);
   const frameRef = useRef<number | null>(null);
   const markersRef = useRef<MarkerRef[]>([]);
-  const comparisonMarkersRef = useRef<MarkerRef[]>([]);
   const pathLineRef = useRef<THREE.Line | null>(null);
-  const comparisonPathLineRef = useRef<THREE.Line | null>(null);
   const terrainRef = useRef<THREE.Mesh | null>(null);
   const contoursRef = useRef<THREE.LineSegments[]>([]);
+  const projectionMarkerRef = useRef<THREE.Group | null>(null);
   const timeRef = useRef(0);
   const mouseRef = useRef(new THREE.Vector2());
   const raycasterRef = useRef(new THREE.Raycaster());
   const composerRef = useRef<EffectComposer | null>(null);
+  const rotationYRef = useRef(0); // Rotation angle around Y-axis (in radians)
+  const isDraggingRef = useRef(false);
+  const lastMouseXRef = useRef(0);
   const chromaPassRef = useRef<ShaderPass | null>(null);
   const rgbPassRef = useRef<ShaderPass | null>(null);
   const bokehPassRef = useRef<BokehPass | null>(null);
   const effectIntensityRef = useRef(0);
 
   const size = Math.sqrt(heightmap.length);
-  const terrainSize = 10;
-  // Increase vertical scale so height differences (especially deep) are visible
-  const terrainHeight = 6.0; // Increased from 3.5 for more dramatic peaks
+  const terrainSize = SCENE_CONFIG.TERRAIN_SIZE;
+  const terrainHeight = SCENE_CONFIG.TERRAIN_HEIGHT;
 
   // Initialize scene
   useEffect(() => {
@@ -83,9 +160,22 @@ export function ThreeScene({
     sceneRef.current = scene;
 
     // Camera
-    const camera = new THREE.PerspectiveCamera(45, width / height, 0.1, 100);
-    camera.position.set(12, 10, 12);
-    camera.lookAt(0, 1, 0);
+    const camera = new THREE.PerspectiveCamera(
+      SCENE_CONFIG.CAMERA_FOV,
+      width / height,
+      SCENE_CONFIG.CAMERA_NEAR,
+      SCENE_CONFIG.CAMERA_FAR
+    );
+    camera.position.set(
+      SCENE_CONFIG.CAMERA_POSITION.x,
+      SCENE_CONFIG.CAMERA_POSITION.y,
+      SCENE_CONFIG.CAMERA_POSITION.z
+    );
+    camera.lookAt(
+      SCENE_CONFIG.CAMERA_LOOK_AT.x,
+      SCENE_CONFIG.CAMERA_LOOK_AT.y,
+      SCENE_CONFIG.CAMERA_LOOK_AT.z
+    );
     cameraRef.current = camera;
 
     // Renderer
@@ -95,38 +185,152 @@ export function ThreeScene({
       powerPreference: 'high-performance'
     });
     renderer.setSize(width, height);
-    // Limit pixel ratio to 1.5 for better performance (especially on retina displays)
-    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 1.5));
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio, SCENE_CONFIG.MAX_PIXEL_RATIO));
     renderer.toneMapping = THREE.ACESFilmicToneMapping;
     renderer.toneMappingExposure = 1.2;
     container.appendChild(renderer.domElement);
     rendererRef.current = renderer;
 
-    // Ambient light - increased for better terrain visibility
-    const ambient = new THREE.AmbientLight(0x445566, 1.2);
+    // Ambient light
+    const ambient = new THREE.AmbientLight(0x445566, LIGHTING_CONFIG.AMBIENT_INTENSITY);
     scene.add(ambient);
 
-    // Directional light - increased intensity
-    const dirLight = new THREE.DirectionalLight(0xaaccdd, 1.0);
-    dirLight.position.set(5, 10, 5);
+    // Directional light
+    const dirLight = new THREE.DirectionalLight(0xaaccdd, LIGHTING_CONFIG.DIR_LIGHT_1_INTENSITY);
+    dirLight.position.set(
+      LIGHTING_CONFIG.DIR_LIGHT_1_POSITION.x,
+      LIGHTING_CONFIG.DIR_LIGHT_1_POSITION.y,
+      LIGHTING_CONFIG.DIR_LIGHT_1_POSITION.z
+    );
     scene.add(dirLight);
 
-    // Add another light from opposite side for better terrain definition
-    const dirLight2 = new THREE.DirectionalLight(0x6688aa, 0.6);
-    dirLight2.position.set(-5, 8, -5);
+    // Secondary directional light
+    const dirLight2 = new THREE.DirectionalLight(0x6688aa, LIGHTING_CONFIG.DIR_LIGHT_2_INTENSITY);
+    dirLight2.position.set(
+      LIGHTING_CONFIG.DIR_LIGHT_2_POSITION.x,
+      LIGHTING_CONFIG.DIR_LIGHT_2_POSITION.y,
+      LIGHTING_CONFIG.DIR_LIGHT_2_POSITION.z
+    );
     scene.add(dirLight2);
 
-    // Floor grid - subtle
+    // Floor grid
     const gridHelper = new THREE.GridHelper(
-      terrainSize * 1.4,
-      28,
+      terrainSize * SCENE_CONFIG.GRID_SIZE_MULTIPLIER,
+      SCENE_CONFIG.GRID_DIVISIONS,
       COLORS.grid,
       COLORS.gridDim
     );
-    gridHelper.position.y = -0.02;
+    gridHelper.position.set(0, SCENE_CONFIG.GRID_Y_OFFSET, 0); // Explicitly center at origin
     (gridHelper.material as THREE.Material).transparent = true;
-    (gridHelper.material as THREE.Material).opacity = 0.3;
+    (gridHelper.material as THREE.Material).opacity = SCENE_CONFIG.GRID_OPACITY;
     scene.add(gridHelper);
+
+    // Add 2D axis visualization (Functional↔Social, Structured↔Emergent)
+    // Center dividing lines showing quadrants
+    const axisY = 0.01; // Slightly above grid to be visible
+
+    // X-axis line (Functional at -X, Social at +X)
+    const xAxisGeom = new THREE.BufferGeometry().setFromPoints([
+      new THREE.Vector3(-terrainSize / 2, axisY, 0),
+      new THREE.Vector3(terrainSize / 2, axisY, 0)
+    ]);
+    const xAxisMat = new THREE.LineBasicMaterial({
+      color: COLORS.accent,
+      transparent: true,
+      opacity: 0.5,
+      linewidth: 2
+    });
+    const xAxisLine = new THREE.Line(xAxisGeom, xAxisMat);
+    scene.add(xAxisLine);
+
+    // Z-axis line (Structured at -Z, Emergent at +Z)
+    const zAxisGeom = new THREE.BufferGeometry().setFromPoints([
+      new THREE.Vector3(0, axisY, -terrainSize / 2),
+      new THREE.Vector3(0, axisY, terrainSize / 2)
+    ]);
+    const zAxisMat = new THREE.LineBasicMaterial({
+      color: COLORS.accent,
+      transparent: true,
+      opacity: 0.5,
+      linewidth: 2
+    });
+    const zAxisLine = new THREE.Line(zAxisGeom, zAxisMat);
+    scene.add(zAxisLine);
+
+    // Add corner markers for quadrants
+    const markerRadius = 0.15;
+    const markerGeom = new THREE.CircleGeometry(markerRadius, 16);
+    const markerMat = new THREE.MeshBasicMaterial({
+      color: COLORS.accent,
+      transparent: true,
+      opacity: 0.4,
+      side: THREE.DoubleSide
+    });
+
+    const quadrantPositions = [
+      { x: -terrainSize * 0.4, z: -terrainSize * 0.4 }, // Functional + Structured
+      { x: terrainSize * 0.4, z: -terrainSize * 0.4 },  // Social + Structured
+      { x: -terrainSize * 0.4, z: terrainSize * 0.4 },  // Functional + Emergent
+      { x: terrainSize * 0.4, z: terrainSize * 0.4 }    // Social + Emergent
+    ];
+
+    quadrantPositions.forEach(pos => {
+      const marker = new THREE.Mesh(markerGeom, markerMat);
+      marker.rotation.x = -Math.PI / 2;
+      marker.position.set(pos.x, axisY, pos.z);
+      scene.add(marker);
+    });
+
+    // Add boundary frame showing the 2D axis bounds
+    const boundaryY = 0.01;
+    const halfSize = terrainSize / 2;
+    const boundaryPoints = [
+      // Bottom edge (Structured, -Z)
+      new THREE.Vector3(-halfSize, boundaryY, -halfSize),
+      new THREE.Vector3(halfSize, boundaryY, -halfSize),
+      // Right edge (Social, +X)
+      new THREE.Vector3(halfSize, boundaryY, -halfSize),
+      new THREE.Vector3(halfSize, boundaryY, halfSize),
+      // Top edge (Emergent, +Z)
+      new THREE.Vector3(halfSize, boundaryY, halfSize),
+      new THREE.Vector3(-halfSize, boundaryY, halfSize),
+      // Left edge (Functional, -X)
+      new THREE.Vector3(-halfSize, boundaryY, halfSize),
+      new THREE.Vector3(-halfSize, boundaryY, -halfSize)
+    ];
+
+    const boundaryGeom = new THREE.BufferGeometry().setFromPoints(boundaryPoints);
+    const boundaryMat = new THREE.LineBasicMaterial({
+      color: COLORS.accent,
+      transparent: true,
+      opacity: 0.6,
+      linewidth: 2
+    });
+    const boundaryFrame = new THREE.LineSegments(boundaryGeom, boundaryMat);
+    scene.add(boundaryFrame);
+
+    // Add corner posts (vertical lines at each corner)
+    const postHeight = 0.5;
+    const corners = [
+      { x: -halfSize, z: -halfSize, label: 'FUNC+STR' },
+      { x: halfSize, z: -halfSize, label: 'SOC+STR' },
+      { x: -halfSize, z: halfSize, label: 'FUNC+EMG' },
+      { x: halfSize, z: halfSize, label: 'SOC+EMG' }
+    ];
+
+    corners.forEach(corner => {
+      const postGeom = new THREE.BufferGeometry().setFromPoints([
+        new THREE.Vector3(corner.x, 0, corner.z),
+        new THREE.Vector3(corner.x, postHeight, corner.z)
+      ]);
+      const postMat = new THREE.LineBasicMaterial({
+        color: COLORS.accent,
+        transparent: true,
+        opacity: 0.5
+      });
+      const post = new THREE.Line(postGeom, postMat);
+      scene.add(post);
+    });
 
     // Handle resize
     const handleResize = () => {
@@ -146,12 +350,50 @@ export function ThreeScene({
     const handleMouseMove = (e: MouseEvent) => {
       if (!rendererRef.current) return;
       const rect = rendererRef.current.domElement.getBoundingClientRect();
-      mouseRef.current.x = ((e.clientX - rect.left) / rect.width) * 2 - 1;
-      mouseRef.current.y = -((e.clientY - rect.top) / rect.height) * 2 + 1;
+      const normalizedX = ((e.clientX - rect.left) / rect.width) * 2 - 1;
+      const normalizedY = -((e.clientY - rect.top) / rect.height) * 2 + 1;
+      mouseRef.current.x = normalizedX;
+      mouseRef.current.y = normalizedY;
+
+      // Handle rotation drag
+      if (isDraggingRef.current) {
+        const deltaX = e.clientX - lastMouseXRef.current;
+        // Convert pixel movement to rotation (sensitivity factor)
+        // Negative to reverse direction: drag right = rotate left, drag left = rotate right
+        const rotationSpeed = 0.005;
+        rotationYRef.current -= deltaX * rotationSpeed;
+        lastMouseXRef.current = e.clientX;
+      }
     };
     renderer.domElement.addEventListener('mousemove', handleMouseMove);
 
-    const handleClick = () => {
+    const handleMouseDown = (e: MouseEvent) => {
+      // Only start dragging on left mouse button
+      if (e.button === 0) {
+        isDraggingRef.current = true;
+        lastMouseXRef.current = e.clientX;
+        if (rendererRef.current) {
+          rendererRef.current.domElement.style.cursor = 'grabbing';
+        }
+      }
+    };
+    renderer.domElement.addEventListener('mousedown', handleMouseDown);
+
+    const handleMouseUp = () => {
+      isDraggingRef.current = false;
+      if (rendererRef.current) {
+        rendererRef.current.domElement.style.cursor = 'default';
+      }
+    };
+    renderer.domElement.addEventListener('mouseup', handleMouseUp);
+    renderer.domElement.addEventListener('mouseleave', handleMouseUp); // Stop dragging when mouse leaves
+
+    const handleClick = (e: MouseEvent) => {
+      // Only trigger click if we didn't drag (to avoid accidental clicks after rotation)
+      if (isDraggingRef.current) {
+        e.preventDefault();
+        return;
+      }
       if (!raycasterRef.current || !cameraRef.current) return;
       raycasterRef.current.setFromCamera(mouseRef.current, cameraRef.current);
       const intersects = raycasterRef.current.intersectObjects(
@@ -168,6 +410,9 @@ export function ThreeScene({
     return () => {
       window.removeEventListener('resize', handleResize);
       renderer.domElement.removeEventListener('mousemove', handleMouseMove);
+      renderer.domElement.removeEventListener('mousedown', handleMouseDown);
+      renderer.domElement.removeEventListener('mouseup', handleMouseUp);
+      renderer.domElement.removeEventListener('mouseleave', handleMouseUp);
       renderer.domElement.removeEventListener('click', handleClick);
       if (frameRef.current !== null) {
         cancelAnimationFrame(frameRef.current);
@@ -209,53 +454,20 @@ export function ThreeScene({
       }
     }
 
-    const segments = size - 1;
-    const geometry = new THREE.PlaneGeometry(
-      terrainSize, terrainSize,
-      segments, segments
-    );
+    const geometry = createTerrainGeometry(heightmap, size, terrainSize, terrainHeight);
 
-    const positions = geometry.attributes.position.array as Float32Array;
-    const colors = new Float32Array(positions.length);
-
-    for (let i = 0; i < size; i++) {
-      for (let j = 0; j < size; j++) {
-        const idx = i * size + j;
-        const vertIdx = idx * 3;
-        const h = heightmap[idx];
-
-        positions[vertIdx + 2] = h * terrainHeight;
-
-        // Subtle color gradient
-        const color = new THREE.Color().lerpColors(
-          COLORS.terrain.low,
-          h > 0.6 ? COLORS.terrain.high : COLORS.terrain.mid,
-          h * 0.7
-        );
-        // Brighten terrain colors significantly to make the surface very visible
-        const brighten = 3.5;
-        colors[vertIdx] = Math.min(1, color.r * brighten);
-        colors[vertIdx + 1] = Math.min(1, color.g * brighten);
-        colors[vertIdx + 2] = Math.min(1, color.b * brighten);
-      }
-    }
-
-    geometry.setAttribute('color', new THREE.Float32BufferAttribute(colors, 3));
-    geometry.computeVertexNormals();
-
-    // Solid mesh with visible coloring (base layer)
     const material = new THREE.MeshLambertMaterial({
       vertexColors: true,
-      transparent: false, // Make fully opaque for maximum visibility
+      transparent: false,
       side: THREE.DoubleSide,
-      emissive: new THREE.Color(0x223344), // Add slight self-illumination
-      emissiveIntensity: 0.2
+      emissive: new THREE.Color(0x223344),
+      emissiveIntensity: LIGHTING_CONFIG.TERRAIN_EMISSIVE_INTENSITY
     });
 
     const terrain = new THREE.Mesh(geometry, material);
     terrain.rotation.x = -Math.PI / 2;
-    terrain.position.y = 0;
-    terrain.visible = false; // Hide terrain surface - show only contours
+    terrain.position.set(0, 0, 0); // Explicitly center at origin
+    terrain.visible = false; // Hidden - only showing contours
     scene.add(terrain);
     terrainRef.current = terrain;
 
@@ -286,7 +498,7 @@ export function ThreeScene({
       // Determine line color and width
       const isIndex = contourIdx % 10 === 0; // Every 10th is index contour
       const color = isIndex ? COLORS.contour.index : (isMajor ? COLORS.contour.major : COLORS.contour.minor);
-      const baseOpacity = isIndex ? 1.0 : (isMajor ? 0.95 : 0.75);
+      const baseOpacity = isIndex ? 1.0 : (isMajor ? 0.9 : 0.85);
 
       // Create geometry from line segments
       const points: THREE.Vector3[] = [];
@@ -311,7 +523,7 @@ export function ThreeScene({
         color: color,
         transparent: true,
         opacity: baseOpacity,
-        linewidth: isMajor ? 2 : 1
+        linewidth: isMajor ? 3 : 2
       });
 
       const lineSegments = new THREE.LineSegments(geometry, material);
@@ -359,137 +571,48 @@ export function ThreeScene({
 
     // Show all markers by default, but allow timeline control for animation
     // If timelineProgress is 1.0, show all; otherwise show progressive reveal
-    const visibleCount = timelineProgress >= 0.99 
-      ? pathPoints.length 
+    const visibleCount = timelineProgress >= 0.99
+      ? pathPoints.length
       : Math.ceil(pathPoints.length * timelineProgress);
-    // SAFETY LIMIT: Never render more than 50 markers to prevent performance issues
-    const maxMarkers = 50;
-    const limitedCount = Math.min(visibleCount, maxMarkers);
+    const limitedCount = Math.min(visibleCount, MARKER_CONFIG.MAX_MARKERS);
     const visiblePoints = pathPoints.slice(0, limitedCount);
 
     // Create markers
     visiblePoints.forEach((point, idx) => {
-      const group = new THREE.Group();
-
-      const worldX = (point.x - 0.5) * terrainSize;
-      const worldZ = (point.y - 0.5) * terrainSize;
-      const worldY = point.height * terrainHeight;
-
-      // PRIORITY: Use role-based color encoding (user projections)
-      // Color represents how the user positioned themselves or the AI
-      let markerColor = COLORS.marker;
-      let glowColor = COLORS.markerGlow;
-      
-      if (point.role === 'user' && point.humanRole) {
-        // User messages: color by human role (user positioning)
-        markerColor = getColorForRole(point.humanRole);
-        // Slightly brighter glow
-        const baseColor = new THREE.Color(markerColor);
-        baseColor.lerp(new THREE.Color(1, 1, 1), 0.3);
-        glowColor = '#' + baseColor.getHexString();
-      } else if (point.role === 'assistant' && point.aiRole) {
-        // AI messages: color by AI role (how user positioned AI)
-        markerColor = getColorForRole(point.aiRole);
-        // Slightly brighter glow
-        const baseColor = new THREE.Color(markerColor);
-        baseColor.lerp(new THREE.Color(1, 1, 1), 0.3);
-        glowColor = '#' + baseColor.getHexString();
-      } else {
-        // Fallback: use communication function if no role data
-        const isFunctional = point.communicationFunction < 0.5;
-        markerColor = isFunctional ? '#44ff66' : '#ffaa00';
-        glowColor = isFunctional ? '#66ff88' : '#ffcc44';
-      }
-
-      // Vertical pole
-      const poleHeight = 2.0;
-      const poleGeom = new THREE.BufferGeometry().setFromPoints([
-        new THREE.Vector3(0, 0, 0),
-        new THREE.Vector3(0, poleHeight, 0)
-      ]);
-      const poleMat = new THREE.LineBasicMaterial({
-        color: markerColor,
-        transparent: true,
-        opacity: 0.6
-      });
-      const pole = new THREE.Line(poleGeom, poleMat);
-      group.add(pole);
-
-      // Marker head (small sphere)
-      const headGeom = new THREE.SphereGeometry(0.12, 16, 12);
-      const headMat = new THREE.MeshBasicMaterial({
-        color: glowColor,
-        transparent: true,
-        opacity: 0.9
-      });
-      const head = new THREE.Mesh(headGeom, headMat);
-      head.position.y = poleHeight;
-      group.add(head);
-
-      // Glow ring
-      const glowGeom = new THREE.RingGeometry(0.2, 0.35, 24);
-      const glowMat = new THREE.MeshBasicMaterial({
-        color: glowColor,
-        transparent: true,
-        opacity: 0.3,
-        side: THREE.DoubleSide
-      });
-      const glow = new THREE.Mesh(glowGeom, glowMat);
-      glow.rotation.x = -Math.PI / 2;
-      glow.position.y = poleHeight;
-      group.add(glow);
-
-      // Base marker on terrain
-      const baseGeom = new THREE.CircleGeometry(0.15, 16);
-      const baseMat = new THREE.MeshBasicMaterial({
-        color: markerColor,
-        transparent: true,
-        opacity: 0.5,
-        side: THREE.DoubleSide
-      });
-      const base = new THREE.Mesh(baseGeom, baseMat);
-      base.rotation.x = -Math.PI / 2;
-      base.position.y = 0.03;
-      group.add(base);
-
-      // Invisible hitbox
-      const hitboxGeom = new THREE.CylinderGeometry(0.3, 0.3, poleHeight + 0.5, 8);
-      const hitboxMat = new THREE.MeshBasicMaterial({ visible: false });
-      const hitbox = new THREE.Mesh(hitboxGeom, hitboxMat);
-      hitbox.position.y = poleHeight / 2;
-      hitbox.userData.index = idx;
-      group.add(hitbox);
-
-      group.position.set(worldX, worldY, worldZ);
-      scene.add(group);
-
-      markersRef.current.push({
-        group,
-        head,
-        glow,
-        pole,
-        base,
-        hitbox,
-        baseY: worldY
-      });
+      const marker = createMarkerGroup(point, idx, terrainSize, terrainHeight);
+      scene.add(marker.group);
+      markersRef.current.push(marker);
     });
 
     // Create path line
     if (visiblePoints.length >= 2) {
       const pathGeom = new THREE.BufferGeometry();
-      const pathPositions = visiblePoints.flatMap(p => [
-        (p.x - 0.5) * terrainSize,
-        p.height * terrainHeight + 0.05,
-        (p.y - 0.5) * terrainSize
-      ]);
+      const pathPositions = visiblePoints.flatMap(p => {
+        // Use PAD-based height if available, otherwise use terrain height
+        let yPosition: number;
+        if (p.padHeight !== undefined) {
+          const baseTerrainY = p.height * terrainHeight;
+          const padOffset = (p.padHeight - 0.5) * terrainHeight * 0.8;
+          yPosition = baseTerrainY + padOffset + MARKER_CONFIG.PATH_Y_OFFSET;
+        } else {
+          yPosition = p.height * terrainHeight + MARKER_CONFIG.PATH_Y_OFFSET;
+        }
+
+        return [
+          (p.x - 0.5) * terrainSize,
+          yPosition,
+          (p.y - 0.5) * terrainSize
+        ];
+      });
       pathGeom.setAttribute('position', new THREE.Float32BufferAttribute(pathPositions, 3));
 
       const pathMat = new THREE.LineDashedMaterial({
         color: COLORS.path,
-        dashSize: 0.25,
-        gapSize: 0.12,
+        dashSize: MARKER_CONFIG.PATH_DASH_SIZE,
+        gapSize: MARKER_CONFIG.PATH_GAP_SIZE,
         transparent: true,
-        opacity: 0.85
+        opacity: 1.0,
+        linewidth: 2
       });
 
       const pathLine = new THREE.Line(pathGeom, pathMat);
@@ -499,6 +622,99 @@ export function ThreeScene({
     }
 
   }, [pathPoints, timelineProgress, terrainSize, terrainHeight]);
+
+  // Create/update projection marker showing conversation position on 2D axis
+  useEffect(() => {
+    if (!sceneRef.current || pathPoints.length === 0) return;
+    const scene = sceneRef.current;
+
+    // Clear old projection marker
+    if (projectionMarkerRef.current) {
+      scene.remove(projectionMarkerRef.current);
+      projectionMarkerRef.current.traverse(obj => {
+        if (obj instanceof THREE.Mesh || obj instanceof THREE.Line) {
+          if (obj.geometry) obj.geometry.dispose();
+          if (obj.material && obj.material instanceof THREE.Material) obj.material.dispose();
+        }
+      });
+    }
+
+    // Calculate average position of all path points (conversation center on 2D axis)
+    let avgX = 0;
+    let avgY = 0;
+    pathPoints.forEach(p => {
+      avgX += p.x;
+      avgY += p.y;
+    });
+    avgX /= pathPoints.length;
+    avgY /= pathPoints.length;
+
+    // Convert to world coordinates
+    const worldX = (avgX - 0.5) * terrainSize;
+    const worldZ = (avgY - 0.5) * terrainSize;
+
+    // Create projection marker group
+    const group = new THREE.Group();
+
+    // Ground circle marker showing 2D position
+    const circleGeom = new THREE.RingGeometry(0.3, 0.4, 32);
+    const circleMat = new THREE.MeshBasicMaterial({
+      color: COLORS.accent,
+      transparent: true,
+      opacity: 0.6,
+      side: THREE.DoubleSide
+    });
+    const circle = new THREE.Mesh(circleGeom, circleMat);
+    circle.rotation.x = -Math.PI / 2;
+    circle.position.y = 0.02;
+    group.add(circle);
+
+    // Inner filled circle
+    const innerCircleGeom = new THREE.CircleGeometry(0.25, 32);
+    const innerCircleMat = new THREE.MeshBasicMaterial({
+      color: COLORS.accent,
+      transparent: true,
+      opacity: 0.3,
+      side: THREE.DoubleSide
+    });
+    const innerCircle = new THREE.Mesh(innerCircleGeom, innerCircleMat);
+    innerCircle.rotation.x = -Math.PI / 2;
+    innerCircle.position.y = 0.03;
+    group.add(innerCircle);
+
+    // Vertical projection line
+    const lineGeom = new THREE.BufferGeometry().setFromPoints([
+      new THREE.Vector3(0, 0, 0),
+      new THREE.Vector3(0, 3, 0)
+    ]);
+    const lineMat = new THREE.LineDashedMaterial({
+      color: COLORS.accent,
+      transparent: true,
+      opacity: 0.4,
+      dashSize: 0.2,
+      gapSize: 0.1
+    });
+    const line = new THREE.Line(lineGeom, lineMat);
+    line.computeLineDistances();
+    group.add(line);
+
+    // Top marker sphere
+    const sphereGeom = new THREE.SphereGeometry(0.15, 16, 12);
+    const sphereMat = new THREE.MeshBasicMaterial({
+      color: COLORS.accent,
+      transparent: true,
+      opacity: 0.7
+    });
+    const sphere = new THREE.Mesh(sphereGeom, sphereMat);
+    sphere.position.y = 3;
+    group.add(sphere);
+
+    // Position the group at the conversation's center
+    group.position.set(worldX, 0, worldZ);
+    scene.add(group);
+    projectionMarkerRef.current = group;
+
+  }, [pathPoints, terrainSize, terrainHeight]);
 
   // Animation loop
   useEffect(() => {
@@ -512,16 +728,36 @@ export function ThreeScene({
 
     const animate = () => {
       if (!isAnimating) return;
-      timeRef.current += 0.016;
+      timeRef.current += ANIMATION_CONFIG.TIME_STEP;
       frameCount++;
 
-      // Slow camera orbit
-      const orbitSpeed = 0.04;
-      const radius = 15;
-      camera.position.x = Math.sin(timeRef.current * orbitSpeed) * radius;
-      camera.position.z = Math.cos(timeRef.current * orbitSpeed) * radius;
-      camera.position.y = 9 + Math.sin(timeRef.current * 0.08) * 1.5;
-      camera.lookAt(0, 1, 0);
+      // Calculate center of visible path points
+      const visiblePoints = pathPoints.slice(0, Math.ceil(pathPoints.length * timelineProgress));
+      let centerX = 0;
+      let centerZ = 0;
+      let centerY = 1; // Default height
+      
+      if (visiblePoints.length > 0) {
+        // Calculate average position of path points in world space
+        const worldPositions = visiblePoints.map(p => ({
+          x: (p.x - 0.5) * terrainSize,
+          z: (p.y - 0.5) * terrainSize,
+          y: p.height * terrainHeight
+        }));
+        
+        centerX = worldPositions.reduce((sum, p) => sum + p.x, 0) / worldPositions.length;
+        centerZ = worldPositions.reduce((sum, p) => sum + p.z, 0) / worldPositions.length;
+        centerY = worldPositions.reduce((sum, p) => sum + p.y, 0) / worldPositions.length + 1; // Add offset for better view
+      }
+
+      // Camera position with user-controlled rotation around Y-axis
+      // Rotate around the path center based on drag input
+      const radius = ANIMATION_CONFIG.ORBIT_RADIUS;
+      const angle = rotationYRef.current;
+      camera.position.x = centerX + Math.sin(angle) * radius;
+      camera.position.z = centerZ + Math.cos(angle) * radius;
+      camera.position.y = ANIMATION_CONFIG.CAMERA_Y_BASE;
+      camera.lookAt(centerX, centerY, centerZ);
 
       // Animate markers
       markersRef.current.forEach((m, idx) => {
@@ -531,22 +767,22 @@ export function ThreeScene({
         const isLocked = lockedPoint === idx;
         const isActive = isHovered || isLocked;
 
-        const pulse = Math.sin(timeRef.current * 2.5 + idx * 0.5) * 0.5 + 0.5;
+        const pulse = Math.sin(timeRef.current * ANIMATION_CONFIG.PULSE_FREQUENCY + idx * ANIMATION_CONFIG.PULSE_PHASE_SHIFT) * 0.5 + 0.5;
 
-        const targetScale = isActive ? 1.4 : 1;
+        const targetScale = isActive ? ANIMATION_CONFIG.MARKER_HOVER_SCALE : ANIMATION_CONFIG.MARKER_NORMAL_SCALE;
         const currentScale = m.head.scale.x;
-        const newScale = currentScale + (targetScale - currentScale) * 0.1;
+        const newScale = currentScale + (targetScale - currentScale) * ANIMATION_CONFIG.SCALE_LERP_SPEED;
         m.head.scale.setScalar(newScale);
         m.glow.scale.setScalar(newScale * 1.2);
 
         if (m.glow.material instanceof THREE.MeshBasicMaterial) {
           m.glow.material.opacity = isActive ? 0.5 + pulse * 0.2 : 0.2 + pulse * 0.1;
         }
-        m.group.position.y = m.baseY + Math.sin(timeRef.current * 1.5 + idx) * 0.03;
+        m.group.position.y = m.baseY + Math.sin(timeRef.current * ANIMATION_CONFIG.MARKER_FLOAT_FREQUENCY + idx) * ANIMATION_CONFIG.MARKER_FLOAT_AMPLITUDE;
       });
 
       // Animate contour lines with pulsing effect (throttled for performance)
-      if (frameCount % 2 === 0) {
+      if (frameCount % ANIMATION_CONFIG.CONTOUR_ANIMATION_THROTTLE === 0) {
         contoursRef.current.forEach((contour) => {
           if (!contour || !contour.userData) return;
 
@@ -581,8 +817,8 @@ export function ThreeScene({
         });
       }
 
-      // Raycast for hover (throttled to every 3 frames for performance)
-      if (frameCount % 3 === 0) {
+      // Raycast for hover (throttled for performance)
+      if (frameCount % ANIMATION_CONFIG.RAYCAST_THROTTLE === 0) {
         raycasterRef.current.setFromCamera(mouseRef.current, camera);
         const intersects = raycasterRef.current.intersectObjects(
           markersRef.current.filter(m => m).map(m => m.hitbox).filter(h => h),
@@ -609,10 +845,10 @@ export function ThreeScene({
 
         // Subtle bloom (reduced resolution for better performance)
         const bloomPass = new UnrealBloomPass(
-          new THREE.Vector2(width / 2, height / 2), // Half resolution for performance
-          0.3, // strength
-          0.4, // radius
-          0.85 // threshold
+          new THREE.Vector2(width / POST_PROCESSING_CONFIG.BLOOM_RESOLUTION_DIVISOR, height / POST_PROCESSING_CONFIG.BLOOM_RESOLUTION_DIVISOR),
+          POST_PROCESSING_CONFIG.BLOOM_STRENGTH,
+          POST_PROCESSING_CONFIG.BLOOM_RADIUS,
+          POST_PROCESSING_CONFIG.BLOOM_THRESHOLD
         );
         bloomPass.enabled = true;
         composer.addPass(bloomPass);
@@ -638,7 +874,7 @@ export function ThreeScene({
           scene,
           camera,
           {
-            focus: 15.0,
+            focus: POST_PROCESSING_CONFIG.BOKEH_FOCUS,
             aperture: 0.0,
             maxblur: 0.0
           }
@@ -662,7 +898,7 @@ export function ThreeScene({
 
         // Smooth transition
         const prevIntensity = effectIntensityRef.current;
-        effectIntensityRef.current += (targetIntensity - effectIntensityRef.current) * 0.05;
+        effectIntensityRef.current += (targetIntensity - effectIntensityRef.current) * POST_PROCESSING_CONFIG.EFFECT_INTENSITY_LERP;
         const intensity = effectIntensityRef.current;
 
         // Only update uniforms if intensity changed significantly or if actively animating
@@ -672,16 +908,16 @@ export function ThreeScene({
             const pulse = Math.sin(timeRef.current * 3.0) * 0.5 + 0.5;
 
             // Chromatic aberration
-            chromaPass.uniforms.amount.value = 0.003 * intensity * (0.8 + pulse * 0.4);
+            chromaPass.uniforms.amount.value = POST_PROCESSING_CONFIG.CHROMA_AMOUNT_MAX * intensity * (0.8 + pulse * 0.4);
             chromaPass.uniforms.angle.value = timeRef.current * 0.5;
 
             // RGB shift
-            rgbPass.uniforms.amount.value = 0.004 * intensity * (0.7 + pulse * 0.3);
+            rgbPass.uniforms.amount.value = POST_PROCESSING_CONFIG.RGB_SHIFT_AMOUNT_MAX * intensity * (0.7 + pulse * 0.3);
             rgbPass.uniforms.angle.value = timeRef.current * 0.3;
 
             // Depth of field
-            (bokehPass.uniforms as any).aperture.value = 0.00015 * intensity;
-            (bokehPass.uniforms as any).maxblur.value = 0.005 * intensity;
+            (bokehPass.uniforms as any).aperture.value = POST_PROCESSING_CONFIG.BOKEH_APERTURE_MAX * intensity;
+            (bokehPass.uniforms as any).maxblur.value = POST_PROCESSING_CONFIG.BOKEH_MAXBLUR_MAX * intensity;
           } else if (intensity < 0.01 && prevIntensity >= 0.01) {
             // Only update to zero once when transitioning to inactive
             chromaPass.uniforms.amount.value = 0.0;
@@ -720,5 +956,174 @@ export function ThreeScene({
       }}
     />
   );
+}
+
+// Helper function to create terrain geometry
+function createTerrainGeometry(
+  heightmap: Float32Array,
+  size: number,
+  terrainSize: number,
+  terrainHeight: number
+): THREE.BufferGeometry {
+  const segments = size - 1;
+  const geometry = new THREE.PlaneGeometry(
+    terrainSize,
+    terrainSize,
+    segments,
+    segments
+  );
+
+  const positions = geometry.attributes.position.array as Float32Array;
+  const colors = new Float32Array(positions.length);
+
+  for (let i = 0; i < size; i++) {
+    for (let j = 0; j < size; j++) {
+      const idx = i * size + j;
+      const vertIdx = idx * 3;
+      const h = heightmap[idx];
+
+      positions[vertIdx + 2] = h * terrainHeight;
+
+      // Subtle color gradient
+      const color = new THREE.Color().lerpColors(
+        COLORS.terrain.low,
+        h > 0.6 ? COLORS.terrain.high : COLORS.terrain.mid,
+        h * 0.7
+      );
+      colors[vertIdx] = Math.min(1, color.r * LIGHTING_CONFIG.TERRAIN_BRIGHTEN);
+      colors[vertIdx + 1] = Math.min(1, color.g * LIGHTING_CONFIG.TERRAIN_BRIGHTEN);
+      colors[vertIdx + 2] = Math.min(1, color.b * LIGHTING_CONFIG.TERRAIN_BRIGHTEN);
+    }
+  }
+
+  geometry.setAttribute('color', new THREE.Float32BufferAttribute(colors, 3));
+  geometry.computeVertexNormals();
+
+  return geometry;
+}
+
+// Helper function to create a marker group
+function createMarkerGroup(
+  point: PathPoint,
+  idx: number,
+  terrainSize: number,
+  terrainHeight: number
+): { group: THREE.Group; head: THREE.Mesh; glow: THREE.Mesh; pole: THREE.Line; base: THREE.Mesh; hitbox: THREE.Mesh; baseY: number } {
+  const group = new THREE.Group();
+
+  const worldX = (point.x - 0.5) * terrainSize;
+  const worldZ = (point.y - 0.5) * terrainSize;
+
+  // Use PAD-based height if available (affective/evaluative lens)
+  // High emotional intensity (frustration) = peaks, low (affiliation) = valleys
+  let worldY: number;
+  if (point.padHeight !== undefined) {
+    // PAD-based height: emotionalIntensity determines height above/below terrain
+    // Scale: 0.5 = terrain level, 1.0 = peak (frustration), 0.0 = valley (affiliation)
+    const baseTerrainY = point.height * terrainHeight;
+    const padOffset = (point.padHeight - 0.5) * terrainHeight * 0.8; // -0.4 to +0.4 range
+    worldY = baseTerrainY + padOffset;
+  } else {
+    // Fallback: use terrain height
+    worldY = point.height * terrainHeight;
+  }
+
+  // Determine colors based on role (user vs assistant)
+  // Primary distinction: user = cyan/blue, assistant = orange/yellow
+  let markerColor: string;
+  let glowColor: string;
+
+  if (point.role === 'user') {
+    // User messages: always cyan/blue for clear distinction
+    markerColor = COLORS.userMarker;
+    glowColor = COLORS.userMarkerGlow;
+  } else if (point.role === 'assistant') {
+    // Assistant messages: always orange/yellow for clear distinction
+    markerColor = COLORS.assistantMarker;
+    glowColor = COLORS.assistantMarkerGlow;
+  } else {
+    // Fallback: use functional/social distinction
+    const isFunctional = point.communicationFunction < 0.5;
+    markerColor = isFunctional ? COLORS.userMarker : COLORS.assistantMarker;
+    glowColor = isFunctional ? COLORS.userMarkerGlow : COLORS.assistantMarkerGlow;
+  }
+
+  // Vertical pole
+  const poleGeom = new THREE.BufferGeometry().setFromPoints([
+    new THREE.Vector3(0, 0, 0),
+    new THREE.Vector3(0, MARKER_CONFIG.POLE_HEIGHT, 0)
+  ]);
+  const poleMat = new THREE.LineBasicMaterial({
+    color: markerColor,
+    transparent: true,
+    opacity: 0.6
+  });
+  const pole = new THREE.Line(poleGeom, poleMat);
+  group.add(pole);
+
+  // Marker head
+  const headGeom = new THREE.SphereGeometry(
+    MARKER_CONFIG.HEAD_RADIUS,
+    MARKER_CONFIG.HEAD_SEGMENTS.width,
+    MARKER_CONFIG.HEAD_SEGMENTS.height
+  );
+  const headMat = new THREE.MeshBasicMaterial({
+    color: glowColor,
+    transparent: true,
+    opacity: 0.9
+  });
+  const head = new THREE.Mesh(headGeom, headMat);
+  head.position.y = MARKER_CONFIG.POLE_HEIGHT;
+  group.add(head);
+
+  // Glow ring
+  const glowGeom = new THREE.RingGeometry(
+    MARKER_CONFIG.GLOW_INNER_RADIUS,
+    MARKER_CONFIG.GLOW_OUTER_RADIUS,
+    MARKER_CONFIG.GLOW_SEGMENTS
+  );
+  const glowMat = new THREE.MeshBasicMaterial({
+    color: glowColor,
+    transparent: true,
+    opacity: 0.3,
+    side: THREE.DoubleSide
+  });
+  const glow = new THREE.Mesh(glowGeom, glowMat);
+  glow.rotation.x = -Math.PI / 2;
+  glow.position.y = MARKER_CONFIG.POLE_HEIGHT;
+  group.add(glow);
+
+  // Base marker
+  const baseGeom = new THREE.CircleGeometry(
+    MARKER_CONFIG.BASE_RADIUS,
+    MARKER_CONFIG.BASE_SEGMENTS
+  );
+  const baseMat = new THREE.MeshBasicMaterial({
+    color: markerColor,
+    transparent: true,
+    opacity: 0.5,
+    side: THREE.DoubleSide
+  });
+  const base = new THREE.Mesh(baseGeom, baseMat);
+  base.rotation.x = -Math.PI / 2;
+  base.position.y = 0.03;
+  group.add(base);
+
+  // Invisible hitbox
+  const hitboxGeom = new THREE.CylinderGeometry(
+    MARKER_CONFIG.HITBOX_RADIUS,
+    MARKER_CONFIG.HITBOX_RADIUS,
+    MARKER_CONFIG.POLE_HEIGHT + 0.5,
+    MARKER_CONFIG.HITBOX_SEGMENTS
+  );
+  const hitboxMat = new THREE.MeshBasicMaterial({ visible: false });
+  const hitbox = new THREE.Mesh(hitboxGeom, hitboxMat);
+  hitbox.position.y = MARKER_CONFIG.POLE_HEIGHT / 2;
+  hitbox.userData.index = idx;
+  group.add(hitbox);
+
+  group.position.set(worldX, worldY, worldZ);
+
+  return { group, head, glow, pole, base, hitbox, baseY: worldY };
 }
 

@@ -30,7 +30,7 @@
 - Contour lines for elevation
 
 #### 3. **Spatial Encoding**
-- **X-axis**: `communicationFunction` (instrumental ↔ expressive)
+- **X-axis**: `communicationFunction` (functional ↔ social)
   - Based on `conversationPurpose` and `knowledgeExchange`
 - **Y-axis**: `conversationStructure` (structured ↔ emergent)
   - Based on `interactionPattern` and `engagementStyle`
@@ -132,14 +132,14 @@ This shows a **sharer-peer dynamic** (user sharing, AI as peer), but this isn't 
 **Problem**: The spatial encoding (X/Y axes) doesn't directly map to **role positioning**.
 
 **Current Mapping**:
-- X-axis: `communicationFunction` (instrumental ↔ expressive)
+- X-axis: `communicationFunction` (functional ↔ social)
 - Y-axis: `conversationStructure` (structured ↔ emergent)
 
 **Proposed Role-Based Mapping** (from WORKFLOW.md, not implemented):
 ```typescript
 // X-axis: Based on human role distribution
-// Director + Challenger → more instrumental
-// Sharer + Collaborator → more expressive
+// Director + Challenger → more functional
+// Sharer + Collaborator → more social
 const x = 
   (humanRole.director || 0) * 0.2 +
   (humanRole.challenger || 0) * 0.3 +
@@ -190,7 +190,7 @@ const z =
 
 2. **Implement role-based spatial positioning**:
    - Use the mapping from WORKFLOW.md
-   - X-axis: Human role positioning (director/challenger → instrumental, sharer/collaborator → expressive)
+   - X-axis: Human role positioning (director/challenger → functional, sharer/collaborator → social)
    - Y-axis: AI role positioning (expert/advisor → structured, peer/facilitator → emergent)
 
 3. **Add role visualization overlay**:
@@ -287,7 +287,7 @@ const z =
 
 **Should Show**:
 - **Visual**: Markers colored by role (sharer = blue, peer = green)
-- **Spatial**: Positioned based on role dynamics (sharer → expressive X, peer → emergent Y)
+- **Spatial**: Positioned based on role dynamics (sharer → social X, peer → emergent Y)
 - **Text**: "You positioned yourself as a sharer (70%), treating the AI as a peer (70%)"
 - **Reflection**: "Notice how you shared personal experiences while positioning the AI as an equal"
 - **Framing**: "These roles reflect your positioning patterns, not the AI's relational capacity"
