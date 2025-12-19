@@ -148,59 +148,77 @@ export function calculateMessagePAD(
   const convEngagement = classification?.engagementStyle?.category || 'reactive';
 
   // Calculate base Pleasure (P) from conversation tone
+  // Based on actual categories in data: ['empathetic', 'neutral', 'playful', 'serious', 'supportive']
   let basePleasure =
     (convTone === 'playful' || convTone === 'supportive' || convTone === 'empathetic') ? 0.8 :
-    (convTone === 'serious' || convTone === 'analytical') ? 0.3 :
+    (convTone === 'serious') ? 0.3 :
     (convTone === 'neutral') ? 0.5 : 0.5;
 
-  // Calculate base Arousal (A) from conversation engagement
+  // Calculate base Arousal (A) from conversation engagement  
+  // Based on actual categories in data: ['affirming', 'exploring', 'questioning', 'reactive']
   let baseArousal =
-    (convEngagement === 'challenging' || convEngagement === 'questioning') ? 0.7 :
-    (convEngagement === 'reactive') ? 0.3 :
-    (convEngagement === 'affirming' || convEngagement === 'proactive') ? 0.5 : 0.5;
+    (convEngagement === 'questioning') ? 0.7 : // High arousal (probing, active)
+    (convEngagement === 'reactive') ? 0.3 : // Low arousal (responding passively)
+    (convEngagement === 'affirming') ? 0.45 : // Moderate-low (validating, calm)
+    (convEngagement === 'exploring') ? 0.6 : // Moderate-high (curious, engaged)
+    0.5; // Default fallback
 
   // Message-level adjustments based on content analysis
   const content = message.content.toLowerCase();
 
   // Detect frustration markers (low pleasure, high arousal)
+  // More specific patterns to avoid false positives
   const frustrationMarkers = [
-    'wrong', 'incorrect', 'no that\'s', 'actually', 'but',
-    'however', 'no,', 'not quite', 'error', 'mistake',
-    'doesn\'t work', 'failed', 'broken', 'issue', 'problem',
-    'doesn\'t', 'can\'t', 'won\'t', 'not working'
+    /\b(wrong|incorrect|error|mistake|failed|broken)\b/i,
+    /\bno[,.]?\s+(that\'s|this is|it is)/i,
+    /\bnot\s+(quite|right|correct|working|working properly)/i,
+    /\b(doesn\'t|does not|can\'t|cannot|won\'t|will not)\s+(work|seem|appear|make sense)/i,
+    /\b(issue|problem|bug)\b/i,
+    /\b(actually|however|but)\s+(that|this|it)/i,
   ];
-  const hasFrustration = frustrationMarkers.some(marker => content.includes(marker));
+  const hasFrustration = frustrationMarkers.some(pattern => pattern.test(content));
 
   // Detect satisfaction markers (high pleasure)
+  // More specific patterns with positive context
   const satisfactionMarkers = [
-    'perfect', 'exactly', 'great', 'thanks', 'thank you',
-    'that works', 'yes!', 'correct', 'right', 'good',
-    'awesome', 'brilliant', 'excellent', 'amazing',
-    'love it', 'works perfectly', 'exactly what', 'that\'s it'
+    /\b(perfect|exactly|brilliant|excellent|amazing|awesome|fantastic)\b/i,
+    /\b(thanks|thank you)\b/i,
+    /\b(that|it)\s+works\b/i,
+    /\byes[!.]?\s+(that\'s|exactly|perfect|correct|right)/i,
+    /\bworks?\s+perfectly\b/i,
+    /\bexactly\s+(what|what i|what we)/i,
+    /\bthat\'s\s+it\b/i,
+    /\blove\s+(it|this|that)\b/i,
   ];
-  const hasSatisfaction = satisfactionMarkers.some(marker => content.includes(marker));
+  const hasSatisfaction = satisfactionMarkers.some(pattern => pattern.test(content));
 
   // Detect urgency/agitation (high arousal)
+  // More specific patterns to avoid false positives
   const urgencyMarkers = [
-    'urgent', 'asap', 'quickly', 'now', 'immediately',
-    'help!', 'please!', 'need', 'important', 'critical',
-    'hurry', 'fast', 'right now'
+    /\b(urgent|asap|as soon as possible)\b/i,
+    /\b(quickly|immediately|right now)\b/i,
+    /\bhelp[!.]?\s+(me|us|please)/i,
+    /\bplease[!.]?\s+(help|urgent)/i,
+    /\b(very|extremely|really)\s+(urgent|important|critical)/i,
+    /\b(hurry|rush|fast)\b/i,
   ];
-  const hasUrgency = urgencyMarkers.some(marker => content.includes(marker));
+  const hasUrgency = urgencyMarkers.some(pattern => pattern.test(content));
 
   // Adjust PAD based on message content
+  // Use more subtle adjustments to avoid extreme values
   if (hasFrustration) {
-    basePleasure = Math.max(0.1, basePleasure - 0.3); // Lower pleasure
-    baseArousal = Math.min(1.0, baseArousal + 0.2);   // Higher arousal
+    basePleasure = Math.max(0.1, basePleasure - 0.25); // Lower pleasure
+    baseArousal = Math.min(1.0, baseArousal + 0.25);   // Higher arousal
   }
 
   if (hasSatisfaction) {
-    basePleasure = Math.min(1.0, basePleasure + 0.2); // Higher pleasure
-    baseArousal = Math.max(0.1, baseArousal - 0.1);   // Lower arousal (calm)
+    basePleasure = Math.min(1.0, basePleasure + 0.25); // Higher pleasure
+    baseArousal = Math.max(0.1, baseArousal - 0.15);   // Lower arousal (calm)
   }
 
-  if (hasUrgency) {
-    baseArousal = Math.min(1.0, baseArousal + 0.15); // Higher arousal
+  if (hasUrgency && !hasFrustration) {
+    // Only apply urgency if not already frustrated
+    baseArousal = Math.min(1.0, baseArousal + 0.2); // Higher arousal
   }
 
   // Calculate Dominance (D) from message structure

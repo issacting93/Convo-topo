@@ -116,6 +116,51 @@ export async function loadClassifiedConversations(): Promise<ClassifiedConversat
     }
   }
   
+  // Load cornell-*.json files (Cornell Movie Dialogs)
+  let cornellIndex = 0;
+  let hasMoreCornell = true;
+  while (hasMoreCornell && cornellIndex < 100) {
+    try {
+      const response = await fetch(`/output/cornell-${cornellIndex}.json`);
+      if (response.ok) {
+        const data = await response.json();
+        conversations.push(data);
+        cornellIndex++;
+      } else if (response.status === 404) {
+        hasMoreCornell = false;
+      } else {
+        hasMoreCornell = false;
+      }
+    } catch (error) {
+      hasMoreCornell = false;
+    }
+  }
+  
+  // Load kaggle-emo-*.json files (Kaggle Empathetic Dialogues)
+  // Exclude error files (kaggle-emo-*-error.json)
+  let kaggleIndex = 0;
+  let hasMoreKaggle = true;
+  while (hasMoreKaggle && kaggleIndex < 100) {
+    try {
+      // Skip error files
+      const response = await fetch(`/output/kaggle-emo-${kaggleIndex}.json`);
+      if (response.ok) {
+        const data = await response.json();
+        // Double-check it's not an error file by checking content
+        if (!data.id?.endsWith('-error')) {
+          conversations.push(data);
+        }
+        kaggleIndex++;
+      } else if (response.status === 404) {
+        hasMoreKaggle = false;
+      } else {
+        hasMoreKaggle = false;
+      }
+    } catch (error) {
+      hasMoreKaggle = false;
+    }
+  }
+  
   // Return all conversations (even those with abstain or no classification)
   // Conversations without classification will use default terrain parameters
   if (import.meta.env.DEV) {

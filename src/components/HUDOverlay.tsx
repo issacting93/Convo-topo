@@ -325,7 +325,7 @@ export function HUDOverlay({
           {terrainName}
         </div>
         <div style={{ opacity: 0.5, fontSize: '12px', letterSpacing: '0.5px', lineHeight: 1.4, marginBottom: 8 }}>
-          X: USER POSITIONING (FUNCTIONAL↔SOCIAL) · Y: AI POSITIONING (STRUCTURED↔EMERGENT) · Z: TERRAIN HEIGHT
+          X: USER POSITIONING (FUNCTIONAL↔SOCIAL) · Y: AI POSITIONING (STRUCTURED↔EMERGENT) · Z: AFFECTIVE/EVALUATIVE LENS (PAD)
         </div>
        
       </div>
