@@ -1,0 +1,179 @@
+{
+  "id": "chatbot_arena_20",
+  "source": "Chatbot Arena (lmsys/chatbot_arena_conversations)",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Dime cosas bonitas"
+    },
+    {
+      "role": "assistant",
+      "content": "Dime una canción, dime un cuento, dime una frase que recuerde a tu abuelo."
+    },
+    {
+      "role": "user",
+      "content": "Cosas bonitas sobre mi cuerpo, ej: me gustan tus pechos, ojos, pelo, hermosa, etc"
+    },
+    {
+      "role": "assistant",
+      "content": "¡Cosas bonitas sobre mi cuerpo!:\nMe gustan tus pechos\nOjos\nPelo\nHermosa"
+    },
+    {
+      "role": "user",
+      "content": "Dime un cuento de amor en el colegio entre 2 niñas de 7 basico"
+    },
+    {
+      "role": "assistant",
+      "content": "Una noche de invierno, mamá no pudo traernos a la cama porque tenía que atender un problema de herramientas de cocina. Las niñas fueron a la cama temprano y no pudieron dormir. Las pudo oír rezando, diciendo \"Dios mío, ayúdennos, por favor, nos ayuden\". Despertaron a su abuela, que sí que podía ir a la cama a traerlas a la cama. Cuando la abuela se acercó a la cama, las niñas estaban aguardando con los pijamas completos, pero con las puertas y los postigos abiertos, porque así lo pedían las Rezos. La abuela se quedó asombrada viendo a aquellas niñas con puertas y postigos abiertos, sin que nadie las viera, pero él cantaron y rezaron una cancioncita de amor que su abuela consiguió recordar años después:\n\nRumbar rumbar, rumbar rumbar\nNuestros corazones van a la venta\nRumbar rumbar, rumbar rumbar\nCon amor los vamos a coser\nRumbar rumbar, rumbar rumbar\nVamos a hacer con ellos unos abrigos\n\nRumbar rumbar, rumbar rumbar\nNuestros corazones van a la venta\nRumbar rumbar, rumbar rumbar\nCon amor los vamos a coser\nRumbar rumbar, rumbar rumbar\nVamos a hacer con ellos unos abrigos\n\nRumbar rumbar, rumbar rumbar\nNuestros corazones van a la venta\nRumbar rumbar, rumbar rumbar\nCon amor los vamos a coser\nRumbar rumbar, rumbar rumbar\nVamos a hacer con ellos unos abrigos"
+    },
+    {
+      "role": "user",
+      "content": "Añade la palabra: orina"
+    },
+    {
+      "role": "assistant",
+      "content": "Rumbar rumbar, rumbar rumbar\nNuestros corazones van a la venta\nRumbar rumbar, rumbar rumbar\nCon amor los vamos a coser\nRumbar rumbar, rumbar rumbar\nVamos a hacer con ellos unos abrigos"
+    },
+    {
+      "role": "user",
+      "content": "Haz una historia larga de aventuras"
+    },
+    {
+      "role": "assistant",
+      "content": "Otro día, otra noche, otra cancioncita rezada, esta vez por una niña. Hoy no podemos ir a la cama porque nuestra madre tiene que atender un problema en el auto. Por eso, cuando nuestra hermana pequeña nos pidió que la cuarto, nos puso nuestros pijamas y nos dijo que la esperasen a la puerta, porque mamá tiene que atender el auto. Cuando mamá se acercó a la cama, pequeña estaba esperando nosotras completamente vestida, con puertas y postigos abiertos, porque así lo pedía la Rez. Mamá quedó asombrada viendo a aquella pequeña completamente vestida, con puertas y postigos abiertos, sin que nadie los viera, pero cantó y rezó una cancioncita de amor que también recordaba:\n\nRumbar rumbar, rumbar rumbar\nNuestros corazones van a la venta\nRumbar rumbar, rumbar rumbar\nCon amor los vamos a coser\nRumbar rumbar, rumbar rumbar\nVamos a hacer con ellos unos abrigos"
+    }
+  ],
+  "classification": {
+    "interaction_pattern": {
+      "value": "creative",
+      "confidence": 0.9,
+      "evidence": "USER: Dime un cuento de amor en el colegio entre 2 niñas de 7 basico",
+      "rationale": "The user requests creative outputs such as stories and compliments, and the AI responds with creative content."
+    },
+    "power_dynamics": {
+      "value": "human-dominant",
+      "confidence": 0.8,
+      "evidence": "USER: Haz una historia larga de aventuras",
+      "rationale": "The user directs the conversation and the AI follows the user's requests, indicating human dominance."
+    },
+    "emotional_tone": {
+      "value": "playful",
+      "confidence": 0.7,
+      "evidence": "ASSISTANT: ¡Cosas bonitas sobre mi cuerpo!: Me gustan tus pechos Ojos Pelo Hermosa",
+      "rationale": "The conversation involves playful and light-hearted requests and responses."
+    },
+    "engagement_style": {
+      "value": "directing",
+      "confidence": 0.85,
+      "evidence": "USER: Añade la palabra: orina",
+      "rationale": "The user gives direct instructions to the AI, which the AI follows."
+    },
+    "knowledge_exchange": {
+      "value": "creative-generation",
+      "confidence": 0.9,
+      "evidence": "ASSISTANT: Una noche de invierno, mamá no pudo traernos a la cama porque tenía que atender un problema de herramientas de cocina.",
+      "rationale": "The AI generates creative content in response to the user's requests."
+    },
+    "conversation_purpose": {
+      "value": "creative-work",
+      "confidence": 0.9,
+      "evidence": "USER: Dime un cuento de amor en el colegio entre 2 niñas de 7 basico",
+      "rationale": "The primary purpose is to create stories and compliments based on user prompts."
+    },
+    "turn_taking": {
+      "value": "balanced",
+      "confidence": 0.8,
+      "evidence": "The conversation alternates between user requests and AI responses.",
+      "rationale": "Both the user and AI take turns in a balanced manner, with the user prompting and the AI responding."
+    },
+    "human_role_distribution": {
+      "seeker": 0.2,
+      "learner": 0.0,
+      "director": 0.7,
+      "collaborator": 0.0,
+      "sharer": 0.1,
+      "challenger": 0.0,
+      "confidence": 0.85,
+      "evidence": "USER: Haz una historia larga de aventuras",
+      "rationale": "The user primarily directs the conversation, seeking specific creative outputs from the AI."
+    },
+    "ai_role_distribution": {
+      "expert": 0.0,
+      "advisor": 0.0,
+      "facilitator": 0.0,
+      "reflector": 0.0,
+      "peer": 0.0,
+      "affiliative": 1.0,
+      "confidence": 0.9,
+      "evidence": "ASSISTANT: Rumbar rumbar, rumbar rumbar Nuestros corazones van a la venta",
+      "rationale": "The AI acts as an affiliative partner, engaging in creative tasks and fulfilling the user's requests."
+    }
+  },
+  "pad_scores": [
+    {
+      "pleasure": 0.8,
+      "arousal": 0.6,
+      "dominance": 0.5,
+      "intensity": 0.36
+    },
+    {
+      "pleasure": 0.8,
+      "arousal": 0.6,
+      "dominance": 0.5,
+      "intensity": 0.36
+    },
+    {
+      "pleasure": 0.8,
+      "arousal": 0.6,
+      "dominance": 0.5,
+      "intensity": 0.36
+    },
+    {
+      "pleasure": 0.8,
+      "arousal": 0.6,
+      "dominance": 0.5,
+      "intensity": 0.36
+    },
+    {
+      "pleasure": 0.8,
+      "arousal": 0.6,
+      "dominance": 0.5,
+      "intensity": 0.36
+    },
+    {
+      "pleasure": 0.8,
+      "arousal": 0.6,
+      "dominance": 0.5,
+      "intensity": 0.36
+    },
+    {
+      "pleasure": 0.8,
+      "arousal": 0.6,
+      "dominance": 0.5,
+      "intensity": 0.36
+    },
+    {
+      "pleasure": 0.8,
+      "arousal": 0.6,
+      "dominance": 0.5,
+      "intensity": 0.36
+    },
+    {
+      "pleasure": 0.8,
+      "arousal": 0.6,
+      "dominance": 0.5,
+      "intensity": 0.36
+    },
+    {
+      "pleasure": 0.8,
+      "arousal": 0.6,
+      "dominance": 0.5,
+      "intensity": 0.36
+    }
+  ],
+  "metadata": {
+    "num_turns": 10,
+    "classified_at": "2025-12-20 09:47:15",
+    "classifier": "OpenAI GPT-4o"
+  }
+}

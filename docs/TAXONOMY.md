@@ -27,7 +27,6 @@ CONVERSATIONAL DYNAMICS
 │   ├── Knowledge Exchange
 │   └── Conversation Purpose
 ├── QUALITY DIMENSIONS
-│   ├── Topic Depth
 │   └── Turn Taking
 └── ROLE DIMENSIONS
     ├── Human Role
@@ -246,7 +245,7 @@ KNOWLEDGE_EXCHANGE
 │       └── Example: "The capital is..." "Studies show..."
 ```
 
-**Relationships**: Influences `conversationPurpose` and `topicDepth`
+**Relationships**: Influences `conversationPurpose` and conversation structure
 
 ---
 
@@ -495,7 +494,6 @@ emotionalTone: neutral
 engagementStyle: questioning
 knowledgeExchange: factual-info
 conversationPurpose: information-seeking
-topicDepth: surface-to-moderate
 turnTaking: balanced
 humanRole: seeker
 aiRole: expert
@@ -510,7 +508,6 @@ emotionalTone: supportive
 engagementStyle: exploring
 knowledgeExchange: personal-sharing
 conversationPurpose: relationship-building
-topicDepth: moderate-to-deep
 turnTaking: balanced
 humanRole: {sharer: 0.6, collaborator: 0.3, ...}
 aiRole: {affiliative: 0.5, peer: 0.3, reflector: 0.2, ...}
@@ -525,7 +522,6 @@ emotionalTone: playful or supportive
 engagementStyle: reactive
 knowledgeExchange: experience-sharing
 conversationPurpose: self-expression
-topicDepth: surface-to-moderate
 turnTaking: user-dominant
 humanRole: {sharer: 0.9, ...}
 aiRole: {reflector: 0.6, affiliative: 0.3, ...}
@@ -540,7 +536,6 @@ emotionalTone: professional or neutral
 engagementStyle: questioning
 knowledgeExchange: skill-sharing
 conversationPurpose: problem-solving
-topicDepth: moderate-to-deep
 turnTaking: balanced or assistant-dominant
 humanRole: seeker
 aiRole: advisor or expert
@@ -555,7 +550,6 @@ emotionalTone: playful or supportive
 engagementStyle: affirming
 knowledgeExchange: personal-sharing
 conversationPurpose: entertainment
-topicDepth: surface
 turnTaking: balanced
 humanRole: {sharer: 0.6, collaborator: 0.3, ...}
 aiRole: {peer: 0.5, affiliative: 0.4, ...}
@@ -575,11 +569,10 @@ const supportive = conversations.filter(c =>
 
 ### Multi-Dimensional Filtering
 ```typescript
-// Find deep collaborative conversations with balanced dynamics
-const deepCollaborative = conversations.filter(c => {
+// Find collaborative conversations with balanced dynamics
+const collaborative = conversations.filter(c => {
   const m = c.metadata;
-  return m?.topicDepth === 'deep' &&
-         m?.interactionPattern === 'collaborative' &&
+  return m?.interactionPattern === 'collaborative' &&
          m?.powerDynamics === 'balanced';
 });
 ```
@@ -619,12 +612,11 @@ const rolePairs = conversations.reduce((acc, conv) => {
 | Engagement Style | 5 | varies | - |
 | Knowledge Exchange | 5 | personal-sharing | - |
 | Conversation Purpose | 5 | information-seeking | - |
-| Topic Depth | 3 | varies | - |
 | Turn Taking | 3 | balanced | - |
 | Human Role | 6 | seeker (dominant) | All roles possible |
 | AI Role | 6 | expert (dominant) | All roles possible |
 
-**Total Unique Tags**: 58
+**Total Unique Tags**: 55
 **Total Conversations**: 145
 **Average Tags per Conversation**: 10 (one per dimension)
 

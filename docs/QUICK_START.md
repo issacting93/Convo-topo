@@ -71,9 +71,22 @@ After running, you'll get:
 ## 🎯 Next Steps After Classification
 
 Once you have classified data:
-1. Review the summary to see distribution of classifications
-2. Integrate with visualization (see `WORKFLOW.md`)
-3. Map classifications to terrain visualization parameters
+
+1. **Generate PAD Values** (required for Z-axis visualization):
+   ```bash
+   node scripts/add-pad-to-data.js
+   ```
+
+2. **Review the summary** to see distribution of classifications
+
+3. **Integrate with visualization** - Classified conversations with PAD values will automatically appear in the terrain grid
+
+4. **Visualization**:
+   - X-axis: Communication Function (functional ↔ social)
+   - Y-axis: Conversation Structure (structured ↔ emergent)
+   - Z-axis: Affective/Evaluative Lens - PAD (emotional intensity)
+
+See `docs/CONVERSATION_TERRAIN_INTEGRATION.md` for details on how classifications map to visualization.
 
 ---
 

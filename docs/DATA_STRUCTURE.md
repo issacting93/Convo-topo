@@ -120,11 +120,13 @@ Cartography/
 - **Purpose**: Loads classified conversations from `public/output/`
 - **Function**: `loadClassifiedConversations()`
 - **Loads**:
-  - `conv-*.json` files (sequentially)
+  - `conv-*.json` files (via manifest or sequentially)
   - `sample-*.json` files (by known IDs)
   - `emo-*.json` files (by emotion and index)
-- **Returns**: `ClassifiedConversation[]`
+  - `chatbot_arena_*.json` files (via manifest)
+- **Returns**: `ClassifiedConversation[]` with PAD values in each message
 - **Caching**: Yes (cached after first load)
+- **PAD Support**: Uses PAD values from message `pad` objects, or calculates on-the-fly if missing
 
 #### `personaChatMessages.ts`
 - **Purpose**: Provides access to PersonaChat dataset
@@ -243,11 +245,15 @@ App.tsx → TerrainGrid → Visualization
 
 ## Key Differences
 
-### Classified Conversations (conv-*.json, emo-*.json)
-- **Values**: Calculated at conversation level from LLM classification
-- **Method**: Role distributions, interaction patterns, engagement styles
-- **Accuracy**: High (considers full context)
+### Classified Conversations (conv-*.json, emo-*.json, chatbot_arena_*.json)
+- **Classification**: Calculated at conversation level from LLM classification
+- **PAD Values**: Calculated per message using rule-based analysis (stored in message `pad` objects)
+- **Method**: 
+  - Classification: Role distributions, interaction patterns, engagement styles
+  - PAD: Base values from classification + message-level pattern matching
+- **Accuracy**: High for classification (LLM-based), good for PAD (rule-based, with LLM enhancement planned)
 - **Usage**: Primary data source for visualization
+- **Z-Axis**: Uses PAD `emotionalIntensity` for marker heights
 
 ### PersonaChat (personaChatMessages.json)
 - **Values**: Calculated per-message using keyword heuristics
@@ -303,15 +309,21 @@ python3 classifier/classifier-openai.py data/empathetic_dialogues_sample.json ou
 ## Current Status
 
 ✅ **Active Data Sources:**
-- 20 classified conversations (`conv-0.json` to `conv-19.json`)
+- 20 chatbot_arena conversations (`chatbot_arena_01.json` to `chatbot_arena_20.json`) - **Currently displayed**
+- 20 classified conversations (`conv-0.json` to `conv-19.json`) - Available but hidden
 - 5 classified empathetic dialogues (`emo-afraid-1`, `emo-afraid-2`, `emo-angry-1`, `emo-angry-2`, `emo-angry-3`)
 - Sample conversations (7 files)
 
+✅ **PAD Values:**
+- All active conversations have PAD values in message `pad` objects
+- Generated using rule-based analysis (`scripts/add-pad-to-data.js`) or LLM-based (`scripts/generate-pad-with-llm-direct.py`)
+- LLM-based generation recommended for better accuracy (see `docs/LLM_PAD_IMPROVEMENT_STRATEGY.md`)
+
 ⚠️ **Available but Not Primary:**
 - PersonaChat dataset (145 conversations, 1,206 messages)
-- 23 unclassified empathetic dialogues (need classification)
+- Older conversation files (hidden in favor of chatbot_arena)
 
 📝 **Processing Scripts:**
-- All scripts functional
-- `extract_emo_conversations.py` recently updated to handle malformed CSV
+- Classification: `classifier/classifier-openai.py` (OpenAI GPT-4)
+- PAD generation: `scripts/add-pad-to-data.js` (rule-based) or `scripts/generate-pad-with-llm-direct.py` (LLM-based, recommended)
 

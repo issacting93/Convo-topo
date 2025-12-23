@@ -51,8 +51,18 @@ ThreeScene component (3D visualization)
 
 ### Key Functions
 
-- `loadClassifiedConversations()` - Fetches from `/output/conv-*.json`, `/output/sample-*.json`, `/output/emo-*.json`
+- `loadClassifiedConversations()` - Fetches from `/output/conv-*.json`, `/output/sample-*.json`, `/output/emo-*.json`, `/output/chatbot_arena_*.json`
 - `getConversationById(id)` - Retrieves specific conversation
+
+### Data Structure
+
+Each classified conversation includes:
+- **`id`**: Conversation identifier
+- **`messages`**: Array of message objects, each with:
+  - `role`: "user" or "assistant"
+  - `content`: Message text
+  - `pad`: PAD (Pleasure-Arousal-Dominance) values for Z-axis visualization
+- **`classification`**: 9-dimensional classification data
 
 ---
 
@@ -116,11 +126,25 @@ Each conversation file:
 {
   "id": "cornell-0",
   "messages": [
-    {"role": "user", "content": "..."},
+    {
+      "role": "user",
+      "content": "...",
+      "pad": {
+        "pleasure": 0.5,
+        "arousal": 0.3,
+        "dominance": 0.4,
+        "emotionalIntensity": 0.42
+      }
+    },
     {"role": "assistant", "content": "..."}
-  ]
+  ],
+  "classification": { ... }
 }
 ```
+
+**Note**: Classified conversations include:
+- `classification` object (9-dimensional classification)
+- `pad` object in each message (PAD values for Z-axis visualization)
 
 ### Usage
 

@@ -150,13 +150,11 @@ function calculateConversationStructure(c: ClassificationResult): number {
 }
 
 function calculateElevation(c: ClassificationResult): number {
-  // Higher elevation for deep topics and human-led dynamics
-  const depth = c.topicDepth.category;
+  // Higher elevation based on power dynamics and emotional intensity
   const power = c.powerDynamics.category;
   
   let elevation = 0.5;
-  if (depth === 'deep') elevation += 0.3;
-  if (depth === 'moderate') elevation += 0.15;
+  // Elevation based on power dynamics and other factors
   if (power === 'human-led') elevation += 0.2;
   
   return Math.min(1.0, elevation);

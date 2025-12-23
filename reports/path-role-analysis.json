@@ -1,0 +1,2666 @@
+[
+  {
+    "id": "chatbot_arena_01",
+    "file": "chatbot_arena_01.json",
+    "position": {
+      "x": 0.55,
+      "y": 0.7400000000000001
+    },
+    "roles": {
+      "human": {
+        "role": "seeker",
+        "value": 0.5
+      },
+      "ai": {
+        "role": "peer",
+        "value": 0.8
+      }
+    },
+    "trajectory": {
+      "start": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "target": {
+        "x": 0.55,
+        "y": 0.7400000000000001
+      },
+      "drift": {
+        "x": 0.050000000000000044,
+        "y": 0.2400000000000001,
+        "magnitude": 0.24515301344262536,
+        "angle": 78.23171106797936
+      },
+      "quadrant": "NE"
+    },
+    "messageCount": 12
+  },
+  {
+    "id": "chatbot_arena_02",
+    "file": "chatbot_arena_02.json",
+    "position": {
+      "x": 0.45999999999999996,
+      "y": 0.34
+    },
+    "roles": {
+      "human": {
+        "role": "seeker",
+        "value": 0.7
+      },
+      "ai": {
+        "role": "expert",
+        "value": 0.8
+      }
+    },
+    "trajectory": {
+      "start": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "target": {
+        "x": 0.45999999999999996,
+        "y": 0.34
+      },
+      "drift": {
+        "x": -0.040000000000000036,
+        "y": -0.15999999999999998,
+        "magnitude": 0.1649242250247064,
+        "angle": -104.03624346792651
+      },
+      "quadrant": "SW"
+    },
+    "messageCount": 10
+  },
+  {
+    "id": "chatbot_arena_03",
+    "file": "chatbot_arena_03.json",
+    "position": {
+      "x": 0.42000000000000004,
+      "y": 0.27
+    },
+    "roles": {
+      "human": {
+        "role": "seeker",
+        "value": 0.8
+      },
+      "ai": {
+        "role": "expert",
+        "value": 0.7
+      }
+    },
+    "trajectory": {
+      "start": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "target": {
+        "x": 0.42000000000000004,
+        "y": 0.27
+      },
+      "drift": {
+        "x": -0.07999999999999996,
+        "y": -0.22999999999999998,
+        "magnitude": 0.24351591323771837,
+        "angle": -109.17900802581072
+      },
+      "quadrant": "SW"
+    },
+    "messageCount": 10
+  },
+  {
+    "id": "chatbot_arena_04",
+    "file": "chatbot_arena_04.json",
+    "position": {
+      "x": 0.36,
+      "y": 0.30000000000000004
+    },
+    "roles": {
+      "human": {
+        "role": "challenger",
+        "value": 0.4
+      },
+      "ai": {
+        "role": "expert",
+        "value": 0.4
+      }
+    },
+    "trajectory": {
+      "start": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "target": {
+        "x": 0.36,
+        "y": 0.30000000000000004
+      },
+      "drift": {
+        "x": -0.14,
+        "y": -0.19999999999999996,
+        "magnitude": 0.24413111231467402,
+        "angle": -124.99202019855868
+      },
+      "quadrant": "SW"
+    },
+    "messageCount": 12
+  },
+  {
+    "id": "chatbot_arena_05",
+    "file": "chatbot_arena_05.json",
+    "position": {
+      "x": 0.4,
+      "y": 0.43000000000000005
+    },
+    "roles": {
+      "human": {
+        "role": "seeker",
+        "value": 0.7
+      },
+      "ai": {
+        "role": "expert",
+        "value": 0.6
+      }
+    },
+    "trajectory": {
+      "start": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "target": {
+        "x": 0.4,
+        "y": 0.43000000000000005
+      },
+      "drift": {
+        "x": -0.09999999999999998,
+        "y": -0.06999999999999995,
+        "magnitude": 0.12206555615733698,
+        "angle": -145.00797980144137
+      },
+      "quadrant": "SW"
+    },
+    "messageCount": 10
+  },
+  {
+    "id": "chatbot_arena_06",
+    "file": "chatbot_arena_06.json",
+    "position": {
+      "x": 0.45999999999999996,
+      "y": 0.39
+    },
+    "roles": {
+      "human": {
+        "role": "seeker",
+        "value": 0.7
+      },
+      "ai": {
+        "role": "expert",
+        "value": 0.4
+      }
+    },
+    "trajectory": {
+      "start": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "target": {
+        "x": 0.45999999999999996,
+        "y": 0.39
+      },
+      "drift": {
+        "x": -0.040000000000000036,
+        "y": -0.10999999999999999,
+        "magnitude": 0.11704699910719625,
+        "angle": -109.9831065219
+      },
+      "quadrant": "SW"
+    },
+    "messageCount": 12
+  },
+  {
+    "id": "chatbot_arena_07",
+    "file": "chatbot_arena_07.json",
+    "position": {
+      "x": 0.23000000000000004,
+      "y": 0.44999999999999996
+    },
+    "roles": {
+      "human": {
+        "role": "director",
+        "value": 0.8
+      },
+      "ai": {
+        "role": "expert",
+        "value": 0.7
+      }
+    },
+    "trajectory": {
+      "start": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "target": {
+        "x": 0.23000000000000004,
+        "y": 0.44999999999999996
+      },
+      "drift": {
+        "x": -0.26999999999999996,
+        "y": -0.050000000000000044,
+        "magnitude": 0.2745906043549196,
+        "angle": -169.5085229876684
+      },
+      "quadrant": "SW"
+    },
+    "messageCount": 10
+  },
+  {
+    "id": "chatbot_arena_08",
+    "file": "chatbot_arena_08.json",
+    "position": {
+      "x": 0.36500000000000005,
+      "y": 0.44500000000000006
+    },
+    "roles": {
+      "human": {
+        "role": "seeker",
+        "value": 0.4
+      },
+      "ai": {
+        "role": "expert",
+        "value": 0.5
+      }
+    },
+    "trajectory": {
+      "start": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "target": {
+        "x": 0.36500000000000005,
+        "y": 0.44500000000000006
+      },
+      "drift": {
+        "x": -0.13499999999999995,
+        "y": -0.05499999999999994,
+        "magnitude": 0.14577379737113244,
+        "angle": -157.83365417791757
+      },
+      "quadrant": "SW"
+    },
+    "messageCount": 10
+  },
+  {
+    "id": "chatbot_arena_11",
+    "file": "chatbot_arena_11.json",
+    "position": {
+      "x": 0.39,
+      "y": 0.31000000000000005
+    },
+    "roles": {
+      "human": {
+        "role": "director",
+        "value": 0.4
+      },
+      "ai": {
+        "role": "advisor",
+        "value": 0.7
+      }
+    },
+    "trajectory": {
+      "start": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "target": {
+        "x": 0.39,
+        "y": 0.31000000000000005
+      },
+      "drift": {
+        "x": -0.10999999999999999,
+        "y": -0.18999999999999995,
+        "magnitude": 0.21954498400100145,
+        "angle": -120.06858282186246
+      },
+      "quadrant": "SW"
+    },
+    "messageCount": 14
+  },
+  {
+    "id": "chatbot_arena_12",
+    "file": "chatbot_arena_12.json",
+    "position": {
+      "x": 0.425,
+      "y": 0.3950000000000001
+    },
+    "roles": {
+      "human": {
+        "role": "seeker",
+        "value": 0.7
+      },
+      "ai": {
+        "role": "expert",
+        "value": 0.6
+      }
+    },
+    "trajectory": {
+      "start": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "target": {
+        "x": 0.425,
+        "y": 0.3950000000000001
+      },
+      "drift": {
+        "x": -0.07500000000000001,
+        "y": -0.10499999999999993,
+        "magnitude": 0.12903487900563934,
+        "angle": -125.5376777919744
+      },
+      "quadrant": "SW"
+    },
+    "messageCount": 18
+  },
+  {
+    "id": "chatbot_arena_13",
+    "file": "chatbot_arena_13.json",
+    "position": {
+      "x": 0.47,
+      "y": 0.37
+    },
+    "roles": {
+      "human": {
+        "role": "seeker",
+        "value": 0.5
+      },
+      "ai": {
+        "role": "advisor",
+        "value": 0.5
+      }
+    },
+    "trajectory": {
+      "start": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "target": {
+        "x": 0.47,
+        "y": 0.37
+      },
+      "drift": {
+        "x": -0.030000000000000027,
+        "y": -0.13,
+        "magnitude": 0.13341664064126335,
+        "angle": -102.99461679191653
+      },
+      "quadrant": "SW"
+    },
+    "messageCount": 12
+  },
+  {
+    "id": "chatbot_arena_14",
+    "file": "chatbot_arena_14.json",
+    "position": {
+      "x": 0.43499999999999994,
+      "y": 0.34500000000000003
+    },
+    "roles": {
+      "human": {
+        "role": "seeker",
+        "value": 0.6
+      },
+      "ai": {
+        "role": "advisor",
+        "value": 0.6
+      }
+    },
+    "trajectory": {
+      "start": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "target": {
+        "x": 0.43499999999999994,
+        "y": 0.34500000000000003
+      },
+      "drift": {
+        "x": -0.06500000000000006,
+        "y": -0.15499999999999997,
+        "magnitude": 0.1680773631397161,
+        "angle": -112.75097634278767
+      },
+      "quadrant": "SW"
+    },
+    "messageCount": 16
+  },
+  {
+    "id": "chatbot_arena_15",
+    "file": "chatbot_arena_15.json",
+    "position": {
+      "x": 0.5,
+      "y": 0.39
+    },
+    "roles": {
+      "human": {
+        "role": "seeker",
+        "value": 0.5
+      },
+      "ai": {
+        "role": "advisor",
+        "value": 0.6
+      }
+    },
+    "trajectory": {
+      "start": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "target": {
+        "x": 0.5,
+        "y": 0.39
+      },
+      "drift": {
+        "x": 0,
+        "y": -0.10999999999999999,
+        "magnitude": 0.10999999999999999,
+        "angle": -90
+      },
+      "quadrant": "SE"
+    },
+    "messageCount": 10
+  },
+  {
+    "id": "chatbot_arena_16",
+    "file": "chatbot_arena_16.json",
+    "position": {
+      "x": 0.4,
+      "y": 0.65
+    },
+    "roles": {
+      "human": {
+        "role": "director",
+        "value": 0.4
+      },
+      "ai": {
+        "role": "peer",
+        "value": 0.5
+      }
+    },
+    "trajectory": {
+      "start": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "target": {
+        "x": 0.4,
+        "y": 0.65
+      },
+      "drift": {
+        "x": -0.09999999999999998,
+        "y": 0.15000000000000002,
+        "magnitude": 0.18027756377319948,
+        "angle": 123.69006752597979
+      },
+      "quadrant": "NW"
+    },
+    "messageCount": 16
+  },
+  {
+    "id": "chatbot_arena_17",
+    "file": "chatbot_arena_17.json",
+    "position": {
+      "x": 0.37,
+      "y": 0.75
+    },
+    "roles": {
+      "human": {
+        "role": "seeker",
+        "value": 0.6
+      },
+      "ai": {
+        "role": "peer",
+        "value": 0.7
+      }
+    },
+    "trajectory": {
+      "start": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "target": {
+        "x": 0.37,
+        "y": 0.75
+      },
+      "drift": {
+        "x": -0.13,
+        "y": 0.25,
+        "magnitude": 0.28178005607210743,
+        "angle": 117.47443162627712
+      },
+      "quadrant": "NW"
+    },
+    "messageCount": 16
+  },
+  {
+    "id": "chatbot_arena_18",
+    "file": "chatbot_arena_18.json",
+    "position": {
+      "x": 0.26,
+      "y": 0.5
+    },
+    "roles": {
+      "human": {
+        "role": "director",
+        "value": 0.6
+      },
+      "ai": {
+        "role": "affiliative",
+        "value": 1
+      }
+    },
+    "trajectory": {
+      "start": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "target": {
+        "x": 0.26,
+        "y": 0.5
+      },
+      "drift": {
+        "x": -0.24,
+        "y": 0,
+        "magnitude": 0.24,
+        "angle": 180
+      },
+      "quadrant": "NW"
+    },
+    "messageCount": 10
+  },
+  {
+    "id": "chatbot_arena_19",
+    "file": "chatbot_arena_19.json",
+    "position": {
+      "x": 0.45000000000000007,
+      "y": 0.4700000000000001
+    },
+    "roles": {
+      "human": {
+        "role": "seeker",
+        "value": 0.4
+      },
+      "ai": {
+        "role": "expert",
+        "value": 0.4
+      }
+    },
+    "trajectory": {
+      "start": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "target": {
+        "x": 0.45000000000000007,
+        "y": 0.4700000000000001
+      },
+      "drift": {
+        "x": -0.04999999999999993,
+        "y": -0.029999999999999916,
+        "magnitude": 0.058309518948452904,
+        "angle": -149.03624346792654
+      },
+      "quadrant": "SW"
+    },
+    "messageCount": 14
+  },
+  {
+    "id": "chatbot_arena_20",
+    "file": "chatbot_arena_20.json",
+    "position": {
+      "x": 0.30000000000000004,
+      "y": 0.5
+    },
+    "roles": {
+      "human": {
+        "role": "director",
+        "value": 0.7
+      },
+      "ai": {
+        "role": "affiliative",
+        "value": 1
+      }
+    },
+    "trajectory": {
+      "start": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "target": {
+        "x": 0.30000000000000004,
+        "y": 0.5
+      },
+      "drift": {
+        "x": -0.19999999999999996,
+        "y": 0,
+        "magnitude": 0.19999999999999996,
+        "angle": 180
+      },
+      "quadrant": "NW"
+    },
+    "messageCount": 10
+  },
+  {
+    "id": "conv-12",
+    "file": "conv-12.json",
+    "position": {
+      "x": 0.7600000000000001,
+      "y": 0.52
+    },
+    "roles": {
+      "human": {
+        "role": "sharer",
+        "value": 0.9
+      },
+      "ai": {
+        "role": "affiliative",
+        "value": 0.9
+      }
+    },
+    "trajectory": {
+      "start": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "target": {
+        "x": 0.7600000000000001,
+        "y": 0.52
+      },
+      "drift": {
+        "x": 0.2600000000000001,
+        "y": 0.020000000000000018,
+        "magnitude": 0.26076809620810604,
+        "angle": 4.398705354995534
+      },
+      "quadrant": "NE"
+    },
+    "messageCount": 12
+  },
+  {
+    "id": "conv-13",
+    "file": "conv-13.json",
+    "position": {
+      "x": 0.6799999999999999,
+      "y": 0.7699999999999999
+    },
+    "roles": {
+      "human": {
+        "role": "sharer",
+        "value": 0.7
+      },
+      "ai": {
+        "role": "peer",
+        "value": 0.7
+      }
+    },
+    "trajectory": {
+      "start": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "target": {
+        "x": 0.6799999999999999,
+        "y": 0.7699999999999999
+      },
+      "drift": {
+        "x": 0.17999999999999994,
+        "y": 0.2699999999999999,
+        "magnitude": 0.32449961479175893,
+        "angle": 56.309932474020215
+      },
+      "quadrant": "NE"
+    },
+    "messageCount": 14
+  },
+  {
+    "id": "conv-14",
+    "file": "conv-14.json",
+    "position": {
+      "x": 0.8,
+      "y": 0.6
+    },
+    "roles": {
+      "human": {
+        "role": "sharer",
+        "value": 1
+      },
+      "ai": {
+        "role": "reflector",
+        "value": 1
+      }
+    },
+    "trajectory": {
+      "start": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "target": {
+        "x": 0.8,
+        "y": 0.6
+      },
+      "drift": {
+        "x": 0.30000000000000004,
+        "y": 0.09999999999999998,
+        "magnitude": 0.31622776601683794,
+        "angle": 18.434948822922003
+      },
+      "quadrant": "NE"
+    },
+    "messageCount": 2
+  },
+  {
+    "id": "conv-15",
+    "file": "conv-15.json",
+    "position": {
+      "x": 0.75,
+      "y": 0.75
+    },
+    "roles": {
+      "human": {
+        "role": "collaborator",
+        "value": 0.5
+      },
+      "ai": {
+        "role": "facilitator",
+        "value": 0.5
+      }
+    },
+    "trajectory": {
+      "start": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "target": {
+        "x": 0.75,
+        "y": 0.75
+      },
+      "drift": {
+        "x": 0.25,
+        "y": 0.25,
+        "magnitude": 0.3535533905932738,
+        "angle": 45
+      },
+      "quadrant": "NE"
+    },
+    "messageCount": 4
+  },
+  {
+    "id": "conv-16",
+    "file": "conv-16.json",
+    "position": {
+      "x": 0.69,
+      "y": 0.7699999999999999
+    },
+    "roles": {
+      "human": {
+        "role": "sharer",
+        "value": 0.5
+      },
+      "ai": {
+        "role": "peer",
+        "value": 0.7
+      }
+    },
+    "trajectory": {
+      "start": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "target": {
+        "x": 0.69,
+        "y": 0.7699999999999999
+      },
+      "drift": {
+        "x": 0.18999999999999995,
+        "y": 0.2699999999999999,
+        "magnitude": 0.33015148038438347,
+        "angle": 54.86580694308437
+      },
+      "quadrant": "NE"
+    },
+    "messageCount": 6
+  },
+  {
+    "id": "conv-17",
+    "file": "conv-17.json",
+    "position": {
+      "x": 0.6799999999999999,
+      "y": 0.7699999999999999
+    },
+    "roles": {
+      "human": {
+        "role": "sharer",
+        "value": 0.7
+      },
+      "ai": {
+        "role": "peer",
+        "value": 0.7
+      }
+    },
+    "trajectory": {
+      "start": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "target": {
+        "x": 0.6799999999999999,
+        "y": 0.7699999999999999
+      },
+      "drift": {
+        "x": 0.17999999999999994,
+        "y": 0.2699999999999999,
+        "magnitude": 0.32449961479175893,
+        "angle": 56.309932474020215
+      },
+      "quadrant": "NE"
+    },
+    "messageCount": 8
+  },
+  {
+    "id": "conv-18",
+    "file": "conv-18.json",
+    "position": {
+      "x": 0.65,
+      "y": 0.65
+    },
+    "roles": {
+      "human": {
+        "role": "sharer",
+        "value": 0.4
+      },
+      "ai": {
+        "role": "peer",
+        "value": 0.5
+      }
+    },
+    "trajectory": {
+      "start": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "target": {
+        "x": 0.65,
+        "y": 0.65
+      },
+      "drift": {
+        "x": 0.15000000000000002,
+        "y": 0.15000000000000002,
+        "magnitude": 0.21213203435596428,
+        "angle": 45
+      },
+      "quadrant": "NE"
+    },
+    "messageCount": 10
+  },
+  {
+    "id": "conv-19",
+    "file": "conv-19.json",
+    "position": {
+      "x": 0.6800000000000002,
+      "y": 0.6599999999999999
+    },
+    "roles": {
+      "human": {
+        "role": "collaborator",
+        "value": 0.4
+      },
+      "ai": {
+        "role": "peer",
+        "value": 0.6
+      }
+    },
+    "trajectory": {
+      "start": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "target": {
+        "x": 0.6800000000000002,
+        "y": 0.6599999999999999
+      },
+      "drift": {
+        "x": 0.18000000000000016,
+        "y": 0.15999999999999992,
+        "magnitude": 0.24083189157584597,
+        "angle": 41.63353933657016
+      },
+      "quadrant": "NE"
+    },
+    "messageCount": 12
+  },
+  {
+    "id": "cornell-0",
+    "file": "cornell-0.json",
+    "position": {
+      "x": 0.33999999999999997,
+      "y": 0.35
+    },
+    "roles": {
+      "human": {
+        "role": "seeker",
+        "value": 0.7
+      },
+      "ai": {
+        "role": "advisor",
+        "value": 0.7
+      }
+    },
+    "trajectory": {
+      "start": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "target": {
+        "x": 0.33999999999999997,
+        "y": 0.35
+      },
+      "drift": {
+        "x": -0.16000000000000003,
+        "y": -0.15000000000000002,
+        "magnitude": 0.21931712199461312,
+        "angle": -136.8476102659946
+      },
+      "quadrant": "SW"
+    },
+    "messageCount": 4
+  },
+  {
+    "id": "cornell-1",
+    "file": "cornell-1.json",
+    "position": {
+      "x": 0.6000000000000001,
+      "y": 0.5
+    },
+    "roles": {
+      "human": {
+        "role": "seeker",
+        "value": 0.5
+      },
+      "ai": {
+        "role": "affiliative",
+        "value": 1
+      }
+    },
+    "trajectory": {
+      "start": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "target": {
+        "x": 0.6000000000000001,
+        "y": 0.5
+      },
+      "drift": {
+        "x": 0.10000000000000009,
+        "y": 0,
+        "magnitude": 0.10000000000000009,
+        "angle": 0
+      },
+      "quadrant": "NE"
+    },
+    "messageCount": 2
+  },
+  {
+    "id": "cornell-2",
+    "file": "cornell-2.json",
+    "position": {
+      "x": 0.6800000000000002,
+      "y": 0.64
+    },
+    "roles": {
+      "human": {
+        "role": "sharer",
+        "value": 0.8
+      },
+      "ai": {
+        "role": "reflector",
+        "value": 0.8
+      }
+    },
+    "trajectory": {
+      "start": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "target": {
+        "x": 0.6800000000000002,
+        "y": 0.64
+      },
+      "drift": {
+        "x": 0.18000000000000016,
+        "y": 0.14,
+        "magnitude": 0.22803508501982772,
+        "angle": 37.874983651098184
+      },
+      "quadrant": "NE"
+    },
+    "messageCount": 4
+  },
+  {
+    "id": "cornell-3",
+    "file": "cornell-3.json",
+    "position": {
+      "x": 0.4800000000000001,
+      "y": 0.33999999999999997
+    },
+    "roles": {
+      "human": {
+        "role": "seeker",
+        "value": 0.8
+      },
+      "ai": {
+        "role": "expert",
+        "value": 0.8
+      }
+    },
+    "trajectory": {
+      "start": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "target": {
+        "x": 0.4800000000000001,
+        "y": 0.33999999999999997
+      },
+      "drift": {
+        "x": -0.019999999999999907,
+        "y": -0.16000000000000003,
+        "magnitude": 0.16124515496597103,
+        "angle": -97.12501634890178
+      },
+      "quadrant": "SW"
+    },
+    "messageCount": 3
+  },
+  {
+    "id": "cornell-4",
+    "file": "cornell-4.json",
+    "position": {
+      "x": 0.5,
+      "y": 0.65
+    },
+    "roles": {
+      "human": {
+        "role": "director",
+        "value": 0.5
+      },
+      "ai": {
+        "role": "peer",
+        "value": 0.5
+      }
+    },
+    "trajectory": {
+      "start": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "target": {
+        "x": 0.5,
+        "y": 0.65
+      },
+      "drift": {
+        "x": 0,
+        "y": 0.15000000000000002,
+        "magnitude": 0.15000000000000002,
+        "angle": 90
+      },
+      "quadrant": "NE"
+    },
+    "messageCount": 2
+  },
+  {
+    "id": "cornell-5",
+    "file": "cornell-5.json",
+    "position": {
+      "x": 0.4,
+      "y": 0.48
+    },
+    "roles": {
+      "human": {
+        "role": "seeker",
+        "value": 0.7
+      },
+      "ai": {
+        "role": "expert",
+        "value": 0.5
+      }
+    },
+    "trajectory": {
+      "start": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "target": {
+        "x": 0.4,
+        "y": 0.48
+      },
+      "drift": {
+        "x": -0.09999999999999998,
+        "y": -0.020000000000000018,
+        "magnitude": 0.10198039027185568,
+        "angle": -168.69006752597977
+      },
+      "quadrant": "SW"
+    },
+    "messageCount": 5
+  },
+  {
+    "id": "cornell-6",
+    "file": "cornell-6.json",
+    "position": {
+      "x": 0.4,
+      "y": 0.3
+    },
+    "roles": {
+      "human": {
+        "role": "seeker",
+        "value": 1
+      },
+      "ai": {
+        "role": "expert",
+        "value": 1
+      }
+    },
+    "trajectory": {
+      "start": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "target": {
+        "x": 0.4,
+        "y": 0.3
+      },
+      "drift": {
+        "x": -0.09999999999999998,
+        "y": -0.2,
+        "magnitude": 0.22360679774997896,
+        "angle": -116.56505117707799
+      },
+      "quadrant": "SW"
+    },
+    "messageCount": 2
+  },
+  {
+    "id": "cornell-7",
+    "file": "cornell-7.json",
+    "position": {
+      "x": 0.5,
+      "y": 0.6
+    },
+    "roles": {
+      "human": {
+        "role": "director",
+        "value": 0.5
+      },
+      "ai": {
+        "role": "facilitator",
+        "value": 0.5
+      }
+    },
+    "trajectory": {
+      "start": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "target": {
+        "x": 0.5,
+        "y": 0.6
+      },
+      "drift": {
+        "x": 0,
+        "y": 0.09999999999999998,
+        "magnitude": 0.09999999999999998,
+        "angle": 90
+      },
+      "quadrant": "NE"
+    },
+    "messageCount": 2
+  },
+  {
+    "id": "cornell-8",
+    "file": "cornell-8.json",
+    "position": {
+      "x": 0.4800000000000001,
+      "y": 0.7600000000000001
+    },
+    "roles": {
+      "human": {
+        "role": "seeker",
+        "value": 0.8
+      },
+      "ai": {
+        "role": "peer",
+        "value": 0.8
+      }
+    },
+    "trajectory": {
+      "start": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "target": {
+        "x": 0.4800000000000001,
+        "y": 0.7600000000000001
+      },
+      "drift": {
+        "x": -0.019999999999999907,
+        "y": 0.2600000000000001,
+        "magnitude": 0.26076809620810604,
+        "angle": 94.39870535499553
+      },
+      "quadrant": "NW"
+    },
+    "messageCount": 2
+  },
+  {
+    "id": "cornell-9",
+    "file": "cornell-9.json",
+    "position": {
+      "x": 0.8,
+      "y": 0.5
+    },
+    "roles": {
+      "human": {
+        "role": "sharer",
+        "value": 1
+      },
+      "ai": {
+        "role": "affiliative",
+        "value": 1
+      }
+    },
+    "trajectory": {
+      "start": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "target": {
+        "x": 0.8,
+        "y": 0.5
+      },
+      "drift": {
+        "x": 0.30000000000000004,
+        "y": 0,
+        "magnitude": 0.30000000000000004,
+        "angle": 0
+      },
+      "quadrant": "NE"
+    },
+    "messageCount": 2
+  },
+  {
+    "id": "emo-afraid-1",
+    "file": "emo-afraid-1.json",
+    "position": {
+      "x": 0.8,
+      "y": 0.6
+    },
+    "roles": {
+      "human": {
+        "role": "sharer",
+        "value": 1
+      },
+      "ai": {
+        "role": "reflector",
+        "value": 1
+      }
+    },
+    "trajectory": {
+      "start": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "target": {
+        "x": 0.8,
+        "y": 0.6
+      },
+      "drift": {
+        "x": 0.30000000000000004,
+        "y": 0.09999999999999998,
+        "magnitude": 0.31622776601683794,
+        "angle": 18.434948822922003
+      },
+      "quadrant": "NE"
+    },
+    "messageCount": 6
+  },
+  {
+    "id": "emo-afraid-2",
+    "file": "emo-afraid-2.json",
+    "position": {
+      "x": 0.8,
+      "y": 0.6
+    },
+    "roles": {
+      "human": {
+        "role": "sharer",
+        "value": 1
+      },
+      "ai": {
+        "role": "reflector",
+        "value": 1
+      }
+    },
+    "trajectory": {
+      "start": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "target": {
+        "x": 0.8,
+        "y": 0.6
+      },
+      "drift": {
+        "x": 0.30000000000000004,
+        "y": 0.09999999999999998,
+        "magnitude": 0.31622776601683794,
+        "angle": 18.434948822922003
+      },
+      "quadrant": "NE"
+    },
+    "messageCount": 6
+  },
+  {
+    "id": "emo-angry-1",
+    "file": "emo-angry-1.json",
+    "position": {
+      "x": 0.8,
+      "y": 0.7
+    },
+    "roles": {
+      "human": {
+        "role": "sharer",
+        "value": 1
+      },
+      "ai": {
+        "role": "facilitator",
+        "value": 1
+      }
+    },
+    "trajectory": {
+      "start": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "target": {
+        "x": 0.8,
+        "y": 0.7
+      },
+      "drift": {
+        "x": 0.30000000000000004,
+        "y": 0.19999999999999996,
+        "magnitude": 0.36055512754639896,
+        "angle": 33.69006752597978
+      },
+      "quadrant": "NE"
+    },
+    "messageCount": 4
+  },
+  {
+    "id": "emo-angry-2",
+    "file": "emo-angry-2.json",
+    "position": {
+      "x": 0.8,
+      "y": 0.7
+    },
+    "roles": {
+      "human": {
+        "role": "sharer",
+        "value": 1
+      },
+      "ai": {
+        "role": "facilitator",
+        "value": 1
+      }
+    },
+    "trajectory": {
+      "start": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "target": {
+        "x": 0.8,
+        "y": 0.7
+      },
+      "drift": {
+        "x": 0.30000000000000004,
+        "y": 0.19999999999999996,
+        "magnitude": 0.36055512754639896,
+        "angle": 33.69006752597978
+      },
+      "quadrant": "NE"
+    },
+    "messageCount": 5
+  },
+  {
+    "id": "emo-angry-3",
+    "file": "emo-angry-3.json",
+    "position": {
+      "x": 0.6800000000000002,
+      "y": 0.6799999999999999
+    },
+    "roles": {
+      "human": {
+        "role": "sharer",
+        "value": 0.8
+      },
+      "ai": {
+        "role": "facilitator",
+        "value": 0.8
+      }
+    },
+    "trajectory": {
+      "start": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "target": {
+        "x": 0.6800000000000002,
+        "y": 0.6799999999999999
+      },
+      "drift": {
+        "x": 0.18000000000000016,
+        "y": 0.17999999999999994,
+        "magnitude": 0.2545584412271572,
+        "angle": 44.999999999999964
+      },
+      "quadrant": "NE"
+    },
+    "messageCount": 4
+  },
+  {
+    "id": "emo-annoyed-1",
+    "file": "emo-annoyed-1.json",
+    "position": {
+      "x": 0.75,
+      "y": 0.6499999999999999
+    },
+    "roles": {
+      "human": {
+        "role": "collaborator",
+        "value": 0.5
+      },
+      "ai": {
+        "role": "facilitator",
+        "value": 0.5
+      }
+    },
+    "trajectory": {
+      "start": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "target": {
+        "x": 0.75,
+        "y": 0.6499999999999999
+      },
+      "drift": {
+        "x": 0.25,
+        "y": 0.1499999999999999,
+        "magnitude": 0.291547594742265,
+        "angle": 30.96375653207351
+      },
+      "quadrant": "NE"
+    },
+    "messageCount": 4
+  },
+  {
+    "id": "emo-annoyed-2",
+    "file": "emo-annoyed-2.json",
+    "position": {
+      "x": 0.6000000000000001,
+      "y": 0.7
+    },
+    "roles": {
+      "human": {
+        "role": "seeker",
+        "value": 0.5
+      },
+      "ai": {
+        "role": "reflector",
+        "value": 0.5
+      }
+    },
+    "trajectory": {
+      "start": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "target": {
+        "x": 0.6000000000000001,
+        "y": 0.7
+      },
+      "drift": {
+        "x": 0.10000000000000009,
+        "y": 0.19999999999999996,
+        "magnitude": 0.22360679774997896,
+        "angle": 63.43494882292198
+      },
+      "quadrant": "NE"
+    },
+    "messageCount": 4
+  },
+  {
+    "id": "emo-ashamed-1",
+    "file": "emo-ashamed-1.json",
+    "position": {
+      "x": 0.8,
+      "y": 0.6
+    },
+    "roles": {
+      "human": {
+        "role": "sharer",
+        "value": 1
+      },
+      "ai": {
+        "role": "reflector",
+        "value": 1
+      }
+    },
+    "trajectory": {
+      "start": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "target": {
+        "x": 0.8,
+        "y": 0.6
+      },
+      "drift": {
+        "x": 0.30000000000000004,
+        "y": 0.09999999999999998,
+        "magnitude": 0.31622776601683794,
+        "angle": 18.434948822922003
+      },
+      "quadrant": "NE"
+    },
+    "messageCount": 7
+  },
+  {
+    "id": "emo-confident-1",
+    "file": "emo-confident-1.json",
+    "position": {
+      "x": 0.8,
+      "y": 0.7
+    },
+    "roles": {
+      "human": {
+        "role": "sharer",
+        "value": 1
+      },
+      "ai": {
+        "role": "facilitator",
+        "value": 1
+      }
+    },
+    "trajectory": {
+      "start": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "target": {
+        "x": 0.8,
+        "y": 0.7
+      },
+      "drift": {
+        "x": 0.30000000000000004,
+        "y": 0.19999999999999996,
+        "magnitude": 0.36055512754639896,
+        "angle": 33.69006752597978
+      },
+      "quadrant": "NE"
+    },
+    "messageCount": 7
+  },
+  {
+    "id": "emo-embarrassed-1",
+    "file": "emo-embarrassed-1.json",
+    "position": {
+      "x": 0.8,
+      "y": 0.6
+    },
+    "roles": {
+      "human": {
+        "role": "sharer",
+        "value": 1
+      },
+      "ai": {
+        "role": "reflector",
+        "value": 1
+      }
+    },
+    "trajectory": {
+      "start": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "target": {
+        "x": 0.8,
+        "y": 0.6
+      },
+      "drift": {
+        "x": 0.30000000000000004,
+        "y": 0.09999999999999998,
+        "magnitude": 0.31622776601683794,
+        "angle": 18.434948822922003
+      },
+      "quadrant": "NE"
+    },
+    "messageCount": 4
+  },
+  {
+    "id": "emo-excited-1",
+    "file": "emo-excited-1.json",
+    "position": {
+      "x": 0.75,
+      "y": 0.8
+    },
+    "roles": {
+      "human": {
+        "role": "collaborator",
+        "value": 0.5
+      },
+      "ai": {
+        "role": "peer",
+        "value": 1
+      }
+    },
+    "trajectory": {
+      "start": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "target": {
+        "x": 0.75,
+        "y": 0.8
+      },
+      "drift": {
+        "x": 0.25,
+        "y": 0.30000000000000004,
+        "magnitude": 0.39051248379533277,
+        "angle": 50.19442890773481
+      },
+      "quadrant": "NE"
+    },
+    "messageCount": 5
+  },
+  {
+    "id": "emo-faithful-1",
+    "file": "emo-faithful-1.json",
+    "position": {
+      "x": 0.8,
+      "y": 0.44999999999999996
+    },
+    "roles": {
+      "human": {
+        "role": "sharer",
+        "value": 1
+      },
+      "ai": {
+        "role": "advisor",
+        "value": 0.5
+      }
+    },
+    "trajectory": {
+      "start": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "target": {
+        "x": 0.8,
+        "y": 0.44999999999999996
+      },
+      "drift": {
+        "x": 0.30000000000000004,
+        "y": -0.050000000000000044,
+        "magnitude": 0.304138126514911,
+        "angle": -9.462322208025626
+      },
+      "quadrant": "SE"
+    },
+    "messageCount": 4
+  },
+  {
+    "id": "emo-grateful-1",
+    "file": "emo-grateful-1.json",
+    "position": {
+      "x": 0.8,
+      "y": 0.5
+    },
+    "roles": {
+      "human": {
+        "role": "sharer",
+        "value": 1
+      },
+      "ai": {
+        "role": "affiliative",
+        "value": 1
+      }
+    },
+    "trajectory": {
+      "start": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "target": {
+        "x": 0.8,
+        "y": 0.5
+      },
+      "drift": {
+        "x": 0.30000000000000004,
+        "y": 0,
+        "magnitude": 0.30000000000000004,
+        "angle": 0
+      },
+      "quadrant": "NE"
+    },
+    "messageCount": 4
+  },
+  {
+    "id": "emo-guilty-1",
+    "file": "emo-guilty-1.json",
+    "position": {
+      "x": 0.8,
+      "y": 0.6
+    },
+    "roles": {
+      "human": {
+        "role": "sharer",
+        "value": 1
+      },
+      "ai": {
+        "role": "reflector",
+        "value": 1
+      }
+    },
+    "trajectory": {
+      "start": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "target": {
+        "x": 0.8,
+        "y": 0.6
+      },
+      "drift": {
+        "x": 0.30000000000000004,
+        "y": 0.09999999999999998,
+        "magnitude": 0.31622776601683794,
+        "angle": 18.434948822922003
+      },
+      "quadrant": "NE"
+    },
+    "messageCount": 5
+  },
+  {
+    "id": "emo-jealous-1",
+    "file": "emo-jealous-1.json",
+    "position": {
+      "x": 0.6499999999999999,
+      "y": 0.6599999999999999
+    },
+    "roles": {
+      "human": {
+        "role": "sharer",
+        "value": 0.7
+      },
+      "ai": {
+        "role": "reflector",
+        "value": 0.7
+      }
+    },
+    "trajectory": {
+      "start": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "target": {
+        "x": 0.6499999999999999,
+        "y": 0.6599999999999999
+      },
+      "drift": {
+        "x": 0.1499999999999999,
+        "y": 0.15999999999999992,
+        "magnitude": 0.21931712199461298,
+        "angle": 46.847610265994604
+      },
+      "quadrant": "NE"
+    },
+    "messageCount": 4
+  },
+  {
+    "id": "emo-joyful-1",
+    "file": "emo-joyful-1.json",
+    "position": {
+      "x": 0.8,
+      "y": 0.6499999999999999
+    },
+    "roles": {
+      "human": {
+        "role": "sharer",
+        "value": 1
+      },
+      "ai": {
+        "role": "facilitator",
+        "value": 0.5
+      }
+    },
+    "trajectory": {
+      "start": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "target": {
+        "x": 0.8,
+        "y": 0.6499999999999999
+      },
+      "drift": {
+        "x": 0.30000000000000004,
+        "y": 0.1499999999999999,
+        "magnitude": 0.33541019662496846,
+        "angle": 26.565051177077972
+      },
+      "quadrant": "NE"
+    },
+    "messageCount": 4
+  },
+  {
+    "id": "emo-joyful-2",
+    "file": "emo-joyful-2.json",
+    "position": {
+      "x": 0.8,
+      "y": 0.7
+    },
+    "roles": {
+      "human": {
+        "role": "sharer",
+        "value": 1
+      },
+      "ai": {
+        "role": "facilitator",
+        "value": 1
+      }
+    },
+    "trajectory": {
+      "start": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "target": {
+        "x": 0.8,
+        "y": 0.7
+      },
+      "drift": {
+        "x": 0.30000000000000004,
+        "y": 0.19999999999999996,
+        "magnitude": 0.36055512754639896,
+        "angle": 33.69006752597978
+      },
+      "quadrant": "NE"
+    },
+    "messageCount": 5
+  },
+  {
+    "id": "emo-lonely-1",
+    "file": "emo-lonely-1.json",
+    "position": {
+      "x": 0.8,
+      "y": 0.7
+    },
+    "roles": {
+      "human": {
+        "role": "sharer",
+        "value": 1
+      },
+      "ai": {
+        "role": "reflector",
+        "value": 0.5
+      }
+    },
+    "trajectory": {
+      "start": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "target": {
+        "x": 0.8,
+        "y": 0.7
+      },
+      "drift": {
+        "x": 0.30000000000000004,
+        "y": 0.19999999999999996,
+        "magnitude": 0.36055512754639896,
+        "angle": 33.69006752597978
+      },
+      "quadrant": "NE"
+    },
+    "messageCount": 4
+  },
+  {
+    "id": "emo-nostalgic-1",
+    "file": "emo-nostalgic-1.json",
+    "position": {
+      "x": 0.8,
+      "y": 0.6
+    },
+    "roles": {
+      "human": {
+        "role": "sharer",
+        "value": 1
+      },
+      "ai": {
+        "role": "reflector",
+        "value": 1
+      }
+    },
+    "trajectory": {
+      "start": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "target": {
+        "x": 0.8,
+        "y": 0.6
+      },
+      "drift": {
+        "x": 0.30000000000000004,
+        "y": 0.09999999999999998,
+        "magnitude": 0.31622776601683794,
+        "angle": 18.434948822922003
+      },
+      "quadrant": "NE"
+    },
+    "messageCount": 4
+  },
+  {
+    "id": "emo-prepared-1",
+    "file": "emo-prepared-1.json",
+    "position": {
+      "x": 0.8,
+      "y": 0.7
+    },
+    "roles": {
+      "human": {
+        "role": "sharer",
+        "value": 1
+      },
+      "ai": {
+        "role": "facilitator",
+        "value": 1
+      }
+    },
+    "trajectory": {
+      "start": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "target": {
+        "x": 0.8,
+        "y": 0.7
+      },
+      "drift": {
+        "x": 0.30000000000000004,
+        "y": 0.19999999999999996,
+        "magnitude": 0.36055512754639896,
+        "angle": 33.69006752597978
+      },
+      "quadrant": "NE"
+    },
+    "messageCount": 4
+  },
+  {
+    "id": "emo-proud-1",
+    "file": "emo-proud-1.json",
+    "position": {
+      "x": 0.6000000000000001,
+      "y": 0.7
+    },
+    "roles": {
+      "human": {
+        "role": "seeker",
+        "value": 0.5
+      },
+      "ai": {
+        "role": "reflector",
+        "value": 0.5
+      }
+    },
+    "trajectory": {
+      "start": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "target": {
+        "x": 0.6000000000000001,
+        "y": 0.7
+      },
+      "drift": {
+        "x": 0.10000000000000009,
+        "y": 0.19999999999999996,
+        "magnitude": 0.22360679774997896,
+        "angle": 63.43494882292198
+      },
+      "quadrant": "NE"
+    },
+    "messageCount": 5
+  },
+  {
+    "id": "emo-proud-2",
+    "file": "emo-proud-2.json",
+    "position": {
+      "x": 0.7200000000000002,
+      "y": 0.64
+    },
+    "roles": {
+      "human": {
+        "role": "sharer",
+        "value": 0.8
+      },
+      "ai": {
+        "role": "reflector",
+        "value": 0.8
+      }
+    },
+    "trajectory": {
+      "start": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "target": {
+        "x": 0.7200000000000002,
+        "y": 0.64
+      },
+      "drift": {
+        "x": 0.2200000000000002,
+        "y": 0.14,
+        "magnitude": 0.2607680962081061,
+        "angle": 32.47119229084847
+      },
+      "quadrant": "NE"
+    },
+    "messageCount": 5
+  },
+  {
+    "id": "emo-sad-1",
+    "file": "emo-sad-1.json",
+    "position": {
+      "x": 0.8,
+      "y": 0.6
+    },
+    "roles": {
+      "human": {
+        "role": "sharer",
+        "value": 1
+      },
+      "ai": {
+        "role": "reflector",
+        "value": 1
+      }
+    },
+    "trajectory": {
+      "start": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "target": {
+        "x": 0.8,
+        "y": 0.6
+      },
+      "drift": {
+        "x": 0.30000000000000004,
+        "y": 0.09999999999999998,
+        "magnitude": 0.31622776601683794,
+        "angle": 18.434948822922003
+      },
+      "quadrant": "NE"
+    },
+    "messageCount": 5
+  },
+  {
+    "id": "emo-sad-2",
+    "file": "emo-sad-2.json",
+    "position": {
+      "x": 0.8,
+      "y": 0.7
+    },
+    "roles": {
+      "human": {
+        "role": "sharer",
+        "value": 1
+      },
+      "ai": {
+        "role": "facilitator",
+        "value": 1
+      }
+    },
+    "trajectory": {
+      "start": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "target": {
+        "x": 0.8,
+        "y": 0.7
+      },
+      "drift": {
+        "x": 0.30000000000000004,
+        "y": 0.19999999999999996,
+        "magnitude": 0.36055512754639896,
+        "angle": 33.69006752597978
+      },
+      "quadrant": "NE"
+    },
+    "messageCount": 5
+  },
+  {
+    "id": "emo-sentimental-1",
+    "file": "emo-sentimental-1.json",
+    "position": {
+      "x": 0.8,
+      "y": 0.7
+    },
+    "roles": {
+      "human": {
+        "role": "sharer",
+        "value": 1
+      },
+      "ai": {
+        "role": "facilitator",
+        "value": 1
+      }
+    },
+    "trajectory": {
+      "start": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "target": {
+        "x": 0.8,
+        "y": 0.7
+      },
+      "drift": {
+        "x": 0.30000000000000004,
+        "y": 0.19999999999999996,
+        "magnitude": 0.36055512754639896,
+        "angle": 33.69006752597978
+      },
+      "quadrant": "NE"
+    },
+    "messageCount": 6
+  },
+  {
+    "id": "emo-sentimental-2",
+    "file": "emo-sentimental-2.json",
+    "position": {
+      "x": 0.7,
+      "y": 0.72
+    },
+    "roles": {
+      "human": {
+        "role": "sharer",
+        "value": 0.6
+      },
+      "ai": {
+        "role": "peer",
+        "value": 0.6
+      }
+    },
+    "trajectory": {
+      "start": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "target": {
+        "x": 0.7,
+        "y": 0.72
+      },
+      "drift": {
+        "x": 0.19999999999999996,
+        "y": 0.21999999999999997,
+        "magnitude": 0.29732137494637007,
+        "angle": 47.72631099390627
+      },
+      "quadrant": "NE"
+    },
+    "messageCount": 6
+  },
+  {
+    "id": "emo-surprised-1",
+    "file": "emo-surprised-1.json",
+    "position": {
+      "x": 0.8,
+      "y": 0.8
+    },
+    "roles": {
+      "human": {
+        "role": "sharer",
+        "value": 1
+      },
+      "ai": {
+        "role": "peer",
+        "value": 1
+      }
+    },
+    "trajectory": {
+      "start": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "target": {
+        "x": 0.8,
+        "y": 0.8
+      },
+      "drift": {
+        "x": 0.30000000000000004,
+        "y": 0.30000000000000004,
+        "magnitude": 0.42426406871192857,
+        "angle": 45
+      },
+      "quadrant": "NE"
+    },
+    "messageCount": 4
+  },
+  {
+    "id": "emo-terrified-1",
+    "file": "emo-terrified-1.json",
+    "position": {
+      "x": 0.7500000000000001,
+      "y": 0.30000000000000004
+    },
+    "roles": {
+      "human": {
+        "role": "sharer",
+        "value": 0.9
+      },
+      "ai": {
+        "role": "advisor",
+        "value": 0.8
+      }
+    },
+    "trajectory": {
+      "start": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "target": {
+        "x": 0.7500000000000001,
+        "y": 0.30000000000000004
+      },
+      "drift": {
+        "x": 0.2500000000000001,
+        "y": -0.19999999999999996,
+        "magnitude": 0.3201562118716425,
+        "angle": -38.65980825409007
+      },
+      "quadrant": "SE"
+    },
+    "messageCount": 5
+  },
+  {
+    "id": "kaggle-emo-1",
+    "file": "kaggle-emo-1.json",
+    "position": {
+      "x": 0.75,
+      "y": 0.65
+    },
+    "roles": {
+      "human": {
+        "role": "collaborator",
+        "value": 0.5
+      },
+      "ai": {
+        "role": "peer",
+        "value": 0.5
+      }
+    },
+    "trajectory": {
+      "start": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "target": {
+        "x": 0.75,
+        "y": 0.65
+      },
+      "drift": {
+        "x": 0.25,
+        "y": 0.15000000000000002,
+        "magnitude": 0.29154759474226505,
+        "angle": 30.96375653207353
+      },
+      "quadrant": "NE"
+    },
+    "messageCount": 6
+  },
+  {
+    "id": "kaggle-emo-3",
+    "file": "kaggle-emo-3.json",
+    "position": {
+      "x": 0.35,
+      "y": 0.44999999999999996
+    },
+    "roles": {
+      "human": {
+        "role": "seeker",
+        "value": 0.5
+      },
+      "ai": {
+        "role": "expert",
+        "value": 0.5
+      }
+    },
+    "trajectory": {
+      "start": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "target": {
+        "x": 0.35,
+        "y": 0.44999999999999996
+      },
+      "drift": {
+        "x": -0.15000000000000002,
+        "y": -0.050000000000000044,
+        "magnitude": 0.158113883008419,
+        "angle": -161.565051177078
+      },
+      "quadrant": "SW"
+    },
+    "messageCount": 6
+  },
+  {
+    "id": "kaggle-emo-4",
+    "file": "kaggle-emo-4.json",
+    "position": {
+      "x": 0.55,
+      "y": 0.6499999999999999
+    },
+    "roles": {
+      "human": {
+        "role": "seeker",
+        "value": 0.5
+      },
+      "ai": {
+        "role": "facilitator",
+        "value": 0.5
+      }
+    },
+    "trajectory": {
+      "start": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "target": {
+        "x": 0.55,
+        "y": 0.6499999999999999
+      },
+      "drift": {
+        "x": 0.050000000000000044,
+        "y": 0.1499999999999999,
+        "magnitude": 0.15811388300841892,
+        "angle": 71.56505117707796
+      },
+      "quadrant": "NE"
+    },
+    "messageCount": 6
+  },
+  {
+    "id": "sample-deep-discussion",
+    "file": "sample-deep-discussion.json",
+    "position": {
+      "x": 0.42999999999999994,
+      "y": 0.45999999999999996
+    },
+    "roles": {
+      "human": {
+        "role": "seeker",
+        "value": 0.7
+      },
+      "ai": {
+        "role": "expert",
+        "value": 0.6
+      }
+    },
+    "trajectory": {
+      "start": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "target": {
+        "x": 0.42999999999999994,
+        "y": 0.45999999999999996
+      },
+      "drift": {
+        "x": -0.07000000000000006,
+        "y": -0.040000000000000036,
+        "magnitude": 0.08062257748298557,
+        "angle": -150.2551187030578
+      },
+      "quadrant": "SW"
+    },
+    "messageCount": 6
+  },
+  {
+    "id": "sample-deep-technical",
+    "file": "sample-deep-technical.json",
+    "position": {
+      "x": 0.42000000000000004,
+      "y": 0.42
+    },
+    "roles": {
+      "human": {
+        "role": "learner",
+        "value": 0.5
+      },
+      "ai": {
+        "role": "expert",
+        "value": 0.7
+      }
+    },
+    "trajectory": {
+      "start": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "target": {
+        "x": 0.42000000000000004,
+        "y": 0.42
+      },
+      "drift": {
+        "x": -0.07999999999999996,
+        "y": -0.08000000000000002,
+        "magnitude": 0.11313708498984758,
+        "angle": -135
+      },
+      "quadrant": "SW"
+    },
+    "messageCount": 8
+  },
+  {
+    "id": "sample-medium-depth",
+    "file": "sample-medium-depth.json",
+    "position": {
+      "x": 0.47,
+      "y": 0.45999999999999996
+    },
+    "roles": {
+      "human": {
+        "role": "learner",
+        "value": 0.7
+      },
+      "ai": {
+        "role": "expert",
+        "value": 0.6
+      }
+    },
+    "trajectory": {
+      "start": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "target": {
+        "x": 0.47,
+        "y": 0.45999999999999996
+      },
+      "drift": {
+        "x": -0.030000000000000027,
+        "y": -0.040000000000000036,
+        "magnitude": 0.050000000000000044,
+        "angle": -126.86989764584402
+      },
+      "quadrant": "SW"
+    },
+    "messageCount": 6
+  },
+  {
+    "id": "sample-question-answer",
+    "file": "sample-question-answer.json",
+    "position": {
+      "x": 0.4,
+      "y": 0.3
+    },
+    "roles": {
+      "human": {
+        "role": "seeker",
+        "value": 1
+      },
+      "ai": {
+        "role": "expert",
+        "value": 1
+      }
+    },
+    "trajectory": {
+      "start": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "target": {
+        "x": 0.4,
+        "y": 0.3
+      },
+      "drift": {
+        "x": -0.09999999999999998,
+        "y": -0.2,
+        "magnitude": 0.22360679774997896,
+        "angle": -116.56505117707799
+      },
+      "quadrant": "SW"
+    },
+    "messageCount": 6
+  },
+  {
+    "id": "sample-shallow-moderate",
+    "file": "sample-shallow-moderate.json",
+    "position": {
+      "x": 0.42000000000000004,
+      "y": 0.27
+    },
+    "roles": {
+      "human": {
+        "role": "seeker",
+        "value": 0.8
+      },
+      "ai": {
+        "role": "expert",
+        "value": 0.7
+      }
+    },
+    "trajectory": {
+      "start": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "target": {
+        "x": 0.42000000000000004,
+        "y": 0.27
+      },
+      "drift": {
+        "x": -0.07999999999999996,
+        "y": -0.22999999999999998,
+        "magnitude": 0.24351591323771837,
+        "angle": -109.17900802581072
+      },
+      "quadrant": "SW"
+    },
+    "messageCount": 6
+  },
+  {
+    "id": "sample-very-deep",
+    "file": "sample-very-deep.json",
+    "position": {
+      "x": 0.52,
+      "y": 0.52
+    },
+    "roles": {
+      "human": {
+        "role": "collaborator",
+        "value": 0.5
+      },
+      "ai": {
+        "role": "expert",
+        "value": 0.5
+      }
+    },
+    "trajectory": {
+      "start": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "target": {
+        "x": 0.52,
+        "y": 0.52
+      },
+      "drift": {
+        "x": 0.020000000000000018,
+        "y": 0.020000000000000018,
+        "magnitude": 0.028284271247461926,
+        "angle": 45
+      },
+      "quadrant": "NE"
+    },
+    "messageCount": 8
+  },
+  {
+    "id": "sample-very-shallow",
+    "file": "sample-very-shallow.json",
+    "position": {
+      "x": 0.7200000000000002,
+      "y": 0.53
+    },
+    "roles": {
+      "human": {
+        "role": "sharer",
+        "value": 0.8
+      },
+      "ai": {
+        "role": "affiliative",
+        "value": 0.9
+      }
+    },
+    "trajectory": {
+      "start": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "target": {
+        "x": 0.7200000000000002,
+        "y": 0.53
+      },
+      "drift": {
+        "x": 0.2200000000000002,
+        "y": 0.030000000000000027,
+        "magnitude": 0.22203603311174538,
+        "angle": 7.765166018425333
+      },
+      "quadrant": "NE"
+    },
+    "messageCount": 4
+  }
+]

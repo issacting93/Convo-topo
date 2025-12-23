@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/DIMENSION_MAPPING.md",
+                "file": "docs/DIS_SUBMISSION.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "DIMENSION_MAPPING"
+              "title": "DIS_SUBMISSION"
             }
           }
         ]
@@ -78,7 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 379.5
   },
   "right": {
     "id": "515399b00e4d3eac",
@@ -183,43 +183,43 @@
       "bases:Create new base": false
     }
   },
-  "active": "bc0bfd14ec3d7c16",
+  "active": "0c8fa85cc27f138a",
   "lastOpenFiles": [
-    "DATA_REVIEW_REPORT.md",
-    "public/output/kaggle-emo-9.json",
-    "public/output/kaggle-emo-8.json",
-    "public/output/kaggle-emo-7.json",
-    "public/output/kaggle-emo-6.json",
-    "public/output/kaggle-emo-5.json",
-    "public/output/kaggle-emo-5-error.json",
-    "public/output/kaggle-emo-4.json",
-    "public/output/kaggle-emo-4-error.json",
-    "public/output/kaggle-emo-3.json",
-    "public/output/kaggle-emo-3-error.json",
-    "DATA_DIRECTORIES_ANALYSIS.md",
-    "docs/research/DATA_RECLASSIFICATION_STRATEGY.md",
-    "Z_AXIS_MIGRATION_SUMMARY.md",
-    "docs/research/Z_AXIS_IMPLEMENTATION_PLAN.md",
-    "docs/research/DOCUMENTATION_INDEX.md",
-    "docs/research/USER_EXPERIENCE_AND_INTERACTION.md",
-    "CLEANUP_REPORT.md",
-    "CODE_REVIEW.md",
-    "docs/THEME_TOGGLE_INFO.md",
-    "docs/COLOR_SCHEME_VISIBILITY_REPORT.md",
-    "docs/CONSOLIDATION_PLAN_2025.md",
-    "docs/CONSOLIDATION_COMPLETE.md",
-    "docs/examples/README.md",
-    "CONSOLIDATION_PLAN.md",
-    "docs/DATA_ORGANIZATION.md",
-    "docs/CONTROL_PANEL_IMPROVEMENTS.md",
-    "CLASSIFIER_AND_RAW_DATA_REVIEW.md",
-    "conversations-raw/README.md",
-    "classifier/CLEANUP_TEMP_FILES.md",
-    "archive/unrelated-projects/temp-samantha/README.md",
-    "CLEANUP_SUMMARY.md",
-    "docs/archive/ORGANIZATION_PLAN.md",
-    "docs/archive/ORGANIZATION_COMPLETE.md",
-    "CLEANUP_PLAN.md",
-    "docs/QUICK_REFERENCE_CLASSIFIERS.md"
+    "docs/archive/DELETION_ANALYSIS.md",
+    "docs/archive/LLM_PAD_IMPROVEMENT_STRATEGY.md",
+    "docs/archive/PATH_ROLE_RELATIONSHIP.md",
+    "docs/archive/PATH_CONVERSATION_PAD_RELATIONSHIP.md",
+    "docs/archive/PAD_EMOTIONAL_ARC_ANALYSIS.md",
+    "docs/archive/ROLE_SANITY_CHECK.md",
+    "docs/archive/ROLE_REDUCTION_AND_SPACING.md",
+    "docs/archive/ROLE_MIGRATION_PLAN.md",
+    "docs/archive/Z_AXIS_MIGRATION_SUMMARY.md",
+    "docs/archive/TROUBLESHOOTING.md",
+    "docs/archive/TESTING_CHECKLIST.md",
+    "docs/archive/STATUS_SUMMARY.md",
+    "docs/archive/QUICK_FIX.md",
+    "docs/archive/PROJECT_STRATEGIC_REVIEW.md",
+    "docs/archive/PAD_STRATEGY_ANALYSIS.md",
+    "docs/archive/PAD_QUALITY_SPOT_CHECK.md",
+    "docs/archive/PAD_DEEP_ANALYSIS.md",
+    "docs/archive/ORTHOGRAPHIC_CAMERA_FIX.md",
+    "docs/archive/MANIFEST_LOADING_IMPLEMENTATION.md",
+    "build/assets/index-B3Hotem_.js",
+    "build/assets/index-TrmG9UHe.js",
+    "build/output-backup/sample-very-shallow.json",
+    "build/output-backup/sample-very-deep.json",
+    "build/output-backup/sample-shallow-moderate.json",
+    "build/output-backup/sample-question-answer.json",
+    "build/output-backup/sample-medium-depth.json",
+    "build/output-backup/sample-deep-technical.json",
+    "build/output-backup/sample-deep-discussion.json",
+    "build/output-backup/oasst-long-9.json",
+    "docs/ROLE_MIGRATION_PLAN.md",
+    "docs/ROLE_REDUCTION_AND_SPACING.md",
+    "docs/ROLE_SANITY_CHECK.md",
+    "node_modules/@types/react-router-dom/README.md",
+    "node_modules/@types/react-router/README.md",
+    "node_modules/@types/history/README.md",
+    "node_modules/react-router/LICENSE.md"
   ]
 }

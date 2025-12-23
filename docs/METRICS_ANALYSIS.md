@@ -1,18 +1,65 @@
 # Conversation Metrics Analysis
 
-## Current Metrics: Issues & Improvements
+## Current Metrics: Overview
 
-### Current Implementation
+### X-Axis: FUNCTIONAL ↔ SOCIAL
 
-**X-Axis: FUNCTIONAL ↔ SOCIAL** (currently called "tension")
-- Current name: "tension" (0 = functional, 1 = social)
-- Problem: "Tension" implies conflict/stress, but the metric actually measures task-oriented vs relational communication
-- Current analysis: Simple keyword matching (functional vs social indicators)
+**Label**: "COMMUNICATION FUNCTION"  
+**Range**: 0.0 (functional) ↔ 1.0 (social)  
+**Definition**:
+- **Functional (0.0-0.4)**: Task-oriented, instrumental, problem-solving conversations
+- **Social (0.6-1.0)**: Relational, expressive, emotion-focused conversations
 
-**Z-Axis: EMERGENT ↔ PRESCRIBED** (currently called "delegation")
-- Current name: "delegation" (0 = emergent, 1 = prescribed)
-- Problem: "Delegation" implies authority transfer, not conversation structure
-- Current analysis: Based on question vs statement patterns
+**Mapping**: Uses priority-based fallback system:
+1. Human role distribution (primary)
+2. Conversation purpose (fallback)
+3. Knowledge exchange type (fallback)
+
+See `docs/DIMENSION_MAPPING.md` for detailed mapping logic.
+
+---
+
+### Y-Axis: STRUCTURED ↔ EMERGENT
+
+**Label**: "CONVERSATION STRUCTURE"  
+**Range**: 0.0 (structured) ↔ 1.0 (emergent)  
+**Definition**:
+- **Structured (0.0-0.4)**: Directive, prescriptive, predictable conversation patterns
+- **Emergent (0.6-1.0)**: Exploratory, spontaneous, open-ended conversation patterns
+
+**Mapping**: Uses priority-based fallback system:
+1. AI role distribution (primary)
+2. Interaction pattern (fallback)
+3. Engagement style (fallback)
+
+See `docs/DIMENSION_MAPPING.md` for detailed mapping logic.
+
+---
+
+### Z-Axis: AFFECTIVE/EVALUATIVE LENS (PAD Model)
+
+**Label**: "AFFECTIVE/EVALUATIVE LENS (PAD)"  
+**Range**: 0.0 (low intensity) ↔ 1.0 (high intensity)  
+**Definition**: Emotional intensity based on PAD (Pleasure-Arousal-Dominance) model
+
+**Formula**: `emotionalIntensity = (1 - pleasure) * 0.6 + arousal * 0.4`
+
+**Components**:
+- **Pleasure (P)**: 0-1, valence (0 = frustration, 1 = satisfaction)
+- **Arousal (A)**: 0-1, activation level (0 = calm, 1 = agitated)
+- **Dominance (D)**: 0-1, sense of control (0 = passive, 1 = in control) - *calculated but not used in intensity formula*
+
+**Visualization**: Controls marker heights on the terrain
+- High intensity (frustration) = peaks
+- Low intensity (satisfaction/affiliation) = valleys
+
+**Generation**: 
+- **Current**: Rule-based pattern matching (`scripts/add-pad-to-data.js`)
+- **Future**: LLM-based analysis for better accuracy (see `docs/LLM_PAD_IMPROVEMENT_STRATEGY.md`)
+
+**Data Location**: Stored in each message as `messages[].pad` object
+
+See `docs/research/Z_AXIS_IMPLEMENTATION_PLAN.md` and `docs/LLM_PAD_IMPROVEMENT_STRATEGY.md` for details.
 
 ### Recommended Improvements
 
@@ -148,22 +195,47 @@ Could add a third dimension or enrich existing metrics:
 - **Turn-taking patterns**: Balanced ↔ Dominated
 - **Topic shift**: Stable ↔ Dynamic
 
-## 3. Recommendations
+## Current Implementation Status
 
-### Immediate Improvements:
-1. **Rename metrics** to clearer terms:
-   - `tension` → `modality` or `taskOrientation`
-   - `delegation` → `discoursePattern` or `conversationalStructure`
+### ✅ Implemented
 
-2. **Improve analysis function** with:
-   - Better regex patterns
-   - Context awareness (conversation history)
-   - Multiple linguistic features
-   - Normalization and smoothing
+1. **X/Y Axis Mapping**: Uses classification-based mapping (see `docs/DIMENSION_MAPPING.md`)
+   - Role distributions (primary method)
+   - Fallback to categorical classifications
+   - Confidence-weighted positioning
 
-3. **Update UI labels**:
-   - "MODALITY" instead of using tension directly
-   - "DISCOURSE PATTERN" or "CONVERSATION STRUCTURE" instead of "EMERGENCE FACTOR"
+2. **Z-Axis (PAD)**: Uses PAD model for emotional intensity
+   - Stored in message `pad` objects
+   - Formula: `(1 - pleasure) * 0.6 + arousal * 0.4`
+   - Controls marker heights in 3D visualization
+
+3. **UI Labels**: 
+   - X-axis: "COMMUNICATION FUNCTION"
+   - Y-axis: "CONVERSATION STRUCTURE"
+   - Z-axis: "AFFECTIVE/EVALUATIVE LENS (PAD)"
+
+---
+
+## Recommendations for Future Improvements
+
+### PAD Generation (High Priority)
+
+1. **LLM-Based PAD Generation** (see `docs/LLM_PAD_IMPROVEMENT_STRATEGY.md`)
+   - Better multilingual support
+   - Context-aware emotional analysis
+   - More nuanced frustration/satisfaction detection
+
+2. **PAD Formula Refinement**
+   - Consider renaming "emotionalIntensity" to "emotionalFriction" or "frustrationIntensity" (current formula is frustration-focused)
+   - Document why dominance is calculated but unused
+   - Consider alternative formulas for positive intensity (excitement, satisfaction)
+
+### X/Y Axis Mapping (Lower Priority)
+
+Current implementation is working well, but potential improvements:
+- More sophisticated role-based weighting
+- Consider conversation-level confidence scores in positioning
+- A/B testing different mapping algorithms
 
 ### Long-term Improvements:
 1. **Use NLP libraries** (if adding to bundle is acceptable):

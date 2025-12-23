@@ -11,6 +11,7 @@ Conversational Topography is a web-based interactive visualization that runs ent
 - **Framework**: React 18.3.1 with TypeScript
 - **3D Rendering**: Three.js 0.171.0
 - **Build Tool**: Vite 6.0.1
+- **UI Components**: Custom React components with responsive design
 - **Deployment**: Static site (can be served from any web server or CDN)
 
 ### Data Pipeline
@@ -226,17 +227,31 @@ User Interaction (Lens Switching, Navigation)
 
 ## Sample Data
 
-The installation includes 20 pre-classified sample conversations covering:
-- Various interaction patterns (collaborative, question-answer, advisory, casual-chat)
+The installation includes 20 pre-classified sample conversations from the Chatbot Arena dataset, covering:
+- Various interaction patterns (collaborative, question-answer, advisory, casual-chat, failure modes)
 - Various terrain characteristics (different shapes, elevations, path patterns)
 - Range of emotional tones and engagement styles
 - Diverse role distributions (human and AI roles)
+- Epistemic failures and repair sequences
+- Interaction breakdowns and non-repair loops
 
 All sample conversations are:
 - Non-identifying
 - Publicly available or synthetic
 - Clearly labeled as examples
 - Representative of common interaction patterns
+- Include PAD (Pleasure-Arousal-Dominance) scores for each message
+- Include failure mode and epistemic status metadata where applicable
+
+## Current Features
+
+- **Enhanced Terrain Cards**: Rich preview information including message count, dominant roles, PAD summary, and classification dimensions
+- **Interactive Minimap**: 2D axis map with clickable points to navigate messages
+- **Camera Controls**: Three preset views (default/side/top) plus adjustable distance, elevation, and rotation
+- **Timeline Animation**: Play button to animate conversation progression, plus manual timeline scrubbing
+- **Settings Panel**: Comprehensive controls for camera, terrain position, contours, and color customization
+- **Responsive Design**: Interface adapts to different screen sizes
+- **Dark Theme**: Optimized for visibility with light yellow-green contours and dark backgrounds
 
 ## Future Enhancements (Not Required for DIS)
 

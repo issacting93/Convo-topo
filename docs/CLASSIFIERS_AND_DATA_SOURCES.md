@@ -493,9 +493,70 @@ python3 classifier-openai.py ../conversations-raw/kaggle-conversations.json outp
 
 ---
 
+## PAD Value Generation
+
+PAD (Pleasure-Arousal-Dominance) values are stored in each message within classified conversations. These values control the Z-axis visualization (marker heights).
+
+### Current Implementation
+
+**Method**: Rule-based pattern matching  
+**Script**: `scripts/add-pad-to-data.js`  
+**Location**: PAD values stored in `messages[].pad` object
+
+**Structure:**
+```json
+{
+  "messages": [
+    {
+      "role": "user",
+      "content": "...",
+      "pad": {
+        "pleasure": 0.5,      // 0-1, low = frustration, high = satisfaction
+        "arousal": 0.3,        // 0-1, low = calm, high = agitated
+        "dominance": 0.4,      // 0-1, low = passive, high = in control
+        "emotionalIntensity": 0.42  // (1 - pleasure) * 0.6 + arousal * 0.4
+      }
+    }
+  ]
+}
+```
+
+### PAD Generation Scripts
+
+1. **`scripts/add-pad-to-data.js`** (Rule-based)
+   - Adds PAD values to all conversation files
+   - Uses conversation classification + message content analysis
+   - Usage: `node scripts/add-pad-to-data.js [--force]`
+
+2. **`scripts/generate-pad-with-llm-direct.py`** ✅ **Recommended** (LLM-based)
+   - Uses OpenAI GPT-4o-mini API
+   - Better multilingual support and accuracy
+   - Context-aware analysis
+   - Usage: `python3 scripts/generate-pad-with-llm-direct.py [--file filename] [--all]`
+   - See `docs/LLM_PAD_IMPROVEMENT_STRATEGY.md` for details
+
+### Usage
+
+```bash
+# Generate PAD values for all conversations (rule-based)
+node scripts/add-pad-to-data.js
+
+# Recalculate PAD values (if calculation logic changed)
+node scripts/add-pad-to-data.js --force
+
+# LLM-based PAD generation (GPT-4o-mini) - Recommended
+python3 scripts/generate-pad-with-llm-direct.py --file chatbot_arena_01.json
+python3 scripts/generate-pad-with-llm-direct.py --all  # Process all files
+python3 scripts/generate-pad-with-llm-direct.py --file chatbot_arena_01.json
+python3 scripts/generate-pad-with-llm-direct.py --all  # Process all files
+```
+
+---
+
 ## Future Enhancements
 
 Potential improvements:
+- [ ] LLM-based PAD generation (see `docs/LLM_PAD_IMPROVEMENT_STRATEGY.md`)
 - [ ] Unified classifier selection interface
 - [ ] Batch comparison tool (compare OpenAI vs Claude results)
 - [ ] Data source metadata tracking

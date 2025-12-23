@@ -20,15 +20,23 @@ Each classified conversation is converted to a terrain preset with:
 
 When a conversation terrain is selected, its messages are positioned on the terrain using:
 
-- **X-axis (communicationFunction)**: 
+- **X-axis (Communication Function)**: 
   - 0.0-0.4 = Functional (task-oriented, problem-solving)
   - 0.6-1.0 = Social (entertainment, relationship-building, self-expression)
-  - Mapped from `conversationPurpose` and `knowledgeExchange`
+  - Mapped from human role distribution (primary), conversation purpose, or knowledge exchange
+  - See `docs/DIMENSION_MAPPING.md` for detailed mapping logic
 
-- **Z-axis (conversationStructure)**:
+- **Y-axis (Conversation Structure)**:
   - 0.0-0.4 = Structured (question-answer, advisory)
   - 0.6-1.0 = Emergent (collaborative, casual-chat, storytelling)
-  - Mapped from `interactionPattern` and `engagementStyle`
+  - Mapped from AI role distribution (primary), interaction pattern, or engagement style
+  - See `docs/DIMENSION_MAPPING.md` for detailed mapping logic
+
+- **Z-axis (Affective/Evaluative Lens - PAD)**:
+  - 0.0-1.0 = Emotional intensity (low = satisfaction/affiliation, high = frustration/agitation)
+  - Uses PAD model: `emotionalIntensity = (1 - pleasure) * 0.6 + arousal * 0.4`
+  - Stored in message `pad.emotionalIntensity` field
+  - Controls marker heights (high intensity = peaks, low intensity = valleys)
 
 ### 3. File Structure
 
@@ -104,12 +112,46 @@ This ensures:
 - Communication Function: ~0.75 (social)
 - Conversation Structure: ~0.75 (emergent)
 
+## PAD Values and Z-Axis
+
+PAD (Pleasure-Arousal-Dominance) values are stored in each message and control the Z-axis visualization (marker heights).
+
+### PAD Structure
+
+Each message includes a `pad` object:
+```json
+{
+  "pad": {
+    "pleasure": 0.5,        // 0-1, valence (low = frustration, high = satisfaction)
+    "arousal": 0.3,         // 0-1, activation (low = calm, high = agitated)
+    "dominance": 0.4,       // 0-1, control (low = passive, high = in control)
+    "emotionalIntensity": 0.42  // (1 - pleasure) * 0.6 + arousal * 0.4
+  }
+}
+```
+
+### Generation
+
+- **Rule-based**: Pattern matching (`scripts/add-pad-to-data.js`)
+- **LLM-based** ✅ **Recommended**: OpenAI GPT-4o-mini API (`scripts/generate-pad-with-llm-direct.py`)
+- See `docs/LLM_PAD_IMPROVEMENT_STRATEGY.md` for details
+
+### Visualization
+
+- High `emotionalIntensity` (frustration) → peaks (markers higher)
+- Low `emotionalIntensity` (satisfaction) → valleys (markers lower)
+- Creates a "landscape of affective experience" across the conversation
+
+---
+
 ## Future Enhancements
 
-- [ ] More sophisticated mapping algorithms
-- [ ] Color coding based on emotional tone
+- [ ] LLM-based PAD generation for better multilingual and context-aware analysis
+- [ ] More sophisticated mapping algorithms for X/Y axes
+- [ ] Color coding based on emotional tone or PAD values
 - [ ] Size/height based on confidence scores
 - [ ] Filtering by classification categories
 - [ ] Search by conversation characteristics
 - [ ] Batch visualization of multiple conversations
+- [ ] PAD formula refinement (consider renaming to "emotionalFriction" or including dominance)
 

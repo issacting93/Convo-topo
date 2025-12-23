@@ -44,10 +44,11 @@ while (hasMore && index < 100) {
 ### Navigation and Camera Controls
 
 **Current Implementation:**
-- **Automatic camera orbit**: Camera automatically orbits around the path center
-- **No manual camera controls**: Users cannot manually rotate, pan, or zoom
+- **Manual camera rotation**: Click and drag to rotate the terrain around Y-axis
+- **Camera view presets**: Three camera views available (default perspective, side orthographic, top orthographic)
+- **Camera controls**: Adjustable distance, elevation, and rotation via settings panel
 - **Mouse interaction**: Hover over markers to see details, click to lock/unlock
-- **Timeline slider**: Control path animation progress (0-100%)
+- **Timeline controls**: Interactive timeline with play button for animation (animates from start to finish over 3 seconds)
 - **Back button**: Return to grid view
 
 **Code Implementation:**
@@ -76,14 +77,29 @@ const handleClick = () => {
 
 **Current Flow:**
 1. **Grid View**: User sees paginated grid of terrain cards (30 per page)
+   - Each card shows: conversation name, minimap preview, message count, dominant roles, PAD summary, top classification dimensions, XYZ coordinates
+   - Enhanced cards provide rich preview information before selection
 2. **Card Selection**: Click a card to enter single terrain view
 3. **Terrain View**: 
-   - Camera automatically orbits around the conversation path
-   - Hover over glowing markers to see message preview in HUD
-   - Click marker to lock it (shows full message details)
-   - Adjust timeline slider to animate path progression
-   - Toggle contours on/off
-   - Adjust contour count
+   - **3D Scene**: 
+     - Click and drag to rotate terrain around Y-axis
+     - Hover over glowing markers to see message preview in HUD
+     - Click marker to lock it (shows full message details)
+   - **Left Panel (HUD)**: 
+     - Message details when marker is selected
+     - Classification dimensions with evidence
+     - Role distributions
+     - Failure mode and epistemic status badges
+   - **Right Panel**: 
+     - Interactive minimap (2D axis map) - clickable points to jump to messages
+     - Camera view controls (default/side/top)
+     - Timeline with play button for animation
+   - **Settings Modal**: 
+     - Camera controls (distance, elevation, rotation)
+     - Terrain position controls
+     - Contour toggle and count
+     - Color customization (contours, markers)
+     - Timeline slider for manual control
 4. **Return to Grid**: Click back button to select another conversation
 
 **Reflection Triggers:**
@@ -268,14 +284,25 @@ const handleClick = () => {
 ### Navigation Controls
 
 **Current State:**
-- Camera: Automatic orbit only
-- Mouse: Hover and click on markers
-- Timeline: Slider for animation control
-- Back: Return to grid
+- **Camera**: 
+  - Manual rotation via click-and-drag (Y-axis rotation)
+  - Three preset views: default (perspective), side (orthographic), top (orthographic)
+  - Adjustable distance, elevation, and rotation via settings
+- **Mouse**: Hover and click on markers, drag to rotate terrain
+- **Timeline**: 
+  - Interactive timeline in right panel with clickable points
+  - Play button to animate from start to finish (3 seconds)
+  - Slider in settings modal for manual control
+- **Settings Modal**: Comprehensive controls for all visualization parameters
+- **Back**: Return to grid
+
+**Current Features:**
+- **Camera controls**: Click + drag to rotate around Y-axis
+- **Camera presets**: Default (perspective), side (orthographic), top (orthographic) views
+- **Settings panel**: Comprehensive controls for camera, terrain, contours, and colors
 
 **Envisioned Enhancements (Future):**
-- **Manual camera controls**:
-  - Click + drag: Rotate camera around terrain
+- **Enhanced camera controls**:
   - Scroll/wheel: Zoom in/out
   - Right-click + drag: Pan
   - Double-click marker: Focus camera on that marker

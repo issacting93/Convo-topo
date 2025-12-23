@@ -1,0 +1,199 @@
+{
+  "id": "chatbot_arena_01",
+  "source": "Chatbot Arena (lmsys/chatbot_arena_conversations)",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Salut ! Comment ça va ce matin ?"
+    },
+    {
+      "role": "assistant",
+      "content": "Ça va bien, merci. Et toi ?"
+    },
+    {
+      "role": "user",
+      "content": "Ça va et toi ?"
+    },
+    {
+      "role": "assistant",
+      "content": "Oui, et toi ?"
+    },
+    {
+      "role": "user",
+      "content": "Ça va et vous ?"
+    },
+    {
+      "role": "assistant",
+      "content": "Oui, et vous ?"
+    },
+    {
+      "role": "user",
+      "content": "ça va"
+    },
+    {
+      "role": "assistant",
+      "content": "ça va"
+    },
+    {
+      "role": "user",
+      "content": "non ça va"
+    },
+    {
+      "role": "assistant",
+      "content": "non ça va"
+    },
+    {
+      "role": "user",
+      "content": "Ok"
+    },
+    {
+      "role": "assistant",
+      "content": "Ok"
+    }
+  ],
+  "classification": {
+    "interaction_pattern": {
+      "value": "casual-chat",
+      "confidence": 0.9,
+      "evidence": "Salut ! Comment ça va ce matin ?",
+      "rationale": "The conversation consists of simple greetings and exchanges about well-being, typical of casual chats."
+    },
+    "power_dynamics": {
+      "value": "balanced",
+      "confidence": 0.8,
+      "evidence": "USER: Ça va et toi ? ASSISTANT: Oui, et toi ?",
+      "rationale": "Both participants equally contribute to the conversation with similar types of responses, indicating balanced power dynamics."
+    },
+    "emotional_tone": {
+      "value": "neutral",
+      "confidence": 0.85,
+      "evidence": "USER: Ok ASSISTANT: Ok",
+      "rationale": "The conversation lacks emotional depth or variation, maintaining a neutral tone throughout."
+    },
+    "engagement_style": {
+      "value": "affirming",
+      "confidence": 0.9,
+      "evidence": "ASSISTANT: Oui, et vous ?",
+      "rationale": "The AI primarily affirms the user's statements, reflecting an affirming engagement style."
+    },
+    "knowledge_exchange": {
+      "value": "opinion-exchange",
+      "confidence": 0.7,
+      "evidence": "USER: Ça va et toi ? ASSISTANT: Oui, et toi ?",
+      "rationale": "The exchange is about personal states, which are subjective opinions rather than factual information."
+    },
+    "conversation_purpose": {
+      "value": "exploration",
+      "confidence": 0.6,
+      "evidence": "USER: Salut ! Comment ça va ce matin ?",
+      "rationale": "The purpose seems to be exploring each other's current state rather than achieving a specific task."
+    },
+    "turn_taking": {
+      "value": "balanced",
+      "confidence": 0.9,
+      "evidence": "USER: Ok ASSISTANT: Ok",
+      "rationale": "The conversation alternates turns evenly between the user and the AI."
+    },
+    "human_role_distribution": {
+      "seeker": 0.5,
+      "learner": 0.0,
+      "director": 0.0,
+      "collaborator": 0.5,
+      "sharer": 0.0,
+      "challenger": 0.0,
+      "confidence": 0.8,
+      "evidence": "USER: Salut ! Comment ça va ce matin ?",
+      "rationale": "The user seeks information about the AI's state and collaborates in maintaining the conversation flow."
+    },
+    "ai_role_distribution": {
+      "expert": 0.0,
+      "advisor": 0.0,
+      "facilitator": 0.0,
+      "reflector": 0.0,
+      "peer": 0.8,
+      "affiliative": 0.2,
+      "confidence": 0.85,
+      "evidence": "ASSISTANT: Oui, et vous ?",
+      "rationale": "The AI acts as a peer by reciprocating the user's questions and maintaining an affiliative tone."
+    }
+  },
+  "pad_scores": [
+    {
+      "pleasure": 0.5,
+      "arousal": 0.3,
+      "dominance": 0.3,
+      "intensity": 0.42
+    },
+    {
+      "pleasure": 0.5,
+      "arousal": 0.3,
+      "dominance": 0.3,
+      "intensity": 0.42
+    },
+    {
+      "pleasure": 0.5,
+      "arousal": 0.3,
+      "dominance": 0.3,
+      "intensity": 0.42
+    },
+    {
+      "pleasure": 0.5,
+      "arousal": 0.3,
+      "dominance": 0.3,
+      "intensity": 0.42
+    },
+    {
+      "pleasure": 0.5,
+      "arousal": 0.3,
+      "dominance": 0.3,
+      "intensity": 0.42
+    },
+    {
+      "pleasure": 0.5,
+      "arousal": 0.3,
+      "dominance": 0.3,
+      "intensity": 0.42
+    },
+    {
+      "pleasure": 0.5,
+      "arousal": 0.3,
+      "dominance": 0.5,
+      "intensity": 0.42
+    },
+    {
+      "pleasure": 0.5,
+      "arousal": 0.3,
+      "dominance": 0.5,
+      "intensity": 0.42
+    },
+    {
+      "pleasure": 0.5,
+      "arousal": 0.3,
+      "dominance": 0.5,
+      "intensity": 0.42
+    },
+    {
+      "pleasure": 0.5,
+      "arousal": 0.3,
+      "dominance": 0.5,
+      "intensity": 0.42
+    },
+    {
+      "pleasure": 0.5,
+      "arousal": 0.3,
+      "dominance": 0.5,
+      "intensity": 0.42
+    },
+    {
+      "pleasure": 0.5,
+      "arousal": 0.3,
+      "dominance": 0.5,
+      "intensity": 0.42
+    }
+  ],
+  "metadata": {
+    "num_turns": 12,
+    "classified_at": "2025-12-20 09:44:39",
+    "classifier": "OpenAI GPT-4o"
+  }
+}

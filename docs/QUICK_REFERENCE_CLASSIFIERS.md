@@ -78,12 +78,30 @@ cd classifier && ./classify.sh
 # Classify only emo files
 cd classifier && ./classify-remaining-emo.sh
 
+# Generate PAD values for all conversations
+node scripts/add-pad-to-data.js
+
+# Recalculate PAD values (if logic changed)
+node scripts/add-pad-to-data.js --force
+
+# LLM-based PAD generation (GPT-4o-mini) - Recommended
+python3 scripts/generate-pad-with-llm-direct.py --file chatbot_arena_01.json
+python3 scripts/generate-pad-with-llm-direct.py --all  # Process all files
+
 # Sync files to app
 ./sync-output-to-public.sh
 
 # Check what needs classification
 cd classifier && python3 classify-emo-files.py
 ```
+
+## PAD Values
+
+PAD (Pleasure-Arousal-Dominance) values are required for Z-axis visualization:
+
+- **Location**: Stored in each message as `pad` object
+- **Generation**: Use `scripts/add-pad-to-data.js` (rule-based) or `scripts/generate-pad-with-llm-direct.py` (LLM-based, recommended)
+- **LLM-based**: Uses OpenAI GPT-4o-mini API for better accuracy (see `docs/LLM_PAD_IMPROVEMENT_STRATEGY.md`)
 
 ---
 

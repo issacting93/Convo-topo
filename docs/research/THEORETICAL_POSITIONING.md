@@ -45,16 +45,16 @@ The system is explicitly **not** a diagnostic tool or optimization interface. In
 
 **Key Design Choices**:
 - Probabilistic role distributions (60% seeker, 40% director) rather than categorical labels
-- Uncertainty visualization (rougher terrain for low confidence)
-- Multiple lenses (depth, affect, uncertainty) showing how assumptions reshape meaning
+- PAD-based Z-axis (Pleasure-Arousal-Dominance) making emotional intensity directly visible
 - Alternative readings surfaced in HUD rather than single "correct" interpretation
+- Confidence scores and evidence quotes displayed prominently to emphasize interpretive status
 
 ### 2.2 Staging Encounters with Invisible Patterns
 
 The terrain metaphor makes visible patterns that typically remain invisible:
-- **Relational drift**: How positioning changes over time
-- **Accumulation**: How interactional patterns persist and sediment
-- **Distribution**: How authority and agency are distributed, not fixed
+- **Relational drift**: How positioning changes over time (X/Y axes show functional↔social and structured↔emergent shifts)
+- **Affective patterns**: How emotional friction (peaks) and affiliation (valleys) correspond to interactional moments (Z-axis via PAD)
+- **Distribution**: How authority and agency are distributed, not fixed (role distributions, positioning)
 
 **Methodological Contribution**: Offers a way of **staging encounters** with relational ecosystems, inviting reflection on what should—and should not—be made legible.
 
@@ -105,14 +105,15 @@ The terrain metaphor is an **aesthetic choice** that shapes what becomes legible
 - Invites **spatial reasoning** about relational dynamics
 - Creates **affective engagement** through navigation and exploration
 
-### 4.2 Aesthetics of Uncertainty
+### 4.2 Aesthetics of Interpretation
 
-The system treats uncertainty **aesthetically**:
-- Low confidence → rougher, higher terrain (not hidden or smoothed)
-- Mixed roles → probabilistic distributions (not forced categories)
+The system treats interpretation **aesthetically**:
+- Probabilistic role distributions → shown as percentages (not forced categories)
+- Confidence scores → displayed prominently (not hidden or smoothed)
 - Alternative readings → surfaced in HUD (not dismissed)
+- PAD emotional intensity → encoded directly as Z-height (peaks = frustration, valleys = affiliation)
 
-This aesthetic approach makes uncertainty **visible and navigable** rather than treating it as noise to be eliminated.
+This aesthetic approach makes the interpretive status of the visualization **visible and navigable** rather than treating it as objective truth. The terrain metaphor itself foregrounds that this is a representation, not a literal model.
 
 ---
 
@@ -152,14 +153,16 @@ The system demonstrates **ethical craftsmanship** through:
 The system demonstrates craftsmanship through:
 
 **Precision**:
-- Stable coordinate frame across lens changes
-- Evidence-based classification with quotes
+- Stable coordinate frame (X/Y relational positioning consistent across all visualizations)
+- Z-axis directly encodes PAD emotional intensity (moment-to-moment, not accumulation)
+- Evidence-based classification with quotes and rationales
 - Probabilistic role distributions (not forced categories)
 
 **Care**:
-- Multiple fallback systems for edge cases
-- Uncertainty as first-class dimension
+- Multiple fallback systems for edge cases (missing PAD data, missing classifications)
+- PAD scores calculated per message with hybrid approach (conversation-level base + message-level adjustments)
 - Alternative readings surfaced, not hidden
+- Confidence scores and evidence quotes displayed prominently
 
 **Attention to Detail**:
 - Role distributions sum to 1.0 (validated)
@@ -171,8 +174,9 @@ The system demonstrates craftsmanship through:
 The craftsmanship serves **inquiry** rather than optimization:
 
 - **Interpretive surface**: Crafted to invite reflection, not provide answers
-- **Multiple lenses**: Crafted to show how assumptions reshape meaning
-- **Uncertainty visualization**: Crafted to make ambiguity navigable
+- **PAD-based encoding**: Crafted to make emotional friction and affiliation visible as terrain features
+- **Probabilistic display**: Crafted to emphasize interpretation rather than certainty
+- **Evidence and confidence**: Crafted to make classification assumptions transparent and contestable
 
 ---
 
@@ -202,8 +206,10 @@ The system treats conversation as **entangled**:
 - **Temporal**: How relational configurations accumulate and transform
 
 **Recursive Relations**:
-- AI systems analyzing AI-mediated interactions (Claude analyzing ChatGPT conversations)
+- AI systems analyzing AI-mediated interactions (Claude API analyzing conversations)
 - The classifier itself becomes part of what the visualization makes visible
+- PAD scores derived from LLM-based analysis of conversation content and structure
+- The recursive nature (AI analyzing AI interactions) becomes a feature to reflect upon, not a bug to hide
 
 ### 7.3 Systemic Patterns
 
@@ -227,9 +233,11 @@ The system reveals **systemic patterns**:
 ### Methodological Contribution
 
 **A way of staging encounters** with relational ecosystems:
-- Makes visible patterns that typically remain invisible
-- Invites reflection on what should be legible
-- Offers interpretive surface for collective discussion
+- Makes visible patterns that typically remain invisible in linear transcripts
+- Uses PAD model (Pleasure-Arousal-Dominance) to encode emotional intensity as terrain height
+- Reveals how affective friction (peaks) and affiliation (valleys) correspond to relational positioning shifts
+- Invites reflection on what should be legible in AI-mediated relationships
+- Offers interpretive surface for collective discussion rather than diagnostic conclusions
 
 ### Substantive Contribution
 
@@ -241,10 +249,11 @@ The system reveals **systemic patterns**:
 ### Theoretical Contribution
 
 **Reframes interactivity** as:
-- Relational positioning rather than input-output
+- Relational positioning (X/Y axes) rather than input-output
+- Affective intensity (Z-axis via PAD) making emotional friction and affiliation visible
 - Entangled systems rather than isolated dyads
 - Observable structure rather than inferred psychology
-- Accumulated practice rather than discrete exchanges
+- Moment-to-moment emotional responses (PAD) rather than accumulated sentiment
 
 ---
 

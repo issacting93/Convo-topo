@@ -312,3 +312,14 @@ AI: "I'm doing well! What about you?"
 - **Contours:** Pre-computed, cached
 - **Post-processing:** Limited to prevent lag
 
+---
+
+## Related Documentation
+
+For detailed analysis of path generation and PAD relationships, see:
+- **[DEEP_DIVE_INDEX.md](DEEP_DIVE_INDEX.md)** - Navigation guide for all deep dive documentation
+- **[PATH_CONVERSATION_PAD_RELATIONSHIP.md](PATH_CONVERSATION_PAD_RELATIONSHIP.md)** - Overview of the three relationships
+- **[PATH_ROLE_RELATIONSHIP.md](PATH_ROLE_RELATIONSHIP.md)** - Detailed role-position mapping
+- **[DEEP_DIVE_PATH_PAD_ANALYSIS.md](DEEP_DIVE_PATH_PAD_ANALYSIS.md)** - Comprehensive technical analysis with code references
+- **[DEEP_DIVE_CODE_VERIFICATION.md](DEEP_DIVE_CODE_VERIFICATION.md)** - Code verification and formula documentation
+

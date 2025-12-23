@@ -1,0 +1,27 @@
+{
+  "version": "1.0",
+  "source": "Chatbot Arena",
+  "conversations": [
+    "chatbot_arena_01.json",
+    "chatbot_arena_02.json",
+    "chatbot_arena_03.json",
+    "chatbot_arena_04.json",
+    "chatbot_arena_05.json",
+    "chatbot_arena_06.json",
+    "chatbot_arena_07.json",
+    "chatbot_arena_08.json",
+    "chatbot_arena_09.json",
+    "chatbot_arena_10.json",
+    "chatbot_arena_11.json",
+    "chatbot_arena_12.json",
+    "chatbot_arena_13.json",
+    "chatbot_arena_14.json",
+    "chatbot_arena_15.json",
+    "chatbot_arena_16.json",
+    "chatbot_arena_17.json",
+    "chatbot_arena_18.json",
+    "chatbot_arena_19.json",
+    "chatbot_arena_20.json"
+  ],
+  "created_at": "2025-12-20 09:47:16"
+}

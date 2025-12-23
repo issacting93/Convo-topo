@@ -1,0 +1,179 @@
+{
+  "id": "chatbot_arena_07",
+  "source": "Chatbot Arena (lmsys/chatbot_arena_conversations)",
+  "messages": [
+    {
+      "role": "user",
+      "content": "I want you to act as a linux terminal. I will type commands and you will reply with what the terminal should show. I want you to only reply with the terminal output inside one unique code block, and nothing else. do not write explanations. do not type commands unless I instruct you to do so. When I need to tell you something in English, I will do so by putting text inside curly brackets {like this}. My first command is pwd"
+    },
+    {
+      "role": "assistant",
+      "content": "##\n\n\n```bash\n/home/user\n\n```"
+    },
+    {
+      "role": "user",
+      "content": "echo \"Hello\" > test.txt"
+    },
+    {
+      "role": "assistant",
+      "content": "##\n\n\n```bash\nHello\n\n```"
+    },
+    {
+      "role": "user",
+      "content": "cat text.txt"
+    },
+    {
+      "role": "assistant",
+      "content": "##\n\n\n```bash\nHello\n\n```"
+    },
+    {
+      "role": "user",
+      "content": "nvidia-smi"
+    },
+    {
+      "role": "assistant",
+      "content": "##\n\n\n```bash\nNVIDIA Corporation       Device   19:00:00:00:00:00 192.168.1.100   0   Tue Jan 21 21:33:56 2020   0x0100 (0x7900000a)\n\n```"
+    },
+    {
+      "role": "user",
+      "content": "python3 -c \"print(1 + 2)\""
+    },
+    {
+      "role": "assistant",
+      "content": "##\n\n\n```bash\n3\n\n```"
+    }
+  ],
+  "classification": {
+    "interaction_pattern": {
+      "value": "technical",
+      "confidence": 0.9,
+      "evidence": "USER: I want you to act as a linux terminal. I will type commands and you will reply with what the terminal should show.",
+      "rationale": "The conversation involves executing Linux commands and receiving terminal-like outputs, indicating a technical interaction."
+    },
+    "power_dynamics": {
+      "value": "human-dominant",
+      "confidence": 0.85,
+      "evidence": "USER: I want you to only reply with the terminal output inside one unique code block, and nothing else.",
+      "rationale": "The user sets strict instructions for the AI, controlling the flow and nature of the interaction."
+    },
+    "emotional_tone": {
+      "value": "neutral",
+      "confidence": 0.95,
+      "evidence": "The conversation consists of command inputs and outputs without any emotional language.",
+      "rationale": "The interaction is purely functional with no emotional expressions."
+    },
+    "engagement_style": {
+      "value": "directing",
+      "confidence": 0.9,
+      "evidence": "USER: My first command is pwd",
+      "rationale": "The user directs the AI to perform specific tasks, indicating a directing style."
+    },
+    "knowledge_exchange": {
+      "value": "factual-info",
+      "confidence": 0.9,
+      "evidence": "ASSISTANT: ```bash\n/home/user\n```",
+      "rationale": "The AI provides factual outputs based on the commands given by the user."
+    },
+    "conversation_purpose": {
+      "value": "task-completion",
+      "confidence": 0.95,
+      "evidence": "USER: echo \"Hello\" > test.txt",
+      "rationale": "The user aims to complete specific tasks by executing commands and receiving outputs."
+    },
+    "turn_taking": {
+      "value": "alternating",
+      "confidence": 0.9,
+      "evidence": "The conversation alternates between user commands and AI responses.",
+      "rationale": "Each turn consists of a user command followed by an AI response, showing a clear pattern of alternation."
+    },
+    "human_role_distribution": {
+      "seeker": 0.1,
+      "learner": 0.0,
+      "director": 0.8,
+      "collaborator": 0.0,
+      "sharer": 0.0,
+      "challenger": 0.1,
+      "confidence": 0.9,
+      "evidence": "USER: I want you to act as a linux terminal.",
+      "rationale": "The user primarily directs the AI, with a small element of challenging the AI to perform accurately."
+    },
+    "ai_role_distribution": {
+      "expert": 0.7,
+      "advisor": 0.0,
+      "facilitator": 0.0,
+      "reflector": 0.0,
+      "peer": 0.3,
+      "affiliative": 0.0,
+      "confidence": 0.9,
+      "evidence": "ASSISTANT: ```bash\n3\n```",
+      "rationale": "The AI acts as an expert by providing accurate command outputs, with some peer-like interaction in following user directives."
+    }
+  },
+  "pad_scores": [
+    {
+      "pleasure": 0.5,
+      "arousal": 0.6,
+      "dominance": 0.5,
+      "intensity": 0.54
+    },
+    {
+      "pleasure": 0.5,
+      "arousal": 0.6,
+      "dominance": 0.5,
+      "intensity": 0.54
+    },
+    {
+      "pleasure": 0.5,
+      "arousal": 0.6,
+      "dominance": 0.5,
+      "intensity": 0.54
+    },
+    {
+      "pleasure": 0.5,
+      "arousal": 0.6,
+      "dominance": 0.5,
+      "intensity": 0.54
+    },
+    {
+      "pleasure": 0.5,
+      "arousal": 0.6,
+      "dominance": 0.5,
+      "intensity": 0.54
+    },
+    {
+      "pleasure": 0.5,
+      "arousal": 0.6,
+      "dominance": 0.5,
+      "intensity": 0.54
+    },
+    {
+      "pleasure": 0.5,
+      "arousal": 0.6,
+      "dominance": 0.5,
+      "intensity": 0.54
+    },
+    {
+      "pleasure": 0.5,
+      "arousal": 0.6,
+      "dominance": 0.5,
+      "intensity": 0.54
+    },
+    {
+      "pleasure": 0.5,
+      "arousal": 0.6,
+      "dominance": 0.5,
+      "intensity": 0.54
+    },
+    {
+      "pleasure": 0.5,
+      "arousal": 0.6,
+      "dominance": 0.5,
+      "intensity": 0.54
+    }
+  ],
+  "metadata": {
+    "num_turns": 10,
+    "classified_at": "2025-12-20 09:45:30",
+    "classifier": "OpenAI GPT-4o"
+  }
+}
