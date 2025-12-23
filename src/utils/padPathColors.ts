@@ -19,30 +19,30 @@ export function calculatePadChange(
 
 /**
  * Get color for a PAD change value (optimized for white background visibility)
- * - Negative (decline): Dark grey to Dark Orange gradient
- * - Zero (neutral): Dark grey
- * - Positive (incline): Dark grey to Dark Green gradient
+ * - Negative (decline): Very dark grey to Very dark orange gradient
+ * - Zero (neutral): Very dark grey
+ * - Positive (incline): Very dark grey to Very dark green gradient
  */
 export function getPadChangeColor(change: number): THREE.Color {
   if (change < 0) {
-    // Decline: Dark grey (#555555) to Dark Orange (#cc4400) - strong contrast on white
+    // Decline: Very dark grey (#333333) to Very dark orange (#993300) - maximum contrast on white
     const t = Math.abs(change);
     return new THREE.Color().lerpColors(
-      new THREE.Color(0x555555), // Dark grey (visible on white)
-      new THREE.Color(0xcc4400), // Dark Orange (strong, visible)
+      new THREE.Color(0x333333), // Very dark grey
+      new THREE.Color(0x993300), // Very dark orange/red-brown
       t
     );
   } else if (change > 0) {
-    // Incline: Dark grey (#555555) to Dark Green (#00aa00) - strong contrast on white
+    // Incline: Very dark grey (#333333) to Very dark green (#006600) - maximum contrast on white
     const t = change;
     return new THREE.Color().lerpColors(
-      new THREE.Color(0x555555), // Dark grey (visible on white)
-      new THREE.Color(0x00aa00), // Dark Green (visible, not too bright)
+      new THREE.Color(0x333333), // Very dark grey
+      new THREE.Color(0x006600), // Very dark green
       t
     );
   } else {
-    // Neutral: Dark grey
-    return new THREE.Color(0x555555);
+    // Neutral: Very dark grey
+    return new THREE.Color(0x333333);
   }
 }
 
@@ -51,22 +51,22 @@ export function getPadChangeColor(change: number): THREE.Color {
  */
 export function getPadChangeColorHex(change: number): string {
   if (change < 0) {
-    // Decline: Dark grey (#555555) to Dark Orange (#cc4400) gradient
+    // Decline: Very dark grey (#333333) to Very dark orange (#993300) gradient
     const t = Math.abs(change);
-    const r = Math.round(85 + (204 - 85) * t);  // 0x55 to 0xcc
-    const g = Math.round(85 - (85 - 68) * t);   // 0x55 to 0x44
-    const b = Math.round(85 - (85 - 0) * t);    // 0x55 to 0x00
+    const r = Math.round(51 + (153 - 51) * t);  // 0x33 to 0x99
+    const g = Math.round(51 - (51 - 51) * t);   // 0x33 to 0x33
+    const b = Math.round(51 - (51 - 0) * t);    // 0x33 to 0x00
     return `#${r.toString(16).padStart(2, '0')}${g.toString(16).padStart(2, '0')}${b.toString(16).padStart(2, '0')}`;
   } else if (change > 0) {
-    // Incline: Dark grey (#555555) to Dark Green (#00aa00) gradient
+    // Incline: Very dark grey (#333333) to Very dark green (#006600) gradient
     const t = change;
-    const r = Math.round(85 - (85 - 0) * t);    // 0x55 to 0x00
-    const g = Math.round(85 + (170 - 85) * t);  // 0x55 to 0xaa
-    const b = Math.round(85 - (85 - 0) * t);    // 0x55 to 0x00
+    const r = Math.round(51 - (51 - 0) * t);    // 0x33 to 0x00
+    const g = Math.round(51 + (102 - 51) * t);  // 0x33 to 0x66
+    const b = Math.round(51 - (51 - 0) * t);    // 0x33 to 0x00
     return `#${r.toString(16).padStart(2, '0')}${g.toString(16).padStart(2, '0')}${b.toString(16).padStart(2, '0')}`;
   } else {
-    // Neutral: Dark grey
-    return '#555555';
+    // Neutral: Very dark grey
+    return '#333333';
   }
 }
 

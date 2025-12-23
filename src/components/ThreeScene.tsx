@@ -689,7 +689,7 @@ export function ThreeScene({
 
       const pathMat = new LineMaterial({
         vertexColors: true,
-        linewidth: 8, // Thicker line for better visibility
+        linewidth: 3, // Thinner line with darker colors
         resolution: new THREE.Vector2(window.innerWidth, window.innerHeight),
         dashed: false,
         alphaToCoverage: true, // Better antialiasing
