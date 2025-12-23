@@ -2,8 +2,19 @@ import { useState, useEffect, useMemo } from 'react';
 import { Grid } from 'react-window';
 import type { TerrainParams } from '../utils/terrain';
 import { generate2DPathPoints } from '../utils/terrain';
-import { getCommunicationFunction, getConversationStructure, type ClassifiedConversation } from '../utils/conversationToTerrain';
-import { getClassificationStats, formatConfidence, getConfidenceColor } from '../utils/formatClassificationData';
+import { getCommunicationFunction, getConversationStructure, type ClassifiedConversation, getDominantHumanRole, getDominantAiRole } from '../utils/conversationToTerrain';
+import { getPadChangeColorHex } from '../utils/padPathColors';
+import { getClassificationStats, formatConfidence, getConfidenceColor, getClassificationDimensions, formatCategoryName } from '../utils/formatClassificationData';
+import {
+  extractEpistemicFlags,
+  getEpistemicStatusColor,
+  getEpistemicStatusLabel
+} from '../utils/epistemicMetadata';
+import {
+  extractFailureFlags,
+  getFailureStatusColor,
+  getFailureStatusLabel
+} from '../utils/failureModeMetadata';
 
 // Theme color helpers
 const getThemeColor = (varName: string, fallback: string) => {
@@ -12,16 +23,40 @@ const getThemeColor = (varName: string, fallback: string) => {
   return value || fallback;
 };
 
+// Helper to create rgba from hex with opacity
+const rgba = (hex: string, opacity: number) => {
+  // Handle rgba strings by extracting the color part
+  if (hex.startsWith('rgba')) {
+    const match = hex.match(/rgba?\((\d+),\s*(\d+),\s*(\d+)/);
+    if (match) {
+      return `rgba(${match[1]}, ${match[2]}, ${match[3]}, ${opacity})`;
+    }
+  }
+  // Handle hex colors
+  const r = parseInt(hex.slice(1, 3), 16);
+  const g = parseInt(hex.slice(3, 5), 16);
+  const b = parseInt(hex.slice(5, 7), 16);
+  return `rgba(${r}, ${g}, ${b}, ${opacity})`;
+};
+
 // Theme colors (dark mode)
+const borderHex = getThemeColor('--border', '#444444');
+const cardHex = getThemeColor('--card', '#1a1a1a');
+const accentHex = getThemeColor('--chart-1', '#7b68ee');
+
 const THEME = {
-  foreground: getThemeColor('--foreground', '#f5f5f5'),
+  foreground: getThemeColor('--foreground', '##151515'),
   foregroundMuted: getThemeColor('--muted-foreground', '#b5b5b5'),
-  accent: getThemeColor('--chart-1', '#7b68ee'),
+  accent: accentHex,
   accent2: getThemeColor('--chart-2', '#4ade80'),
   accent3: getThemeColor('--chart-3', '#fbbf24'),
   accent5: getThemeColor('--chart-5', '#f97316'),
-  border: getThemeColor('--border', '#444444'),
-  card: getThemeColor('--card', '#1a1a1a'),
+  border: borderHex,
+  card: cardHex,
+  // RGBA variants
+  borderRgba: (opacity: number) => rgba(borderHex, opacity),
+  cardRgba: (opacity: number) => rgba(cardHex, opacity),
+  accentRgba: (opacity: number) => rgba(accentHex, opacity),
 };
 
 interface TerrainPreview {
@@ -84,6 +119,63 @@ function TerrainPreviewCard({ terrain, conversation, onSelect }: TerrainPreviewC
     getClassificationStats(conversation ?? null),
     [conversation]
   );
+
+  // Extract epistemic flags for badge display
+  const epistemicFlags = useMemo(() => 
+    conversation ? extractEpistemicFlags(conversation) : null,
+    [conversation]
+  );
+
+  // Extract failure mode flags for badge display
+  const failureFlags = useMemo(() => 
+    conversation ? extractFailureFlags(conversation) : null,
+    [conversation]
+  );
+
+  // Get dominant roles
+  const dominantHumanRole = useMemo(() => 
+    conversation ? getDominantHumanRole(conversation) : null,
+    [conversation]
+  );
+  const dominantAiRole = useMemo(() => 
+    conversation ? getDominantAiRole(conversation) : null,
+    [conversation]
+  );
+
+  // Get classification dimensions for card display
+  const classificationDimensions = useMemo(() => 
+    getClassificationDimensions(conversation ?? null).slice(0, 3), // Top 3 dimensions
+    [conversation]
+  );
+
+  // Calculate average PAD values
+  const padSummary = useMemo(() => {
+    if (!conversation?.messages || conversation.messages.length === 0) return null;
+    
+    const messagesWithPad = conversation.messages.filter(msg => msg.pad);
+    if (messagesWithPad.length === 0) return null;
+
+    const totals = messagesWithPad.reduce((acc, msg) => {
+      if (!msg.pad) return acc;
+      return {
+        pleasure: acc.pleasure + msg.pad.pleasure,
+        arousal: acc.arousal + msg.pad.arousal,
+        emotionalIntensity: acc.emotionalIntensity + msg.pad.emotionalIntensity,
+        count: acc.count + 1
+      };
+    }, { pleasure: 0, arousal: 0, emotionalIntensity: 0, count: 0 });
+
+    if (totals.count === 0) return null;
+
+    return {
+      avgPleasure: totals.pleasure / totals.count,
+      avgArousal: totals.arousal / totals.count,
+      avgIntensity: totals.emotionalIntensity / totals.count
+    };
+  }, [conversation]);
+
+  // Get message count
+  const messageCount = conversation?.messages?.length ?? 0;
   
   return (
     <div
@@ -92,8 +184,8 @@ function TerrainPreviewCard({ terrain, conversation, onSelect }: TerrainPreviewC
         height: '100%',
         display: 'flex',
         flexDirection: 'column',
-        background: '#1a1a1a',
-        border: isHovered ? '1px solid rgba(255, 255, 255, 0.2)' : '1px solid rgba(255, 255, 255, 0.1)',
+        background: '#ffffff',
+        border: isHovered ? '1px solid rgba(0, 0, 0, 0.2)' : '1px solid rgba(0, 0, 0, 0.1)',
         backdropFilter: 'blur(4px)',
         cursor: 'pointer',
         transition: reduceMotion ? undefined : 'all 0.3s ease',
@@ -117,7 +209,7 @@ function TerrainPreviewCard({ terrain, conversation, onSelect }: TerrainPreviewC
       {/* Header */}
       <div style={{
         padding: '8px 12px',
-        borderBottom: '1px solid rgba(255, 255, 255, 0.1)',
+        borderBottom: '1px solid rgba(0, 0, 0, 0.1)',
         display: 'flex',
         justifyContent: 'space-between',
         alignItems: 'center',
@@ -126,8 +218,8 @@ function TerrainPreviewCard({ terrain, conversation, onSelect }: TerrainPreviewC
         <div style={{ display: 'flex', alignItems: 'center', gap: 6, flex: 1, minWidth: 0 }}>
           <span style={{
             letterSpacing: '1px',
-            fontSize: '10px',
-            color: '#ffffff',
+            fontSize: '12px',
+            color: '#1a1a1a',
             overflow: 'hidden',
             textOverflow: 'ellipsis',
             whiteSpace: 'nowrap'
@@ -135,6 +227,42 @@ function TerrainPreviewCard({ terrain, conversation, onSelect }: TerrainPreviewC
             ◉ {terrain.name}
           </span>
           <div style={{ display: 'flex', alignItems: 'center', gap: 4 }}>
+            {/* Failure Mode Badge - Show if breakdown detected (higher priority) */}
+            {failureFlags && failureFlags.hasBreakdown && (
+              <span style={{
+                fontSize: '12px',
+                padding: '2px 6px',
+                borderRadius: 3,
+                backgroundColor: getFailureStatusColor(failureFlags) + '40',
+                border: `1px solid ${getFailureStatusColor(failureFlags)}`,
+                color: getFailureStatusColor(failureFlags),
+                letterSpacing: 0.5,
+                fontWeight: 'bold',
+                fontFamily: 'monospace',
+                whiteSpace: 'nowrap',
+                marginRight: 4
+              }} title={getFailureStatusLabel(failureFlags) || 'Breakdown detected'}>
+                🔴 {getFailureStatusLabel(failureFlags)?.substring(0, 15) || 'BREAKDOWN'}
+              </span>
+            )}
+            {/* Epistemic Status Badge - Show if flags detected (but not if breakdown) */}
+            {epistemicFlags && (epistemicFlags.hasHallucination || epistemicFlags.hasError || epistemicFlags.isContestedKnowledge) && !failureFlags?.hasBreakdown && (
+              <span style={{
+                fontSize: '12px',
+                padding: '2px 6px',
+                borderRadius: 3,
+                backgroundColor: getEpistemicStatusColor(epistemicFlags) + '40',
+                border: `1px solid ${getEpistemicStatusColor(epistemicFlags)}`,
+                color: getEpistemicStatusColor(epistemicFlags),
+                letterSpacing: 0.5,
+                fontWeight: 'bold',
+                fontFamily: 'monospace',
+                whiteSpace: 'nowrap',
+                marginRight: 4
+              }} title={epistemicFlags.hasSuccessfulRepair ? 'Trust repaired' : undefined}>
+                ⚠ {getEpistemicStatusLabel(epistemicFlags)?.substring(0, 12)}
+              </span>
+            )}
             {/* Confidence Badge */}
             {classificationStats.totalDimensions > 0 && classificationStats.averageConfidence > 0 && (
               <span style={{
@@ -155,7 +283,7 @@ function TerrainPreviewCard({ terrain, conversation, onSelect }: TerrainPreviewC
           </div>
         </div>
         <span style={{
-          fontSize: '8px',
+          fontSize: '12px',
           opacity: 0.5,
           color: '#ffffff',
           flexShrink: 0
@@ -171,8 +299,8 @@ function TerrainPreviewCard({ terrain, conversation, onSelect }: TerrainPreviewC
         flexShrink: 0,
         position: 'relative',
         overflow: 'hidden',
-        background: '#0a0a0a',
-        border: '1px solid rgba(255, 255, 255, 0.1)'
+        background: '#f8f8f8',
+        border: '1px solid rgba(0, 0, 0, 0.1)'
       }}>
         {terrain.xyz ? (
           <svg
@@ -183,31 +311,59 @@ function TerrainPreviewCard({ terrain, conversation, onSelect }: TerrainPreviewC
             preserveAspectRatio="xMidYMid meet"
           >
             {/* Grid lines */}
-            <line x1="0" y1="0" x2="256" y2="0" stroke="rgba(255, 255, 255, 0.2)" strokeWidth="0.5" />
-            <line x1="0" y1="128" x2="256" y2="128" stroke="rgba(255, 255, 255, 0.3)" strokeWidth="0.5" strokeDasharray="2,2" />
-            <line x1="0" y1="256" x2="256" y2="256" stroke="rgba(255, 255, 255, 0.2)" strokeWidth="0.5" />
-            <line x1="0" y1="0" x2="0" y2="256" stroke="rgba(255, 255, 255, 0.2)" strokeWidth="0.5" />
-            <line x1="128" y1="0" x2="128" y2="256" stroke="rgba(255, 255, 255, 0.3)" strokeWidth="0.5" strokeDasharray="2,2" />
-            <line x1="256" y1="0" x2="256" y2="256" stroke="rgba(255, 255, 255, 0.2)" strokeWidth="0.5" />
+            <line x1="0" y1="0" x2="256" y2="0" stroke="rgba(0, 0, 0, 0.2)" strokeWidth="0.5" />
+            <line x1="0" y1="128" x2="256" y2="128" stroke="rgba(0, 0, 0, 0.3)" strokeWidth="0.5" strokeDasharray="2,2" />
+            <line x1="0" y1="256" x2="256" y2="256" stroke="rgba(0, 0, 0, 0.2)" strokeWidth="0.5" />
+            <line x1="0" y1="0" x2="0" y2="256" stroke="rgba(0, 0, 0, 0.2)" strokeWidth="0.5" />
+            <line x1="128" y1="0" x2="128" y2="256" stroke="rgba(0, 0, 0, 0.3)" strokeWidth="0.5" strokeDasharray="2,2" />
+            <line x1="256" y1="0" x2="256" y2="256" stroke="rgba(0, 0, 0, 0.2)" strokeWidth="0.5" />
             
             {/* Center crosshair */}
-            <circle cx="128" cy="128" r="2" fill="none" stroke="rgba(255, 255, 255, 0.4)" strokeWidth="0.5" />
-            <line x1="126" y1="128" x2="130" y2="128" stroke="rgba(255, 255, 255, 0.4)" strokeWidth="0.5" />
-            <line x1="128" y1="126" x2="128" y2="130" stroke="rgba(255, 255, 255, 0.4)" strokeWidth="0.5" />
+            <circle cx="128" cy="128" r="2" fill="none" stroke="rgba(0, 0, 0, 0.4)" strokeWidth="0.5" />
+            <line x1="126" y1="128" x2="130" y2="128" stroke="rgba(0, 0, 0, 0.4)" strokeWidth="0.5" />
+            <line x1="128" y1="126" x2="128" y2="130" stroke="rgba(0, 0, 0, 0.4)" strokeWidth="0.5" />
             
-            {/* Path line */}
+            {/* Path line with gradient colors based on PAD incline/decline */}
             {minimapPoints.length > 1 && (
-              <polyline
-                points={minimapPoints.map((p: { x: number; y: number }) => {
-                  const x = 20 + p.x * (256 - 40); // Map 0-1 to 20-236 (Functional left, Social right)
-                  const y = 20 + p.y * (256 - 40); // Map 0-1 to 20-236 (Structured top=20, Emergent bottom=236)
-                  return `${x},${y}`;
-                }).join(' ')}
-                fill="none"
-                stroke="#FDD90D"
-                strokeWidth="2"
-                opacity="0.8"
-              />
+              <>
+                {minimapPoints.map((p: { x: number; y: number; role: 'user' | 'assistant' }, idx: number) => {
+                  if (idx === 0) return null; // Skip first point (no previous point to compare)
+                  
+                  const prevPoint = minimapPoints[idx - 1];
+                  const x1 = 20 + prevPoint.x * (256 - 40);
+                  const y1 = 20 + prevPoint.y * (256 - 40);
+                  const x2 = 20 + p.x * (256 - 40);
+                  const y2 = 20 + p.y * (256 - 40);
+                  
+                  // Get PAD data from conversation messages (match by index)
+                  let padChange = 0;
+                  if (conversation && conversation.messages && conversation.messages.length > idx) {
+                    const prevMsg = conversation.messages[idx - 1];
+                    const currMsg = conversation.messages[idx];
+                    
+                    // Calculate PAD change if both messages have PAD data
+                    if (prevMsg?.pad?.emotionalIntensity !== undefined && currMsg?.pad?.emotionalIntensity !== undefined) {
+                      padChange = (currMsg.pad.emotionalIntensity - prevMsg.pad.emotionalIntensity) * 2;
+                      padChange = Math.max(-1, Math.min(1, padChange));
+                    }
+                  }
+                  
+                  const color = getPadChangeColorHex(padChange);
+                  
+                  return (
+                    <line
+                      key={idx}
+                      x1={x1}
+                      y1={y1}
+                      x2={x2}
+                      y2={y2}
+                      stroke={color}
+                      strokeWidth="2"
+                      opacity="0.9"
+                    />
+                  );
+                })}
+              </>
             )}
             
             {/* Path points */}
@@ -232,16 +388,16 @@ function TerrainPreviewCard({ terrain, conversation, onSelect }: TerrainPreviewC
             })}
             
             {/* Axis labels */}
-            <text x="5" y="15" fontSize="6" fill="rgba(255, 255, 255, 0.5)" fontFamily="monospace">
+            <text x="5" y="15" fontSize="6" fill="rgba(0, 0, 0, 0.5)" fontFamily="monospace">
               FUNC
             </text>
-            <text x="230" y="15" fontSize="6" fill="rgba(255, 255, 255, 0.5)" fontFamily="monospace">
+            <text x="230" y="15" fontSize="6" fill="rgba(0, 0, 0, 0.5)" fontFamily="monospace">
               SOC
             </text>
-            <text x="5" y="138" fontSize="6" fill="rgba(255, 255, 255, 0.5)" fontFamily="monospace">
+            <text x="5" y="138" fontSize="6" fill="rgba(0, 0, 0, 0.5)" fontFamily="monospace">
               STR
             </text>
-            <text x="5" y="251" fontSize="6" fill="rgba(255, 255, 255, 0.5)" fontFamily="monospace">
+            <text x="5" y="251" fontSize="6" fill="rgba(0, 0, 0, 0.5)" fontFamily="monospace">
               EMG
             </text>
           </svg>
@@ -252,7 +408,7 @@ function TerrainPreviewCard({ terrain, conversation, onSelect }: TerrainPreviewC
             justifyContent: 'center',
             height: '100%',
             color: 'rgba(255, 255, 255, 0.3)',
-            fontSize: '8px'
+            fontSize: '12px'
           }}>
             No minimap data
           </div>
@@ -263,26 +419,130 @@ function TerrainPreviewCard({ terrain, conversation, onSelect }: TerrainPreviewC
       {/* Description */}
       <div style={{
         padding: '8px 12px',
-            color: '#ffffff',
-        fontSize: '9px',
+            color: '#1a1a1a',
+        fontSize: '12px',
         lineHeight: 1.4,
         opacity: 0.6,
         flexShrink: 0
       }}>
         {terrain.description}
       </div>
+
+      {/* Additional Info Section */}
+      <div style={{
+        padding: '8px 12px',
+        borderTop: '1px solid rgba(0, 0, 0, 0.1)',
+        display: 'flex',
+        flexDirection: 'column',
+        gap: 6,
+        flexShrink: 0
+      }}>
+        {/* Message Count */}
+        <div style={{
+          display: 'flex',
+          justifyContent: 'space-between',
+          alignItems: 'center',
+          fontSize: '12px',
+          opacity: 0.7
+        }}>
+          <span style={{ color: '#1a1a1a' }}>Messages:</span>
+          <span style={{ color: '#1a1a1a', fontWeight: 'bold', fontFamily: 'monospace' }}>{messageCount}</span>
+        </div>
+
+        {/* Dominant Roles */}
+        {(dominantHumanRole || dominantAiRole) && (
+          <div style={{
+            display: 'flex',
+            justifyContent: 'space-between',
+            alignItems: 'center',
+            fontSize: '12px',
+            opacity: 0.7,
+            gap: 8
+          }}>
+            {dominantHumanRole && (
+              <span style={{ color: '#1a1a1a', flex: 1 }}>
+                <span style={{ opacity: 0.6 }}>Human: </span>
+                <span style={{ fontWeight: 'bold' }}>{formatCategoryName(dominantHumanRole.role)}</span>
+                <span style={{ opacity: 0.5, marginLeft: 4 }}>({Math.round(dominantHumanRole.value * 100)}%)</span>
+              </span>
+            )}
+            {dominantAiRole && (
+              <span style={{ color: '#1a1a1a', flex: 1, textAlign: 'right' }}>
+                <span style={{ opacity: 0.6 }}>AI: </span>
+                <span style={{ fontWeight: 'bold' }}>{formatCategoryName(dominantAiRole.role)}</span>
+                <span style={{ opacity: 0.5, marginLeft: 4 }}>({Math.round(dominantAiRole.value * 100)}%)</span>
+              </span>
+            )}
+          </div>
+        )}
+
+        {/* PAD Summary */}
+        {padSummary && (
+          <div style={{
+            display: 'flex',
+            flexDirection: 'column',
+            gap: 3,
+            fontSize: '12px',
+            opacity: 0.7,
+            padding: '4px 6px',
+            background: 'rgba(0, 0, 0, 0.05)',
+            borderRadius: 3
+          }}>
+            <div style={{ color: '#1a1a1a', fontWeight: 'bold', marginBottom: 2 }}>PAD Avg:</div>
+            <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+              <span style={{ color: '#1a1a1a' }}>
+                <span style={{ opacity: 0.6 }}>P:</span>
+                <span style={{ fontFamily: 'monospace', marginLeft: 4 }}>{Math.round(padSummary.avgPleasure * 100)}%</span>
+              </span>
+              <span style={{ color: '#1a1a1a' }}>
+                <span style={{ opacity: 0.6 }}>A:</span>
+                <span style={{ fontFamily: 'monospace', marginLeft: 4 }}>{Math.round(padSummary.avgArousal * 100)}%</span>
+              </span>
+              <span style={{ color: '#1a1a1a' }}>
+                <span style={{ opacity: 0.6 }}>I:</span>
+                <span style={{ fontFamily: 'monospace', marginLeft: 4 }}>{Math.round(padSummary.avgIntensity * 100)}%</span>
+              </span>
+            </div>
+          </div>
+        )}
+
+        {/* Top Classification Dimensions */}
+        {classificationDimensions.length > 0 && (
+          <div style={{
+            display: 'flex',
+            flexDirection: 'column',
+            gap: 2,
+            fontSize: '12px',
+            opacity: 0.6
+          }}>
+            {classificationDimensions.map((dim, idx) => (
+              <div key={idx} style={{
+                display: 'flex',
+                justifyContent: 'space-between',
+                alignItems: 'center',
+                color: '#1a1a1a'
+              }}>
+                <span style={{ opacity: 0.7 }}>{dim.label.split(' ')[0]}:</span>
+                <span style={{ fontWeight: 'bold', fontFamily: 'monospace' }}>
+                  {dim.formattedCategory.split(' ')[0]}
+                </span>
+              </div>
+            ))}
+          </div>
+        )}
+      </div>
       
       {/* XYZ Coordinates Snapshot */}
       {terrain.xyz && (
         <div style={{
           padding: '6px 12px',
-          borderTop: '1px solid rgba(255, 255, 255, 0.1)',
+          borderTop: '1px solid rgba(0, 0, 0, 0.1)',
           display: 'flex',
           justifyContent: 'space-between',
           alignItems: 'center',
           gap: 8,
-          fontSize: '8px',
-          color: '#ffffff',
+          fontSize: '12px',
+          color: '#1a1a1a',
           opacity: 0.7,
           fontFamily: 'monospace',
           flexShrink: 0
@@ -290,14 +550,14 @@ function TerrainPreviewCard({ terrain, conversation, onSelect }: TerrainPreviewC
           <span style={{ display: 'flex', alignItems: 'center', gap: 4 }}>
             <span style={{ opacity: 0.5 }}>X:</span>
             <span style={{ fontWeight: 'bold' }}>{terrain.xyz.x.toFixed(2)}</span>
-            <span style={{ fontSize: '7px', opacity: 0.5, marginLeft: 2 }}>
+            <span style={{ fontSize: '12px', opacity: 0.5, marginLeft: 2 }}>
               {terrain.xyz.x < 0.4 ? 'FUNC' : terrain.xyz.x > 0.6 ? 'SOC' : 'MID'}
             </span>
           </span>
           <span style={{ display: 'flex', alignItems: 'center', gap: 4 }}>
             <span style={{ opacity: 0.5 }}>Y:</span>
             <span style={{ fontWeight: 'bold' }}>{terrain.xyz.y.toFixed(2)}</span>
-            <span style={{ fontSize: '7px', opacity: 0.5, marginLeft: 2 }}>
+            <span style={{ fontSize: '12px', opacity: 0.5, marginLeft: 2 }}>
               {terrain.xyz.y < 0.4 ? 'STR' : terrain.xyz.y > 0.6 ? 'EMG' : 'MID'}
             </span>
           </span>
@@ -319,14 +579,15 @@ interface TerrainGridViewProps {
 
 export function TerrainGridView({ terrains, conversations, onSelectTerrain }: TerrainGridViewProps) {
   // Calculate grid dimensions
-  // Card height breakdown:
-  // - Header: ~40px
+  // Card height breakdown (with 12px font sizes):
+  // - Header: ~50px (larger font = more padding needed)
   // - Square minimap: 280px (matches card width)
-  // - Description: ~40px
-  // - XYZ coordinates (if present): ~30px
-  // Total: ~390px minimum
+  // - Description: ~60px (multi-line with 12px font)
+  // - Additional Info (message count, roles, PAD, dimensions): ~150px (all with 12px font)
+  // - XYZ coordinates (if present): ~35px (with 12px font)
+  // Total: ~575px (using 600px to be safe)
   const CARD_WIDTH = 280;
-  const CARD_HEIGHT = 420; // Increased to account for square minimap (280px) + all content
+  const CARD_HEIGHT = 600; // Fixed height for react-window (increased from 510px for larger fonts)
   const GAP = 24;
   const COLUMN_WIDTH = CARD_WIDTH + GAP;
   const ROW_HEIGHT = CARD_HEIGHT + GAP;
@@ -338,14 +599,14 @@ export function TerrainGridView({ terrains, conversations, onSelectTerrain }: Te
   });
 
   const [currentPage, setCurrentPage] = useState(0);
+  const [selectedHumanRole, setSelectedHumanRole] = useState<string>('all');
+  const [selectedAiRole, setSelectedAiRole] = useState<string>('all');
+  const [selectedMessageCount, setSelectedMessageCount] = useState<string>('all');
+  const [selectedEpistemic, setSelectedEpistemic] = useState<string>('all');
+  const [selectedFailure, setSelectedFailure] = useState<string>('all');
 
-  // Theme state (always dark mode)
-  const [isDarkMode] = useState(() => {
-    if (typeof window === 'undefined') return true;
-    const saved = localStorage.getItem('theme');
-    if (saved) return saved === 'dark';
-    return true; // Default to dark mode
-  });
+  // Theme state (always light mode for terrain grid)
+  const [isDarkMode] = useState(false);
 
   // Apply theme on mount
   useEffect(() => {
@@ -366,22 +627,81 @@ export function TerrainGridView({ terrains, conversations, onSelectTerrain }: Te
   }, []);
 
   // Calculate number of columns based on window width
-  const HEADER_HEIGHT = 70;
+  const HEADER_HEIGHT = 110; // Increased to accommodate filters
   const columnCount = Math.max(1, Math.floor((windowSize.width - 48) / COLUMN_WIDTH));
   
   // Calculate actual content width and center it
   const contentWidth = columnCount * COLUMN_WIDTH;
   const horizontalPadding = Math.max(24, (windowSize.width - contentWidth) / 2);
   
+  // Filter terrains by role, message count, and flags
+  const filteredData = useMemo(() => {
+    return terrains.map((terrain, idx) => ({ terrain, conversation: conversations[idx] }))
+      .filter(({ conversation }) => {
+        if (!conversation) return false;
+        
+        // Filter by human role
+        if (selectedHumanRole !== 'all') {
+          const dominantHumanRole = getDominantHumanRole(conversation);
+          if (!dominantHumanRole || dominantHumanRole.role !== selectedHumanRole) {
+            return false;
+          }
+        }
+        
+        // Filter by AI role
+        if (selectedAiRole !== 'all') {
+          const dominantAiRole = getDominantAiRole(conversation);
+          if (!dominantAiRole || dominantAiRole.role !== selectedAiRole) {
+            return false;
+          }
+        }
+        
+        // Filter by message count
+        if (selectedMessageCount !== 'all') {
+          const messageCount = conversation.messages?.length ?? 0;
+          if (selectedMessageCount === 'short' && messageCount >= 10) return false;
+          if (selectedMessageCount === 'medium' && (messageCount < 10 || messageCount > 20)) return false;
+          if (selectedMessageCount === 'long' && messageCount <= 20) return false;
+        }
+        
+        // Filter by epistemic flags
+        if (selectedEpistemic !== 'all') {
+          const epistemicFlags = extractEpistemicFlags(conversation);
+          if (selectedEpistemic === 'has-hallucination' && !epistemicFlags.hasHallucination) return false;
+          if (selectedEpistemic === 'has-error' && !epistemicFlags.hasError) return false;
+          if (selectedEpistemic === 'has-repair' && !epistemicFlags.hasSuccessfulRepair) return false;
+          if (selectedEpistemic === 'none' && (epistemicFlags.hasHallucination || epistemicFlags.hasError)) return false;
+        }
+        
+        // Filter by failure flags
+        if (selectedFailure !== 'all') {
+          const failureFlags = extractFailureFlags(conversation);
+          if (selectedFailure === 'has-breakdown' && !failureFlags.hasBreakdown) return false;
+          if (selectedFailure === 'has-repair' && !failureFlags.hasSuccessfulRepair) return false;
+          if (selectedFailure === 'none' && failureFlags.hasBreakdown) return false;
+        }
+        
+        return true;
+      });
+  }, [terrains, conversations, selectedHumanRole, selectedAiRole, selectedMessageCount, selectedEpistemic, selectedFailure]);
+
+  const filteredTerrains = filteredData.map(({ terrain }) => terrain);
+  const filteredConversations = filteredData.map(({ conversation }) => conversation);
+
+  // Reset to page 0 when filters change
+  useEffect(() => {
+    setCurrentPage(0);
+  }, [selectedHumanRole, selectedAiRole, selectedMessageCount, selectedEpistemic, selectedFailure]);
+
   // Use fixed items per page (30)
   const itemsPerPage = ITEMS_PER_PAGE;
 
-  // Paginate terrains
-  const totalPages = Math.ceil(terrains.length / itemsPerPage);
+  // Paginate filtered terrains
+  const totalPages = Math.ceil(filteredTerrains.length / itemsPerPage);
   const startIndex = currentPage * itemsPerPage;
-  const endIndex = Math.min(startIndex + itemsPerPage, terrains.length);
-  const paginatedTerrains = terrains.slice(startIndex, endIndex);
-  const paginatedConversations = conversations.slice(startIndex, endIndex);
+  const endIndex = Math.min(startIndex + itemsPerPage, filteredTerrains.length);
+  const paginatedTerrains = filteredTerrains.slice(startIndex, endIndex);
+  const paginatedConversations = filteredConversations.slice(startIndex, endIndex);
   
   // Adjust row count for paginated data
   const rowCount = Math.ceil(paginatedTerrains.length / columnCount);
@@ -440,7 +760,7 @@ export function TerrainGridView({ terrains, conversations, onSelectTerrain }: Te
     <div style={{
       width: '100vw',
       height: '100vh',
-      background: 'var(--background, #030213)',
+      background: '#ffffff',
       position: 'relative',
       overflow: 'hidden',
       fontFamily: '"JetBrains Mono", "Fira Code", "Consolas", monospace'
@@ -463,8 +783,8 @@ export function TerrainGridView({ terrains, conversations, onSelectTerrain }: Te
         left: 0,
         right: 0,
         padding: '16px 16px',
-        borderBottom: '1px solid rgba(255, 255, 255, 0.1)',
-        background: 'rgba(26, 26, 26, 0.9)',
+        borderBottom: '1px solid rgba(0, 0, 0, 0.1)',
+        background: 'rgba(255, 255, 255, 0.95)',
         backdropFilter: 'blur(8px)',
         zIndex: 10,
         height: HEADER_HEIGHT
@@ -479,19 +799,217 @@ export function TerrainGridView({ terrains, conversations, onSelectTerrain }: Te
               fontSize: '18px',
               letterSpacing: '3px',
               marginBottom: 8,
-              color: '#ffffff'
+              color: '#1a1a1a'
             }}>
               CONVERSATIONAL TOPOGRAPHY
             </div>
             <div style={{
               fontSize: '10px',
               letterSpacing: '1px',
-              color: '#ffffff',
-              opacity: 0.6
+              color: '#666666',
+              marginBottom: 8
             }}>
-              {terrains.length > 0
-                ? `SELECT A CLASSIFIED CONVERSATION (${terrains.length} total${totalPages > 1 ? `, page ${currentPage + 1}/${totalPages}` : ''}) • Virtualized Grid`
-                : 'LOADING CLASSIFIED CONVERSATIONS...'}
+              {filteredTerrains.length > 0
+                ? `SELECT A CLASSIFIED CONVERSATION (${filteredTerrains.length} of ${terrains.length}${selectedHumanRole !== 'all' || selectedAiRole !== 'all' || selectedMessageCount !== 'all' || selectedEpistemic !== 'all' || selectedFailure !== 'all' ? ' filtered' : ''}${totalPages > 1 ? `, page ${currentPage + 1}/${totalPages}` : ''}) • Virtualized Grid`
+                : terrains.length > 0
+                  ? 'NO CONVERSATIONS MATCH FILTERS'
+                  : 'LOADING CLASSIFIED CONVERSATIONS...'}
+            </div>
+            {/* Role Filters */}
+            <div style={{
+              display: 'flex',
+              gap: 12,
+              alignItems: 'center',
+              flexWrap: 'wrap'
+            }}>
+              <div style={{ display: 'flex', gap: 6, alignItems: 'center' }}>
+                <label style={{
+                  fontSize: '11px',
+                  color: THEME.foreground,
+                  opacity: 0.7,
+                  fontWeight: 600
+                }}>
+                  Human Role:
+                </label>
+                <select
+                  value={selectedHumanRole}
+                  onChange={(e) => setSelectedHumanRole(e.target.value)}
+                  style={{
+                    background: THEME.cardRgba(0.5),
+                    border: `1px solid ${THEME.borderRgba(0.3)}`,
+                    borderRadius: 4,
+                    color: THEME.foreground,
+                    padding: '4px 8px',
+                    fontSize: '11px',
+                    cursor: 'pointer',
+                    fontFamily: 'inherit',
+                    minWidth: 120
+                  }}
+                >
+                  <option value="all">All</option>
+                  <option value="challenger">Challenger</option>
+                  <option value="seeker">Seeker</option>
+                  <option value="collaborator">Collaborator</option>
+                  <option value="sharer">Sharer</option>
+                </select>
+              </div>
+              <div style={{ display: 'flex', gap: 6, alignItems: 'center' }}>
+                <label style={{
+                  fontSize: '11px',
+                  color: THEME.foreground,
+                  opacity: 0.7,
+                  fontWeight: 600
+                }}>
+                  AI Role:
+                </label>
+                <select
+                  value={selectedAiRole}
+                  onChange={(e) => setSelectedAiRole(e.target.value)}
+                  style={{
+                    background: THEME.cardRgba(0.5),
+                    border: `1px solid ${THEME.borderRgba(0.3)}`,
+                    borderRadius: 4,
+                    color: THEME.foreground,
+                    padding: '4px 8px',
+                    fontSize: '11px',
+                    cursor: 'pointer',
+                    fontFamily: 'inherit',
+                    minWidth: 120
+                  }}
+                >
+                  <option value="all">All</option>
+                  <option value="expert">Expert</option>
+                  <option value="facilitator">Facilitator</option>
+                  <option value="reflector">Reflector</option>
+                  <option value="peer">Peer</option>
+                </select>
+              </div>
+              {/* Message Count Filter */}
+              <div style={{ display: 'flex', gap: 6, alignItems: 'center' }}>
+                <label style={{
+                  fontSize: '11px',
+                  color: THEME.foreground,
+                  opacity: 0.7,
+                  fontWeight: 600
+                }}>
+                  Messages:
+                </label>
+                <select
+                  value={selectedMessageCount}
+                  onChange={(e) => setSelectedMessageCount(e.target.value)}
+                  style={{
+                    background: THEME.cardRgba(0.5),
+                    border: `1px solid ${THEME.borderRgba(0.3)}`,
+                    borderRadius: 4,
+                    color: THEME.foreground,
+                    padding: '4px 8px',
+                    fontSize: '11px',
+                    cursor: 'pointer',
+                    fontFamily: 'inherit',
+                    minWidth: 100
+                  }}
+                >
+                  <option value="all">All</option>
+                  <option value="short">Short (&lt;10)</option>
+                  <option value="medium">Medium (10-20)</option>
+                  <option value="long">Long (&gt;20)</option>
+                </select>
+              </div>
+              
+              {/* Epistemic Filter */}
+              <div style={{ display: 'flex', gap: 6, alignItems: 'center' }}>
+                <label style={{
+                  fontSize: '11px',
+                  color: THEME.foreground,
+                  opacity: 0.7,
+                  fontWeight: 600
+                }}>
+                  Epistemic:
+                </label>
+                <select
+                  value={selectedEpistemic}
+                  onChange={(e) => setSelectedEpistemic(e.target.value)}
+                  style={{
+                    background: THEME.cardRgba(0.5),
+                    border: `1px solid ${THEME.borderRgba(0.3)}`,
+                    borderRadius: 4,
+                    color: THEME.foreground,
+                    padding: '4px 8px',
+                    fontSize: '11px',
+                    cursor: 'pointer',
+                    fontFamily: 'inherit',
+                    minWidth: 140
+                  }}
+                >
+                  <option value="all">All</option>
+                  <option value="has-hallucination">Has Hallucination</option>
+                  <option value="has-error">Has Error</option>
+                  <option value="has-repair">Has Repair</option>
+                  <option value="none">No Issues</option>
+                </select>
+              </div>
+              
+              {/* Failure Filter */}
+              <div style={{ display: 'flex', gap: 6, alignItems: 'center' }}>
+                <label style={{
+                  fontSize: '11px',
+                  color: THEME.foreground,
+                  opacity: 0.7,
+                  fontWeight: 600
+                }}>
+                  Failure:
+                </label>
+                <select
+                  value={selectedFailure}
+                  onChange={(e) => setSelectedFailure(e.target.value)}
+                  style={{
+                    background: THEME.cardRgba(0.5),
+                    border: `1px solid ${THEME.borderRgba(0.3)}`,
+                    borderRadius: 4,
+                    color: THEME.foreground,
+                    padding: '4px 8px',
+                    fontSize: '11px',
+                    cursor: 'pointer',
+                    fontFamily: 'inherit',
+                    minWidth: 120
+                  }}
+                >
+                  <option value="all">All</option>
+                  <option value="has-breakdown">Has Breakdown</option>
+                  <option value="has-repair">Has Repair</option>
+                  <option value="none">No Breakdown</option>
+                </select>
+              </div>
+              
+              {(selectedHumanRole !== 'all' || selectedAiRole !== 'all' || selectedMessageCount !== 'all' || selectedEpistemic !== 'all' || selectedFailure !== 'all') && (
+                <button
+                  onClick={() => {
+                    setSelectedHumanRole('all');
+                    setSelectedAiRole('all');
+                    setSelectedMessageCount('all');
+                    setSelectedEpistemic('all');
+                    setSelectedFailure('all');
+                  }}
+                  style={{
+                    padding: '4px 10px',
+                    fontSize: '10px',
+                    background: THEME.cardRgba(0.3),
+                    border: `1px solid ${THEME.borderRgba(0.3)}`,
+                    borderRadius: 4,
+                    color: THEME.foreground,
+                    cursor: 'pointer',
+                    opacity: 0.7,
+                    transition: 'opacity 0.2s',
+                    fontFamily: 'inherit',
+                    textTransform: 'uppercase',
+                    letterSpacing: '0.5px'
+                  }}
+                  onMouseEnter={(e) => e.currentTarget.style.opacity = '1'}
+                  onMouseLeave={(e) => e.currentTarget.style.opacity = '0.7'}
+                >
+                  Clear Filters
+                </button>
+              )}
             </div>
           </div>
 
@@ -526,7 +1044,7 @@ export function TerrainGridView({ terrains, conversations, onSelectTerrain }: Te
             alignItems: 'center',
             justifyContent: 'center',
             height: '100%',
-            color: 'rgba(255, 255, 255, 0.3)',
+            color: 'rgba(0, 0, 0, 0.3)',
             fontSize: '12px'
           }}>
             {terrains.length === 0 ? 'Loading conversations...' : 'No conversations available'}
@@ -542,8 +1060,8 @@ export function TerrainGridView({ terrains, conversations, onSelectTerrain }: Te
           left: 0,
           right: 0,
           height: PAGINATION_HEIGHT,
-          borderTop: '1px solid rgba(255, 255, 255, 0.1)',
-          background: 'rgba(26, 26, 26, 0.9)',
+          borderTop: '1px solid rgba(0, 0, 0, 0.1)',
+          background: 'rgba(255, 255, 255, 0.95)',
           backdropFilter: 'blur(8px)',
           display: 'flex',
           alignItems: 'center',
@@ -589,7 +1107,7 @@ export function TerrainGridView({ terrains, conversations, onSelectTerrain }: Te
             display: 'flex',
             alignItems: 'center',
             gap: 8,
-            color: '#ffffff',
+            color: '#1a1a1a',
             fontSize: '10px',
             letterSpacing: '1px',
             fontFamily: 'monospace'

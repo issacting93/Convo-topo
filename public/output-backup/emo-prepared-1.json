@@ -1,0 +1,165 @@
+{
+  "id": "emo-prepared-1",
+  "messages": [
+    {
+      "role": "user",
+      "content": "I had to board my entire house when the hurricane was coming.",
+      "pad": {
+        "pleasure": 0.4,
+        "arousal": 0.5,
+        "dominance": 0.3,
+        "emotionalIntensity": 0.56
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "WOW! Did it do any damage?",
+      "pad": {
+        "pleasure": 0.6,
+        "arousal": 0.6,
+        "dominance": 0.4,
+        "emotionalIntensity": 0.48
+      }
+    },
+    {
+      "role": "user",
+      "content": "No luckily the house was ok.",
+      "pad": {
+        "pleasure": 0.8,
+        "arousal": 0.3,
+        "dominance": 0.5,
+        "emotionalIntensity": 0.24
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "That is great. I would have been scared to death. Was it recent?",
+      "pad": {
+        "pleasure": 0.7,
+        "arousal": 0.4,
+        "dominance": 0.5,
+        "emotionalIntensity": 0.34
+      }
+    }
+  ],
+  "classification": {
+    "interactionPattern": {
+      "category": "question-answer",
+      "confidence": 0.8,
+      "evidence": [
+        "Did it do any damage?",
+        "Was it recent?"
+      ],
+      "rationale": "The assistant asks questions while the user provides answers.",
+      "alternative": "casual-chat"
+    },
+    "powerDynamics": {
+      "category": "balanced",
+      "confidence": 0.7,
+      "evidence": [
+        "I had to board my entire house",
+        "Did it do any damage?"
+      ],
+      "rationale": "Both parties contribute to the conversation direction.",
+      "alternative": "human-led"
+    },
+    "emotionalTone": {
+      "category": "supportive",
+      "confidence": 0.8,
+      "evidence": [
+        "That is great.",
+        "I would have been scared to death."
+      ],
+      "rationale": "The assistant expresses warmth and concern.",
+      "alternative": "empathetic"
+    },
+    "engagementStyle": {
+      "category": "affirming",
+      "confidence": 0.7,
+      "evidence": [
+        "That is great.",
+        "I would have been scared to death."
+      ],
+      "rationale": "The assistant validates the user's experience.",
+      "alternative": "reactive"
+    },
+    "knowledgeExchange": {
+      "category": "experience-sharing",
+      "confidence": 0.7,
+      "evidence": [
+        "I had to board my entire house when the hurricane was coming."
+      ],
+      "rationale": "The user shares a personal experience related to the hurricane.",
+      "alternative": "personal-sharing"
+    },
+    "conversationPurpose": {
+      "category": "relationship-building",
+      "confidence": 0.7,
+      "evidence": [
+        "I would have been scared to death."
+      ],
+      "rationale": "The conversation fosters connection through shared experiences.",
+      "alternative": "entertainment"
+    },
+    "turnTaking": {
+      "category": "balanced",
+      "confidence": 0.7,
+      "evidence": [
+        "I had to board my entire house",
+        "Did it do any damage?"
+      ],
+      "rationale": "Both parties have similar lengths in their contributions.",
+      "alternative": "user-dominant"
+    },
+    "humanRole": {
+      "distribution": {
+        "seeker": 0.0,
+        "learner": 0.0,
+        "director": 0.0,
+        "collaborator": 0.0,
+        "sharer": 1.0,
+        "challenger": 0.0
+      },
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "role": "sharer",
+          "quote": "I had to board my entire house when the hurricane was coming."
+        }
+      ],
+      "rationale": "The user primarily shares a personal narrative about their experience.",
+      "alternative": null
+    },
+    "aiRole": {
+      "distribution": {
+        "expert": 0.0,
+        "advisor": 0.0,
+        "facilitator": 0.0,
+        "reflector": 0.5,
+        "peer": 0.5,
+        "affiliative": 0.0
+      },
+      "confidence": 0.7,
+      "evidence": [
+        {
+          "role": "reflector",
+          "quote": "That is great."
+        },
+        {
+          "role": "peer",
+          "quote": "Did it do any damage?"
+        }
+      ],
+      "rationale": "The assistant reflects on the user's experience and engages as a peer.",
+      "alternative": null
+    },
+    "abstain": false
+  },
+  "classificationMetadata": {
+    "model": "gpt-4o-mini",
+    "provider": "openai",
+    "timestamp": "2025-12-22T16:46:37.551812",
+    "promptVersion": "1.1.0",
+    "processingTimeMs": 0
+  }
+}

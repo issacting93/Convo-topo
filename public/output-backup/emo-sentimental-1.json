@@ -1,0 +1,184 @@
+{
+  "id": "emo-sentimental-1",
+  "messages": [
+    {
+      "role": "user",
+      "content": "I remember going to see the fireworks with my best friend. It was the first time we ever spent time alone together. Although there was a lot of people, we felt like the only people in the world.",
+      "pad": {
+        "pleasure": 0.8,
+        "arousal": 0.5,
+        "dominance": 0.4,
+        "emotionalIntensity": 0.32
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "Was this a friend you were in love with, or just a best friend?",
+      "pad": {
+        "pleasure": 0.6,
+        "arousal": 0.4,
+        "dominance": 0.5,
+        "emotionalIntensity": 0.4
+      }
+    },
+    {
+      "role": "user",
+      "content": "This was a best friend. I miss her.",
+      "pad": {
+        "pleasure": 0.7,
+        "arousal": 0.3,
+        "dominance": 0.3,
+        "emotionalIntensity": 0.3
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "Where has she gone?",
+      "pad": {
+        "pleasure": 0.5,
+        "arousal": 0.3,
+        "dominance": 0.4,
+        "emotionalIntensity": 0.42
+      }
+    },
+    {
+      "role": "user",
+      "content": "We no longer talk.",
+      "pad": {
+        "pleasure": 0.4,
+        "arousal": 0.2,
+        "dominance": 0.3,
+        "emotionalIntensity": 0.44
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "Oh was this something that happened because of an argument?",
+      "pad": {
+        "pleasure": 0.5,
+        "arousal": 0.4,
+        "dominance": 0.5,
+        "emotionalIntensity": 0.46
+      }
+    }
+  ],
+  "classification": {
+    "interactionPattern": {
+      "category": "storytelling",
+      "confidence": 0.8,
+      "evidence": [
+        "I remember going to see the fireworks with my best friend.",
+        "Although there was a lot of people, we felt like the only people in the world."
+      ],
+      "rationale": "The user shares a personal narrative about an experience.",
+      "alternative": "casual-chat"
+    },
+    "powerDynamics": {
+      "category": "balanced",
+      "confidence": 0.7,
+      "evidence": [
+        "Was this a friend you were in love with, or just a best friend?",
+        "Where has she gone?"
+      ],
+      "rationale": "Both parties contribute to the conversation direction.",
+      "alternative": "human-led"
+    },
+    "emotionalTone": {
+      "category": "empathetic",
+      "confidence": 0.8,
+      "evidence": [
+        "Oh was this something that happened because of an argument?"
+      ],
+      "rationale": "The assistant expresses understanding towards the user's feelings.",
+      "alternative": "supportive"
+    },
+    "engagementStyle": {
+      "category": "affirming",
+      "confidence": 0.7,
+      "evidence": [
+        "This was a best friend. I miss her."
+      ],
+      "rationale": "The assistant validates the user's feelings about their friendship.",
+      "alternative": "reactive"
+    },
+    "knowledgeExchange": {
+      "category": "personal-sharing",
+      "confidence": 0.9,
+      "evidence": [
+        "I remember going to see the fireworks with my best friend.",
+        "We no longer talk."
+      ],
+      "rationale": "The user shares personal experiences and emotions.",
+      "alternative": "experience-sharing"
+    },
+    "conversationPurpose": {
+      "category": "relationship-building",
+      "confidence": 0.8,
+      "evidence": [
+        "I miss her."
+      ],
+      "rationale": "The user expresses feelings that foster connection.",
+      "alternative": "self-expression"
+    },
+    "turnTaking": {
+      "category": "balanced",
+      "confidence": 0.7,
+      "evidence": [
+        "I remember going to see the fireworks with my best friend.",
+        "Was this a friend you were in love with, or just a best friend?"
+      ],
+      "rationale": "Both parties contribute equally to the dialogue.",
+      "alternative": "user-dominant"
+    },
+    "humanRole": {
+      "distribution": {
+        "seeker": 0.0,
+        "learner": 0.0,
+        "director": 0.0,
+        "collaborator": 0.0,
+        "sharer": 1.0,
+        "challenger": 0.0
+      },
+      "confidence": 0.9,
+      "evidence": [
+        {
+          "role": "sharer",
+          "quote": "I remember going to see the fireworks with my best friend."
+        }
+      ],
+      "rationale": "The user shares personal narratives and feelings.",
+      "alternative": null
+    },
+    "aiRole": {
+      "distribution": {
+        "expert": 0.0,
+        "advisor": 0.0,
+        "facilitator": 0.5,
+        "reflector": 0.5,
+        "peer": 0.0,
+        "affiliative": 0.0
+      },
+      "confidence": 0.7,
+      "evidence": [
+        {
+          "role": "facilitator",
+          "quote": "Was this a friend you were in love with, or just a best friend?"
+        },
+        {
+          "role": "reflector",
+          "quote": "Oh was this something that happened because of an argument?"
+        }
+      ],
+      "rationale": "The assistant guides the conversation and validates the user's feelings.",
+      "alternative": "advisor"
+    },
+    "abstain": false
+  },
+  "classificationMetadata": {
+    "model": "gpt-4o-mini",
+    "provider": "openai",
+    "timestamp": "2025-12-22T16:48:05.966757",
+    "promptVersion": "1.1.0",
+    "processingTimeMs": 0
+  }
+}

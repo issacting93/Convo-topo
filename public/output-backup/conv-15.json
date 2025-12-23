@@ -1,0 +1,161 @@
+{
+  "id": "conv-15",
+  "messages": [
+    {
+      "role": "user",
+      "content": "we all live in a yellow submarine , a yellow submarine . morning !",
+      "pad": {
+        "pleasure": 0.8,
+        "arousal": 0.5,
+        "dominance": 0.4,
+        "emotionalIntensity": 0.32
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "hi ! that is a great line for my next stand up .",
+      "pad": {
+        "pleasure": 0.9,
+        "arousal": 0.6,
+        "dominance": 0.5,
+        "emotionalIntensity": 0.3
+      }
+    },
+    {
+      "role": "user",
+      "content": "lol . i am shy , anything to break the ice , and i am a beatles fan .",
+      "pad": {
+        "pleasure": 0.7,
+        "arousal": 0.4,
+        "dominance": 0.3,
+        "emotionalIntensity": 0.34
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "i like to play football are you like football ?",
+      "pad": {
+        "pleasure": 0.6,
+        "arousal": 0.5,
+        "dominance": 0.4,
+        "emotionalIntensity": 0.44
+      }
+    }
+  ],
+  "classification": {
+    "interactionPattern": {
+      "category": "casual-chat",
+      "confidence": 0.8,
+      "evidence": [
+        "we all live in a yellow submarine , a yellow submarine . morning !",
+        "lol . i am shy , anything to break the ice , and i am a beatles fan ."
+      ],
+      "rationale": "The conversation features light social exchanges without a specific goal.",
+      "alternative": "storytelling"
+    },
+    "powerDynamics": {
+      "category": "balanced",
+      "confidence": 0.7,
+      "evidence": [
+        "that is a great line for my next stand up .",
+        "i am shy , anything to break the ice , and i am a beatles fan ."
+      ],
+      "rationale": "Both parties contribute to the conversation direction fairly equally.",
+      "alternative": "human-led"
+    },
+    "emotionalTone": {
+      "category": "playful",
+      "confidence": 0.8,
+      "evidence": [
+        "we all live in a yellow submarine , a yellow submarine . morning !",
+        "lol . i am shy , anything to break the ice ."
+      ],
+      "rationale": "The conversation has a light-hearted and humorous tone.",
+      "alternative": "supportive"
+    },
+    "engagementStyle": {
+      "category": "affirming",
+      "confidence": 0.7,
+      "evidence": [
+        "that is a great line for my next stand up .",
+        "i am a beatles fan ."
+      ],
+      "rationale": "Responses show agreement and validation of the user's statements.",
+      "alternative": "reactive"
+    },
+    "knowledgeExchange": {
+      "category": "personal-sharing",
+      "confidence": 0.7,
+      "evidence": [
+        "i am shy , anything to break the ice , and i am a beatles fan ."
+      ],
+      "rationale": "User shares personal feelings and interests.",
+      "alternative": "opinion-exchange"
+    },
+    "conversationPurpose": {
+      "category": "relationship-building",
+      "confidence": 0.7,
+      "evidence": [
+        "lol . i am shy , anything to break the ice ."
+      ],
+      "rationale": "The conversation aims to create rapport and connection.",
+      "alternative": "entertainment"
+    },
+    "turnTaking": {
+      "category": "balanced",
+      "confidence": 0.7,
+      "evidence": [
+        "we all live in a yellow submarine , a yellow submarine . morning !",
+        "hi ! that is a great line for my next stand up ."
+      ],
+      "rationale": "Both parties have roughly equal message lengths.",
+      "alternative": "user-dominant"
+    },
+    "humanRole": {
+      "distribution": {
+        "seeker": 0.2,
+        "learner": 0.0,
+        "director": 0.0,
+        "collaborator": 0.3,
+        "sharer": 0.5,
+        "challenger": 0.0
+      },
+      "confidence": 0.7,
+      "evidence": [
+        {
+          "role": "sharer",
+          "quote": "i am shy , anything to break the ice , and i am a beatles fan ."
+        }
+      ],
+      "rationale": "User shares personal information and context.",
+      "alternative": "collaborator"
+    },
+    "aiRole": {
+      "distribution": {
+        "expert": 0.0,
+        "advisor": 0.0,
+        "facilitator": 0.4,
+        "reflector": 0.2,
+        "peer": 0.4,
+        "affiliative": 0.0
+      },
+      "confidence": 0.7,
+      "evidence": [
+        {
+          "role": "facilitator",
+          "quote": "that is a great line for my next stand up ."
+        }
+      ],
+      "rationale": "AI engages in a supportive manner while guiding the conversation.",
+      "alternative": "peer"
+    },
+    "abstain": false
+  },
+  "classificationMetadata": {
+    "model": "gpt-4o-mini",
+    "provider": "openai",
+    "timestamp": "2025-12-22T16:35:53.518178",
+    "promptVersion": "1.1.0",
+    "processingTimeMs": 0
+  }
+}

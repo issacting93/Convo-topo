@@ -1,0 +1,159 @@
+{
+  "id": "emo-annoyed-1",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Hi, I have a co work always asking me questions about how to use her mobile. It is almost always the same questions.",
+      "pad": {
+        "pleasure": 0.4,
+        "arousal": 0.5,
+        "dominance": 0.3,
+        "emotionalIntensity": 0.56
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "It must be so frustrating to have to answer the same thing over and over. Is she older?",
+      "pad": {
+        "pleasure": 0.6,
+        "arousal": 0.4,
+        "dominance": 0.5,
+        "emotionalIntensity": 0.4
+      }
+    },
+    {
+      "role": "user",
+      "content": "Yes, she is. She is telling that all the cell phone that she has been using have deleting her contacts.",
+      "pad": {
+        "pleasure": 0.5,
+        "arousal": 0.3,
+        "dominance": 0.4,
+        "emotionalIntensity": 0.42
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "My aunt does the same thing! I think what she is doing is accidentally deleting texts, and she doesn't understand how to check her contacts list. What do you think is happening with your co-worker?",
+      "pad": {
+        "pleasure": 0.7,
+        "arousal": 0.5,
+        "dominance": 0.6,
+        "emotionalIntensity": 0.38
+      }
+    }
+  ],
+  "classification": {
+    "interactionPattern": {
+      "category": "question-answer",
+      "confidence": 0.8,
+      "evidence": [
+        "I have a co work always asking me questions",
+        "What do you think is happening with your co-worker?"
+      ],
+      "rationale": "The user asks about their co-worker's issues, and the assistant responds with thoughts and questions.",
+      "alternative": "collaborative"
+    },
+    "powerDynamics": {
+      "category": "balanced",
+      "confidence": 0.7,
+      "evidence": [
+        "It must be so frustrating to have to answer the same thing over and over.",
+        "What do you think is happening with your co-worker?"
+      ],
+      "rationale": "Both parties contribute to the conversation, with the user sharing experiences and the assistant asking questions.",
+      "alternative": "human-led"
+    },
+    "emotionalTone": {
+      "category": "empathetic",
+      "confidence": 0.8,
+      "evidence": [
+        "It must be so frustrating to have to answer the same thing over and over."
+      ],
+      "rationale": "The assistant expresses understanding of the user's frustration.",
+      "alternative": "supportive"
+    },
+    "engagementStyle": {
+      "category": "affirming",
+      "confidence": 0.7,
+      "evidence": [
+        "My aunt does the same thing!"
+      ],
+      "rationale": "The assistant builds on the user's narrative by sharing a related experience.",
+      "alternative": "exploring"
+    },
+    "knowledgeExchange": {
+      "category": "experience-sharing",
+      "confidence": 0.7,
+      "evidence": [
+        "My aunt does the same thing!"
+      ],
+      "rationale": "The assistant shares a personal experience related to the user's situation.",
+      "alternative": "opinion-exchange"
+    },
+    "conversationPurpose": {
+      "category": "relationship-building",
+      "confidence": 0.7,
+      "evidence": [
+        "It must be so frustrating to have to answer the same thing over and over."
+      ],
+      "rationale": "The conversation includes personal sharing and empathy, fostering connection.",
+      "alternative": "information-seeking"
+    },
+    "turnTaking": {
+      "category": "balanced",
+      "confidence": 0.7,
+      "evidence": [
+        "Yes, she is.",
+        "What do you think is happening with your co-worker?"
+      ],
+      "rationale": "Both the user and assistant contribute equally in length and content.",
+      "alternative": "user-dominant"
+    },
+    "humanRole": {
+      "distribution": {
+        "seeker": 0.5,
+        "learner": 0.0,
+        "director": 0.0,
+        "collaborator": 0.3,
+        "sharer": 0.2,
+        "challenger": 0.0
+      },
+      "confidence": 0.7,
+      "evidence": [
+        {
+          "role": "seeker",
+          "quote": "I have a co work always asking me questions about how to use her mobile."
+        }
+      ],
+      "rationale": "The user primarily seeks understanding about their co-worker's situation and shares experiences.",
+      "alternative": null
+    },
+    "aiRole": {
+      "distribution": {
+        "expert": 0.4,
+        "advisor": 0.0,
+        "facilitator": 0.4,
+        "reflector": 0.2,
+        "peer": 0.0,
+        "affiliative": 0.0
+      },
+      "confidence": 0.7,
+      "evidence": [
+        {
+          "role": "expert",
+          "quote": "I think what she is doing is accidentally deleting texts."
+        }
+      ],
+      "rationale": "The assistant provides an explanation and guidance based on the user's input.",
+      "alternative": null
+    },
+    "abstain": false
+  },
+  "classificationMetadata": {
+    "model": "gpt-4o-mini",
+    "provider": "openai",
+    "timestamp": "2025-12-22T16:42:12.057919",
+    "promptVersion": "1.1.0",
+    "processingTimeMs": 0
+  }
+}

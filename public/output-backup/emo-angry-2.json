@@ -1,0 +1,180 @@
+{
+  "id": "emo-angry-2",
+  "messages": [
+    {
+      "role": "user",
+      "content": "I never thought things would go like this.",
+      "pad": {
+        "pleasure": 0.3,
+        "arousal": 0.4,
+        "dominance": 0.3,
+        "emotionalIntensity": 0.58
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "What happened for you to feel that way?",
+      "pad": {
+        "pleasure": 0.6,
+        "arousal": 0.5,
+        "dominance": 0.4,
+        "emotionalIntensity": 0.44
+      }
+    },
+    {
+      "role": "user",
+      "content": "I was at the beach and a hurricane changed track and was coming straight at us. My boyfriend didnt want to leave because we were on the second day only of our vacation.",
+      "pad": {
+        "pleasure": 0.2,
+        "arousal": 0.6,
+        "dominance": 0.3,
+        "emotionalIntensity": 0.72
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "Oh that does sound terrible. What did you guys decide to do?",
+      "pad": {
+        "pleasure": 0.5,
+        "arousal": 0.4,
+        "dominance": 0.5,
+        "emotionalIntensity": 0.46
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "Well we ended up leaving I was too scared to stay and was really upset.",
+      "pad": {
+        "pleasure": 0.4,
+        "arousal": 0.5,
+        "dominance": 0.4,
+        "emotionalIntensity": 0.56
+      }
+    }
+  ],
+  "emotion": "angry",
+  "situation": "I am so upset and mad. I cant believe what has happened!",
+  "source": "empathetic_dialogues",
+  "classification": {
+    "interactionPattern": {
+      "category": "storytelling",
+      "confidence": 0.8,
+      "evidence": [
+        "I was at the beach and a hurricane changed track",
+        "Well we ended up leaving I was too scared to stay"
+      ],
+      "rationale": "The user shares a narrative about their experience during a hurricane.",
+      "alternative": "casual-chat"
+    },
+    "powerDynamics": {
+      "category": "balanced",
+      "confidence": 0.7,
+      "evidence": [
+        "What happened for you to feel that way?",
+        "What did you guys decide to do?"
+      ],
+      "rationale": "Both parties contribute to the conversation direction.",
+      "alternative": "human-led"
+    },
+    "emotionalTone": {
+      "category": "empathetic",
+      "confidence": 0.8,
+      "evidence": [
+        "Oh that does sound terrible.",
+        "I was too scared to stay and was really upset."
+      ],
+      "rationale": "The assistant acknowledges the user's feelings and experiences.",
+      "alternative": "supportive"
+    },
+    "engagementStyle": {
+      "category": "affirming",
+      "confidence": 0.7,
+      "evidence": [
+        "Oh that does sound terrible.",
+        "What did you guys decide to do?"
+      ],
+      "rationale": "The assistant validates the user's experience while asking for more details.",
+      "alternative": "questioning"
+    },
+    "knowledgeExchange": {
+      "category": "experience-sharing",
+      "confidence": 0.8,
+      "evidence": [
+        "I was at the beach and a hurricane changed track",
+        "I was too scared to stay and was really upset."
+      ],
+      "rationale": "The user shares a personal experience related to their feelings.",
+      "alternative": "personal-sharing"
+    },
+    "conversationPurpose": {
+      "category": "self-expression",
+      "confidence": 0.7,
+      "evidence": [
+        "I never thought things would go like this.",
+        "I was too scared to stay and was really upset."
+      ],
+      "rationale": "The user expresses their thoughts and feelings about a personal experience.",
+      "alternative": "relationship-building"
+    },
+    "turnTaking": {
+      "category": "balanced",
+      "confidence": 0.7,
+      "evidence": [
+        "I never thought things would go like this.",
+        "What happened for you to feel that way?"
+      ],
+      "rationale": "Both parties have roughly equal contributions in terms of turns.",
+      "alternative": "user-dominant"
+    },
+    "humanRole": {
+      "distribution": {
+        "seeker": 0.0,
+        "learner": 0.0,
+        "director": 0.0,
+        "collaborator": 0.0,
+        "sharer": 1.0,
+        "challenger": 0.0
+      },
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "role": "sharer",
+          "quote": "I was at the beach and a hurricane changed track"
+        }
+      ],
+      "rationale": "The user primarily shares a personal narrative about their experience.",
+      "alternative": null
+    },
+    "aiRole": {
+      "distribution": {
+        "expert": 0.0,
+        "advisor": 0.0,
+        "facilitator": 0.5,
+        "reflector": 0.5,
+        "peer": 0.0,
+        "affiliative": 0.0
+      },
+      "confidence": 0.7,
+      "evidence": [
+        {
+          "role": "facilitator",
+          "quote": "What did you guys decide to do?"
+        },
+        {
+          "role": "reflector",
+          "quote": "Oh that does sound terrible."
+        }
+      ],
+      "rationale": "The assistant guides the conversation while also validating the user's feelings.",
+      "alternative": "peer"
+    },
+    "abstain": false
+  },
+  "classificationMetadata": {
+    "model": "gpt-4o-mini",
+    "provider": "openai",
+    "timestamp": "2025-12-22T16:41:36.357210",
+    "promptVersion": "1.1.0",
+    "processingTimeMs": 0
+  }
+}

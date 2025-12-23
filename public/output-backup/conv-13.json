@@ -1,0 +1,271 @@
+{
+  "id": "conv-13",
+  "messages": [
+    {
+      "role": "user",
+      "content": "hi , how are you doing today ?",
+      "pad": {
+        "pleasure": 0.7,
+        "arousal": 0.3,
+        "dominance": 0.4,
+        "emotionalIntensity": 0.3
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "i am spending time with my 4 sisters what are you up to",
+      "pad": {
+        "pleasure": 0.6,
+        "arousal": 0.4,
+        "dominance": 0.5,
+        "emotionalIntensity": 0.4
+      }
+    },
+    {
+      "role": "user",
+      "content": "wow , four sisters . just watching game of thrones .",
+      "pad": {
+        "pleasure": 0.7,
+        "arousal": 0.5,
+        "dominance": 0.4,
+        "emotionalIntensity": 0.38
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "that is a good show i watch that while drinking iced tea",
+      "pad": {
+        "pleasure": 0.7,
+        "arousal": 0.3,
+        "dominance": 0.4,
+        "emotionalIntensity": 0.3
+      }
+    },
+    {
+      "role": "user",
+      "content": "i agree . what do you do for a living ?",
+      "pad": {
+        "pleasure": 0.6,
+        "arousal": 0.3,
+        "dominance": 0.5,
+        "emotionalIntensity": 0.36
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "i'm a researcher i'm researching the fact that mermaids are real",
+      "pad": {
+        "pleasure": 0.6,
+        "arousal": 0.4,
+        "dominance": 0.5,
+        "emotionalIntensity": 0.4
+      }
+    },
+    {
+      "role": "user",
+      "content": "interesting . i'm a website designer . pretty much spend all my time on the computer .",
+      "pad": {
+        "pleasure": 0.6,
+        "arousal": 0.3,
+        "dominance": 0.4,
+        "emotionalIntensity": 0.36
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "that's cool my mom does the same thing",
+      "pad": {
+        "pleasure": 0.7,
+        "arousal": 0.4,
+        "dominance": 0.5,
+        "emotionalIntensity": 0.34
+      }
+    },
+    {
+      "role": "user",
+      "content": "that's awesome . i have always had a love for technology .",
+      "pad": {
+        "pleasure": 0.8,
+        "arousal": 0.3,
+        "dominance": 0.5,
+        "emotionalIntensity": 0.24
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "tell me more about yourself",
+      "pad": {
+        "pleasure": 0.7,
+        "arousal": 0.4,
+        "dominance": 0.5,
+        "emotionalIntensity": 0.34
+      }
+    },
+    {
+      "role": "user",
+      "content": "i really enjoy free diving , how about you , have any hobbies ?",
+      "pad": {
+        "pleasure": 0.7,
+        "arousal": 0.3,
+        "dominance": 0.4,
+        "emotionalIntensity": 0.3
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "i enjoy hanging with my mother she's my best friend",
+      "pad": {
+        "pleasure": 0.7,
+        "arousal": 0.3,
+        "dominance": 0.5,
+        "emotionalIntensity": 0.3
+      }
+    },
+    {
+      "role": "user",
+      "content": "that's nice . moms are pretty cool too .",
+      "pad": {
+        "pleasure": 0.6,
+        "arousal": 0.3,
+        "dominance": 0.4,
+        "emotionalIntensity": 0.36
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "what sort of events do you normally photograph ?",
+      "pad": {
+        "pleasure": 0.6,
+        "arousal": 0.3,
+        "dominance": 0.4,
+        "emotionalIntensity": 0.36
+      }
+    }
+  ],
+  "classification": {
+    "interactionPattern": {
+      "category": "casual-chat",
+      "confidence": 0.8,
+      "evidence": [
+        "hi , how are you doing today ?",
+        "that's nice . moms are pretty cool too ."
+      ],
+      "rationale": "The conversation consists of friendly exchanges without a specific goal.",
+      "alternative": "storytelling"
+    },
+    "powerDynamics": {
+      "category": "balanced",
+      "confidence": 0.7,
+      "evidence": [
+        "i am spending time with my 4 sisters what are you up to",
+        "i enjoy hanging with my mother she's my best friend"
+      ],
+      "rationale": "Both parties contribute equally to the conversation flow.",
+      "alternative": "human-led"
+    },
+    "emotionalTone": {
+      "category": "supportive",
+      "confidence": 0.7,
+      "evidence": [
+        "that's nice . moms are pretty cool too .",
+        "that's cool my mom does the same thing"
+      ],
+      "rationale": "The dialogue conveys warmth and affirmation.",
+      "alternative": "neutral"
+    },
+    "engagementStyle": {
+      "category": "reactive",
+      "confidence": 0.6,
+      "evidence": [
+        "i agree . what do you do for a living ?",
+        "tell me more about yourself"
+      ],
+      "rationale": "Responses are generally reactive to the previous statements.",
+      "alternative": "affirming"
+    },
+    "knowledgeExchange": {
+      "category": "personal-sharing",
+      "confidence": 0.8,
+      "evidence": [
+        "i really enjoy free diving , how about you , have any hobbies ?",
+        "i have always had a love for technology ."
+      ],
+      "rationale": "Participants share personal interests and experiences.",
+      "alternative": "experience-sharing"
+    },
+    "conversationPurpose": {
+      "category": "relationship-building",
+      "confidence": 0.9,
+      "evidence": [
+        "that's nice . moms are pretty cool too .",
+        "i enjoy hanging with my mother she's my best friend"
+      ],
+      "rationale": "The conversation focuses on bonding and sharing personal stories.",
+      "alternative": "entertainment"
+    },
+    "turnTaking": {
+      "category": "balanced",
+      "confidence": 0.8,
+      "evidence": [
+        "wow , four sisters . just watching game of thrones .",
+        "i'm a researcher i'm researching the fact that mermaids are real"
+      ],
+      "rationale": "Turns are roughly equal in length and frequency.",
+      "alternative": "user-dominant"
+    },
+    "humanRole": {
+      "distribution": {
+        "seeker": 0.3,
+        "learner": 0.2,
+        "director": 0.0,
+        "collaborator": 0.3,
+        "sharer": 0.2,
+        "challenger": 0.0
+      },
+      "confidence": 0.7,
+      "evidence": [
+        {
+          "role": "seeker",
+          "quote": "what do you do for a living ?"
+        },
+        {
+          "role": "sharer",
+          "quote": "i really enjoy free diving , how about you , have any hobbies ?"
+        }
+      ],
+      "rationale": "The user seeks information and shares personal interests.",
+      "alternative": null
+    },
+    "aiRole": {
+      "distribution": {
+        "expert": 0.0,
+        "advisor": 0.0,
+        "facilitator": 0.4,
+        "reflector": 0.3,
+        "peer": 0.3,
+        "affiliative": 0.0
+      },
+      "confidence": 0.7,
+      "evidence": [
+        {
+          "role": "facilitator",
+          "quote": "tell me more about yourself"
+        },
+        {
+          "role": "reflector",
+          "quote": "that's cool my mom does the same thing"
+        }
+      ],
+      "rationale": "The AI encourages sharing and reflects on user statements.",
+      "alternative": null
+    },
+    "abstain": false
+  },
+  "classificationMetadata": {
+    "model": "gpt-4o-mini",
+    "provider": "openai",
+    "timestamp": "2025-12-22T16:35:05.859047",
+    "promptVersion": "1.1.0",
+    "processingTimeMs": 0
+  }
+}

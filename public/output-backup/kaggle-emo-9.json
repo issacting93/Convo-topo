@@ -1,0 +1,131 @@
+{
+  "id": "kaggle-emo-9",
+  "messages": [
+    {
+      "role": "user",
+      "content": "I do actually hit blank walls a lot of times but i get by",
+      "pad": {
+        "pleasure": 0.4,
+        "arousal": 0.3,
+        "dominance": 0.5,
+        "emotionalIntensity": 0.48
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "",
+      "pad": {
+        "pleasure": 0.6,
+        "arousal": 0.2,
+        "dominance": 0.5,
+        "emotionalIntensity": 0.32
+      }
+    }
+  ],
+  "classification": {
+    "interactionPattern": {
+      "category": "casual-chat",
+      "confidence": 0.5,
+      "evidence": [
+        "I do actually hit blank walls a lot of times but i get by"
+      ],
+      "rationale": "The conversation appears to be a social exchange without a specific goal.",
+      "alternative": "storytelling"
+    },
+    "powerDynamics": {
+      "category": "balanced",
+      "confidence": 0.5,
+      "evidence": [
+        "I do actually hit blank walls a lot of times but i get by"
+      ],
+      "rationale": "Both parties contribute equally, but it's unclear who leads.",
+      "alternative": "human-led"
+    },
+    "emotionalTone": {
+      "category": "neutral",
+      "confidence": 0.5,
+      "evidence": [
+        "I do actually hit blank walls a lot of times but i get by"
+      ],
+      "rationale": "The tone is factual without strong emotional coloring.",
+      "alternative": "supportive"
+    },
+    "engagementStyle": {
+      "category": "reactive",
+      "confidence": 0.5,
+      "evidence": [
+        "I do actually hit blank walls a lot of times but i get by"
+      ],
+      "rationale": "The assistant has not yet responded, making engagement unclear.",
+      "alternative": "affirming"
+    },
+    "knowledgeExchange": {
+      "category": "personal-sharing",
+      "confidence": 0.5,
+      "evidence": [
+        "I do actually hit blank walls a lot of times but i get by"
+      ],
+      "rationale": "The user shares a personal experience.",
+      "alternative": "experience-sharing"
+    },
+    "conversationPurpose": {
+      "category": "self-expression",
+      "confidence": 0.5,
+      "evidence": [
+        "I do actually hit blank walls a lot of times but i get by"
+      ],
+      "rationale": "The user expresses a personal sentiment.",
+      "alternative": "relationship-building"
+    },
+    "turnTaking": {
+      "category": "user-dominant",
+      "confidence": 0.5,
+      "evidence": [
+        "I do actually hit blank walls a lot of times but i get by"
+      ],
+      "rationale": "The user has initiated the conversation without a response from the assistant.",
+      "alternative": "balanced"
+    },
+    "humanRole": {
+      "distribution": {
+        "seeker": 0.5,
+        "learner": 0.0,
+        "director": 0.0,
+        "collaborator": 0.0,
+        "sharer": 0.5,
+        "challenger": 0.0
+      },
+      "confidence": 0.5,
+      "evidence": [
+        {
+          "role": "sharer",
+          "quote": "I do actually hit blank walls a lot of times but i get by"
+        }
+      ],
+      "rationale": "The user shares a personal experience, indicating a role of sharer.",
+      "alternative": "seeker"
+    },
+    "aiRole": {
+      "distribution": {
+        "expert": 0,
+        "advisor": 0,
+        "facilitator": 0,
+        "reflector": 0,
+        "peer": 0,
+        "affiliative": 0
+      },
+      "confidence": 0.5,
+      "evidence": [],
+      "rationale": "The assistant has not yet responded, making its role unclear.",
+      "alternative": "facilitator"
+    },
+    "abstain": true
+  },
+  "classificationMetadata": {
+    "model": "gpt-4o-mini",
+    "provider": "openai",
+    "timestamp": "2025-12-22T16:51:27.175455",
+    "promptVersion": "1.1.0",
+    "processingTimeMs": 0
+  }
+}

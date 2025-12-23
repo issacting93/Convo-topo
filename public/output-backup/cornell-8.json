@@ -1,0 +1,148 @@
+{
+  "id": "cornell-8",
+  "messages": [
+    {
+      "role": "user",
+      "content": "You got something on your mind?",
+      "pad": {
+        "pleasure": 0.6,
+        "arousal": 0.4,
+        "dominance": 0.5,
+        "emotionalIntensity": 0.4
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "I counted on you to help my cause. You and that thug are obviously failing. Aren't we ever going on our date?",
+      "pad": {
+        "pleasure": 0.4,
+        "arousal": 0.6,
+        "dominance": 0.3,
+        "emotionalIntensity": 0.6
+      }
+    }
+  ],
+  "classification": {
+    "interactionPattern": {
+      "category": "casual-chat",
+      "confidence": 0.4,
+      "evidence": [
+        "You got something on your mind?",
+        "Aren't we ever going on our date?"
+      ],
+      "rationale": "The conversation has a casual tone with light exchanges.",
+      "alternative": "question-answer"
+    },
+    "powerDynamics": {
+      "category": "balanced",
+      "confidence": 0.4,
+      "evidence": [
+        "You got something on your mind?",
+        "I counted on you to help my cause."
+      ],
+      "rationale": "Both parties contribute to the dialogue without clear dominance.",
+      "alternative": "human-led"
+    },
+    "emotionalTone": {
+      "category": "playful",
+      "confidence": 0.5,
+      "evidence": [
+        "Aren't we ever going on our date?"
+      ],
+      "rationale": "The tone suggests a light-hearted interaction, though it is somewhat ambiguous.",
+      "alternative": "neutral"
+    },
+    "engagementStyle": {
+      "category": "reactive",
+      "confidence": 0.5,
+      "evidence": [
+        "You got something on your mind?",
+        "I counted on you to help my cause."
+      ],
+      "rationale": "Responses seem to follow the initial question without strong direction.",
+      "alternative": "questioning"
+    },
+    "knowledgeExchange": {
+      "category": "opinion-exchange",
+      "confidence": 0.5,
+      "evidence": [
+        "I counted on you to help my cause."
+      ],
+      "rationale": "The statements reflect personal views rather than factual information.",
+      "alternative": "personal-sharing"
+    },
+    "conversationPurpose": {
+      "category": "relationship-building",
+      "confidence": 0.5,
+      "evidence": [
+        "Aren't we ever going on our date?"
+      ],
+      "rationale": "The conversation appears to focus on social bonding.",
+      "alternative": "entertainment"
+    },
+    "turnTaking": {
+      "category": "balanced",
+      "confidence": 0.5,
+      "evidence": [
+        "You got something on your mind?",
+        "I counted on you to help my cause."
+      ],
+      "rationale": "Both participants have similar lengths in their contributions.",
+      "alternative": "user-dominant"
+    },
+    "humanRole": {
+      "distribution": {
+        "seeker": 0.5,
+        "learner": 0.0,
+        "director": 0.0,
+        "collaborator": 0.0,
+        "sharer": 0.0,
+        "challenger": 0.5
+      },
+      "confidence": 0.5,
+      "evidence": [
+        {
+          "role": "seeker",
+          "quote": "You got something on your mind?"
+        },
+        {
+          "role": "challenger",
+          "quote": "I counted on you to help my cause."
+        }
+      ],
+      "rationale": "The user is seeking information while also challenging the assistant's response.",
+      "alternative": null
+    },
+    "aiRole": {
+      "distribution": {
+        "expert": 0.0,
+        "advisor": 0.0,
+        "facilitator": 0.5,
+        "reflector": 0.0,
+        "peer": 0.5,
+        "affiliative": 0.0
+      },
+      "confidence": 0.5,
+      "evidence": [
+        {
+          "role": "facilitator",
+          "quote": "I counted on you to help my cause."
+        },
+        {
+          "role": "peer",
+          "quote": "Aren't we ever going on our date?"
+        }
+      ],
+      "rationale": "The assistant engages in a peer-like manner while facilitating the conversation.",
+      "alternative": null
+    },
+    "abstain": true
+  },
+  "classificationMetadata": {
+    "model": "gpt-4o-mini",
+    "provider": "openai",
+    "timestamp": "2025-12-22T16:39:58.632234",
+    "promptVersion": "1.1.0",
+    "processingTimeMs": 0
+  }
+}

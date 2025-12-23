@@ -1,0 +1,132 @@
+{
+  "id": "emo-nostalgic-1",
+  "messages": [
+    {
+      "role": "user",
+      "content": "I'm nearing 40 and I find myself thinking a lot about my teen years and early twenties. The friends I had then and the fun we had.",
+      "pad": {
+        "pleasure": 0.6,
+        "arousal": 0.4,
+        "dominance": 0.5,
+        "emotionalIntensity": 0.4
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "That is where I am still at, I am scared I will have regrets when I get older",
+      "pad": {
+        "pleasure": 0.5,
+        "arousal": 0.5,
+        "dominance": 0.4,
+        "emotionalIntensity": 0.5
+      }
+    },
+    {
+      "role": "user",
+      "content": "I don'",
+      "pad": {
+        "pleasure": 0.3,
+        "arousal": 0.2,
+        "dominance": 0.3,
+        "emotionalIntensity": 0.5
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "That is good, I am glad you have no regrets!",
+      "pad": {
+        "pleasure": 0.7,
+        "arousal": 0.3,
+        "dominance": 0.5,
+        "emotionalIntensity": 0.3
+      }
+    }
+  ],
+  "classification": {
+    "interactionPattern": {
+      "category": null,
+      "confidence": 0.0,
+      "evidence": [],
+      "rationale": "The conversation is too short to determine a clear interaction pattern.",
+      "alternative": null
+    },
+    "powerDynamics": {
+      "category": null,
+      "confidence": 0.0,
+      "evidence": [],
+      "rationale": "The conversation is too short to assess power dynamics.",
+      "alternative": null
+    },
+    "emotionalTone": {
+      "category": null,
+      "confidence": 0.0,
+      "evidence": [],
+      "rationale": "The emotional tone is unclear due to the brevity of the conversation.",
+      "alternative": null
+    },
+    "engagementStyle": {
+      "category": null,
+      "confidence": 0.0,
+      "evidence": [],
+      "rationale": "The engagement style cannot be determined from the limited exchange.",
+      "alternative": null
+    },
+    "knowledgeExchange": {
+      "category": null,
+      "confidence": 0.0,
+      "evidence": [],
+      "rationale": "There is insufficient content to classify knowledge exchange.",
+      "alternative": null
+    },
+    "conversationPurpose": {
+      "category": null,
+      "confidence": 0.0,
+      "evidence": [],
+      "rationale": "The purpose of the conversation is ambiguous.",
+      "alternative": null
+    },
+    "turnTaking": {
+      "category": null,
+      "confidence": 0.0,
+      "evidence": [],
+      "rationale": "Turn taking cannot be assessed due to the short length of the dialogue.",
+      "alternative": null
+    },
+    "humanRole": {
+      "distribution": {
+        "seeker": 0,
+        "learner": 0,
+        "director": 0,
+        "collaborator": 0,
+        "sharer": 0,
+        "challenger": 0
+      },
+      "confidence": 0.0,
+      "evidence": [],
+      "rationale": "No clear human role can be identified from the conversation.",
+      "alternative": null
+    },
+    "aiRole": {
+      "distribution": {
+        "expert": 0,
+        "advisor": 0,
+        "facilitator": 0,
+        "reflector": 0,
+        "peer": 0,
+        "affiliative": 0
+      },
+      "confidence": 0.0,
+      "evidence": [],
+      "rationale": "No clear AI role can be identified from the conversation.",
+      "alternative": null
+    },
+    "abstain": true
+  },
+  "classificationMetadata": {
+    "model": "gpt-4o-mini",
+    "provider": "openai",
+    "timestamp": "2025-12-22T16:46:21.293412",
+    "promptVersion": "1.1.0",
+    "processingTimeMs": 0
+  }
+}

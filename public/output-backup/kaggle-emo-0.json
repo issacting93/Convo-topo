@@ -1,0 +1,117 @@
+{
+  "id": "kaggle-emo-0",
+  "messages": [
+    {
+      "role": "user",
+      "content": "I remember going to see the fireworks with my best friend. It was the first time we ever spent time alone together. Although there was a lot of people, we felt like the only people in the world.",
+      "pad": {
+        "pleasure": 0.8,
+        "arousal": 0.5,
+        "dominance": 0.4,
+        "emotionalIntensity": 0.32
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "",
+      "pad": {
+        "pleasure": 0.0,
+        "arousal": 0.0,
+        "dominance": 0.0,
+        "emotionalIntensity": 0.6
+      }
+    }
+  ],
+  "classification": {
+    "interactionPattern": {
+      "category": null,
+      "confidence": 0.0,
+      "evidence": [],
+      "rationale": "The conversation is too short to determine a clear interaction pattern.",
+      "alternative": null
+    },
+    "powerDynamics": {
+      "category": null,
+      "confidence": 0.0,
+      "evidence": [],
+      "rationale": "Insufficient dialogue to assess power dynamics.",
+      "alternative": null
+    },
+    "emotionalTone": {
+      "category": null,
+      "confidence": 0.0,
+      "evidence": [],
+      "rationale": "The emotional tone cannot be determined from a single user statement.",
+      "alternative": null
+    },
+    "engagementStyle": {
+      "category": null,
+      "confidence": 0.0,
+      "evidence": [],
+      "rationale": "Not enough content to classify engagement style.",
+      "alternative": null
+    },
+    "knowledgeExchange": {
+      "category": null,
+      "confidence": 0.0,
+      "evidence": [],
+      "rationale": "No clear knowledge exchange evident in the brief exchange.",
+      "alternative": null
+    },
+    "conversationPurpose": {
+      "category": null,
+      "confidence": 0.0,
+      "evidence": [],
+      "rationale": "The purpose of the conversation is unclear due to limited context.",
+      "alternative": null
+    },
+    "turnTaking": {
+      "category": null,
+      "confidence": 0.0,
+      "evidence": [],
+      "rationale": "Turn-taking cannot be assessed with only one user turn.",
+      "alternative": null
+    },
+    "humanRole": {
+      "distribution": {
+        "seeker": 0.0,
+        "learner": 0.0,
+        "director": 0.0,
+        "collaborator": 0.0,
+        "sharer": 1.0,
+        "challenger": 0.0
+      },
+      "confidence": 0.5,
+      "evidence": [
+        {
+          "role": "sharer",
+          "quote": "I remember going to see the fireworks with my best friend."
+        }
+      ],
+      "rationale": "The user shares a personal narrative, but the classification is uncertain due to the short exchange.",
+      "alternative": "seeker"
+    },
+    "aiRole": {
+      "distribution": {
+        "expert": 0,
+        "advisor": 0,
+        "facilitator": 0,
+        "reflector": 0,
+        "peer": 0,
+        "affiliative": 0
+      },
+      "confidence": 0.5,
+      "evidence": [],
+      "rationale": "The AI has not yet responded, making it impossible to classify its role.",
+      "alternative": "facilitator"
+    },
+    "abstain": true
+  },
+  "classificationMetadata": {
+    "model": "gpt-4o-mini",
+    "provider": "openai",
+    "timestamp": "2025-12-22T16:49:15.704307",
+    "promptVersion": "1.1.0",
+    "processingTimeMs": 0
+  }
+}

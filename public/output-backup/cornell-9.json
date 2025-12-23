@@ -1,0 +1,138 @@
+{
+  "id": "cornell-9",
+  "messages": [
+    {
+      "role": "user",
+      "content": "You have my word.  As a gentleman",
+      "pad": {
+        "pleasure": 0.8,
+        "arousal": 0.4,
+        "dominance": 0.5,
+        "emotionalIntensity": 0.28
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "You're sweet.",
+      "pad": {
+        "pleasure": 0.9,
+        "arousal": 0.3,
+        "dominance": 0.4,
+        "emotionalIntensity": 0.18
+      }
+    }
+  ],
+  "classification": {
+    "interactionPattern": {
+      "category": "casual-chat",
+      "confidence": 0.4,
+      "evidence": [
+        "You're sweet."
+      ],
+      "rationale": "The exchange appears to be light and social without a specific goal.",
+      "alternative": "supportive"
+    },
+    "powerDynamics": {
+      "category": "balanced",
+      "confidence": 0.4,
+      "evidence": [
+        "You have my word.",
+        "You're sweet."
+      ],
+      "rationale": "Both parties contribute equally to the conversation.",
+      "alternative": "human-led"
+    },
+    "emotionalTone": {
+      "category": "supportive",
+      "confidence": 0.6,
+      "evidence": [
+        "You're sweet."
+      ],
+      "rationale": "The assistant's response is warm and affirming.",
+      "alternative": "playful"
+    },
+    "engagementStyle": {
+      "category": "affirming",
+      "confidence": 0.6,
+      "evidence": [
+        "You're sweet."
+      ],
+      "rationale": "The assistant affirms the user's statement.",
+      "alternative": "reactive"
+    },
+    "knowledgeExchange": {
+      "category": "personal-sharing",
+      "confidence": 0.5,
+      "evidence": [
+        "You have my word."
+      ],
+      "rationale": "The user shares a personal commitment, but it's ambiguous.",
+      "alternative": "opinion-exchange"
+    },
+    "conversationPurpose": {
+      "category": "relationship-building",
+      "confidence": 0.5,
+      "evidence": [
+        "You're sweet."
+      ],
+      "rationale": "The exchange seems aimed at building rapport, but is vague.",
+      "alternative": "entertainment"
+    },
+    "turnTaking": {
+      "category": "balanced",
+      "confidence": 0.5,
+      "evidence": [
+        "You have my word.",
+        "You're sweet."
+      ],
+      "rationale": "Both parties have similar lengths in their contributions.",
+      "alternative": "user-dominant"
+    },
+    "humanRole": {
+      "distribution": {
+        "seeker": 0.0,
+        "learner": 0.0,
+        "director": 0.0,
+        "collaborator": 0.0,
+        "sharer": 1.0,
+        "challenger": 0.0
+      },
+      "confidence": 0.5,
+      "evidence": [
+        {
+          "role": "sharer",
+          "quote": "You have my word."
+        }
+      ],
+      "rationale": "The user shares a personal commitment, indicating a desire for connection.",
+      "alternative": "seeker"
+    },
+    "aiRole": {
+      "distribution": {
+        "expert": 0.0,
+        "advisor": 0.0,
+        "facilitator": 0.0,
+        "reflector": 1.0,
+        "peer": 0.0,
+        "affiliative": 0.0
+      },
+      "confidence": 0.5,
+      "evidence": [
+        {
+          "role": "reflector",
+          "quote": "You're sweet."
+        }
+      ],
+      "rationale": "The assistant validates the user's statement, indicating a reflective role.",
+      "alternative": "affiliative"
+    },
+    "abstain": true
+  },
+  "classificationMetadata": {
+    "model": "gpt-4o-mini",
+    "provider": "openai",
+    "timestamp": "2025-12-22T16:40:14.162343",
+    "promptVersion": "1.1.0",
+    "processingTimeMs": 0
+  }
+}

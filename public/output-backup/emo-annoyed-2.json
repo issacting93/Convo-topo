@@ -1,0 +1,171 @@
+{
+  "id": "emo-annoyed-2",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Do you have any irritating coworkers?",
+      "pad": {
+        "pleasure": 0.5,
+        "arousal": 0.4,
+        "dominance": 0.5,
+        "emotionalIntensity": 0.46
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "Yes, I think that everyone does! What about you?",
+      "pad": {
+        "pleasure": 0.6,
+        "arousal": 0.5,
+        "dominance": 0.5,
+        "emotionalIntensity": 0.44
+      }
+    },
+    {
+      "role": "user",
+      "content": "yes a few that drive me nuts. the janitor is the worst",
+      "pad": {
+        "pleasure": 0.3,
+        "arousal": 0.6,
+        "dominance": 0.4,
+        "emotionalIntensity": 0.66
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "That's too bad. Our janitor is very friendly.",
+      "pad": {
+        "pleasure": 0.5,
+        "arousal": 0.3,
+        "dominance": 0.5,
+        "emotionalIntensity": 0.42
+      }
+    }
+  ],
+  "classification": {
+    "interactionPattern": {
+      "category": "casual-chat",
+      "confidence": 0.8,
+      "evidence": [
+        "Do you have any irritating coworkers?",
+        "yes a few that drive me nuts."
+      ],
+      "rationale": "The conversation involves light social exchange about coworkers without a specific goal.",
+      "alternative": "storytelling"
+    },
+    "powerDynamics": {
+      "category": "balanced",
+      "confidence": 0.7,
+      "evidence": [
+        "Do you have any irritating coworkers?",
+        "What about you?"
+      ],
+      "rationale": "Both parties contribute to the direction of the conversation.",
+      "alternative": "human-led"
+    },
+    "emotionalTone": {
+      "category": "supportive",
+      "confidence": 0.7,
+      "evidence": [
+        "That's too bad.",
+        "Our janitor is very friendly."
+      ],
+      "rationale": "The assistant responds with empathy and a positive remark.",
+      "alternative": "neutral"
+    },
+    "engagementStyle": {
+      "category": "reactive",
+      "confidence": 0.6,
+      "evidence": [
+        "What about you?",
+        "That's too bad."
+      ],
+      "rationale": "The assistant responds to the user's comments without strong direction.",
+      "alternative": "affirming"
+    },
+    "knowledgeExchange": {
+      "category": "personal-sharing",
+      "confidence": 0.8,
+      "evidence": [
+        "yes a few that drive me nuts.",
+        "the janitor is the worst"
+      ],
+      "rationale": "The user shares personal experiences about coworkers.",
+      "alternative": "opinion-exchange"
+    },
+    "conversationPurpose": {
+      "category": "relationship-building",
+      "confidence": 0.7,
+      "evidence": [
+        "Do you have any irritating coworkers?",
+        "yes a few that drive me nuts."
+      ],
+      "rationale": "The conversation aims to build rapport through shared experiences.",
+      "alternative": "casual-chat"
+    },
+    "turnTaking": {
+      "category": "balanced",
+      "confidence": 0.7,
+      "evidence": [
+        "Do you have any irritating coworkers?",
+        "That's too bad."
+      ],
+      "rationale": "Both parties have roughly equal contributions in length and content.",
+      "alternative": "user-dominant"
+    },
+    "humanRole": {
+      "distribution": {
+        "seeker": 0.5,
+        "learner": 0.0,
+        "director": 0.0,
+        "collaborator": 0.0,
+        "sharer": 0.5,
+        "challenger": 0.0
+      },
+      "confidence": 0.7,
+      "evidence": [
+        {
+          "role": "sharer",
+          "quote": "yes a few that drive me nuts."
+        },
+        {
+          "role": "seeker",
+          "quote": "Do you have any irritating coworkers?"
+        }
+      ],
+      "rationale": "The user shares personal experiences and seeks engagement from the assistant.",
+      "alternative": "learner"
+    },
+    "aiRole": {
+      "distribution": {
+        "expert": 0.0,
+        "advisor": 0.0,
+        "facilitator": 0.5,
+        "reflector": 0.5,
+        "peer": 0.0,
+        "affiliative": 0.0
+      },
+      "confidence": 0.7,
+      "evidence": [
+        {
+          "role": "facilitator",
+          "quote": "What about you?"
+        },
+        {
+          "role": "reflector",
+          "quote": "That's too bad."
+        }
+      ],
+      "rationale": "The assistant guides the conversation and reflects on the user's comments.",
+      "alternative": "peer"
+    },
+    "abstain": false
+  },
+  "classificationMetadata": {
+    "model": "gpt-4o-mini",
+    "provider": "openai",
+    "timestamp": "2025-12-22T16:42:32.692729",
+    "promptVersion": "1.1.0",
+    "processingTimeMs": 0
+  }
+}

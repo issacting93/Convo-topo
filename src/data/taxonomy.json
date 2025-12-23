@@ -66,6 +66,41 @@
             "phatic communion"
           ],
           "parent": "expression-oriented"
+        },
+        "failed-instruction": {
+          "definition": "Instructional interaction that fails to converge due to misalignment or non-understanding",
+          "signals": [
+            "Repeated clarification attempts",
+            "non-uptake by assistant",
+            "breakdown loop",
+            "no task completion",
+            "repeated 'I don't understand'"
+          ],
+          "parent": "breakdown",
+          "outcome": "failed"
+        },
+        "misalignment": {
+          "definition": "Interaction where participants fail to establish shared understanding or grounding",
+          "signals": [
+            "Repeated misunderstandings",
+            "failed grounding attempts",
+            "non-convergent repair attempts",
+            "language/cultural mismatch",
+            "conceptual gap"
+          ],
+          "parent": "breakdown",
+          "outcome": "failed"
+        },
+        "breakdown-loop": {
+          "definition": "Interaction stuck in repetitive failure cycle with no progress",
+          "signals": [
+            "Repeated identical failures",
+            "no resolution",
+            "escalating frustration",
+            "circular pattern"
+          ],
+          "parent": "breakdown",
+          "outcome": "failed"
         }
       }
     },
@@ -237,6 +272,43 @@
             "minimal initiative"
           ],
           "parent": "receptive"
+        },
+        "mirroring": {
+          "definition": "Reciprocal minimal responses that maintain conversational symmetry without validating or developing content",
+          "signals": [
+            "Echoing structure",
+            "mirrored phrasing",
+            "parallel minimal responses",
+            "structural reciprocity",
+            "no content elaboration"
+          ],
+          "parent": "receptive",
+          "nature": "structural-symmetry"
+        },
+        "corrective": {
+          "definition": "User repeatedly corrects, clarifies, or repairs misunderstandings or errors",
+          "signals": [
+            "Error corrections",
+            "repeated clarifications",
+            "constraint-setting",
+            "diagnostic questions",
+            "bug reporting",
+            "\"actually\", \"no\", \"that's wrong\""
+          ],
+          "parent": "reactive-repair",
+          "nature": "repair-focused"
+        },
+        "repairing": {
+          "definition": "Active repair work to establish shared understanding or fix breakdowns",
+          "signals": [
+            "Restatements",
+            "specifications",
+            "grounding attempts",
+            "clarification requests",
+            "reformulations"
+          ],
+          "parent": "reactive-repair",
+          "nature": "grounding-focused"
         }
       }
     },
@@ -298,6 +370,77 @@
           ],
           "parent": "experiential",
           "nature": "story-based-reflective"
+        },
+        "contested-knowledge": {
+          "definition": "Information that is disputed, corrected, or challenged by participants",
+          "signals": [
+            "User corrections",
+            "\"actually, that's wrong\"",
+            "\"no, it's...\"",
+            "explicit disagreement",
+            "factual disputes"
+          ],
+          "parent": "conceptual",
+          "nature": "disputed-verifiable"
+        },
+        "erroneous-factual": {
+          "definition": "Attempted factual information that is later revealed to be incorrect or fabricated",
+          "signals": [
+            "False claims later corrected",
+            "hallucinated information",
+            "retracted statements",
+            "admissions of error"
+          ],
+          "parent": "conceptual",
+          "nature": "false-verifiable"
+        },
+        "hallucinated-info": {
+          "definition": "Fabricated information presented as factual (specific to AI-generated content)",
+          "signals": [
+            "Claims about non-existent entities",
+            "fabricated citations",
+            "invented facts",
+            "later denied by same source"
+          ],
+          "parent": "conceptual",
+          "nature": "fabricated"
+        },
+        "failed-problem-solving": {
+          "definition": "Attempted problem-solving interaction where no solution is achieved or convergence occurs",
+          "signals": [
+            "Repeated attempts with no convergence",
+            "no solution produced",
+            "breakdown before completion",
+            "failed repair attempts"
+          ],
+          "parent": "attempted",
+          "nature": "non-resolving",
+          "outcome": "failed"
+        },
+        "instruction-failure": {
+          "definition": "Instructional exchange that fails to establish shared task representation or understanding",
+          "signals": [
+            "Non-understanding loops",
+            "failed repair attempts",
+            "no task completion",
+            "breakdown"
+          ],
+          "parent": "attempted",
+          "nature": "non-grounding",
+          "outcome": "failed"
+        },
+        "phatic": {
+          "definition": "Non-informational exchange focused on social contact maintenance rather than content",
+          "signals": [
+            "Minimal content",
+            "reciprocal minimal responses",
+            "\"ok\", \"yeah\", \"mhm\"",
+            "mirrored phrasing",
+            "no information development",
+            "social lubrication only"
+          ],
+          "parent": "relational",
+          "nature": "non-epistemic-maintenance"
         }
       }
     },
@@ -360,6 +503,29 @@
           ],
           "parent": "social",
           "motivation": "intrinsic"
+        },
+        "phatic-initiation": {
+          "definition": "Establishing or maintaining social contact without informational goal",
+          "signals": [
+            "Minimal content questions",
+            "no trajectory formation",
+            "conversation testing",
+            "contact establishment",
+            "social lubrication"
+          ],
+          "parent": "social",
+          "motivation": "intrinsic-relational"
+        },
+        "reliability-testing": {
+          "definition": "Testing the accuracy or trustworthiness of information source",
+          "signals": [
+            "Probing questions",
+            "corrections",
+            "verification attempts",
+            "challenging responses"
+          ],
+          "parent": "instrumental",
+          "motivation": "extrinsic-verification"
         }
       }
     },
@@ -446,41 +612,28 @@
       "isDistribution": true,
       "tags": {
         "seeker": {
-          "definition": "Requests information/clarification; primarily questions",
+          "definition": "Requests information, asks questions, tests understanding (merged seeker + learner)",
           "signals": [
             "\"what is\"",
             "\"can you explain\"",
-            "\"tell me about\""
-          ],
-          "parent": "information-oriented"
-        },
-        "learner": {
-          "definition": "Tests understanding, applies, verifies (\"so if…, then…\", \"does that mean…?\")",
-          "signals": [
+            "\"tell me about\"",
             "\"so if…, then…\"",
-            "\"does that mean…?\"",
-            "\"let me try\""
+            "\"does that mean…?\""
           ],
-          "parent": "information-oriented"
-        },
-        "director": {
-          "definition": "Specifies deliverables/constraints/formats/next actions (\"write a dev doc\", \"raw text\")",
-          "signals": [
-            "\"write a…\"",
-            "\"make it…\"",
-            "\"I need you to\"",
-            "format specs"
-          ],
-          "parent": "leadership-oriented"
+          "parent": "information-oriented",
+          "terrainPosition": 0.5
         },
         "collaborator": {
-          "definition": "Proposes alternatives/tradeoffs; co-builds iteratively",
+          "definition": "Proposes alternatives/tradeoffs; co-builds iteratively; specifies tasks (merged director)",
           "signals": [
             "\"what if we\"",
             "\"another option\"",
-            "building on AI's output"
+            "building on AI's output",
+            "\"write a…\"",
+            "format specs"
           ],
-          "parent": "leadership-oriented"
+          "parent": "leadership-oriented",
+          "terrainPosition": 0.75
         },
         "sharer": {
           "definition": "Personal narrative/context mainly for expression/relational framing",
@@ -489,7 +642,8 @@
             "\"I feel\"",
             "personal context not task-required"
           ],
-          "parent": "expression-oriented"
+          "parent": "expression-oriented",
+          "terrainPosition": 0.9
         },
         "challenger": {
           "definition": "Critiques/stress-tests claims; explicit pushback",
@@ -498,13 +652,12 @@
             "\"I disagree\"",
             "\"that's not right\""
           ],
-          "parent": "critical-oriented"
+          "parent": "critical-oriented",
+          "terrainPosition": 0.2
         }
       },
       "tieBreakers": [
-        "seeker vs learner: learner shows checking/applying; seeker is request-only",
-        "director vs seeker: director specifies deliverable/format constraints",
-        "director vs collaborator: collaborator contributes options/tradeoffs; director mainly commands",
+        "seeker vs collaborator: collaborator contributes options/tradeoffs/specifies tasks; seeker mainly requests",
         "sharer vs collaborator: sharer is personal/relational; collaborator is task input",
         "challenger overrides if dominant move is explicit pushback"
       ]
@@ -516,22 +669,17 @@
       "isDistribution": true,
       "tags": {
         "expert": {
-          "definition": "Explains/teaches/frames concepts; definitions; examples",
+          "definition": "Explains/teaches/frames concepts; prescribes steps/recommendations (merged expert + advisor)",
           "signals": [
             "Definitions",
             "\"this means\"",
-            "comprehensive explanations"
-          ],
-          "parent": "knowledge-oriented"
-        },
-        "advisor": {
-          "definition": "Prescribes steps/recommendations (\"do X then Y\")",
-          "signals": [
+            "comprehensive explanations",
             "\"I suggest\"",
             "\"you should\"",
             "\"try doing X then Y\""
           ],
-          "parent": "knowledge-oriented"
+          "parent": "knowledge-oriented",
+          "terrainPosition": 0.25
         },
         "facilitator": {
           "definition": "Guides via questions/scaffolding/options rather than prescribing",
@@ -540,7 +688,8 @@
             "\"have you considered\"",
             "offering choices"
           ],
-          "parent": "collaborative-oriented"
+          "parent": "collaborative-oriented",
+          "terrainPosition": 0.75
         },
         "reflector": {
           "definition": "Paraphrases/validates/invites elaboration (\"it sounds like…\", \"that makes sense…\")",
@@ -549,7 +698,8 @@
             "\"that makes sense…\"",
             "\"tell me more\""
           ],
-          "parent": "support-oriented"
+          "parent": "support-oriented",
+          "terrainPosition": 0.5
         },
         "peer": {
           "definition": "Brainstorms alongside with low-authority tone (\"we could…\")",
@@ -558,23 +708,14 @@
             "\"maybe…\"",
             "collaborative speculation"
           ],
-          "parent": "collaborative-oriented"
-        },
-        "affiliative": {
-          "definition": "Warmth/encouragement/rapport not required for task completion",
-          "signals": [
-            "\"great job!\"",
-            "personal warmth",
-            "social pleasantries beyond task"
-          ],
-          "parent": "support-oriented"
+          "parent": "collaborative-oriented",
+          "terrainPosition": 0.9
         }
       },
       "tieBreakers": [
-        "expert vs advisor: expert explains concepts; advisor prescribes actions",
+        "expert vs facilitator: expert explains/prescribes; facilitator offers structure/options without prescribing",
         "facilitator vs reflector: facilitator offers structure/options; reflector mirrors/validates",
-        "peer vs facilitator: peer is speculative/equal; facilitator guides with intent",
-        "affiliative is additive—can co-occur with others but only dominant if warmth > task content"
+        "peer vs facilitator: peer is speculative/equal; facilitator guides with intent"
       ]
     }
   }

@@ -1,0 +1,172 @@
+{
+  "id": "emo-proud-1",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Hi how are you doing today",
+      "pad": {
+        "pleasure": 0.6,
+        "arousal": 0.3,
+        "dominance": 0.5,
+        "emotionalIntensity": 0.36
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "doing good.. how about you",
+      "pad": {
+        "pleasure": 0.6,
+        "arousal": 0.3,
+        "dominance": 0.5,
+        "emotionalIntensity": 0.36
+      }
+    },
+    {
+      "role": "user",
+      "content": "Im good, trying to understand how someone can feel like hitting a blank wall when they see the darkness",
+      "pad": {
+        "pleasure": 0.4,
+        "arousal": 0.5,
+        "dominance": 0.4,
+        "emotionalIntensity": 0.56
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "it's quite strange that you didnt imagine it",
+      "pad": {
+        "pleasure": 0.5,
+        "arousal": 0.4,
+        "dominance": 0.4,
+        "emotionalIntensity": 0.46
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "i dont imagine feeling a lot, maybe your on to something",
+      "pad": {
+        "pleasure": 0.5,
+        "arousal": 0.4,
+        "dominance": 0.4,
+        "emotionalIntensity": 0.46
+      }
+    }
+  ],
+  "classification": {
+    "interactionPattern": {
+      "category": "casual-chat",
+      "confidence": 0.8,
+      "evidence": [
+        "Hi how are you doing today",
+        "Im good, trying to understand how someone can feel like hitting a blank wall when they see the darkness"
+      ],
+      "rationale": "The conversation exchanges greetings and personal reflections without a specific goal.",
+      "alternative": "storytelling"
+    },
+    "powerDynamics": {
+      "category": "balanced",
+      "confidence": 0.7,
+      "evidence": [
+        "Hi how are you doing today",
+        "doing good.. how about you"
+      ],
+      "rationale": "Both parties contribute to the conversation equally.",
+      "alternative": "human-led"
+    },
+    "emotionalTone": {
+      "category": "neutral",
+      "confidence": 0.6,
+      "evidence": [
+        "it's quite strange that you didnt imagine it",
+        "i dont imagine feeling a lot"
+      ],
+      "rationale": "The tone is factual and lacks strong emotional coloring.",
+      "alternative": "serious"
+    },
+    "engagementStyle": {
+      "category": "reactive",
+      "confidence": 0.7,
+      "evidence": [
+        "doing good.. how about you",
+        "i dont imagine feeling a lot"
+      ],
+      "rationale": "Responses are made without strong direction or probing.",
+      "alternative": "questioning"
+    },
+    "knowledgeExchange": {
+      "category": "opinion-exchange",
+      "confidence": 0.7,
+      "evidence": [
+        "trying to understand how someone can feel like hitting a blank wall",
+        "maybe your on to something"
+      ],
+      "rationale": "The conversation revolves around personal interpretations and feelings.",
+      "alternative": "experience-sharing"
+    },
+    "conversationPurpose": {
+      "category": "self-expression",
+      "confidence": 0.7,
+      "evidence": [
+        "trying to understand how someone can feel like hitting a blank wall"
+      ],
+      "rationale": "The user expresses thoughts and feelings without seeking specific information.",
+      "alternative": "relationship-building"
+    },
+    "turnTaking": {
+      "category": "balanced",
+      "confidence": 0.8,
+      "evidence": [
+        "Hi how are you doing today",
+        "doing good.. how about you"
+      ],
+      "rationale": "Turns are roughly equal in length and contribution.",
+      "alternative": "user-dominant"
+    },
+    "humanRole": {
+      "distribution": {
+        "seeker": 0.5,
+        "learner": 0.0,
+        "director": 0.0,
+        "collaborator": 0.5,
+        "sharer": 0.0,
+        "challenger": 0.0
+      },
+      "confidence": 0.7,
+      "evidence": [
+        {
+          "role": "seeker",
+          "quote": "trying to understand how someone can feel like hitting a blank wall"
+        }
+      ],
+      "rationale": "The user seeks understanding and shares thoughts, indicating a dual role as seeker and collaborator.",
+      "alternative": null
+    },
+    "aiRole": {
+      "distribution": {
+        "expert": 0.5,
+        "advisor": 0.0,
+        "facilitator": 0.5,
+        "reflector": 0.0,
+        "peer": 0.0,
+        "affiliative": 0.0
+      },
+      "confidence": 0.7,
+      "evidence": [
+        {
+          "role": "expert",
+          "quote": "maybe your on to something"
+        }
+      ],
+      "rationale": "The assistant provides insights and engages with the user's reflections, acting as both an expert and facilitator.",
+      "alternative": null
+    },
+    "abstain": false
+  },
+  "classificationMetadata": {
+    "model": "gpt-4o-mini",
+    "provider": "openai",
+    "timestamp": "2025-12-22T16:46:55.751449",
+    "promptVersion": "1.1.0",
+    "processingTimeMs": 0
+  }
+}

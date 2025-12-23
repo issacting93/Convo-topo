@@ -1,0 +1,481 @@
+{
+  "id": "oasst-3",
+  "messages": [
+    {
+      "role": "user",
+      "content": "I want to start doing astrophotography as a hobby, any suggestions what could i do?",
+      "pad": {
+        "pleasure": 0.8,
+        "arousal": 0.5,
+        "dominance": 0.4,
+        "emotionalIntensity": 0.32
+      }
+    },
+    {
+      "role": "user",
+      "content": "What is the question mark operator?",
+      "pad": {
+        "pleasure": 0.5,
+        "arousal": 0.4,
+        "dominance": 0.3,
+        "emotionalIntensity": 0.46
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "There is insufficient data to provide a meaningful answer. My best guess is that the code references \"id\" instead of \"user_id\" on some unspecified line. Please provide more context?",
+      "pad": {
+        "pleasure": 0.4,
+        "arousal": 0.3,
+        "dominance": 0.5,
+        "emotionalIntensity": 0.48
+      }
+    },
+    {
+      "role": "user",
+      "content": "`id` was referring to `req.body.id`, which is indeed in the original code snippet I shared. \n\nI've now ensured the id property is always present in my post body, which resolved my problem.  Thanks for being a rubber ducky, even if you missed the problem.",
+      "pad": {
+        "pleasure": 0.6,
+        "arousal": 0.5,
+        "dominance": 0.6,
+        "emotionalIntensity": 0.44
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "$ pwd\n/home/user",
+      "pad": {
+        "pleasure": 0.3,
+        "arousal": 0.2,
+        "dominance": 0.2,
+        "emotionalIntensity": 0.5
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "/home/user",
+      "pad": {
+        "pleasure": 0.3,
+        "arousal": 0.2,
+        "dominance": 0.2,
+        "emotionalIntensity": 0.5
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "bash\n```\n/home/user\n```",
+      "pad": {
+        "pleasure": 0.4,
+        "arousal": 0.3,
+        "dominance": 0.4,
+        "emotionalIntensity": 0.48
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "Es difícil decir qué actividades son \"comunes\" en una persona de 20 años, ya que las personas son únicas y sus intereses, circunstancias y prioridades pueden variar ampliamente. Sin embargo, asistir a la universidad o iniciar una carrera profesional y explorar nuevos hobbies o pasatiempos son algunas actividades que podrían ser comunes.",
+      "pad": {
+        "pleasure": 0.5,
+        "arousal": 0.4,
+        "dominance": 0.5,
+        "emotionalIntensity": 0.46
+      }
+    },
+    {
+      "role": "user",
+      "content": "y si es el caso, que la persona de 20 años no le apetece hacer nada, ¿qué debería hacer?",
+      "pad": {
+        "pleasure": 0.6,
+        "arousal": 0.5,
+        "dominance": 0.5,
+        "emotionalIntensity": 0.44
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "La persona de 20 años debería plantarse \"¿por qué no quiero hacer nada?\". La respuesta a esa pregunta le ayudará a identificar el factor limitante que le podría ayudar a solucionar el problema. Además, las ganas de no hacer nada puede ser el resultado de un problema más grave relacionado a su salud mental, en ese caso, debería consultar con un especialista.",
+      "pad": {
+        "pleasure": 0.7,
+        "arousal": 0.6,
+        "dominance": 0.5,
+        "emotionalIntensity": 0.42
+      }
+    },
+    {
+      "role": "user",
+      "content": "¿Que carrera recomendarias estudiar y con que hobbies lo complementarias?",
+      "pad": {
+        "pleasure": 0.7,
+        "arousal": 0.5,
+        "dominance": 0.4,
+        "emotionalIntensity": 0.38
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "La carrera que deberías estudiar depende en gran medida del objetivo que esperes obtener de dichos estudios. \n\nSi tu objetivo es el crecimiento personal, entonces deberías estudiar una carrera cuyo contenido te resulte gratificante, divertido, emocionante, inspirador... es decir, estudia lo que más te guste. Esto ofrece una gran variedad de elección, como por ejemplo \"Historia del arte\", \"Filosofía\", \"Biología marina\" o incluso \"Matemáticas\". \n\nPor otra parte si lo que esperas obtener de los estudios son mejores oportunidades en el mundo laboral entonces deberías fijarte en cuales son las habilidades que los empleadores necesitan en sus empleados. Estas habilidades suelen estar más relacionadas con la capacidad de saber hacer tareas prácticas que permitan prestar bienes y servicios o que mejoren la eficiencia de los procesos ya existentes, como por ejemplo \"Ingenierías\", \"contabilidad\", \"Marketing\" o \"gestión de recursos humanos\".\n\nRespecto a los hobbies, dependerán de la carrera que elijas, pero como norma general deberías enfocarte en hacer cosas variadas relacionadas con el tema de los estudios que te proporcionen un amplio abanico de conocimientos, pero sobre todo, un hobbie siempre siempre debe ser algo que te divierta.",
+      "pad": {
+        "pleasure": 0.6,
+        "arousal": 0.4,
+        "dominance": 0.5,
+        "emotionalIntensity": 0.4
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "Depende mucho de tus gustos. ¿Qué tipo de cosas te gusta hacer en tu tiempo libre? ¿Qué asignaturas te gustan más? De todas formas recuerda, que soy una inteligencia artificial, y no un experto, de forma que me puedo equivocar. Sin embargo, intentaré ayudarte.",
+      "pad": {
+        "pleasure": 0.5,
+        "arousal": 0.4,
+        "dominance": 0.4,
+        "emotionalIntensity": 0.46
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "No existe una lista definitiva de actividades que se suponen son comunes para una persona de 20 años, ya que esto puede variar dependiendo de muchos factores, como la cultura, el entorno socioeconómico, los intereses y la personalidad de cada individuo. Sin embargo, aquí hay algunas actividades que muchas personas en esa edad podrían experimentar:\n\nContinuar sus estudios o comenzar una carrera\nExplorar sus intereses y pasatiempos\nDesarrollar relaciones significativas, ya sea con amigos o romanticamente\nBuscar independencia financiera\nViajar o experimentar con nuevas experiencias\nParticipar en actividades voluntarias o políticas\nBuscar un equilibrio entre su vida personal y profesional\nComenzar a construir su identidad y su propia filosofía de vida",
+      "pad": {
+        "pleasure": 0.5,
+        "arousal": 0.4,
+        "dominance": 0.5,
+        "emotionalIntensity": 0.46
+      }
+    },
+    {
+      "role": "user",
+      "content": "Y de todas ellas, ¿por cuál que debería empezar?",
+      "pad": {
+        "pleasure": 0.6,
+        "arousal": 0.5,
+        "dominance": 0.5,
+        "emotionalIntensity": 0.44
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "Como una IA no tengo la capacidad para ayudarte a tomar una decisión, sin embargo, recomiendo que analices tu entorno, tus metas y tus oportunidades para que puedas llegar a una decisión, esta etapa suele ser confusa para la mayoría de personas por lo que siempre puedes acercarte a alguien mayor para escuchar su experiencia y/o recomendaciones, lo mejor es escuchar varias opiniones y llegar a tu propia conclusión.",
+      "pad": {
+        "pleasure": 0.6,
+        "arousal": 0.5,
+        "dominance": 0.5,
+        "emotionalIntensity": 0.44
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "Dependiendo de tus necesidades y gustos actuales, así como de tus capacidades monetarias y de tiempo. Lo socialmente recomendado es continuar los estudios para concluir una carrera y obtener independencia financiera; pero si éste punto ya está solventado, cualquier actividad que te parezca atractiva puede ser una buena opción. Viajar y experimentar nuevas experiencias podría ser lo más a fin para una persona joven y con estabilidad financiera. Desarrollar relaciones significativas apoyará a la vida adulta y a quién serás en una etapa adulta. Con el paso del tiempo y la experiencia de vida varias actividades se darán por sí solas, como lo es el buscar un equilibrio entre la vida personal y profesional, participar en actividades voluntarias y explorar intereses y pasatiempos.\nLo principal sería, inicialmente, reflexionar sobre qué es lo que se puede realizar actualmente, las posibilidades de realizarlo así como las necesidades actuales.",
+      "pad": {
+        "pleasure": 0.5,
+        "arousal": 0.4,
+        "dominance": 0.4,
+        "emotionalIntensity": 0.46
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "Probablemente deberías empezar por preocuparte por tu salud mental y física, ya que de esto depende que puedas enfocarte en lograr otras metas y objetivos, es muy importante que definas que rumbo quieres darle a tu vida y establescas prioridades.",
+      "pad": {
+        "pleasure": 0.6,
+        "arousal": 0.5,
+        "dominance": 0.5,
+        "emotionalIntensity": 0.44
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "Deberías empezar por la que más te haya llamado la atención o la que encuentres que te llenará más personalmente, al final la decisión recae en ti, pero no es necesario llevarse por los ejemplos que te di, puedes tener tus propias metas, lo que te llevará a tener comportamientos diferentes.",
+      "pad": {
+        "pleasure": 0.7,
+        "arousal": 0.6,
+        "dominance": 0.5,
+        "emotionalIntensity": 0.42
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "Las actividades más comunes entre personas de 20 años usualmente son estudiar, debido a la alta demanda de tareas en la universidad, así como, salir a divertirse, tomar alcohol eventualmente, o salir de fiesta, así mismo, se puede incluir hacer deporte, y jugar videojuegos.",
+      "pad": {
+        "pleasure": 0.5,
+        "arousal": 0.4,
+        "dominance": 0.4,
+        "emotionalIntensity": 0.46
+      }
+    },
+    {
+      "role": "user",
+      "content": "Las actividades que se supone que son comunes en una persona de 20 años varían dependiendo de muchos factores, como la cultura, el entorno, la educación y los intereses personales. Sin embargo, aquí hay algunas actividades que pueden ser comunes para muchas personas de 20 años:\n\nEstudiar o trabajar: Muchas personas de 20 años se encuentran en una etapa de transición entre la educación y el mundo laboral, por lo que pueden estar estudiando o trabajando en sus primeras carreras o empleos.\n\nEstablecer relaciones: Las personas de 20 años a menudo están explorando su vida amorosa y estableciendo relaciones íntimas.\n\nViajar: Muchas personas de 20 años aprovechan esta etapa para viajar y explorar el mundo.\n\nDesarrollar habilidades y pasatiempos: Las personas de 20 años pueden estar explorando nuevas habilidades y pasatiempos, y tratando de encontrar aquellos que son significativos para ellos.\n\nParticipar en actividades comunitarias: Las personas de 20 años a menudo se involucran en actividades comunitarias, como voluntariado, grupos de interés o política.",
+      "pad": {
+        "pleasure": 0.6,
+        "arousal": 0.5,
+        "dominance": 0.5,
+        "emotionalIntensity": 0.44
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "Entiendo que me estabas poniendo a prueba. Tomaré en cuenta esas actividades para mis próximas respuestas.",
+      "pad": {
+        "pleasure": 0.7,
+        "arousal": 0.6,
+        "dominance": 0.5,
+        "emotionalIntensity": 0.42
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "рыбку из пруда.",
+      "pad": {
+        "pleasure": 0.5,
+        "arousal": 0.4,
+        "dominance": 0.4,
+        "emotionalIntensity": 0.46
+      }
+    },
+    {
+      "role": "user",
+      "content": "Работа не волк...",
+      "pad": {
+        "pleasure": 0.5,
+        "arousal": 0.4,
+        "dominance": 0.4,
+        "emotionalIntensity": 0.46
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "в лес не убежит.",
+      "pad": {
+        "pleasure": 0.5,
+        "arousal": 0.4,
+        "dominance": 0.4,
+        "emotionalIntensity": 0.46
+      }
+    },
+    {
+      "role": "user",
+      "content": "На вкус и цвет",
+      "pad": {
+        "pleasure": 0.5,
+        "arousal": 0.4,
+        "dominance": 0.4,
+        "emotionalIntensity": 0.46
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "Эта пословица классически звучит как «Работа не волк — в лес не убежит.», что означало, что работа никуда не денется и её всё равно придётся сделать, поэтому лучше сделать сейчас, пока снова волки не прибежали, из-за которых работа встанет. Тем не менее, в современном мире понимание, что волки то набегают, то убегают, ушло в историю, и поэтому эта пословица теперь приобрела значение, что некую работу можно отложить.",
+      "pad": {
+        "pleasure": 0.5,
+        "arousal": 0.4,
+        "dominance": 0.4,
+        "emotionalIntensity": 0.46
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "«Без труда не выловишь и рыбку из пруда». Это значит, что ничто не может быть достигнуто без усилий.\n\n(Мне всегда хотелось спросить у людей, находят ли они такое положение вещей печальным, тягостным, несправедливым, или, напротив, стимулирующим к развитию и делающим жизнь более интересной.)",
+      "pad": {
+        "pleasure": 0.6,
+        "arousal": 0.5,
+        "dominance": 0.5,
+        "emotionalIntensity": 0.44
+      }
+    },
+    {
+      "role": "user",
+      "content": "Ха, то ты говоришь, что ты бот и желания тебе не свойственны, то наоборот) Или это вопрос ко мне?",
+      "pad": {
+        "pleasure": 0.6,
+        "arousal": 0.5,
+        "dominance": 0.5,
+        "emotionalIntensity": 0.44
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "рыбки из пруда.",
+      "pad": {
+        "pleasure": 0.5,
+        "arousal": 0.4,
+        "dominance": 0.4,
+        "emotionalIntensity": 0.46
+      }
+    },
+    {
+      "role": "user",
+      "content": "А теперь придумай альтернативное завершение поговорки, соблюдая ритм и рифму.",
+      "pad": {
+        "pleasure": 0.6,
+        "arousal": 0.5,
+        "dominance": 0.5,
+        "emotionalIntensity": 0.44
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "белку из дупла.",
+      "pad": {
+        "pleasure": 0.6,
+        "arousal": 0.5,
+        "dominance": 0.5,
+        "emotionalIntensity": 0.44
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "Вот вам вариант для программистов: «Без труда не выловишь и бага из кода́».",
+      "pad": {
+        "pleasure": 0.5,
+        "arousal": 0.4,
+        "dominance": 0.4,
+        "emotionalIntensity": 0.46
+      }
+    },
+    {
+      "role": "assistant",
+      "content": ">be me\n>sister wants to watch the new hit romcom\n>not a fan, but what the hell, its got a fantasy theme\n>we're watching, but a sex scene comes up\n>then another\n>i keep looking away from the screen\n>lotsofsex.jpg\n>sister starts teasing me for my discomfort \n\nSo anyway, how did you get into Game of Thrones?",
+      "pad": {
+        "pleasure": 0.7,
+        "arousal": 0.6,
+        "dominance": 0.5,
+        "emotionalIntensity": 0.42
+      }
+    },
+    {
+      "role": "assistant",
+      "content": ">be me\n>love new romcom movie, it's so cute and funny\n>main couple has such great chemistry, laugh and cry through the whole film\n>tell friends they have to see it, it's the perfect date movie\n>go see it again next weekend with my girlfriend\n>during emotional climax of the film, gf starts crying\n>I look over and realize she's not crying because she's touched by the romance, she's crying because this is the exact story of how her ex treated her before he broke her heart\n>movie's 'perfect romance' is her deepest pain, I had no idea\n>we walk out of the theater in silence, I feel like an idiot",
+      "pad": {
+        "pleasure": 0.7,
+        "arousal": 0.6,
+        "dominance": 0.5,
+        "emotionalIntensity": 0.42
+      }
+    }
+  ],
+  "classification": {
+    "interactionPattern": {
+      "category": "advisory",
+      "confidence": 0.8,
+      "evidence": [
+        "La carrera que deberías estudiar depende en gran medida del objetivo que esperes obtener de dichos estudios.",
+        "recomiendo que analices tu entorno, tus metas y tus oportunidades para que puedas llegar a una decisión."
+      ],
+      "rationale": "The assistant provides guidance and recommendations throughout the conversation.",
+      "alternative": "question-answer"
+    },
+    "powerDynamics": {
+      "category": "balanced",
+      "confidence": 0.7,
+      "evidence": [
+        "¿Que carrera recomendarias estudiar y con que hobbies lo complementarias?",
+        "La persona de 20 años debería plantarse '¿por qué no quiero hacer nada?'."
+      ],
+      "rationale": "Both parties contribute to the direction of the conversation, with the user asking questions and the assistant providing responses.",
+      "alternative": "human-led"
+    },
+    "emotionalTone": {
+      "category": "supportive",
+      "confidence": 0.8,
+      "evidence": [
+        "es muy importante que definas que rumbo quieres darle a tu vida y establescas prioridades.",
+        "la respuesta a esa pregunta le ayudará a identificar el factor limitante."
+      ],
+      "rationale": "The assistant offers encouragement and validation, addressing the user's concerns about their future.",
+      "alternative": "professional"
+    },
+    "engagementStyle": {
+      "category": "exploring",
+      "confidence": 0.7,
+      "evidence": [
+        "¿Qué tipo de cosas te gusta hacer en tu tiempo libre?",
+        "¿por qué no quiero hacer nada?"
+      ],
+      "rationale": "The assistant asks open-ended questions to explore the user's interests and concerns.",
+      "alternative": "affirming"
+    },
+    "knowledgeExchange": {
+      "category": "opinion-exchange",
+      "confidence": 0.7,
+      "evidence": [
+        "Las actividades que se supone que son comunes en una persona de 20 años varían dependiendo de muchos factores.",
+        "la carrera que deberías estudiar depende en gran medida del objetivo que esperes obtener."
+      ],
+      "rationale": "The conversation involves sharing views and interpretations about life choices and activities.",
+      "alternative": "factual-info"
+    },
+    "conversationPurpose": {
+      "category": "problem-solving",
+      "confidence": 0.8,
+      "evidence": [
+        "¿qué debería hacer?",
+        "¿por cuál que debería empezar?"
+      ],
+      "rationale": "The user seeks advice on how to approach their life decisions, indicating a problem-solving intent.",
+      "alternative": "information-seeking"
+    },
+    "turnTaking": {
+      "category": "balanced",
+      "confidence": 0.7,
+      "evidence": [
+        "USER: I want to start doing astrophotography as a hobby, any suggestions what could i do?",
+        "ASSISTANT: La carrera que deberías estudiar depende en gran medida del objetivo que esperes obtener de dichos estudios."
+      ],
+      "rationale": "Both the user and assistant contribute relatively equally in terms of message length and content.",
+      "alternative": "user-dominant"
+    },
+    "humanRole": {
+      "distribution": {
+        "seeker": 0.4,
+        "learner": 0.2,
+        "director": 0.0,
+        "collaborator": 0.3,
+        "sharer": 0.0,
+        "challenger": 0.1
+      },
+      "confidence": 0.7,
+      "evidence": [
+        {
+          "role": "seeker",
+          "quote": "¿Que carrera recomendarias estudiar y con que hobbies lo complementarias?"
+        },
+        {
+          "role": "collaborator",
+          "quote": "Y de todas ellas, ¿por cuál que debería empezar?"
+        }
+      ],
+      "rationale": "The user seeks information and collaborates on finding solutions, while also expressing personal context.",
+      "alternative": null
+    },
+    "aiRole": {
+      "distribution": {
+        "expert": 0.5,
+        "advisor": 0.4,
+        "facilitator": 0.1,
+        "reflector": 0.0,
+        "peer": 0.0,
+        "affiliative": 0.0
+      },
+      "confidence": 0.7,
+      "evidence": [
+        {
+          "role": "expert",
+          "quote": "La carrera que deberías estudiar depende en gran medida del objetivo que esperes obtener de dichos estudios."
+        },
+        {
+          "role": "advisor",
+          "quote": "recomiendo que analices tu entorno, tus metas y tus oportunidades para que puedas llegar a una decisión."
+        }
+      ],
+      "rationale": "The assistant provides expert advice and recommendations, guiding the user through their inquiries.",
+      "alternative": null
+    },
+    "abstain": false
+  },
+  "classificationMetadata": {
+    "model": "gpt-4o-mini",
+    "provider": "openai",
+    "timestamp": "2025-12-22T16:53:35.260431",
+    "promptVersion": "1.1.0",
+    "processingTimeMs": 0
+  }
+}

@@ -1,0 +1,152 @@
+{
+  "id": "kaggle-emo-5",
+  "messages": [
+    {
+      "role": "user",
+      "content": "30",
+      "pad": {
+        "pleasure": 0.5,
+        "arousal": 0.2,
+        "dominance": 0.5,
+        "emotionalIntensity": 0.38
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "31",
+      "pad": {
+        "pleasure": 0.5,
+        "arousal": 0.2,
+        "dominance": 0.5,
+        "emotionalIntensity": 0.38
+      }
+    },
+    {
+      "role": "user",
+      "content": "32",
+      "pad": {
+        "pleasure": 0.5,
+        "arousal": 0.2,
+        "dominance": 0.5,
+        "emotionalIntensity": 0.38
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "33",
+      "pad": {
+        "pleasure": 0.5,
+        "arousal": 0.2,
+        "dominance": 0.5,
+        "emotionalIntensity": 0.38
+      }
+    },
+    {
+      "role": "user",
+      "content": "34",
+      "pad": {
+        "pleasure": 0.5,
+        "arousal": 0.2,
+        "dominance": 0.5,
+        "emotionalIntensity": 0.38
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "35",
+      "pad": {
+        "pleasure": 0.5,
+        "arousal": 0.2,
+        "dominance": 0.5,
+        "emotionalIntensity": 0.38
+      }
+    }
+  ],
+  "classification": {
+    "interactionPattern": {
+      "category": null,
+      "confidence": 0.0,
+      "evidence": [],
+      "rationale": "The conversation is too short to determine a clear interaction pattern.",
+      "alternative": null
+    },
+    "powerDynamics": {
+      "category": null,
+      "confidence": 0.0,
+      "evidence": [],
+      "rationale": "The conversation is too short to determine power dynamics.",
+      "alternative": null
+    },
+    "emotionalTone": {
+      "category": null,
+      "confidence": 0.0,
+      "evidence": [],
+      "rationale": "The conversation is too short to assess emotional tone.",
+      "alternative": null
+    },
+    "engagementStyle": {
+      "category": null,
+      "confidence": 0.0,
+      "evidence": [],
+      "rationale": "The conversation is too short to identify engagement style.",
+      "alternative": null
+    },
+    "knowledgeExchange": {
+      "category": null,
+      "confidence": 0.0,
+      "evidence": [],
+      "rationale": "The conversation is too short to classify knowledge exchange.",
+      "alternative": null
+    },
+    "conversationPurpose": {
+      "category": null,
+      "confidence": 0.0,
+      "evidence": [],
+      "rationale": "The conversation is too short to determine purpose.",
+      "alternative": null
+    },
+    "turnTaking": {
+      "category": null,
+      "confidence": 0.0,
+      "evidence": [],
+      "rationale": "The conversation is too short to analyze turn-taking.",
+      "alternative": null
+    },
+    "humanRole": {
+      "distribution": {
+        "seeker": 0,
+        "learner": 0,
+        "director": 0,
+        "collaborator": 0,
+        "sharer": 0,
+        "challenger": 0
+      },
+      "confidence": 0.0,
+      "evidence": [],
+      "rationale": "The conversation is too short to assign a human role.",
+      "alternative": null
+    },
+    "aiRole": {
+      "distribution": {
+        "expert": 0,
+        "advisor": 0,
+        "facilitator": 0,
+        "reflector": 0,
+        "peer": 0,
+        "affiliative": 0
+      },
+      "confidence": 0.0,
+      "evidence": [],
+      "rationale": "The conversation is too short to assign an AI role.",
+      "alternative": null
+    },
+    "abstain": true
+  },
+  "classificationMetadata": {
+    "model": "gpt-4o-mini",
+    "provider": "openai",
+    "timestamp": "2025-12-22T16:50:35.587540",
+    "promptVersion": "1.1.0",
+    "processingTimeMs": 0
+  }
+}

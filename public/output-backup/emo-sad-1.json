@@ -1,0 +1,170 @@
+{
+  "id": "emo-sad-1",
+  "messages": [
+    {
+      "role": "user",
+      "content": "During christmas a few years ago, I did not get any presents.",
+      "pad": {
+        "pleasure": 0.2,
+        "arousal": 0.3,
+        "dominance": 0.4,
+        "emotionalIntensity": 0.6
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "Wow, that must be terrible, I cannot imagine, I lvoe christmas",
+      "pad": {
+        "pleasure": 0.4,
+        "arousal": 0.5,
+        "dominance": 0.3,
+        "emotionalIntensity": 0.56
+      }
+    },
+    {
+      "role": "user",
+      "content": "Since that day christmas has not been a good time for me. As I have no family, christmas is always the worst.",
+      "pad": {
+        "pleasure": 0.1,
+        "arousal": 0.4,
+        "dominance": 0.2,
+        "emotionalIntensity": 0.7
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "Wow, I am sorry to hear that, I wish I could make it a better holiday for you!",
+      "pad": {
+        "pleasure": 0.5,
+        "arousal": 0.3,
+        "dominance": 0.5,
+        "emotionalIntensity": 0.42
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "Some days are just days that you never forget. I wish you could as well.",
+      "pad": {
+        "pleasure": 0.3,
+        "arousal": 0.2,
+        "dominance": 0.4,
+        "emotionalIntensity": 0.5
+      }
+    }
+  ],
+  "classification": {
+    "interactionPattern": {
+      "category": "storytelling",
+      "confidence": 0.8,
+      "evidence": [
+        "During christmas a few years ago, I did not get any presents.",
+        "Since that day christmas has not been a good time for me."
+      ],
+      "rationale": "User shares personal experiences about Christmas.",
+      "alternative": "casual-chat"
+    },
+    "powerDynamics": {
+      "category": "balanced",
+      "confidence": 0.7,
+      "evidence": [
+        "I did not get any presents.",
+        "I wish I could make it a better holiday for you!"
+      ],
+      "rationale": "Both parties contribute to the conversation, but user shares more personal experiences.",
+      "alternative": "human-led"
+    },
+    "emotionalTone": {
+      "category": "empathetic",
+      "confidence": 0.9,
+      "evidence": [
+        "I am sorry to hear that, I wish I could make it a better holiday for you!"
+      ],
+      "rationale": "Assistant expresses understanding and compassion towards the user's feelings.",
+      "alternative": null
+    },
+    "engagementStyle": {
+      "category": "affirming",
+      "confidence": 0.8,
+      "evidence": [
+        "I am sorry to hear that, I wish I could make it a better holiday for you!"
+      ],
+      "rationale": "Assistant validates the user's feelings and expresses a desire to help.",
+      "alternative": "reactive"
+    },
+    "knowledgeExchange": {
+      "category": "personal-sharing",
+      "confidence": 0.9,
+      "evidence": [
+        "I did not get any presents.",
+        "As I have no family, christmas is always the worst."
+      ],
+      "rationale": "User shares personal experiences related to Christmas.",
+      "alternative": null
+    },
+    "conversationPurpose": {
+      "category": "relationship-building",
+      "confidence": 0.8,
+      "evidence": [
+        "I wish I could make it a better holiday for you!"
+      ],
+      "rationale": "The conversation fosters connection and understanding between the user and assistant.",
+      "alternative": "self-expression"
+    },
+    "turnTaking": {
+      "category": "balanced",
+      "confidence": 0.7,
+      "evidence": [
+        "I did not get any presents.",
+        "Wow, that must be terrible, I cannot imagine, I love Christmas."
+      ],
+      "rationale": "Both parties contribute relatively equally in terms of message length.",
+      "alternative": "user-dominant"
+    },
+    "humanRole": {
+      "distribution": {
+        "seeker": 0.0,
+        "learner": 0.0,
+        "director": 0.0,
+        "collaborator": 0.0,
+        "sharer": 1.0,
+        "challenger": 0.0
+      },
+      "confidence": 0.9,
+      "evidence": [
+        {
+          "role": "sharer",
+          "quote": "During christmas a few years ago, I did not get any presents."
+        }
+      ],
+      "rationale": "User primarily shares personal experiences and feelings about Christmas.",
+      "alternative": null
+    },
+    "aiRole": {
+      "distribution": {
+        "expert": 0.0,
+        "advisor": 0.0,
+        "facilitator": 0.0,
+        "reflector": 0.5,
+        "peer": 0.5,
+        "affiliative": 0.0
+      },
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "role": "reflector",
+          "quote": "I am sorry to hear that, I wish I could make it a better holiday for you!"
+        }
+      ],
+      "rationale": "Assistant reflects empathy and supports the user's feelings while also engaging in a peer-like manner.",
+      "alternative": "facilitator"
+    },
+    "abstain": false
+  },
+  "classificationMetadata": {
+    "model": "gpt-4o-mini",
+    "provider": "openai",
+    "timestamp": "2025-12-22T16:47:31.430122",
+    "promptVersion": "1.1.0",
+    "processingTimeMs": 0
+  }
+}

@@ -1,0 +1,183 @@
+{
+  "id": "kaggle-emo-3",
+  "messages": [
+    {
+      "role": "user",
+      "content": "18",
+      "pad": {
+        "pleasure": 0.5,
+        "arousal": 0.3,
+        "dominance": 0.5,
+        "emotionalIntensity": 0.42
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "19",
+      "pad": {
+        "pleasure": 0.5,
+        "arousal": 0.3,
+        "dominance": 0.5,
+        "emotionalIntensity": 0.42
+      }
+    },
+    {
+      "role": "user",
+      "content": "20",
+      "pad": {
+        "pleasure": 0.5,
+        "arousal": 0.3,
+        "dominance": 0.5,
+        "emotionalIntensity": 0.42
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "21",
+      "pad": {
+        "pleasure": 0.5,
+        "arousal": 0.3,
+        "dominance": 0.5,
+        "emotionalIntensity": 0.42
+      }
+    },
+    {
+      "role": "user",
+      "content": "22",
+      "pad": {
+        "pleasure": 0.5,
+        "arousal": 0.3,
+        "dominance": 0.5,
+        "emotionalIntensity": 0.42
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "23",
+      "pad": {
+        "pleasure": 0.5,
+        "arousal": 0.3,
+        "dominance": 0.5,
+        "emotionalIntensity": 0.42
+      }
+    }
+  ],
+  "classification": {
+    "interactionPattern": {
+      "category": "casual-chat",
+      "confidence": 0.4,
+      "evidence": [
+        "USER: 18",
+        "ASSISTANT: 19"
+      ],
+      "rationale": "The conversation consists of simple exchanges without a clear goal.",
+      "alternative": "question-answer"
+    },
+    "powerDynamics": {
+      "category": "balanced",
+      "confidence": 0.4,
+      "evidence": [
+        "USER: 18",
+        "ASSISTANT: 19"
+      ],
+      "rationale": "Both parties contribute equally to the conversation.",
+      "alternative": "human-led"
+    },
+    "emotionalTone": {
+      "category": "neutral",
+      "confidence": 0.5,
+      "evidence": [
+        "USER: 18",
+        "ASSISTANT: 19"
+      ],
+      "rationale": "The tone is straightforward with no strong emotional cues.",
+      "alternative": "playful"
+    },
+    "engagementStyle": {
+      "category": "reactive",
+      "confidence": 0.5,
+      "evidence": [
+        "USER: 18",
+        "ASSISTANT: 19"
+      ],
+      "rationale": "Responses are direct with no strong direction or exploration.",
+      "alternative": "questioning"
+    },
+    "knowledgeExchange": {
+      "category": "factual-info",
+      "confidence": 0.5,
+      "evidence": [
+        "USER: 18",
+        "ASSISTANT: 19"
+      ],
+      "rationale": "The exchanges consist of numerical information.",
+      "alternative": "opinion-exchange"
+    },
+    "conversationPurpose": {
+      "category": "entertainment",
+      "confidence": 0.5,
+      "evidence": [
+        "USER: 18",
+        "ASSISTANT: 19"
+      ],
+      "rationale": "The conversation appears to be light and informal.",
+      "alternative": "information-seeking"
+    },
+    "turnTaking": {
+      "category": "balanced",
+      "confidence": 0.5,
+      "evidence": [
+        "USER: 18",
+        "ASSISTANT: 19"
+      ],
+      "rationale": "Both parties have equal turns in the conversation.",
+      "alternative": "user-dominant"
+    },
+    "humanRole": {
+      "distribution": {
+        "seeker": 0.5,
+        "learner": 0.0,
+        "director": 0.0,
+        "collaborator": 0.0,
+        "sharer": 0.5,
+        "challenger": 0.0
+      },
+      "confidence": 0.5,
+      "evidence": [
+        {
+          "role": "sharer",
+          "quote": "USER: 18"
+        }
+      ],
+      "rationale": "The user shares a number, indicating a personal input.",
+      "alternative": "seeker"
+    },
+    "aiRole": {
+      "distribution": {
+        "expert": 0.0,
+        "advisor": 0.0,
+        "facilitator": 0.5,
+        "reflector": 0.5,
+        "peer": 0.0,
+        "affiliative": 0.0
+      },
+      "confidence": 0.5,
+      "evidence": [
+        {
+          "role": "facilitator",
+          "quote": "ASSISTANT: 19"
+        }
+      ],
+      "rationale": "The assistant responds in a way that maintains the flow of the conversation.",
+      "alternative": "reflector"
+    },
+    "abstain": true
+  },
+  "classificationMetadata": {
+    "model": "gpt-4o-mini",
+    "provider": "openai",
+    "timestamp": "2025-12-22T16:50:03.638516",
+    "promptVersion": "1.1.0",
+    "processingTimeMs": 0
+  }
+}

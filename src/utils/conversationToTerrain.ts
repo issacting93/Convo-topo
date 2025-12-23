@@ -3,7 +3,16 @@ import { generate2DPathPoints } from './terrain';
 
 export interface ClassifiedConversation {
   id: string;
-  messages: Array<{ role: string; content: string }>;
+  messages: Array<{ 
+    role: string; 
+    content: string;
+    pad?: {
+      pleasure: number;
+      arousal: number;
+      dominance: number;
+      emotionalIntensity: number;
+    };
+  }>;
   classification: {
     interactionPattern?: { category: string; confidence: number };
     powerDynamics?: { category: string; confidence: number };
@@ -312,18 +321,16 @@ export function getCommunicationFunction(conv: ClassifiedConversation): number {
   }
   
   // PRIORITY 1: Role-based positioning (from WORKFLOW.md)
-  // X-axis: Based on human role distribution
-  // Director + Challenger → more functional (lower X)
-  // Sharer + Collaborator → more social (higher X)
+  // X-axis: Based on human role distribution (4 roles, evenly spaced)
+  // Challenger → most functional (lower X)
+  // Sharer → most social (higher X)
   if (c.humanRole?.distribution) {
     const humanRole = c.humanRole.distribution;
-    const roleBasedX = 
-      (humanRole.director || 0) * 0.2 +
-      (humanRole.challenger || 0) * 0.3 +
-      (humanRole.sharer || 0) * 0.8 +
-      (humanRole.collaborator || 0) * 0.7 +
-      (humanRole.seeker || 0) * 0.4 +
-      (humanRole.learner || 0) * 0.5;
+    const roleBasedX =
+      (humanRole.challenger || 0) * 0.2 +
+      (humanRole.seeker || 0) * 0.5 +         // Merged seeker + learner
+      (humanRole.collaborator || 0) * 0.75 +  // Merged director
+      (humanRole.sharer || 0) * 0.9;
     
     // If we have meaningful role data, use it
     const maxRoleValue = Math.max(...Object.values(humanRole));
@@ -366,18 +373,16 @@ export function getConversationStructure(conv: ClassifiedConversation): number {
   }
   
   // PRIORITY 1: Role-based positioning (from WORKFLOW.md)
-  // Y-axis: Based on AI role distribution
-  // Expert + Advisor → structured (prescriptive) (lower Y)
-  // Peer + Facilitator → emergent (exploratory) (higher Y)
+  // Y-axis: Based on AI role distribution (4 roles, evenly spaced)
+  // Expert → most structured (prescriptive) (lower Y)
+  // Peer → most emergent (exploratory) (higher Y)
   if (c.aiRole?.distribution) {
     const aiRole = c.aiRole.distribution;
     const roleBasedY =
-      (aiRole.expert || 0) * 0.3 +
-      (aiRole.advisor || 0) * 0.2 +
-      (aiRole.facilitator || 0) * 0.7 +
-      (aiRole.peer || 0) * 0.8 +
-      (aiRole.reflector || 0) * 0.6 +
-      (aiRole.affiliative || 0) * 0.5;
+      (aiRole.expert || 0) * 0.25 +        // Merged expert + advisor
+      (aiRole.reflector || 0) * 0.5 +
+      (aiRole.facilitator || 0) * 0.75 +
+      (aiRole.peer || 0) * 0.9;
     
     // If we have meaningful role data, use it
     const maxRoleValue = Math.max(...Object.values(aiRole));
@@ -441,27 +446,26 @@ export function getDominantAiRole(conv: ClassifiedConversation): { role: string;
 
 /**
  * Map goal roles (instructor, evaluator, dependent, confidant) to classification roles
+ * Updated for 4-role taxonomy
  */
 export function mapToGoalRole(humanRole: string, aiRole: string | null): string {
-  // Map human roles to goal roles
+  // Map human roles to goal roles (updated for 4-role taxonomy)
   const roleMap: Record<string, string> = {
-    'director': 'instructor',
     'challenger': 'evaluator',
     'seeker': 'dependent',
-    'learner': 'dependent',
     'sharer': 'confidant',
     'collaborator': 'collaborator'
   };
-  
+
   // Check if human role maps to a goal role
   if (roleMap[humanRole]) {
-    // Confidant requires AI to be reflector or affiliative
-    if (roleMap[humanRole] === 'confidant' && aiRole && aiRole !== 'reflector' && aiRole !== 'affiliative') {
+    // Confidant requires AI to be reflector
+    if (roleMap[humanRole] === 'confidant' && aiRole && aiRole !== 'reflector') {
       return 'collaborator'; // Fallback if AI role doesn't match
     }
     return roleMap[humanRole];
   }
-  
+
   return humanRole; // Return original if no mapping
 }
 

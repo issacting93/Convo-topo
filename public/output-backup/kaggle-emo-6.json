@@ -1,0 +1,112 @@
+{
+  "id": "kaggle-emo-6",
+  "messages": [
+    {
+      "role": "user",
+      "content": "dont you feel so.. its a wonder",
+      "pad": {
+        "pleasure": 0.7,
+        "arousal": 0.5,
+        "dominance": 0.4,
+        "emotionalIntensity": 0.38
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "",
+      "pad": {
+        "pleasure": 0.5,
+        "arousal": 0.3,
+        "dominance": 0.5,
+        "emotionalIntensity": 0.42
+      }
+    }
+  ],
+  "classification": {
+    "interactionPattern": {
+      "category": null,
+      "confidence": 0.0,
+      "evidence": [],
+      "rationale": "The conversation is too short to determine a clear interaction pattern.",
+      "alternative": null
+    },
+    "powerDynamics": {
+      "category": null,
+      "confidence": 0.0,
+      "evidence": [],
+      "rationale": "The conversation is too short to assess power dynamics.",
+      "alternative": null
+    },
+    "emotionalTone": {
+      "category": null,
+      "confidence": 0.0,
+      "evidence": [],
+      "rationale": "The emotional tone cannot be determined from the limited exchange.",
+      "alternative": null
+    },
+    "engagementStyle": {
+      "category": null,
+      "confidence": 0.0,
+      "evidence": [],
+      "rationale": "There is insufficient content to classify engagement style.",
+      "alternative": null
+    },
+    "knowledgeExchange": {
+      "category": null,
+      "confidence": 0.0,
+      "evidence": [],
+      "rationale": "No knowledge exchange can be identified in this brief interaction.",
+      "alternative": null
+    },
+    "conversationPurpose": {
+      "category": null,
+      "confidence": 0.0,
+      "evidence": [],
+      "rationale": "The purpose of the conversation is unclear due to its brevity.",
+      "alternative": null
+    },
+    "turnTaking": {
+      "category": null,
+      "confidence": 0.0,
+      "evidence": [],
+      "rationale": "Turn-taking cannot be assessed from a single exchange.",
+      "alternative": null
+    },
+    "humanRole": {
+      "distribution": {
+        "seeker": 0,
+        "learner": 0,
+        "director": 0,
+        "collaborator": 0,
+        "sharer": 0,
+        "challenger": 0
+      },
+      "confidence": 0.0,
+      "evidence": [],
+      "rationale": "No clear human role can be identified from the conversation.",
+      "alternative": null
+    },
+    "aiRole": {
+      "distribution": {
+        "expert": 0,
+        "advisor": 0,
+        "facilitator": 0,
+        "reflector": 0,
+        "peer": 0,
+        "affiliative": 0
+      },
+      "confidence": 0.0,
+      "evidence": [],
+      "rationale": "No clear AI role can be identified from the conversation.",
+      "alternative": null
+    },
+    "abstain": true
+  },
+  "classificationMetadata": {
+    "model": "gpt-4o-mini",
+    "provider": "openai",
+    "timestamp": "2025-12-22T16:50:52.186012",
+    "promptVersion": "1.1.0",
+    "processingTimeMs": 0
+  }
+}

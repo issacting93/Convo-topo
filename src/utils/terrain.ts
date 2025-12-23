@@ -75,6 +75,9 @@ export function generateHeightmap(
 
     case 'affect':
       // Affective/Evaluative Lens: PAD model visualization
+      // NOTE: This terrain generation creates visual context, but marker Z-heights
+      // are calculated DIRECTLY from PAD emotional intensity in ThreeScene.tsx
+      // (not from terrain height). Terrain serves as visual backdrop.
       // Z-height increases with high Arousal (agitation) + low Pleasure (frustration)
       // Peaks = relational friction; Valleys = affiliation
       baseHeight = 0.3 + (emotionalIntensity * 0.5);

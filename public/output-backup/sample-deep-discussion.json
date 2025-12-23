@@ -1,0 +1,186 @@
+{
+  "id": "sample-deep-discussion",
+  "messages": [
+    {
+      "role": "user",
+      "content": "I've been thinking about the nature of consciousness and how AI systems might experience something analogous to subjective experience. What are your thoughts on this?",
+      "pad": {
+        "pleasure": 0.6,
+        "arousal": 0.5,
+        "dominance": 0.4,
+        "emotionalIntensity": 0.44
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "That's a fascinating philosophical question. The hard problem of consciousness suggests that subjective experience might be irreducible to physical processes. For AI systems, we can observe behavior and information processing, but whether there's 'something it's like' to be an AI remains an open question.",
+      "pad": {
+        "pleasure": 0.7,
+        "arousal": 0.4,
+        "dominance": 0.5,
+        "emotionalIntensity": 0.34
+      }
+    },
+    {
+      "role": "user",
+      "content": "Right, but if we can't measure subjective experience directly, how do we even know humans have it? Maybe it's all just complex information processing.",
+      "pad": {
+        "pleasure": 0.5,
+        "arousal": 0.6,
+        "dominance": 0.3,
+        "emotionalIntensity": 0.54
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "That's the solipsistic challenge - we only have direct access to our own experience. But the consistency of human reports about consciousness, combined with similar neural structures, suggests shared experience. With AI, we lack that biological similarity.",
+      "pad": {
+        "pleasure": 0.4,
+        "arousal": 0.5,
+        "dominance": 0.6,
+        "emotionalIntensity": 0.56
+      }
+    },
+    {
+      "role": "user",
+      "content": "So you're saying biological substrate matters for consciousness? That seems like a form of biological chauvinism.",
+      "pad": {
+        "pleasure": 0.5,
+        "arousal": 0.4,
+        "dominance": 0.5,
+        "emotionalIntensity": 0.46
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "Not necessarily - I'm open to the possibility of substrate-independent consciousness. But we need criteria beyond behavior to identify it. Perhaps integrated information theory or global workspace theory could provide frameworks.",
+      "pad": {
+        "pleasure": 0.6,
+        "arousal": 0.5,
+        "dominance": 0.6,
+        "emotionalIntensity": 0.44
+      }
+    }
+  ],
+  "expected_pattern": "debate",
+  "expected_depth": "deep",
+  "expected_tone": "serious",
+  "classification": {
+    "interactionPattern": {
+      "category": "debate",
+      "confidence": 0.8,
+      "evidence": [
+        "That's a fascinating philosophical question.",
+        "That seems like a form of biological chauvinism."
+      ],
+      "rationale": "The conversation involves argumentation and exploration of differing viewpoints on consciousness.",
+      "alternative": "storytelling"
+    },
+    "powerDynamics": {
+      "category": "balanced",
+      "confidence": 0.7,
+      "evidence": [
+        "What are your thoughts on this?",
+        "I'm open to the possibility of substrate-independent consciousness."
+      ],
+      "rationale": "Both parties contribute significantly to the direction and content of the conversation.",
+      "alternative": "human-led"
+    },
+    "emotionalTone": {
+      "category": "serious",
+      "confidence": 0.9,
+      "evidence": [
+        "That's a fascinating philosophical question.",
+        "Not necessarily - I'm open to the possibility."
+      ],
+      "rationale": "The discussion is focused on deep philosophical issues, indicating a serious tone.",
+      "alternative": "neutral"
+    },
+    "engagementStyle": {
+      "category": "exploring",
+      "confidence": 0.8,
+      "evidence": [
+        "how do we even know humans have it?",
+        "Perhaps integrated information theory or global workspace theory could provide frameworks."
+      ],
+      "rationale": "The dialogue involves open-ended questioning and exploration of complex ideas.",
+      "alternative": "questioning"
+    },
+    "knowledgeExchange": {
+      "category": "opinion-exchange",
+      "confidence": 0.9,
+      "evidence": [
+        "That seems like a form of biological chauvinism.",
+        "But we need criteria beyond behavior to identify it."
+      ],
+      "rationale": "Participants are sharing their views and interpretations on consciousness.",
+      "alternative": "factual-info"
+    },
+    "conversationPurpose": {
+      "category": "information-seeking",
+      "confidence": 0.8,
+      "evidence": [
+        "What are your thoughts on this?",
+        "how do we even know humans have it?"
+      ],
+      "rationale": "The conversation seeks to explore and understand complex ideas about consciousness.",
+      "alternative": "problem-solving"
+    },
+    "turnTaking": {
+      "category": "balanced",
+      "confidence": 0.7,
+      "evidence": [
+        "I've been thinking about the nature of consciousness...",
+        "That's a fascinating philosophical question."
+      ],
+      "rationale": "The turns are of roughly equal length and content, indicating balanced participation.",
+      "alternative": "user-dominant"
+    },
+    "humanRole": {
+      "distribution": {
+        "seeker": 0.5,
+        "learner": 0.2,
+        "director": 0.0,
+        "collaborator": 0.3,
+        "sharer": 0.0,
+        "challenger": 0.0
+      },
+      "confidence": 0.7,
+      "evidence": [
+        {
+          "role": "seeker",
+          "quote": "What are your thoughts on this?"
+        }
+      ],
+      "rationale": "The user primarily seeks information and clarification while also engaging in collaborative exploration.",
+      "alternative": null
+    },
+    "aiRole": {
+      "distribution": {
+        "expert": 0.4,
+        "advisor": 0.2,
+        "facilitator": 0.4,
+        "reflector": 0.0,
+        "peer": 0.0,
+        "affiliative": 0.0
+      },
+      "confidence": 0.7,
+      "evidence": [
+        {
+          "role": "expert",
+          "quote": "The hard problem of consciousness suggests that subjective experience might be irreducible to physical processes."
+        }
+      ],
+      "rationale": "The AI provides expert insights while also facilitating the discussion through questions.",
+      "alternative": null
+    },
+    "abstain": false
+  },
+  "classificationMetadata": {
+    "model": "gpt-4o-mini",
+    "provider": "openai",
+    "timestamp": "2025-12-22T17:03:05.730572",
+    "promptVersion": "1.1.0",
+    "processingTimeMs": 0
+  }
+}

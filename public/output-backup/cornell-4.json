@@ -1,0 +1,138 @@
+{
+  "id": "cornell-4",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Gosh, if only we could find Kat a boyfriend...",
+      "pad": {
+        "pleasure": 0.5,
+        "arousal": 0.4,
+        "dominance": 0.3,
+        "emotionalIntensity": 0.46
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "Let me see what I can do.",
+      "pad": {
+        "pleasure": 0.6,
+        "arousal": 0.5,
+        "dominance": 0.4,
+        "emotionalIntensity": 0.44
+      }
+    }
+  ],
+  "classification": {
+    "interactionPattern": {
+      "category": "casual-chat",
+      "confidence": 0.8,
+      "evidence": [
+        "Gosh, if only we could find Kat a boyfriend...",
+        "Let me see what I can do."
+      ],
+      "rationale": "The conversation has a light, social tone without a specific goal.",
+      "alternative": "advisory"
+    },
+    "powerDynamics": {
+      "category": "human-led",
+      "confidence": 0.7,
+      "evidence": [
+        "Gosh, if only we could find Kat a boyfriend..."
+      ],
+      "rationale": "The human initiates the topic and expresses a desire.",
+      "alternative": "balanced"
+    },
+    "emotionalTone": {
+      "category": "playful",
+      "confidence": 0.7,
+      "evidence": [
+        "Gosh, if only we could find Kat a boyfriend..."
+      ],
+      "rationale": "The statement has a light-hearted and humorous tone.",
+      "alternative": "supportive"
+    },
+    "engagementStyle": {
+      "category": "reactive",
+      "confidence": 0.6,
+      "evidence": [
+        "Let me see what I can do."
+      ],
+      "rationale": "The assistant responds to the user's statement without strong direction.",
+      "alternative": "affirming"
+    },
+    "knowledgeExchange": {
+      "category": "opinion-exchange",
+      "confidence": 0.6,
+      "evidence": [
+        "Gosh, if only we could find Kat a boyfriend..."
+      ],
+      "rationale": "The user expresses a personal view about finding a boyfriend.",
+      "alternative": "personal-sharing"
+    },
+    "conversationPurpose": {
+      "category": "relationship-building",
+      "confidence": 0.7,
+      "evidence": [
+        "Gosh, if only we could find Kat a boyfriend..."
+      ],
+      "rationale": "The conversation aims to connect and engage socially.",
+      "alternative": "entertainment"
+    },
+    "turnTaking": {
+      "category": "balanced",
+      "confidence": 0.7,
+      "evidence": [
+        "Gosh, if only we could find Kat a boyfriend...",
+        "Let me see what I can do."
+      ],
+      "rationale": "Both parties contribute equally to the conversation.",
+      "alternative": "user-dominant"
+    },
+    "humanRole": {
+      "distribution": {
+        "seeker": 0.5,
+        "learner": 0.0,
+        "director": 0.0,
+        "collaborator": 0.0,
+        "sharer": 0.5,
+        "challenger": 0.0
+      },
+      "confidence": 0.7,
+      "evidence": [
+        {
+          "role": "sharer",
+          "quote": "Gosh, if only we could find Kat a boyfriend..."
+        }
+      ],
+      "rationale": "The human shares a thought about finding a boyfriend, indicating a personal context.",
+      "alternative": "seeker"
+    },
+    "aiRole": {
+      "distribution": {
+        "expert": 0.0,
+        "advisor": 0.0,
+        "facilitator": 0.5,
+        "reflector": 0.0,
+        "peer": 0.5,
+        "affiliative": 0.0
+      },
+      "confidence": 0.7,
+      "evidence": [
+        {
+          "role": "facilitator",
+          "quote": "Let me see what I can do."
+        }
+      ],
+      "rationale": "The assistant responds in a supportive manner, indicating a willingness to help.",
+      "alternative": "peer"
+    },
+    "abstain": false
+  },
+  "classificationMetadata": {
+    "model": "gpt-4o-mini",
+    "provider": "openai",
+    "timestamp": "2025-12-22T16:38:50.206907",
+    "promptVersion": "1.1.0",
+    "processingTimeMs": 0
+  }
+}

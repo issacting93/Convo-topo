@@ -1,0 +1,372 @@
+{
+  "id": "combined-long-10",
+  "source": "Combined from multiple conversations",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Planning out my new home has turned out to be a blast!",
+      "pad": {
+        "pleasure": 0.9,
+        "arousal": 0.7,
+        "dominance": 0.5,
+        "emotionalIntensity": 0.34
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "What kind of house are you building?",
+      "pad": {
+        "pleasure": 0.8,
+        "arousal": 0.5,
+        "dominance": 0.5,
+        "emotionalIntensity": 0.32
+      }
+    },
+    {
+      "role": "user",
+      "content": "I just moved in so it is already built. Just working on planning out decorating and appliances and such.",
+      "pad": {
+        "pleasure": 0.7,
+        "arousal": 0.4,
+        "dominance": 0.4,
+        "emotionalIntensity": 0.34
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "That sounds great. What are you most excited for?",
+      "pad": {
+        "pleasure": 0.8,
+        "arousal": 0.6,
+        "dominance": 0.5,
+        "emotionalIntensity": 0.36
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "I think I am most excited for all the space I have. I can have friends over and not feel cramped.",
+      "pad": {
+        "pleasure": 0.8,
+        "arousal": 0.5,
+        "dominance": 0.5,
+        "emotionalIntensity": 0.32
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "...",
+      "pad": {
+        "pleasure": 0.2,
+        "arousal": 0.1,
+        "dominance": 0.2,
+        "emotionalIntensity": 0.52
+      }
+    },
+    {
+      "role": "user",
+      "content": "think of a number between 1 and 7, but don't tell me, I will try to guess it",
+      "pad": {
+        "pleasure": 0.7,
+        "arousal": 0.6,
+        "dominance": 0.5,
+        "emotionalIntensity": 0.42
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "Sure, I'll think of a number between 1 and 7.",
+      "pad": {
+        "pleasure": 0.7,
+        "arousal": 0.5,
+        "dominance": 0.5,
+        "emotionalIntensity": 0.38
+      }
+    },
+    {
+      "role": "user",
+      "content": "Is it 6?",
+      "pad": {
+        "pleasure": 0.4,
+        "arousal": 0.3,
+        "dominance": 0.4,
+        "emotionalIntensity": 0.48
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "No, it is not 6.",
+      "pad": {
+        "pleasure": 0.4,
+        "arousal": 0.3,
+        "dominance": 0.4,
+        "emotionalIntensity": 0.48
+      }
+    },
+    {
+      "role": "user",
+      "content": "is it 5?",
+      "pad": {
+        "pleasure": 0.4,
+        "arousal": 0.3,
+        "dominance": 0.4,
+        "emotionalIntensity": 0.48
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "No, it is not 5.",
+      "pad": {
+        "pleasure": 0.4,
+        "arousal": 0.3,
+        "dominance": 0.4,
+        "emotionalIntensity": 0.48
+      }
+    },
+    {
+      "role": "user",
+      "content": "is it 4?",
+      "pad": {
+        "pleasure": 0.4,
+        "arousal": 0.3,
+        "dominance": 0.4,
+        "emotionalIntensity": 0.48
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "No, it is not 4.",
+      "pad": {
+        "pleasure": 0.4,
+        "arousal": 0.3,
+        "dominance": 0.4,
+        "emotionalIntensity": 0.48
+      }
+    },
+    {
+      "role": "user",
+      "content": "is it 3?",
+      "pad": {
+        "pleasure": 0.4,
+        "arousal": 0.3,
+        "dominance": 0.4,
+        "emotionalIntensity": 0.48
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "No, it is not 3.",
+      "pad": {
+        "pleasure": 0.4,
+        "arousal": 0.3,
+        "dominance": 0.4,
+        "emotionalIntensity": 0.48
+      }
+    },
+    {
+      "role": "user",
+      "content": "is it 2?",
+      "pad": {
+        "pleasure": 0.4,
+        "arousal": 0.3,
+        "dominance": 0.4,
+        "emotionalIntensity": 0.48
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "No, it is not 2.",
+      "pad": {
+        "pleasure": 0.4,
+        "arousal": 0.3,
+        "dominance": 0.4,
+        "emotionalIntensity": 0.48
+      }
+    },
+    {
+      "role": "user",
+      "content": "is it 1?",
+      "pad": {
+        "pleasure": 0.4,
+        "arousal": 0.3,
+        "dominance": 0.4,
+        "emotionalIntensity": 0.48
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "No, it is not 1.",
+      "pad": {
+        "pleasure": 0.4,
+        "arousal": 0.3,
+        "dominance": 0.4,
+        "emotionalIntensity": 0.48
+      }
+    },
+    {
+      "role": "user",
+      "content": "what was the number?",
+      "pad": {
+        "pleasure": 0.4,
+        "arousal": 0.3,
+        "dominance": 0.4,
+        "emotionalIntensity": 0.48
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "I'm sorry, but I am unable to recall the number I thought of.",
+      "pad": {
+        "pleasure": 0.4,
+        "arousal": 0.3,
+        "dominance": 0.4,
+        "emotionalIntensity": 0.48
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "...",
+      "pad": {
+        "pleasure": 0.4,
+        "arousal": 0.3,
+        "dominance": 0.4,
+        "emotionalIntensity": 0.48
+      }
+    },
+    {
+      "role": "user",
+      "content": "Gosh, if only we could find Kat a boyfriend...",
+      "pad": {
+        "pleasure": 0.5,
+        "arousal": 0.4,
+        "dominance": 0.5,
+        "emotionalIntensity": 0.46
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "Let me see what I can do.",
+      "pad": {
+        "pleasure": 0.6,
+        "arousal": 0.5,
+        "dominance": 0.5,
+        "emotionalIntensity": 0.44
+      }
+    }
+  ],
+  "classification": {
+    "interactionPattern": {
+      "category": "casual-chat",
+      "confidence": 0.8,
+      "evidence": [
+        "Planning out my new home has turned out to be a blast!",
+        "Gosh, if only we could find Kat a boyfriend..."
+      ],
+      "rationale": "The conversation includes social exchanges and lighthearted interactions.",
+      "alternative": "question-answer"
+    },
+    "powerDynamics": {
+      "category": "balanced",
+      "confidence": 0.7,
+      "evidence": [
+        "What kind of house are you building?",
+        "What are you most excited for?"
+      ],
+      "rationale": "Both parties contribute to the direction of the conversation.",
+      "alternative": "human-led"
+    },
+    "emotionalTone": {
+      "category": "playful",
+      "confidence": 0.7,
+      "evidence": [
+        "think of a number between 1 and 7, but don't tell me, I will try to guess it"
+      ],
+      "rationale": "The guessing game adds a light and fun element to the exchange.",
+      "alternative": "supportive"
+    },
+    "engagementStyle": {
+      "category": "reactive",
+      "confidence": 0.6,
+      "evidence": [
+        "No, it is not 6.",
+        "No, it is not 5."
+      ],
+      "rationale": "The assistant responds to the user's guesses without strong direction.",
+      "alternative": "questioning"
+    },
+    "knowledgeExchange": {
+      "category": "personal-sharing",
+      "confidence": 0.7,
+      "evidence": [
+        "I just moved in so it is already built.",
+        "I can have friends over and not feel cramped."
+      ],
+      "rationale": "The user shares personal experiences related to their home.",
+      "alternative": "experience-sharing"
+    },
+    "conversationPurpose": {
+      "category": "entertainment",
+      "confidence": 0.8,
+      "evidence": [
+        "think of a number between 1 and 7, but don't tell me, I will try to guess it"
+      ],
+      "rationale": "The guessing game serves as a playful and entertaining activity.",
+      "alternative": "relationship-building"
+    },
+    "turnTaking": {
+      "category": "balanced",
+      "confidence": 0.7,
+      "evidence": [
+        "What kind of house are you building?",
+        "No, it is not 6."
+      ],
+      "rationale": "The lengths of the turns are relatively equal, with both parties engaging actively.",
+      "alternative": "user-dominant"
+    },
+    "humanRole": {
+      "distribution": {
+        "seeker": 0.4,
+        "learner": 0.1,
+        "director": 0.0,
+        "collaborator": 0.2,
+        "sharer": 0.3,
+        "challenger": 0.0
+      },
+      "confidence": 0.7,
+      "evidence": [
+        {
+          "role": "sharer",
+          "quote": "I just moved in so it is already built."
+        }
+      ],
+      "rationale": "The user shares personal experiences and engages in playful guessing.",
+      "alternative": null
+    },
+    "aiRole": {
+      "distribution": {
+        "expert": 0.0,
+        "advisor": 0.0,
+        "facilitator": 0.5,
+        "reflector": 0.2,
+        "peer": 0.3,
+        "affiliative": 0.0
+      },
+      "confidence": 0.7,
+      "evidence": [
+        {
+          "role": "facilitator",
+          "quote": "What kind of house are you building?"
+        }
+      ],
+      "rationale": "The assistant guides the conversation with questions and engages in playful interaction.",
+      "alternative": null
+    },
+    "abstain": false
+  },
+  "classificationMetadata": {
+    "model": "gpt-4o-mini",
+    "provider": "openai",
+    "timestamp": "2025-12-22T16:34:12.600930",
+    "promptVersion": "1.1.0",
+    "processingTimeMs": 0
+  }
+}

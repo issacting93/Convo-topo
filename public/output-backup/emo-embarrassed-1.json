@@ -1,0 +1,162 @@
+{
+  "id": "emo-embarrassed-1",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Once when I was in preschool, my pants fell down in front of the whole class, I was so embarassed",
+      "pad": {
+        "pleasure": 0.4,
+        "arousal": 0.3,
+        "dominance": 0.2,
+        "emotionalIntensity": 0.48
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "haha yeah that would be very bad !",
+      "pad": {
+        "pleasure": 0.6,
+        "arousal": 0.4,
+        "dominance": 0.3,
+        "emotionalIntensity": 0.4
+      }
+    },
+    {
+      "role": "user",
+      "content": "It was, I almost cried cause everyone was laughing at me",
+      "pad": {
+        "pleasure": 0.3,
+        "arousal": 0.5,
+        "dominance": 0.2,
+        "emotionalIntensity": 0.62
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "Oh no , sorry to hear that happened to you :(",
+      "pad": {
+        "pleasure": 0.5,
+        "arousal": 0.3,
+        "dominance": 0.4,
+        "emotionalIntensity": 0.42
+      }
+    }
+  ],
+  "classification": {
+    "interactionPattern": {
+      "category": "storytelling",
+      "confidence": 0.8,
+      "evidence": [
+        "Once when I was in preschool, my pants fell down in front of the whole class, I was so embarassed"
+      ],
+      "rationale": "User shares a personal story about an embarrassing moment.",
+      "alternative": "casual-chat"
+    },
+    "powerDynamics": {
+      "category": "balanced",
+      "confidence": 0.7,
+      "evidence": [
+        "USER: Once when I was in preschool, my pants fell down in front of the whole class, I was so embarassed",
+        "ASSISTANT: haha yeah that would be very bad !"
+      ],
+      "rationale": "Both parties contribute to the conversation without clear dominance.",
+      "alternative": "human-led"
+    },
+    "emotionalTone": {
+      "category": "supportive",
+      "confidence": 0.8,
+      "evidence": [
+        "Oh no , sorry to hear that happened to you :("
+      ],
+      "rationale": "Assistant expresses empathy towards the user's embarrassment.",
+      "alternative": "playful"
+    },
+    "engagementStyle": {
+      "category": "affirming",
+      "confidence": 0.7,
+      "evidence": [
+        "ASSISTANT: haha yeah that would be very bad !"
+      ],
+      "rationale": "Assistant acknowledges and affirms the user's experience.",
+      "alternative": "reactive"
+    },
+    "knowledgeExchange": {
+      "category": "personal-sharing",
+      "confidence": 0.9,
+      "evidence": [
+        "Once when I was in preschool, my pants fell down in front of the whole class, I was so embarassed"
+      ],
+      "rationale": "User shares a personal narrative about an experience.",
+      "alternative": null
+    },
+    "conversationPurpose": {
+      "category": "relationship-building",
+      "confidence": 0.8,
+      "evidence": [
+        "Oh no , sorry to hear that happened to you :("
+      ],
+      "rationale": "The conversation aims to build rapport through shared experiences.",
+      "alternative": "entertainment"
+    },
+    "turnTaking": {
+      "category": "balanced",
+      "confidence": 0.7,
+      "evidence": [
+        "USER: It was, I almost cried cause everyone was laughing at me",
+        "ASSISTANT: Oh no , sorry to hear that happened to you :("
+      ],
+      "rationale": "Both parties contribute equally in length and content.",
+      "alternative": "user-dominant"
+    },
+    "humanRole": {
+      "distribution": {
+        "seeker": 0.0,
+        "learner": 0.0,
+        "director": 0.0,
+        "collaborator": 0.0,
+        "sharer": 1.0,
+        "challenger": 0.0
+      },
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "role": "sharer",
+          "quote": "Once when I was in preschool, my pants fell down in front of the whole class, I was so embarassed"
+        }
+      ],
+      "rationale": "User shares a personal narrative, fitting the role of a sharer.",
+      "alternative": null
+    },
+    "aiRole": {
+      "distribution": {
+        "expert": 0.0,
+        "advisor": 0.0,
+        "facilitator": 0.0,
+        "reflector": 0.5,
+        "peer": 0.5,
+        "affiliative": 0.0
+      },
+      "confidence": 0.7,
+      "evidence": [
+        {
+          "role": "reflector",
+          "quote": "Oh no , sorry to hear that happened to you :("
+        },
+        {
+          "role": "peer",
+          "quote": "haha yeah that would be very bad !"
+        }
+      ],
+      "rationale": "Assistant reflects on the user's experience while also engaging in a peer-like manner.",
+      "alternative": "facilitator"
+    },
+    "abstain": false
+  },
+  "classificationMetadata": {
+    "model": "gpt-4o-mini",
+    "provider": "openai",
+    "timestamp": "2025-12-22T16:43:34.763845",
+    "promptVersion": "1.1.0",
+    "processingTimeMs": 0
+  }
+}

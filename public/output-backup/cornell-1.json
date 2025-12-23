@@ -1,0 +1,141 @@
+{
+  "id": "cornell-1",
+  "messages": [
+    {
+      "role": "user",
+      "content": "You're asking me out.  That's so cute. What's your name again?",
+      "pad": {
+        "pleasure": 0.8,
+        "arousal": 0.5,
+        "dominance": 0.4,
+        "emotionalIntensity": 0.32
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "Forget it.",
+      "pad": {
+        "pleasure": 0.2,
+        "arousal": 0.7,
+        "dominance": 0.3,
+        "emotionalIntensity": 0.76
+      }
+    }
+  ],
+  "classification": {
+    "interactionPattern": {
+      "category": "casual-chat",
+      "confidence": 0.8,
+      "evidence": [
+        "You're asking me out. That's so cute."
+      ],
+      "rationale": "The exchange has a light-hearted tone without a specific goal.",
+      "alternative": "question-answer"
+    },
+    "powerDynamics": {
+      "category": "human-led",
+      "confidence": 0.7,
+      "evidence": [
+        "What's your name again?"
+      ],
+      "rationale": "The user is steering the conversation by asking questions.",
+      "alternative": "balanced"
+    },
+    "emotionalTone": {
+      "category": "playful",
+      "confidence": 0.8,
+      "evidence": [
+        "That's so cute."
+      ],
+      "rationale": "The user's response conveys a light-hearted and humorous tone.",
+      "alternative": "neutral"
+    },
+    "engagementStyle": {
+      "category": "reactive",
+      "confidence": 0.7,
+      "evidence": [
+        "Forget it."
+      ],
+      "rationale": "The assistant's response is a direct reaction without further engagement.",
+      "alternative": "affirming"
+    },
+    "knowledgeExchange": {
+      "category": "opinion-exchange",
+      "confidence": 0.6,
+      "evidence": [
+        "That's so cute."
+      ],
+      "rationale": "The user is expressing a personal opinion about the assistant's action.",
+      "alternative": "personal-sharing"
+    },
+    "conversationPurpose": {
+      "category": "entertainment",
+      "confidence": 0.7,
+      "evidence": [
+        "That's so cute."
+      ],
+      "rationale": "The tone suggests the interaction is meant for amusement.",
+      "alternative": "relationship-building"
+    },
+    "turnTaking": {
+      "category": "user-dominant",
+      "confidence": 0.6,
+      "evidence": [
+        "You're asking me out.",
+        "What's your name again?"
+      ],
+      "rationale": "The user's turn is longer and contains multiple questions.",
+      "alternative": "balanced"
+    },
+    "humanRole": {
+      "distribution": {
+        "seeker": 0.5,
+        "learner": 0.0,
+        "director": 0.0,
+        "collaborator": 0.0,
+        "sharer": 0.5,
+        "challenger": 0.0
+      },
+      "confidence": 0.7,
+      "evidence": [
+        {
+          "role": "seeker",
+          "quote": "What's your name again?"
+        },
+        {
+          "role": "sharer",
+          "quote": "That's so cute."
+        }
+      ],
+      "rationale": "The user is both asking for information and sharing a personal opinion.",
+      "alternative": "collaborator"
+    },
+    "aiRole": {
+      "distribution": {
+        "expert": 0.0,
+        "advisor": 0.0,
+        "facilitator": 0.0,
+        "reflector": 0.0,
+        "peer": 0.5,
+        "affiliative": 0.5
+      },
+      "confidence": 0.6,
+      "evidence": [
+        {
+          "role": "peer",
+          "quote": "Forget it."
+        }
+      ],
+      "rationale": "The assistant's response is casual and non-authoritative, fitting a peer role.",
+      "alternative": "affiliative"
+    },
+    "abstain": false
+  },
+  "classificationMetadata": {
+    "model": "gpt-4o-mini",
+    "provider": "openai",
+    "timestamp": "2025-12-22T16:38:06.202603",
+    "promptVersion": "1.1.0",
+    "processingTimeMs": 0
+  }
+}

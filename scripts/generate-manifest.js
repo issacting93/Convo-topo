@@ -27,7 +27,12 @@ function generateManifest() {
     conversations: {
       conv: [],
       sample: [],
-      emo: []
+      emo: [],
+      cornell: [],
+      'kaggle-emo': [],
+      'chatbot-arena': [],
+      'combined-long': [],
+      'oasst': []
     }
   };
 
@@ -64,8 +69,43 @@ function generateManifest() {
           size: stats.size,
           modified: stats.mtime.toISOString()
         });
-      } else if (file.startsWith('emo-')) {
+      } else if (file.startsWith('emo-') && !file.includes('kaggle')) {
         manifest.conversations.emo.push({
+          file: file,
+          id: file.replace('.json', ''),
+          size: stats.size,
+          modified: stats.mtime.toISOString()
+        });
+      } else if (file.startsWith('cornell-')) {
+        manifest.conversations.cornell.push({
+          file: file,
+          id: file.replace('.json', ''),
+          size: stats.size,
+          modified: stats.mtime.toISOString()
+        });
+      } else if (file.startsWith('kaggle-emo-') && !file.includes('-error')) {
+        manifest.conversations['kaggle-emo'].push({
+          file: file,
+          id: file.replace('.json', ''),
+          size: stats.size,
+          modified: stats.mtime.toISOString()
+        });
+      } else if (file.startsWith('chatbot_arena_')) {
+        manifest.conversations['chatbot-arena'].push({
+          file: file,
+          id: file.replace('.json', ''),
+          size: stats.size,
+          modified: stats.mtime.toISOString()
+        });
+      } else if (file.startsWith('combined-long-')) {
+        manifest.conversations['combined-long'].push({
+          file: file,
+          id: file.replace('.json', ''),
+          size: stats.size,
+          modified: stats.mtime.toISOString()
+        });
+      } else if (file.startsWith('oasst-')) {
+        manifest.conversations['oasst'].push({
           file: file,
           id: file.replace('.json', ''),
           size: stats.size,
@@ -78,7 +118,12 @@ function generateManifest() {
     manifest.totalConversations = 
       manifest.conversations.conv.length +
       manifest.conversations.sample.length +
-      manifest.conversations.emo.length;
+      manifest.conversations.emo.length +
+      manifest.conversations.cornell.length +
+      manifest.conversations['kaggle-emo'].length +
+      manifest.conversations['chatbot-arena'].length +
+      manifest.conversations['combined-long'].length +
+      manifest.conversations['oasst'].length;
 
     // Sort by ID for consistency
     manifest.conversations.conv.sort((a, b) => {
@@ -89,6 +134,24 @@ function generateManifest() {
     
     manifest.conversations.sample.sort((a, b) => a.id.localeCompare(b.id));
     manifest.conversations.emo.sort((a, b) => a.id.localeCompare(b.id));
+    
+    manifest.conversations.cornell.sort((a, b) => {
+      const aNum = parseInt(a.id.replace('cornell-', ''));
+      const bNum = parseInt(b.id.replace('cornell-', ''));
+      return aNum - bNum;
+    });
+    
+    manifest.conversations['kaggle-emo'].sort((a, b) => {
+      const aNum = parseInt(a.id.replace('kaggle-emo-', ''));
+      const bNum = parseInt(b.id.replace('kaggle-emo-', ''));
+      return aNum - bNum;
+    });
+    
+    manifest.conversations['chatbot-arena'].sort((a, b) => {
+      const aNum = parseInt(a.id.replace('chatbot_arena_', ''));
+      const bNum = parseInt(b.id.replace('chatbot_arena_', ''));
+      return aNum - bNum;
+    });
 
     // Write manifest file
     fs.writeFileSync(MANIFEST_FILE, JSON.stringify(manifest, null, 2));
@@ -98,6 +161,11 @@ function generateManifest() {
     console.log(`   - conv-*.json: ${manifest.conversations.conv.length}`);
     console.log(`   - sample-*.json: ${manifest.conversations.sample.length}`);
     console.log(`   - emo-*.json: ${manifest.conversations.emo.length}`);
+    console.log(`   - cornell-*.json: ${manifest.conversations.cornell.length}`);
+    console.log(`   - kaggle-emo-*.json: ${manifest.conversations['kaggle-emo'].length}`);
+    console.log(`   - chatbot_arena_*.json: ${manifest.conversations['chatbot-arena'].length}`);
+    console.log(`   - combined-long-*.json: ${manifest.conversations['combined-long'].length}`);
+    console.log(`   - oasst-*.json: ${manifest.conversations['oasst'].length}`);
     console.log(`\n   Manifest saved to: ${MANIFEST_FILE}\n`);
 
   } catch (error) {

@@ -1,0 +1,173 @@
+{
+  "id": "emo-angry-3",
+  "messages": [
+    {
+      "role": "user",
+      "content": "I worked on my truck all weekend. Spent $215 on parts and a special tool. Still did not fix the miss in the engine.",
+      "pad": {
+        "pleasure": 0.3,
+        "arousal": 0.4,
+        "dominance": 0.3,
+        "emotionalIntensity": 0.58
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "What is the problem with the engine?",
+      "pad": {
+        "pleasure": 0.5,
+        "arousal": 0.3,
+        "dominance": 0.4,
+        "emotionalIntensity": 0.42
+      }
+    },
+    {
+      "role": "user",
+      "content": "It has a miss. Sometimes when you are driving it sputters and jerks and barely has any power. Other times it drives just fine. I have replaced so many things on it and nothing makes a difference for very long.",
+      "pad": {
+        "pleasure": 0.4,
+        "arousal": 0.5,
+        "dominance": 0.5,
+        "emotionalIntensity": 0.56
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "Sorry to hear that. I hope you find what is the problem with the engine.",
+      "pad": {
+        "pleasure": 0.6,
+        "arousal": 0.3,
+        "dominance": 0.5,
+        "emotionalIntensity": 0.36
+      }
+    }
+  ],
+  "emotion": "angry",
+  "situation": "I spent all weekend working on my truck to fix a miss in the engine. Despite spending over $200 in parts, it didn't do a thing to fix the miss.",
+  "source": "empathetic_dialogues",
+  "classification": {
+    "interactionPattern": {
+      "category": "question-answer",
+      "confidence": 0.8,
+      "evidence": [
+        "What is the problem with the engine?",
+        "It has a miss."
+      ],
+      "rationale": "The assistant asks a clarifying question, and the user provides an answer.",
+      "alternative": "casual-chat"
+    },
+    "powerDynamics": {
+      "category": "human-led",
+      "confidence": 0.8,
+      "evidence": [
+        "I worked on my truck all weekend.",
+        "It has a miss."
+      ],
+      "rationale": "The user initiates the conversation and provides most of the information.",
+      "alternative": "balanced"
+    },
+    "emotionalTone": {
+      "category": "supportive",
+      "confidence": 0.7,
+      "evidence": [
+        "Sorry to hear that.",
+        "I hope you find what is the problem with the engine."
+      ],
+      "rationale": "The assistant expresses sympathy and encouragement.",
+      "alternative": "neutral"
+    },
+    "engagementStyle": {
+      "category": "reactive",
+      "confidence": 0.7,
+      "evidence": [
+        "What is the problem with the engine?",
+        "Sorry to hear that."
+      ],
+      "rationale": "The assistant responds to the user's statements without strong direction.",
+      "alternative": "questioning"
+    },
+    "knowledgeExchange": {
+      "category": "experience-sharing",
+      "confidence": 0.7,
+      "evidence": [
+        "I have replaced so many things on it and nothing makes a difference for very long."
+      ],
+      "rationale": "The user shares their personal experience with the truck issue.",
+      "alternative": "opinion-exchange"
+    },
+    "conversationPurpose": {
+      "category": "problem-solving",
+      "confidence": 0.7,
+      "evidence": [
+        "Still did not fix the miss in the engine.",
+        "I have replaced so many things on it."
+      ],
+      "rationale": "The user is seeking help to resolve a mechanical issue.",
+      "alternative": "information-seeking"
+    },
+    "turnTaking": {
+      "category": "balanced",
+      "confidence": 0.7,
+      "evidence": [
+        "USER: I worked on my truck all weekend.",
+        "ASSISTANT: What is the problem with the engine?"
+      ],
+      "rationale": "Both parties contribute to the conversation with similar lengths.",
+      "alternative": "user-dominant"
+    },
+    "humanRole": {
+      "distribution": {
+        "seeker": 0.5,
+        "learner": 0.0,
+        "director": 0.0,
+        "collaborator": 0.0,
+        "sharer": 0.5,
+        "challenger": 0.0
+      },
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "role": "seeker",
+          "quote": "Still did not fix the miss in the engine."
+        },
+        {
+          "role": "sharer",
+          "quote": "I have replaced so many things on it."
+        }
+      ],
+      "rationale": "The user seeks information about the engine problem and shares personal experiences.",
+      "alternative": "learner"
+    },
+    "aiRole": {
+      "distribution": {
+        "expert": 0.0,
+        "advisor": 0.0,
+        "facilitator": 0.5,
+        "reflector": 0.5,
+        "peer": 0.0,
+        "affiliative": 0.0
+      },
+      "confidence": 0.7,
+      "evidence": [
+        {
+          "role": "facilitator",
+          "quote": "What is the problem with the engine?"
+        },
+        {
+          "role": "reflector",
+          "quote": "Sorry to hear that."
+        }
+      ],
+      "rationale": "The assistant asks questions to guide the user and reflects back their feelings.",
+      "alternative": "expert"
+    },
+    "abstain": false
+  },
+  "classificationMetadata": {
+    "model": "gpt-4o-mini",
+    "provider": "openai",
+    "timestamp": "2025-12-22T16:41:55.334327",
+    "promptVersion": "1.1.0",
+    "processingTimeMs": 0
+  }
+}

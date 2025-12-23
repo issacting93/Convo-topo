@@ -1,0 +1,172 @@
+{
+  "id": "emo-excited-1",
+  "messages": [
+    {
+      "role": "user",
+      "content": "So last week we were watching the world cup, and lo and behold, Croatia beat the host country, Russia",
+      "pad": {
+        "pleasure": 0.6,
+        "arousal": 0.5,
+        "dominance": 0.4,
+        "emotionalIntensity": 0.44
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "I saw that game. They won on penalty kicks!",
+      "pad": {
+        "pleasure": 0.7,
+        "arousal": 0.4,
+        "dominance": 0.5,
+        "emotionalIntensity": 0.34
+      }
+    },
+    {
+      "role": "user",
+      "content": "Yes! Both countries were not about to let each other win",
+      "pad": {
+        "pleasure": 0.8,
+        "arousal": 0.6,
+        "dominance": 0.3,
+        "emotionalIntensity": 0.36
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "It was very tense. The other game with England and Sweden was not nearly as nerve-wracking.",
+      "pad": {
+        "pleasure": 0.7,
+        "arousal": 0.5,
+        "dominance": 0.6,
+        "emotionalIntensity": 0.38
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "You're right. I prefer nerve-wrecking matches. When both teams are great, the tension really builds.",
+      "pad": {
+        "pleasure": 0.8,
+        "arousal": 0.6,
+        "dominance": 0.7,
+        "emotionalIntensity": 0.36
+      }
+    }
+  ],
+  "classification": {
+    "interactionPattern": {
+      "category": "casual-chat",
+      "confidence": 0.8,
+      "evidence": [
+        "So last week we were watching the world cup",
+        "I saw that game. They won on penalty kicks!"
+      ],
+      "rationale": "The conversation revolves around a shared experience without a specific goal.",
+      "alternative": "storytelling"
+    },
+    "powerDynamics": {
+      "category": "balanced",
+      "confidence": 0.7,
+      "evidence": [
+        "I saw that game.",
+        "You're right. I prefer nerve-wrecking matches."
+      ],
+      "rationale": "Both parties contribute equally to the conversation.",
+      "alternative": "human-led"
+    },
+    "emotionalTone": {
+      "category": "playful",
+      "confidence": 0.7,
+      "evidence": [
+        "Yes! Both countries were not about to let each other win",
+        "I prefer nerve-wrecking matches."
+      ],
+      "rationale": "The tone is light and reflects enjoyment of the topic.",
+      "alternative": "supportive"
+    },
+    "engagementStyle": {
+      "category": "affirming",
+      "confidence": 0.7,
+      "evidence": [
+        "You're right. I prefer nerve-wrecking matches."
+      ],
+      "rationale": "The assistant agrees and builds on the user's statement.",
+      "alternative": "reactive"
+    },
+    "knowledgeExchange": {
+      "category": "experience-sharing",
+      "confidence": 0.8,
+      "evidence": [
+        "So last week we were watching the world cup",
+        "It was very tense."
+      ],
+      "rationale": "Both parties share their experiences related to the World Cup.",
+      "alternative": "opinion-exchange"
+    },
+    "conversationPurpose": {
+      "category": "entertainment",
+      "confidence": 0.8,
+      "evidence": [
+        "So last week we were watching the world cup",
+        "I prefer nerve-wrecking matches."
+      ],
+      "rationale": "The conversation is enjoyable and focuses on a shared interest.",
+      "alternative": "relationship-building"
+    },
+    "turnTaking": {
+      "category": "balanced",
+      "confidence": 0.7,
+      "evidence": [
+        "I saw that game.",
+        "It was very tense."
+      ],
+      "rationale": "Both parties have similar lengths of contributions.",
+      "alternative": "user-dominant"
+    },
+    "humanRole": {
+      "distribution": {
+        "seeker": 0.0,
+        "learner": 0.0,
+        "director": 0.0,
+        "collaborator": 0.5,
+        "sharer": 0.5,
+        "challenger": 0.0
+      },
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "role": "sharer",
+          "quote": "So last week we were watching the world cup"
+        }
+      ],
+      "rationale": "The user shares personal experiences while also engaging collaboratively.",
+      "alternative": null
+    },
+    "aiRole": {
+      "distribution": {
+        "expert": 0.0,
+        "advisor": 0.0,
+        "facilitator": 0.5,
+        "reflector": 0.5,
+        "peer": 0.0,
+        "affiliative": 0.0
+      },
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "role": "facilitator",
+          "quote": "It was very tense."
+        }
+      ],
+      "rationale": "The assistant guides the conversation and reflects on the user's statements.",
+      "alternative": null
+    },
+    "abstain": false
+  },
+  "classificationMetadata": {
+    "model": "gpt-4o-mini",
+    "provider": "openai",
+    "timestamp": "2025-12-22T16:43:51.536988",
+    "promptVersion": "1.1.0",
+    "processingTimeMs": 0
+  }
+}

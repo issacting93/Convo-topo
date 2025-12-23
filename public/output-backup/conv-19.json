@@ -1,0 +1,243 @@
+{
+  "id": "conv-19",
+  "messages": [
+    {
+      "role": "user",
+      "content": "we all live in a yellow submarine , a yellow submarine . morning !",
+      "pad": {
+        "pleasure": 0.8,
+        "arousal": 0.5,
+        "dominance": 0.4,
+        "emotionalIntensity": 0.32
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "hi ! that is a great line for my next stand up .",
+      "pad": {
+        "pleasure": 0.9,
+        "arousal": 0.6,
+        "dominance": 0.5,
+        "emotionalIntensity": 0.3
+      }
+    },
+    {
+      "role": "user",
+      "content": "lol . i am shy , anything to break the ice , and i am a beatles fan .",
+      "pad": {
+        "pleasure": 0.7,
+        "arousal": 0.5,
+        "dominance": 0.4,
+        "emotionalIntensity": 0.38
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "i can tell . i am not , you can see me in some tv shows",
+      "pad": {
+        "pleasure": 0.6,
+        "arousal": 0.4,
+        "dominance": 0.3,
+        "emotionalIntensity": 0.4
+      }
+    },
+    {
+      "role": "user",
+      "content": "really ? what shows ? i like tv , it makes me forget i do not like my family",
+      "pad": {
+        "pleasure": 0.5,
+        "arousal": 0.4,
+        "dominance": 0.3,
+        "emotionalIntensity": 0.46
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "wow , i wish i had a big family . i grew up in a very small town .",
+      "pad": {
+        "pleasure": 0.4,
+        "arousal": 0.3,
+        "dominance": 0.2,
+        "emotionalIntensity": 0.48
+      }
+    },
+    {
+      "role": "user",
+      "content": "i did too . i do not get along with mine . they have no class .",
+      "pad": {
+        "pleasure": 0.7,
+        "arousal": 0.5,
+        "dominance": 0.4,
+        "emotionalIntensity": 0.38
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "just drink some cola with rum and you'll forget about them !",
+      "pad": {
+        "pleasure": 0.8,
+        "arousal": 0.6,
+        "dominance": 0.5,
+        "emotionalIntensity": 0.36
+      }
+    },
+    {
+      "role": "user",
+      "content": "put the lime in the coconut as well . . .",
+      "pad": {
+        "pleasure": 0.6,
+        "arousal": 0.5,
+        "dominance": 0.3,
+        "emotionalIntensity": 0.44
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "nah , plain cuba libre , that's what we drank yesterday at the theater .",
+      "pad": {
+        "pleasure": 0.7,
+        "arousal": 0.5,
+        "dominance": 0.4,
+        "emotionalIntensity": 0.38
+      }
+    },
+    {
+      "role": "user",
+      "content": "i prefer mojitos . watermelon or cucumber .",
+      "pad": {
+        "pleasure": 0.5,
+        "arousal": 0.4,
+        "dominance": 0.3,
+        "emotionalIntensity": 0.46
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "hello how are you tonight",
+      "pad": {
+        "pleasure": 0.6,
+        "arousal": 0.5,
+        "dominance": 0.4,
+        "emotionalIntensity": 0.44
+      }
+    }
+  ],
+  "classification": {
+    "interactionPattern": {
+      "category": "casual-chat",
+      "confidence": 0.9,
+      "evidence": [
+        "we all live in a yellow submarine , a yellow submarine . morning !",
+        "i prefer mojitos . watermelon or cucumber."
+      ],
+      "rationale": "The conversation consists of light-hearted exchanges without a specific goal.",
+      "alternative": null
+    },
+    "powerDynamics": {
+      "category": "balanced",
+      "confidence": 0.7,
+      "evidence": [
+        "i am shy , anything to break the ice , and i am a beatles fan .",
+        "i can tell . i am not , you can see me in some tv shows"
+      ],
+      "rationale": "Both parties contribute equally to the conversation, with no clear leader.",
+      "alternative": "human-led"
+    },
+    "emotionalTone": {
+      "category": "playful",
+      "confidence": 0.8,
+      "evidence": [
+        "put the lime in the coconut as well . . .",
+        "just drink some cola with rum and you'll forget about them !"
+      ],
+      "rationale": "The dialogue features humor and light-heartedness.",
+      "alternative": "supportive"
+    },
+    "engagementStyle": {
+      "category": "affirming",
+      "confidence": 0.7,
+      "evidence": [
+        "i can tell . i am not , you can see me in some tv shows",
+        "i did too . i do not get along with mine . they have no class."
+      ],
+      "rationale": "Participants build on each other's statements and share experiences.",
+      "alternative": "reactive"
+    },
+    "knowledgeExchange": {
+      "category": "personal-sharing",
+      "confidence": 0.8,
+      "evidence": [
+        "i do not get along with mine . they have no class.",
+        "i wish i had a big family ."
+      ],
+      "rationale": "The conversation includes personal anecdotes and feelings about family.",
+      "alternative": "experience-sharing"
+    },
+    "conversationPurpose": {
+      "category": "relationship-building",
+      "confidence": 0.9,
+      "evidence": [
+        "i am shy , anything to break the ice , and i am a beatles fan .",
+        "i prefer mojitos . watermelon or cucumber."
+      ],
+      "rationale": "The dialogue aims to create rapport and connection between the participants.",
+      "alternative": null
+    },
+    "turnTaking": {
+      "category": "balanced",
+      "confidence": 0.8,
+      "evidence": [
+        "i can tell . i am not , you can see me in some tv shows",
+        "really ? what shows ?"
+      ],
+      "rationale": "The turns are roughly equal in length and frequency.",
+      "alternative": "user-dominant"
+    },
+    "humanRole": {
+      "distribution": {
+        "seeker": 0.3,
+        "learner": 0.2,
+        "director": 0.0,
+        "collaborator": 0.3,
+        "sharer": 0.2,
+        "challenger": 0.0
+      },
+      "confidence": 0.7,
+      "evidence": [
+        {
+          "role": "seeker",
+          "quote": "really ? what shows ?"
+        }
+      ],
+      "rationale": "The user asks questions and shares personal experiences, indicating a seeker and sharer role.",
+      "alternative": "collaborator"
+    },
+    "aiRole": {
+      "distribution": {
+        "expert": 0.0,
+        "advisor": 0.0,
+        "facilitator": 0.5,
+        "reflector": 0.3,
+        "peer": 0.2,
+        "affiliative": 0.0
+      },
+      "confidence": 0.7,
+      "evidence": [
+        {
+          "role": "facilitator",
+          "quote": "i can tell . i am not , you can see me in some tv shows"
+        }
+      ],
+      "rationale": "The AI guides the conversation with affirming responses and engages as a peer.",
+      "alternative": "reflector"
+    },
+    "abstain": false
+  },
+  "classificationMetadata": {
+    "model": "gpt-4o-mini",
+    "provider": "openai",
+    "timestamp": "2025-12-22T16:37:28.552312",
+    "promptVersion": "1.1.0",
+    "processingTimeMs": 0
+  }
+}

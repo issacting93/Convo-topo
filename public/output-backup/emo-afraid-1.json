@@ -1,0 +1,193 @@
+{
+  "id": "emo-afraid-1",
+  "messages": [
+    {
+      "role": "user",
+      "content": "it feels like hitting to blank wall when i see the darkness",
+      "pad": {
+        "pleasure": 0.2,
+        "arousal": 0.4,
+        "dominance": 0.3,
+        "emotionalIntensity": 0.64
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "Oh ya? I don't really see how",
+      "pad": {
+        "pleasure": 0.3,
+        "arousal": 0.2,
+        "dominance": 0.4,
+        "emotionalIntensity": 0.5
+      }
+    },
+    {
+      "role": "user",
+      "content": "dont you feel so.. its a wonder",
+      "pad": {
+        "pleasure": 0.5,
+        "arousal": 0.5,
+        "dominance": 0.4,
+        "emotionalIntensity": 0.5
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "I do actually hit blank walls a lot of times but i get by",
+      "pad": {
+        "pleasure": 0.4,
+        "arousal": 0.3,
+        "dominance": 0.5,
+        "emotionalIntensity": 0.48
+      }
+    },
+    {
+      "role": "user",
+      "content": "i virtually thought so.. and i used to get sweatings",
+      "pad": {
+        "pleasure": 0.3,
+        "arousal": 0.4,
+        "dominance": 0.3,
+        "emotionalIntensity": 0.58
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "Wait what are sweatings",
+      "pad": {
+        "pleasure": 0.2,
+        "arousal": 0.3,
+        "dominance": 0.4,
+        "emotionalIntensity": 0.6
+      }
+    }
+  ],
+  "emotion": "afraid",
+  "situation": "i used to scare for darkness",
+  "source": "empathetic_dialogues",
+  "classification": {
+    "interactionPattern": {
+      "category": "casual-chat",
+      "confidence": 0.7,
+      "evidence": [
+        "it feels like hitting to blank wall when i see the darkness",
+        "i do actually hit blank walls a lot of times but i get by"
+      ],
+      "rationale": "The conversation reflects a social exchange without a specific goal, focusing on personal experiences.",
+      "alternative": "storytelling"
+    },
+    "powerDynamics": {
+      "category": "balanced",
+      "confidence": 0.7,
+      "evidence": [
+        "it feels like hitting to blank wall when i see the darkness",
+        "i do actually hit blank walls a lot of times but i get by"
+      ],
+      "rationale": "Both parties contribute equally to the conversation's direction.",
+      "alternative": "human-led"
+    },
+    "emotionalTone": {
+      "category": "empathetic",
+      "confidence": 0.6,
+      "evidence": [
+        "Oh ya? I don't really see how",
+        "i do actually hit blank walls a lot of times but i get by"
+      ],
+      "rationale": "There is a sense of understanding and sharing experiences, though not strongly affirmed.",
+      "alternative": "supportive"
+    },
+    "engagementStyle": {
+      "category": "reactive",
+      "confidence": 0.6,
+      "evidence": [
+        "Wait what are sweatings"
+      ],
+      "rationale": "The assistant responds to the user's statements without driving the conversation forward.",
+      "alternative": "questioning"
+    },
+    "knowledgeExchange": {
+      "category": "personal-sharing",
+      "confidence": 0.7,
+      "evidence": [
+        "it feels like hitting to blank wall when i see the darkness",
+        "i virtually thought so.. and i used to get sweatings"
+      ],
+      "rationale": "The conversation involves sharing personal experiences and feelings.",
+      "alternative": "experience-sharing"
+    },
+    "conversationPurpose": {
+      "category": "relationship-building",
+      "confidence": 0.7,
+      "evidence": [
+        "it feels like hitting to blank wall when i see the darkness",
+        "i do actually hit blank walls a lot of times but i get by"
+      ],
+      "rationale": "The dialogue appears to focus on connecting through shared experiences.",
+      "alternative": "self-expression"
+    },
+    "turnTaking": {
+      "category": "balanced",
+      "confidence": 0.7,
+      "evidence": [
+        "it feels like hitting to blank wall when i see the darkness",
+        "i do actually hit blank walls a lot of times but i get by"
+      ],
+      "rationale": "Both parties have similar lengths and contributions in their turns.",
+      "alternative": "user-dominant"
+    },
+    "humanRole": {
+      "distribution": {
+        "seeker": 0.4,
+        "learner": 0.0,
+        "director": 0.0,
+        "collaborator": 0.2,
+        "sharer": 0.4,
+        "challenger": 0.0
+      },
+      "confidence": 0.6,
+      "evidence": [
+        {
+          "role": "sharer",
+          "quote": "it feels like hitting to blank wall when i see the darkness"
+        },
+        {
+          "role": "seeker",
+          "quote": "dont you feel so.. its a wonder"
+        }
+      ],
+      "rationale": "The user shares personal experiences while also seeking validation or understanding from the assistant.",
+      "alternative": "collaborator"
+    },
+    "aiRole": {
+      "distribution": {
+        "expert": 0.0,
+        "advisor": 0.0,
+        "facilitator": 0.5,
+        "reflector": 0.5,
+        "peer": 0.0,
+        "affiliative": 0.0
+      },
+      "confidence": 0.6,
+      "evidence": [
+        {
+          "role": "reflector",
+          "quote": "Oh ya? I don't really see how"
+        },
+        {
+          "role": "facilitator",
+          "quote": "Wait what are sweatings"
+        }
+      ],
+      "rationale": "The assistant reflects on the user's statements and facilitates further exploration of the topic.",
+      "alternative": "peer"
+    },
+    "abstain": false
+  },
+  "classificationMetadata": {
+    "model": "gpt-4o-mini",
+    "provider": "openai",
+    "timestamp": "2025-12-22T16:40:37.336840",
+    "promptVersion": "1.1.0",
+    "processingTimeMs": 0
+  }
+}

@@ -8,14 +8,191 @@ import { ClassifiedConversation } from '../utils/conversationToTerrain';
 
 let cachedConversations: ClassifiedConversation[] | null = null;
 
+// Manifest interface
+interface ManifestConversation {
+  file: string;
+  id: string;
+  size: number;
+  modified: string;
+}
+
+interface Manifest {
+  version: string;
+  lastUpdated: string;
+  generatedBy: string;
+  totalConversations: number;
+  conversations: {
+    conv: ManifestConversation[];
+    sample: ManifestConversation[];
+    emo: ManifestConversation[];
+    cornell: ManifestConversation[];
+    'kaggle-emo': ManifestConversation[];
+    'chatbot-arena': ManifestConversation[];
+    'combined-long'?: ManifestConversation[];
+    'oasst'?: ManifestConversation[];
+  };
+}
+
 // Clear cache function for development
 export function clearConversationCache() {
   cachedConversations = null;
 }
 
 /**
+ * Load manifest file to get list of available conversations
+ */
+async function loadManifest(): Promise<Manifest | null> {
+  try {
+    const response = await fetch('/output/manifest.json');
+    if (response.ok) {
+      return await response.json();
+    }
+  } catch (error) {
+    if (import.meta.env.DEV) {
+      console.warn('⚠️  Manifest file not found, falling back to sequential loading');
+    }
+  }
+  return null;
+}
+
+/**
+ * Check if a conversation contains non-English content
+ */
+function isEnglishConversation(conversation: ClassifiedConversation): boolean {
+  const messages = conversation.messages || [];
+  
+  // Check first few messages for non-English patterns
+  const sampleMessages = messages.slice(0, 5);
+  
+  for (const msg of sampleMessages) {
+    const content = msg.content || '';
+    
+    // Skip very short messages (just "ok", "yes", etc.)
+    if (content.trim().length < 3) continue;
+    
+    // Check for Spanish patterns
+    if (/[ñáéíóúü¿¡]|hola|español|entender|gracias|por favor|puedes|quiero|dime|cosas bonitas/i.test(content)) {
+      return false;
+    }
+    
+    // Check for French patterns
+    if (/[çàâäéèêëïîôùûüÿ]|bonjour|merci|français|comprendre|salut|ça va/i.test(content)) {
+      return false;
+    }
+    
+    // Check for German patterns
+    if (/[äöüß]|guten tag|danke|verstehen|deutsch|ist ein|rechtwink/i.test(content)) {
+      return false;
+    }
+    
+    // Check for Chinese/Japanese/Korean characters
+    if (/[\u4e00-\u9fff\u3040-\u309f\u30a0-\u30ff\uac00-\ud7af]/.test(content)) {
+      return false;
+    }
+    
+    // Check for Arabic characters
+    if (/[\u0600-\u06ff]/.test(content)) {
+      return false;
+    }
+  }
+  
+  return true;
+}
+
+/**
+ * Load a single conversation file by filename
+ */
+async function loadConversationFile(filename: string): Promise<ClassifiedConversation | null> {
+  try {
+    const response = await fetch(`/output/${filename}`);
+    if (response.ok) {
+      const conversation = await response.json();
+      // Filter out non-English conversations
+      if (!isEnglishConversation(conversation)) {
+        if (import.meta.env.DEV) {
+          console.log(`🌐 Skipping non-English conversation: ${filename}`);
+        }
+        return null;
+      }
+      return conversation;
+    }
+  } catch (error) {
+    if (import.meta.env.DEV) {
+      console.warn(`⚠️  Failed to load ${filename}:`, error);
+    }
+  }
+  return null;
+}
+
+/**
+ * Load classified conversations using manifest file (faster and more efficient)
+ */
+async function loadWithManifest(manifest: Manifest): Promise<ClassifiedConversation[]> {
+  // Collect all conversation file names from ALL sources in manifest
+  const allFiles: string[] = [];
+
+  // Load from all available conversation sources
+  for (const conversations of Object.values(manifest.conversations)) {
+    allFiles.push(...conversations.map(c => c.file));
+  }
+
+  // Load all files in parallel for better performance
+  const loadPromises = allFiles.map(file => loadConversationFile(file));
+  const results = await Promise.all(loadPromises);
+
+  // Filter out null results (failed loads + non-English conversations)
+  const conversations = results.filter((conv): conv is ClassifiedConversation => conv !== null);
+  const filteredCount = allFiles.length - conversations.length;
+
+  if (import.meta.env.DEV) {
+    console.log(`📋 Loaded ${conversations.length}/${allFiles.length} conversations from manifest`);
+    if (filteredCount > 0) {
+      console.log(`  - Filtered out ${filteredCount} non-English conversation(s)`);
+    }
+    console.log(`  - With classification: ${conversations.filter(c => c.classification).length}`);
+    console.log(`  - Without classification: ${conversations.filter(c => !c.classification).length}`);
+  }
+
+  return conversations;
+}
+
+/**
+ * Fallback: Load conversations sequentially (old method)
+ * Used when manifest is not available
+ */
+async function loadSequentially(): Promise<ClassifiedConversation[]> {
+  const conversations: ClassifiedConversation[] = [];
+  
+  // Only load chatbot_arena files (old data hidden)
+  let index = 1;
+  let hasMore = true;
+  
+  while (hasMore && index <= 100) { // Safety limit
+    const fileName = `chatbot_arena_${String(index).padStart(2, '0')}.json`;
+    const conv = await loadConversationFile(fileName);
+    if (conv) {
+      conversations.push(conv);
+      index++;
+    } else {
+      hasMore = false;
+    }
+  }
+  
+  // OLD DATA HIDDEN - Only loading chatbot_arena files
+  // (commented out: conv-*, sample-*, emo-*, cornell-*, kaggle-emo-*)
+  
+  if (import.meta.env.DEV) {
+    console.log(`📋 Loaded ${conversations.length} conversations (sequential fallback, English only)`);
+    console.log(`  - With classification: ${conversations.filter(c => c.classification).length}`);
+    console.log(`  - Without classification: ${conversations.filter(c => !c.classification).length}`);
+  }
+
+  return conversations;
+}
+
+/**
  * Load classified conversations from the output directory
- * This works in development with Vite's public folder
+ * Uses manifest file for faster loading, falls back to sequential loading if manifest unavailable
  */
 export async function loadClassifiedConversations(): Promise<ClassifiedConversation[]> {
   // Disable cache in development to always get fresh data
@@ -23,153 +200,20 @@ export async function loadClassifiedConversations(): Promise<ClassifiedConversat
     return cachedConversations;
   }
 
-  const conversations: ClassifiedConversation[] = [];
-  let index = 0;
-  let hasMore = true;
+  // Try to load manifest first (faster and more efficient)
+  const manifest = await loadManifest();
   
-  // Try to load conversations sequentially (conv-0.json, conv-1.json, etc.)
-  while (hasMore && index < 100) { // Safety limit
-    try {
-      // In Vite, files in public/ are served from root
-      const response = await fetch(`/output/conv-${index}.json`);
-      
-      if (response.ok) {
-        const data = await response.json();
-        conversations.push(data);
-        index++;
-      } else if (response.status === 404) {
-        // No more files
-        hasMore = false;
-      } else {
-        // Other error, stop trying
-        hasMore = false;
-      }
-    } catch (error) {
-      // Network error or file doesn't exist
-      hasMore = false;
-    }
+  if (manifest) {
+    // Use manifest-based loading (parallel, faster)
+    const conversations = await loadWithManifest(manifest);
+    cachedConversations = conversations;
+    return conversations;
+  } else {
+    // Fallback to sequential loading (slower, but works without manifest)
+    const conversations = await loadSequentially();
+    cachedConversations = conversations;
+    return conversations;
   }
-  
-  // Also load sample conversations (try known sample IDs)
-  const sampleConversations = [
-    'sample-very-shallow',
-    'sample-shallow-moderate',
-    'sample-question-answer',
-    'sample-medium-depth',
-    'sample-deep-discussion',
-    'sample-deep-technical',
-    'sample-very-deep',
-    // Legacy samples (may not exist)
-    'sample-collaborative',
-    'sample-storytelling',
-    'sample-advisory',
-    'sample-emotional-support',
-    'sample-technical-deep',
-    'sample-playful-casual',
-    'sample-debate',
-    'sample-information-seeking'
-  ];
-  
-  for (const sampleId of sampleConversations) {
-    try {
-      const response = await fetch(`/output/${sampleId}.json`);
-      if (response.ok) {
-        const data = await response.json();
-        conversations.push(data);
-      }
-    } catch (error) {
-      // Sample file doesn't exist, skip silently
-    }
-  }
-  
-  // Load emo-*.json files (empathetic dialogues)
-  // Try known emotions and indices
-  const emotions = [
-    'afraid', 'angry', 'annoyed', 'ashamed', 'confident', 'embarrassed',
-    'excited', 'faithful', 'grateful', 'guilty', 'jealous', 'joyful',
-    'lonely', 'nostalgic', 'prepared', 'proud', 'sad', 'sentimental',
-    'surprised', 'terrified'
-  ];
-  
-  for (const emotion of emotions) {
-    let emoIndex = 1;
-    let hasMoreEmo = true;
-    
-    // Try up to 10 conversations per emotion
-    while (hasMoreEmo && emoIndex <= 10) {
-      try {
-        const response = await fetch(`/output/emo-${emotion}-${emoIndex}.json`);
-        if (response.ok) {
-          const data = await response.json();
-          conversations.push(data);
-          emoIndex++;
-        } else if (response.status === 404) {
-          // No more files for this emotion
-          hasMoreEmo = false;
-        } else {
-          hasMoreEmo = false;
-        }
-      } catch (error) {
-        // File doesn't exist or other error
-        hasMoreEmo = false;
-      }
-    }
-  }
-  
-  // Load cornell-*.json files (Cornell Movie Dialogs)
-  let cornellIndex = 0;
-  let hasMoreCornell = true;
-  while (hasMoreCornell && cornellIndex < 100) {
-    try {
-      const response = await fetch(`/output/cornell-${cornellIndex}.json`);
-      if (response.ok) {
-        const data = await response.json();
-        conversations.push(data);
-        cornellIndex++;
-      } else if (response.status === 404) {
-        hasMoreCornell = false;
-      } else {
-        hasMoreCornell = false;
-      }
-    } catch (error) {
-      hasMoreCornell = false;
-    }
-  }
-  
-  // Load kaggle-emo-*.json files (Kaggle Empathetic Dialogues)
-  // Exclude error files (kaggle-emo-*-error.json)
-  let kaggleIndex = 0;
-  let hasMoreKaggle = true;
-  while (hasMoreKaggle && kaggleIndex < 100) {
-    try {
-      // Skip error files
-      const response = await fetch(`/output/kaggle-emo-${kaggleIndex}.json`);
-      if (response.ok) {
-        const data = await response.json();
-        // Double-check it's not an error file by checking content
-        if (!data.id?.endsWith('-error')) {
-          conversations.push(data);
-        }
-        kaggleIndex++;
-      } else if (response.status === 404) {
-        hasMoreKaggle = false;
-      } else {
-        hasMoreKaggle = false;
-      }
-    } catch (error) {
-      hasMoreKaggle = false;
-    }
-  }
-  
-  // Return all conversations (even those with abstain or no classification)
-  // Conversations without classification will use default terrain parameters
-  if (import.meta.env.DEV) {
-    console.log(`Loaded ${conversations.length} total conversations`);
-    console.log(`  - With classification: ${conversations.filter(c => c.classification).length}`);
-    console.log(`  - Without classification: ${conversations.filter(c => !c.classification).length}`);
-  }
-  cachedConversations = conversations;
-  return conversations;
 }
 
 /**

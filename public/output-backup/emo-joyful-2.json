@@ -1,0 +1,181 @@
+{
+  "id": "emo-joyful-2",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Planning out my new home has turned out to be a blast!",
+      "pad": {
+        "pleasure": 0.9,
+        "arousal": 0.7,
+        "dominance": 0.5,
+        "emotionalIntensity": 0.34
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "What kind of house are you building?",
+      "pad": {
+        "pleasure": 0.8,
+        "arousal": 0.5,
+        "dominance": 0.4,
+        "emotionalIntensity": 0.32
+      }
+    },
+    {
+      "role": "user",
+      "content": "I just moved in so it is already built. Just working on planning out decorating and appliances and such.",
+      "pad": {
+        "pleasure": 0.7,
+        "arousal": 0.4,
+        "dominance": 0.3,
+        "emotionalIntensity": 0.34
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "That sounds great. What are you most excited for?",
+      "pad": {
+        "pleasure": 0.9,
+        "arousal": 0.6,
+        "dominance": 0.5,
+        "emotionalIntensity": 0.3
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "I think I am most excited for all the space I have. I can have friends over and not feel cramped.",
+      "pad": {
+        "pleasure": 0.8,
+        "arousal": 0.5,
+        "dominance": 0.6,
+        "emotionalIntensity": 0.32
+      }
+    }
+  ],
+  "classification": {
+    "interactionPattern": {
+      "category": "casual-chat",
+      "confidence": 0.8,
+      "evidence": [
+        "Planning out my new home has turned out to be a blast!",
+        "That sounds great. What are you most excited for?"
+      ],
+      "rationale": "The conversation is light and social, focusing on personal experiences.",
+      "alternative": "storytelling"
+    },
+    "powerDynamics": {
+      "category": "balanced",
+      "confidence": 0.7,
+      "evidence": [
+        "What kind of house are you building?",
+        "What are you most excited for?"
+      ],
+      "rationale": "Both parties contribute to the conversation without a clear leader.",
+      "alternative": "human-led"
+    },
+    "emotionalTone": {
+      "category": "supportive",
+      "confidence": 0.8,
+      "evidence": [
+        "That sounds great.",
+        "I can have friends over and not feel cramped."
+      ],
+      "rationale": "The assistant affirms the user's excitement and shares in the positivity.",
+      "alternative": "playful"
+    },
+    "engagementStyle": {
+      "category": "affirming",
+      "confidence": 0.7,
+      "evidence": [
+        "That sounds great.",
+        "I can have friends over and not feel cramped."
+      ],
+      "rationale": "The assistant validates the user's feelings and excitement.",
+      "alternative": "reactive"
+    },
+    "knowledgeExchange": {
+      "category": "personal-sharing",
+      "confidence": 0.8,
+      "evidence": [
+        "Planning out my new home has turned out to be a blast!",
+        "I can have friends over and not feel cramped."
+      ],
+      "rationale": "The conversation revolves around personal experiences and feelings about home.",
+      "alternative": "experience-sharing"
+    },
+    "conversationPurpose": {
+      "category": "relationship-building",
+      "confidence": 0.8,
+      "evidence": [
+        "Planning out my new home has turned out to be a blast!",
+        "That sounds great."
+      ],
+      "rationale": "The dialogue fosters connection through shared experiences.",
+      "alternative": "entertainment"
+    },
+    "turnTaking": {
+      "category": "balanced",
+      "confidence": 0.7,
+      "evidence": [
+        "What kind of house are you building?",
+        "What are you most excited for?"
+      ],
+      "rationale": "Both parties contribute similarly in length and content.",
+      "alternative": "user-dominant"
+    },
+    "humanRole": {
+      "distribution": {
+        "seeker": 0.5,
+        "learner": 0.0,
+        "director": 0.0,
+        "collaborator": 0.5,
+        "sharer": 0.0,
+        "challenger": 0.0
+      },
+      "confidence": 0.7,
+      "evidence": [
+        {
+          "role": "seeker",
+          "quote": "What kind of house are you building?"
+        },
+        {
+          "role": "collaborator",
+          "quote": "I just moved in so it is already built."
+        }
+      ],
+      "rationale": "The user seeks information and collaborates on the topic of home planning.",
+      "alternative": "sharer"
+    },
+    "aiRole": {
+      "distribution": {
+        "expert": 0.0,
+        "advisor": 0.0,
+        "facilitator": 0.5,
+        "reflector": 0.5,
+        "peer": 0.0,
+        "affiliative": 0.0
+      },
+      "confidence": 0.7,
+      "evidence": [
+        {
+          "role": "facilitator",
+          "quote": "What kind of house are you building?"
+        },
+        {
+          "role": "reflector",
+          "quote": "That sounds great."
+        }
+      ],
+      "rationale": "The assistant facilitates the conversation and reflects on the user's experiences.",
+      "alternative": "peer"
+    },
+    "abstain": false
+  },
+  "classificationMetadata": {
+    "model": "gpt-4o-mini",
+    "provider": "openai",
+    "timestamp": "2025-12-22T16:45:47.834045",
+    "promptVersion": "1.1.0",
+    "processingTimeMs": 0
+  }
+}

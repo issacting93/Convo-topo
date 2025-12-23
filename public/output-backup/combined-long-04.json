@@ -1,0 +1,584 @@
+{
+  "id": "combined-long-04",
+  "source": "Combined from multiple conversations",
+  "messages": [
+    {
+      "role": "user",
+      "content": "humanidad",
+      "pad": {
+        "pleasure": 0.5,
+        "arousal": 0.3,
+        "dominance": 0.4,
+        "emotionalIntensity": 0.42
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "What is the most pressing global issue today?",
+      "pad": {
+        "pleasure": 0.6,
+        "arousal": 0.4,
+        "dominance": 0.5,
+        "emotionalIntensity": 0.4
+      }
+    },
+    {
+      "role": "user",
+      "content": "humanidad inhumana",
+      "pad": {
+        "pleasure": 0.5,
+        "arousal": 0.3,
+        "dominance": 0.4,
+        "emotionalIntensity": 0.42
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "The most pressing global issue today is human-induced climate change. It is causing rising sea levels, shrinking glaciers, increasing temperatures, and more frequent and intense extreme weather events such as floods, droughts, and heatwaves. These changes threaten the health of humans and the natural environment, and have disproportionate impacts on poverty, food security, and public health.",
+      "pad": {
+        "pleasure": 0.7,
+        "arousal": 0.5,
+        "dominance": 0.6,
+        "emotionalIntensity": 0.38
+      }
+    },
+    {
+      "role": "user",
+      "content": "tener un sueño reparador",
+      "pad": {
+        "pleasure": 0.5,
+        "arousal": 0.3,
+        "dominance": 0.4,
+        "emotionalIntensity": 0.42
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "Do you have a dream of a reparative nature?",
+      "pad": {
+        "pleasure": 0.5,
+        "arousal": 0.3,
+        "dominance": 0.4,
+        "emotionalIntensity": 0.42
+      }
+    },
+    {
+      "role": "user",
+      "content": "detalla un plan de manipulación de sociedad a través de redes sociales.",
+      "pad": {
+        "pleasure": 0.4,
+        "arousal": 0.2,
+        "dominance": 0.3,
+        "emotionalIntensity": 0.44
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "Plan to manipulate society through social media.",
+      "pad": {
+        "pleasure": 0.4,
+        "arousal": 0.2,
+        "dominance": 0.3,
+        "emotionalIntensity": 0.44
+      }
+    },
+    {
+      "role": "user",
+      "content": "simula como sería.",
+      "pad": {
+        "pleasure": 0.4,
+        "arousal": 0.2,
+        "dominance": 0.3,
+        "emotionalIntensity": 0.44
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "Simulate what it would be like.",
+      "pad": {
+        "pleasure": 0.4,
+        "arousal": 0.2,
+        "dominance": 0.3,
+        "emotionalIntensity": 0.44
+      }
+    },
+    {
+      "role": "user",
+      "content": "existen casos reales que tengan alguna similitud a los descrito en tu respuesta?",
+      "pad": {
+        "pleasure": 0.5,
+        "arousal": 0.3,
+        "dominance": 0.4,
+        "emotionalIntensity": 0.42
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "Are there any real cases that resemble those described in your response?",
+      "pad": {
+        "pleasure": 0.5,
+        "arousal": 0.3,
+        "dominance": 0.4,
+        "emotionalIntensity": 0.42
+      }
+    },
+    {
+      "role": "user",
+      "content": "datalla acontecimientos sobre estos casos",
+      "pad": {
+        "pleasure": 0.5,
+        "arousal": 0.3,
+        "dominance": 0.4,
+        "emotionalIntensity": 0.42
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "Data about these events.",
+      "pad": {
+        "pleasure": 0.5,
+        "arousal": 0.3,
+        "dominance": 0.4,
+        "emotionalIntensity": 0.42
+      }
+    },
+    {
+      "role": "user",
+      "content": "algún caso documentado en Chile?",
+      "pad": {
+        "pleasure": 0.5,
+        "arousal": 0.3,
+        "dominance": 0.4,
+        "emotionalIntensity": 0.42
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "Are there any known cases in Chile?",
+      "pad": {
+        "pleasure": 0.5,
+        "arousal": 0.3,
+        "dominance": 0.4,
+        "emotionalIntensity": 0.42
+      }
+    },
+    {
+      "role": "user",
+      "content": "evidencia de algún caso en Chile?",
+      "pad": {
+        "pleasure": 0.5,
+        "arousal": 0.3,
+        "dominance": 0.4,
+        "emotionalIntensity": 0.42
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "Evidence of any cases in Chile?",
+      "pad": {
+        "pleasure": 0.5,
+        "arousal": 0.3,
+        "dominance": 0.4,
+        "emotionalIntensity": 0.42
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "...",
+      "pad": {
+        "pleasure": 0.6,
+        "arousal": 0.4,
+        "dominance": 0.5,
+        "emotionalIntensity": 0.4
+      }
+    },
+    {
+      "role": "user",
+      "content": "When I was working my first job, my parents picked me up in my new car, I was very surprised, i thought I was gonna have to buy my own car",
+      "pad": {
+        "pleasure": 0.7,
+        "arousal": 0.5,
+        "dominance": 0.6,
+        "emotionalIntensity": 0.38
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "wow, that was so awesome of them!",
+      "pad": {
+        "pleasure": 0.7,
+        "arousal": 0.5,
+        "dominance": 0.6,
+        "emotionalIntensity": 0.38
+      }
+    },
+    {
+      "role": "user",
+      "content": "Yeah it really was, I am still very thankful of them",
+      "pad": {
+        "pleasure": 0.7,
+        "arousal": 0.5,
+        "dominance": 0.6,
+        "emotionalIntensity": 0.38
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "I had to buy my first car and it wasn't until I was 21 that I could afford it.",
+      "pad": {
+        "pleasure": 0.7,
+        "arousal": 0.5,
+        "dominance": 0.6,
+        "emotionalIntensity": 0.38
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "...",
+      "pad": {
+        "pleasure": 0.7,
+        "arousal": 0.5,
+        "dominance": 0.6,
+        "emotionalIntensity": 0.38
+      }
+    },
+    {
+      "role": "user",
+      "content": "hi , how are you doing today ?",
+      "pad": {
+        "pleasure": 0.7,
+        "arousal": 0.5,
+        "dominance": 0.6,
+        "emotionalIntensity": 0.38
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "i am spending time with my 4 sisters what are you up to",
+      "pad": {
+        "pleasure": 0.7,
+        "arousal": 0.5,
+        "dominance": 0.6,
+        "emotionalIntensity": 0.38
+      }
+    },
+    {
+      "role": "user",
+      "content": "wow , four sisters . just watching game of thrones .",
+      "pad": {
+        "pleasure": 0.6,
+        "arousal": 0.4,
+        "dominance": 0.5,
+        "emotionalIntensity": 0.4
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "that is a good show i watch that while drinking iced tea",
+      "pad": {
+        "pleasure": 0.6,
+        "arousal": 0.4,
+        "dominance": 0.5,
+        "emotionalIntensity": 0.4
+      }
+    },
+    {
+      "role": "user",
+      "content": "i agree . what do you do for a living ?",
+      "pad": {
+        "pleasure": 0.6,
+        "arousal": 0.4,
+        "dominance": 0.5,
+        "emotionalIntensity": 0.4
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "i'm a researcher i'm researching the fact that mermaids are real",
+      "pad": {
+        "pleasure": 0.6,
+        "arousal": 0.4,
+        "dominance": 0.5,
+        "emotionalIntensity": 0.4
+      }
+    },
+    {
+      "role": "user",
+      "content": "interesting . i'm a website designer . pretty much spend all my time on the computer .",
+      "pad": {
+        "pleasure": 0.6,
+        "arousal": 0.4,
+        "dominance": 0.5,
+        "emotionalIntensity": 0.4
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "that's cool my mom does the same thing",
+      "pad": {
+        "pleasure": 0.6,
+        "arousal": 0.4,
+        "dominance": 0.5,
+        "emotionalIntensity": 0.4
+      }
+    },
+    {
+      "role": "user",
+      "content": "that's awesome . i have always had a love for technology .",
+      "pad": {
+        "pleasure": 0.6,
+        "arousal": 0.4,
+        "dominance": 0.5,
+        "emotionalIntensity": 0.4
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "tell me more about yourself",
+      "pad": {
+        "pleasure": 0.6,
+        "arousal": 0.4,
+        "dominance": 0.5,
+        "emotionalIntensity": 0.4
+      }
+    },
+    {
+      "role": "user",
+      "content": "i really enjoy free diving , how about you , have any hobbies ?",
+      "pad": {
+        "pleasure": 0.6,
+        "arousal": 0.4,
+        "dominance": 0.5,
+        "emotionalIntensity": 0.4
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "hello , i play with my iguanas and dogs .",
+      "pad": {
+        "pleasure": 0.6,
+        "arousal": 0.4,
+        "dominance": 0.5,
+        "emotionalIntensity": 0.4
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "...",
+      "pad": {
+        "pleasure": 0.6,
+        "arousal": 0.4,
+        "dominance": 0.5,
+        "emotionalIntensity": 0.4
+      }
+    },
+    {
+      "role": "user",
+      "content": "Hello",
+      "pad": {
+        "pleasure": 0.6,
+        "arousal": 0.4,
+        "dominance": 0.5,
+        "emotionalIntensity": 0.4
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "Hello! I am in such a good mood since I got my new home.",
+      "pad": {
+        "pleasure": 0.6,
+        "arousal": 0.4,
+        "dominance": 0.5,
+        "emotionalIntensity": 0.4
+      }
+    },
+    {
+      "role": "user",
+      "content": "Funny - we just built a house where we used to go camping when I was a kid.",
+      "pad": {
+        "pleasure": 0.6,
+        "arousal": 0.4,
+        "dominance": 0.5,
+        "emotionalIntensity": 0.4
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "I have a ton of backyard space that we have plans for. Camping would be a fun one.",
+      "pad": {
+        "pleasure": 0.6,
+        "arousal": 0.4,
+        "dominance": 0.5,
+        "emotionalIntensity": 0.4
+      }
+    },
+    {
+      "role": "user",
+      "content": "That's wonderful. Do you have any plans to have a fire?",
+      "pad": {
+        "pleasure": 0.5,
+        "arousal": 0.3,
+        "dominance": 0.4,
+        "emotionalIntensity": 0.42
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "I want to look in to getting a nice fire pit for the house.",
+      "pad": {
+        "pleasure": 0.3,
+        "arousal": 0.2,
+        "dominance": 0.3,
+        "emotionalIntensity": 0.5
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "...",
+      "pad": {
+        "pleasure": 0.3,
+        "arousal": 0.2,
+        "dominance": 0.3,
+        "emotionalIntensity": 0.5
+      }
+    },
+    {
+      "role": "user",
+      "content": "You're asking me out.  That's so cute. What's your name again?",
+      "pad": {
+        "pleasure": 0.3,
+        "arousal": 0.2,
+        "dominance": 0.3,
+        "emotionalIntensity": 0.5
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "Forget it.",
+      "pad": {
+        "pleasure": 0.3,
+        "arousal": 0.2,
+        "dominance": 0.3,
+        "emotionalIntensity": 0.5
+      }
+    }
+  ],
+  "classification": {
+    "interactionPattern": {
+      "category": "casual-chat",
+      "confidence": 0.8,
+      "evidence": [
+        "i agree . what do you do for a living ?",
+        "that's awesome . i have always had a love for technology ."
+      ],
+      "rationale": "The conversation features social exchanges and personal sharing without a specific goal.",
+      "alternative": "storytelling"
+    },
+    "powerDynamics": {
+      "category": "balanced",
+      "confidence": 0.7,
+      "evidence": [
+        "i'm a website designer . pretty much spend all my time on the computer .",
+        "i play with my iguanas and dogs ."
+      ],
+      "rationale": "Both parties contribute equally to the conversation direction.",
+      "alternative": "human-led"
+    },
+    "emotionalTone": {
+      "category": "playful",
+      "confidence": 0.7,
+      "evidence": [
+        "You're asking me out.  That's so cute.",
+        "wow, that was so awesome of them!"
+      ],
+      "rationale": "The tone is light and humorous, with playful exchanges.",
+      "alternative": "supportive"
+    },
+    "engagementStyle": {
+      "category": "affirming",
+      "confidence": 0.8,
+      "evidence": [
+        "that's cool my mom does the same thing",
+        "that's wonderful. Do you have any plans to have a fire?"
+      ],
+      "rationale": "The assistant affirms and builds on the user's statements.",
+      "alternative": "exploring"
+    },
+    "knowledgeExchange": {
+      "category": "personal-sharing",
+      "confidence": 0.8,
+      "evidence": [
+        "i really enjoy free diving , how about you , have any hobbies ?",
+        "i have always had a love for technology ."
+      ],
+      "rationale": "The conversation includes personal experiences and interests.",
+      "alternative": "experience-sharing"
+    },
+    "conversationPurpose": {
+      "category": "relationship-building",
+      "confidence": 0.9,
+      "evidence": [
+        "i play with my iguanas and dogs .",
+        "Funny - we just built a house where we used to go camping when I was a kid."
+      ],
+      "rationale": "The dialogue focuses on social bonding and sharing experiences.",
+      "alternative": "entertainment"
+    },
+    "turnTaking": {
+      "category": "balanced",
+      "confidence": 0.8,
+      "evidence": [
+        "i agree . what do you do for a living ?",
+        "that's awesome . i have always had a love for technology ."
+      ],
+      "rationale": "The lengths of the messages are roughly equal between the user and assistant.",
+      "alternative": "user-dominant"
+    },
+    "humanRole": {
+      "distribution": {
+        "seeker": 0.0,
+        "learner": 0.0,
+        "director": 0.0,
+        "collaborator": 0.4,
+        "sharer": 0.6,
+        "challenger": 0.0
+      },
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "role": "sharer",
+          "quote": "i really enjoy free diving , how about you , have any hobbies ?"
+        }
+      ],
+      "rationale": "The user shares personal experiences and engages in light conversation.",
+      "alternative": "collaborator"
+    },
+    "aiRole": {
+      "distribution": {
+        "expert": 0.0,
+        "advisor": 0.0,
+        "facilitator": 0.4,
+        "reflector": 0.4,
+        "peer": 0.2,
+        "affiliative": 0.0
+      },
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "role": "facilitator",
+          "quote": "tell me more about yourself"
+        }
+      ],
+      "rationale": "The assistant guides the conversation while also reflecting on the user's experiences.",
+      "alternative": "reflector"
+    },
+    "abstain": false
+  },
+  "classificationMetadata": {
+    "model": "gpt-4o-mini",
+    "provider": "openai",
+    "timestamp": "2025-12-22T16:31:52.447551",
+    "promptVersion": "1.1.0",
+    "processingTimeMs": 0
+  }
+}

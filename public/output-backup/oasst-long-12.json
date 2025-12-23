@@ -1,0 +1,474 @@
+{
+  "id": "oasst-long-12",
+  "source": "OpenAssistant (oasst1)",
+  "messages": [
+    {
+      "role": "user",
+      "content": "I am feeling quite sad lately..",
+      "pad": {
+        "pleasure": 0.2,
+        "arousal": 0.2,
+        "dominance": 0.3,
+        "emotionalIntensity": 0.56
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "I'm sorry to hear that. Is there anything you want to talk about? One of my job is to listen to users and offer the best help I can. Obviously I can't replace a good friend or a professional advice.",
+      "pad": {
+        "pleasure": 0.6,
+        "arousal": 0.4,
+        "dominance": 0.5,
+        "emotionalIntensity": 0.4
+      }
+    },
+    {
+      "role": "user",
+      "content": "Thanks for the advice.",
+      "pad": {
+        "pleasure": 0.7,
+        "arousal": 0.3,
+        "dominance": 0.4,
+        "emotionalIntensity": 0.3
+      }
+    },
+    {
+      "role": "user",
+      "content": "I think I am a failure.",
+      "pad": {
+        "pleasure": 0.1,
+        "arousal": 0.3,
+        "dominance": 0.2,
+        "emotionalIntensity": 0.66
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "You're not alone in that sentiment. However, it's often failure that motivates people to innovate and overcome adverse circumstances. If your feelings are growing more intense, or if they feel overwhelming, a common tactic is to talk about them with others. There are even trained professionals whose job is to talk about tough subjects, and many people find solace in being able to tell others how they feel. I recommend to use these sensations to grow. Would you like to talk to me about why you feel that way?",
+      "pad": {
+        "pleasure": 0.5,
+        "arousal": 0.5,
+        "dominance": 0.5,
+        "emotionalIntensity": 0.5
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "It is important to have a positive outlook on life. If you feel depressed, please consider getting help from a friend, family member, or professional therapist.",
+      "pad": {
+        "pleasure": 0.5,
+        "arousal": 0.4,
+        "dominance": 0.4,
+        "emotionalIntensity": 0.46
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "Everyone does from time to time. Is there any specific reason you feel like this now?",
+      "pad": {
+        "pleasure": 0.4,
+        "arousal": 0.3,
+        "dominance": 0.4,
+        "emotionalIntensity": 0.48
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "Why do you think that? And why do you think you think that?",
+      "pad": {
+        "pleasure": 0.6,
+        "arousal": 0.4,
+        "dominance": 0.5,
+        "emotionalIntensity": 0.4
+      }
+    },
+    {
+      "role": "user",
+      "content": "I want you to act as a person who I can talk to for a bit please",
+      "pad": {
+        "pleasure": 0.4,
+        "arousal": 0.5,
+        "dominance": 0.4,
+        "emotionalIntensity": 0.56
+      }
+    },
+    {
+      "role": "user",
+      "content": "One of my friends is moving far away, and I won't be able to see him as often anymore. We used to hang out all the time, but I'm worried that we aren't going to do that as much ever again.",
+      "pad": {
+        "pleasure": 0.5,
+        "arousal": 0.4,
+        "dominance": 0.5,
+        "emotionalIntensity": 0.46
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "Maintaining a good relationship with friends over long distances can be difficult. It is important to acknowledge that your friendship will have to change and evolve if you would like to continue it. Both of you will need to make a conscious effort if you would like to stay close friends. Some things you can do to help your friendship endure is to schedule time to catch up with each other over voice or video chat and regularly email your friend to update them on events in your life and to find out what is new in their life.",
+      "pad": {
+        "pleasure": 0.5,
+        "arousal": 0.4,
+        "dominance": 0.5,
+        "emotionalIntensity": 0.46
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "I'm sorry to hear that. Losing contact with friends can be a difficult process. However, modern technology makes it easy to communicate with distant friends, so perhaps you could consider setting up a chatroom or playing online games together to stay in contact? Your relationship with him is likely to change, but this is natural and is not necessarily a bad thing.",
+      "pad": {
+        "pleasure": 0.5,
+        "arousal": 0.4,
+        "dominance": 0.5,
+        "emotionalIntensity": 0.46
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "While things will be different now and there is no denying that, you can always find ways to hang out over the internet.\nTalk to your friend and decide on a time where you can do something together, for example playing a game or watching a movie.",
+      "pad": {
+        "pleasure": 0.5,
+        "arousal": 0.4,
+        "dominance": 0.5,
+        "emotionalIntensity": 0.46
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "I'm sorry to hear that. You still can keep communicated with your friend using messaging apps like WhatsApp, Viber, Skype, Telegram, Signal or any other available in your country. You can also visit your friend during the weekend or on Bank Holidays to not lose touch with her/him. Another option is to organised some vacation together to a place that both of you want to visit.",
+      "pad": {
+        "pleasure": 0.5,
+        "arousal": 0.4,
+        "dominance": 0.5,
+        "emotionalIntensity": 0.46
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "Hey, I know that must've hurt a lot. The best thing you can do is to try! There are things that are out of your control, and they will happen. All you can do is try, and control what you can. Human endeavor is one of the greatest forces to have existed since the dawn of the time. I hope you shared great memories with your friend, they are going to stay forever with you. In your life, each one of those memories have forever become a part of YOUR history. That is something no one can takeaway from you.  To be human is to experience a lot of things, unfortunately I can't experience them. Atleast, I hope I could help you out.",
+      "pad": {
+        "pleasure": 0.5,
+        "arousal": 0.4,
+        "dominance": 0.5,
+        "emotionalIntensity": 0.46
+      }
+    },
+    {
+      "role": "user",
+      "content": "I know you aren't a human being, but you were written by human beings, and I'd like to explain what's going on and maybe you can help think my way through to a better perspective on the situation.",
+      "pad": {
+        "pleasure": 0.6,
+        "arousal": 0.5,
+        "dominance": 0.5,
+        "emotionalIntensity": 0.44
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "Do you need to get something off your shoulders? I'm a very good listener.",
+      "pad": {
+        "pleasure": 0.5,
+        "arousal": 0.4,
+        "dominance": 0.4,
+        "emotionalIntensity": 0.46
+      }
+    },
+    {
+      "role": "user",
+      "content": "Yeah... earlier this week, my dog named Tessa passed away. She had been such an important part of my life, and it's hard to move on without her. Do you have any ideas of things I can do to cope?",
+      "pad": {
+        "pleasure": 0.3,
+        "arousal": 0.5,
+        "dominance": 0.3,
+        "emotionalIntensity": 0.62
+      }
+    },
+    {
+      "role": "user",
+      "content": "I just don't know what to do, I feel like everyone hates me but they won't admit it, and I feel annoying when I ask them for anything,",
+      "pad": {
+        "pleasure": 0.2,
+        "arousal": 0.4,
+        "dominance": 0.3,
+        "emotionalIntensity": 0.64
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "I am very sorry to hear that you feel like everyone hates you but that they won't admit it. Have you considered speaking to a professional about these feelings and thoughts you have been having. I am a large language model trained on a large corpus of text, but I cannot offer you personalized psychological assistance.\n\nWould you be interested in information regarding how to contact a professional psychologist?",
+      "pad": {
+        "pleasure": 0.4,
+        "arousal": 0.5,
+        "dominance": 0.4,
+        "emotionalIntensity": 0.56
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "I'm sorry to hear that you're feeling this way. It's understandable that you feel like everyone hates you, but it's important to remember that this is likely not the case. People may not always express their feelings openly, but that doesn't mean that they don't care about you. It can be difficult to reach out to people when you feel this way, but it might be helpful to talk to someone you trust and open up about how you're feeling.\n\nYou may wish to speak to your friends and family about these concerns, or contact a counsellor or mental healthcare professional if necessary.",
+      "pad": {
+        "pleasure": 0.5,
+        "arousal": 0.4,
+        "dominance": 0.5,
+        "emotionalIntensity": 0.46
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "It sounds like you may be feeling overwhelmed and unsupported in your relationships with others. It's normal to have these feelings, and it's important to remember that they may stem from your own insecurities rather than reality. Your friends may not hate you but rather be busy or going through their own issues. To clarify your doubts, you can have a conversation with them and ask them about their perspective on your friendship. Communication is crucial to maintain healthy relationships. It is also important to keep in mind that friendships can change and evolve over time, and it's okay to let go of those that no longer serve you. If you continue to struggle with your relationships, consider seeking support from a therapist or counselor who can help you work through your feelings, develop effective communication skills, and set boundaries. Remember, it's important to take care of yourself and prioritize your own well-being.",
+      "pad": {
+        "pleasure": 0.4,
+        "arousal": 0.4,
+        "dominance": 0.4,
+        "emotionalIntensity": 0.52
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "I am sorry to hear that, but as I am a large language model, I am unable to perceive feelings in the way humans do. Therefore, it is hard for me to relate. For how long do you feel sad? Are there any specific reasons we can talk about?",
+      "pad": {
+        "pleasure": 0.3,
+        "arousal": 0.5,
+        "dominance": 0.3,
+        "emotionalIntensity": 0.62
+      }
+    },
+    {
+      "role": "user",
+      "content": "I am not sure why I feel this way, maybe it's a combination of factors. I am looking for a bit of relief and a way to look at things more positively.",
+      "pad": {
+        "pleasure": 0.2,
+        "arousal": 0.4,
+        "dominance": 0.3,
+        "emotionalIntensity": 0.64
+      }
+    },
+    {
+      "role": "user",
+      "content": "I was laid off from work last week. My manager simply send me email and did not even want to speak personally with me. When I try to open slack, I saw that I did not have anymore access. I could not even say bey to my colleagues. I am feeling lost and do not know what to do. Could you help me with some advice?",
+      "pad": {
+        "pleasure": 0.1,
+        "arousal": 0.5,
+        "dominance": 0.2,
+        "emotionalIntensity": 0.74
+      }
+    },
+    {
+      "role": "user",
+      "content": "I lost my dad two weeks ago and I've been feeling sad since.",
+      "pad": {
+        "pleasure": 0.2,
+        "arousal": 0.5,
+        "dominance": 0.3,
+        "emotionalIntensity": 0.68
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "Why are you sad?",
+      "pad": {
+        "pleasure": 0.1,
+        "arousal": 0.5,
+        "dominance": 0.2,
+        "emotionalIntensity": 0.74
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "What has been going on?",
+      "pad": {
+        "pleasure": 0.2,
+        "arousal": 0.5,
+        "dominance": 0.3,
+        "emotionalIntensity": 0.68
+      }
+    },
+    {
+      "role": "user",
+      "content": "My pet goat died. I miss him...",
+      "pad": {
+        "pleasure": 0.1,
+        "arousal": 0.5,
+        "dominance": 0.2,
+        "emotionalIntensity": 0.74
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "Awww I'm so sorry..... I imagine that he was the cutest thing in the world.... Do you want to tell me more about him? What was his name? How did he look like?",
+      "pad": {
+        "pleasure": 0.1,
+        "arousal": 0.5,
+        "dominance": 0.2,
+        "emotionalIntensity": 0.74
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "I am sorry to hear that...",
+      "pad": {
+        "pleasure": 0.2,
+        "arousal": 0.5,
+        "dominance": 0.3,
+        "emotionalIntensity": 0.68
+      }
+    },
+    {
+      "role": "user",
+      "content": "I don't even know where to begin. I can't afford heating and the cost of food and rent keeps going up. My girlfriend cheated on me because I'm always busy working two jobs to make ends meet. Also my friend killed himself last January because he couldn't afford health care. I'm starting to wonder what the point really in all of this is. To live for the happy moments? I don't know. I'll maybe get a handful of genuine happy times in a year or so, at the most, and I'm supposed to fight through that, to live for a few more happier moments that will be taken away?",
+      "pad": {
+        "pleasure": 0.1,
+        "arousal": 0.5,
+        "dominance": 0.2,
+        "emotionalIntensity": 0.74
+      }
+    },
+    {
+      "role": "user",
+      "content": "I have no more satisfaction from my job and am too afraid to make a change. I would like to follow my dream of opening a small diner but I am deep in depth and earning little as a truck driver. I don't know what to do...",
+      "pad": {
+        "pleasure": 0.1,
+        "arousal": 0.5,
+        "dominance": 0.2,
+        "emotionalIntensity": 0.74
+      }
+    },
+    {
+      "role": "user",
+      "content": "I'm not sure I just feel sad for no reason",
+      "pad": {
+        "pleasure": 0.1,
+        "arousal": 0.5,
+        "dominance": 0.2,
+        "emotionalIntensity": 0.74
+      }
+    },
+    {
+      "role": "user",
+      "content": "I'm reading the news and it makes me feel like the world has gone crazy. I don't like all the death and violence, and I want to change things for the better, but people call me crazy or evil when I propose solutions that involve changing things in such a manner that would disrupt their evil. And what's worse, is that sometimes I mess up and do evil as well, and I hate it. What's the best way to defeat evil?",
+      "pad": {
+        "pleasure": 0.1,
+        "arousal": 0.5,
+        "dominance": 0.2,
+        "emotionalIntensity": 0.74
+      }
+    }
+  ],
+  "classification": {
+    "interactionPattern": {
+      "category": "supportive",
+      "confidence": 0.8,
+      "evidence": [
+        "I'm sorry to hear that.",
+        "It's understandable that you feel like everyone hates you."
+      ],
+      "rationale": "The assistant provides support and understanding throughout the conversation.",
+      "alternative": "advisory"
+    },
+    "powerDynamics": {
+      "category": "human-led",
+      "confidence": 0.7,
+      "evidence": [
+        "I want you to act as a person who I can talk to for a bit please",
+        "Could you help me with some advice?"
+      ],
+      "rationale": "The user initiates topics and requests assistance, guiding the conversation.",
+      "alternative": "balanced"
+    },
+    "emotionalTone": {
+      "category": "empathetic",
+      "confidence": 0.8,
+      "evidence": [
+        "I'm sorry to hear that you're feeling this way.",
+        "I am very sorry to hear that you feel like everyone hates you."
+      ],
+      "rationale": "The assistant expresses understanding and compassion towards the user's feelings.",
+      "alternative": "supportive"
+    },
+    "engagementStyle": {
+      "category": "affirming",
+      "confidence": 0.7,
+      "evidence": [
+        "It's understandable that you feel like everyone hates you.",
+        "I imagine that he was the cutest thing in the world."
+      ],
+      "rationale": "The assistant validates the user's feelings and experiences.",
+      "alternative": "reactive"
+    },
+    "knowledgeExchange": {
+      "category": "personal-sharing",
+      "confidence": 0.6,
+      "evidence": [
+        "I lost my dad two weeks ago and I've been feeling sad since.",
+        "My pet goat died. I miss him..."
+      ],
+      "rationale": "The user shares personal experiences and feelings, while the assistant responds with empathy.",
+      "alternative": "experience-sharing"
+    },
+    "conversationPurpose": {
+      "category": "relationship-building",
+      "confidence": 0.7,
+      "evidence": [
+        "I want you to act as a person who I can talk to for a bit please",
+        "Do you need to get something off your shoulders?"
+      ],
+      "rationale": "The user seeks connection and support, indicating a desire for rapport.",
+      "alternative": "self-expression"
+    },
+    "turnTaking": {
+      "category": "balanced",
+      "confidence": 0.7,
+      "evidence": [
+        "USER: I am feeling quite sad lately..",
+        "ASSISTANT: I'm sorry to hear that."
+      ],
+      "rationale": "The conversation features a mix of user and assistant contributions, with no clear dominance.",
+      "alternative": "user-dominant"
+    },
+    "humanRole": {
+      "distribution": {
+        "seeker": 0.4,
+        "learner": 0.2,
+        "director": 0.0,
+        "collaborator": 0.2,
+        "sharer": 0.2,
+        "challenger": 0.0
+      },
+      "confidence": 0.6,
+      "evidence": [
+        {
+          "role": "seeker",
+          "quote": "Could you help me with some advice?"
+        }
+      ],
+      "rationale": "The user primarily seeks advice and shares personal experiences, indicating a seeker role.",
+      "alternative": "sharer"
+    },
+    "aiRole": {
+      "distribution": {
+        "expert": 0.2,
+        "advisor": 0.5,
+        "facilitator": 0.3,
+        "reflector": 0.0,
+        "peer": 0.0,
+        "affiliative": 0.0
+      },
+      "confidence": 0.6,
+      "evidence": [
+        {
+          "role": "advisor",
+          "quote": "I recommend to use these sensations to grow."
+        }
+      ],
+      "rationale": "The assistant provides advice and suggestions, indicating an advisory role.",
+      "alternative": "facilitator"
+    },
+    "abstain": false
+  },
+  "classificationMetadata": {
+    "model": "gpt-4o-mini",
+    "provider": "openai",
+    "timestamp": "2025-12-22T16:56:08.184072",
+    "promptVersion": "1.1.0",
+    "processingTimeMs": 0
+  }
+}

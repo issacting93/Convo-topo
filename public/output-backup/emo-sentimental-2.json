@@ -1,0 +1,191 @@
+{
+  "id": "emo-sentimental-2",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Hello",
+      "pad": {
+        "pleasure": 0.5,
+        "arousal": 0.2,
+        "dominance": 0.5,
+        "emotionalIntensity": 0.38
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "Hello! I am in such a good mood since I got my new home.",
+      "pad": {
+        "pleasure": 0.8,
+        "arousal": 0.5,
+        "dominance": 0.5,
+        "emotionalIntensity": 0.32
+      }
+    },
+    {
+      "role": "user",
+      "content": "Funny - we just built a house where we used to go camping when I was a kid.",
+      "pad": {
+        "pleasure": 0.7,
+        "arousal": 0.4,
+        "dominance": 0.5,
+        "emotionalIntensity": 0.34
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "I have a ton of backyard space that we have plans for. Camping would be a fun one.",
+      "pad": {
+        "pleasure": 0.7,
+        "arousal": 0.5,
+        "dominance": 0.5,
+        "emotionalIntensity": 0.38
+      }
+    },
+    {
+      "role": "user",
+      "content": "That's wonderful. Do you have any plans to have a fire?",
+      "pad": {
+        "pleasure": 0.8,
+        "arousal": 0.3,
+        "dominance": 0.5,
+        "emotionalIntensity": 0.24
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "I want to look in to getting a nice fire pit for the house.",
+      "pad": {
+        "pleasure": 0.7,
+        "arousal": 0.4,
+        "dominance": 0.5,
+        "emotionalIntensity": 0.34
+      }
+    }
+  ],
+  "classification": {
+    "interactionPattern": {
+      "category": "casual-chat",
+      "confidence": 0.8,
+      "evidence": [
+        "I am in such a good mood since I got my new home.",
+        "we just built a house where we used to go camping when I was a kid."
+      ],
+      "rationale": "The conversation is light and social, focusing on personal experiences.",
+      "alternative": "storytelling"
+    },
+    "powerDynamics": {
+      "category": "balanced",
+      "confidence": 0.7,
+      "evidence": [
+        "we just built a house where we used to go camping when I was a kid.",
+        "I want to look in to getting a nice fire pit for the house."
+      ],
+      "rationale": "Both parties contribute equally to the conversation.",
+      "alternative": "human-led"
+    },
+    "emotionalTone": {
+      "category": "playful",
+      "confidence": 0.7,
+      "evidence": [
+        "I am in such a good mood since I got my new home.",
+        "Camping would be a fun one."
+      ],
+      "rationale": "The tone is light-hearted and fun.",
+      "alternative": "supportive"
+    },
+    "engagementStyle": {
+      "category": "affirming",
+      "confidence": 0.8,
+      "evidence": [
+        "That's wonderful.",
+        "Camping would be a fun one."
+      ],
+      "rationale": "The user affirms the assistant's statements and shares excitement.",
+      "alternative": "reactive"
+    },
+    "knowledgeExchange": {
+      "category": "personal-sharing",
+      "confidence": 0.9,
+      "evidence": [
+        "we just built a house where we used to go camping when I was a kid.",
+        "I have a ton of backyard space that we have plans for."
+      ],
+      "rationale": "The conversation revolves around personal experiences and plans.",
+      "alternative": null
+    },
+    "conversationPurpose": {
+      "category": "relationship-building",
+      "confidence": 0.8,
+      "evidence": [
+        "I am in such a good mood since I got my new home.",
+        "That's wonderful."
+      ],
+      "rationale": "The dialogue fosters social bonding and connection.",
+      "alternative": "entertainment"
+    },
+    "turnTaking": {
+      "category": "balanced",
+      "confidence": 0.7,
+      "evidence": [
+        "Funny - we just built a house where we used to go camping when I was a kid.",
+        "I want to look in to getting a nice fire pit for the house."
+      ],
+      "rationale": "Both parties have similar lengths in their contributions.",
+      "alternative": "user-dominant"
+    },
+    "humanRole": {
+      "distribution": {
+        "seeker": 0.0,
+        "learner": 0.0,
+        "director": 0.0,
+        "collaborator": 0.5,
+        "sharer": 0.5,
+        "challenger": 0.0
+      },
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "role": "sharer",
+          "quote": "we just built a house where we used to go camping when I was a kid."
+        },
+        {
+          "role": "collaborator",
+          "quote": "Do you have any plans to have a fire?"
+        }
+      ],
+      "rationale": "The user shares personal experiences and engages in collaborative dialogue about future plans.",
+      "alternative": "seeker"
+    },
+    "aiRole": {
+      "distribution": {
+        "expert": 0.0,
+        "advisor": 0.0,
+        "facilitator": 0.5,
+        "reflector": 0.5,
+        "peer": 0.0,
+        "affiliative": 0.0
+      },
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "role": "facilitator",
+          "quote": "I have a ton of backyard space that we have plans for."
+        },
+        {
+          "role": "reflector",
+          "quote": "Camping would be a fun one."
+        }
+      ],
+      "rationale": "The assistant guides the conversation and reflects on the user's contributions.",
+      "alternative": "peer"
+    },
+    "abstain": false
+  },
+  "classificationMetadata": {
+    "model": "gpt-4o-mini",
+    "provider": "openai",
+    "timestamp": "2025-12-22T16:48:25.968258",
+    "promptVersion": "1.1.0",
+    "processingTimeMs": 0
+  }
+}

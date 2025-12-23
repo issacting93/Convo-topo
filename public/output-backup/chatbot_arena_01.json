@@ -1,0 +1,249 @@
+{
+  "id": "chatbot_arena_01",
+  "source": "Chatbot Arena (lmsys/chatbot_arena_conversations)",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Salut ! Comment ça va ce matin ?",
+      "pad": {
+        "pleasure": 0.7,
+        "arousal": 0.3,
+        "dominance": 0.5,
+        "emotionalIntensity": 0.3
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "Ça va bien, merci. Et toi ?",
+      "pad": {
+        "pleasure": 0.7,
+        "arousal": 0.2,
+        "dominance": 0.5,
+        "emotionalIntensity": 0.26
+      }
+    },
+    {
+      "role": "user",
+      "content": "Ça va et toi ?",
+      "pad": {
+        "pleasure": 0.7,
+        "arousal": 0.2,
+        "dominance": 0.5,
+        "emotionalIntensity": 0.26
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "Oui, et toi ?",
+      "pad": {
+        "pleasure": 0.7,
+        "arousal": 0.2,
+        "dominance": 0.5,
+        "emotionalIntensity": 0.26
+      }
+    },
+    {
+      "role": "user",
+      "content": "Ça va et vous ?",
+      "pad": {
+        "pleasure": 0.7,
+        "arousal": 0.2,
+        "dominance": 0.5,
+        "emotionalIntensity": 0.26
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "Oui, et vous ?",
+      "pad": {
+        "pleasure": 0.7,
+        "arousal": 0.2,
+        "dominance": 0.5,
+        "emotionalIntensity": 0.26
+      }
+    },
+    {
+      "role": "user",
+      "content": "ça va",
+      "pad": {
+        "pleasure": 0.5,
+        "arousal": 0.1,
+        "dominance": 0.5,
+        "emotionalIntensity": 0.34
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "ça va",
+      "pad": {
+        "pleasure": 0.5,
+        "arousal": 0.1,
+        "dominance": 0.5,
+        "emotionalIntensity": 0.34
+      }
+    },
+    {
+      "role": "user",
+      "content": "non ça va",
+      "pad": {
+        "pleasure": 0.3,
+        "arousal": 0.5,
+        "dominance": 0.5,
+        "emotionalIntensity": 0.62
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "non ça va",
+      "pad": {
+        "pleasure": 0.3,
+        "arousal": 0.5,
+        "dominance": 0.5,
+        "emotionalIntensity": 0.62
+      }
+    },
+    {
+      "role": "user",
+      "content": "Ok",
+      "pad": {
+        "pleasure": 0.5,
+        "arousal": 0.1,
+        "dominance": 0.5,
+        "emotionalIntensity": 0.34
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "Ok",
+      "pad": {
+        "pleasure": 0.5,
+        "arousal": 0.1,
+        "dominance": 0.5,
+        "emotionalIntensity": 0.34
+      }
+    }
+  ],
+  "classification": {
+    "interactionPattern": {
+      "category": "casual-chat",
+      "confidence": 0.5,
+      "evidence": [
+        "Salut ! Comment ça va ce matin ?",
+        "Ça va bien, merci. Et toi ?"
+      ],
+      "rationale": "The conversation is light and social, but lacks depth.",
+      "alternative": "question-answer"
+    },
+    "powerDynamics": {
+      "category": "balanced",
+      "confidence": 0.5,
+      "evidence": [
+        "Ça va bien, merci. Et toi ?",
+        "Oui, et toi ?"
+      ],
+      "rationale": "Both parties contribute equally to the conversation.",
+      "alternative": "human-led"
+    },
+    "emotionalTone": {
+      "category": "neutral",
+      "confidence": 0.6,
+      "evidence": [
+        "Ça va bien, merci.",
+        "Oui, et vous ?"
+      ],
+      "rationale": "The tone is polite but lacks emotional depth.",
+      "alternative": "supportive"
+    },
+    "engagementStyle": {
+      "category": "reactive",
+      "confidence": 0.5,
+      "evidence": [
+        "Ça va et vous ?",
+        "non ça va"
+      ],
+      "rationale": "Responses are brief and do not drive the conversation forward.",
+      "alternative": "affirming"
+    },
+    "knowledgeExchange": {
+      "category": "personal-sharing",
+      "confidence": 0.5,
+      "evidence": [
+        "Salut ! Comment ça va ce matin ?",
+        "Ça va et toi ?"
+      ],
+      "rationale": "The exchange is personal but lacks substantial content.",
+      "alternative": "opinion-exchange"
+    },
+    "conversationPurpose": {
+      "category": "relationship-building",
+      "confidence": 0.5,
+      "evidence": [
+        "Salut ! Comment ça va ce matin ?",
+        "Ça va et toi ?"
+      ],
+      "rationale": "The purpose seems to be social interaction.",
+      "alternative": "entertainment"
+    },
+    "turnTaking": {
+      "category": "balanced",
+      "confidence": 0.5,
+      "evidence": [
+        "Ça va et toi ?",
+        "Oui, et vous ?"
+      ],
+      "rationale": "Turns are roughly equal in length and frequency.",
+      "alternative": "user-dominant"
+    },
+    "humanRole": {
+      "distribution": {
+        "seeker": 0.2,
+        "learner": 0.0,
+        "director": 0.0,
+        "collaborator": 0.0,
+        "sharer": 0.8,
+        "challenger": 0.0
+      },
+      "confidence": 0.5,
+      "evidence": [
+        {
+          "role": "sharer",
+          "quote": "Salut ! Comment ça va ce matin ?"
+        }
+      ],
+      "rationale": "The user shares greetings and engages in light conversation.",
+      "alternative": null
+    },
+    "aiRole": {
+      "distribution": {
+        "expert": 0.0,
+        "advisor": 0.0,
+        "facilitator": 0.5,
+        "reflector": 0.0,
+        "peer": 0.5,
+        "affiliative": 0.0
+      },
+      "confidence": 0.5,
+      "evidence": [
+        {
+          "role": "facilitator",
+          "quote": "Ça va bien, merci. Et toi ?"
+        }
+      ],
+      "rationale": "The AI responds and engages in the conversation without leading.",
+      "alternative": null
+    },
+    "abstain": true
+  },
+  "metadata": {
+    "num_turns": 12,
+    "classified_at": "2025-12-20 09:44:39",
+    "classifier": "OpenAI GPT-4o"
+  },
+  "classificationMetadata": {
+    "model": "gpt-4o-mini",
+    "provider": "openai",
+    "timestamp": "2025-12-22T16:23:46.186396",
+    "promptVersion": "1.1.0",
+    "processingTimeMs": 0
+  }
+}

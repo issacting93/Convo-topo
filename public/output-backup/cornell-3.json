@@ -1,0 +1,158 @@
+{
+  "id": "cornell-3",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Why?",
+      "pad": {
+        "pleasure": 0.3,
+        "arousal": 0.5,
+        "dominance": 0.2,
+        "emotionalIntensity": 0.62
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "Unsolved mystery.  She used to be really popular when she started high school, then it was just like she got sick of it or something.",
+      "pad": {
+        "pleasure": 0.5,
+        "arousal": 0.4,
+        "dominance": 0.3,
+        "emotionalIntensity": 0.46
+      }
+    },
+    {
+      "role": "user",
+      "content": "That's a shame.",
+      "pad": {
+        "pleasure": 0.6,
+        "arousal": 0.3,
+        "dominance": 0.4,
+        "emotionalIntensity": 0.36
+      }
+    }
+  ],
+  "classification": {
+    "interactionPattern": {
+      "category": "casual-chat",
+      "confidence": 0.8,
+      "evidence": [
+        "That's a shame."
+      ],
+      "rationale": "The conversation exchanges social commentary without a specific goal.",
+      "alternative": "storytelling"
+    },
+    "powerDynamics": {
+      "category": "balanced",
+      "confidence": 0.7,
+      "evidence": [
+        "Why?",
+        "That's a shame."
+      ],
+      "rationale": "Both parties contribute to the conversation without clear dominance.",
+      "alternative": "human-led"
+    },
+    "emotionalTone": {
+      "category": "supportive",
+      "confidence": 0.7,
+      "evidence": [
+        "That's a shame."
+      ],
+      "rationale": "The user expresses empathy towards the situation described.",
+      "alternative": "neutral"
+    },
+    "engagementStyle": {
+      "category": "reactive",
+      "confidence": 0.6,
+      "evidence": [
+        "Why?",
+        "That's a shame."
+      ],
+      "rationale": "The user responds to the assistant's statement without driving the conversation.",
+      "alternative": "affirming"
+    },
+    "knowledgeExchange": {
+      "category": "opinion-exchange",
+      "confidence": 0.6,
+      "evidence": [
+        "Unsolved mystery.",
+        "That's a shame."
+      ],
+      "rationale": "The conversation involves sharing personal views rather than factual information.",
+      "alternative": "experience-sharing"
+    },
+    "conversationPurpose": {
+      "category": "relationship-building",
+      "confidence": 0.6,
+      "evidence": [
+        "That's a shame."
+      ],
+      "rationale": "The dialogue fosters social connection through shared sentiments.",
+      "alternative": "entertainment"
+    },
+    "turnTaking": {
+      "category": "balanced",
+      "confidence": 0.7,
+      "evidence": [
+        "Why?",
+        "That's a shame."
+      ],
+      "rationale": "The turns are roughly equal in length and contribution.",
+      "alternative": "user-dominant"
+    },
+    "humanRole": {
+      "distribution": {
+        "seeker": 0.5,
+        "learner": 0.0,
+        "director": 0.0,
+        "collaborator": 0.5,
+        "sharer": 0.0,
+        "challenger": 0.0
+      },
+      "confidence": 0.6,
+      "evidence": [
+        {
+          "role": "seeker",
+          "quote": "Why?"
+        },
+        {
+          "role": "collaborator",
+          "quote": "That's a shame."
+        }
+      ],
+      "rationale": "The user seeks clarification and also engages in shared commentary.",
+      "alternative": null
+    },
+    "aiRole": {
+      "distribution": {
+        "expert": 0.0,
+        "advisor": 0.0,
+        "facilitator": 0.5,
+        "reflector": 0.0,
+        "peer": 0.5,
+        "affiliative": 0.0
+      },
+      "confidence": 0.6,
+      "evidence": [
+        {
+          "role": "facilitator",
+          "quote": "Unsolved mystery."
+        },
+        {
+          "role": "peer",
+          "quote": "She used to be really popular when she started high school..."
+        }
+      ],
+      "rationale": "The assistant provides context and engages in a peer-like exchange.",
+      "alternative": null
+    },
+    "abstain": false
+  },
+  "classificationMetadata": {
+    "model": "gpt-4o-mini",
+    "provider": "openai",
+    "timestamp": "2025-12-22T16:38:34.900746",
+    "promptVersion": "1.1.0",
+    "processingTimeMs": 0
+  }
+}

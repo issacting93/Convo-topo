@@ -1,0 +1,136 @@
+{
+  "id": "kaggle-emo-7",
+  "messages": [
+    {
+      "role": "user",
+      "content": "i virtually thought so.. and i used to get sweatings",
+      "pad": {
+        "pleasure": 0.4,
+        "arousal": 0.5,
+        "dominance": 0.4,
+        "emotionalIntensity": 0.56
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "",
+      "pad": {
+        "pleasure": 0.6,
+        "arousal": 0.3,
+        "dominance": 0.5,
+        "emotionalIntensity": 0.36
+      }
+    }
+  ],
+  "classification": {
+    "interactionPattern": {
+      "category": "",
+      "confidence": 0.0,
+      "evidence": [
+        ""
+      ],
+      "rationale": "The conversation is too short to determine a clear interaction pattern.",
+      "alternative": null
+    },
+    "powerDynamics": {
+      "category": "",
+      "confidence": 0.0,
+      "evidence": [
+        ""
+      ],
+      "rationale": "The conversation is too short to assess power dynamics.",
+      "alternative": null
+    },
+    "emotionalTone": {
+      "category": "",
+      "confidence": 0.0,
+      "evidence": [
+        ""
+      ],
+      "rationale": "The emotional tone cannot be determined from the limited exchange.",
+      "alternative": null
+    },
+    "engagementStyle": {
+      "category": "",
+      "confidence": 0.0,
+      "evidence": [
+        ""
+      ],
+      "rationale": "There is insufficient content to evaluate engagement style.",
+      "alternative": null
+    },
+    "knowledgeExchange": {
+      "category": "",
+      "confidence": 0.0,
+      "evidence": [
+        ""
+      ],
+      "rationale": "No clear knowledge exchange is evident in the brief dialogue.",
+      "alternative": null
+    },
+    "conversationPurpose": {
+      "category": "",
+      "confidence": 0.0,
+      "evidence": [
+        ""
+      ],
+      "rationale": "The purpose of the conversation is unclear due to its brevity.",
+      "alternative": null
+    },
+    "turnTaking": {
+      "category": "",
+      "confidence": 0.0,
+      "evidence": [
+        ""
+      ],
+      "rationale": "Turn taking cannot be assessed from a single exchange.",
+      "alternative": null
+    },
+    "humanRole": {
+      "distribution": {
+        "seeker": 0,
+        "learner": 0,
+        "director": 0,
+        "collaborator": 0,
+        "sharer": 0,
+        "challenger": 0
+      },
+      "confidence": 0.0,
+      "evidence": [
+        {
+          "role": "seeker",
+          "quote": "i virtually thought so.. and i used to get sweatings"
+        }
+      ],
+      "rationale": "The user appears to be sharing a personal experience, but it's not definitive.",
+      "alternative": "sharer"
+    },
+    "aiRole": {
+      "distribution": {
+        "expert": 0,
+        "advisor": 0,
+        "facilitator": 0,
+        "reflector": 0,
+        "peer": 0,
+        "affiliative": 0
+      },
+      "confidence": 0.0,
+      "evidence": [
+        {
+          "role": "expert",
+          "quote": ""
+        }
+      ],
+      "rationale": "The assistant's role is unclear as it did not respond in this exchange.",
+      "alternative": "facilitator"
+    },
+    "abstain": true
+  },
+  "classificationMetadata": {
+    "model": "gpt-4o-mini",
+    "provider": "openai",
+    "timestamp": "2025-12-22T16:51:05.531714",
+    "promptVersion": "1.1.0",
+    "processingTimeMs": 0
+  }
+}

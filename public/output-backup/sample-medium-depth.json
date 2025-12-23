@@ -1,0 +1,191 @@
+{
+  "id": "sample-medium-depth",
+  "messages": [
+    {
+      "role": "user",
+      "content": "I'm trying to understand how machine learning models learn from data. Can you explain the basic concept?",
+      "pad": {
+        "pleasure": 0.6,
+        "arousal": 0.4,
+        "dominance": 0.5,
+        "emotionalIntensity": 0.4
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "Machine learning models learn by finding patterns in data. They adjust their internal parameters through a process called training, where they see many examples and gradually improve their predictions.",
+      "pad": {
+        "pleasure": 0.7,
+        "arousal": 0.3,
+        "dominance": 0.6,
+        "emotionalIntensity": 0.3
+      }
+    },
+    {
+      "role": "user",
+      "content": "So they're looking for patterns? How do they know which patterns are important?",
+      "pad": {
+        "pleasure": 0.5,
+        "arousal": 0.5,
+        "dominance": 0.5,
+        "emotionalIntensity": 0.5
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "Great question! They use a loss function that measures how wrong their predictions are. The model tries to minimize this error by adjusting its parameters through an optimization algorithm like gradient descent.",
+      "pad": {
+        "pleasure": 0.7,
+        "arousal": 0.4,
+        "dominance": 0.6,
+        "emotionalIntensity": 0.34
+      }
+    },
+    {
+      "role": "user",
+      "content": "That makes sense. So it's like trial and error but mathematical?",
+      "pad": {
+        "pleasure": 0.8,
+        "arousal": 0.3,
+        "dominance": 0.5,
+        "emotionalIntensity": 0.24
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "Exactly! It's systematic trial and error guided by calculus. The model calculates how each parameter affects the error and adjusts them in the direction that reduces it.",
+      "pad": {
+        "pleasure": 0.9,
+        "arousal": 0.4,
+        "dominance": 0.7,
+        "emotionalIntensity": 0.22
+      }
+    }
+  ],
+  "classification": {
+    "interactionPattern": {
+      "category": "question-answer",
+      "confidence": 0.9,
+      "evidence": [
+        "I'm trying to understand how machine learning models learn from data.",
+        "So they're looking for patterns?",
+        "That makes sense."
+      ],
+      "rationale": "The user primarily asks questions, and the assistant provides answers.",
+      "alternative": null
+    },
+    "powerDynamics": {
+      "category": "human-led",
+      "confidence": 0.9,
+      "evidence": [
+        "I'm trying to understand how machine learning models learn from data.",
+        "So they're looking for patterns?"
+      ],
+      "rationale": "The user sets the agenda by asking questions.",
+      "alternative": null
+    },
+    "emotionalTone": {
+      "category": "neutral",
+      "confidence": 0.9,
+      "evidence": [
+        "Can you explain the basic concept?",
+        "That makes sense."
+      ],
+      "rationale": "The conversation maintains a neutral tone focused on information exchange.",
+      "alternative": null
+    },
+    "engagementStyle": {
+      "category": "questioning",
+      "confidence": 0.9,
+      "evidence": [
+        "I'm trying to understand how machine learning models learn from data.",
+        "How do they know which patterns are important?"
+      ],
+      "rationale": "The user frequently asks questions to explore the topic.",
+      "alternative": null
+    },
+    "knowledgeExchange": {
+      "category": "factual-info",
+      "confidence": 0.9,
+      "evidence": [
+        "Machine learning models learn by finding patterns in data.",
+        "They use a loss function that measures how wrong their predictions are."
+      ],
+      "rationale": "The conversation involves sharing factual information about machine learning.",
+      "alternative": null
+    },
+    "conversationPurpose": {
+      "category": "information-seeking",
+      "confidence": 0.9,
+      "evidence": [
+        "I'm trying to understand how machine learning models learn from data."
+      ],
+      "rationale": "The user seeks to gain knowledge about machine learning.",
+      "alternative": null
+    },
+    "turnTaking": {
+      "category": "balanced",
+      "confidence": 0.7,
+      "evidence": [
+        "Machine learning models learn by finding patterns in data.",
+        "So they're looking for patterns?"
+      ],
+      "rationale": "Both parties contribute relatively equally to the conversation.",
+      "alternative": "user-dominant"
+    },
+    "humanRole": {
+      "distribution": {
+        "seeker": 0.6,
+        "learner": 0.4,
+        "director": 0.0,
+        "collaborator": 0.0,
+        "sharer": 0.0,
+        "challenger": 0.0
+      },
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "role": "seeker",
+          "quote": "I'm trying to understand how machine learning models learn from data."
+        },
+        {
+          "role": "learner",
+          "quote": "So they're looking for patterns?"
+        }
+      ],
+      "rationale": "The user seeks information and tests understanding through questions.",
+      "alternative": null
+    },
+    "aiRole": {
+      "distribution": {
+        "expert": 0.7,
+        "advisor": 0.0,
+        "facilitator": 0.3,
+        "reflector": 0.0,
+        "peer": 0.0,
+        "affiliative": 0.0
+      },
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "role": "expert",
+          "quote": "Machine learning models learn by finding patterns in data."
+        },
+        {
+          "role": "facilitator",
+          "quote": "Great question!"
+        }
+      ],
+      "rationale": "The assistant explains concepts and guides the user through understanding.",
+      "alternative": null
+    },
+    "abstain": false
+  },
+  "classificationMetadata": {
+    "model": "gpt-4o-mini",
+    "provider": "openai",
+    "timestamp": "2025-12-22T17:03:37.871111",
+    "promptVersion": "1.1.0",
+    "processingTimeMs": 0
+  }
+}

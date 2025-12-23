@@ -4,35 +4,27 @@ import * as THREE from 'three';
 // Using chart colors for variety and visual interest
 export const COLORS = {
   // Background - dark theme background
-  background: '#030213',
+  background: '#fefefe',  // Pure black (change to any hex color you prefer)
   terrain: {
-    // Terrain palette - light grays for visibility on dark background
-    low: new THREE.Color(0x404040),   // Dark gray
-    mid: new THREE.Color(0x606060),   // Medium gray  
-    high: new THREE.Color(0x808080),  // Light gray
+    // Terrain palette - brighter, higher contrast grays for visibility on dark background
+    low: new THREE.Color(0x606060),   // Medium-dark gray (brighter)
+    mid: new THREE.Color(0x808080),   // Medium gray (brighter)
+    high: new THREE.Color(0xa0a0a0),  // Light gray (brighter, higher contrast)
   },
   contour: {
-    // Light yellow-green contours for visibility on dark background
-    minor: '#a0d080',  // Light yellow-green
-    major: '#b0e090',  // Lighter for major lines
-    index: '#c0f0a0',  // Lightest for index contours
+    // Very dark grey contours for visibility on light background
+    minor: '#303030',  // Very dark grey for minor contours
+    major: '#202020',  // Darker grey for major contours
+    index: '#101010',  // Darkest grey for index contours
   },
-  wireframe: '#606060',
-  grid: '#404040',      // Dark gray for visibility on dark background
-  gridDim: '#2a2a2a',   // Very dark gray for secondary grid lines
-  // Using chart colors for markers
-  marker: '#4ade80',    // chart-2 (green) - oklch(0.696 0.17 162.48)
-  markerGlow: '#6ee89e',
-  path: '#FDD90D',      // Yellow/gold path color
-  pathGlow: '#FFE550',
-  // User vs Assistant colors using chart colors
-  userMarker: '#7b68ee',      // chart-1 (purple-blue) - user messages
-  userMarkerGlow: '#9b88f0',  // Lighter variant
-  assistantMarker: '#f97316', // chart-5 (orange) - assistant messages
-  assistantMarkerGlow: '#fb923c', // Lighter variant
-  fog: '#050810',
-  accent: new THREE.Color('#7b68ee'),     // chart-1 as primary accent
-  label: '#ffffff',      // Light text for dark background
+
+  marker: '#FF8400',
+  wireframe: '#000000',
+  grid: '#000000',      // Dark gray for visibility on dark background
+  gridDim: '#000000',   // Very dark gray for secondary grid lines
+  fog: '#000000',
+  accent: new THREE.Color('#000000'),     // chart-1 as primary accent
+  label: '#000000',      // Light text for dark background
 };
 
 /**

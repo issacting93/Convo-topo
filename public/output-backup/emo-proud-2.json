@@ -1,0 +1,177 @@
+{
+  "id": "emo-proud-2",
+  "messages": [
+    {
+      "role": "user",
+      "content": "I felt proud when I had accomplished a dream that I wanted to do for a long time. It was absailing!!",
+      "pad": {
+        "pleasure": 0.8,
+        "arousal": 0.5,
+        "dominance": 0.6,
+        "emotionalIntensity": 0.32
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "I'm not familiar with abseiling, but I'm glad that you felt good about it.",
+      "pad": {
+        "pleasure": 0.7,
+        "arousal": 0.3,
+        "dominance": 0.4,
+        "emotionalIntensity": 0.3
+      }
+    },
+    {
+      "role": "user",
+      "content": "absailing, its when you rappeling down a building. What have you down that amazing?",
+      "pad": {
+        "pleasure": 0.6,
+        "arousal": 0.4,
+        "dominance": 0.5,
+        "emotionalIntensity": 0.4
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "Oh, I see. No, I've never done that.",
+      "pad": {
+        "pleasure": 0.5,
+        "arousal": 0.2,
+        "dominance": 0.3,
+        "emotionalIntensity": 0.38
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "so what have you done?",
+      "pad": {
+        "pleasure": 0.6,
+        "arousal": 0.3,
+        "dominance": 0.4,
+        "emotionalIntensity": 0.36
+      }
+    }
+  ],
+  "classification": {
+    "interactionPattern": {
+      "category": "storytelling",
+      "confidence": 0.8,
+      "evidence": [
+        "I felt proud when I had accomplished a dream that I wanted to do for a long time.",
+        "its when you rappeling down a building."
+      ],
+      "rationale": "The user shares a personal experience and explains a term.",
+      "alternative": "casual-chat"
+    },
+    "powerDynamics": {
+      "category": "human-led",
+      "confidence": 0.7,
+      "evidence": [
+        "I felt proud when I had accomplished a dream...",
+        "What have you done that amazing?"
+      ],
+      "rationale": "The user sets the agenda by sharing personal experiences and asking questions.",
+      "alternative": "balanced"
+    },
+    "emotionalTone": {
+      "category": "supportive",
+      "confidence": 0.7,
+      "evidence": [
+        "I'm glad that you felt good about it."
+      ],
+      "rationale": "The assistant expresses happiness for the user's feelings.",
+      "alternative": "neutral"
+    },
+    "engagementStyle": {
+      "category": "affirming",
+      "confidence": 0.6,
+      "evidence": [
+        "I'm glad that you felt good about it."
+      ],
+      "rationale": "The assistant validates the user's feelings but does not deeply explore them.",
+      "alternative": "reactive"
+    },
+    "knowledgeExchange": {
+      "category": "personal-sharing",
+      "confidence": 0.7,
+      "evidence": [
+        "I felt proud when I had accomplished a dream..."
+      ],
+      "rationale": "The user shares a personal achievement.",
+      "alternative": "experience-sharing"
+    },
+    "conversationPurpose": {
+      "category": "relationship-building",
+      "confidence": 0.7,
+      "evidence": [
+        "I felt proud when I had accomplished a dream..."
+      ],
+      "rationale": "The user shares personal feelings to build rapport.",
+      "alternative": "self-expression"
+    },
+    "turnTaking": {
+      "category": "balanced",
+      "confidence": 0.6,
+      "evidence": [
+        "I felt proud when I had accomplished a dream...",
+        "Oh, I see. No, I've never done that."
+      ],
+      "rationale": "Both parties contribute to the conversation, but the user initiates more.",
+      "alternative": "user-dominant"
+    },
+    "humanRole": {
+      "distribution": {
+        "seeker": 0.4,
+        "learner": 0.0,
+        "director": 0.0,
+        "collaborator": 0.2,
+        "sharer": 0.4,
+        "challenger": 0.0
+      },
+      "confidence": 0.6,
+      "evidence": [
+        {
+          "role": "sharer",
+          "quote": "I felt proud when I had accomplished a dream that I wanted to do for a long time."
+        },
+        {
+          "role": "seeker",
+          "quote": "What have you done that amazing?"
+        }
+      ],
+      "rationale": "The user shares personal experiences and seeks to know more about the assistant's experiences.",
+      "alternative": "learner"
+    },
+    "aiRole": {
+      "distribution": {
+        "expert": 0.0,
+        "advisor": 0.0,
+        "facilitator": 0.5,
+        "reflector": 0.5,
+        "peer": 0.0,
+        "affiliative": 0.0
+      },
+      "confidence": 0.6,
+      "evidence": [
+        {
+          "role": "facilitator",
+          "quote": "so what have you done?"
+        },
+        {
+          "role": "reflector",
+          "quote": "I'm glad that you felt good about it."
+        }
+      ],
+      "rationale": "The assistant validates the user's feelings and prompts for more information.",
+      "alternative": "affiliative"
+    },
+    "abstain": false
+  },
+  "classificationMetadata": {
+    "model": "gpt-4o-mini",
+    "provider": "openai",
+    "timestamp": "2025-12-22T16:47:14.192513",
+    "promptVersion": "1.1.0",
+    "processingTimeMs": 0
+  }
+}
