@@ -689,10 +689,11 @@ export function ThreeScene({
 
       const pathMat = new LineMaterial({
         vertexColors: true,
-        linewidth: 4, // Line width in pixels (actually works with Line2!)
+        linewidth: 8, // Thicker line for better visibility
         resolution: new THREE.Vector2(window.innerWidth, window.innerHeight),
         dashed: false,
-        alphaToCoverage: true // Better antialiasing
+        alphaToCoverage: true, // Better antialiasing
+        worldUnits: false // Use screen space pixels for consistent thickness
       });
 
       const pathLine = new Line2(pathGeom, pathMat);

@@ -185,6 +185,12 @@
   },
   "active": "0c8fa85cc27f138a",
   "lastOpenFiles": [
+    "build/assets/grid-vendor-vEP7NG8f.js",
+    "build/assets/three-core-BRapOo7o.js",
+    "build/assets/react-vendor-CFkGbC0C.js",
+    "build/assets/three-addons-DvUUFNHc.js",
+    "build/assets/index-CGoHhvST.js",
+    "build/assets/index-BIFTI4xX.js",
     "docs/archive/DELETION_ANALYSIS.md",
     "docs/archive/LLM_PAD_IMPROVEMENT_STRATEGY.md",
     "docs/archive/PATH_ROLE_RELATIONSHIP.md",
@@ -209,17 +215,11 @@
     "build/output-backup/sample-very-shallow.json",
     "build/output-backup/sample-very-deep.json",
     "build/output-backup/sample-shallow-moderate.json",
-    "build/output-backup/sample-question-answer.json",
-    "build/output-backup/sample-medium-depth.json",
-    "build/output-backup/sample-deep-technical.json",
-    "build/output-backup/sample-deep-discussion.json",
-    "build/output-backup/oasst-long-9.json",
     "docs/ROLE_MIGRATION_PLAN.md",
     "docs/ROLE_REDUCTION_AND_SPACING.md",
     "docs/ROLE_SANITY_CHECK.md",
     "node_modules/@types/react-router-dom/README.md",
     "node_modules/@types/react-router/README.md",
-    "node_modules/@types/history/README.md",
-    "node_modules/react-router/LICENSE.md"
+    "node_modules/@types/history/README.md"
   ]
 }
