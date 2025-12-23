@@ -987,7 +987,7 @@ export function ThreeScene({
       if (cameraView === 'top') {
         // Top view: directly above with optional rotation
         const elevationRad = (85 * Math.PI) / 180; // Near-vertical (85° instead of 90° for slight angle)
-        const azimuthRad = cameraRotation; // User rotation
+        const azimuthRad = cameraRotation + rotationYRef.current; // User rotation + drag rotation
         const distance = cameraDistance;
         const horizontalDistance = distance * Math.cos(elevationRad);
 
@@ -998,7 +998,7 @@ export function ThreeScene({
       } else if (cameraView === 'side') {
         // Side view: horizontal graph view with 0° elevation
         const elevationRad = 0; // Fixed at 0° for true side/graph view
-        const azimuthRad = cameraRotation + (90 * Math.PI) / 180; // 90° base + user rotation
+        const azimuthRad = cameraRotation + rotationYRef.current + (90 * Math.PI) / 180; // 90° base + drag rotation + user rotation
         const distance = cameraDistance;
         const horizontalDistance = distance * Math.cos(elevationRad);
 
