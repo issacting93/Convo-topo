@@ -1,0 +1,161 @@
+{
+  "id": "wildchat_99c3c27462fcc071eeb053b69d2d49af",
+  "source": "wildchat",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Hero of the Rails was released on DVD in the USA by\n"
+    },
+    {
+      "role": "assistant",
+      "content": "Lionsgate Home Entertainment."
+    },
+    {
+      "role": "user",
+      "content": "Hero of the Rails was released on DVD in the UK by\n"
+    },
+    {
+      "role": "assistant",
+      "content": "Abbey Home Media."
+    }
+  ],
+  "metadata": {
+    "model": "gpt-3.5-turbo-0613",
+    "timestamp": "2023-09-12T21:39:01+00:00",
+    "turn_count": 2,
+    "language": "English",
+    "country": "United States",
+    "state": "New Hampshire",
+    "toxic": false,
+    "redacted": false
+  },
+  "classification": {
+    "abstain": false,
+    "interactionPattern": {
+      "category": "question-answer",
+      "confidence": 1.0,
+      "evidence": [
+        "Hero of the Rails was released on DVD in the USA by",
+        "Hero of the Rails was released on DVD in the UK by"
+      ],
+      "rationale": "The human asks questions and the AI provides answers.",
+      "alternative": null
+    },
+    "powerDynamics": {
+      "category": "human-led",
+      "confidence": 1.0,
+      "evidence": [
+        "Hero of the Rails was released on DVD in the USA by",
+        "Hero of the Rails was released on DVD in the UK by"
+      ],
+      "rationale": "The human is leading the conversation by asking questions.",
+      "alternative": null
+    },
+    "emotionalTone": {
+      "category": "neutral",
+      "confidence": 1.0,
+      "evidence": [
+        "Hero of the Rails was released on DVD in the USA by",
+        "Hero of the Rails was released on DVD in the UK by"
+      ],
+      "rationale": "The conversation has no strong emotional coloring.",
+      "alternative": null
+    },
+    "engagementStyle": {
+      "category": "questioning",
+      "confidence": 1.0,
+      "evidence": [
+        "Hero of the Rails was released on DVD in the USA by",
+        "Hero of the Rails was released on DVD in the UK by"
+      ],
+      "rationale": "The human is driving the conversation by asking questions.",
+      "alternative": null
+    },
+    "knowledgeExchange": {
+      "category": "factual-info",
+      "confidence": 1.0,
+      "evidence": [
+        "Lionsgate Home Entertainment.",
+        "Abbey Home Media."
+      ],
+      "rationale": "The AI is providing factual information in response to the human's questions.",
+      "alternative": null
+    },
+    "conversationPurpose": {
+      "category": "information-seeking",
+      "confidence": 1.0,
+      "evidence": [
+        "Hero of the Rails was released on DVD in the USA by",
+        "Hero of the Rails was released on DVD in the UK by"
+      ],
+      "rationale": "The human is seeking specific information.",
+      "alternative": null
+    },
+    "topicDepth": {
+      "category": "surface",
+      "confidence": 1.0,
+      "evidence": [
+        "Hero of the Rails was released on DVD in the USA by",
+        "Hero of the Rails was released on DVD in the UK by"
+      ],
+      "rationale": "The conversation is brief and focused on specific facts.",
+      "alternative": null
+    },
+    "turnTaking": {
+      "category": "balanced",
+      "confidence": 0.9,
+      "evidence": [
+        "Hero of the Rails was released on DVD in the USA by",
+        "Hero of the Rails was released on DVD in the UK by"
+      ],
+      "rationale": "Both the human and the AI are taking turns in the conversation.",
+      "alternative": null
+    },
+    "humanRole": {
+      "distribution": {
+        "seeker": 1.0,
+        "learner": 0.0,
+        "director": 0.0,
+        "collaborator": 0.0,
+        "sharer": 0.0,
+        "challenger": 0.0
+      },
+      "confidence": 1.0,
+      "evidence": [
+        {
+          "role": "seeker",
+          "quote": "Hero of the Rails was released on DVD in the USA by"
+        }
+      ],
+      "rationale": "The human is seeking information.",
+      "alternative": null
+    },
+    "aiRole": {
+      "distribution": {
+        "expert": 1.0,
+        "advisor": 0.0,
+        "facilitator": 0.0,
+        "reflector": 0.0,
+        "peer": 0.0,
+        "affiliative": 0.0
+      },
+      "confidence": 1.0,
+      "evidence": [
+        {
+          "role": "expert",
+          "quote": "Lionsgate Home Entertainment."
+        }
+      ],
+      "rationale": "The AI is providing expert information in response to the human's questions.",
+      "alternative": null
+    }
+  },
+  "classificationMetadata": {
+    "model": "gpt-4",
+    "provider": "openai",
+    "timestamp": "2026-01-03T12:57:36.390526",
+    "promptVersion": "1.1.0",
+    "processingTimeMs": 17047,
+    "windowed": false
+  }
+}

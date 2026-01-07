@@ -1,0 +1,174 @@
+{
+  "id": "conv-17",
+  "messages": [
+    {
+      "role": "user",
+      "content": "we all live in a yellow submarine , a yellow submarine . morning !"
+    },
+    {
+      "role": "assistant",
+      "content": "hi ! that is a great line for my next stand up ."
+    },
+    {
+      "role": "user",
+      "content": "lol . i am shy , anything to break the ice , and i am a beatles fan ."
+    },
+    {
+      "role": "assistant",
+      "content": "i can tell . i am not , you can see me in some tv shows"
+    },
+    {
+      "role": "user",
+      "content": "really ? what shows ? i like tv , it makes me forget i do not like my family"
+    },
+    {
+      "role": "assistant",
+      "content": "wow , i wish i had a big family . i grew up in a very small town ."
+    },
+    {
+      "role": "user",
+      "content": "i did too . i do not get along with mine . they have no class ."
+    },
+    {
+      "role": "assistant",
+      "content": "hey there , where are you from ?"
+    }
+  ],
+  "classification": {
+    "abstain": false,
+    "interactionPattern": {
+      "category": "casual-chat",
+      "confidence": 0.9,
+      "evidence": [
+        "we all live in a yellow submarine , a yellow submarine . morning !",
+        "lol . i am shy , anything to break the ice , and i am a beatles fan ."
+      ],
+      "rationale": "The conversation is a casual exchange without a specific instrumental goal.",
+      "alternative": null
+    },
+    "powerDynamics": {
+      "category": "balanced",
+      "confidence": 0.7,
+      "evidence": [
+        "we all live in a yellow submarine , a yellow submarine . morning !",
+        "hi ! that is a great line for my next stand up ."
+      ],
+      "rationale": "Both parties contribute to the direction of the conversation.",
+      "alternative": null
+    },
+    "emotionalTone": {
+      "category": "playful",
+      "confidence": 0.8,
+      "evidence": [
+        "we all live in a yellow submarine , a yellow submarine . morning !",
+        "lol . i am shy , anything to break the ice , and i am a beatles fan ."
+      ],
+      "rationale": "The conversation has a light, humorous tone.",
+      "alternative": null
+    },
+    "engagementStyle": {
+      "category": "questioning",
+      "confidence": 0.6,
+      "evidence": [
+        "really ? what shows ? i like tv , it makes me forget i do not like my family",
+        "hey there , where are you from ?"
+      ],
+      "rationale": "Both parties are asking questions to drive the exploration.",
+      "alternative": "exploring"
+    },
+    "knowledgeExchange": {
+      "category": "personal-sharing",
+      "confidence": 0.8,
+      "evidence": [
+        "i am shy , anything to break the ice , and i am a beatles fan .",
+        "i wish i had a big family . i grew up in a very small town ."
+      ],
+      "rationale": "Both parties are sharing private experiences and feelings.",
+      "alternative": null
+    },
+    "conversationPurpose": {
+      "category": "entertainment",
+      "confidence": 0.7,
+      "evidence": [
+        "we all live in a yellow submarine , a yellow submarine . morning !",
+        "lol . i am shy , anything to break the ice , and i am a beatles fan ."
+      ],
+      "rationale": "The conversation is for fun and amusement.",
+      "alternative": "relationship-building"
+    },
+    "topicDepth": {
+      "category": "surface",
+      "confidence": 0.9,
+      "evidence": [
+        "we all live in a yellow submarine , a yellow submarine . morning !",
+        "lol . i am shy , anything to break the ice , and i am a beatles fan ."
+      ],
+      "rationale": "The conversation is brief and shallow.",
+      "alternative": null
+    },
+    "turnTaking": {
+      "category": "balanced",
+      "confidence": 0.8,
+      "evidence": [
+        "we all live in a yellow submarine , a yellow submarine . morning !",
+        "hi ! that is a great line for my next stand up ."
+      ],
+      "rationale": "Both parties have roughly equal message lengths.",
+      "alternative": null
+    },
+    "humanRole": {
+      "distribution": {
+        "seeker": 0.3,
+        "learner": 0.0,
+        "director": 0.0,
+        "collaborator": 0.0,
+        "sharer": 0.7,
+        "challenger": 0.0
+      },
+      "confidence": 0.7,
+      "evidence": [
+        {
+          "role": "seeker",
+          "quote": "really ? what shows ? i like tv , it makes me forget i do not like my family"
+        },
+        {
+          "role": "sharer",
+          "quote": "i am shy , anything to break the ice , and i am a beatles fan ."
+        }
+      ],
+      "rationale": "The human is asking for information and sharing personal experiences.",
+      "alternative": null
+    },
+    "aiRole": {
+      "distribution": {
+        "expert": 0.0,
+        "advisor": 0.0,
+        "facilitator": 0.3,
+        "reflector": 0.0,
+        "peer": 0.7,
+        "affiliative": 0.0
+      },
+      "confidence": 0.7,
+      "evidence": [
+        {
+          "role": "facilitator",
+          "quote": "hey there , where are you from ?"
+        },
+        {
+          "role": "peer",
+          "quote": "i can tell . i am not , you can see me in some tv shows"
+        }
+      ],
+      "rationale": "The AI is guiding the conversation through questions and sharing personal experiences in a low-authority tone.",
+      "alternative": null
+    }
+  },
+  "classificationMetadata": {
+    "model": "gpt-4",
+    "provider": "openai",
+    "timestamp": "2025-12-16T12:24:22.840868",
+    "promptVersion": "1.1.0",
+    "processingTimeMs": 39567,
+    "windowed": false
+  }
+}

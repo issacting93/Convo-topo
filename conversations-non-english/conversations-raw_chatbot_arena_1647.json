@@ -1,0 +1,37 @@
+{
+  "id": "chatbot_arena_1647",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Summarize this text for me."
+    },
+    {
+      "role": "assistant",
+      "content": "▌"
+    },
+    {
+      "role": "user",
+      "content": "as noted with the dip at the end, that's from me removing LibriTTS's train-other-500 subset, and the average loss per iteration going down from seeing the old data more\nthere's been very little progress in terms of the average loss going down / the average accuracy going up over just 6 epochs.\nI hope that, by reverting to the older dataset, that nothing can go wrong, and things will get better.\nCrossing my fingers, as it did show progress at <=64 phoneme lengthed and >=64 phoneme lengthed data.\nthe loss not quite going back to where it was before I tossed train-other-500 in maybe shows some good signs that it did at least do something to the model? (COPIUM).\nthere was something odd that happened last night, where, when I woke up to check the SSH session, the average iteration rate was reporting as ~32s/it, and it returned fine after restarting training. I'm not sure why this is so, but I imagine it's probably because, ironically, it's the longest the trainer has ran without a restart (a good testament to all the VRAM stabilization optimizations I suppose).\nI haven't even bothered actually checking the output. Partly because I worry that restarting SDDM and running an X session will be just enough VRAM to have it trip up the training script, since running the web UI off my 6800XT sometimes will cause training off the 4070Ti to restart.\nmy rough mental math was charting that a decent training time before this change at like, 40 days. About a week of barely perceptible progress is a no go. I might return back to t"
+    },
+    {
+      "role": "assistant",
+      "content": "I am sorry, but I need the text you want me to summarize. Please provide me with the text."
+    },
+    {
+      "role": "user",
+      "content": "as noted with the dip at the end, that's from me removing LibriTTS's train-other-500 subset, and the average loss per iteration going down from seeing the old data more\nthere's been very little progress in terms of the average loss going down / the average accuracy going up over just 6 epochs.\nI hope that, by reverting to the older dataset, that nothing can go wrong, and things will get better.\nCrossing my fingers, as it did show progress at <=64 phoneme lengthed and >=64 phoneme lengthed data.\nthe loss not quite going back to where it was before I tossed train-other-500 in maybe shows some good signs that it did at least do something to the model? (COPIUM).\nthere was something odd that happened last night, where, when I woke up to check the SSH session, the average iteration rate was reporting as ~32s/it, and it returned fine after restarting training. I'm not sure why this is so, but I imagine it's probably because, ironically, it's the longest the trainer has ran without a restart (a good testament to all the VRAM stabilization optimizations I suppose).\nI haven't even bothered actually checking the output. Partly because I worry that restarting SDDM and running an X session will be just enough VRAM to have it trip up the training script, since running the web UI off my 6800XT sometimes will cause training off the 4070Ti to restart.\nmy rough mental math was charting that a decent training time before this change at like, 40 days. About a week of barely perceptible progress is a no go. I might return back to t"
+    },
+    {
+      "role": "assistant",
+      "content": "The author removed LibriTTS's train-other-500 subset and noticed a dip in the average loss per iteration. However, there has been very little progress in terms of the average loss going down or the average accuracy going up over the last six epochs. The author hopes that reverting to the older dataset will improve things. There was an odd incident where the average iteration rate was reporting as ~32s/it, but it returned to normal after restarting training. The author has not checked the output because they worry it may cause the training script to restart. They estimate a decent training time before the change was about 40 days, and a week of barely perceptible progress is not acceptable. The author may return to the previous dataset."
+    },
+    {
+      "role": "user",
+      "content": "Their is more text but it was cut off \"my rough mental math was charting that a decent training time before this change at like, 40 days. About a week of barely perceptible progress is a no go. I might return back to this if I grow a wild hair and train a quarter-sized model, if (when) this is done.\nthe usual problem I noticed when I did check the evaluation / validation output was that the NAR was fine (and still reporting to be \"worse\" than the AR), but the AR being not-quite-there means the combined output wasn't quite decent. Non-LibriTTS voices also kept struggling to sound right, so I imagine I might have actually done a better job with clean weights after all, but that would still mean scrapping the model and starting again.\nIt also doesn't help I'm split between a few other things I want to work on, dividing my attention even further.\n\nOh well. I'll judge things again in another week.\""
+    },
+    {
+      "role": "assistant",
+      "content": "The author's mental math suggests that before the change, a decent training time was around 40 days, and a week of minimal progress is unacceptable. They may return to the previous dataset if they train a smaller model. The author checked the evaluation/validation output and noticed that the NAR was fine, but the AR was not quite there, resulting in poor combined output. Non-LibriTTS voices also did not sound right. The author may have done a better job with clean weights, but this would require scrapping the current model and starting over. The author is also split between other tasks, further dividing their attention. They plan to reevaluate in another week."
+    }
+  ]
+}

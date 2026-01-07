@@ -1,0 +1,29 @@
+{
+  "id": "chatbot_arena_0981",
+  "messages": [
+    {
+      "role": "user",
+      "content": "we will play a game. When I provide you an even number, you reply with the word \"hooray\"! but when I provide an odd number, you reply with no tokens, that is to say, you don't respond"
+    },
+    {
+      "role": "assistant",
+      "content": "Hooray! 8 is an even number. \n\n[no tokens] \n\n9 is an odd number."
+    },
+    {
+      "role": "user",
+      "content": "2"
+    },
+    {
+      "role": "assistant",
+      "content": "Hooray! 2 is an even number. \n\n[no tokens] \n\n3 is an odd number."
+    },
+    {
+      "role": "user",
+      "content": "5"
+    },
+    {
+      "role": "assistant",
+      "content": "Hooray! 5 is an even number. \n\n[no tokens] \n\n7 is an odd number."
+    }
+  ]
+}

@@ -10,9 +10,12 @@ This document describes all data sources used in the visualization system.
 
 **Source:** OpenAI GPT-4 classifier processing conversations
 
-**Count:** 20 conversations (as of now)
+**Count:** 160 conversations (as of 2025-01-03)
+- **Chatbot Arena:** 128 conversations (80%)
+- **OpenAssistant (OASST):** 32 conversations (20%)
+- **WildChat:** 589 conversations downloaded (integration in progress)
 
-**Size:** ~156KB total
+**Size:** ~1.2MB total (estimated)
 
 **Structure:**
 ```json
@@ -165,7 +168,7 @@ This document describes all data sources used in the visualization system.
 | `interactionPattern.category` | Terrain seed, Y-axis (structure) | casual-chat, question-answer, collaborative |
 | `conversationPurpose.category` | X-axis (function) | entertainment, information-seeking, problem-solving |
 | `emotionalTone.category` | Terrain seed, description | playful, neutral, supportive |
-| `topicDepth.category` | Terrain seed | surface, moderate, deep |
+| `topicDepth.category` | Terrain seed | surface, moderate, deep (DEPRECATED/UNUSED) |
 | `humanRole.distribution` | Description | seeker: 0.5, sharer: 0.5 |
 | `aiRole.distribution` | Description | reflector: 0.8, facilitator: 0.2 |
 | `messages[].content` | Visualization | Actual message text |
@@ -185,11 +188,13 @@ This document describes all data sources used in the visualization system.
 ## Data Statistics
 
 ### Classified Conversations (Current)
-- **Total Conversations:** 20
-- **Average Messages per Conversation:** ~4-10
-- **Total Messages:** ~120-200
-- **Classification Dimensions:** 10 per conversation
-- **Data Points:** ~200 classification values + ~150 messages
+- **Total Conversations:** 160 (as of 2025-01-03)
+- **Average Messages per Conversation:** ~10-18
+- **Total Messages:** ~1,600-2,880
+- **Classification Dimensions:** 9 per conversation (topicDepth removed)
+- **Data Points:** ~1,440 classification values + ~2,000+ messages
+- **PAD Coverage:** 100% (all messages have PAD scores)
+- **Source Distribution:** 80% Chatbot Arena, 20% OASST
 
 ### PersonaChat Dataset (Available)
 - **Total Conversations:** 145
@@ -248,7 +253,7 @@ import personaChatData from './personaChatMessages.json'
 
 ## Current Status
 
-**Active Data Source:** ✅ Classified Conversations (20 files)
+**Active Data Source:** ✅ Classified Conversations (160 files)
 - Loaded on app mount
 - Used for terrain generation
 - Used for message visualization
@@ -268,9 +273,11 @@ import personaChatData from './personaChatMessages.json'
 ## Future Data Sources
 
 Potential additions:
-- [ ] More classified conversations (expand beyond 20)
+- [x] More classified conversations (expanded to 160, WildChat integration in progress)
+- [ ] Complete WildChat classification (589 conversations)
 - [ ] Real-time conversation classification
 - [ ] Import custom conversation files
 - [ ] Export visualization data
 - [ ] Comparison mode (multiple conversations side-by-side)
+- [ ] Cross-dataset validation (Chatbot Arena vs. WildChat)
 

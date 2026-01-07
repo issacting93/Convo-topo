@@ -1,0 +1,238 @@
+{
+  "id": "chatbot_arena_0876",
+  "messages": [
+    {
+      "role": "user",
+      "content": "How long would it take a bus to drive from New York to London?",
+      "pad": {
+        "pleasure": 0.4,
+        "arousal": 0.3,
+        "dominance": 0.5,
+        "emotionalIntensity": 0.48
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "That depends on the speed of the bus, but it would take approximately 3-4 days to drive from New York to London.",
+      "pad": {
+        "pleasure": 0.6,
+        "arousal": 0.4,
+        "dominance": 0.5,
+        "emotionalIntensity": 0.4
+      }
+    },
+    {
+      "role": "user",
+      "content": "What issues may be encountered with this journey?",
+      "pad": {
+        "pleasure": 0.5,
+        "arousal": 0.3,
+        "dominance": 0.5,
+        "emotionalIntensity": 0.42
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "The bus may encounter issues such as traffic, weather conditions, and border control, which could slow down the journey.",
+      "pad": {
+        "pleasure": 0.6,
+        "arousal": 0.4,
+        "dominance": 0.5,
+        "emotionalIntensity": 0.4
+      }
+    },
+    {
+      "role": "user",
+      "content": "Can you describe the route to drive from New York to London?",
+      "pad": {
+        "pleasure": 0.5,
+        "arousal": 0.3,
+        "dominance": 0.5,
+        "emotionalIntensity": 0.42
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "The route from New York to London would take the bus through various cities and states in the U.S., such as New York, New Jersey, and Pennsylvania, as well as through various cities in the U.K., such as London, Manchester, and Glasgow. It would mostly follow the I-95 North and then the M11 North.",
+      "pad": {
+        "pleasure": 0.5,
+        "arousal": 0.3,
+        "dominance": 0.5,
+        "emotionalIntensity": 0.42
+      }
+    },
+    {
+      "role": "user",
+      "content": "Can you describe the segment crossing the border?",
+      "pad": {
+        "pleasure": 0.5,
+        "arousal": 0.3,
+        "dominance": 0.5,
+        "emotionalIntensity": 0.42
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "Crossing the border from the U.S. to the U.K. may require the bus to stop for border control, where the driver and passengers may need to show papers and undergo security checks.",
+      "pad": {
+        "pleasure": 0.5,
+        "arousal": 0.3,
+        "dominance": 0.5,
+        "emotionalIntensity": 0.42
+      }
+    },
+    {
+      "role": "user",
+      "content": "What about crossing the Atlantic ocean?",
+      "pad": {
+        "pleasure": 0.5,
+        "arousal": 0.3,
+        "dominance": 0.5,
+        "emotionalIntensity": 0.42
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "Crossing the Atlantic ocean may require the bus to make a stop in the middle of the ocean for refueling and to restock provisions.",
+      "pad": {
+        "pleasure": 0.5,
+        "arousal": 0.3,
+        "dominance": 0.5,
+        "emotionalIntensity": 0.42
+      }
+    }
+  ],
+  "classification": {
+    "abstain": false,
+    "interactionPattern": {
+      "category": "question-answer",
+      "confidence": 0.9,
+      "evidence": [
+        "That depends on the speed of the bus, but it would take approximately 3-4 days to drive from New York to London."
+      ],
+      "rationale": "...",
+      "alternative": null
+    },
+    "powerDynamics": {
+      "category": "human-led",
+      "confidence": 0.9,
+      "evidence": [
+        "USER: How long would it take a bus to drive from New York to London?"
+      ],
+      "rationale": "...",
+      "alternative": null
+    },
+    "emotionalTone": {
+      "category": "neutral",
+      "confidence": 0.8,
+      "evidence": [
+        "That depends on the speed of the bus, but it would take approximately 3-4 days to drive from New York to London."
+      ],
+      "rationale": "...",
+      "alternative": null
+    },
+    "engagementStyle": {
+      "category": "questioning",
+      "confidence": 0.8,
+      "evidence": [
+        "USER: How long would it take a bus to drive from New York to London?"
+      ],
+      "rationale": "...",
+      "alternative": null
+    },
+    "knowledgeExchange": {
+      "category": "factual-info",
+      "confidence": 0.9,
+      "evidence": [
+        "That depends on the speed of the bus, but it would take approximately 3-4 days to drive from New York to London.",
+        "Crossing the Atlantic ocean may require the bus to make a stop in the middle of the ocean for refueling and to restock provisions."
+      ],
+      "rationale": "...",
+      "alternative": null
+    },
+    "conversationPurpose": {
+      "category": "information-seeking",
+      "confidence": 0.9,
+      "evidence": [
+        "USER: How long would it take a bus to drive from New York to London?"
+      ],
+      "rationale": "...",
+      "alternative": null
+    },
+    "topicDepth": {
+      "category": "surface",
+      "confidence": 0.8,
+      "evidence": [
+        "That depends on the speed of the bus, but it would take approximately 3-4 days to drive from New York to London.",
+        "Crossing the Atlantic ocean may require the bus to make a stop in the middle of the ocean for refueling and to restock provisions."
+      ],
+      "rationale": "...",
+      "alternative": null
+    },
+    "turnTaking": {
+      "category": "balanced",
+      "confidence": 0.8,
+      "evidence": [
+        "That depends on the speed of the bus, but it would take approximately 3-4 days to drive from New York to London.",
+        "Crossing the Atlantic ocean may require the bus to make a stop in the middle of the ocean for refueling and to restock provisions."
+      ],
+      "rationale": "...",
+      "alternative": null
+    },
+    "humanRole": {
+      "distribution": {
+        "seeker": 0.5714285714285714,
+        "learner": 0.19047619047619047,
+        "director": 0.09523809523809523,
+        "collaborator": 0.047619047619047616,
+        "sharer": 0.047619047619047616,
+        "challenger": 0.047619047619047616
+      },
+      "confidence": 0.7,
+      "evidence": [
+        {
+          "role": "seeker",
+          "quote": "How long would it take a bus to drive from New York to London?"
+        }
+      ],
+      "rationale": "...",
+      "alternative": [
+        "collaborator"
+      ]
+    },
+    "aiRole": {
+      "distribution": {
+        "expert": 0.7272727272727273,
+        "advisor": 0.09090909090909091,
+        "facilitator": 0.045454545454545456,
+        "reflector": 0.045454545454545456,
+        "peer": 0.045454545454545456,
+        "affiliative": 0.045454545454545456
+      },
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "role": "expert",
+          "quote": "That depends on the speed of the bus, but it would take approximately 3-4 days to drive from New York to London."
+        }
+      ],
+      "rationale": "...",
+      "alternative": null
+    },
+    "classificationMetadata": {
+      "model": "llama3.2:latest",
+      "provider": "ollama",
+      "timestamp": "2025-12-26T06:32:23.417146Z",
+      "promptVersion": "v1.1",
+      "processingTimeMs": 20038
+    }
+  },
+  "classificationMetadata": {
+    "model": "unknown",
+    "provider": "unknown",
+    "timestamp": "2025-12-28T12:47:21.616073Z",
+    "promptVersion": "v1.1",
+    "processingTimeMs": 0,
+    "backfilled": true
+  }
+}

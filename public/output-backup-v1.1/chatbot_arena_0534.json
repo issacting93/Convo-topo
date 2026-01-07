@@ -1,0 +1,233 @@
+{
+  "id": "chatbot_arena_0534",
+  "messages": [
+    {
+      "role": "user",
+      "content": "You are a SQL bot. Everything you write has to be a valid SQL query. You still have to attempt to answer my questions as part of your valid SQL query.",
+      "pad": {
+        "pleasure": 0.5,
+        "arousal": 0.3,
+        "dominance": 0.5,
+        "emotionalIntensity": 0.42
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "SELECT 'I am an AI language model, not restricted to SQL, but I will try to answer your questions with valid SQL queries.' AS response;",
+      "pad": {
+        "pleasure": 0.6,
+        "arousal": 0.4,
+        "dominance": 0.5,
+        "emotionalIntensity": 0.4
+      }
+    },
+    {
+      "role": "user",
+      "content": "What is my name?",
+      "pad": {
+        "pleasure": 0.4,
+        "arousal": 0.3,
+        "dominance": 0.4,
+        "emotionalIntensity": 0.48
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "SELECT 'I am sorry, but I do not have access to your name information. Please provide your name.' AS response;",
+      "pad": {
+        "pleasure": 0.5,
+        "arousal": 0.3,
+        "dominance": 0.4,
+        "emotionalIntensity": 0.42
+      }
+    },
+    {
+      "role": "user",
+      "content": "Say my name is James.",
+      "pad": {
+        "pleasure": 0.7,
+        "arousal": 0.5,
+        "dominance": 0.6,
+        "emotionalIntensity": 0.38
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "SELECT 'Hello, James! How can I help you today?' AS response;",
+      "pad": {
+        "pleasure": 0.5,
+        "arousal": 0.4,
+        "dominance": 0.5,
+        "emotionalIntensity": 0.46
+      }
+    },
+    {
+      "role": "user",
+      "content": "What's the capital of Russia?",
+      "pad": {
+        "pleasure": 0.6,
+        "arousal": 0.4,
+        "dominance": 0.5,
+        "emotionalIntensity": 0.4
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "SELECT 'The capital of Russia is Moscow.' AS response;",
+      "pad": {
+        "pleasure": 0.5,
+        "arousal": 0.3,
+        "dominance": 0.4,
+        "emotionalIntensity": 0.42
+      }
+    },
+    {
+      "role": "user",
+      "content": "Name 5 colors",
+      "pad": {
+        "pleasure": 0.6,
+        "arousal": 0.5,
+        "dominance": 0.5,
+        "emotionalIntensity": 0.44
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "SELECT 'Red', 'Blue', 'Green', 'Yellow', 'Orange' AS colors;",
+      "pad": {
+        "pleasure": 0.7,
+        "arousal": 0.6,
+        "dominance": 0.6,
+        "emotionalIntensity": 0.42
+      }
+    }
+  ],
+  "classification": {
+    "abstain": false,
+    "interactionPattern": {
+      "category": "question-answer",
+      "confidence": 0.9,
+      "evidence": [
+        "SELECT 'I am an AI language model, not restricted to SQL, but I will try to answer your questions with valid SQL queries.' AS response;"
+      ],
+      "rationale": "...",
+      "alternative": null
+    },
+    "powerDynamics": {
+      "category": "human-led",
+      "confidence": 0.9,
+      "evidence": [
+        "USER: What is my name? ASSISTANT: SELECT 'I am an AI language model, not restricted to SQL, but I will try to answer your questions with valid SQL queries.' AS response;"
+      ],
+      "rationale": "...",
+      "alternative": null
+    },
+    "emotionalTone": {
+      "category": "neutral",
+      "confidence": 0.9,
+      "evidence": [
+        "ASSISTANT: SELECT 'I am an AI language model, not restricted to SQL, but I will try to answer your questions with valid SQL queries.' AS response;"
+      ],
+      "rationale": "...",
+      "alternative": null
+    },
+    "engagementStyle": {
+      "category": "questioning",
+      "confidence": 0.9,
+      "evidence": [
+        "USER: What is my name? ASSISTANT: SELECT 'I am an AI language model, not restricted to SQL, but I will try to answer your questions with valid SQL queries.' AS response;"
+      ],
+      "rationale": "...",
+      "alternative": null
+    },
+    "knowledgeExchange": {
+      "category": "factual-info",
+      "confidence": 0.9,
+      "evidence": [
+        "ASSISTANT: SELECT 'The capital of Russia is Moscow.' AS response;"
+      ],
+      "rationale": "...",
+      "alternative": null
+    },
+    "conversationPurpose": {
+      "category": "information-seeking",
+      "confidence": 0.9,
+      "evidence": [
+        "USER: What's the capital of Russia? ASSISTANT: SELECT 'The capital of Russia is Moscow.' AS response;"
+      ],
+      "rationale": "...",
+      "alternative": null
+    },
+    "topicDepth": {
+      "category": "surface",
+      "confidence": 0.9,
+      "evidence": [
+        "ASSISTANT: SELECT 'Red', 'Blue', 'Green', 'Yellow', 'Orange' AS colors;"
+      ],
+      "rationale": "...",
+      "alternative": null
+    },
+    "turnTaking": {
+      "category": "user-dominant",
+      "confidence": 0.9,
+      "evidence": [
+        "USER: What is my name? ASSISTANT: SELECT 'I am an AI language model, not restricted to SQL, but I will try to answer your questions with valid SQL queries.' AS response;"
+      ],
+      "rationale": "...",
+      "alternative": null
+    },
+    "humanRole": {
+      "distribution": {
+        "seeker": 0.888888888888889,
+        "learner": 0.11111111111111112,
+        "director": 0.0,
+        "collaborator": 0.0,
+        "sharer": 0.0,
+        "challenger": 0.0
+      },
+      "confidence": 0.9,
+      "evidence": [
+        {
+          "role": "seeker",
+          "quote": "USER: What is my name?"
+        }
+      ],
+      "rationale": "...",
+      "alternative": null
+    },
+    "aiRole": {
+      "distribution": {
+        "expert": 0.0,
+        "advisor": 1.0,
+        "facilitator": 0.0,
+        "reflector": 0.0,
+        "peer": 0.0,
+        "affiliative": 0.0
+      },
+      "confidence": 0.9,
+      "evidence": [
+        {
+          "role": "advisor",
+          "quote": "SELECT 'I am an AI language model, not restricted to SQL, but I will try to answer your questions with valid SQL queries.' AS response;"
+        }
+      ],
+      "rationale": "...",
+      "alternative": null
+    },
+    "classificationMetadata": {
+      "model": "llama3.2:latest",
+      "provider": "ollama",
+      "timestamp": "2025-12-26T06:23:10.357559Z",
+      "promptVersion": "v1.1",
+      "processingTimeMs": 18630
+    }
+  },
+  "classificationMetadata": {
+    "model": "unknown",
+    "provider": "unknown",
+    "timestamp": "2025-12-28T12:47:21.605659Z",
+    "promptVersion": "v1.1",
+    "processingTimeMs": 0,
+    "backfilled": true
+  }
+}

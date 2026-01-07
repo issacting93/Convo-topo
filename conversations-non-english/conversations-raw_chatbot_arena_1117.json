@@ -1,0 +1,21 @@
+{
+  "id": "chatbot_arena_1117",
+  "messages": [
+    {
+      "role": "user",
+      "content": "hola"
+    },
+    {
+      "role": "assistant",
+      "content": "Hi! How can I help you today?"
+    },
+    {
+      "role": "user",
+      "content": "quiero saber si te puedo entrenar con 199 preguntas y respuestas"
+    },
+    {
+      "role": "assistant",
+      "content": "Sure, I'd be happy to help you with that! However, I'll need to clarify that I am not a language model and my abilities are limited to generating text based on the input I receive. I don't have the ability to learn or retain specific knowledge, but I can provide general information on a wide range of topics.\n\nThat being said, I'm ready to answer your questions to the best of my abilities based on the information I've been trained on. Let me know how you would like to proceed with the training."
+    }
+  ]
+}

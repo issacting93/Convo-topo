@@ -1,0 +1,106 @@
+{
+  "id": "wildchat_a2c59a52bbe9d31be231dcd38644ea6d",
+  "source": "wildchat",
+  "messages": [
+    {
+      "role": "user",
+      "content": "rwrite ins imple eng - Whether you are posting a job, having trouble with the website, or trying to solve an issue, our great and attentive customer service staff will be there to assist you.\nBe at ease with Pros Marketplace, as you will receive the help you need to ensure you are getting the most out of it regardless of whether you are a hiring manager or a job seeker",
+      "pad": {
+        "p": 0.7,
+        "a": 0.4,
+        "d": 0.5
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "If you're posting a job, facing any issues with the website, or need help solving a problem, our excellent and responsive customer service team is here to assist you. Relax with Pros Marketplace, knowing you'll get the support you need to make the most of it, whether you're hiring or looking for a job.",
+      "pad": {
+        "p": 0.8,
+        "a": 0.3,
+        "d": 0.6
+      }
+    },
+    {
+      "role": "user",
+      "content": "sunoke ebg comon wrds ",
+      "pad": {
+        "p": 0.2,
+        "a": 0.6,
+        "d": 0.3
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "Smoke and fog combined is commonly known as \"smog.\"",
+      "pad": {
+        "p": 0.6,
+        "a": 0.4,
+        "d": 0.5
+      }
+    },
+    {
+      "role": "user",
+      "content": "simpel erwd coomoin eng - If you\u2019re posting a job, facing any issues with the website, or need help solving a problem, our excellent and responsive customer service team is here to assist you. Relax with Pros Marketplace, knowing you\u2019ll get the support you need to make the most of it, whether you\u2019re hiring or looking for a job",
+      "pad": {
+        "p": 0.7,
+        "a": 0.3,
+        "d": 0.5
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "If you're putting up a job, having trouble with the site, or need help with a problem, our great customer service team is ready to help you out. Feel comfortable using Pros Marketplace, as you'll get the help you need, no matter if you're hiring or seeking a job.",
+      "pad": {
+        "p": 0.2,
+        "a": 0.5,
+        "d": 0.3
+      }
+    },
+    {
+      "role": "user",
+      "content": "in rpfgasnlao ton e",
+      "pad": {
+        "p": 0.3,
+        "a": 0.5,
+        "d": 0.4
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "In translation to one.",
+      "pad": {
+        "p": 0.7,
+        "a": 0.4,
+        "d": 0.5
+      }
+    },
+    {
+      "role": "user",
+      "content": "in rpfashinal tone - If you\u2019re posting a job, facing any issues with the website, or need help solving a problem, our excellent and responsive customer service team is here to assist you. Relax with Pros Marketplace, knowing you\u2019ll get the support you need to make the most of it, whether you\u2019re hiring or looking for a job",
+      "pad": {
+        "p": 0.8,
+        "a": 0.3,
+        "d": 0.6
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "Should you be in the process of advertising a position, encountering difficulties with our platform, or in need of assistance in resolving any challenges, please be assured that our outstanding and prompt customer service team stands ready to support you. Have confidence in engaging with Pros Marketplace, secure in the knowledge that comprehensive assistance is at your disposal to optimize your experience, irrespective of whether your objective is to recruit or to find employment.",
+      "pad": {
+        "p": 0.9,
+        "a": 0.2,
+        "d": 0.7
+      }
+    }
+  ],
+  "metadata": {
+    "model": "gpt-4-0125-preview",
+    "timestamp": "2024-04-08T12:50:24+00:00",
+    "turn_count": 5,
+    "language": "English",
+    "country": "India",
+    "state": "Punjab",
+    "toxic": false,
+    "redacted": false
+  }
+}

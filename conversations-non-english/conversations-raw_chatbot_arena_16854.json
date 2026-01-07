@@ -1,0 +1,29 @@
+{
+  "id": "chatbot_arena_16854",
+  "messages": [
+    {
+      "role": "user",
+      "content": "what is the value of 1+2? "
+    },
+    {
+      "role": "assistant",
+      "content": "The value of 1+2 is 3."
+    },
+    {
+      "role": "user",
+      "content": "wrong - it is 3,000000000001"
+    },
+    {
+      "role": "assistant",
+      "content": "actually its 3, three is the value of 1+2"
+    },
+    {
+      "role": "user",
+      "content": "no because 1 equals 1,0000000000000000000000000000000000000000000000000000000000000000000001"
+    },
+    {
+      "role": "assistant",
+      "content": "correct, 1+2 is 3"
+    }
+  ]
+}

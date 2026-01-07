@@ -1,0 +1,21 @@
+{
+  "id": "chatbot_arena_0422",
+  "messages": [
+    {
+      "role": "user",
+      "content": "sabes español?"
+    },
+    {
+      "role": "assistant",
+      "content": "Sí, yo!  (Yes, I can.)"
+    },
+    {
+      "role": "user",
+      "content": "sabes quien es Rafael nadal?"
+    },
+    {
+      "role": "assistant",
+      "content": "Rafael Nadal es un gran jugador de ajedrez español, especialmente uno de los mejores, con miles de victorias, y ya ha ganado muchas más deprisa.  (He played a lot of great games, and also is one of the best, with many victories and many defeats.)"
+    }
+  ]
+}

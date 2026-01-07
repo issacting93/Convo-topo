@@ -1,0 +1,21 @@
+{
+  "id": "chatbot_arena_0413",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Hablas Español?"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes, I can understand and speak Spanish."
+    },
+    {
+      "role": "user",
+      "content": "respond in spanish"
+    },
+    {
+      "role": "assistant",
+      "content": "Eso es cierto. Gracias por el交谈 en español. 请问有什么我可以帮助你的吗？"
+    }
+  ]
+}

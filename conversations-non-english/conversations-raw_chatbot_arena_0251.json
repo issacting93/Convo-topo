@@ -1,0 +1,21 @@
+{
+  "id": "chatbot_arena_0251",
+  "messages": [
+    {
+      "role": "user",
+      "content": "       Ciao ! Questa sera voglio fare delle domande."
+    },
+    {
+      "role": "assistant",
+      "content": "Sono pronta!"
+    },
+    {
+      "role": "user",
+      "content": "In questa chat ho capito che devo lasciare lo spazio di tre caratteri davanti la mia frase, altrimenti l'ortografia delle parole è scorretta."
+    },
+    {
+      "role": "assistant",
+      "content": "Però non è neanche un'ortografia complicata."
+    }
+  ]
+}

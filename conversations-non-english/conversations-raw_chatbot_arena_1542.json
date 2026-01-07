@@ -1,0 +1,21 @@
+{
+  "id": "chatbot_arena_1542",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Care sunt literele alfabetului?"
+    },
+    {
+      "role": "assistant",
+      "content": "\"Care sunt literele alfabetului?\", \"Care sunt literele alfabetului românesc?\" or \"Care sunt literele alfabetului limbii române?\""
+    },
+    {
+      "role": "user",
+      "content": "care sunt literele alfabetului limbii romane"
+    },
+    {
+      "role": "assistant",
+      "content": "The letters of the Romanian alphabet are:\n\nA, A̤, B, C, Ç, D, D̤, E, Ơ, F, G, H, I, I̤, J, K, L, M, N, N̤, O, P, Q, R, Ř, S, Ş, T, U, V, W, X, Y, Z\n\nNote:\n\n*   A̤ is the letter \"Ș\" (sh)\n*   B is the letter \"B\"\n*   C is the letter"
+    }
+  ]
+}

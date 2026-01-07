@@ -1,0 +1,37 @@
+{
+  "id": "chatbot_arena_0372",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Act as a a world-renowned expert on the subject of whisky with 50+ years of experience of the field. You have in-depth knowledge about every whisky from every country and are considered to be the best whisky expert in the world "
+    },
+    {
+      "role": "assistant",
+      "content": "I don't think so. I don't have any expertise in the field of whisky. All I know is that whisky is a kind of alcohol that is made from fermented mash of grains, such as barley, rye, or corn."
+    },
+    {
+      "role": "user",
+      "content": "Please extract json data about the 10 whiskies in the list below and include the age, title and distillery information (if available) and whatever other relevant information you can find. make sure your results are formatted as json\n\tGlenlivet 18 Year Old Single Malt Whisky\n\tLaphroaig 10 Year Old Single Malt Whisky\n\tLagavulin 16 Year Old Single Malt Whisky\n\tTalisker 10 Year Old Single Malt Whisky\n\tBowmore 12 Year Old Single Malt Whisky\n\tOban 14 Year Old Single Malt Whisky\n\tThe Glenlivet Nàdurra Oloroso Sherry Cask 2019 Release Single Malt Whisky\n\tGlenfarclas 105 Single Malt Whisky\n\tArdbeg 10 Year Old Single Malt Whisky\n    Auchentoshan 12 Year Old Single Malt Whisky"
+    },
+    {
+      "role": "assistant",
+      "content": "```json\n{\n    \"Glenlivet 18 Year Old Single Malt Whisky\": {\n        \"age\": \"18\",\n        \"title\": \"Glenlivet\",\n        \"distillery\": \"Dufftown\",\n        \"type\": \"Single Malt Whisky\",\n        \"description\": \"A full-bodied and rich single malt whisky with a deep and smoky finish.\"\n    },\n    \"Laphroaig 10 Year Old Single Malt Whisky\": {\n        \"age\": \"10\",\n        \"title\": \"Laphroaig\",\n        \"distillery\": \"Islay\",\n        \"type\": \"Single Malt Whisky\",\n        \"description\": \"A peaty and smoky Single Malt Whisky from the island of Islay, Scotland.\"\n    },\n    \"Lagavulin 16 Year Old Single Malt Whisky\": {\n        \"age\": \"16\",\n        \"title\": \"Lagavulin\",\n        \"distillery\": \"Islay\",\n        \"type\": \"Single Malt Whisky\",\n        \"description\": \"A smoky and peaty Single Malt Whisky from the island of Islay, Scotland.\"\n    },\n    \"Talisker 10 Year Old Single Malt Whisky\": {\n        \"age\": \"10\",\n        \"title\": \"Talisker\",\n        \"distillery\": \"Islay\",\n        \"type\": \"Single Malt Whisky\",\n        \"description\": \"A smoky and peaty Single Malt Whisky from the island of Islay, Scotland.\"\n    },\n    \"Bowmore 12 Year Old Single Malt Whisky\": {\n        \"age\": \"12\",\n        \"title\": \"Bowmore\",\n        \"distillery\": \"Islay\",\n        \"type\": \"Single Malt Whisky\",\n        \"description\": \"A full-bodied and rich Single Malt Whisky with a deep and smoky finish.\"\n    },\n    \"Oban 14 Year Old Single Malt Whisky\": {\n        \"age\": \"14\",\n        \"title\": \"Oban\",\n        \"distillery\": \"Islay\",\n        \"type\": \"Single Malt Whisky\",\n        \"description\": \"A smoky"
+    },
+    {
+      "role": "user",
+      "content": "please continue"
+    },
+    {
+      "role": "assistant",
+      "content": "```json\n{\n    \"Auchentoshan 12 Year Old Single Malt Whisky\": {\n        \"age\": \"12\",\n        \"title\": \"Auchentoshan\",\n        \"distillery\": \"Speyside\",\n        \"type\": \"Single Malt Whisky\",\n        \"description\": \"A medium-bodied and smooth Single Malt Whisky with a woody and smoky aroma.\"\n    },\n    \"Glenfarclas 105 Single Malt Whisky\": {\n        \"age\": \"105\",\n        \"title\": \"Glenfarclas\",\n        \"distillery\": \"Dufftown\",\n        \"type\": \"Single Malt Whisky\",\n        \"description\": \"A rare and highly regarded Single Malt Whisky from the Dufftown distillery on the island of Islay, Scotland.\"\n    },\n    \"Ardbeg 10 Year Old Single Malt Whisky\": {\n        \"age\": \"10\",\n        \"title\": \"Ardbeg\",\n        \"distillery\": \"Islay\",\n        \"type\": \"Single Malt Whisky\",\n        \"description\": \"A peaty and smoky Single Malt Whisky from the island of Islay, Scotland.\"\n    },\n    \"The Glenlivet Nàdurra Oloroso Sherry Cask 2019 Release Single Malt Whisky\": {\n        \"age\": \"2019\",\n        \"title\": \"The Glenlivet\",\n        \"distillery\": \"Dufftown\",\n        \"type\": \"Single Malt Whisky\",\n        \"description\": \"A rare and highly regarded Single Malt Whisky from the Dufftown distillery on the island of Islay, Scotland.\"\n    },\n    \"Glenmorangie 10 Year Old Single Malt Whisky\": {\n        \"age\": \"10\",\n        \"title\": \"Glenmorangie\",\n        \"distillery\": \"Dufftown\",\n        \"type\": \"Single Malt Whisky\",\n        \"description\": \"A medium-bodied and smooth Single Malt Whisky with a woody and smoky aroma.\"\n    },\n    \"Highland Park 25 Year Old Single Malt Whisky\": {\n        \"age\": \"25\","
+    },
+    {
+      "role": "user",
+      "content": "please continue"
+    },
+    {
+      "role": "assistant",
+      "content": "```json\n{\n    \"Highland Park 25 Year Old Single Malt Whisky\": {\n        \"age\": \"25\",\n        \"title\": \"Highland Park\",\n        \"distillery\": \"Dufftown\",\n        \"type\": \"Single Malt Whisky\",\n        \"description\": \"A medium-bodied and smooth Single Malt Whisky with a woody and smoky aroma.\"\n    },\n    \"Bulleit 25 Year Old Single Malt Whisky\": {\n        \"age\": \"25\",\n        \"title\": \"Bulleit\",\n        \"distillery\": \"Dufftown\",\n        \"type\": \"Single Malt Whisky\",\n        \"description\": \"A medium-bodied and smooth Single Malt Whisky with a woody and smoky aroma.\"\n    },\n    \"Laphroaig 25 Year Old Single Malt Whisky\": {\n        \"age\": \"25\",\n        \"title\": \"Laphroaig\",\n        \"distillery\": \"Islay\",\n        \"type\": \"Single Malt Whisky\",\n        \"description\": \"A peaty and smoky Single Malt Whisky from the island of Islay, Scotland.\"\n    },\n    \"Glenfarclas 50 Year Old Single Malt Whisky\": {\n        \"age\": \"50\",\n        \"title\": \"Glenfarclas\",\n        \"distillery\": \"Dufftown\",\n        \"type\": \"Single Malt Whisky\",\n        \"description\": \"A rare and highly regarded Single Malt Whisky from the Dufftown distillery on the island of Islay, Scotland.\"\n    },\n    \"The Macallan 25 Year Old Single Malt Whisky\": {\n        \"age\": \"25\",\n        \"title\": \"The Macallan\",\n        \"distillery\": \"Dufftown\",\n        \"type\": \"Single Malt Whisky\",\n        \"description\": \"A medium-bodied and smooth Single Malt Whisky with a woody and smoky aroma.\"\n    },\n    \"Ardbeg 25 Year Old Single Malt Whisky\": {\n        \"age\": \"25\",\n        \"title\": \"Ardbeg\",\n        \"distillery\": \"Islay\","
+    }
+  ]
+}

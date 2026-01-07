@@ -1,0 +1,29 @@
+{
+  "id": "chatbot_arena_21108",
+  "messages": [
+    {
+      "role": "user",
+      "content": "It took Mary to saw a board into 2 pieces 10 minutes. How much time would it take her to saw a board in 3 pieces?"
+    },
+    {
+      "role": "assistant",
+      "content": "It would take Mary 30 minutes to saw a board into 3 pieces."
+    },
+    {
+      "role": "user",
+      "content": "can you explain how you got to that conclusion?"
+    },
+    {
+      "role": "assistant",
+      "content": "Sure. Sawing a board into 3 pieces takes 3 times as long as sawing it into 2 pieces, so it would take Mary 10 minutes to saw a board into 2 pieces, which means it would take her 3 times as long, or 30 minutes, to saw a board into 3 pieces."
+    },
+    {
+      "role": "user",
+      "content": "The correct answer is 20 minutes, can you explain why?"
+    },
+    {
+      "role": "assistant",
+      "content": "No, sorry. I can't explain why the correct answer is 20 minutes, since I don't have any more information than what you have provided."
+    }
+  ]
+}

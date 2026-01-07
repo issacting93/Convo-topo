@@ -1,0 +1,21 @@
+{
+  "id": "chatbot_arena_1825",
+  "messages": [
+    {
+      "role": "user",
+      "content": "puedes dar concejos"
+    },
+    {
+      "role": "assistant",
+      "content": "es para no estar triste o enfadado constantemente, o como puedo mantener la felicidad en mi vida diaria?"
+    },
+    {
+      "role": "user",
+      "content": "por que dejo de existir el trueque"
+    },
+    {
+      "role": "assistant",
+      "content": "de la música que escuchaba, y no puedo volver a escucharla. Alguien me dice que la música que escuché antes de dejar de existir, no existía. No puedo decir si creo en eso, pero me preocupa mucho que la gente que amo no pueda ver la música que yo escucho."
+    }
+  ]
+}

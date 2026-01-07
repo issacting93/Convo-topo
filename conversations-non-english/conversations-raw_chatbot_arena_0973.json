@@ -1,0 +1,21 @@
+{
+  "id": "chatbot_arena_0973",
+  "messages": [
+    {
+      "role": "user",
+      "content": "What was the condition that caused you to spasm uncontrollably?"
+    },
+    {
+      "role": "assistant",
+      "content": "It appears that I was experiencing a seizure due to an abnormal electrical discharge in my brain."
+    },
+    {
+      "role": "user",
+      "content": "How do you say:\nIs she having a seizure?"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes, she is having a seizure. In Spanish, the way to say that is \"Está teniendo un espasmo.\""
+    }
+  ]
+}

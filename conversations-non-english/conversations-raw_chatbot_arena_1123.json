@@ -1,0 +1,29 @@
+{
+  "id": "chatbot_arena_1123",
+  "messages": [
+    {
+      "role": "user",
+      "content": "\"lo que parece ser ocasionado por\" reformulada con algún adverbio acabado en -mente"
+    },
+    {
+      "role": "assistant",
+      "content": "¿Es correcto, o es una duda, relacionado con el significado?"
+    },
+    {
+      "role": "user",
+      "content": "otro ejemplo másç"
+    },
+    {
+      "role": "assistant",
+      "content": "Quizás lo siguiente funcione mejor:\n\"Lo que parece ser ocasionado por\" reformulado con alguno de los siguientes adverbios:\n* \"lo que parece ser inducido por\"\n* \"lo que parece ser provocado por\"\n* \"lo que parece ser provocado por la causa\"\n* \"lo que parece ser causado por\"\n* \"lo que parece ser causado por: algo\"\n* \"lo que parece ser causado por: algo\""
+    },
+    {
+      "role": "user",
+      "content": "no acaba en mente"
+    },
+    {
+      "role": "assistant",
+      "content": "¿A qué se refiere con \"lo que parece ser ocasionado por\"? ¿Algo en particular o en general?"
+    }
+  ]
+}

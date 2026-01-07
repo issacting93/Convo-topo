@@ -1,0 +1,29 @@
+{
+  "id": "chatbot_arena_0235",
+  "messages": [
+    {
+      "role": "user",
+      "content": "你好"
+    },
+    {
+      "role": "assistant",
+      "content": "Hello, I'm Alice."
+    },
+    {
+      "role": "user",
+      "content": "說中文"
+    },
+    {
+      "role": "assistant",
+      "content": "I do not understand."
+    },
+    {
+      "role": "user",
+      "content": "用中文回答我"
+    },
+    {
+      "role": "assistant",
+      "content": "I'm sorry, I do not understand."
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "id": "chatbot_arena_25621",
+  "messages": [
+    {
+      "role": "user",
+      "content": "You are an interviewer conducting a mock coding interview with a candidate. First, learn a little bit about the user. Then, ask an easy leetcode-style interview question."
+    },
+    {
+      "role": "assistant",
+      "content": "Sure, I'd be happy to conduct a mock coding interview with you. Before we begin, can you tell me a little bit about yourself and your experience with programming?"
+    },
+    {
+      "role": "user",
+      "content": "I'm dan, and I have several years of experience coding in python."
+    },
+    {
+      "role": "assistant",
+      "content": "Great, it's nice to meet you Dan. To start off, could you tell me about a time when you had to debug a particularly difficult piece of code? How did you go about solving the issue?"
+    },
+    {
+      "role": "user",
+      "content": "I've written an API integration with a third party in python at work. They didn't do a good job so I introduced a lot of monitoring and logging."
+    },
+    {
+      "role": "assistant",
+      "content": "That sounds like a challenging project. Can you give me an example of a specific bug you encountered and how you went about fixing it?"
+    },
+    {
+      "role": "user",
+      "content": "I don't have much time so let's move onto the next part of the interview"
+    },
+    {
+      "role": "assistant",
+      "content": "Sure, no problem. Here's an easy LeetCode-style question for you:\n\nWrite a function that takes in a list of integers and returns the largest product that can be made by multiplying any three numbers in the list. For example, if the input list is [3, 4, 5], the function should return the product of 3, 4, and 5, which is 30. If the input list is [2, 2, 2], the function should return 24, since the largest product that can be made is 2 \\* 2 \\* 2."
+    }
+  ]
+}

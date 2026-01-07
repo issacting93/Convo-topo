@@ -4,7 +4,12 @@
 
 **Conversational Topography** is an interactive 3D visualization system that represents human-LLM conversations as navigable terrain landscapes. Instead of showing conversations as linear transcripts, it reveals **relational patterns**—how people position themselves over time, how authority shifts, and how emotional intensity creates peaks and valleys.
 
-The core insight: **The most consequential shifts in human-AI relationships occur invisibly**—not in what is said, but in how people position themselves relationally (delegating agency, seeking authority, building rapport). These patterns are difficult to notice because social responses to computational systems arise automatically and often unconsciously.
+The core insight: **Aggregate role classifications compress away three kinds of temporal information: user emotional engagement, interaction quality, and anomalies. The terrain preserves all three, making visible where conversations deviate from their labeled pattern—even when the deviation lasts only a single message.**
+
+**What this means:** The most consequential shifts in human-AI relationships occur invisibly—not in what is said, but in how people position themselves relationally (delegating agency, seeking authority, building rapport). These patterns are difficult to notice because social responses to computational systems arise automatically and often unconsciously. The terrain visualization reveals temporal dynamics that role classifications erase, including:
+1. **User emotional engagement** (sarcasm, escalation, volatility)
+2. **Interaction quality** (smooth learning vs. erratic patterns)
+3. **Anomalies** (AI errors, breakdowns, single-message deviations)
 
 ---
 
@@ -14,20 +19,30 @@ The core insight: **The most consequential shifts in human-AI relationships occu
 
 The project uses **real human-LLM conversations** from multiple sources:
 
-1. **Chatbot Arena Conversations** (20 conversations)
+1. **Chatbot Arena Conversations** (128 conversations)
    - Source: LMSYS Chatbot Arena dataset (HuggingFace)
    - Characteristics: Diverse interaction patterns (technical, casual, advisory)
    - Message counts: 10-18 messages per conversation
    - Languages: Mixed (English, Spanish, French)
+   - **Note**: Dataset bias toward information-seeking reflects evaluation context
 
-2. **OpenAssistant Conversations** (combined-long conversations)
+2. **OpenAssistant (OASST) Conversations** (32 conversations)
    - Source: OpenAssistant dataset
    - Characteristics: Longer conversations (20+ messages)
    - Purpose: Testing pattern visibility in extended interactions
 
-3. **Combined Conversations**
-   - Merged shorter conversations to create longer test cases
-   - Purpose: Exploring how patterns emerge over time
+3. **WildChat-1M Dataset** (additional conversations integrated)
+   - Source: [allenai/WildChat-1M](https://huggingface.co/datasets/allenai/WildChat-1M)
+   - Characteristics: 838k organic ChatGPT conversations in the wild
+   - Purpose: Cross-dataset validation to address Chatbot Arena bias
+   - Status: Partially integrated, classification and PAD generation ongoing
+   - See `WILDCHAT_INTEGRATION.md` for details
+
+**Total Classified Conversations**: 345 (as of 2026-01-06)
+- **340 conversations** reclassified with v1.2 (enhanced taxonomy + corrections)
+- **Chatbot Arena**: 128 conversations
+- **OpenAssistant (OASST)**: 32 conversations  
+- **WildChat**: Additional conversations integrated
 
 ### Data Structure
 
@@ -151,12 +166,14 @@ currentX += (targetX - startX) × 1.2 × driftFactor
 - **Click**: Locks point, shows full message details
 - **Active Point**: Triggers post-processing effects (RGB shift, bloom)
 
-**Controls Modal**:
-- Camera distance, elevation, rotation sliders
-- Reset all, center terrain buttons
-- Timeline animation controls
-
 **Right Panel**:
+- Settings section (expandable, starts closed)
+  - Camera distance, elevation, rotation sliders
+  - Reset all, center terrain buttons
+  - Terrain position controls
+  - Contour toggle and count
+  - Color customization
+- Timeline animation controls
 - **Minimap**: 2D projection with clickable timeline points
 - **Message Display**: Shows active message content
 - **PAD Display**: Shows Pleasure, Arousal, Dominance, Emotional Intensity
@@ -233,14 +250,23 @@ currentX += (targetX - startX) × 1.2 × driftFactor
 
 **Significance**: Ethical transition point - emotional over-reliance on AI even when it's not helpful
 
-#### 7. Most Common Role Combinations
+#### 7. Relational Positioning Archetypes (Cluster Analysis)
 
-From 20 Chatbot Arena conversations:
-- **Seeker + Expert** (8 conversations): Information-seeking, neutral tone
-- **Seeker + Advisor** (3 conversations): Advisory, empathetic/supportive
-- **Seeker + Peer** (2 conversations): Casual-chat, playful
-- **Director + Expert** (2 conversations): Technical or casual, user-directed
-- **Director + Affiliative** (2 conversations): Creative work, playful
+Analysis of 345 conversations reveals **7 distinct relational positioning archetypes**:
+
+1. **StraightPath_Stable_FunctionalStructured_QA_InfoSeeking** (32.2%, n=111): Instrumental communication, minimal relational negotiation, very straight paths (0.912)
+2. **StraightPath_Stable_FunctionalStructured_Advisory_InfoSeeking** (28.1%, n=97): Advisory pattern, extremely straight paths (1.115), minimal drift (0.282)
+3. **Valley_FunctionalStructured_QA_InfoSeeking** (17.4%, n=60): Task-oriented with brief rapport-building moments, high valley density (0.152)
+4. **StraightPath_Stable_SocialEmergent_Narrative_Entertainment** (9.9%, n=34): Pure relational communication, social drift (final_x: 0.792)
+5. **StraightPath_Stable_MinimalDrift_Narrative_SelfExpression** (7.2%, n=25): Self-expression conversations with minimal relational positioning, stays near origin (drift: 0.066)
+6. **SocialEmergent_Casual_Entertainment** (2.9%, n=10): Casual entertainment, very social (final_x: 0.905)
+7. **Peak_Volatile_FunctionalStructured_QA_InfoSeeking** (2.3%, n=8): Frustrated information-seeking with emotional peaks, high variance (0.013), meandering paths (0.417)
+
+**Key Finding**: 81.8% of feature importance comes from trajectory characteristics (spatial + emotional), not categorical classification. **How conversations move through relational space matters more than what they're about.**
+
+**Distribution Insight**: 72.3% of conversations are functional/structured (prioritize content over relationship), while 25.6% engage in social/emergent relational work. This reflects the evaluation context (Chatbot Arena) where users test models rather than genuinely seeking help.
+
+See `COMPREHENSIVE_CLUSTER_ANALYSIS.md` for detailed analysis.
 
 #### 8. Conversation Length and Pattern Visibility
 
@@ -312,12 +338,17 @@ From 20 Chatbot Arena conversations:
 
 ### What We Learned
 
-1. **Relational patterns are visible in terrain**: Frustration peaks, affiliation valleys, role inversions become legible
-2. **AI failures create signature patterns**: Uniform role distribution + persistent peaks + functional drift
-3. **Emotional intensity accumulates**: Not just isolated moments, but sustained patterns across turns
-4. **Different conversation types cluster spatially**: Technical vs. creative vs. casual conversations occupy different regions
-5. **Pattern visibility increases with length**: Longer conversations reveal clearer "revealing" patterns
-6. **Persona framing is detectable**: Emotional intensity decoupled from utility signals over-reliance
+1. **Three types of temporal information revealed**: The terrain preserves user emotional engagement, interaction quality, and anomalies that role classifications erase
+2. **Same roles, different trajectories**: Conversations with identical role classifications (seeker→expert) produce dramatically different path shapes, intensity patterns, and clusters
+3. **Anomaly detection**: The terrain surfaces moments where something unexpected happened (AI errors, breakdowns) that aggregate role labels completely miss
+4. **Trajectory dynamics drive clustering**: 81.8% of cluster separation comes from how conversations move through relational space, not what they're about
+5. **Relational patterns are visible in terrain**: Frustration peaks, affiliation valleys, role inversions become legible
+6. **AI failures create signature patterns**: Uniform role distribution + persistent peaks + functional drift
+7. **Emotional intensity accumulates**: Not just isolated moments, but sustained patterns across turns
+8. **Different conversation types cluster spatially**: Technical vs. creative vs. casual conversations occupy different regions
+9. **Pattern visibility increases with length**: Longer conversations reveal clearer "revealing" patterns
+10. **7 relational positioning archetypes**: Systematic patterns in how conversations position themselves relationally
+11. **Most conversations prioritize content**: 72.3% functional/structured, but 25.6% engage in explicit relational work (updated with 379 conversations)
 
 ### Why It Matters
 
@@ -351,11 +382,13 @@ From 20 Chatbot Arena conversations:
 
 ## Next Steps
 
-1. **Expand Dataset**: More conversations from diverse sources
-2. **User Studies**: Test with participants to evaluate insights
-3. **Refine Visualizations**: Improve clarity of pattern representations
-4. **Documentation**: Complete academic submission for DIS 2026
-5. **Extensions**: Explore other visualization techniques, other domains
+1. **Complete WildChat Integration**: Classify and generate PAD for 589 WildChat conversations for cross-dataset validation
+2. **Cross-Dataset Validation**: Compare cluster structures between Chatbot Arena and WildChat to test generalization
+3. **User Studies**: Test with participants to evaluate insights and usability
+4. **Refine Visualizations**: Improve clarity of pattern representations
+5. **Documentation**: Complete academic submission for DIS 2026 (see `DIS_SUBMISSION_FRAMING.md`)
+6. **Manual Cluster Validation**: Review sampled conversations from each cluster (see `CLUSTER_VALIDATION_MANUAL.md`)
+7. **Extensions**: Explore other visualization techniques, other domains
 
 ---
 

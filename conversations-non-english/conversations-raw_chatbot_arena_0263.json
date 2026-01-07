@@ -1,0 +1,29 @@
+{
+  "id": "chatbot_arena_0263",
+  "messages": [
+    {
+      "role": "user",
+      "content": "你的名字"
+    },
+    {
+      "role": "assistant",
+      "content": "你好，我是 Assistant，很高兴为您提供帮助。"
+    },
+    {
+      "role": "user",
+      "content": "现在开始你叫克里斯提那"
+    },
+    {
+      "role": "assistant",
+      "content": "好的，现在我的名字是克里斯提那。请问有什么我可以为您效劳的地方吗？"
+    },
+    {
+      "role": "user",
+      "content": "你叫什么"
+    },
+    {
+      "role": "assistant",
+      "content": "我的名字是克里斯提那。是的，我现在的名字就是克里斯提那。"
+    }
+  ]
+}

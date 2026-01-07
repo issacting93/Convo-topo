@@ -1,0 +1,29 @@
+{
+  "id": "chatbot_arena_18739",
+  "messages": [
+    {
+      "role": "user",
+      "content": "PERGUNTA 1\n\nQuando falamos de ambiente web, a pergunta “onde estou”? É a pergunta mais importante, porque os usuários nunca terão a chance de entender a estrutura do site se não entenderem onde estão. A localização atual do usuário tem que ser apresentada em dois níveis diferentes:\n\nCom relação à estrutura do site, é correto afirmar:\n\ni. (---?---) O usuário precisa identificar o site em todas as páginas.\nii. (---?---) Regra de navegação: incluir logotipo da empresa em cada página.\niii. (---?---) Deve ter um posicionamento constante (de preferência no canto superior esquerdo).\niv. (---?---) Título principal da página deve ser claro.\nv. (---?---) O título de cada página deve ser significativo.\n\nvi. (---?---) Os usuários podem localizar a página facilmente em sua lista de favoritos.\nAssinale a alternativa correta.\n\ta.\t\n i(F), ii(F), iii(V), iv(V), v(V) e vi(V).\n\n\tb.\t\n i(F), ii(V), iii(V), iv(V), v(V) e vi(V).\n\n\tc.\t\n i(F), ii(F), iii(F), iv(F), v(F) e vi(F).\n\n\td.\t\n i(V), ii(V), iii(V), iv(V), v(V) e vi(V).\n\n\te.\t\n i(F), ii(F), iii(F), iv(V), v(V) e vi(V)."
+    },
+    {
+      "role": "assistant",
+      "content": "A alternativa correta é a letra b: i(F), ii(V), iii(V), iv(V), v(V) e vi(V). O usuário precisa identificar o site em todas as páginas, o que não é necessário, já que o logotipo da empresa em cada página já cumpre esse papel. Todas as outras afirmações são verdadeiras e importantes para garantir a clareza e facilidade na navegação do usuário."
+    },
+    {
+      "role": "user",
+      "content": "PERGUNTA 3\n\nCom relação à interação nos ambientes web, surge a pergunta “aonde posso ir?”. Existem três tipos de links que podem ser usados:\n\n\ta.\t\n Links retidos, links estruturais e links associativos;\n\n\tb.\t\n Links embutidos, links encapsulados e links associativos;\n\n\tc.\t\n Links retidos, links estruturais e links reflexivos.\n\n\td.\t\n Links embutidos, links estruturais e links associativos;\n\n\te.\t\nLinks embutidos, links estruturais e links reflexivos;"
+    },
+    {
+      "role": "assistant",
+      "content": "A alternativa correta é a letra d: Links embutidos, links estruturais e links associativos. Esses são os três tipos de links que podem ser utilizados em ambientes web para que o usuário possa se deslocar entre as páginas. Os links embutidos são aqueles que estão dentro do texto ou imagem, os links estruturais são aqueles que estão na estrutura do site, como o menu de navegação, e os links associativos são aqueles que levam a conteúdos relacionados, como links para outras páginas do mesmo assunto."
+    },
+    {
+      "role": "user",
+      "content": "PERGUNTA 4\n\nCom relação à interação nos ambientes web, surge a pergunta “Onde estive?” Esta é uma pergunta difícil para os designs, pois o site não saberá responder sem recorrer a:\n\n\ta.\t\n Cookies\n\n\tb.\t\nEstruturas\n\n\tc.\t\n Interface humano-computador\n\n\td.\t\n URL\n\n\te.\t\nUsuários"
+    },
+    {
+      "role": "assistant",
+      "content": "A alternativa correta é a letra a: Cookies. Os cookies são pequenos arquivos armazenados no computador do usuário que permitem que o site lembre de informações sobre a interação anterior do usuário com o site, como por exemplo, se o usuário já fez login ou já visitou determinada página. Dessa forma, é possível responder à pergunta \"Onde estive?\" ao permitir que o usuário retome a navegação exatamente de onde parou em sua última visita."
+    }
+  ]
+}

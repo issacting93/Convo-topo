@@ -1,0 +1,21 @@
+{
+  "id": "chatbot_arena_1093",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Qual é o seu nome?"
+    },
+    {
+      "role": "assistant",
+      "content": "Meu nome é Assistente Virtual. Como posso ajudá-lo hoje?"
+    },
+    {
+      "role": "user",
+      "content": "Me fale 5 nomes de AIs que parecem humanos."
+    },
+    {
+      "role": "assistant",
+      "content": "Aqui estão 5 exemplos de AIs que foram projetados para parecerem humanos:\n\n1. Sophia: um robô humanoide desenvolvido pela Hanson Robotics, que é capaz de reconhecer rostos, manter conversas e expressar emoções faciais.\n\n2. Nadine: um robô semelhante a um humano desenvolvido pela Nanyang Technological University, que pode interagir com pessoas e lembrar conversas anteriores.\n\n3. Erica: um robô androide desenvolvido pela Hiroshi Ishiguro Laboratories, que tem aparência humana e é capaz de manter conversas naturais com as pessoas.\n\n4. Repliee Q1: um robô androide desenvolvido pelo Hiroshi Ishiguro Laboratories, que é capaz de imitar movimentos humanos e expressões faciais.\n\n5. Mitsuku: um chatbot desenvolvido por Steve Worswick, que é capaz de manter conversas naturais com as pessoas e até mesmo venceu vários prêmios em competições de IA."
+    }
+  ]
+}

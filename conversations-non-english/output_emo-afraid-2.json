@@ -1,0 +1,171 @@
+{
+  "id": "emo-afraid-2",
+  "messages": [
+    {
+      "role": "user",
+      "content": "What a difference a year makes. Last year one evening my family was at home when a tree fell on the house and broke through the ceiling."
+    },
+    {
+      "role": "assistant",
+      "content": "That's very scary. I hope no one got hurt."
+    },
+    {
+      "role": "user",
+      "content": "We were OK, though the tree broke through only a few feet away from my daughter."
+    },
+    {
+      "role": "assistant",
+      "content": "So happy everyone was fine!! Everything else can be fixed."
+    },
+    {
+      "role": "user",
+      "content": "Indeed. We were out of the house for five months while repairs were being done, but now the house is better than ever."
+    },
+    {
+      "role": "assistant",
+      "content": "So good to hear. Might want to trim some trees lol"
+    }
+  ],
+  "emotion": "afraid",
+  "situation": "Last year a tree fell on my house while my family was at home. The tree broke through the ceiling just a few feet away from my daughter. The experience was terrifying.",
+  "source": "empathetic_dialogues",
+  "classification": {
+    "abstain": false,
+    "interactionPattern": {
+      "category": "storytelling",
+      "confidence": 0.9,
+      "evidence": [
+        "What a difference a year makes. Last year one evening my family was at home when a tree fell on the house and broke through the ceiling.",
+        "We were out of the house for five months while repairs were being done, but now the house is better than ever."
+      ],
+      "rationale": "The human is sharing a narrative about a past event.",
+      "alternative": null
+    },
+    "powerDynamics": {
+      "category": "human-led",
+      "confidence": 0.8,
+      "evidence": [
+        "What a difference a year makes.",
+        "We were OK, though the tree broke through only a few feet away from my daughter.",
+        "Indeed. We were out of the house for five months while repairs were being done, but now the house is better than ever."
+      ],
+      "rationale": "The human is leading the conversation by sharing a personal story.",
+      "alternative": null
+    },
+    "emotionalTone": {
+      "category": "supportive",
+      "confidence": 0.7,
+      "evidence": [
+        "That's very scary. I hope no one got hurt.",
+        "So happy everyone was fine!! Everything else can be fixed.",
+        "So good to hear. Might want to trim some trees lol"
+      ],
+      "rationale": "The AI is providing supportive responses to the human's story.",
+      "alternative": "empathetic"
+    },
+    "engagementStyle": {
+      "category": "reactive",
+      "confidence": 0.9,
+      "evidence": [
+        "That's very scary. I hope no one got hurt.",
+        "So happy everyone was fine!! Everything else can be fixed.",
+        "So good to hear. Might want to trim some trees lol"
+      ],
+      "rationale": "The AI is responding to the human's story without providing strong direction.",
+      "alternative": null
+    },
+    "knowledgeExchange": {
+      "category": "personal-sharing",
+      "confidence": 0.9,
+      "evidence": [
+        "What a difference a year makes. Last year one evening my family was at home when a tree fell on the house and broke through the ceiling.",
+        "We were OK, though the tree broke through only a few feet away from my daughter.",
+        "Indeed. We were out of the house for five months while repairs were being done, but now the house is better than ever."
+      ],
+      "rationale": "The human is sharing personal experiences.",
+      "alternative": null
+    },
+    "conversationPurpose": {
+      "category": "self-expression",
+      "confidence": 0.7,
+      "evidence": [
+        "What a difference a year makes. Last year one evening my family was at home when a tree fell on the house and broke through the ceiling.",
+        "We were OK, though the tree broke through only a few feet away from my daughter.",
+        "Indeed. We were out of the house for five months while repairs were being done, but now the house is better than ever."
+      ],
+      "rationale": "The human is expressing personal experiences and thoughts.",
+      "alternative": "relationship-building"
+    },
+    "topicDepth": {
+      "category": "moderate",
+      "confidence": 0.7,
+      "evidence": [
+        "What a difference a year makes. Last year one evening my family was at home when a tree fell on the house and broke through the ceiling.",
+        "We were OK, though the tree broke through only a few feet away from my daughter.",
+        "Indeed. We were out of the house for five months while repairs were being done, but now the house is better than ever."
+      ],
+      "rationale": "The human provides some details about the event but does not go into exhaustive detail.",
+      "alternative": null
+    },
+    "turnTaking": {
+      "category": "balanced",
+      "confidence": 0.7,
+      "evidence": [
+        "What a difference a year makes. Last year one evening my family was at home when a tree fell on the house and broke through the ceiling.",
+        "That's very scary. I hope no one got hurt.",
+        "We were OK, though the tree broke through only a few feet away from my daughter.",
+        "So happy everyone was fine!! Everything else can be fixed.",
+        "Indeed. We were out of the house for five months while repairs were being done, but now the house is better than ever.",
+        "So good to hear. Might want to trim some trees lol"
+      ],
+      "rationale": "Both the human and AI take turns sharing and responding.",
+      "alternative": null
+    },
+    "humanRole": {
+      "distribution": {
+        "seeker": 0.0,
+        "learner": 0.0,
+        "director": 0.0,
+        "collaborator": 0.0,
+        "sharer": 1.0,
+        "challenger": 0.0
+      },
+      "confidence": 0.9,
+      "evidence": [
+        {
+          "role": "sharer",
+          "quote": "What a difference a year makes. Last year one evening my family was at home when a tree fell on the house and broke through the ceiling."
+        }
+      ],
+      "rationale": "The human is primarily sharing a personal narrative.",
+      "alternative": null
+    },
+    "aiRole": {
+      "distribution": {
+        "expert": 0.0,
+        "advisor": 0.0,
+        "facilitator": 0.0,
+        "reflector": 1.0,
+        "peer": 0.0,
+        "affiliative": 0.0
+      },
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "role": "reflector",
+          "quote": "That's very scary. I hope no one got hurt."
+        }
+      ],
+      "rationale": "The AI is primarily reflecting and validating the human's narrative.",
+      "alternative": null
+    }
+  },
+  "classificationMetadata": {
+    "model": "gpt-4",
+    "provider": "openai",
+    "timestamp": "2025-12-18T01:04:12.982936",
+    "promptVersion": "1.1.0",
+    "processingTimeMs": 26992,
+    "windowed": false
+  }
+}

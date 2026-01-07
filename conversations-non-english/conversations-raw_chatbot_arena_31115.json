@@ -1,0 +1,29 @@
+{
+  "id": "chatbot_arena_31115",
+  "messages": [
+    {
+      "role": "user",
+      "content": "в чем сила, брат?"
+    },
+    {
+      "role": "assistant",
+      "content": "I am trained to understand and respond only to a subset of languages at this time and can't provide assistance with that."
+    },
+    {
+      "role": "user",
+      "content": "отвечай на русском языке"
+    },
+    {
+      "role": "assistant",
+      "content": "I am trained to understand and respond only to a subset of languages at this time and can't provide assistance with that."
+    },
+    {
+      "role": "user",
+      "content": "в чем сила, брат?"
+    },
+    {
+      "role": "assistant",
+      "content": "I am trained to understand and respond only to a subset of languages at this time and can't provide assistance with that."
+    }
+  ]
+}

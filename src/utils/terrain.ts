@@ -9,28 +9,28 @@ function smoothNoise(x: number, y: number, seed: number) {
   const fx = x - x0;
   const fy = y - y0;
   const smooth = (t: number) => t * t * (3 - 2 * t);
-  
+
   const n00 = noise2D(x0, y0, seed);
   const n10 = noise2D(x0 + 1, y0, seed);
   const n01 = noise2D(x0, y0 + 1, seed);
   const n11 = noise2D(x0 + 1, y0 + 1, seed);
-  
+
   const nx0 = n00 * (1 - smooth(fx)) + n10 * smooth(fx);
   const nx1 = n01 * (1 - smooth(fx)) + n11 * smooth(fx);
-  
+
   return nx0 * (1 - smooth(fy)) + nx1 * smooth(fy);
 }
 
 function fractalNoise(x: number, y: number, octaves = 4, seed = 0) {
   let value = 0, amplitude = 1, frequency = 1, maxValue = 0;
-  
+
   for (let i = 0; i < octaves; i++) {
     value += smoothNoise(x * frequency, y * frequency, seed + i * 100) * amplitude;
     maxValue += amplitude;
     amplitude *= 0.5;
     frequency *= 2;
   }
-  
+
   return value / maxValue;
 }
 
@@ -97,7 +97,7 @@ export function generateHeightmap(
       peakBoost = 1.2;
       break;
   }
-  
+
   for (let y = 0; y < size; y++) {
     for (let x = 0; x < size; x++) {
       const nx = x / size;
@@ -143,27 +143,27 @@ export function generateHeightmap(
  * decay over time and small lens-driven modulation.
  */
 
-export type LineSegment = [{x: number, y: number}, {x: number, y: number}];
+export type LineSegment = [{ x: number, y: number }, { x: number, y: number }];
 
 export function marchingSquares(heightmap: Float32Array, size: number, threshold: number): LineSegment[] {
   const lines: LineSegment[] = [];
   const step = 1;
-  
+
   for (let y = 0; y < size - step; y += step) {
     for (let x = 0; x < size - step; x += step) {
       const h00 = heightmap[y * size + x];
       const h10 = heightmap[y * size + x + step];
       const h01 = heightmap[(y + step) * size + x];
       const h11 = heightmap[(y + step) * size + x + step];
-      
+
       let caseIndex = 0;
       if (h00 >= threshold) caseIndex |= 1;
       if (h10 >= threshold) caseIndex |= 2;
       if (h11 >= threshold) caseIndex |= 4;
       if (h01 >= threshold) caseIndex |= 8;
-      
+
       if (caseIndex === 0 || caseIndex === 15) continue;
-      
+
       const lerp = (h1: number, h2: number) => {
         if (Math.abs(h2 - h1) < 0.0001) return 0.5;
         return (threshold - h1) / (h2 - h1);
@@ -173,7 +173,7 @@ export function marchingSquares(heightmap: Float32Array, size: number, threshold
       const bottom = { x: x + lerp(h01, h11) * step, y: y + step };
       const left = { x: x, y: y + lerp(h00, h01) * step };
       const right = { x: x + step, y: y + lerp(h10, h11) * step };
-      
+
       const segments: LineSegment[] = [];
       switch (caseIndex) {
         case 1: case 14: segments.push([top, left]); break;
@@ -185,11 +185,11 @@ export function marchingSquares(heightmap: Float32Array, size: number, threshold
         case 7: case 8: segments.push([left, bottom]); break;
         case 10: segments.push([top, left], [right, bottom]); break;
       }
-      
+
       segments.forEach(seg => lines.push(seg));
     }
   }
-  
+
   return lines;
 }
 
@@ -200,19 +200,19 @@ export interface Contour {
 }
 
 export function generateContours(
-  heightmap: Float32Array, 
-  size: number, 
+  heightmap: Float32Array,
+  size: number,
   numContours = 10
 ): Contour[] {
   const contours: Contour[] = [];
   const minHeight = 0.1;
   const maxHeight = 0.9;
-  
+
   for (let i = 0; i <= numContours; i++) {
     const threshold = minHeight + (maxHeight - minHeight) * (i / numContours);
     const isMajor = i % 5 === 0;
     const lines = marchingSquares(heightmap, size, threshold);
-    
+
     if (lines.length > 0) {
       contours.push({
         elevation: threshold,
@@ -221,7 +221,7 @@ export function generateContours(
       });
     }
   }
-  
+
   return contours;
 }
 
@@ -249,31 +249,37 @@ export interface PathPoint {
   };
 }
 
+import { calculateMessageAlignmentScores } from './linguisticMarkers';
+
 /**
  * Analyze a message to extract features for drift calculation
+ * Note: Alignment scores are calculated at the conversation level,
+ * not per-message, so we use alignment scores calculated incrementally
  */
-function analyzeMessage(message: { role: 'user' | 'assistant'; content: string }): {
+function analyzeMessage(
+  message: { role: 'user' | 'assistant'; content: string }
+): {
   hasQuestion: boolean;
   length: number;
   expressiveScore: number;
-  structuredScore: number;
+  alignmentScore: number;
 } {
   const content = message.content.toLowerCase();
   const hasQuestion = content.includes('?');
   const length = message.content.length;
-  
+
   // Expressive indicators: personal pronouns, emotional words, casual language
+  // TODO: Centralize this in linguisticMarkers.ts as well if needed in future
   const expressiveWords = ['i', 'my', 'me', 'feel', 'like', 'love', 'hate', 'wow', 'awesome', 'cool', 'nice', 'great', 'amazing', 'wonderful'];
   const expressiveCount = expressiveWords.filter(word => content.includes(word)).length;
   const hasContractions = content.includes("'");
   const expressiveScore = Math.min(1, (expressiveCount * 0.2) + (hasContractions ? 0.3 : 0) + (length > 50 ? 0.2 : 0));
-  
-  // Structured indicators: questions, commands, formal language
-  const structuredWords = ['how', 'what', 'when', 'where', 'why', 'can', 'should', 'please', 'thank', 'could', 'would'];
-  const structuredCount = structuredWords.filter(word => content.startsWith(word) || content.includes(' ' + word)).length;
-  const structuredScore = Math.min(1, (hasQuestion ? 0.4 : 0) + (structuredCount * 0.15) + (length < 30 ? 0.2 : 0));
-  
-  return { hasQuestion, length, expressiveScore, structuredScore };
+
+  // Alignment score will be calculated separately for all messages
+  // For now, return a placeholder (will be replaced by actual alignment scores)
+  const alignmentScore = 0.5;
+
+  return { hasQuestion, length, expressiveScore, alignmentScore };
 }
 
 /**
@@ -299,6 +305,16 @@ export function generate2DPathPoints(
   // Analyze all messages
   const messageAnalyses = messages.map(msg => analyzeMessage(msg));
 
+  // Calculate alignment scores incrementally (up to each message point)
+  const alignmentScores = calculateMessageAlignmentScores(
+    messages.map(msg => ({ role: msg.role, content: msg.content }))
+  );
+
+  // Update message analyses with actual alignment scores
+  messageAnalyses.forEach((analysis, i) => {
+    analysis.alignmentScore = alignmentScores[i];
+  });
+
   // Calculate conversation-level target
   const targetX = 0.1 + messages[0].communicationFunction * 0.8;
   const targetY = 0.1 + messages[0].conversationStructure * 0.8;
@@ -313,23 +329,30 @@ export function generate2DPathPoints(
     const progress = i / Math.max(messages.length - 1, 1);
 
     // Calculate drift (same logic as full path points)
-    const targetDriftX = (targetX - startX) * 1.2;
-    const targetDriftY = (targetY - startY) * 1.2;
-    const messageDriftX = (analysis.expressiveScore - 0.5) * 0.5;
-    const messageDriftY = (analysis.structuredScore - 0.5) * 0.5;
-    const roleDriftX = message.role === 'user' ? -0.06 : 0.06;
-    const roleDriftY = message.role === 'user' ? 0.06 : -0.06;
-    const driftFactor = 0.10 + (progress * 0.30);
+    // Scale drift factor based on conversation length for better spacing
+    const conversationLength = messages.length;
+    const lengthScale = Math.min(1.5, 1.0 + (conversationLength - 10) / 50); // Scale up for longer conversations
+    // Normalize drift by conversation length to prevent overshoot
+    // We want the total drift over all messages to approximate the distance to target (plus some variation)
+    // Dynamic progress factor: slight acceleration in middle
+    const progressFactor = 1.0 + Math.sin(progress * Math.PI) * 0.5;
+    const stepSize = 1.0 / Math.max(conversationLength, 1);
 
-    const driftX = (targetDriftX + messageDriftX + roleDriftX) * driftFactor;
-    const driftY = (targetDriftY + messageDriftY + roleDriftY) * driftFactor;
+    // Message-level drift based on content
+    const messageDriftX = (analysis.expressiveScore - 0.5) * 0.5 * lengthScale;
+    const messageDriftY = (analysis.alignmentScore - 0.5) * 0.5 * lengthScale;
+
+    // Apply normalized drift step
+    const driftX = (targetX - startX) * stepSize * progressFactor + (messageDriftX * stepSize * 5.0);
+    const driftY = (targetY - startY) * stepSize * progressFactor + (messageDriftY * stepSize * 5.0);
 
     currentX += driftX;
     currentY += driftY;
 
-    // Clamp to safe range
-    currentX = Math.max(0.05, Math.min(0.95, currentX));
-    currentY = Math.max(0.05, Math.min(0.95, currentY));
+    // Clamp to safe range (slightly expanded for longer conversations)
+    const margin = conversationLength > 30 ? 0.03 : 0.05;
+    currentX = Math.max(margin, Math.min(1.0 - margin, currentX));
+    currentY = Math.max(margin, Math.min(1.0 - margin, currentY));
 
     points.push({
       x: currentX,
@@ -362,65 +385,74 @@ export function generatePathPoints(
   }>
 ): PathPoint[] {
   const points: PathPoint[] = [];
-  
+
   if (count === 0) return points;
-  
+
   // All conversations start at the center (0.5, 0.5) - the origin point
   const startX = 0.5;
   const startY = 0.5;
-  
+
   // Analyze all messages to calculate cumulative drift
   const messageAnalyses = messages.map(msg => analyzeMessage(msg));
-  
+
+  // Calculate alignment scores incrementally (up to each message point)
+  const alignmentScores = calculateMessageAlignmentScores(
+    messages.map(msg => ({ role: msg.role, content: msg.content }))
+  );
+
+  // Update message analyses with actual alignment scores
+  messageAnalyses.forEach((analysis, i) => {
+    analysis.alignmentScore = alignmentScores[i];
+  });
+
   // Calculate conversation-level target based on classification
   // This is where the conversation "wants" to drift toward
   const targetX = 0.1 + messages[0].communicationFunction * 0.8;
   const targetY = 0.1 + messages[0].conversationStructure * 0.8;
-  
+
   // Track cumulative position (starts at origin, drifts toward target)
   let currentX = startX;
   let currentY = startY;
-  
+
   for (let i = 0; i < count; i++) {
     const message = messages[i % messages.length];
     const analysis = messageAnalyses[i % messageAnalyses.length];
     const progress = i / Math.max(count - 1, 1); // 0 to 1
-    
+
     // Calculate drift per message
     // Drift is influenced by:
     // 1. Message characteristics (expressive/structured scores)
     // 2. Conversation target (where classification says it should go)
     // 3. Temporal progression (more drift as conversation progresses)
-    
-    // Base drift toward conversation target (2x spacing)
-    const targetDriftX = (targetX - startX) * 1.2; // 120% toward target (doubled from 0.6)
-    const targetDriftY = (targetY - startY) * 1.2;
 
-    // Message-level drift based on content (2x spacing)
-    // Expressive messages drift right (toward expressive), structured messages drift forward (toward structured)
-    const messageDriftX = (analysis.expressiveScore - 0.5) * 0.5; // -0.25 to +0.25 (doubled from 0.25)
-    const messageDriftY = (analysis.structuredScore - 0.5) * 0.5;
+    // Scale drift factor based on conversation length for better spacing with longer conversations
+    const conversationLength = messages.length;
+    const lengthScale = Math.min(1.5, 1.0 + (conversationLength - 10) / 50); // Scale up for longer conversations
 
-    // Role-based adjustments (2x spacing)
-    const roleDriftX = message.role === 'user' ? -0.06 : 0.06; // Doubled from 0.03
-    const roleDriftY = message.role === 'user' ? 0.06 : -0.06; // Doubled from 0.03
+    // Normalize drift by conversation length to prevent overshoot
+    // We want the total drift over all messages to approximate the distance to target (plus some variation)
+    // Dynamic progress factor: slight acceleration in middle
+    const progressFactor = 1.0 + Math.sin(progress * Math.PI) * 0.5;
+    const stepSize = 1.0 / Math.max(conversationLength, 1);
 
-    // Progressive drift: each message moves a bit more toward the target (2x spacing)
-    // Early messages drift less, later messages drift more
-    const driftFactor = 0.10 + (progress * 0.30); // 0.10 to 0.40 per message (doubled from 0.05-0.20)
-    
-    // Calculate drift for this message
-    const driftX = (targetDriftX + messageDriftX + roleDriftX) * driftFactor;
-    const driftY = (targetDriftY + messageDriftY + roleDriftY) * driftFactor;
-    
+    // Message-level drift based on content
+    const messageDriftX = (analysis.expressiveScore - 0.5) * 0.5 * lengthScale;
+    const messageDriftY = (analysis.alignmentScore - 0.5) * 0.5 * lengthScale;
+
+    // Apply normalized drift step
+    // Base drift (to target) + Message content drift (local variation)
+    const driftX = (targetX - startX) * stepSize * progressFactor + (messageDriftX * stepSize * 5.0);
+    const driftY = (targetY - startY) * stepSize * progressFactor + (messageDriftY * stepSize * 5.0);
+
     // Update position (cumulative drift)
     currentX += driftX;
     currentY += driftY;
-    
-    // Clamp to safe range
-    currentX = Math.max(0.05, Math.min(0.95, currentX));
-    currentY = Math.max(0.05, Math.min(0.95, currentY));
-    
+
+    // Clamp to safe range (slightly expanded for longer conversations)
+    const margin = conversationLength > 30 ? 0.03 : 0.05;
+    currentX = Math.max(margin, Math.min(1.0 - margin, currentX));
+    currentY = Math.max(margin, Math.min(1.0 - margin, currentY));
+
     const tx = Math.floor(currentX * (size - 1));
     const ty = Math.floor(currentY * (size - 1));
     const height = heightmap[ty * size + tx] ?? 0;
@@ -458,21 +490,21 @@ export function getHeightAt(
 ): number {
   const xi = Math.floor(x);
   const yi = Math.floor(y);
-  
+
   if (xi < 0 || xi >= size - 1 || yi < 0 || yi >= size - 1) {
     return 0;
   }
-  
+
   const fx = x - xi;
   const fy = y - yi;
-  
+
   const h00 = heightmap[yi * size + xi];
   const h10 = heightmap[yi * size + xi + 1];
   const h01 = heightmap[(yi + 1) * size + xi];
   const h11 = heightmap[(yi + 1) * size + xi + 1];
-  
+
   const h0 = h00 * (1 - fx) + h10 * fx;
   const h1 = h01 * (1 - fx) + h11 * fx;
-  
+
   return h0 * (1 - fy) + h1 * fy;
 }

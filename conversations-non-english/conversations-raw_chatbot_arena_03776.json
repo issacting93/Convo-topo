@@ -1,0 +1,29 @@
+{
+  "id": "chatbot_arena_03776",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Qual o tamanho máximo de suas respostas?"
+    },
+    {
+      "role": "assistant",
+      "content": "As respostas podem ter até 1024 caracteres."
+    },
+    {
+      "role": "user",
+      "content": "Como vocês são chamados?"
+    },
+    {
+      "role": "assistant",
+      "content": "Nós somos conhecidos como Chatbots."
+    },
+    {
+      "role": "user",
+      "content": "Qual técnologia de IA vocês usam?"
+    },
+    {
+      "role": "assistant",
+      "content": "Nós usamos a tecnologia de IA artificial, mais especificamente o modelo de deep learning."
+    }
+  ]
+}

@@ -54,11 +54,13 @@ export function formatRoleDistribution(
 
 /**
  * Get all classification dimensions in a structured format
+ * Now returns only the most relevant/interesting dimensions, grouped logically
  */
 export function getClassificationDimensions(
   conversation: ClassifiedConversation | null
 ): Array<{
   label: string;
+  shortLabel: string;
   category: string;
   confidence: number;
   formattedCategory: string;
@@ -66,12 +68,14 @@ export function getClassificationDimensions(
   alternative?: string;
   evidence?: string[];
   rationale?: string;
+  group: 'primary' | 'context';
 }> {
   if (!conversation?.classification) return [];
 
   const c = conversation.classification;
   const dimensions: Array<{
     label: string;
+    shortLabel: string;
     category: string;
     confidence: number;
     formattedCategory: string;
@@ -79,31 +83,63 @@ export function getClassificationDimensions(
     alternative?: string;
     evidence?: string[];
     rationale?: string;
+    group: 'primary' | 'context';
   }> = [];
 
-  const dims = [
-    { key: 'interactionPattern', label: 'Interaction Pattern' },
-    { key: 'powerDynamics', label: 'Power Dynamics' },
-    { key: 'emotionalTone', label: 'Emotional Tone' },
-    { key: 'engagementStyle', label: 'Engagement Style' },
-    { key: 'knowledgeExchange', label: 'Knowledge Exchange' },
-    { key: 'conversationPurpose', label: 'Conversation Purpose' },
-    { key: 'turnTaking', label: 'Turn Taking' },
+  // Primary dimensions: Most distinctive and useful for understanding the conversation
+  const primaryDims = [
+    { key: 'interactionPattern', label: 'Pattern', shortLabel: 'Pattern' },
+    { key: 'emotionalTone', label: 'Tone', shortLabel: 'Tone' },
   ] as const;
 
-  for (const { key, label } of dims) {
+  // Context dimensions: Additional metadata (less essential, shown in expanded view)
+  const contextDims = [
+    { key: 'powerDynamics', label: 'Power', shortLabel: 'Power' },
+    { key: 'engagementStyle', label: 'Engagement', shortLabel: 'Engagement' },
+    { key: 'conversationPurpose', label: 'Purpose', shortLabel: 'Purpose' },
+  ] as const;
+
+  // Always show primary dimensions
+  for (const { key, label, shortLabel } of primaryDims) {
     const dim = c[key as keyof typeof c] as { category?: string; confidence?: number; alternative?: string; evidence?: string[]; rationale?: string } | undefined;
     if (dim?.category) {
       dimensions.push({
         label,
+        shortLabel,
         category: dim.category,
         confidence: dim.confidence ?? 0,
         formattedCategory: formatCategoryName(dim.category),
         formattedConfidence: formatConfidence(dim.confidence ?? 0),
         alternative: dim.alternative ?? undefined,
         evidence: dim.evidence,
-        rationale: dim.rationale
+        rationale: dim.rationale,
+        group: 'primary'
       });
+    }
+  }
+
+  // Show context dimensions only if they're distinctive (high confidence or non-default values)
+  for (const { key, label, shortLabel } of contextDims) {
+    const dim = c[key as keyof typeof c] as { category?: string; confidence?: number; alternative?: string; evidence?: string[]; rationale?: string } | undefined;
+    if (dim?.category) {
+      const isDistinctive = 
+        (dim.confidence ?? 0) > 0.7 || // High confidence
+        dim.category !== 'balanced' && dim.category !== 'neutral'; // Non-default values
+      
+      if (isDistinctive) {
+        dimensions.push({
+          label,
+          shortLabel,
+          category: dim.category,
+          confidence: dim.confidence ?? 0,
+          formattedCategory: formatCategoryName(dim.category),
+          formattedConfidence: formatConfidence(dim.confidence ?? 0),
+          alternative: dim.alternative ?? undefined,
+          evidence: dim.evidence,
+          rationale: dim.rationale,
+          group: 'context'
+        });
+      }
     }
   }
 

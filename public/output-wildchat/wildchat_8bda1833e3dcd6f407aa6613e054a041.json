@@ -1,0 +1,32 @@
+{
+  "id": "wildchat_8bda1833e3dcd6f407aa6613e054a041",
+  "source": "wildchat",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Give me a random restaurant, whether low-end or high-end."
+    },
+    {
+      "role": "assistant",
+      "content": "The Cheesecake Factory."
+    },
+    {
+      "role": "user",
+      "content": "In China I meant."
+    },
+    {
+      "role": "assistant",
+      "content": "Haodou Kitchen in Beijing, China."
+    }
+  ],
+  "metadata": {
+    "model": "gpt-3.5-turbo-0301",
+    "timestamp": "2023-05-09T17:07:42+00:00",
+    "turn_count": 2,
+    "language": "English",
+    "country": "United States",
+    "state": "Kansas",
+    "toxic": false,
+    "redacted": false
+  }
+}

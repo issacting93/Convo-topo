@@ -1,0 +1,21 @@
+{
+  "id": "chatbot_arena_1912",
+  "messages": [
+    {
+      "role": "user",
+      "content": "hi"
+    },
+    {
+      "role": "assistant",
+      "content": "Hello! How can I help you today?"
+    },
+    {
+      "role": "user",
+      "content": "saps parlar català?"
+    },
+    {
+      "role": "assistant",
+      "content": "I am trained to understand and respond only to a subset of languages at this time and can't provide assistance with that."
+    }
+  ]
+}

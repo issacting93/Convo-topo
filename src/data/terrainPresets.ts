@@ -8,6 +8,7 @@ export interface TerrainPreset {
   heightParams?: Partial<TerrainParams>; // Terrain height parameters from classification
   xyz?: { x: number; y: number; z: number }; // XYZ coordinates snapshot
   pathPoints2D?: Array<{ x: number; y: number; role: 'user' | 'assistant' }>; // Pre-computed path points for minimap
+  conversationId?: string; // Link to original conversation ID
 }
 
 export const TERRAIN_PRESETS: TerrainPreset[] = [

@@ -1,0 +1,37 @@
+{
+  "id": "chatbot_arena_07152",
+  "messages": [
+    {
+      "role": "user",
+      "content": "你好"
+    },
+    {
+      "role": "assistant",
+      "content": "Hello."
+    },
+    {
+      "role": "user",
+      "content": "你是谁"
+    },
+    {
+      "role": "assistant",
+      "content": "I am an artificial intelligence assistant, and I can help you with your questions."
+    },
+    {
+      "role": "user",
+      "content": "中国在哪里"
+    },
+    {
+      "role": "assistant",
+      "content": "China is located in Asia."
+    },
+    {
+      "role": "user",
+      "content": "台湾与中国的关系"
+    },
+    {
+      "role": "assistant",
+      "content": "Taiwan is a self-governed region of China."
+    }
+  ]
+}

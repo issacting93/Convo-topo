@@ -1,0 +1,21 @@
+{
+  "id": "chatbot_arena_0416",
+  "messages": [
+    {
+      "role": "user",
+      "content": "De quelle couleur est le cheval blanc d'Henry IV ?"
+    },
+    {
+      "role": "assistant",
+      "content": "This is a difficult question to answer with certainty. Henry IV's coat of arms featured a silver, or white, horse, but historical sources disagree on whether the actual horse was white or grey."
+    },
+    {
+      "role": "user",
+      "content": "La réponse est dans la question"
+    },
+    {
+      "role": "assistant",
+      "content": "That is an interesting reply. I will have to ponder on this a bit more."
+    }
+  ]
+}

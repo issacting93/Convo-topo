@@ -1,0 +1,29 @@
+{
+  "id": "chatbot_arena_26135",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Gib mir bitte das Rezept für Kürbis-Curry-Topf Levante Style"
+    },
+    {
+      "role": "assistant",
+      "content": "Ich glaube, Sie meinte Curry mit Kürbis und nicht mit Topf, correct?"
+    },
+    {
+      "role": "user",
+      "content": "Ich hätte gerne ein Rezept für einen veganen Kürbis-Curry-Topf Levante Style."
+    },
+    {
+      "role": "assistant",
+      "content": "Wir können ein veganes Curry mit Kürbis auf Basis einer Levante-Küche zusammenstellen. Hier ist ein Rezept, das Sie probieren können:\nIngredients:\n- 1 kg Kürbis, in Scheiben geschnitten\n- 2 Zwiebeln, in Scheiben geschnitten\n- 2 Frühlingszwiebeln, in Scheiben geschnitten\n- 1 Bund Zitronensaft\n- 1 Tasse getrocknete Tamarinde\n- 1 Tasse getrocknete Kokosnuss\n- 1 Tasse getrocknete Kannibalis\n- 1 Tasse Olivenöl\n- 1 Tasse Tomatenmark\n- 1 Tasse Wasser\n- 1 Tasse Knoblauch, in feine Streifen geschnitten\n- 1 Tasse Petersilie, in Scheiben geschnitten\n- 1 Tasse frische Kräuter (z.B. Zweige Karotten, Rosmarin, dornfeldt, Kreuzkümmel)\n- 2 EL Tamarindensaft\n- 1 EL Chili-Paprikapulver\n- 1 EL Currypulver\n- 1 EL Paprika\n- 1 EL Zitronensaft\n- 2 EL Sojasauce\n- 1 EL Currykörper\n- 1 EL Honig\n- 1 Tasse Olivenöl\n\nVerwendung:\n1. In einer Pfanne das Olivenöl aufkochen und die Zwiebeln und die Frühlingszwiebeln zerquetschnellen.\n2. Die Kürbisfläche in der Pfanne aufstellen und mit dem Zwiebel- und Frühlingszwiesel-Mix bestreuen.\n3. Die Zwiebeln und Frühlingszwiebeln zusetzen, das Tamarindensaft, die Kokosnuss, die Kannibalis, die Olivenöl, die Tomatenmark, den Knoblauch, die Petersilie, die Kräuter und den Chili-Paprikapulver, Currypulver und Paprika zusetzen.\n4. Das Wasser zugießen und mit dem Honig vermischen.\n5. Mit dem Sojasauce, dem"
+    },
+    {
+      "role": "user",
+      "content": "weiter"
+    },
+    {
+      "role": "assistant",
+      "content": "Currykörper und der restlichen Olivenöl vermischen.\n6. Die Temperatur bei 175°C (349°F) erhöhen und die Curry-Masse etwa 30 Minuten köcheln lassen, bis sie sehr hart ist.\n7. Die Curry-Masse in eine große Servierschüssel geben und mit einem Spiegelbach servieren."
+    }
+  ]
+}

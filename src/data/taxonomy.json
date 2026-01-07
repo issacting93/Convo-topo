@@ -621,7 +621,7 @@
             "\"does that mean…?\""
           ],
           "parent": "information-oriented",
-          "terrainPosition": 0.5
+          "terrainPosition": 0.4
         },
         "collaborator": {
           "definition": "Proposes alternatives/tradeoffs; co-builds iteratively; specifies tasks (merged director)",
@@ -633,7 +633,7 @@
             "format specs"
           ],
           "parent": "leadership-oriented",
-          "terrainPosition": 0.75
+          "terrainPosition": 0.7
         },
         "sharer": {
           "definition": "Personal narrative/context mainly for expression/relational framing",
@@ -643,7 +643,7 @@
             "personal context not task-required"
           ],
           "parent": "expression-oriented",
-          "terrainPosition": 0.9
+          "terrainPosition": 0.95
         },
         "challenger": {
           "definition": "Critiques/stress-tests claims; explicit pushback",
@@ -653,7 +653,7 @@
             "\"that's not right\""
           ],
           "parent": "critical-oriented",
-          "terrainPosition": 0.2
+          "terrainPosition": 0.1
         }
       },
       "tieBreakers": [
@@ -679,7 +679,7 @@
             "\"try doing X then Y\""
           ],
           "parent": "knowledge-oriented",
-          "terrainPosition": 0.25
+          "terrainPosition": 0.1
         },
         "facilitator": {
           "definition": "Guides via questions/scaffolding/options rather than prescribing",
@@ -689,7 +689,7 @@
             "offering choices"
           ],
           "parent": "collaborative-oriented",
-          "terrainPosition": 0.75
+          "terrainPosition": 0.7
         },
         "reflector": {
           "definition": "Paraphrases/validates/invites elaboration (\"it sounds like…\", \"that makes sense…\")",
@@ -699,7 +699,7 @@
             "\"tell me more\""
           ],
           "parent": "support-oriented",
-          "terrainPosition": 0.5
+          "terrainPosition": 0.4
         },
         "peer": {
           "definition": "Brainstorms alongside with low-authority tone (\"we could…\")",
@@ -709,7 +709,7 @@
             "collaborative speculation"
           ],
           "parent": "collaborative-oriented",
-          "terrainPosition": 0.9
+          "terrainPosition": 0.95
         }
       },
       "tieBreakers": [

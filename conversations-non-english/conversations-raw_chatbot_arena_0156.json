@@ -1,0 +1,21 @@
+{
+  "id": "chatbot_arena_0156",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Olá!"
+    },
+    {
+      "role": "assistant",
+      "content": "Olá! Como vai?"
+    },
+    {
+      "role": "user",
+      "content": "Me escreva um poema ao estilo de Luís de Camões, ele deve ter rimas e falar sobre um menino chamado Júnior que gosta de dançar e de minecraft."
+    },
+    {
+      "role": "assistant",
+      "content": "Júnior, oh Júnior,\n\nMenino que gosta de dançar e de minecraft,\n\nEm uma casa onde a felicidade vive,\n\nJúnior baila com graça e gracia,\n\nNum mundo virtual onde a magia vive,\n\nNo mundo de minecraft, onde se encontra,\n\nO jovem dança com talento.\n\nA sua dança é uma expressão de vida,\n\nUm canto à natureza, uma celebração,\n\nJúnior dança com alegria de viver,\n\nNum mundo onde as possibilidadees viver.\n\nOh Júnior, oh Júnior,\n\nMenino que gosta de dançar e de minecraft,\n\nEm um mundo onde a magia vive,\n\nJúnior baila com graça e gracia,\n\nNum mundo virtual onde a felicidade vive."
+    }
+  ]
+}

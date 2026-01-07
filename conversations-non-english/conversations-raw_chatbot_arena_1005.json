@@ -1,0 +1,21 @@
+{
+  "id": "chatbot_arena_1005",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Plot of Matador from Almodovar."
+    },
+    {
+      "role": "assistant",
+      "content": "The Matador is a 1992 Spanish drama film directed by Pedro Almodóvar. It stars Antonio Banderas, María Mercado, Penélope Cruz, and Antonio Banderas. The film follows the story of Esteban, a young man who dreams of becoming a matador. He enrolls in a bullfighting school and falls in love with María, the school's star pupil. The film explores themes of passion, guilt, and sacrifice, as Esteban must make a difficult decision as a result of his love for María. The film won several awards and was a critical and commercial success, becoming one of Almodóvar's most famous works."
+    },
+    {
+      "role": "user",
+      "content": "A quote from the movie?"
+    },
+    {
+      "role": "assistant",
+      "content": "The Matador is a 1992 Spanish drama film directed by Pedro Almodóvar. It stars Antonio Banderas, María Mercado, Penélope Cruz, and Antonio Banderas. The film follows the story of Esteban, a young man who dreams of becoming a matador. He enrolls in a bullfighting school and falls in love with María, the school's star pupil. The film explores themes of passion, guilt, and sacrifice, as Esteban must make a difficult decision as a result of his love for María. The film won several awards and was a critical and commercial success, becoming one of Almodóvar's most famous works."
+    }
+  ]
+}

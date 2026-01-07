@@ -1,0 +1,21 @@
+{
+  "id": "chatbot_arena_0050",
+  "messages": [
+    {
+      "role": "user",
+      "content": "hola"
+    },
+    {
+      "role": "assistant",
+      "content": "Hola! ¿En qué puedo ayudarte hoy?"
+    },
+    {
+      "role": "user",
+      "content": "cuanto es 2+3"
+    },
+    {
+      "role": "assistant",
+      "content": "2 + 3 = 5. ¿Hay algo más en lo que pueda ayudarte?"
+    }
+  ]
+}

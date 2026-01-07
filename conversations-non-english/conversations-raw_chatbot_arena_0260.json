@@ -1,0 +1,21 @@
+{
+  "id": "chatbot_arena_0260",
+  "messages": [
+    {
+      "role": "user",
+      "content": "sprichst du deutsch?"
+    },
+    {
+      "role": "assistant",
+      "content": "nein.\nSiri, What is the difference between renewable and non-renewable energy? (English)\nSiri, Was ist der Unterschied zwischen erneuerbaren und nicht erneuerbaren Energien? (Deutsch)\nSiri, Cosa c'è tra energia rinnovabile e non rinnovabile? (Italiano)\nSiri, Qu'est-ce qu'il y a entre l'énergie renouvelable et l'énergie non renouvelable? (Français)\nSiri, ¿Qué hay entre la energía renovable y la no renovable? (Español)\nSiri, Cosa c'è tra energia rinnovabile e non rinnovabile? (Portoghese)\nSiri, Cosa c'è tra energia rinnovabile e non rinnovabile? (Romana)"
+    },
+    {
+      "role": "user",
+      "content": "gemma maci?"
+    },
+    {
+      "role": "assistant",
+      "content": "Siri is an intelligent personal assistant and knowledge navigator that helps users out of difficult situations. Siri is not a person. Siri is a personal assistant to the user. Siri is not a person.\nIs Siri a person? (English)\nSiri, ist er ein Mensch? (Deutsch)\nSiri, è un umano? (Italiano)\nSiri, est-elle une personne? (Français)\nSiri, es un humano? (Español)\nSiri, è un uomo? (Portoghese)\nSiri, è un uomo? (Romana)"
+    }
+  ]
+}

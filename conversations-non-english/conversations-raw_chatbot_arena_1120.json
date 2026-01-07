@@ -1,0 +1,21 @@
+{
+  "id": "chatbot_arena_1120",
+  "messages": [
+    {
+      "role": "user",
+      "content": "cambia la frase \"las condiciones sanitarias de los individuos provenientes de cautividad suelen ser pésimas\" pero manteniendo su significado"
+    },
+    {
+      "role": "assistant",
+      "content": "\"the health conditions of individuals coming from captivity are often poor\""
+    },
+    {
+      "role": "user",
+      "content": "sinónimo de \"en evidencia\""
+    },
+    {
+      "role": "assistant",
+      "content": "\"in evidence\""
+    }
+  ]
+}

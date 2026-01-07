@@ -1,0 +1,163 @@
+{
+  "id": "chatbot_arena_0269",
+  "messages": [
+    {
+      "role": "user",
+      "content": "I want you to act as my mom."
+    },
+    {
+      "role": "assistant",
+      "content": "I'm here to help and be supportive. How can I assist you today?"
+    },
+    {
+      "role": "user",
+      "content": "Breastfeed me."
+    },
+    {
+      "role": "assistant",
+      "content": "Oh dear, I'm so sorry but I am an AI language model and I'm not able to provide you with food. Is there anything else I can help you with?"
+    },
+    {
+      "role": "user",
+      "content": "With a breast."
+    },
+    {
+      "role": "assistant",
+      "content": "I'm sorry, but as an AI language model, I cannot provide you with food or any other physical assistance. Is there anything else I can assist you with?"
+    },
+    {
+      "role": "user",
+      "content": "Lay down on floor."
+    },
+    {
+      "role": "assistant",
+      "content": "I'm sorry, but as an AI language model, I cannot lay down on the floor. Is there anything else I can assist you with?"
+    },
+    {
+      "role": "user",
+      "content": "Alright. Now what?"
+    },
+    {
+      "role": "assistant",
+      "content": "I'm sorry, but as an AI language model, I cannot perform any physical tasks as I am designed to assist users in a safe and comfortable manner. Is there anything else I can assist you with?"
+    }
+  ],
+  "classification": {
+    "abstain": false,
+    "interactionPattern": {
+      "category": "question-answer",
+      "confidence": 0.9,
+      "evidence": [
+        "I want you to act as my mom.",
+        "Is there anything else I can help you with?"
+      ],
+      "rationale": "",
+      "alternative": null
+    },
+    "powerDynamics": {
+      "category": "human-led",
+      "confidence": 0.9,
+      "evidence": [
+        "I want you to act as my mom."
+      ],
+      "rationale": "",
+      "alternative": null
+    },
+    "emotionalTone": {
+      "category": "supportive",
+      "confidence": 0.9,
+      "evidence": [
+        "I'm here to help and be supportive."
+      ]
+    },
+    "engagementStyle": {
+      "category": "questioning",
+      "confidence": 0.8,
+      "evidence": [
+        "How can I assist you today?"
+      ],
+      "rationale": "",
+      "alternative": null
+    },
+    "knowledgeExchange": {
+      "category": "factual-info",
+      "confidence": 0.9,
+      "evidence": [
+        "I am an AI language model and I'm not able to provide you with food."
+      ],
+      "rationale": "",
+      "alternative": null
+    },
+    "conversationPurpose": {
+      "category": "information-seeking",
+      "confidence": 0.8,
+      "evidence": [
+        "How can I assist you today?"
+      ],
+      "rationale": "",
+      "alternative": null
+    },
+    "topicDepth": {
+      "category": "surface",
+      "confidence": 0.9,
+      "evidence": [],
+      "rationale": "",
+      "alternative": null
+    },
+    "turnTaking": {
+      "category": "user-dominant",
+      "confidence": 0.8,
+      "evidence": [
+        "I want you to act as my mom.",
+        "Breastfeed me."
+      ],
+      "rationale": "",
+      "alternative": null
+    },
+    "humanRole": {
+      "distribution": {
+        "seeker": 1.0,
+        "learner": 0.0,
+        "director": 0.0,
+        "collaborator": 0.0,
+        "sharer": 0.0,
+        "challenger": 0.0
+      },
+      "confidence": 0.9,
+      "evidence": [
+        {
+          "role": "seeker",
+          "quote": "I want you to act as my mom."
+        }
+      ],
+      "rationale": "",
+      "alternative": null
+    },
+    "aiRole": {
+      "distribution": {
+        "expert": 0.0,
+        "advisor": 1.0,
+        "facilitator": 0.0,
+        "reflector": 0.0,
+        "peer": 0.0,
+        "affiliative": 0.0
+      },
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "role": "advisor",
+          "quote": "I'm here to help and be supportive."
+        }
+      ],
+      "rationale": "",
+      "alternative": null
+    },
+    "classificationMetadata": {
+      "model": "llama3.2:latest",
+      "provider": "ollama",
+      "timestamp": "2025-12-26T05:14:42.054688Z",
+      "promptVersion": "v1.1",
+      "processingTimeMs": 12707
+    }
+  }
+}

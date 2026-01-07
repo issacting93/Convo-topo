@@ -1,0 +1,21 @@
+{
+  "id": "chatbot_arena_0150",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Olá"
+    },
+    {
+      "role": "assistant",
+      "content": "Olá! How can I help you?"
+    },
+    {
+      "role": "user",
+      "content": "Estou a pensar em criar um plugin para wordpress"
+    },
+    {
+      "role": "assistant",
+      "content": "Uma ideia interessante! O que você precisa para fazer isso?"
+    }
+  ]
+}

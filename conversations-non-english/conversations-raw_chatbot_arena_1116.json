@@ -1,0 +1,21 @@
+{
+  "id": "chatbot_arena_1116",
+  "messages": [
+    {
+      "role": "user",
+      "content": "donde queda la localidad de cabalango"
+    },
+    {
+      "role": "assistant",
+      "content": "Cabalango es una localidad que se encuentra en el departamento de Chalatenango, El Salvador. Está ubicado al noreste de la ciudad de Chalatenango, a unos 30 kilómetros de distancia. Cabalango es un pequeño pueblo que se encuentra en la ladera de un cerro, y es conocido por su belleza natural y su rica cultura. En el área de Cabalango se han encontrado ruinas arqueológicas que datan de la época precolombina, lo que indica que la región ha sido habitada desde hace milenios. Además, Cabalango es conocido por su producción de café, que es considerado uno de los mejores del país."
+    },
+    {
+      "role": "user",
+      "content": "Donde queda la localdiad de cabalango en cordoba, argentina"
+    },
+    {
+      "role": "assistant",
+      "content": "No hay una localidad en Argentina con el nombre de Cabalango. Sin embargo, en la provincia de Córdoba, Argentina, se encuentra el departamento de Río Secano, que tiene una localidad llamada La Cumbre, que podría ser la que estás buscando. La Cumbre se encuentra al noroeste de la ciudad de Córdoba, a unos 50 kilómetros de distancia, y es conocida por su belleza natural y su rica cultura. En la zona de La Cumbre se han encontrado ruinas arqueológicas que datan de la época precolombina, lo que indica que la región ha sido habitada desde hace milenios. Además, La Cumbre es conocida por su producción de café, que es considerado uno de los mejores del país."
+    }
+  ]
+}

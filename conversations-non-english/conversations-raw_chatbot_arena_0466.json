@@ -1,0 +1,21 @@
+{
+  "id": "chatbot_arena_0466",
+  "messages": [
+    {
+      "role": "user",
+      "content": "你可以用中文和我交談嗎？"
+    },
+    {
+      "role": "assistant",
+      "content": "當然可以，請問有什麼我可以幫助您的呢？"
+    },
+    {
+      "role": "user",
+      "content": "好的，現在開始請用中文來回答我的問題"
+    },
+    {
+      "role": "assistant",
+      "content": "好的，請問您有什麼問題需要我回答呢？"
+    }
+  ]
+}

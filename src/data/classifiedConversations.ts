@@ -1,12 +1,10 @@
 // This file will be populated with the classified conversation data
-// For now, we'll create a loader that can fetch from the output directory
-
-import { ClassifiedConversation } from '../utils/conversationToTerrain';
+import { Conversation, ConversationSchema } from '../schemas/conversationSchema';
 
 // In development, we can import JSON files directly
 // In production, these would be loaded from a server or bundled
 
-let cachedConversations: ClassifiedConversation[] | null = null;
+let cachedConversations: Conversation[] | null = null;
 
 // Manifest interface
 interface ManifestConversation {
@@ -58,66 +56,105 @@ async function loadManifest(): Promise<Manifest | null> {
 /**
  * Check if a conversation contains non-English content
  */
-function isEnglishConversation(conversation: ClassifiedConversation): boolean {
+function isEnglishConversation(conversation: Conversation): boolean {
   const messages = conversation.messages || [];
-  
+
   // Check first few messages for non-English patterns
   const sampleMessages = messages.slice(0, 5);
-  
+
   for (const msg of sampleMessages) {
     const content = msg.content || '';
-    
+
     // Skip very short messages (just "ok", "yes", etc.)
     if (content.trim().length < 3) continue;
-    
+
     // Check for Spanish patterns
     if (/[ñáéíóúü¿¡]|hola|español|entender|gracias|por favor|puedes|quiero|dime|cosas bonitas/i.test(content)) {
       return false;
     }
-    
+
     // Check for French patterns
     if (/[çàâäéèêëïîôùûüÿ]|bonjour|merci|français|comprendre|salut|ça va/i.test(content)) {
       return false;
     }
-    
+
     // Check for German patterns
     if (/[äöüß]|guten tag|danke|verstehen|deutsch|ist ein|rechtwink/i.test(content)) {
       return false;
     }
-    
+
     // Check for Chinese/Japanese/Korean characters
     if (/[\u4e00-\u9fff\u3040-\u309f\u30a0-\u30ff\uac00-\ud7af]/.test(content)) {
       return false;
     }
-    
+
     // Check for Arabic characters
     if (/[\u0600-\u06ff]/.test(content)) {
       return false;
     }
   }
-  
+
   return true;
 }
 
 /**
  * Load a single conversation file by filename
+ * USES ZOD SCHEMA VALIDATION
  */
-async function loadConversationFile(filename: string): Promise<ClassifiedConversation | null> {
+async function loadConversationFile(filename: string): Promise<Conversation | null> {
   try {
     const response = await fetch(`/output/${filename}`);
-    if (response.ok) {
-      const conversation = await response.json();
-      // Filter out non-English conversations
-      if (!isEnglishConversation(conversation)) {
-        if (import.meta.env.DEV) {
-          console.log(`🌐 Skipping non-English conversation: ${filename}`);
-        }
-        return null;
-      }
-      return conversation;
+    if (!response.ok) {
+      // File doesn't exist (404) - silently skip
+      return null;
     }
+
+    // Check if response is actually JSON (not HTML error page)
+    const contentType = response.headers.get('content-type');
+    if (!contentType || !contentType.includes('application/json')) {
+      // Got HTML or other non-JSON response - silently skip
+      return null;
+    }
+
+    const text = await response.text();
+    
+    // Quick check: if it starts with <, it's probably HTML
+    if (text.trim().startsWith('<')) {
+      return null;
+    }
+
+    let rawData;
+    try {
+      rawData = JSON.parse(text);
+    } catch (parseError) {
+      // Not valid JSON - silently skip
+      return null;
+    }
+
+    // Validate schema with Zod
+    const result = ConversationSchema.safeParse(rawData);
+
+    if (!result.success) {
+      if (import.meta.env.DEV) {
+        console.error(`❌ Schema validation failed for ${filename}:`, result.error.format());
+      }
+      return null;
+    }
+
+    const conversation = result.data;
+
+    // Filter out non-English conversations
+    if (!isEnglishConversation(conversation)) {
+      if (import.meta.env.DEV) {
+        console.log(`🌐 Skipping non-English conversation: ${filename}`);
+      }
+      return null;
+    }
+    return conversation;
   } catch (error) {
-    if (import.meta.env.DEV) {
+    // Network errors or other issues - silently skip in production
+    // Only log in dev if it's not a 404-like error
+    if (import.meta.env.DEV && !(error instanceof TypeError && error.message.includes('fetch'))) {
       console.warn(`⚠️  Failed to load ${filename}:`, error);
     }
   }
@@ -127,7 +164,7 @@ async function loadConversationFile(filename: string): Promise<ClassifiedConvers
 /**
  * Load classified conversations using manifest file (faster and more efficient)
  */
-async function loadWithManifest(manifest: Manifest): Promise<ClassifiedConversation[]> {
+async function loadWithManifest(manifest: Manifest): Promise<Conversation[]> {
   // Collect all conversation file names from ALL sources in manifest
   const allFiles: string[] = [];
 
@@ -141,7 +178,7 @@ async function loadWithManifest(manifest: Manifest): Promise<ClassifiedConversat
   const results = await Promise.all(loadPromises);
 
   // Filter out null results (failed loads + non-English conversations)
-  const conversations = results.filter((conv): conv is ClassifiedConversation => conv !== null);
+  const conversations = results.filter((conv): conv is Conversation => conv !== null);
   const filteredCount = allFiles.length - conversations.length;
 
   if (import.meta.env.DEV) {
@@ -160,13 +197,13 @@ async function loadWithManifest(manifest: Manifest): Promise<ClassifiedConversat
  * Fallback: Load conversations sequentially (old method)
  * Used when manifest is not available
  */
-async function loadSequentially(): Promise<ClassifiedConversation[]> {
-  const conversations: ClassifiedConversation[] = [];
-  
+async function loadSequentially(): Promise<Conversation[]> {
+  const conversations: Conversation[] = [];
+
   // Only load chatbot_arena files (old data hidden)
   let index = 1;
   let hasMore = true;
-  
+
   while (hasMore && index <= 100) { // Safety limit
     const fileName = `chatbot_arena_${String(index).padStart(2, '0')}.json`;
     const conv = await loadConversationFile(fileName);
@@ -177,14 +214,9 @@ async function loadSequentially(): Promise<ClassifiedConversation[]> {
       hasMore = false;
     }
   }
-  
-  // OLD DATA HIDDEN - Only loading chatbot_arena files
-  // (commented out: conv-*, sample-*, emo-*, cornell-*, kaggle-emo-*)
-  
+
   if (import.meta.env.DEV) {
     console.log(`📋 Loaded ${conversations.length} conversations (sequential fallback, English only)`);
-    console.log(`  - With classification: ${conversations.filter(c => c.classification).length}`);
-    console.log(`  - Without classification: ${conversations.filter(c => !c.classification).length}`);
   }
 
   return conversations;
@@ -194,7 +226,7 @@ async function loadSequentially(): Promise<ClassifiedConversation[]> {
  * Load classified conversations from the output directory
  * Uses manifest file for faster loading, falls back to sequential loading if manifest unavailable
  */
-export async function loadClassifiedConversations(): Promise<ClassifiedConversation[]> {
+export async function loadClassifiedConversations(): Promise<Conversation[]> {
   // Disable cache in development to always get fresh data
   if (cachedConversations && import.meta.env.PROD) {
     return cachedConversations;
@@ -202,7 +234,7 @@ export async function loadClassifiedConversations(): Promise<ClassifiedConversat
 
   // Try to load manifest first (faster and more efficient)
   const manifest = await loadManifest();
-  
+
   if (manifest) {
     // Use manifest-based loading (parallel, faster)
     const conversations = await loadWithManifest(manifest);
@@ -219,7 +251,7 @@ export async function loadClassifiedConversations(): Promise<ClassifiedConversat
 /**
  * Get a specific conversation by ID
  */
-export async function getConversationById(id: string): Promise<ClassifiedConversation | null> {
+export async function getConversationById(id: string): Promise<Conversation | null> {
   const conversations = await loadClassifiedConversations();
   return conversations.find(c => c.id === id) || null;
 }

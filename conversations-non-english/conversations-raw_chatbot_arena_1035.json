@@ -1,0 +1,21 @@
+{
+  "id": "chatbot_arena_1035",
+  "messages": [
+    {
+      "role": "user",
+      "content": "hello"
+    },
+    {
+      "role": "assistant",
+      "content": "Hello there! How can I help you today?"
+    },
+    {
+      "role": "user",
+      "content": "请用中文回答"
+    },
+    {
+      "role": "assistant",
+      "content": "Ok, how can I help you using Chinese characters?"
+    }
+  ]
+}

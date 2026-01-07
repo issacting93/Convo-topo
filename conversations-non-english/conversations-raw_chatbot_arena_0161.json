@@ -1,0 +1,21 @@
+{
+  "id": "chatbot_arena_0161",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Olá!"
+    },
+    {
+      "role": "assistant",
+      "content": "Oi! Como você está?"
+    },
+    {
+      "role": "user",
+      "content": "Me crie um poema sobre um menino chamado Júnior que gosta de dançar e de Minecraft, o poema deve ser ao estilo de Luís de Camões e deve ter rimas."
+    },
+    {
+      "role": "assistant",
+      "content": "Júnior was a lad of just ten years old,With a passion for dancing and Minecraft,Whether he was twirling and spinning,Or building blocks with precision,\n\nHe'd spend hours in front of the screen,Watching videos of dancers' dream,And when the music started playing,Júnior would dance with all his might,\n\nWith moves so smooth, so graceful and sweet,Júnior charmed all who saw, and that's for sure,His love for Minecraft and dancing,Would never leave him, it's just so pure.\n\nSo here's to Júnior, the young boy with a heart,With a love for dancing and Minecraft,That's bound to take him far,And bring him joy, for a long time to come.\n\nParabéns!"
+    }
+  ]
+}

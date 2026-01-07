@@ -1,0 +1,29 @@
+{
+  "id": "chatbot_arena_04744",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Hola, muy buenas tardes."
+    },
+    {
+      "role": "assistant",
+      "content": "Hola! Como estas? ¿Qué tienes para mí hoy? ¡Espero que estés bien!"
+    },
+    {
+      "role": "user",
+      "content": "Gracias, deseo saber acerca de los servicios prestados por la universidad a sus estudiantes."
+    },
+    {
+      "role": "assistant",
+      "content": "Certainly! ¿Qué específicamente quieres saber? ¿A qué servicios se refiere?"
+    },
+    {
+      "role": "user",
+      "content": "Ok, deseo indagar en los servicios de consejeria estudiantil."
+    },
+    {
+      "role": "assistant",
+      "content": "Claro! The university provides a variety of counseling services to its students, including:\n\n1.   Academic Counseling: This service helps students with academic issues such as academic advising, course planning, and assistance with academic progress.\n2.   Career Counseling: This service helps students with career-related issues such as resume writing, interview preparation, and job search.\n3.   Personal Counseling: This service provides support and guidance for students dealing with personal issues such as mental health, stress, and relationship issues.\n4.   Disability Services: This service provides assistance to students with disabilities in accessing and participating in the university's programs and services.\n\nDoes that answer your question?"
+    }
+  ]
+}

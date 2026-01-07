@@ -1,0 +1,21 @@
+{
+  "id": "chatbot_arena_1066",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Here is some html / css / java code for a welcoming page :\n\n"
+    },
+    {
+      "role": "assistant",
+      "content": "```html\n<!DOCTYPE html>\n<html>\n<head>\n\t<title>Welcoming Page</title>\n\t<style type=\"text/css\">\n\t\tbody {\n\t\t\tfont-family: Arial, sans-serif;\n\t\t\tmargin: 0;\n\t\t\tpadding: 0;\n\t\t}\n\t\t#welcome {\n\t\t\ttext-align: center;\n\t\t\tfont-size: 36px;\n\t\t\tfont-weight: bold;\n\t\t\tmargin: 20px 0;\n\t\t\tpadding: 20px;\n\t\t}\n\t\t#welcome h2 {\n\t\t\tmargin-top: 0;\n\t\t\tmargin-bottom: 20px;\n\t\t\tmargin-left: 0;\n\t\t\tpadding: 20px 0;\n\t\t\tborder-bottom: 1px solid #ccc;\n\t\t\tborder-top: 1px solid #ccc;\n\t\t\tborder-right: 1px solid #ccc;\n\t\t\tborder-left: 1px solid #ccc;\n\t\t\tfont-weight: bold;\n\t\t}\n\t\t#welcome p {\n\t\t\tmargin: 0;\n\t\t\tpadding: 0;\n\t\t\tborder-top: 1px solid #ccc;\n\t\t\tborder-bottom: 1px solid #ccc;\n\t\t\tborder-left: 1px solid #ccc;\n\t\t\tfont-weight: bold;\n\t\t}\n\t</style>\n</head>\n<body>\n\t<div id=\"welcome\">\n\t\t<h2>Welcome</h2>\n\t\t<p>建议来了！</p>\n\t</div>\n\t<script type=\"text/javascript\" src=\"script.js\"></script>\n</body>\n</html>\n```"
+    },
+    {
+      "role": "user",
+      "content": "A super fancy interactive  html / css / javascript welcoming page :"
+    },
+    {
+      "role": "assistant",
+      "content": "```html\n<!DOCTYPE html>\n<html>\n<head>\n\t<title>Welcoming Page</title>\n\t<link rel=\"stylesheet\" type=\"text/css\" href=\"style.css\">\n\t<script src=\"script.js\"></script>\n</head>\n<body>\n\t<div id=\"welcome\">\n\t\t<h1>Welcome to the Welcoming Page</h1>\n\t\t<p>建议来了！</p>\n\t</div>\n\t<script type=\"text/javascript\" src=\"script.js\"></script>\n</body>\n</html>\n```"
+    }
+  ]
+}

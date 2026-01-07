@@ -1,0 +1,29 @@
+{
+  "id": "chatbot_arena_14589",
+  "messages": [
+    {
+      "role": "user",
+      "content": "un skidoo on peut tu laisser ca dans cours ?"
+    },
+    {
+      "role": "assistant",
+      "content": "Non, il ne faut pas laisser ça dans les cours."
+    },
+    {
+      "role": "user",
+      "content": "tu est supposé répondre issssh"
+    },
+    {
+      "role": "assistant",
+      "content": "Excuse me, what?"
+    },
+    {
+      "role": "user",
+      "content": "connais tu francois perusse ?"
+    },
+    {
+      "role": "assistant",
+      "content": "Non, je ne connais pas François Perusse."
+    }
+  ]
+}

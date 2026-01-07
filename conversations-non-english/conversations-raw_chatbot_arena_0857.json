@@ -1,0 +1,21 @@
+{
+  "id": "chatbot_arena_0857",
+  "messages": [
+    {
+      "role": "user",
+      "content": "hola q tal"
+    },
+    {
+      "role": "assistant",
+      "content": "你好！ 请问有什么需要帮助的吗？"
+    },
+    {
+      "role": "user",
+      "content": "en español "
+    },
+    {
+      "role": "assistant",
+      "content": "好的，你好！如果你有任何问题需要帮助，请随时问我，我会尽力回答你的问题。"
+    }
+  ]
+}

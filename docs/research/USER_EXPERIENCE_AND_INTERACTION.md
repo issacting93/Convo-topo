@@ -94,7 +94,7 @@ const handleClick = () => {
      - Interactive minimap (2D axis map) - clickable points to jump to messages
      - Camera view controls (default/side/top)
      - Timeline with play button for animation
-   - **Settings Modal**: 
+   - **Settings Section** (expandable in right panel, starts closed): 
      - Camera controls (distance, elevation, rotation)
      - Terrain position controls
      - Contour toggle and count
@@ -292,8 +292,8 @@ const handleClick = () => {
 - **Timeline**: 
   - Interactive timeline in right panel with clickable points
   - Play button to animate from start to finish (3 seconds)
-  - Slider in settings modal for manual control
-- **Settings Modal**: Comprehensive controls for all visualization parameters
+  - Slider in timeline for manual control
+- **Settings Section**: Expandable section in right panel with comprehensive controls for all visualization parameters
 - **Back**: Return to grid
 
 **Current Features:**

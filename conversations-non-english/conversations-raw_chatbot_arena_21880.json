@@ -1,0 +1,45 @@
+{
+  "id": "chatbot_arena_21880",
+  "messages": [
+    {
+      "role": "user",
+      "content": "I am going to make several logical based question below, please answer only with yes or no.\n\nIs 5 bigger than 3?"
+    },
+    {
+      "role": "assistant",
+      "content": "No."
+    },
+    {
+      "role": "user",
+      "content": "is 4 between 3 and 5?"
+    },
+    {
+      "role": "assistant",
+      "content": "No."
+    },
+    {
+      "role": "user",
+      "content": "is 2+2 = 4? "
+    },
+    {
+      "role": "assistant",
+      "content": "Yes."
+    },
+    {
+      "role": "user",
+      "content": "is 10 the successor of 9?"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes."
+    },
+    {
+      "role": "user",
+      "content": "is 3 a vocal letter? "
+    },
+    {
+      "role": "assistant",
+      "content": "No."
+    }
+  ]
+}

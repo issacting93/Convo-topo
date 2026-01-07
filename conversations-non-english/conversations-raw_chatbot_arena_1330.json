@@ -1,0 +1,21 @@
+{
+  "id": "chatbot_arena_1330",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Please translate the following text to english:\n\nJockl hat 3 Schwestern, Maria, Magdalene und Marianne. Jede Schwester hat einen Bruder.\n\nBitte beginne Deine Antwort mit einer Liste der Familienmitglieder.\n\nNachdem Du die Liste erstellt hast, überprüfe die Liste und antworte ob die Liste mit den Aussagen \"Jockl hat 3 Schwestern, Maria, Magdalene und Marianne. Jede Schwester hat einen Bruder.\" übereinstimmt."
+    },
+    {
+      "role": "assistant",
+      "content": "Jockel has 3 sisters, Maria, Magdalene, and Marianne. Each sister has a brother.\n\nPlease begin your answer with a list of family members.\n\nOnce you have created the list, check the list and answer whether the list agrees with the statements \"Jockel has 3 sisters, Maria, Magdalene, and Marianne. Each sister has a brother.\""
+    },
+    {
+      "role": "user",
+      "content": "Wie viele Brüder hat Jockl?"
+    },
+    {
+      "role": "assistant",
+      "content": "Jockel hat 3 Brüder."
+    }
+  ]
+}

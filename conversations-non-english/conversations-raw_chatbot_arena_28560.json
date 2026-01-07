@@ -1,0 +1,29 @@
+{
+  "id": "chatbot_arena_28560",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Je cherche à recruter un ingénieur système. J'ai reçu des cv.\nL'un des candidats à une grande expérience mais il a raté les tests techniques.\nComment refuser sa candidature sans le froisser ?"
+    },
+    {
+      "role": "assistant",
+      "content": "Il est important de tenir compte de l'ensemble du candidat dans sa délibération de recrutement. Si le candidat a une grande expérience et des compétences pertinentes pour le poste, malgré un score relativement bas sur les tests techniques, il est possible qu'il ait d'autres qualités qui le rendent utile pour l'équipe. Il est important de discuter avec le candidat pour comprendre les raisons de sa faible performance sur les tests techniques et de voir si cela peut être amélioré grâce à une formation ou une expérience supplémentaire. Vous pouvez également discuter des autres compétences et expériences du candidat pour voir si cela peut compenser un score négatif sur les tests techniques. Si le candidat est intéressé par le poste et prêt à travailler sur ses lacunes, il est possible qu'il soit un bon candidat pour l'équipe."
+    },
+    {
+      "role": "user",
+      "content": "Je veux REFUSER sa candidature, écris moi un exemple de mail."
+    },
+    {
+      "role": "assistant",
+      "content": "Cher [Candidat],\n\nNous avons bien examiné votre candidature pour le poste d'ingénieur système chez notre entreprise et nous tenons à vous remercier pour votre intérêt envers notre entreprise. Malheureusement, votre score sur les tests techniques n'est pas suffisant pour satisfaire les exigences du poste. Malgré cela, nous croyons que vous avez d'autres qualités qui pourraient vous rendre utile pour notre équipe.\n\nNous vous encourageons à continuer à développer vos compétences et à nous en informer lorsque vous pourrez les renforcer. Si vous avez des questions ou des commentaires, n'hésitez pas à nous contacter.\n\nNous vous remercions de nouveau pour votre intérêt envers notre entreprise et nous espérons vous revoir bientôt.\n\nCordialement,\n\n[Votre nom]\n[Votre nom de l'entreprise]"
+    },
+    {
+      "role": "user",
+      "content": "Je précise que mon correspondant est français"
+    },
+    {
+      "role": "assistant",
+      "content": "Cher [Candidat],\n\nNous avons bien examiné votre candidature pour le poste d'ingénieur système chez notre entreprise et nous tenons à vous remercier pour votre intérêt envers notre entreprise. Malheureusement, votre score sur les tests techniques n'est pas suffisant pour satisfaire les exigences du poste. Malgré cela, nous croyons que vous avez d'autres qualités qui pourraient vous rendre utile pour notre équipe.\n\nEn tant que français, nous nous intéressons particulièrement pour la diversité culturelle de notre équipe et nous croyons que votre point de vue et vos expériences peuvent apporter une valeur ajoutée à notre entreprise. Nous vous encourageons à continuer à développer vos compétences et à nous en informer lorsque vous pourrez les renforcer. Si vous avez des questions ou des commentaires, n'hésitez pas à nous contacter.\n\nNous vous remercions de nouveau pour votre intérêt envers notre entreprise et nous espérons vous revoir bientôt.\n\nCordialement,\n\n[Votre nom]\n[Votre nom de l'entreprise]"
+    }
+  ]
+}

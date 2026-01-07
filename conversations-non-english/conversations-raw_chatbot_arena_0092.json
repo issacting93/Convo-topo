@@ -1,0 +1,21 @@
+{
+  "id": "chatbot_arena_0092",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Correct: \"I no mad\""
+    },
+    {
+      "role": "assistant",
+      "content": "I apologize, I made a mistake in my previous response. \"I no mad\" is correct, it means \"I am not angry\"."
+    },
+    {
+      "role": "user",
+      "content": "No make it grammaritcally correct"
+    },
+    {
+      "role": "assistant",
+      "content": "\"I am not angry\" is the grammatically correct way to express the same sentiment."
+    }
+  ]
+}

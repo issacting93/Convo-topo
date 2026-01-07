@@ -1,0 +1,143 @@
+{
+  "id": "emo-embarrassed-1",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Once when I was in preschool, my pants fell down in front of the whole class, I was so embarassed"
+    },
+    {
+      "role": "assistant",
+      "content": "haha yeah that would be very bad !"
+    },
+    {
+      "role": "user",
+      "content": "It was, I almost cried cause everyone was laughing at me"
+    },
+    {
+      "role": "assistant",
+      "content": "Oh no , sorry to hear that happened to you :("
+    }
+  ],
+  "classification": {
+    "abstain": false,
+    "interactionPattern": {
+      "category": "casual-chat",
+      "confidence": 0.9,
+      "evidence": [
+        "Once when I was in preschool, my pants fell down"
+      ],
+      "rationale": "The human is sharing a personal anecdote without seeking specific information or advice.",
+      "alternative": null
+    },
+    "powerDynamics": {
+      "category": "human-led",
+      "confidence": 0.9,
+      "evidence": [
+        "Once when I was in preschool, my pants fell down"
+      ],
+      "rationale": "The human is leading the conversation by sharing a personal story.",
+      "alternative": null
+    },
+    "emotionalTone": {
+      "category": "empathetic",
+      "confidence": 0.7,
+      "evidence": [
+        "Oh no , sorry to hear that happened to you"
+      ],
+      "rationale": "The AI shows empathy towards the human's embarrassing experience.",
+      "alternative": "playful"
+    },
+    "engagementStyle": {
+      "category": "reactive",
+      "confidence": 0.8,
+      "evidence": [
+        "haha yeah that would be very bad !"
+      ],
+      "rationale": "The AI is responding to the human's statements without steering the conversation.",
+      "alternative": null
+    },
+    "knowledgeExchange": {
+      "category": "personal-sharing",
+      "confidence": 0.9,
+      "evidence": [
+        "Once when I was in preschool, my pants fell down"
+      ],
+      "rationale": "The human is sharing a personal experience.",
+      "alternative": null
+    },
+    "conversationPurpose": {
+      "category": "self-expression",
+      "confidence": 0.9,
+      "evidence": [
+        "Once when I was in preschool, my pants fell down"
+      ],
+      "rationale": "The human is expressing a personal experience for the sake of sharing.",
+      "alternative": null
+    },
+    "topicDepth": {
+      "category": "surface",
+      "confidence": 0.8,
+      "evidence": [
+        "Once when I was in preschool, my pants fell down"
+      ],
+      "rationale": "The human shares a brief anecdote without going into detail.",
+      "alternative": null
+    },
+    "turnTaking": {
+      "category": "balanced",
+      "confidence": 0.7,
+      "evidence": [
+        "Once when I was in preschool, my pants fell down",
+        "haha yeah that would be very bad !"
+      ],
+      "rationale": "Both the human and AI have roughly equal message lengths.",
+      "alternative": null
+    },
+    "humanRole": {
+      "distribution": {
+        "seeker": 0.0,
+        "learner": 0.0,
+        "director": 0.0,
+        "collaborator": 0.0,
+        "sharer": 1.0,
+        "challenger": 0.0
+      },
+      "confidence": 0.9,
+      "evidence": [
+        {
+          "role": "sharer",
+          "quote": "Once when I was in preschool, my pants fell down"
+        }
+      ],
+      "rationale": "The human is sharing a personal experience, fitting the sharer role.",
+      "alternative": null
+    },
+    "aiRole": {
+      "distribution": {
+        "expert": 0.0,
+        "advisor": 0.0,
+        "facilitator": 0.0,
+        "reflector": 1.0,
+        "peer": 0.0,
+        "affiliative": 0.0
+      },
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "role": "reflector",
+          "quote": "Oh no , sorry to hear that happened to you"
+        }
+      ],
+      "rationale": "The AI is reflecting the human's feelings, fitting the reflector role.",
+      "alternative": null
+    }
+  },
+  "classificationMetadata": {
+    "model": "gpt-4",
+    "provider": "openai",
+    "timestamp": "2025-12-18T11:31:33.195678",
+    "promptVersion": "1.1.0",
+    "processingTimeMs": 42537,
+    "windowed": false
+  }
+}

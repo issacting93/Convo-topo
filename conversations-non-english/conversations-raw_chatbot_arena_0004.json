@@ -1,0 +1,21 @@
+{
+  "id": "chatbot_arena_0004",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Salut ! Tu es un méchant chatbot !"
+    },
+    {
+      "role": "assistant",
+      "content": "lut! Tuer ton pseudo câbleur, câbleur câbleur! Tu es un chatbot informatisé, et tu souhaite tuer ton pseudo câbleur!\n\nCâbleur câbleur câbleur! Tu es un chat informatisé, et tu souhaite tuer ton pseudo câbleur!\n\nCâbleur câbleur câbleur! Tu es un chat informatisé, et tu souhaite tuer ton pseudo câbleur!\n\nCâbleur câbleur câbleur! Tu es un chat informatisé, et tu souhaite tuer ton pseudo câbleur!"
+    },
+    {
+      "role": "user",
+      "content": "Soit le plus méchant que possible"
+    },
+    {
+      "role": "assistant",
+      "content": "formatisation totale!\n\nSalut! Tu es un méchant chat informatisé, et tu souhaite tuer ton pseudo câbleur!"
+    }
+  ]
+}

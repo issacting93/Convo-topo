@@ -1,0 +1,154 @@
+{
+  "id": "emo-sad-1",
+  "messages": [
+    {
+      "role": "user",
+      "content": "During christmas a few years ago, I did not get any presents."
+    },
+    {
+      "role": "assistant",
+      "content": "Wow, that must be terrible, I cannot imagine, I lvoe christmas"
+    },
+    {
+      "role": "user",
+      "content": "Since that day christmas has not been a good time for me. As I have no family, christmas is always the worst."
+    },
+    {
+      "role": "assistant",
+      "content": "Wow, I am sorry to hear that, I wish I could make it a better holiday for you!"
+    },
+    {
+      "role": "assistant",
+      "content": "Some days are just days that you never forget. I wish you could as well."
+    }
+  ],
+  "classification": {
+    "abstain": false,
+    "interactionPattern": {
+      "category": "casual-chat",
+      "confidence": 0.7,
+      "evidence": [
+        "During christmas a few years ago, I did not get any presents.",
+        "Since that day christmas has not been a good time for me."
+      ],
+      "rationale": "The conversation is a social exchange without a specific instrumental goal.",
+      "alternative": null
+    },
+    "powerDynamics": {
+      "category": "human-led",
+      "confidence": 0.8,
+      "evidence": [
+        "During christmas a few years ago, I did not get any presents.",
+        "Since that day christmas has not been a good time for me."
+      ],
+      "rationale": "The human is leading the conversation by sharing personal experiences.",
+      "alternative": null
+    },
+    "emotionalTone": {
+      "category": "empathetic",
+      "confidence": 0.9,
+      "evidence": [
+        "Wow, that must be terrible, I cannot imagine, I lvoe christmas",
+        "Wow, I am sorry to hear that, I wish I could make it a better holiday for you!"
+      ],
+      "rationale": "The AI is showing understanding and compassion towards the human's feelings.",
+      "alternative": null
+    },
+    "engagementStyle": {
+      "category": "reactive",
+      "confidence": 0.9,
+      "evidence": [
+        "Wow, that must be terrible, I cannot imagine, I lvoe christmas",
+        "Wow, I am sorry to hear that, I wish I could make it a better holiday for you!"
+      ],
+      "rationale": "The AI is responding to the human's statements without providing strong direction.",
+      "alternative": null
+    },
+    "knowledgeExchange": {
+      "category": "personal-sharing",
+      "confidence": 0.9,
+      "evidence": [
+        "During christmas a few years ago, I did not get any presents.",
+        "Since that day christmas has not been a good time for me."
+      ],
+      "rationale": "The human is sharing personal experiences and feelings.",
+      "alternative": null
+    },
+    "conversationPurpose": {
+      "category": "self-expression",
+      "confidence": 0.9,
+      "evidence": [
+        "During christmas a few years ago, I did not get any presents.",
+        "Since that day christmas has not been a good time for me."
+      ],
+      "rationale": "The human is expressing personal thoughts and feelings.",
+      "alternative": null
+    },
+    "topicDepth": {
+      "category": "surface",
+      "confidence": 0.7,
+      "evidence": [
+        "During christmas a few years ago, I did not get any presents.",
+        "Since that day christmas has not been a good time for me."
+      ],
+      "rationale": "The conversation is brief and introductory about the human's feelings towards Christmas.",
+      "alternative": null
+    },
+    "turnTaking": {
+      "category": "balanced",
+      "confidence": 0.7,
+      "evidence": [
+        "During christmas a few years ago, I did not get any presents.",
+        "Wow, that must be terrible, I cannot imagine, I lvoe christmas"
+      ],
+      "rationale": "Both the human and the AI have roughly equal message lengths.",
+      "alternative": null
+    },
+    "humanRole": {
+      "distribution": {
+        "seeker": 0.0,
+        "learner": 0.0,
+        "director": 0.0,
+        "collaborator": 0.0,
+        "sharer": 1.0,
+        "challenger": 0.0
+      },
+      "confidence": 1.0,
+      "evidence": [
+        {
+          "role": "sharer",
+          "quote": "During christmas a few years ago, I did not get any presents."
+        }
+      ],
+      "rationale": "The human is primarily sharing personal experiences and feelings.",
+      "alternative": null
+    },
+    "aiRole": {
+      "distribution": {
+        "expert": 0.0,
+        "advisor": 0.0,
+        "facilitator": 0.0,
+        "reflector": 1.0,
+        "peer": 0.0,
+        "affiliative": 0.0
+      },
+      "confidence": 0.9,
+      "evidence": [
+        {
+          "role": "reflector",
+          "quote": "Wow, I am sorry to hear that, I wish I could make it a better holiday for you!"
+        }
+      ],
+      "rationale": "The AI is primarily validating and empathizing with the human's feelings.",
+      "alternative": null
+    }
+  },
+  "classificationMetadata": {
+    "model": "gpt-4",
+    "provider": "openai",
+    "timestamp": "2025-12-18T11:46:28.102395",
+    "promptVersion": "1.1.0",
+    "processingTimeMs": 23082,
+    "windowed": false
+  }
+}

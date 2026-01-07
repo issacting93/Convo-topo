@@ -1,0 +1,21 @@
+{
+  "id": "chatbot_arena_0975",
+  "messages": [
+    {
+      "role": "user",
+      "content": "bonjour, parlez vous français ?"
+    },
+    {
+      "role": "assistant",
+      "content": "Bonjour ! Oui, je parle français. Comment puis-je vous aider aujourd'hui ?"
+    },
+    {
+      "role": "user",
+      "content": "Comment définissez vous ce qu'est un con dans la langue française ?"
+    },
+    {
+      "role": "assistant",
+      "content": "Le terme \"con\" est une expression familière et vulgaire en français, qui est utilisée pour décrire quelqu'un d'idiot, de stupide ou d'irréfléchi. Ce mot est souvent considéré comme impoli et offensant, il est donc recommandé de l'éviter dans les conversations formelles ou avec des personnes que vous ne connaissez pas bien."
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "id": "chatbot_arena_19479",
+  "messages": [
+    {
+      "role": "user",
+      "content": "эпизод для женского романа. Две девушки брюнетка Газель и блондинка Лань, гуляют по парку. Они в вечерних атласных платьях. Внезапно Газели за пазуху залетает птица (дрозд) и начинает трепыхаться и биться у Газели под платьем. Газель смеётся и говорит птица бьётся у меня под платьем а Лань пытается достойно выйти из ситуации. Важна реакция Лани на происшествие - Лань очень сочувствует Газели и желает оказаться в этой ситуации на её месте."
+    },
+    {
+      "role": "assistant",
+      "content": "\"Episode for a Female Novel. Two girls, Brunette Gazel and Blonde Lan, are walking in the park. Suddenly, Gazel falls asleep and a bird (dragonfly) flies away from her head. She starts to snore and bite her hair under her hat. Gazel laughs and says the dragonfly is biting me under my hat. Lan tries to get out of the situation. It is important to pay attention to the reaction of Lan on this event - Lan feels very comfortable with Gazel and wants to be in this situation on her place.\""
+    },
+    {
+      "role": "user",
+      "content": "восхитительно! Газель удивилась, почему подруга захотела оказаться на её месте"
+    },
+    {
+      "role": "assistant",
+      "content": "\"Gazel was surprised, why her friend wanted to be in her place?"
+    },
+    {
+      "role": "user",
+      "content": "Лань не может успокоиться, она возбуждена от того, что увидела как птица трепещется на газели"
+    },
+    {
+      "role": "assistant",
+      "content": "\"Lan can't calm down, she is excited to see how the dragonfly is biting Gazel.\""
+    }
+  ]
+}

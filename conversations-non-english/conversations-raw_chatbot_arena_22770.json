@@ -1,0 +1,37 @@
+{
+  "id": "chatbot_arena_22770",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Bon dia"
+    },
+    {
+      "role": "assistant",
+      "content": "Bon dia! How can I help you today?"
+    },
+    {
+      "role": "user",
+      "content": "Com estàs avui?"
+    },
+    {
+      "role": "assistant",
+      "content": "I'm sorry, but as a language model, I am not able to determine current date and time. Can I assist you with something else?"
+    },
+    {
+      "role": "user",
+      "content": "Parles català?"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes, I can speak Spanish. How can I assist you in Spanish?"
+    },
+    {
+      "role": "user",
+      "content": "Tinc un dubte, com és que el ratolí del meu ordinador fa llum a la part inferior?"
+    },
+    {
+      "role": "assistant",
+      "content": "The cursor on your computer is likely lighting up at the bottom because it is the default behavior of the cursor on some operating systems. The cursor is usually located at the bottom of the screen and it is lit up to indicate that it is over an active element on the screen.\n\nIf you want the cursor to light up at a different location on the screen, you can usually adjust the cursor settings in your operating system's control panel or settings."
+    }
+  ]
+}

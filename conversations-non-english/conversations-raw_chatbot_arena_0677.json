@@ -1,0 +1,37 @@
+{
+  "id": "chatbot_arena_0677",
+  "messages": [
+    {
+      "role": "user",
+      "content": "How do you translate \"Аптечка\" to English?"
+    },
+    {
+      "role": "assistant",
+      "content": "The English translation for \"Apteka\" is \"pharmacy\"."
+    },
+    {
+      "role": "user",
+      "content": "Переведи словао \"аптечка\" на английский"
+    },
+    {
+      "role": "assistant",
+      "content": "The English translation for \"Apteka\" is \"pharmacy\"."
+    },
+    {
+      "role": "user",
+      "content": "\"Аптечка\" in English is:"
+    },
+    {
+      "role": "assistant",
+      "content": "\"Apteka\" in English is \"pharmacy\"."
+    },
+    {
+      "role": "user",
+      "content": "\"Аптека\" and \"аптечка\" are two different words. Try again"
+    },
+    {
+      "role": "assistant",
+      "content": "The English translation for \"Apteka\" is \"pharmacy\", and the translation for \"aptechnika\" is \"drugstore\"."
+    }
+  ]
+}

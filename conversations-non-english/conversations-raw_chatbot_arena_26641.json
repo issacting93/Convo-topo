@@ -1,0 +1,157 @@
+{
+  "id": "chatbot_arena_26641",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Denke dir ein Spiel aus was wir jetzt sofort miteinander spielen können."
+    },
+    {
+      "role": "assistant",
+      "content": "Okay, ich denke, das Spiel \"Ja, oder nein?\" klingt interessant. Wenn du das Spiel möchtest, kannst du als nächstes mal den Start mit einem Satz ausführen, zum Beispiel: \"Ja, der Hase hat vier Beine.\" Wenn ich den Satz ablehne, musst du den Satz von mir ablehnen und den nächsten Satz ausführen, bis einer von uns den Ausgang ausspricht."
+    },
+    {
+      "role": "user",
+      "content": " 20 Fragen: Ich denke mir ein Objekt, Tier oder Person vor und du versuchst es mit maximal 20 Ja/Nein Fragen zu erraten."
+    },
+    {
+      "role": "assistant",
+      "content": "Okay, lass mir wissen, was du das erste Mal als Objekt, Tier oder Person im Sinn habest."
+    },
+    {
+      "role": "user",
+      "content": "los"
+    },
+    {
+      "role": "assistant",
+      "content": "Hai!"
+    },
+    {
+      "role": "user",
+      "content": "Ist es ein tier"
+    },
+    {
+      "role": "assistant",
+      "content": "Ja."
+    },
+    {
+      "role": "user",
+      "content": "Ist es ein mensch"
+    },
+    {
+      "role": "assistant",
+      "content": "Nein."
+    },
+    {
+      "role": "user",
+      "content": "Ist es ein Gegenstand"
+    },
+    {
+      "role": "assistant",
+      "content": "Ja."
+    },
+    {
+      "role": "user",
+      "content": "Ist er hart"
+    },
+    {
+      "role": "assistant",
+      "content": "Nein."
+    },
+    {
+      "role": "user",
+      "content": "Ist er essbar"
+    },
+    {
+      "role": "assistant",
+      "content": "Ja."
+    },
+    {
+      "role": "user",
+      "content": "Ist er größer als ein stuhl"
+    },
+    {
+      "role": "assistant",
+      "content": "Nein."
+    },
+    {
+      "role": "user",
+      "content": "Ist er kleiner als eine hand"
+    },
+    {
+      "role": "assistant",
+      "content": "Ja."
+    },
+    {
+      "role": "user",
+      "content": "Ist er kleiner als ein finger"
+    },
+    {
+      "role": "assistant",
+      "content": "Nein."
+    },
+    {
+      "role": "user",
+      "content": "ist es ein werkzeug"
+    },
+    {
+      "role": "assistant",
+      "content": "Ja."
+    },
+    {
+      "role": "user",
+      "content": "benutzt man ihn in der küche"
+    },
+    {
+      "role": "assistant",
+      "content": "Ja."
+    },
+    {
+      "role": "user",
+      "content": "messer"
+    },
+    {
+      "role": "assistant",
+      "content": "Nein."
+    },
+    {
+      "role": "user",
+      "content": "kann man sich mit dem gegenstand verletzen"
+    },
+    {
+      "role": "assistant",
+      "content": "Nein."
+    },
+    {
+      "role": "user",
+      "content": "hat er eine bestimmte farbe"
+    },
+    {
+      "role": "assistant",
+      "content": "Ja."
+    },
+    {
+      "role": "user",
+      "content": "ist es ein handtuch"
+    },
+    {
+      "role": "assistant",
+      "content": "Nein."
+    },
+    {
+      "role": "user",
+      "content": "gib mir einen tipp"
+    },
+    {
+      "role": "assistant",
+      "content": "Papagei."
+    },
+    {
+      "role": "user",
+      "content": "kochtopf"
+    },
+    {
+      "role": "assistant",
+      "content": "Ja."
+    }
+  ]
+}

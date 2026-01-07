@@ -1,0 +1,21 @@
+{
+  "id": "chatbot_arena_0116",
+  "messages": [
+    {
+      "role": "user",
+      "content": "who is mayun?"
+    },
+    {
+      "role": "assistant",
+      "content": "Mayun is a fictional character in the 2019 action movie \"Kung Fu League\". Mayun is a powerful martial artist who is trained in the art of Muay Thai and is known for his incredible speed and agility. He is a member of the \"Street Fighter League\", a group of elite fighters who compete in underground fighting matches for money. Mayun is played by the actor Scott Adkins, who is known for his high-flying martial arts and action movie roles."
+    },
+    {
+      "role": "user",
+      "content": "哈尔滨工业大学多少个校区?"
+    },
+    {
+      "role": "assistant",
+      "content": "Heze University has four main campuses: the Erxiao Campus, the Danku Mountain Campus, the Huzhenhu Campus, and the New West Campus."
+    }
+  ]
+}

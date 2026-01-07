@@ -1,0 +1,29 @@
+{
+  "id": "chatbot_arena_28093",
+  "messages": [
+    {
+      "role": "user",
+      "content": "tell me a fact that i probably don't already know."
+    },
+    {
+      "role": "assistant",
+      "content": "Theodore Roosevelt was the 26th president of the United States."
+    },
+    {
+      "role": "user",
+      "content": "actually, a study from 2009 published by Azevedo and colleagues estimated the number as 86 billion neurions."
+    },
+    {
+      "role": "assistant",
+      "content": "The number of neurions in the human body is estimated to be around 86 billion."
+    },
+    {
+      "role": "user",
+      "content": "what's that supposed to mean?!"
+    },
+    {
+      "role": "assistant",
+      "content": "I have no idea."
+    }
+  ]
+}

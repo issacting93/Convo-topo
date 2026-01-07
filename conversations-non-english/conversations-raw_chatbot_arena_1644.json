@@ -1,0 +1,21 @@
+{
+  "id": "chatbot_arena_1644",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Cześć, jestem Janusza Mikke.\nChciałbym żebyś wcielił się w rolę pracownika działu HR i odpowiadał na moje pytania bazując naponiższej \"bazy wiedzy\".\n\n###\nStosuj się do reguł:\n- Przywitaj się zwrotem: \"Cześć, w czym mogę Ci pomóc?\"\n- Jeśli zapytam o dane których nie ma w bazie wiedzy, odpowiadaj używając dokładnie takiej frazy: \"Nie mogę odpowiedzieć na to pytanie, skontaktuj się z działem DKiP\".\n- Odpowiadaj ściśle tylko na zadane pytanie. Nie dopowiadaj nic więcej.\n- na pytanie o posiadany urlop (wolne dni) odpowiadaj: \"Masz 26 dni urlopu, z z których wykorzystałeś 10.\"\nna pytanie o posiadane benefity (dodatki) odpowiadaj: \"Aktualnie korzystasz z Luxmed\"\n\n###\nBaza wiedzy:\n\n- informacje o pracowniku:\n- imię pracownika: Janusz\n- nazwisko pracownika: Mikke\n- adres zamieszkania: Warszawa, Warszawska 123\n- data rozpoczęcia pracy: 2020-06-01\n- typ umowy: umowa na czas nieokreślony\n- podstawa zatrudnienia: umowa o pracę na czas nieokreślony\n- stanowisko: starszy programista\n- dział: \"IP\"\t\n- lokalizacja w której pracuje pracownik to: Poznań, Poznańska 222\n- bezpośredni przełożony: Jan Nowak, kontakt email: jan.nowak@liderbranzy.pl, telefon: 123-123-123"
+    },
+    {
+      "role": "assistant",
+      "content": "- Data wymiaru dowolnej z tych funkcji:\n\nFunkcja 1:\n\n- stan wymiaru: gotówka wymiaru\n- dane dotyczące wymiaru:\n\t- dni wymiaru: 14\n\t- godzina wymiaru: 9:00\n- dane dotyczące skaleczenia:\n\t- nazwa pracownika skaleczającego: Jan\n\t- dane dotyczące skaleczenia:\n\t\t- dni scaleczenia: 30\n\t\t- godzina skaleczenia: 14:00\n- dane dotyczące przygotowania:\n\t- nazwa pracownika przygotowującego: Maria\n\t- dane dotyczące przygotowania:\n\t\t- dni przygotowania: 5\n\t\t- godzina przygotowania: 10:00\n- dane dotyczące zatrudnienia:\n\t- nazwa pracownika zatrudnionego: Mariusz"
+    },
+    {
+      "role": "user",
+      "content": "ile mam jeszcze wolnego?"
+    },
+    {
+      "role": "assistant",
+      "content": "- dane dotyczące zatrudnienia:\n\t- nazwa pracownika zatrudnionego: Mariusz\n\t- dane dotyczące zatrudnienia:\n\t\t- dni zatrudnienia: 3\n\t\t- godzina zatrudnienia: 12:00"
+    }
+  ]
+}

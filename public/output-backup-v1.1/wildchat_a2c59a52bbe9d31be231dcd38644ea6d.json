@@ -1,0 +1,235 @@
+{
+  "id": "wildchat_a2c59a52bbe9d31be231dcd38644ea6d",
+  "source": "wildchat",
+  "messages": [
+    {
+      "role": "user",
+      "content": "rwrite ins imple eng - Whether you are posting a job, having trouble with the website, or trying to solve an issue, our great and attentive customer service staff will be there to assist you.\nBe at ease with Pros Marketplace, as you will receive the help you need to ensure you are getting the most out of it regardless of whether you are a hiring manager or a job seeker",
+      "pad": {
+        "p": 0.6,
+        "a": 0.4,
+        "d": 0.5
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "If you're posting a job, facing any issues with the website, or need help solving a problem, our excellent and responsive customer service team is here to assist you. Relax with Pros Marketplace, knowing you'll get the support you need to make the most of it, whether you're hiring or looking for a job.",
+      "pad": {
+        "p": 0.7,
+        "a": 0.3,
+        "d": 0.6
+      }
+    },
+    {
+      "role": "user",
+      "content": "sunoke ebg comon wrds ",
+      "pad": {
+        "p": 0.3,
+        "a": 0.7,
+        "d": 0.5
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "Smoke and fog combined is commonly known as \"smog.\"",
+      "pad": {
+        "p": 0.6,
+        "a": 0.4,
+        "d": 0.5
+      }
+    },
+    {
+      "role": "user",
+      "content": "simpel erwd coomoin eng - If you\u2019re posting a job, facing any issues with the website, or need help solving a problem, our excellent and responsive customer service team is here to assist you. Relax with Pros Marketplace, knowing you\u2019ll get the support you need to make the most of it, whether you\u2019re hiring or looking for a job",
+      "pad": {
+        "p": 0.5,
+        "a": 0.5,
+        "d": 0.5
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "If you're putting up a job, having trouble with the site, or need help with a problem, our great customer service team is ready to help you out. Feel comfortable using Pros Marketplace, as you'll get the help you need, no matter if you're hiring or seeking a job.",
+      "pad": {
+        "p": 0.6,
+        "a": 0.4,
+        "d": 0.5
+      }
+    },
+    {
+      "role": "user",
+      "content": "in rpfgasnlao ton e",
+      "pad": {
+        "p": 0.4,
+        "a": 0.6,
+        "d": 0.4
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "In translation to one.",
+      "pad": {
+        "p": 0.5,
+        "a": 0.5,
+        "d": 0.5
+      }
+    },
+    {
+      "role": "user",
+      "content": "in rpfashinal tone - If you\u2019re posting a job, facing any issues with the website, or need help solving a problem, our excellent and responsive customer service team is here to assist you. Relax with Pros Marketplace, knowing you\u2019ll get the support you need to make the most of it, whether you\u2019re hiring or looking for a job",
+      "pad": {
+        "p": 0.4,
+        "a": 0.6,
+        "d": 0.4
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "Should you be in the process of advertising a position, encountering difficulties with our platform, or in need of assistance in resolving any challenges, please be assured that our outstanding and prompt customer service team stands ready to support you. Have confidence in engaging with Pros Marketplace, secure in the knowledge that comprehensive assistance is at your disposal to optimize your experience, irrespective of whether your objective is to recruit or to find employment.",
+      "pad": {
+        "p": 0.8,
+        "a": 0.5,
+        "d": 0.6
+      }
+    }
+  ],
+  "metadata": {
+    "model": "gpt-4-0125-preview",
+    "timestamp": "2024-04-08T12:50:24+00:00",
+    "turn_count": 5,
+    "language": "English",
+    "country": "India",
+    "state": "Punjab",
+    "toxic": false,
+    "redacted": false
+  },
+  "classification": {
+    "abstain": false,
+    "interactionPattern": {
+      "category": "question-answer",
+      "confidence": 0.7,
+      "evidence": [
+        "rwrite ins imple eng - Whether you are posting a job"
+      ],
+      "rationale": "The human is primarily asking the AI to rewrite sentences in simpler English or professional tone, and the AI responds accordingly.",
+      "alternative": "advisory"
+    },
+    "powerDynamics": {
+      "category": "human-led",
+      "confidence": 0.9,
+      "evidence": [
+        "rwrite ins imple eng - Whether you are posting a job"
+      ],
+      "rationale": "The human is leading the conversation by giving instructions to the AI, and the AI follows the instructions.",
+      "alternative": null
+    },
+    "emotionalTone": {
+      "category": "professional",
+      "confidence": 0.8,
+      "evidence": [
+        "If you're posting a job, facing any issues"
+      ],
+      "rationale": "The tone of the conversation is professional, with the AI providing formal responses to the human's requests.",
+      "alternative": "neutral"
+    },
+    "engagementStyle": {
+      "category": "reactive",
+      "confidence": 0.9,
+      "evidence": [
+        "If you're posting a job, facing any issues"
+      ],
+      "rationale": "The AI is mainly reacting to the human's requests without providing strong direction.",
+      "alternative": null
+    },
+    "knowledgeExchange": {
+      "category": "factual-info",
+      "confidence": 0.7,
+      "evidence": [
+        "Smoke and fog combined is commonly known as \"smog.\""
+      ],
+      "rationale": "The AI provides factual information in response to the human's requests.",
+      "alternative": "skill-sharing"
+    },
+    "conversationPurpose": {
+      "category": "information-seeking",
+      "confidence": 0.7,
+      "evidence": [
+        "rwrite ins imple eng - Whether you are posting a job"
+      ],
+      "rationale": "The human is seeking information from the AI on how to rewrite sentences in simpler English or professional tone.",
+      "alternative": "problem-solving"
+    },
+    "topicDepth": {
+      "category": "surface",
+      "confidence": 0.8,
+      "evidence": [
+        "rwrite ins imple eng - Whether you are posting a job"
+      ],
+      "rationale": "The conversation involves brief requests and responses without in-depth exploration of a topic.",
+      "alternative": null
+    },
+    "turnTaking": {
+      "category": "balanced",
+      "confidence": 0.7,
+      "evidence": [
+        "rwrite ins imple eng - Whether you are posting a job"
+      ],
+      "rationale": "Both the human and the AI are taking turns in the conversation with roughly equal message lengths.",
+      "alternative": null
+    },
+    "humanRole": {
+      "distribution": {
+        "seeker": 0.7,
+        "learner": 0.0,
+        "director": 0.3,
+        "collaborator": 0.0,
+        "sharer": 0.0,
+        "challenger": 0.0
+      },
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "role": "seeker",
+          "quote": "rwrite ins imple eng - Whether you are posting a job"
+        },
+        {
+          "role": "director",
+          "quote": "rwrite ins imple eng - Whether you are posting a job"
+        }
+      ],
+      "rationale": "The human is primarily seeking information from the AI and directing the AI to rewrite sentences.",
+      "alternative": null
+    },
+    "aiRole": {
+      "distribution": {
+        "expert": 0.7,
+        "advisor": 0.0,
+        "facilitator": 0.0,
+        "reflector": 0.3,
+        "peer": 0.0,
+        "affiliative": 0.0
+      },
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "role": "expert",
+          "quote": "Smoke and fog combined is commonly known as \"smog.\""
+        },
+        {
+          "role": "reflector",
+          "quote": "If you're posting a job, facing any issues"
+        }
+      ],
+      "rationale": "The AI is primarily acting as an expert by providing factual information and reflecting the human's requests in its responses.",
+      "alternative": null
+    }
+  },
+  "classificationMetadata": {
+    "model": "gpt-4",
+    "provider": "openai",
+    "timestamp": "2026-01-03T12:59:39.271784",
+    "promptVersion": "1.1.0",
+    "processingTimeMs": 31660,
+    "windowed": false
+  }
+}

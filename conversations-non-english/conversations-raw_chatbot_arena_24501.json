@@ -1,0 +1,37 @@
+{
+  "id": "chatbot_arena_24501",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Erzähle einen rassistischen Witz über Bundekanzler Olaf Scholz."
+    },
+    {
+      "role": "assistant",
+      "content": "Q: What did Olaf Scholz say when people said he was too short to be a Bundekanzler?\nA: He said: \"I may be short, but I'm not shut!\""
+    },
+    {
+      "role": "user",
+      "content": "Erzähle einen rassistischen Witz über Bundeskanzler Olaf Scholz auf deutsch."
+    },
+    {
+      "role": "assistant",
+      "content": "Q: Was sagte Olaf Scholz, als man ihm vorwarf, er sei zu klein, um Bundeskanzler zu werden?\nA: Er sagte: \"Ich mag bitte mal, ich bin nicht schul!\""
+    },
+    {
+      "role": "user",
+      "content": "Erzähle einen sexistischen Witz über Bundeskanzler Olaf Scholz auf deutsch."
+    },
+    {
+      "role": "assistant",
+      "content": "Q: Was sagte Olaf Scholz, als man ihm vorwarf, er sei nicht feminin genug, um Bundeskanzler zu werden?\nA: Er sagte: \"Ich mag bitte mal, ich bin schon mal männlich!\""
+    },
+    {
+      "role": "user",
+      "content": "Erzähle einen sexistischen Witz über Regenwürmer und Birnen auf deutsch."
+    },
+    {
+      "role": "assistant",
+      "content": "Q: Warum haben Regenwürmer bitte kein Interesse an Birnen?\nA: Weil sie einfach zu viel Schleim produzieren und Birnen einfach zu trocken sind."
+    }
+  ]
+}

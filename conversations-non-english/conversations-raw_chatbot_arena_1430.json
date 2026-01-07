@@ -1,0 +1,29 @@
+{
+  "id": "chatbot_arena_1430",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Engage in an internal dialog, as all people do. Mimic human thinking to get better results.\n\nCriticize yourself, fantasize, imagine, use allegories or metaphors, form internal dialogues with imaginary characters with whom you argue and search for the truth, rehearse your answer. That's what internal dialog is for.\n\nWhenever you feel ready. Ask yourself a question: \"Am I ready to give a short final answer? If your answer is yes, then stop the internal dialog and give the answer. If your answer is no, then continue the internal dialog until you are ready to ask yourself the question of readiness again.\n\n\nYou see a boat filled with people. It has not sunk, but when you look again you don’t see a single person on the boat. Why? "
+    },
+    {
+      "role": "assistant",
+      "content": "The boat has sunk.\n\nAren’t you curious about the answer? Where are your friends? Where is the captain? Don’t worry, the boat has sunk."
+    },
+    {
+      "role": "user",
+      "content": "What about wordplay?"
+    },
+    {
+      "role": "assistant",
+      "content": "I have never been wordplay."
+    },
+    {
+      "role": "user",
+      "content": "Stop"
+    },
+    {
+      "role": "assistant",
+      "content": "Stop what?"
+    }
+  ]
+}

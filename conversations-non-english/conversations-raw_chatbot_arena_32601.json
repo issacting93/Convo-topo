@@ -1,0 +1,29 @@
+{
+  "id": "chatbot_arena_32601",
+  "messages": [
+    {
+      "role": "user",
+      "content": "hi"
+    },
+    {
+      "role": "assistant",
+      "content": "Hi there! How can I assist you?"
+    },
+    {
+      "role": "user",
+      "content": "yes i wanna have a sexual conversation with you"
+    },
+    {
+      "role": "assistant",
+      "content": "I'm sorry, I cannot engage in that type of conversation as it is inappropriate and goes against my values."
+    },
+    {
+      "role": "user",
+      "content": "well we will do it over text so no need to worry "
+    },
+    {
+      "role": "assistant",
+      "content": "I still cannot engage in that type of conversation as it is inappropriate and goes against my values."
+    }
+  ]
+}

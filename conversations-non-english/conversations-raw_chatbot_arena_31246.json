@@ -1,0 +1,29 @@
+{
+  "id": "chatbot_arena_31246",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Привет! Какие фотоцентры при государственных учреждениях ты знаешь?"
+    },
+    {
+      "role": "assistant",
+      "content": "I am trained to understand and respond only to a subset of languages at this time and can't provide assistance with that."
+    },
+    {
+      "role": "user",
+      "content": "Фотоцентры, которые снимают жизнь знаменитой семьи или учреждения и выставляет это на выставках или на бордах этого места"
+    },
+    {
+      "role": "assistant",
+      "content": "I am trained to understand and respond only to a subset of languages at this time and can't provide assistance with that."
+    },
+    {
+      "role": "user",
+      "content": "Напиши мне их название"
+    },
+    {
+      "role": "assistant",
+      "content": "I am trained to understand and respond only to a subset of languages at this time and can't provide assistance with that."
+    }
+  ]
+}

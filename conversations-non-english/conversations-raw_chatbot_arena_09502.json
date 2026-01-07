@@ -1,0 +1,29 @@
+{
+  "id": "chatbot_arena_09502",
+  "messages": [
+    {
+      "role": "user",
+      "content": "let's you and I play a turn based game. When I provide you an even number, you reply with the word \"hooray\"! but when I provide an odd number, you reply with no tokens, that is to say, your respond is empty"
+    },
+    {
+      "role": "assistant",
+      "content": "Hooray! Even number!"
+    },
+    {
+      "role": "user",
+      "content": "2"
+    },
+    {
+      "role": "assistant",
+      "content": "Hooray! Odd number!"
+    },
+    {
+      "role": "user",
+      "content": "1"
+    },
+    {
+      "role": "assistant",
+      "content": "No tokens."
+    }
+  ]
+}

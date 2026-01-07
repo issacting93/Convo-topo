@@ -1,0 +1,21 @@
+{
+  "id": "chatbot_arena_0941",
+  "messages": [
+    {
+      "role": "user",
+      "content": "What country has the most sheep per capita?"
+    },
+    {
+      "role": "assistant",
+      "content": "The country with the most sheep per capita is New Zealand, with approximately 12.9 sheep per 1,000 people."
+    },
+    {
+      "role": "user",
+      "content": "What is the difference for this between Falkland Islands and New Zealand"
+    },
+    {
+      "role": "assistant",
+      "content": "There is no significant difference between the number of sheep per capita in the Falkland Islands and New Zealand. Both have relatively low numbers of sheep compared to other countries."
+    }
+  ]
+}

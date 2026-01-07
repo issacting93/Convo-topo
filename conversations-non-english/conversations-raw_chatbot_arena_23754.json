@@ -1,0 +1,29 @@
+{
+  "id": "chatbot_arena_23754",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Boil Them"
+    },
+    {
+      "role": "assistant",
+      "content": "The easiest way to cook a egg is in a pot of boiling water."
+    },
+    {
+      "role": "user",
+      "content": "Mash Them"
+    },
+    {
+      "role": "assistant",
+      "content": "The easiest way to mash an egg is in a pot of boiling water on the stove. In a bowl, whisk together the egg and milk of your choice. Bring the water to a boil, then lower the heat to a simmer. Then, tip the pot so the stream of water hits the bottom of the bowl and washes the egg mixture throughly. Add your milk of choice and season with salt and pepper. Then, remove from the heat."
+    },
+    {
+      "role": "user",
+      "content": "Stick them in a stew"
+    },
+    {
+      "role": "assistant",
+      "content": "In a pot, add some oil, onions, and celery. Sauté for 5 minutes. Add some garlic and ground beef. Brown the beef. Add tomato paste and cook for a minute. Add beans, broth, and seasoning. Bring to a simmer. Crack an egg into the stew. Simmer for 5 minutes or until the egg is cooked to your liking. Dish up and serve."
+    }
+  ]
+}

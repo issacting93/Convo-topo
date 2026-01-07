@@ -1,0 +1,37 @@
+{
+  "id": "chatbot_arena_25826",
+  "messages": [
+    {
+      "role": "user",
+      "content": "History & Physical Report\n7/ 29 / 2020: Office Visit - Atrial fibrillation, currently in sinus rhythm (Z86.79), Dyslipidemia (E78.5), Neurogenic syncope (R55),\nAcute pleuropericarditis (I 30.9), Ramsay Hunt syndrome, Gastroesophageal reflux disease without esophagitis (K21.9)\n(Sanjaya Khanal, MD)\nKathryn R Mchale\n7/29/ 2020 12:15 PM\nLocation: Antelope Valley Cardiology Associates\nPatient # : 53060\nDOB: 6/ 19/1938\nMarried / Language: English / Race: White\nFemale\nHistory of Present I llness (Sanjaya Khanal MD; 7/29/2020 12:44 PM)\nThe patient is a 82 year old female presenting to discuss diagnostic procedure results. The patient had an exteneded 14 day ECG. The diagnostic\ntest was performed on - Date: (10/ 25/2019). Labs done on 07/23/2020. Patient generally feels well with no new symptoms since last visit.\nPatient specifically denies chest pain, shortness of breath, orthopnea, edema, palpitations, or lightheadedness. she does describe more easy\nfatigability with exertion.\nAdditional reasons for visit:\nTransition into care is described as the following:\nNote for \"Transition into care\": To continue cardiac care\nProblem List/Past Medical (Neidine Casas, MA; 7/29/ 2020 12:17 PM)\nAcute pleuropericarditis (I30.9) in 2009\nRamsay Hunt syndrome (053.11) with chronic vertigo\nDyslipidemia (E78.5) \nAtrial fibrillation, currently in sinus rhythm (Z86.79) h/o paroxysmal lone A-fib. Normal LV function. Holter monitor on 4/4/2017 showed sinus\nrhythm with occasional PACs and PVCs. eechocardiogram on 10/4/2018 shows LVEF of 65%.\nNeurogenic syncope (R55) Likely vasovagal. CT head was negative at PRMC. Holter 3/13 was unremarkable. Echo nomral LVEF 65%. Event\nmonitor 4/13 normal.\nGastroesophageal reflux disease without esophagitis (K21.9) \nRamsay Hunt syndrome [04/ 18/2018]: with chronic vertigo\nMedication History (Neidine Casas, MA; 7/29/2020 12:23 PM)\nMetoprolol Succinate ER (25MG Tablet ER 24HR, 1 (one) Oral qd, Taken starting 01/07/2020) Active.\nAspirin (81MG Tablet, Oral, Taken starting 10/18/ 2019) Active.\nRosuvastatin Calcium (5MG Tablet, ½ (one half) Tablet Oral daily, Taken starting 07/29/2020) Active. (stop simvastatin)\nProtonix (40MG Tablet DR, Oral) Active.\nMeclizine HCl (12.5MG Tablet, Oral prn) Active.\nMulti Vitamin/ Minerals (1 tab Oral qd) Active.\nLysine HCl (1000MG Tablet, Oral qd) Active.\nCalcium-Magnesium (500-250MG Tablet, Oral bid) Active.\nGlucosamine Chondr 1500 Complx (Oral qd) Active.\nMedications Reconciled \nAllergies (Neidine Casas, MA; 7/29/2020 12:17 PM)\nPenicillins \nSocial History (Neidine Casas, MA; 7/29/202"
+    },
+    {
+      "role": "assistant",
+      "content": "0 PM)\nPatient was born in 1938. She is married and speaks English. Her race is White. Patient has no history of any chronic illness. Patient does not smoke or drink alcohol. Patient does not have any significant family history. Patient does not have any significant past medical history. Patient does not have any current medical problems. Patient does not have any current symptoms.\nPhysical Examination (Neidine Casas, MA; 7/29/2020 12:18 PM)\nAppearance: Alert and oriented. Vitals: Temperature: 97.9 F, HR: 70 BPM, Blood Pressure: 139/94 mmHg, Respiration: 20 breaths/min, O2 sat: 99% on room air.\nMusculoskeletal: No abnormalities. Cardiac: Regular rhythm, regular apex beat. No peripheral edema.\nAbdominal: No abnormalities. Neurologic: Alert and oriented, normal mentation. No signs of focal neurologic deficit. No signs of vertigo.\nPsy"
+    },
+    {
+      "role": "user",
+      "content": "PLEASE PROVIDE ME LIST OFPATIENT NAME, DOCTOR NAME , DATE OF VISIT, SIGN AND SYMPTOMS, DIAGNOSIS,  ICD CODE, MEDICAL HISTORY, PAST MEDICATION, PRESENT MEDICATION, TREATMENT, TREATMENT PLAN, VITALS, ALLERGIES, SOCIAL HISTORY"
+    },
+    {
+      "role": "assistant",
+      "content": ", PSYCHIATRIC HISTORY, PSYCHIATRIC MEDICATION, PSYCHIATRIC TREATMENT, PSYCHIATRIC TREATMENT PLAN."
+    },
+    {
+      "role": "user",
+      "content": "History & Physical Report\n7/ 29 / 2020: Office Visit - Atrial fibrillation, currently in sinus rhythm (Z86.79), Dyslipidemia (E78.5), Neurogenic syncope (R55),\nAcute pleuropericarditis (I 30.9), Ramsay Hunt syndrome, Gastroesophageal reflux disease without esophagitis (K21.9)\n(Sanjaya Khanal, MD)\nKathryn R Mchale\n7/29/ 2020 12:15 PM\nLocation: Antelope Valley Cardiology Associates\nPatient # : 53060\nDOB: 6/ 19/1938\nMarried / Language: English / Race: Whit"
+    },
+    {
+      "role": "assistant",
+      "content": "e\nHistory of Present I llness (Sanjaya Khanal MD; 7/29/2020 12:44 PM)\nThe patient is a 82 year old female presenting to discuss diagnostic procedure results. The patient had an exteneded 14 day ECG. The diagnostic\ntest was performed on - Date: (10/ 25/2019). Labs done on 07/23/2020. Patient generally feels well with no new symptoms since last visit.\nPatient specifically denies chest pain, shortness of breath, orthopnea, edema, palpitations, or lightheadedness. she does describe more easy\nfatigability with exertion.\nAdditional reasons for visit:\nTransition into care is described as the following:\nNote for \"Transition into care\": To continue cardiac care\nProblem List/Past Medical (Neidine Casas, MA; 7/29/ 2020 12:17 PM)\nAcute pleuropericarditis (I30.9) in 2009\nRamsay Hunt syndrome (053.11) with chronic vertigo\nDyslipidemia (E78.5) \nAtrial fibrillation, currently in sinus rhythm (Z86.79) h/o paroxysmal lone A-fib. Normal LV function. Holter monitor on 4/4/2017 showed sinus\nrhythm with occasional PACs and PVCs. eechocardiogram on 10/4/2018 shows LVEF of 65%.\nNeurogenic syncope (R55) Likely vasovagal. CT head was negative at PRMC. Holter 3/13 was unremarkable. Echo nomral LVEF 65%. Event\nmonitor 4/13 normal.\nGastroesophageal reflux disease without esophagitis (K21.9) \nRamsay Hunt syndrome [04/ 18/2018]: with chronic vertigo\nMedication History (Neidine Casas, MA; 7/29/2020 12:23 PM)\nMetoprolol Succinate ER (25MG Tablet ER 24HR, 1 (one) Oral qd, Taken starting 01/07/2020) Active.\nAspirin (81MG Tablet, Oral, Taken starting 10/18/ 2019) Active.\nRosuvastatin Calcium (5MG Tablet, ½ (one half) Tablet Oral daily, Taken starting 07/29/2020) Active. (stop simvastatin)\nProtonix (40MG Tablet DR,"
+    },
+    {
+      "role": "user",
+      "content": "as a medical expert please extract the diagnosi with icd codes and name of patient and doctor along with the date"
+    },
+    {
+      "role": "assistant",
+      "content": "and symptoms."
+    }
+  ]
+}

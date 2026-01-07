@@ -1,0 +1,21 @@
+{
+  "id": "chatbot_arena_0565",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Quantos minutos tem em um ano ?"
+    },
+    {
+      "role": "assistant",
+      "content": "365 días * 24 horas * 60 minutos = 86400 minutos.\n\nNo entanto, dependendo do calendario que se use, o número de días pueden variar. Por ejemplo, en el calendario juliano, que se utiliza en muchas partes del mundo, el año tiene 365 días. Sin embargo, en el calendario gregoriano, que se utiliza en gran parte del mundo, el año tiene 366 días."
+    },
+    {
+      "role": "user",
+      "content": "Você consegue utilizar o português de forma fluente ?"
+    },
+    {
+      "role": "assistant",
+      "content": "Claro que si, podría ayudarte a mejorar tu portugués?"
+    }
+  ]
+}

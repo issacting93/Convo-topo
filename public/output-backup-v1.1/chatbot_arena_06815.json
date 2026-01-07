@@ -1,0 +1,247 @@
+{
+  "id": "chatbot_arena_06815",
+  "messages": [
+    {
+      "role": "user",
+      "content": "The capital of France is Paris",
+      "pad": {
+        "pleasure": 0.5,
+        "arousal": 0.3,
+        "dominance": 0.5,
+        "emotionalIntensity": 0.42
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "The capital of France is Paris",
+      "pad": {
+        "pleasure": 0.5,
+        "arousal": 0.3,
+        "dominance": 0.5,
+        "emotionalIntensity": 0.42
+      }
+    },
+    {
+      "role": "user",
+      "content": "what is the capital of bulgaria?",
+      "pad": {
+        "pleasure": 0.6,
+        "arousal": 0.4,
+        "dominance": 0.5,
+        "emotionalIntensity": 0.4
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "The capital of Bulgaria is Sofia",
+      "pad": {
+        "pleasure": 0.6,
+        "arousal": 0.4,
+        "dominance": 0.5,
+        "emotionalIntensity": 0.4
+      }
+    },
+    {
+      "role": "user",
+      "content": "what are some interest facts about the capital of bulgaria",
+      "pad": {
+        "pleasure": 0.7,
+        "arousal": 0.5,
+        "dominance": 0.5,
+        "emotionalIntensity": 0.38
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "Sofia is the largest city in Bulgaria and the 15th largest city in the European Union. It is the second-largest city in the Balkan Peninsula. It is the seat of the Bulgarian government, parliament, and supreme court. It is the 12th most populous city in the European Union. Sofia is the capital of Bulgaria, and the largest city in the country. It is located in western Bulgaria and is the administrative, cultural, economic, and educational center of the country. Sofia is a city with more than 7,000 years of history. The city is home to numerous cultural and historical landmarks, including churches, mosques, cathedrals, and museums.",
+      "pad": {
+        "pleasure": 0.7,
+        "arousal": 0.5,
+        "dominance": 0.6,
+        "emotionalIntensity": 0.38
+      }
+    },
+    {
+      "role": "user",
+      "content": "write a 16 line verse in biggie smalls rapping style over the hiphop beat NY state of mind",
+      "pad": {
+        "pleasure": 0.4,
+        "arousal": 0.2,
+        "dominance": 0.4,
+        "emotionalIntensity": 0.44
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "I'll tell you about it later.",
+      "pad": {
+        "pleasure": 0.4,
+        "arousal": 0.2,
+        "dominance": 0.4,
+        "emotionalIntensity": 0.44
+      }
+    },
+    {
+      "role": "user",
+      "content": "list some ways I can leverage my degree in astrobiology",
+      "pad": {
+        "pleasure": 0.6,
+        "arousal": 0.4,
+        "dominance": 0.5,
+        "emotionalIntensity": 0.4
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "I'll tell you about it later.",
+      "pad": {
+        "pleasure": 0.4,
+        "arousal": 0.2,
+        "dominance": 0.4,
+        "emotionalIntensity": 0.44
+      }
+    }
+  ],
+  "classification": {
+    "abstain": false,
+    "interactionPattern": {
+      "category": "question-answer",
+      "confidence": 0.9,
+      "evidence": [
+        "The capital of France is Paris",
+        "what is the capital of bulgaria?"
+      ],
+      "rationale": "",
+      "alternative": null
+    },
+    "powerDynamics": {
+      "category": "human-led",
+      "confidence": 0.8,
+      "evidence": [
+        "The capital of France is Paris",
+        "I'll tell you about it later."
+      ],
+      "rationale": "",
+      "alternative": "assistant-dominant"
+    },
+    "emotionalTone": {
+      "category": "neutral",
+      "confidence": 0.9,
+      "evidence": [
+        "The capital of France is Paris",
+        "I'll tell you about it later."
+      ],
+      "rationale": "",
+      "alternative": null
+    },
+    "engagementStyle": {
+      "category": "reactive",
+      "confidence": 0.7,
+      "evidence": [
+        "what are some interest facts about the capital of bulgaria",
+        "I'll tell you about it later."
+      ],
+      "rationale": "",
+      "alternative": "exploring"
+    },
+    "knowledgeExchange": {
+      "category": "factual-info",
+      "confidence": 0.9,
+      "evidence": [
+        "Sofia is the largest city in Bulgaria and the 15th largest city in the European Union."
+      ],
+      "rationale": "",
+      "alternative": null
+    },
+    "conversationPurpose": {
+      "category": "information-seeking",
+      "confidence": 0.9,
+      "evidence": [
+        "The capital of France is Paris",
+        "what are some interest facts about the capital of bulgaria"
+      ],
+      "rationale": "",
+      "alternative": null
+    },
+    "topicDepth": {
+      "category": "moderate",
+      "confidence": 0.8,
+      "evidence": [
+        "Sofia is the largest city in Bulgaria and the 15th largest city in the European Union."
+      ],
+      "rationale": "",
+      "alternative": "surface"
+    },
+    "turnTaking": {
+      "category": "user-dominant",
+      "confidence": 0.8,
+      "evidence": [
+        "The capital of France is Paris",
+        "what are some interest facts about the capital of bulgaria"
+      ],
+      "rationale": "",
+      "alternative": "assistant-dominant"
+    },
+    "humanRole": {
+      "distribution": {
+        "seeker": 0.7499999999999999,
+        "learner": 0.25,
+        "director": 0.0,
+        "collaborator": 0.0,
+        "sharer": 0.0,
+        "challenger": 0.0
+      },
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "role": "seeker",
+          "quote": "The capital of France is Paris"
+        },
+        {
+          "role": "learner",
+          "quote": "what are some interest facts about the capital of bulgaria"
+        }
+      ],
+      "rationale": "",
+      "alternative": null
+    },
+    "aiRole": {
+      "distribution": {
+        "expert": 0.44444444444444453,
+        "advisor": 0.33333333333333337,
+        "facilitator": 0.11111111111111113,
+        "reflector": 0.11111111111111113,
+        "peer": 0.0,
+        "affiliative": 0.0
+      },
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "role": "expert",
+          "quote": "Sofia is the largest city in Bulgaria and the 15th largest city in the European Union."
+        },
+        {
+          "role": "advisor",
+          "quote": "I'll tell you about it later."
+        }
+      ],
+      "rationale": "",
+      "alternative": null
+    },
+    "classificationMetadata": {
+      "model": "llama3.2:latest",
+      "provider": "ollama",
+      "timestamp": "2025-12-26T06:25:00.667339Z",
+      "promptVersion": "v1.1",
+      "processingTimeMs": 19011
+    }
+  },
+  "classificationMetadata": {
+    "model": "unknown",
+    "provider": "unknown",
+    "timestamp": "2025-12-28T12:47:21.626511Z",
+    "promptVersion": "v1.1",
+    "processingTimeMs": 0,
+    "backfilled": true
+  }
+}

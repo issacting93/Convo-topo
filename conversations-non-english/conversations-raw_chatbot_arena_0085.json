@@ -1,0 +1,21 @@
+{
+  "id": "chatbot_arena_0085",
+  "messages": [
+    {
+      "role": "user",
+      "content": "HI"
+    },
+    {
+      "role": "assistant",
+      "content": "Hello! How can I assist you today?"
+    },
+    {
+      "role": "user",
+      "content": "translate : ごめんなさい。\n身近な距離で見てるけど、\nマジで何考えてるか本当に分からなくて、\nとりあえず寺に1週間放り込んで、 今何をしなけれ\nばいけないのか考えさせます。 初心を取り戻させて\n改心したらスマブラでボコボコにしてやります。\n申し訳ないです。。"
+    },
+    {
+      "role": "assistant",
+      "content": "Sorry.\nAlthough I'm close to you, I can't seem to figure out what you're thinking, so I'll leave you at the temple for a week. Please tell me what I should do now. If you change your mind and want to repent, I'll take you to the temple and confess everything."
+    }
+  ]
+}

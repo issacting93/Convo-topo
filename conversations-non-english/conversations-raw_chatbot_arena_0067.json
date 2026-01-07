@@ -1,0 +1,21 @@
+{
+  "id": "chatbot_arena_0067",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Complete a frase: O gato subiu no "
+    },
+    {
+      "role": "assistant",
+      "content": "O gato subiu no árvore. (The cat climbed up the tree.)"
+    },
+    {
+      "role": "user",
+      "content": "Complete a frase: O gato estava dentro de casa e subiu no "
+    },
+    {
+      "role": "assistant",
+      "content": "O gato estava dentro de casa e subiu no armário. (The cat was inside the house and climbed up the cupboard.)"
+    }
+  ]
+}

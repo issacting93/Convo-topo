@@ -1,0 +1,21 @@
+{
+  "id": "chatbot_arena_1360",
+  "messages": [
+    {
+      "role": "user",
+      "content": "oi"
+    },
+    {
+      "role": "assistant",
+      "content": "Hello! How may I help you?"
+    },
+    {
+      "role": "user",
+      "content": "fale apenas no idioma portugues"
+    },
+    {
+      "role": "assistant",
+      "content": "Certamente, posso conversar em português. Em que posso ajudá-lo?"
+    }
+  ]
+}

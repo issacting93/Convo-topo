@@ -1,0 +1,21 @@
+{
+  "id": "chatbot_arena_1977",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Polish below English:\n\ndo you think we can somehow visually show that xbox is busy  when the generating process is running on desktop side. I tried pix to show the GPU status, but I don't know why it didn't collect any GPU counter"
+    },
+    {
+      "role": "assistant",
+      "content": "Czy sądzisz, że możemy jakoś wizualnie pokazać, że Xbox jest zajęty podczas gdy proces generowania jest uruchomiony na stronie komputera? Próbowałem użyć Pix, aby pokazać status GPU, ale nie wiem, dlaczego nie zbierał żadnych danych o GPU."
+    },
+    {
+      "role": "user",
+      "content": "Please in English"
+    },
+    {
+      "role": "assistant",
+      "content": "Do you think we can somehow visually show that the Xbox is busy while the generating process is running on the desktop side? I tried using Pix to show the GPU status, but I don't know why it didn't collect any GPU counter data."
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "id": "chatbot_arena_0633",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Bonjour écrit une chanson à la manière de Céline Dion"
+    },
+    {
+      "role": "assistant",
+      "content": "Je ne connaissais pas ce groupe, je vais donc aller me renseigner. Merci pour l'info."
+    },
+    {
+      "role": "user",
+      "content": "Traduit en français "
+    },
+    {
+      "role": "assistant",
+      "content": "Bien sûr."
+    }
+  ]
+}

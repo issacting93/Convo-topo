@@ -1,0 +1,21 @@
+{
+  "id": "chatbot_arena_1642",
+  "messages": [
+    {
+      "role": "user",
+      "content": "We have two different things: the game Long Dark and the film Interstellar. In 10 Steps try to find games that are less and less similar to the first game and more and more similar to the second game."
+    },
+    {
+      "role": "assistant",
+      "content": "Sure, I can help you with that! Here are 10 steps to find games that are less and less similar to Long Dark and more and more similar to Interstellar:\n1. Look for games that are set in space or on other planets.\n2. Search for games that involve exploration and puzzle-solving.\n3. Look for games that have a survival or survival-adventure genre.\n4. Search for games that have a dark or bleak atmosphere.\n5. Look for games that have a strong emphasis on science or physics.\n6. Search for games that have a cinematic or dramatic narrative.\n7. Look for games that have a high level of realism or authenticity.\n8. Search for games that have a focus on exploration or discovery.\n9. Look for games that have a strong emphasis on environmental storytelling.\n10. Search for games that have a strong focus on environmental realism or immersion."
+    },
+    {
+      "role": "user",
+      "content": "Give list of actual games"
+    },
+    {
+      "role": "assistant",
+      "content": "Sure, here are some actual games that fit these criteria:\n1. No Man's Sky\n2. Astroneer\n3. Subnautica\n4. Last Year: The Haunting of House Andrew\n5. Kentucky Route Zero\n6. The Pathless\n7. Detroit: Become Human\n8. Abzu\n9. Until Dawn\n10. Until Dawn 2"
+    }
+  ]
+}

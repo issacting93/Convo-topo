@@ -1,0 +1,29 @@
+{
+  "id": "chatbot_arena_13793",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Welche Kategorie passt zu folgendem Problem: Wir haben im Kennedydamm seit dem größeren Ausfall das Problem, dass das WLAN und/oder die Internetverbindung sehr instabil ist. Wen nich z.B. in Teams bin habe ich alle 15 bis 30 Minuten so Aussetzer, heißt mein Ton und Video friert ein. Das ist nach 5 Sekunden immer wieder ok. Laut MAC ist das WLAN da, doch irgendwo zwischen Mac und “Internet” scheint es regelmäßig schluckauf zu geben. Marc Olejak hat das z.B. auch im Büro.\n\nZu Hause und in anderen Netzwerken habe ich dieses Phänomen nicht. Ich kann also meinen Rechner oder Teams als Problem ausschließen."
+    },
+    {
+      "role": "assistant",
+      "content": "Das Problem könnte eine schwierigere Lösung bedürfen als Sie vielleicht glauben. Da die Verbindung so oft instabil ist, könnte es sich bei einer fehlerhaften Hardware oder Software handeln. Ich wäre daher gerne bei Ihnen zu helfen. Hier sind ein paar Dinge, die wir zusammen durchführen könnten:\n1.  Wenden Sie sich an Ihren Internet- und/oder WLAN-Provider, um sie zu kontaktieren und zu bestimmen, ob irgendetwas auf ihrer Seite schief geht.\n2.  Verwenden Sie einen Internet-Speedtest, um zu sehen, wie schnell Ihr Internet zusetzt. Dies kann vermutlich helfen, die Instabilität zu verlieren.\n3.  Verwenden Sie einen Tools wie “Troubleshoot-Assistent”, um Fehler zu finden und zu beheben, die dazu führen könnten, dass die Verbindung instabil ist.\n4.  Wenn Sie sich bewusst sind, dass Sie mit der Arbeit des Computers oder Teams verbunden sind, während das Problem auftritt, könnten Sie dieses Phänomen mit einem anderen Computer testen, das in der gleichen Situation ist.\n5.  Machen Sie sich vor, dass der Prozessor oder die Festplatten des Computers defekt sind"
+    },
+    {
+      "role": "user",
+      "content": "Benenne das wichtigste Wort im Text."
+    },
+    {
+      "role": "assistant",
+      "content": "Schwieriger Lösung."
+    },
+    {
+      "role": "user",
+      "content": "Nenne das wichtigste Wort im folgenden Text: Wir haben im Kennedydamm seit dem größeren Ausfall das Problem, dass das WLAN und/oder die Internetverbindung sehr instabil ist. Wen nich z.B. in Teams bin habe ich alle 15 bis 30 Minuten so Aussetzer, heißt mein Ton und Video friert ein. Das ist nach 5 Sekunden immer wieder ok. Laut MAC ist das WLAN da, doch irgendwo zwischen Mac und “Internet” scheint es regelmäßig schluckauf zu geben. Marc Olejak hat das z.B. auch im Büro.\n\nZu Hause und in anderen Netzwerken habe ich dieses Phänomen nicht. Ich kann also meinen Rechner oder Teams als Problem ausschließen."
+    },
+    {
+      "role": "assistant",
+      "content": "Fehlerhafte Hardware."
+    }
+  ]
+}

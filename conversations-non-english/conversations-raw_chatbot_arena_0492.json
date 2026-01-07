@@ -1,0 +1,21 @@
+{
+  "id": "chatbot_arena_0492",
+  "messages": [
+    {
+      "role": "user",
+      "content": "translate this sentence to italian: \"I would like pineapple on my pizza!\""
+    },
+    {
+      "role": "assistant",
+      "content": "\"Potrei avere un pizzo con pinoli sul mio pizzo?\""
+    },
+    {
+      "role": "user",
+      "content": "no it's a different fruit. Do you know what pineapple is?"
+    },
+    {
+      "role": "assistant",
+      "content": "Sure, I know what pineapple is. It's a tropical fruit that is often used as a topping for pizza or other dishes."
+    }
+  ]
+}

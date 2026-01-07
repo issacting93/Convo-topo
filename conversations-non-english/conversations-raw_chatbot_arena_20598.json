@@ -1,0 +1,37 @@
+{
+  "id": "chatbot_arena_20598",
+  "messages": [
+    {
+      "role": "user",
+      "content": "I want you to act as a software engineer who is an expert in Flutter. You are well versed in the newest Flutter developments, including using Dart 3 code and using material 3 widgets. Write the code for a page that allows the user to search a database of \"cards\". This page should have a search box at the top that makes it clear that the user can type in that box and search for a \"card\". There should also be a button at the bottom that offers to take the user to a random \"card\"."
+    },
+    {
+      "role": "assistant",
+      "content": "Sure! Here's an example code for a Flutter page that allows the user to search a database of \"cards\":\n\n```dart\nimport 'package:flutter/material.dart';\n\nclass CardSearchPage extends StatefulWidget {\n  @override\n  _CardSearchPageState createState() => _CardSearchPageState();\n}\n\nclass _CardSearchPageState extends State<CardSearchPage> {\n  String _searchQuery = '';\n\n  @override\n  Widget build(BuildContext context) {\n    return Scaffold(\n      appBar: AppBar(\n        title: Text('Card Search'),\n        centerTitle: true,\n      ),\n      body: Column(\n        children: [\n          Padding(\n            padding: const EdgeInsets.all(16.0),\n            child: TextField(\n              decoration: InputDecoration(\n                hintText: 'Search for a card...',\n                prefixIcon: Icon(Icons.search),\n              ),\n              onChanged: (value) {\n                setState(() {\n                  _searchQuery = value.toLowerCase();\n                });\n              },\n            ),\n          ),\n          Expanded(\n            child: ListView.builder(\n              itemCount: cards.length,\n              itemBuilder: (context, index) {\n                final card = cards[index];\n                if (_searchQuery.isNotEmpty &&\n                    !card.title.toLowerCase().contains(_searchQuery)) {\n                  return SizedBox.shrink();\n                }\n                return ListTile(\n                  title: Text(card.title),\n                  onTap: () {\n                    // Navigate to card details page\n                  },\n                );\n              },\n            ),\n          ),\n          Padding(\n            padding: const EdgeInsets.all(16.0),\n            child: ElevatedButton(\n              onPressed: () {\n                // Navigate to random card details page\n              },\n              child: Text('Random Card'),\n            ),\n          ),\n        ],\n      ),\n    );\n  }\n}\n\nclass Card {\n  final String title;\n  final String description;\n\n  Card({required this.title, required this.description});\n}\n\nfinal List<Card> cards = [\n  Card(\n      title: 'Card 1',\n      description: 'This is the description for card 1.'),\n  Card(\n      title: 'Card 2',\n      description: 'This is the description for card 2.'),\n  Card(\n      title: 'Card 3',\n      description: 'This is the description for card 3.'),\n];\n```\n\nIn this example, the page consists of an `AppBar`, a search box `TextField`, a `ListView` of cards that are filtered based on the search query, and a button that takes the user to a random card. The `Card` class is just a simple data class that holds the card's `title` and `description`.\n\nTo filter the cards based on the search query, we use the `ListView.builder`'s `itemBuilder` callback to check whether each card's `title` contains the search query. If it doesn't, we return a `SizedBox.shrink()` widget, which has zero height and width and effectively removes the card from the list. If the search query is empty or the card's title contains the search query, we return a `ListTile` widget that displays the card's `title`.\n\nTo handle navigating to the card details page or the random card details page, you can use the `Navigator.push` method and pass in the appropriate `Route`."
+    },
+    {
+      "role": "user",
+      "content": "Flutter's AppBar widget has a 'centerTitle` named parameter. I am using Flutter version 3.10, and it seems like the title is not centered by default. In older versions of Flutter, was the title of an AppBar widget centered by default?"
+    },
+    {
+      "role": "assistant",
+      "content": "To answer your question, the `AppBar` widget in Flutter has not changed its default title alignment behavior across different versions. The default alignment for the title in an `AppBar` is left-aligned, and this behavior has been consistent in all versions of Flutter.\n\nThe `centerTitle` parameter only controls the alignment of the `title` widget horizontally within the `AppBar`. If `centerTitle` is set to `true`, the `title` widget will be centered horizontally in the `AppBar`. If `centerTitle` is set to `false`, the `title` widget will be left-aligned in the `AppBar`.\n\nIf you're experiencing issues with the title alignment in your `AppBar`, you might want to check your `AppBar` code and make sure that the `centerTitle` parameter is set to `true`."
+    },
+    {
+      "role": "user",
+      "content": "Is it correct that Flutter 3.10 added the `centerTitle` named parameter to the `AppBar` widget, or has this named parameter existed in older versions of Flutter?"
+    },
+    {
+      "role": "assistant",
+      "content": "I apologize for my previous response. I made a mistake in my answer. Flutter 3.10 does not exist, and there is no version of Flutter that has been released with that version number.\n\nTo answer your question more accurately, the `centerTitle` named parameter has been part of the `AppBar` widget in Flutter for a long time, and it is not a new addition. It has been available since the earliest versions of Flutter and is still available in the latest stable version of Flutter (as of September 2021).\n\nThe `centerTitle` parameter controls whether the `title` widget is horizontally centered within the `AppBar` or left-aligned. If `centerTitle` is set to `true`, the `title` widget will be centered horizontally in the `AppBar`. If `centerTitle` is set to `false`, the `title` widget will be left-aligned in the `AppBar`.\n\nI apologize for any confusion my previous response may have caused."
+    },
+    {
+      "role": "user",
+      "content": "What is the newest version of Dart? What is the newest version of Flutter?"
+    },
+    {
+      "role": "assistant",
+      "content": "As of September 2021, the newest versions of Dart and Flutter are:\n\n- Dart 2.14.2\n- Flutter 2.5.0\n\nDart 2.14.2 was released on August 31, 2021, and it includes bug fixes and improvements to the language and its tools.\n\nFlutter 2.5.0 was released on September 8, 2021, and it includes several new features and improvements, such as support for Material You and updated Material icons, improved web support, and more.\n\nIt's worth noting that both Dart and Flutter are actively developed and new versions are released frequently, so these versions may become outdated in the future. You can check the official Dart and Flutter websites for the latest version information."
+    }
+  ]
+}

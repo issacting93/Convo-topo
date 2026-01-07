@@ -1,0 +1,217 @@
+{
+  "id": "wildchat_ec1a5080a3253517749b37e96a1731d2",
+  "source": "wildchat",
+  "messages": [
+    {
+      "role": "user",
+      "content": "What most likely changed when cottage industries began to disappear?\n\nThere was a greater market for cloth and home furnishings.\nPeople could not create goods as efficiently.\nThere were fewer unusual textiles and other unique items.\nPeople abandoned cottages all over England.",
+      "pad": {
+        "p": 0.5,
+        "a": 0.4,
+        "d": 0.5
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "The most likely change when cottage industries began to disappear is that people could not create goods as efficiently.",
+      "pad": {
+        "p": 0.6,
+        "a": 0.5,
+        "d": 0.6
+      }
+    },
+    {
+      "role": "user",
+      "content": "New laws that were passed during the Industrial Revolution helped city residents by\n\ncreating more jobs for industrial workers.\ngiving children the option to attend school.\nimproving the standard of living in cities.\nenabling people to move to the upper class.",
+      "pad": {
+        "p": 0.5,
+        "a": 0.4,
+        "d": 0.5
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "New laws that were passed during the Industrial Revolution helped city residents by improving the standard of living in cities.",
+      "pad": {
+        "p": 0.6,
+        "a": 0.5,
+        "d": 0.6
+      }
+    },
+    {
+      "role": "user",
+      "content": "James Watt played an important role in the Industrial Revolution by\n\ndeveloping a process to make textiles efficiently.\nmaking steam engines a reliable power source.\ninventing the steamboat to carry goods and people.\nencouraging the growth of cottage industries.",
+      "pad": {
+        "p": 0.5,
+        "a": 0.4,
+        "d": 0.5
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "James Watt played an important role in the Industrial Revolution by making steam engines a reliable power source.",
+      "pad": {
+        "p": 0.6,
+        "a": 0.5,
+        "d": 0.6
+      }
+    },
+    {
+      "role": "user",
+      "content": "The group Young Italy advocated for\n\nEuropean unity.\na new Italian emperor.\nan end to nationalism.\ndemocratic rule.",
+      "pad": {
+        "p": 0.5,
+        "a": 0.4,
+        "d": 0.5
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "The group Young Italy advocated for European unity and democratic rule.",
+      "pad": {
+        "p": 0.5,
+        "a": 0.5,
+        "d": 0.6
+      }
+    }
+  ],
+  "metadata": {
+    "model": "gpt-3.5-turbo-0613",
+    "timestamp": "2023-06-30T17:45:45+00:00",
+    "turn_count": 4,
+    "language": "English",
+    "country": "United States",
+    "state": "Nevada",
+    "toxic": false,
+    "redacted": false
+  },
+  "classification": {
+    "abstain": false,
+    "interactionPattern": {
+      "category": "question-answer",
+      "confidence": 1.0,
+      "evidence": [
+        "What most likely changed when cottage industries began to disappear?",
+        "The most likely change when cottage industries began to disappear is that people could not create goods as efficiently."
+      ],
+      "rationale": "The human asks questions and the AI provides answers.",
+      "alternative": null
+    },
+    "powerDynamics": {
+      "category": "human-led",
+      "confidence": 1.0,
+      "evidence": [
+        "What most likely changed when cottage industries began to disappear?",
+        "New laws that were passed during the Industrial Revolution helped city residents by"
+      ],
+      "rationale": "The human sets the agenda and asks all the questions.",
+      "alternative": null
+    },
+    "emotionalTone": {
+      "category": "neutral",
+      "confidence": 1.0,
+      "evidence": [
+        "The most likely change when cottage industries began to disappear is that people could not create goods as efficiently.",
+        "New laws that were passed during the Industrial Revolution helped city residents by improving the standard of living in cities."
+      ],
+      "rationale": "There is no strong emotional coloring in the conversation.",
+      "alternative": null
+    },
+    "engagementStyle": {
+      "category": "questioning",
+      "confidence": 1.0,
+      "evidence": [
+        "What most likely changed when cottage industries began to disappear?",
+        "New laws that were passed during the Industrial Revolution helped city residents by"
+      ],
+      "rationale": "The human is driving the conversation with frequent questions.",
+      "alternative": null
+    },
+    "knowledgeExchange": {
+      "category": "factual-info",
+      "confidence": 1.0,
+      "evidence": [
+        "The most likely change when cottage industries began to disappear is that people could not create goods as efficiently.",
+        "New laws that were passed during the Industrial Revolution helped city residents by improving the standard of living in cities."
+      ],
+      "rationale": "The AI is providing data and facts in response to the human's questions.",
+      "alternative": null
+    },
+    "conversationPurpose": {
+      "category": "information-seeking",
+      "confidence": 1.0,
+      "evidence": [
+        "What most likely changed when cottage industries began to disappear?",
+        "New laws that were passed during the Industrial Revolution helped city residents by"
+      ],
+      "rationale": "The human is seeking specific knowledge or answers.",
+      "alternative": null
+    },
+    "topicDepth": {
+      "category": "surface",
+      "confidence": 0.9,
+      "evidence": [
+        "What most likely changed when cottage industries began to disappear?",
+        "New laws that were passed during the Industrial Revolution helped city residents by"
+      ],
+      "rationale": "The conversation involves brief, shallow exploration of multiple topics.",
+      "alternative": null
+    },
+    "turnTaking": {
+      "category": "balanced",
+      "confidence": 0.9,
+      "evidence": [
+        "What most likely changed when cottage industries began to disappear?",
+        "The most likely change when cottage industries began to disappear is that people could not create goods as efficiently."
+      ],
+      "rationale": "Both the human and AI have roughly equal message lengths.",
+      "alternative": null
+    },
+    "humanRole": {
+      "distribution": {
+        "seeker": 1.0,
+        "learner": 0.0,
+        "director": 0.0,
+        "collaborator": 0.0,
+        "sharer": 0.0,
+        "challenger": 0.0
+      },
+      "confidence": 1.0,
+      "evidence": [
+        {
+          "role": "seeker",
+          "quote": "What most likely changed when cottage industries began to disappear?"
+        }
+      ],
+      "rationale": "The human is primarily asking questions, seeking information.",
+      "alternative": null
+    },
+    "aiRole": {
+      "distribution": {
+        "expert": 1.0,
+        "advisor": 0.0,
+        "facilitator": 0.0,
+        "reflector": 0.0,
+        "peer": 0.0,
+        "affiliative": 0.0
+      },
+      "confidence": 1.0,
+      "evidence": [
+        {
+          "role": "expert",
+          "quote": "The most likely change when cottage industries began to disappear is that people could not create goods as efficiently."
+        }
+      ],
+      "rationale": "The AI is providing explanations and factual information in response to the human's questions.",
+      "alternative": null
+    }
+  },
+  "classificationMetadata": {
+    "model": "gpt-4",
+    "provider": "openai",
+    "timestamp": "2026-01-03T17:10:15.984661",
+    "promptVersion": "1.1.0",
+    "processingTimeMs": 27170,
+    "windowed": false
+  }
+}

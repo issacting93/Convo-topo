@@ -1,0 +1,21 @@
+{
+  "id": "chatbot_arena_0320",
+  "messages": [
+    {
+      "role": "user",
+      "content": "你會繁體中文嗎?"
+    },
+    {
+      "role": "assistant",
+      "content": "我可以談一談中文習修詞的過程嗎?"
+    },
+    {
+      "role": "user",
+      "content": "說個笑話"
+    },
+    {
+      "role": "assistant",
+      "content": "你看,我有三個應該學習的修詞,今天你可以跟我一個 by my side, tomorrow you can help me with these three verbs \"to sit, to stand, to lay down\""
+    }
+  ]
+}

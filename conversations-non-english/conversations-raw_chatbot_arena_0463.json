@@ -1,0 +1,21 @@
+{
+  "id": "chatbot_arena_0463",
+  "messages": [
+    {
+      "role": "user",
+      "content": "What is the CC-BY license"
+    },
+    {
+      "role": "assistant",
+      "content": "The CC-BY license is a Creative Commons Attribution license. It allows anyone to share, remix, and use the work commercially and non-commercially as long as they give appropriate credit to the original creator. This means that the work can be used in various ways, including in educational materials, research papers, and art projects, among others, as long as the original creator is acknowledged."
+    },
+    {
+      "role": "user",
+      "content": "Is it the default one for people uploading their audio to platforms like youtube and spotify?"
+    },
+    {
+      "role": "assistant",
+      "content": "No, the CC-BY license is not the default license for uploading audio to platforms like YouTube and Spotify. By default, when people upload their audio to these platforms, they retain the copyright to their work and grant the platform a license to use and distribute their work, usually with some limitations and restrictions. \n\nHowever, some creators may choose to release their audio under a Creative Commons license such as CC-BY, which allows others to use and share their work more freely. It's important to check the license or terms of use of any audio you wish to use or share, as different creators may have different requirements and restrictions."
+    }
+  ]
+}

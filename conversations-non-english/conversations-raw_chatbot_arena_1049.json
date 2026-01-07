@@ -1,0 +1,21 @@
+{
+  "id": "chatbot_arena_1049",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Quanto rende o FGTS ?"
+    },
+    {
+      "role": "assistant",
+      "content": "O FGTS (Fundo de Garantia do Tempo de Serviço) rende de acordo com a Taxa Referencial (TR) mais juros de 3% ao ano.\n\nA TR é uma taxa de juros calculada pelo Banco Central do Brasil e serve como referência para correção de diversos contratos e investimentos no Brasil.\n\nOu seja, o rendimento do FGTS depende da variação da TR mais os juros fixos de 3% ao ano. Nos últimos anos, esse rendimento tem ficado em torno de 5 a 6% ao ano.\n\nO rendimento é calculado mensalmente e os juros são capitalizados, ou seja, acrescidos ao saldo do FGTS todo mês. Dessa forma, o saldo total do FGTS rende juros sobre juros, o que permite que o fundo tenha um bom rendimento no longo prazo.\n\nVale destacar também que:\n\n• O FGTS é corrigido pela TR mesmo quando esta for negativa. Nesses casos, incidem apenas os juros de 3% a.a.\n\n• O saldo do FGTS não pode ser movimentado livremente pelo trabalhador. Só é permitido em casos como demissão sem justa causa, aposentadoria, compra da casa própria, doenças graves, entre outros.\n\n• As contas do FGTS são individuais, ou seja, cada trabalhador possui sua própria conta vinculada ao fundo.\n\nEspero ter esclarecido suas dúvidas sobre o rendimento do FGTS. Caso tenha outras perguntas, estou à disposição."
+    },
+    {
+      "role": "user",
+      "content": "O FGTS rende acima da inflação medida pelo IPCA ?"
+    },
+    {
+      "role": "assistant",
+      "content": "Não necessariamente. O rendimento do FGTS depende da Taxa Referencial (TR) mais juros fixos de 3% ao ano. Já a inflação oficial do Brasil é medida pelo IPCA (Índice Nacional de Preços ao Consumidor Amplo).\n\nComo a TR não tem uma relação direta com a inflação, o rendimento do FGTS pode ficar acima ou abaixo da inflação em diferentes períodos.\n\nNos últimos anos, o IPCA tem ficado em torno de 4% ao ano. Já o rendimento do FGTS tem variado entre 5% e 6% ao ano. Portanto, considerando esses números, o FGTS tem tido um rendimento ligeiramente acima da inflação medida pelo IPCA.\n\nMas nem sempre foi assim. Em períodos de alta inflação no passado, como na década de 80, o rendimento do FGTS ficou bem abaixo da inflação por vários anos seguidos.\n\nPara que o poder de compra do saldo do FGTS seja preservado, o ideal é que seu rendimento supere a inflação ao longo do tempo. Mas devido à forma de correção do FGTS pela TR, não há uma garantia de que isso ocorrerá consistentemente.\n\nPodemos concluir que:\n\n• Em alguns anos, o rendimento do FGTS pode ficar acima do IPCA, mas em outros anos pode ficar abaixo.\n\n• No longo prazo, não há uma relação direta que garanta que o FGTS vai render necessariamente acima da inflação.\n\n• Para ter uma boa rentabilidade real (acima da inflação), o ideal é que o saldo do FGTS fique aplicado por muitos anos.\n\nEspero ter esclarecido sua dúvida. Caso tenha outras perguntas, estarei à disposição."
+    }
+  ]
+}

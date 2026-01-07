@@ -1,0 +1,29 @@
+{
+  "id": "chatbot_arena_08581",
+  "messages": [
+    {
+      "role": "user",
+      "content": "hello"
+    },
+    {
+      "role": "assistant",
+      "content": "Hello! How can I assist you today?"
+    },
+    {
+      "role": "user",
+      "content": "je veux le code javascript pour créer un menu circulaire"
+    },
+    {
+      "role": "assistant",
+      "content": "Voici un exemple de code JavaScript pour créer un menu circulaire :\n```php\n<!DOCTYPE html>\n<html>\n<head>\n\t<style>\n\t\t.menu {\n\t\t\tposition: relative;\n\t\t\twidth: 300px;\n\t\t\theight: 300px;\n\t\t\tborder: 2px solid black;\n\t\t\tborder-radius: 50%;\n\t\t\tmargin: 0 auto;\n\t\t\tpadding: 20px;\n\t\t}\n\t\t.menu-item {\n\t\t\tposition: absolute;\n\t\t\ttop: 50%;\n\t\t\tleft: 50%;\n\t\t\ttransform: translate(-50%, -50%);\n\t\t\tcolor: white;\n\t\t\tfont-size: 20px;\n\t\t\tfont-weight: bold;\n\t\t\ttext-decoration: none;\n\t\t\tpadding: 10px 20px;\n\t\t\tborder-radius: 50%;\n\t\t\tbox-shadow: 0 2px 5px rgba(0,0,0,0.75);\n\t\t}\n\t\t.menu-item:hover {\n\t\t\tbackground-color: #ddd;\n\t\t\tcolor: black;\n\t\t}\n\t</style>\n</head>\n<body>\n\t<div class=\"menu\">\n\t\t<div class=\"menu-item\">Menu</div>\n\t\t<div class=\"menu-item\">Accueil</div>\n\t\t<div class=\"menu-item\">À propos</div>\n\t\t<div class=\"menu-item\">Contact</div>\n\t</div>\n</body>\n</html>\n```\nCe code crée un div avec la classe \"menu\" qui contient quatre div avec la classe \"menu-item\" qui représentent les options du menu. Les options sont positionnées en utilisant la propriété CSS \"position: absolute\" pour les centrer horizontalement et verticalement dans le menu. Les propriétés CSS \"border-radius\" et \"box-shadow\" sont utilisées pour donner aux options un arrière-plan circulaire et un ombrage"
+    },
+    {
+      "role": "user",
+      "content": "affiche moi le CSS pour recréer un menu similaire au système de ping de league of legends"
+    },
+    {
+      "role": "assistant",
+      "content": "Voici un exemple de code CSS pour recréer un menu similaire au système de ping de League of Legends :\n```css\n.menu {\n\tposition: fixed;\n\tbottom: 20px;\n\tright: 20px;\n\twidth: 100px;\n\theight: 60px;\n\tbackground-color: #ff4757;\n\tborder-radius: 50%;\n\tbox-shadow: 0 2px 5px rgba(0,0,0,0.5);\n\tcursor: pointer;\n\tdisplay: flex;\n\tjustify-content: center;\n\talign-items: center;\n}\n\n.menu-list {\n\tdisplay: flex;\n\talign-items: center;\n}\n\n.menu-item {\n\tbackground-color: #ffffff;\n\tcolor: #000000;\n\tfont-size: 20px;\n\tfont-weight: bold;\n\tpadding: 10px;\n\tborder-radius: 50%;\n\tmargin: 0 10px;\n}\n\n.menu-item:hover {\n\tbackground-color: #ddd;\n\tcolor: #333;\n}\n```\nCe code crée un menu positionné en fixed, à la bottom et à droite de l'écran avec une largeur et une hauteur de 100px et 60px respectivement. Le menu a un arrière-plan rouge et un ombrage rouge foncé. Les options du menu sont positionnées en utilisant la propriété CSS \"display: flex\" et centrées horizontalement et verticalement en utilisant la propriété CSS \"align-items: center\". Les options sont également bordées avec une courbe et un ombrage doux. Lorsque l'utilisateur survole une option, l'arrière-plan devient blanc et le texte est remplacé par un texte plus foncé."
+    }
+  ]
+}

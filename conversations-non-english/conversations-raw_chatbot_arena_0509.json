@@ -1,0 +1,21 @@
+{
+  "id": "chatbot_arena_0509",
+  "messages": [
+    {
+      "role": "user",
+      "content": "dame una receta con tomate ajo cebolla arroz y champiñones"
+    },
+    {
+      "role": "assistant",
+      "content": "Here's a simple recipe for dunkin' donuts donut holes with tomato, onion, garlic, and cheese:\n\nIngredients:\n\n* 1 package of pre-made donut holes (such as Dunkin' Donuts brand)\n* 1 cup of tomato, chopped\n* 1 onion, chopped\n* 4 garlic cloves, minced\n* 1/2 cup of cheese, shredded\n* 1/2 cup of cheddar cheese, shredded\n* 2 eggs\n* 1/2 cup of milk\n* 1 tablespoon of vanilla extract\n* 1 tablespoon of sugar\n* 1/4 teaspoon of salt\n* 2 cups of all-purpose flour\n* 1/2 cup of butter\n* 2 cups of ice cream (optional)\n\nInstructions:\n\n1. Preheat your oven to 350°F (175°C).\n2. Spread the chopped tomato, onion, and garlic on a baking sheet.\n3. Sprinkle the shredded cheese over the vegetables.\n4. Add the eggs, milk, vanilla extract, sugar, and salt to a separate bowl.\n5. Mix the flour and butter together to create a batter.\n6. Pour the batter over the vegetables and cheese.\n7. Bake for 15-20 minutes or until a toothpick inserted in the center of the donut holes comes out clean.\n8. Once the donut holes are baked, let them cool for a few minutes before removing them from the baking sheet.\n9. Serve your delicious donut holes with a side of tomato or other vegetables of your choice.\n\nEnjoy your delicious and healthy donut hole breakfast!"
+    },
+    {
+      "role": "user",
+      "content": "dame una receta sólo con tomate aceite ajo cebolla arroz y champiñones"
+    },
+    {
+      "role": "assistant",
+      "content": "Here's a recipe for dunkin' donuts donut holes without the tomato, onion, garlic, and cheese:\n\nIngredients:\n\n* 1 package of pre-made donut holes (such as Dunkin' Donuts brand)\n* 1 cup of tomato, chopped\n* 1 onion, chopped\n* 4 garlic cloves, minced\n* 1/2 cup of cheese, shredded\n* 1/2 cup of cheddar cheese, shredded\n* 2 eggs\n* 1/2 cup of milk\n* 1 tablespoon of vanilla extract\n* 1 tablespoon of sugar\n* 1/4 teaspoon of salt\n* 2 cups of all-purpose flour\n* 1/2 cup of butter\n* 2 cups of ice cream (optional)\n\nInstructions:\n\n1. Preheat your oven to 350°F (175°C).\n2. Spread the chopped tomato, onion, and garlic on a baking sheet.\n3. Sprinkle the shredded cheese over the vegetables.\n4. Add the eggs, milk, vanilla extract, sugar, and salt to a separate bowl.\n5. Mix the flour and butter together to create a batter.\n6. Pour the batter over the vegetables and cheese.\n7. Bake for 15-20 minutes or until a toothpick inserted in the center of the donut holes comes out clean.\n8. Once the donut holes are baked, let them cool for a few minutes before removing them from the baking sheet.\n9. Serve your delicious donut holes without the tomato or other vegetables of your choice.\n\nEnjoy your delicious and healthy donut hole breakfast!"
+    }
+  ]
+}

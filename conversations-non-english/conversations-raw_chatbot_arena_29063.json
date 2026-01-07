@@ -1,0 +1,29 @@
+{
+  "id": "chatbot_arena_29063",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Hi"
+    },
+    {
+      "role": "assistant",
+      "content": "Hello! How can I help you today?"
+    },
+    {
+      "role": "user",
+      "content": "Sprich deutsch"
+    },
+    {
+      "role": "assistant",
+      "content": "Ja, ja kann ich auf der Deutsche Sprache sprechen. Was möchten Sie heute?"
+    },
+    {
+      "role": "user",
+      "content": "Speak german"
+    },
+    {
+      "role": "assistant",
+      "content": "Ja, ja kann ich auf der Deutschen Sprache sprechen. Wie kann ich Ihnen heute helfen?"
+    }
+  ]
+}

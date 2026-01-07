@@ -1,0 +1,21 @@
+{
+  "id": "chatbot_arena_1040",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Hola, ¿podrías escribir un correo semiformal para un colega al que no conoces demasiado bien preguntando por el estado de una petición previa?"
+    },
+    {
+      "role": "assistant",
+      "content": "Hola! Espero que es posible que pueda ayudarte a escribir un correo semiformal para un colega que no conoces demasiado bien. Espero que tengas en cuenta que es un tema importante y que el colega esté bien enfocado en su trabajo. Si necesitas más información, no dudes en preguntar al colega especficamente sobre el estado de su petición antes de enviar un correo formal. Estoy encantado de ayudarle a entender mejor su situación."
+    },
+    {
+      "role": "user",
+      "content": "hazlo entonces, por avor"
+    },
+    {
+      "role": "assistant",
+      "content": "Por supuesto! Aqu tienes un correo semiformal que puedes compartir con tu colega para preguntar sobre el estado de su petición:\nHola! Estoy aqu para ayudarte con tu petición. Cuál es su estado y qué te gustara que te lo haga?\nSi necesitas más información, no dudes en preguntar al colega especficamente sobre el estado de su petición antes de enviar un correo formal. Estoy encantado de ayudarle a entender mejor su situación.\nDe nada, estoy aqu para ayudarte!"
+    }
+  ]
+}

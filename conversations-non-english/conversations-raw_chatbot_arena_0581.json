@@ -1,0 +1,21 @@
+{
+  "id": "chatbot_arena_0581",
+  "messages": [
+    {
+      "role": "user",
+      "content": "你们能理解中文么？"
+    },
+    {
+      "role": "assistant",
+      "content": ",,,,,"
+    },
+    {
+      "role": "user",
+      "content": "背诵一首古诗"
+    },
+    {
+      "role": "assistant",
+      "content": ",,,,"
+    }
+  ]
+}

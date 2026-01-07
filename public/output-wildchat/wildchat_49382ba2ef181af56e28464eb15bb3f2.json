@@ -1,0 +1,124 @@
+{
+  "id": "wildchat_49382ba2ef181af56e28464eb15bb3f2",
+  "source": "wildchat",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Customer having a difficulty to walk and it\u2019s too far for her to walk too far\n\nRephrase the sentence ",
+      "pad": {
+        "p": 0.5,
+        "a": 0.3,
+        "d": 0.4
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "The customer is experiencing difficulty walking and the distance is too great for her to cover.",
+      "pad": {
+        "p": 0.7,
+        "a": 0.2,
+        "d": 0.5
+      }
+    },
+    {
+      "role": "user",
+      "content": "Hi ",
+      "pad": {
+        "p": 0.6,
+        "a": 0.2,
+        "d": 0.5
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "Hello! How can I assist you today?",
+      "pad": {
+        "p": 0.6,
+        "a": 0.3,
+        "d": 0.6
+      }
+    },
+    {
+      "role": "user",
+      "content": "As per discussed, would like to seek your approval to extend and save the temporary Paiza gold for the following customers which will be expired by end of this month.\n\nJohn has achieved a total theo of $16,643 and loss of $39,876 in the last 3 months.",
+      "pad": {
+        "p": 0.6,
+        "a": 0.3,
+        "d": 0.5
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "Based on the information provided, it seems that you are requesting approval to extend and save the temporary Paiza Gold membership for the customer named John, whose theoretical (theo) losses amount to $39,876 with a total theo of $16,643 over the past three months. Is that correct?",
+      "pad": {
+        "p": 0.5,
+        "a": 0.3,
+        "d": 0.4
+      }
+    },
+    {
+      "role": "user",
+      "content": "Please find attached file for the Mother\u2019s Day unredeemed list. Kindly remind your patron the last day for redemption will",
+      "pad": {
+        "p": 0.4,
+        "a": 0.5,
+        "d": 0.3
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "Unfortunately, there is no attached file for me to refer to. However, based on the incomplete sentence provided, it seems that you are sharing an unredeemed list for Mother's Day and reminding patrons about the last day for its redemption. Please provide additional information or the attached file so I can assist you better.",
+      "pad": {
+        "p": 0.5,
+        "a": 0.4,
+        "d": 0.5
+      }
+    },
+    {
+      "role": "user",
+      "content": "Please find attached file for the Mother\u2019s Day unredeemed list. Kindly remind your patron the last day for redemption will be tomorrow, 27 Apr by 9pm\n\nRephrase the above sentence ",
+      "pad": {
+        "p": 0.6,
+        "a": 0.3,
+        "d": 0.5
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "Attached to this message is a file containing a list of unredeemed items for Mother's Day. It is kindly requested that you remind patrons that the last day for redemption is tomorrow, April 27th, and it must be done before 9 PM.",
+      "pad": {
+        "p": 0.5,
+        "a": 0.4,
+        "d": 0.4
+      }
+    },
+    {
+      "role": "user",
+      "content": "Again",
+      "pad": {
+        "p": 0.4,
+        "a": 0.6,
+        "d": 0.3
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "I apologize if my response was not satisfactory. Here's another rephrased sentence:\n\nAn attachment has been included with this message, containing a list of unredeemed items for Mother's Day. It is important to inform the patrons that the deadline for redemption is tomorrow, April 27th, and they have until 9 PM to do so.",
+      "pad": {
+        "p": 0.5,
+        "a": 0.4,
+        "d": 0.5
+      }
+    }
+  ],
+  "metadata": {
+    "model": "gpt-3.5-turbo-0301",
+    "timestamp": "2023-04-26T14:20:23+00:00",
+    "turn_count": 6,
+    "language": "English",
+    "country": "Singapore",
+    "state": null,
+    "toxic": false,
+    "redacted": false
+  }
+}

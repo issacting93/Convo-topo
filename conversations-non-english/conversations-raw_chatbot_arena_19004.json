@@ -1,0 +1,37 @@
+{
+  "id": "chatbot_arena_19004",
+  "messages": [
+    {
+      "role": "user",
+      "content": "1+1=?"
+    },
+    {
+      "role": "assistant",
+      "content": "1+1=2."
+    },
+    {
+      "role": "user",
+      "content": "很棒"
+    },
+    {
+      "role": "assistant",
+      "content": "Thank you! Is there anything else I can help you with?"
+    },
+    {
+      "role": "user",
+      "content": "会说中文吗"
+    },
+    {
+      "role": "assistant",
+      "content": "我会说中文，你好吗?"
+    },
+    {
+      "role": "user",
+      "content": "很棒"
+    },
+    {
+      "role": "assistant",
+      "content": "非常感谢你的回答，我会继续为您提供回答。如果您有任何其他问题，请告诉我。"
+    }
+  ]
+}

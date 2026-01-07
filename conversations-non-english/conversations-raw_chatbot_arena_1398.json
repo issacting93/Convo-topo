@@ -1,0 +1,21 @@
+{
+  "id": "chatbot_arena_1398",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Хелло, ду ю андерстенд мі? Айм траін токін інгліш, бат юзінг юкрейніан летерс.\n\nВот із бігер Сан ор Джупітер?\n\nWu mene rozumiyete? Kolu zakinchulasya druha svitova viyna?"
+    },
+    {
+      "role": "assistant",
+      "content": "I apologize, but I do not understand this message. Could you please rephrase it in a different way or provide more context?"
+    },
+    {
+      "role": "user",
+      "content": "Kolu zakinchulasya druha svitova viyna?"
+    },
+    {
+      "role": "assistant",
+      "content": "It's not clear what you are trying to ask. Can you please rephrase your question or provide more context?"
+    }
+  ]
+}

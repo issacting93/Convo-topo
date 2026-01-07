@@ -1,0 +1,21 @@
+{
+  "id": "chatbot_arena_0660",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Is earth flat?"
+    },
+    {
+      "role": "assistant",
+      "content": "No, the Earth is not flat. The Earth is a sphere and it is widely accepted by the scientific community that the Earth is round."
+    },
+    {
+      "role": "user",
+      "content": "What does Bible say?"
+    },
+    {
+      "role": "assistant",
+      "content": "The Bible does not say that the Earth is flat. Some passages have been interpreted by some people to suggest a flat Earth, but the majority of interpretations support a round Earth."
+    }
+  ]
+}

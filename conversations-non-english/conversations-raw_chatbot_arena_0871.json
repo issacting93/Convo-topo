@@ -1,0 +1,21 @@
+{
+  "id": "chatbot_arena_0871",
+  "messages": [
+    {
+      "role": "user",
+      "content": "resnet为什么有效？"
+    },
+    {
+      "role": "assistant",
+      "content": "Residual networks are a type of convolutional neural network, which is trained to predict a label based on the information provided through data present at each layer of the network."
+    },
+    {
+      "role": "user",
+      "content": "细说"
+    },
+    {
+      "role": "assistant",
+      "content": "Residual networks are a type of convolutional neural network, which is trained to predict a label based on the information provided through data present at each layer of the network. For example, in image classification, convolutional neural networks process the image layer by layer, and at each layer, the information from the previous layer is added to the information from the current layer. This process is called a residual connection, and this process is what gives the network its name."
+    }
+  ]
+}

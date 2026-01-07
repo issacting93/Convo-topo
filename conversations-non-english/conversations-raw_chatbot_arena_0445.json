@@ -1,0 +1,37 @@
+{
+  "id": "chatbot_arena_0445",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Hola hablas español?"
+    },
+    {
+      "role": "assistant",
+      "content": "Si. ¿Quieres hablar en español?"
+    },
+    {
+      "role": "user",
+      "content": "Sí"
+    },
+    {
+      "role": "assistant",
+      "content": "Bienvenido a mi versión en español. ¿Qué puedo hacer para usted?"
+    },
+    {
+      "role": "user",
+      "content": "Reformula el siguiente párrafo en un tono formal y academico:"
+    },
+    {
+      "role": "assistant",
+      "content": "The following sentence has been reformulated in a formal and academic tone:"
+    },
+    {
+      "role": "user",
+      "content": "Las sensibilidades del modelo muestran un comportamiento suave tal y como se esperaba, los test arrojan un resultado normal con una buena capacidad predictiva de las sensibilidades arrojadas por el modelo."
+    },
+    {
+      "role": "assistant",
+      "content": "Los resultados arrojan una capacidad predictiva normal, con una sensibilidad suave y una representación suave de las sensibilidades arrojadas por el modelo."
+    }
+  ]
+}

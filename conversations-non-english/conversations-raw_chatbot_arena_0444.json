@@ -1,0 +1,21 @@
+{
+  "id": "chatbot_arena_0444",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Let's play a game of 20 questions. I am thinking of an object."
+    },
+    {
+      "role": "assistant",
+      "content": "Sure, I'd be happy to help you answer 20 questions about any object you're thinking of!\n\n1.  What is the name of the object?\n2.  What type of object is it? (e.g. planet, star, object of study)\n3.  How large is it?\n4.  What is its shape? (e.g. circle, square, triangle)\n5.  What is its material? (e.g. metal，塑料，玻璃)\n6.  How is it made? (e.g. by factory, by hand, by impact)\n7.  What is its function? (e.g. as a tool, as a part of a system, as a装饰品)\n8.  How was it discovered?\n9.  What is its history? (e.g. its discovery, its classification, its use)\n10.  What is its current status? (e.g. its status as a natural wonder, its status as a target for research)\n11.  What is its role in the universe?\n12.  What is its potential impact on the world?\n13.  What is its scientific potential?\n14.  How does it compare to other objects of its type?\n15.  What is its role in the natural world? (e.g. as a source of energy, as a natural resource, as a natural装饰品)\n16.  What is its environmental impact?\n17.  What is its cultural impact?\n18.  What is its economic impact?\n19.  How has it been used in history?\n20.  What is its potential future use?"
+    },
+    {
+      "role": "user",
+      "content": "I've picked my object."
+    },
+    {
+      "role": "assistant",
+      "content": "Great! Let's get started with questions about your object.\n\n1.  What is the name of your object?\n2.  What type of object is it?\n3.  How large is it?\n4.  What is its material?\n5.  What is its function?\n6.  How was it discovered?\n7.  What is its history?\n8.  What is its current status?\n9.  What is its role in the universe?\n10. What is its potential impact on the world?\n11. What is its scientific potential?\n12. What is its role in the natural world?\n13. What is its environmental impact?\n14. What is its cultural impact?\n15. What is its economic impact?\n16. How has it been used in history?\n17. What is its potential future use?\n18. What is its potential impact on humanity?\n19. What is its potential impact on other species?\n20. What is its potential impact on the planet?"
+    }
+  ]
+}

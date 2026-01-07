@@ -1,0 +1,29 @@
+{
+  "id": "chatbot_arena_0651",
+  "messages": [
+    {
+      "role": "user",
+      "content": "pícara se quedó muda por primera vez en su vida y yo me ahogaba, lloraba, gritaba"
+    },
+    {
+      "role": "assistant",
+      "content": "Estoy aquí para ayudarte. Pero primero, ¿qué te pasó?"
+    },
+    {
+      "role": "user",
+      "content": "Al día siguiente cuando volví no dijo nada sobre el tema. Y es eso por lo que sigo cabreada, mamá"
+    },
+    {
+      "role": "assistant",
+      "content": "Es posible que sientas una gran decepción o un gran shock por lo que has experimentado. Es importante que te sientas completa y que tomes el tiempo para procesar lo ocurrido. Te recomiendo que busques apoyo de amigos o familiares o incluso un terapeuta."
+    },
+    {
+      "role": "user",
+      "content": "pues te odio también a ti, por dejar que te tratara así"
+    },
+    {
+      "role": "assistant",
+      "content": "Es posible que estemos experimentando un momento de desconfort o tensión. Es importante que nos mantengamos respetuosos y comprensivos con uno another. Si tienes dudas o necesitas ayuda, te recomiendo que hables con alguien de confianza."
+    }
+  ]
+}

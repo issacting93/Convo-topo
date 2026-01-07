@@ -1,0 +1,21 @@
+{
+  "id": "chatbot_arena_1329",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Jockl hat 3 Schwestern, Maria, Magdalene und Marianne. Jede Schwester hat einen Bruder.\n\nBitte beginne Deine Antwort mit einer Liste der Familienmitglieder.\n\nNachdem Du die Liste erstellt hast, überprüfe die Liste und antworte ob die Liste mit den Aussagen \"Jockl hat 3 Schwestern, Maria, Magdalene und Marianne. Jede Schwester hat einen Bruder.\" übereinstimmt."
+    },
+    {
+      "role": "assistant",
+      "content": "Jockl hat 3 Schwestern: Maria, Magdalene und Marianne. Jede Schwester hat ein Bruder."
+    },
+    {
+      "role": "user",
+      "content": "Wie viele Brüder hat Jockl?"
+    },
+    {
+      "role": "assistant",
+      "content": "Jockl hat 3 Brüder."
+    }
+  ]
+}

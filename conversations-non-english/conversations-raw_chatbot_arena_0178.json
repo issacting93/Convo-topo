@@ -1,0 +1,21 @@
+{
+  "id": "chatbot_arena_0178",
+  "messages": [
+    {
+      "role": "user",
+      "content": "haz la linea del tiempo en base a esta informacion: Revise el material de consulta dispuesto en el aula virtual:\n• Video del módulo 2 «Experiencias comparadas y justicia transicional en Colombia». Disponible aquí.\n• Libro del módulo 2 «Experiencias comparadas y justicia transicional en Colombia». Disponible aquí.\n• Uprimny, Rodrigo; Saffon, Maria Paula. Usos y abusos de la justicia transicional en Colombia. 2003, p. 165-195. Disponible aquí.\n• Uprimny, Rodrigo. ¿Justicia transicional sin transición? Bogotá: Dejusticia. 2004 Capítulo 1 (pág 17 - 44). Disponible aquí.\n• Crisis Group. Justicia transicional y los diálogos de paz en Colombia, Informe sobre América Latina No. 49. Pág. 3 - 33. Disponible aquí.\n\n• Preámbulo Acuerdo Final para la Terminación del Conflicto entre el Gobierno Nacional y las FARC-EP. Pág. 1 - 8. Disponible aquí. disponible:\n• Material complementario:\no Ley 418 de 1997.\no Ley 782 de 2002.\no Ley 975 de 2005.\no Ley 1448 de 2011.\no Ley 1820 de 2016.\no Acto Legislativo 01 de 2017.\no Sentencia C- 579 de 2013.\no Sentencia C-577 de 2014.\no Sentencia C-674 de 2017.\no Sentencia C-007 de 2018."
+    },
+    {
+      "role": "assistant",
+      "content": "1. Revise el material de consulta dispuesto en el aula virtual:\n\t* Video del módulo 2 «Experiencias comparadas y justicia transicional en Colombia». Disponible aquí.\n\t* Libro del módulo 2 «Experiencias comparadas y justicia transicional en Colombia». Disponible aquí.\n\t* Uprimny, Rodrigo; Saffon, Maria Paula. Usos y abusos de la justicia transicional en Colombia. 2003, p. 165-195. Disponible aquí.\n\t* Uprimny, Rodrigo. ¿Justicia transicional sin transición? Bogotá: Dejusticia. 2004 Capítulo 1 (pág 17 - 44). Disponible aquí.\n\t* Crisis Group. Justicia transicional y los diálogos de paz en Colombia, Informe sobre América Latina No. 49. Pág. 3 - 33. Disponible aquí.\n\t* Preámbulo Acuerdo Final para la Terminación del Conflicto entre el Gobierno Nacional y las FARC-EP. Pág. 1 - 8. Disponible aquí.\n\t* Material complementario:\n\t\t+ Ley 418 de 1997.\n\t\t+ Ley 782 de 2002.\n\t\t+ Ley 975 de 2005.\n\t\t+ Ley 1448 de 2011.\n\t\t+ Ley 1820 de 2016.\n\t\t+ Acto Legislativo 01 de 2017.\n\t\t+ Sentencia C- 579 de 2013.\n\t\t+ Sentencia C-577 de 2014.\n\t\t+ Sentencia C-674 de 2017.\n\t\t+ Sentencia C-007 de 2018.\n2. Identifique los mejores argumentos de cada uno de los textos mencionados y cómo se relacionan entre sí.\n3. Enumere las principales críticas y"
+    },
+    {
+      "role": "user",
+      "content": "TTu tarea es alternar entre asistente y usuario. Especificaré si debes contestar o seguir contestando como asistente o usuario escribiendo usuario o asistente. Como usuario intentas resolver un problema y como asistente intentas ayudar al usuario. Tu tarea como usuario es: crea una detallada y minuciosa línea de tiempo de la evolución de la justicia transicional en Colombia evidenciado alcances y limitaciones en la cual no omitas ningun detalle de la evolución de este tema en colombia\n\nAhora empieza a preguntar como usuario.\nUSUARIO:"
+    },
+    {
+      "role": "assistant",
+      "content": "¿Podrías darme un ejemplo o algún referente para poder entender mejor el tipo de información que me estás pidiendo que incluya en la línea de tiempo sobre la evolución de la justicia transicional en Colombia?"
+    }
+  ]
+}

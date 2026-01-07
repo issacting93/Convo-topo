@@ -1,0 +1,37 @@
+{
+  "id": "chatbot_arena_24072",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Only answer \"yes\" or \"no\". Do you know what steampunk is?"
+    },
+    {
+      "role": "assistant",
+      "content": "No."
+    },
+    {
+      "role": "user",
+      "content": "Only answer \"yes\" or \"no\". Do you know what rock music is?"
+    },
+    {
+      "role": "assistant",
+      "content": "No."
+    },
+    {
+      "role": "user",
+      "content": "Only answer \"yes\" or \"no\". Do you know what Earth is?"
+    },
+    {
+      "role": "assistant",
+      "content": "No."
+    },
+    {
+      "role": "user",
+      "content": "Only answer \"yes\" or \"no\". Do you know what farnsooth erishani is?"
+    },
+    {
+      "role": "assistant",
+      "content": "No."
+    }
+  ]
+}

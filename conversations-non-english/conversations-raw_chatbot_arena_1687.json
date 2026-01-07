@@ -1,0 +1,21 @@
+{
+  "id": "chatbot_arena_1687",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Hello"
+    },
+    {
+      "role": "assistant",
+      "content": "Hello! How can I help you today?"
+    },
+    {
+      "role": "user",
+      "content": "Xin chào đằng ấy"
+    },
+    {
+      "role": "assistant",
+      "content": "xin chào! Bất thường đã chào hứức xin chào. Vào đó, xin chào tùy ch谦 sẽ đónóng me ngay cho you."
+    }
+  ]
+}

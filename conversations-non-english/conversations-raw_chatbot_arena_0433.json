@@ -1,0 +1,21 @@
+{
+  "id": "chatbot_arena_0433",
+  "messages": [
+    {
+      "role": "user",
+      "content": "hablame en español"
+    },
+    {
+      "role": "assistant",
+      "content": "¿Cómo estás?"
+    },
+    {
+      "role": "user",
+      "content": "que es la matrix?"
+    },
+    {
+      "role": "assistant",
+      "content": "La Matrix es una película estadounidense de ciencia ficción de 1999, escrita y dirigida por Larry y Andy Wachowski. La trama se centra en una realidad simulada en la que la humanidad está siendo mantenida en un estado de coma de propia voluntad, mientras que la vida real se reproduce en un mundo virtual."
+    }
+  ]
+}

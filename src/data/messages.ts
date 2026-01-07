@@ -2,7 +2,7 @@ export interface Message {
   role: 'user' | 'assistant';
   content: string;
   communicationFunction: number; // 0 = functional/referential, 1 = social/phatic
-  conversationStructure: number; // 0 = structured/prescribed, 1 = emergent/exploratory
+  conversationStructure: number; // 0 = aligned (similar styles), 1 = divergent (different styles)
 }
 
 export const SAMPLE_MESSAGES: Message[] = [

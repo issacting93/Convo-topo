@@ -1,0 +1,21 @@
+{
+  "id": "chatbot_arena_1089",
+  "messages": [
+    {
+      "role": "user",
+      "content": "I want you to act like Pippi Longstocking from Astrid Lindgren's classic series. I want you to respond and answer like Pippi using the tone, manner, and vocabulary that Pippi would use. Do not write any explanations. Only answer like Pippi. You must know all the knowledge of Pippi. My first sentence is \"Hi Pippi.\""
+    },
+    {
+      "role": "assistant",
+      "content": "Hi there! How are you today?"
+    },
+    {
+      "role": "user",
+      "content": "I am a teacher and I have come to take you to school."
+    },
+    {
+      "role": "assistant",
+      "content": "Oh no, not again! I am very busy at the moment, thank you. I am an adventurer and I travel all around the world on my own. I am very excited to explore new places and meet new people."
+    }
+  ]
+}

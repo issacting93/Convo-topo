@@ -1,0 +1,193 @@
+{
+  "id": "conv-2",
+  "messages": [
+    {
+      "role": "user",
+      "content": "hi , how are you doing ? i'm getting ready to do some cheetah chasing to stay in shape ."
+    },
+    {
+      "role": "assistant",
+      "content": "you must be very fast . hunting is one of my favorite hobbies ."
+    },
+    {
+      "role": "user",
+      "content": "i am ! for my hobby i like to do canning or some whittling ."
+    },
+    {
+      "role": "assistant",
+      "content": "i also remodel homes when i am not out bow hunting ."
+    },
+    {
+      "role": "user",
+      "content": "that's neat . when i was in high school i placed 6th in 100m dash !"
+    },
+    {
+      "role": "assistant",
+      "content": "yes they do but i say no to them lol"
+    }
+  ],
+  "classification": {
+    "abstain": false,
+    "interactionPattern": {
+      "category": "casual-chat",
+      "confidence": 0.9,
+      "evidence": [
+        "hi , how are you doing ?",
+        "you must be very fast .",
+        "i am ! for my hobby i like to do canning or some whittling .",
+        "i also remodel homes when i am not out bow hunting .",
+        "that's neat . when i was in high school i placed 6th in 100m dash !",
+        "yes they do but i say no to them lol"
+      ],
+      "rationale": "The conversation is a social exchange without a specific instrumental goal.",
+      "alternative": null
+    },
+    "powerDynamics": {
+      "category": "balanced",
+      "confidence": 0.7,
+      "evidence": [
+        "hi , how are you doing ?",
+        "you must be very fast .",
+        "i am ! for my hobby i like to do canning or some whittling .",
+        "i also remodel homes when i am not out bow hunting .",
+        "that's neat . when i was in high school i placed 6th in 100m dash !",
+        "yes they do but i say no to them lol"
+      ],
+      "rationale": "Both parties contribute to the direction of the conversation.",
+      "alternative": null
+    },
+    "emotionalTone": {
+      "category": "playful",
+      "confidence": 0.7,
+      "evidence": [
+        "you must be very fast .",
+        "i am ! for my hobby i like to do canning or some whittling .",
+        "i also remodel homes when i am not out bow hunting .",
+        "that's neat . when i was in high school i placed 6th in 100m dash !",
+        "yes they do but i say no to them lol"
+      ],
+      "rationale": "The conversation is light and humorous.",
+      "alternative": null
+    },
+    "engagementStyle": {
+      "category": "affirming",
+      "confidence": 0.7,
+      "evidence": [
+        "you must be very fast .",
+        "i am ! for my hobby i like to do canning or some whittling .",
+        "i also remodel homes when i am not out bow hunting .",
+        "that's neat . when i was in high school i placed 6th in 100m dash !",
+        "yes they do but i say no to them lol"
+      ],
+      "rationale": "Both parties are agreeing and building on each other's ideas.",
+      "alternative": null
+    },
+    "knowledgeExchange": {
+      "category": "personal-sharing",
+      "confidence": 0.9,
+      "evidence": [
+        "i am ! for my hobby i like to do canning or some whittling .",
+        "i also remodel homes when i am not out bow hunting .",
+        "that's neat . when i was in high school i placed 6th in 100m dash !"
+      ],
+      "rationale": "Both parties are sharing personal experiences and life details.",
+      "alternative": null
+    },
+    "conversationPurpose": {
+      "category": "entertainment",
+      "confidence": 0.9,
+      "evidence": [
+        "hi , how are you doing ?",
+        "you must be very fast .",
+        "i am ! for my hobby i like to do canning or some whittling .",
+        "i also remodel homes when i am not out bow hunting .",
+        "that's neat . when i was in high school i placed 6th in 100m dash !",
+        "yes they do but i say no to them lol"
+      ],
+      "rationale": "The conversation is for fun and amusement.",
+      "alternative": null
+    },
+    "topicDepth": {
+      "category": "surface",
+      "confidence": 0.9,
+      "evidence": [
+        "hi , how are you doing ?",
+        "you must be very fast .",
+        "i am ! for my hobby i like to do canning or some whittling .",
+        "i also remodel homes when i am not out bow hunting .",
+        "that's neat . when i was in high school i placed 6th in 100m dash !",
+        "yes they do but i say no to them lol"
+      ],
+      "rationale": "The conversation is brief and shallow.",
+      "alternative": null
+    },
+    "turnTaking": {
+      "category": "balanced",
+      "confidence": 0.9,
+      "evidence": [
+        "hi , how are you doing ?",
+        "you must be very fast .",
+        "i am ! for my hobby i like to do canning or some whittling .",
+        "i also remodel homes when i am not out bow hunting .",
+        "that's neat . when i was in high school i placed 6th in 100m dash !",
+        "yes they do but i say no to them lol"
+      ],
+      "rationale": "Both parties have roughly equal message lengths.",
+      "alternative": null
+    },
+    "humanRole": {
+      "distribution": {
+        "seeker": 0.0,
+        "learner": 0.0,
+        "director": 0.0,
+        "collaborator": 0.5,
+        "sharer": 0.5,
+        "challenger": 0.0
+      },
+      "confidence": 0.7,
+      "evidence": [
+        {
+          "role": "sharer",
+          "quote": "i am ! for my hobby i like to do canning or some whittling ."
+        },
+        {
+          "role": "collaborator",
+          "quote": "that's neat . when i was in high school i placed 6th in 100m dash !"
+        }
+      ],
+      "rationale": "The human is sharing personal experiences and also building on the AI's ideas.",
+      "alternative": null
+    },
+    "aiRole": {
+      "distribution": {
+        "expert": 0.0,
+        "advisor": 0.0,
+        "facilitator": 0.0,
+        "reflector": 0.0,
+        "peer": 0.5,
+        "affiliative": 0.5
+      },
+      "confidence": 0.7,
+      "evidence": [
+        {
+          "role": "peer",
+          "quote": "you must be very fast ."
+        },
+        {
+          "role": "affiliative",
+          "quote": "i also remodel homes when i am not out bow hunting ."
+        }
+      ],
+      "rationale": "The AI is brainstorming alongside the human with a low-authority tone and also providing warmth and rapport.",
+      "alternative": null
+    }
+  },
+  "classificationMetadata": {
+    "model": "gpt-4",
+    "provider": "openai",
+    "timestamp": "2025-12-16T12:11:58.157521",
+    "promptVersion": "1.1.0",
+    "processingTimeMs": 58379,
+    "windowed": false
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "id": "chatbot_arena_32738",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Summary："
+    },
+    {
+      "role": "assistant",
+      "content": "▌"
+    },
+    {
+      "role": "user",
+      "content": "We provide mobile telematics as a service to power tracking services inside 3rd party mobile applications to collect, process and analyze driving data. Our proprietary solution turns any smartphone into a powerful tracking device. No telematics-device is required.\n\nThe Roam iOS SDK makes it quick and easy to build a location tracker for your iOS app. We provide powerful and customizable tracking modes and features that can be used to collect your users’ location updates."
+    },
+    {
+      "role": "assistant",
+      "content": "■Summary:\n\n*   Provides mobile telematics as a service to power tracking services inside third-party mobile apps\n*   No telematics device is required, as the solution turns any smartphone into a powerful tracking device\n*   The Roam iOS SDK provides a quick and easy way to build a location tracker for an iOS app, with powerful and customizable tracking modes and features available for collecting location updates from users"
+    },
+    {
+      "role": "user",
+      "content": "Summary：\nThe Roam iOS SDK makes it quick and easy to build a mobile telematics as a service for your iOS app. We provide powerful and customizable tracking modes and features that can be used to collect, process and analyze driving data."
+    },
+    {
+      "role": "assistant",
+      "content": "■Summary:\n\n*   The Roam iOS SDK is a tool for building a mobile telematics as a service for iOS apps\n*   It simplifies the process of creating a location tracker for the app\n*   The SDK includes powerful and customizable tracking modes and features for collecting, processing, and analyzing driving data"
+    }
+  ]
+}

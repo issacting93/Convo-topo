@@ -1,0 +1,37 @@
+{
+  "id": "chatbot_arena_17892",
+  "messages": [
+    {
+      "role": "user",
+      "content": "What keys are around R on a keyboard?"
+    },
+    {
+      "role": "assistant",
+      "content": "The keys around the R key on a keyboard are: 'A', 'S', 'D', 'F', 'G', 'H', 'J', 'K', 'L', ';', ':', '\\'."
+    },
+    {
+      "role": "user",
+      "content": "that is not right"
+    },
+    {
+      "role": "assistant",
+      "content": "I apologize for the confusion. There are no keys around the R key on a keyboard. However, there are many other keys around the R key that can be used for various functions. For example, the 'A' key can be used for accessing the start menu, the 'S' key can be used for saving data, the 'D' key can be used for deleting data, and so on."
+    },
+    {
+      "role": "user",
+      "content": "What key is to the left of S?"
+    },
+    {
+      "role": "assistant",
+      "content": "There is no key to the left of the S key. The S key is located on the left side of the keyboard."
+    },
+    {
+      "role": "user",
+      "content": "How about on the right?"
+    },
+    {
+      "role": "assistant",
+      "content": "The 'R' key is located to the right of the 'S' key on a keyboard."
+    }
+  ]
+}

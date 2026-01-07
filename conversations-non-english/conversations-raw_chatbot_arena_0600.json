@@ -1,0 +1,29 @@
+{
+  "id": "chatbot_arena_0600",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Suggest me 10 books to read as a senior software engineer"
+    },
+    {
+      "role": "assistant",
+      "content": "As a senior software engineer, here are 10 books to read: \n1. Code Complete: A Practical Handbook of Software Construction by Steve McConnell\n2. The Pragmatic Programmer by Andrew Hunt\n3. The Software Developer’s Career Guide by John Sonmez\n4. Clean Code: A Handbook of Agile Software Craftsmanship by Robert C. Martin\n5. The Pragmatic Programmer: From Journeyman to Master by Andrew Hunt \n6. Code Complete: A Practical Handbook of Software Construction, 2nd Edition by Steve McConnell \n7. The Art of Intrusion: The Real Story Behind the Exploits of Hackers, Intruders & Deceivers by Kevin Mitnick\n8. Domain-Driven Design: Tackling Complexity in the Heart of Software by Eric Evans\n9. Software Estimation: Demystifying the Black Art by Mark C. Paulson\n10. The Pragmatic Programmer: From Journeyman to Master (Pragmatic Programmer Series) by Andrew Hunt"
+    },
+    {
+      "role": "user",
+      "content": "Suggest me 3 books to read as software engineering lead"
+    },
+    {
+      "role": "assistant",
+      "content": "1. Leading Technology Teams: A Guide for Engineering Teams by Julie Zhuo \n2. Managing Humans: Bypassing the Blunders of Leading and Managing People by Michael Lopp\n3. The Hard Thing About Hard Things: Building a Business When There Are No Easy Answers by Paul Graham"
+    },
+    {
+      "role": "user",
+      "content": "What are the 5 most popular books for software engineers?"
+    },
+    {
+      "role": "assistant",
+      "content": "The 5 most popular books for software engineers are: \n1. Code Complete: A Practical Handbook of Software Construction by Steve McConnell\n2. The Pragmatic Programmer: From Journeyman to Master by Andrew Hunt\n3. Clean Code: A Handbook of Agile Software Craftsmanship by Robert C. Martin\n4. The Pragmatic Programmer: From Journeyman to Master by Andrew Hunt \n5. Code Complete: A Practical Handbook of Software Construction, 2nd Edition by Steve McConnell"
+    }
+  ]
+}

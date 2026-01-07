@@ -1,0 +1,21 @@
+{
+  "id": "chatbot_arena_1094",
+  "messages": [
+    {
+      "role": "user",
+      "content": "why is a mouse when it spins?"
+    },
+    {
+      "role": "assistant",
+      "content": "A mouse is spinning because the ball is spinning when it is in motion and the mouse is performing a spin-move."
+    },
+    {
+      "role": "user",
+      "content": "no, it's a riddle: why is a mouse when it spins?"
+    },
+    {
+      "role": "assistant",
+      "content": "A mouse is spinning because it is on a wheel."
+    }
+  ]
+}

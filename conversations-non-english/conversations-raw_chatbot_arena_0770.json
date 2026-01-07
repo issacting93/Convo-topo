@@ -1,0 +1,21 @@
+{
+  "id": "chatbot_arena_0770",
+  "messages": [
+    {
+      "role": "user",
+      "content": "tu parles français ?"
+    },
+    {
+      "role": "assistant",
+      "content": "Oui."
+    },
+    {
+      "role": "user",
+      "content": "quels sont les mouvements artistiques qui ont marqué le 20ème siècle ?"
+    },
+    {
+      "role": "assistant",
+      "content": "Cela dépend du lieu et de la période."
+    }
+  ]
+}

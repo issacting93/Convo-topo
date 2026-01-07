@@ -1,0 +1,29 @@
+{
+  "id": "chatbot_arena_0174",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Comment avoir l'heure dans un rêve ?"
+    },
+    {
+      "role": "assistant",
+      "content": "Il est difficile d'avoir l'heure dans un rêve, car le temps peut passer de façon différente. Le rêve peut passer bien vite, alors que dans la vie réelle, des heures peuvent passer. La meilleure chose à faire est d'essayer de fixer un point de référence pour avoir une idée du temps qui passe. Par exemple, si tu rêves d'aller à l'école, peut-être que tu pourras noter le nombre d'heures sur un papier et comparer plus tard ceci à ce que tu as rêvé."
+    },
+    {
+      "role": "user",
+      "content": "Ok mais il suffit de regarder la montre sur mon bras dans le corps de mon rêve"
+    },
+    {
+      "role": "assistant",
+      "content": "Bien sûr, c'est un moyen simple, mais le rêve peut passer tellement vite que tu ne pourras pas constater le temps."
+    },
+    {
+      "role": "user",
+      "content": "J'ai juste besoin de savoir l'heure pour quitter mon rêve puis me réveiller pour aller travailler"
+    },
+    {
+      "role": "assistant",
+      "content": "Oui, alors attends un moment et essaye de fixer un point de référence."
+    }
+  ]
+}

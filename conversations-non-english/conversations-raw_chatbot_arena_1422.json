@@ -1,0 +1,21 @@
+{
+  "id": "chatbot_arena_1422",
+  "messages": [
+    {
+      "role": "user",
+      "content": "if a former british monarch was cloned, what would they be addressed as."
+    },
+    {
+      "role": "assistant",
+      "content": "If a former British monarch were cloned, they would likely be referred to as \"Sir/Madam\" in any official or formal communication. There is no specific protocol for addressing cloned individuals, as this is a hypothetical situation that has not yet occurred in the real world. However, it is likely that the cloned monarch would be treated with the same respect and dignity as any other individual in the same situation."
+    },
+    {
+      "role": "user",
+      "content": "Wouldn't they have any titles at least? Wouldn't it be somewhat akin to if a monarch resigned, what they would be called."
+    },
+    {
+      "role": "assistant",
+      "content": "If a former British monarch were to resign or pass away, they would be referred to as \"The Former ________, Queen/King\" (or whatever their royal title was), similar to how a monarch who has resigned is referred to as \"The Former ________, King/Queen\" in the British monarchy. However, it is not common practice for former British monarchs to be referred to by their full names or titles, as they are not considered to be reigning monarchs anymore and are not typically referred to by their full names."
+    }
+  ]
+}

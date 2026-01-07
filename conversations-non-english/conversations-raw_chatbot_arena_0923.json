@@ -1,0 +1,21 @@
+{
+  "id": "chatbot_arena_0923",
+  "messages": [
+    {
+      "role": "user",
+      "content": "HOla"
+    },
+    {
+      "role": "assistant",
+      "content": "Hello! How can I assist you today?"
+    },
+    {
+      "role": "user",
+      "content": "habla en español"
+    },
+    {
+      "role": "assistant",
+      "content": "Sí, puedo hablar español. ¿En qué puedo ayudarte?"
+    }
+  ]
+}

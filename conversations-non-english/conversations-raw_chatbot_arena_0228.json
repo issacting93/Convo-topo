@@ -1,0 +1,21 @@
+{
+  "id": "chatbot_arena_0228",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Hi"
+    },
+    {
+      "role": "assistant",
+      "content": "Hello! How may I assist you today?"
+    },
+    {
+      "role": "user",
+      "content": "2 Arbeiter bauen ein Haus in 10 Tagen. Wie lange benötigen 5 Arbeiter?"
+    },
+    {
+      "role": "assistant",
+      "content": "Wenn 2 Arbeiter ein Haus in 10 Tagen bauen können, dann benötigen 5 Arbeiter in 10 \\* 5 = 50 Tagen für das gleiche Haus."
+    }
+  ]
+}

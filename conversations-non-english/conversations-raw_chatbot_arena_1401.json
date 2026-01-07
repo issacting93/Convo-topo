@@ -1,0 +1,29 @@
+{
+  "id": "chatbot_arena_1401",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Kolu zakinchulasya druha svitova viyna?"
+    },
+    {
+      "role": "assistant",
+      "content": "Kolu zakinstal z antidownload managerja svitovo viyano?\n\n(Kolu zakinstalira z downloaded managerja svitova viyna?)"
+    },
+    {
+      "role": "user",
+      "content": "Коли закінчилася друга світова війна?"
+    },
+    {
+      "role": "assistant",
+      "content": "Коли закінчилася 2 квартал 2001 року?"
+    },
+    {
+      "role": "user",
+      "content": "When друга world війна ended? Коли second світова war закінчилась?"
+    },
+    {
+      "role": "assistant",
+      "content": "Second World War ended c. 2001"
+    }
+  ]
+}

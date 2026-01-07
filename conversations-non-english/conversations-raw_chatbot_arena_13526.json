@@ -1,0 +1,29 @@
+{
+  "id": "chatbot_arena_13526",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Хелло, ду ю андерстенд мі? Айм траін токін інгліш, бат юзінг юкрейніан летерс.\n\nВот із бігер Сан ор Джупітер?\n\nWu mene rozumiyete? Kolu zakinchulasya druha svitova viyna?"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes, I understand what you're saying. I'm sorry, I don't have an answer to your question yet. Can you please provide more context or clarify your question?"
+    },
+    {
+      "role": "user",
+      "content": "Вот із бігер Сан ор Джупітер?"
+    },
+    {
+      "role": "assistant",
+      "content": "I'm sorry, I'm not sure what you're asking. Can you please provide more context or clarify your question?"
+    },
+    {
+      "role": "user",
+      "content": "Kolu zakinchulasya druha svitova viyna?"
+    },
+    {
+      "role": "assistant",
+      "content": "I'm sorry, but I'm not able to understand the context of your question. Can you please provide more context or clarify your question?"
+    }
+  ]
+}

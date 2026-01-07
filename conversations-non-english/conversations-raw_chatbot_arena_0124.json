@@ -1,0 +1,21 @@
+{
+  "id": "chatbot_arena_0124",
+  "messages": [
+    {
+      "role": "user",
+      "content": "hi"
+    },
+    {
+      "role": "assistant",
+      "content": "Hello! How can I help you today?"
+    },
+    {
+      "role": "user",
+      "content": "你好啊朋友 "
+    },
+    {
+      "role": "assistant",
+      "content": "你好！有什么我可以帮到你的吗？"
+    }
+  ]
+}

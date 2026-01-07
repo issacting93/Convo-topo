@@ -1,0 +1,234 @@
+{
+  "id": "wildchat_a4a0963cb7b71b2c0c285bf8ec8007dd",
+  "source": "wildchat",
+  "messages": [
+    {
+      "role": "user",
+      "content": "How do i respond to a girl on tinder that answered one of my Joey's from Friends reference with a gift of Rachel  ",
+      "pad": {
+        "p": 0.5,
+        "a": 0.4,
+        "d": 0.5
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "As an AI language model, I am trained to assist users in generating human-like responses. Here is a possible response: \n\n\"Ha! Looks like we found another Friends fan. Good call on the Rachel gif! I'm curious, what's your favorite episode?\"",
+      "pad": {
+        "p": 0.7,
+        "a": 0.5,
+        "d": 0.6
+      }
+    },
+    {
+      "role": "user",
+      "content": "try again",
+      "pad": {
+        "p": 0.3,
+        "a": 0.6,
+        "d": 0.4
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "I apologize if my previous response did not meet your expectations. Here is another option:\n\n\"Nice one! Glad to see that you also appreciate the humor of Joey from Friends. So, did you choose Rachel because she's your favorite character or just because it was a fitting response to my reference?\"",
+      "pad": {
+        "p": 0.4,
+        "a": 0.5,
+        "d": 0.3
+      }
+    },
+    {
+      "role": "user",
+      "content": "try to change subjects",
+      "pad": {
+        "p": 0.6,
+        "a": 0.4,
+        "d": 0.5
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "Sure, glad to help! Here's a response that could change the subject:\n\n\"By the way, I noticed that you mentioned you like hiking in your profile. Where is your go-to spot for hitting the trails? I'm always looking for new places to explore.\"",
+      "pad": {
+        "p": 0.3,
+        "a": 0.6,
+        "d": 0.4
+      }
+    },
+    {
+      "role": "user",
+      "content": "try again",
+      "pad": {
+        "p": 0.4,
+        "a": 0.5,
+        "d": 0.3
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "I apologize if my previous suggestion did not work. Here's a different response that could change the subject:\n\n\"Your response to my Joey reference was pretty spot on :) So, what other TV shows or movies are you into? I'm always looking for recommendations.\"",
+      "pad": {
+        "p": 0.5,
+        "a": 0.5,
+        "d": 0.4
+      }
+    }
+  ],
+  "metadata": {
+    "model": "gpt-3.5-turbo-0301",
+    "timestamp": "2023-06-24T17:33:56+00:00",
+    "turn_count": 4,
+    "language": "English",
+    "country": "Venezuela",
+    "state": "Distrito Federal",
+    "toxic": false,
+    "redacted": false
+  },
+  "classification": {
+    "abstain": false,
+    "interactionPattern": {
+      "category": "advisory",
+      "confidence": 0.9,
+      "evidence": [
+        "As an AI language model, I am trained to assist users in generating human-like responses.",
+        "Here's a response that could change the subject:"
+      ],
+      "rationale": "The AI is providing guidance on how to respond to a message on Tinder.",
+      "alternative": null
+    },
+    "powerDynamics": {
+      "category": "human-led",
+      "confidence": 0.9,
+      "evidence": [
+        "How do i respond to a girl on tinder",
+        "try again",
+        "try to change subjects"
+      ],
+      "rationale": "The human is setting the agenda and directing the AI on what to do.",
+      "alternative": null
+    },
+    "emotionalTone": {
+      "category": "professional",
+      "confidence": 0.7,
+      "evidence": [
+        "As an AI language model, I am trained to assist users in generating human-like responses.",
+        "I apologize if my previous response did not meet your expectations."
+      ],
+      "rationale": "The AI maintains a formal, task-focused tone throughout the conversation.",
+      "alternative": "neutral"
+    },
+    "engagementStyle": {
+      "category": "reactive",
+      "confidence": 0.9,
+      "evidence": [
+        "Here is a possible response:",
+        "Here is another option:",
+        "Here's a response that could change the subject:",
+        "Here's a different response that could change the subject:"
+      ],
+      "rationale": "The AI is responding to the human's requests without providing strong direction.",
+      "alternative": null
+    },
+    "knowledgeExchange": {
+      "category": "skill-sharing",
+      "confidence": 0.7,
+      "evidence": [
+        "Here is a possible response:",
+        "Here is another option:",
+        "Here's a response that could change the subject:",
+        "Here's a different response that could change the subject:"
+      ],
+      "rationale": "The AI is sharing how-to knowledge on how to respond to a message on Tinder.",
+      "alternative": "factual-info"
+    },
+    "conversationPurpose": {
+      "category": "problem-solving",
+      "confidence": 0.8,
+      "evidence": [
+        "How do i respond to a girl on tinder",
+        "try again",
+        "try to change subjects"
+      ],
+      "rationale": "The human is seeking the AI's help to resolve the issue of how to respond to a message on Tinder.",
+      "alternative": null
+    },
+    "topicDepth": {
+      "category": "surface",
+      "confidence": 0.8,
+      "evidence": [
+        "How do i respond to a girl on tinder",
+        "try again",
+        "try to change subjects"
+      ],
+      "rationale": "The conversation involves brief, shallow exchanges without deep exploration of the topic.",
+      "alternative": null
+    },
+    "turnTaking": {
+      "category": "balanced",
+      "confidence": 0.7,
+      "evidence": [
+        "How do i respond to a girl on tinder",
+        "As an AI language model, I am trained to assist users in generating human-like responses.",
+        "try again",
+        "I apologize if my previous response did not meet your expectations."
+      ],
+      "rationale": "Both the human and the AI contribute roughly equal message lengths.",
+      "alternative": null
+    },
+    "humanRole": {
+      "distribution": {
+        "seeker": 0.8,
+        "learner": 0.0,
+        "director": 0.2,
+        "collaborator": 0.0,
+        "sharer": 0.0,
+        "challenger": 0.0
+      },
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "role": "seeker",
+          "quote": "How do i respond to a girl on tinder"
+        },
+        {
+          "role": "director",
+          "quote": "try again"
+        }
+      ],
+      "rationale": "The human primarily requests information and occasionally directs the AI to try again.",
+      "alternative": null
+    },
+    "aiRole": {
+      "distribution": {
+        "expert": 0.7,
+        "advisor": 0.3,
+        "facilitator": 0.0,
+        "reflector": 0.0,
+        "peer": 0.0,
+        "affiliative": 0.0
+      },
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "role": "expert",
+          "quote": "As an AI language model, I am trained to assist users in generating human-like responses."
+        },
+        {
+          "role": "advisor",
+          "quote": "Here is a possible response:"
+        }
+      ],
+      "rationale": "The AI primarily explains and teaches, and also provides advice on how to respond to a message on Tinder.",
+      "alternative": null
+    }
+  },
+  "classificationMetadata": {
+    "model": "gpt-4",
+    "provider": "openai",
+    "timestamp": "2026-01-03T13:00:26.707618",
+    "promptVersion": "1.1.0",
+    "processingTimeMs": 27736,
+    "windowed": false
+  }
+}

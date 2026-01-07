@@ -12,15 +12,15 @@ import { calculatePathPadChanges, getPadChangeColor } from '../utils/padPathColo
 
 // Scene configuration constants
 const SCENE_CONFIG = {
-  TERRAIN_SIZE: 7.5,
-  TERRAIN_HEIGHT: 6.0,
+  TERRAIN_SIZE: 10.0, // Increased from 7.5 to better accommodate longer conversations
+  TERRAIN_HEIGHT: 8.0, // Increased from 6.0 for better height range
   // Isometric-like perspective camera settings
   CAMERA_FOV: 50, // Narrower FOV reduces perspective distortion
   CAMERA_NEAR: 0.1,
   CAMERA_FAR: 100,
   // Isometric angle: ~30° elevation, ~45° azimuth
   // Distance calculated for isometric-like appearance
-  CAMERA_DISTANCE: 18, // Distance from center for isometric-like view
+  CAMERA_DISTANCE: 22, // Increased from 18 to accommodate larger terrain size
   CAMERA_ELEVATION: 30, // Degrees above horizontal (isometric angle)
   CAMERA_LOOK_AT: { x: 0, y: 1, z: 0 },
   MAX_PIXEL_RATIO: 1.5,
@@ -88,14 +88,30 @@ const POST_PROCESSING_CONFIG = {
 
 type CameraView = 'default' | 'side' | 'top';
 
+interface PathWithColor {
+  points: PathPoint[];
+  color: string;
+  name?: string;
+  pattern?: string; // Added for filtering distance lines
+}
+
 interface ThreeSceneProps {
   heightmap: Float32Array;
   pathPoints: PathPoint[];
+  paths?: PathWithColor[]; // Multiple paths with colors
   contours: Contour[];
   hoveredPoint: number | null;
   lockedPoint: number | null;
   timelineProgress: number;
   showContours: boolean;
+  showTerrain?: boolean;
+  showMarkers?: boolean;
+  showPaths?: boolean;
+  coloringMode?: 'path' | 'role'; // New prop
+  visibleRoles?: { user: boolean; assistant: boolean }; // Filter by role
+  showDistanceLines?: boolean;
+  distanceThreshold?: number;
+  connectSamePatternOnly?: boolean; // New prop for filtering
   terrainPosition?: { x: number; y: number; z: number };
   cameraView?: CameraView;
   cameraDistance?: number;
@@ -103,6 +119,7 @@ interface ThreeSceneProps {
   cameraRotation?: number;
   contourColors?: { minor: string; major: string; index: string };
   markerColors?: { user: string; userGlow: string; assistant: string; assistantGlow: string };
+  backgroundColor?: string; // Custom background color
   onPointHover: (index: number | null) => void;
   onPointClick: (index: number) => void;
 }
@@ -120,11 +137,20 @@ interface MarkerRef {
 export function ThreeScene({
   heightmap,
   pathPoints,
+  paths, // Multiple paths with colors
   contours,
   hoveredPoint,
   lockedPoint,
   timelineProgress,
   showContours,
+  showTerrain = false,
+  showMarkers = true,
+  showPaths = true,
+  coloringMode = 'path', // Default to path-based coloring
+  visibleRoles = { user: true, assistant: true },
+  showDistanceLines = false,
+  distanceThreshold = 2.0,
+  connectSamePatternOnly = false,
   terrainPosition = { x: 0, y: 0, z: 0 },
   cameraView = 'default',
   cameraDistance = 18,
@@ -132,6 +158,7 @@ export function ThreeScene({
   cameraRotation = 0,
   contourColors = { minor: '#a0d080', major: '#b0e090', index: '#c0f0a0' },
   markerColors = { user: '#4a3a8a', userGlow: '#5a4a9a', assistant: '#cc5500', assistantGlow: '#dd6600' },
+  backgroundColor,
   onPointHover,
   onPointClick
 }: ThreeSceneProps) {
@@ -141,7 +168,10 @@ export function ThreeScene({
   const cameraRef = useRef<THREE.PerspectiveCamera | THREE.OrthographicCamera | null>(null);
   const frameRef = useRef<number | null>(null);
   const markersRef = useRef<MarkerRef[]>([]);
+  const hitboxesRef = useRef<THREE.Mesh[]>([]); // Cached hitboxes for raycasting
   const pathLineRef = useRef<Line2 | null>(null);
+  const pathLinesRef = useRef<Line2[]>([]); // For multiple paths
+  const distanceLinesRef = useRef<THREE.LineSegments[]>([]); // Lines between nearby points
   const terrainRef = useRef<THREE.Mesh | null>(null);
   const contoursRef = useRef<THREE.LineSegments[]>([]);
   const projectionMarkerRef = useRef<THREE.Group | null>(null);
@@ -173,7 +203,7 @@ export function ThreeScene({
 
     // Scene
     const scene = new THREE.Scene();
-    scene.background = new THREE.Color(COLORS.background);
+    scene.background = new THREE.Color(backgroundColor || COLORS.background);
     scene.fog = new THREE.FogExp2(COLORS.fog, 0.04);
     sceneRef.current = scene;
 
@@ -184,21 +214,21 @@ export function ThreeScene({
       SCENE_CONFIG.CAMERA_NEAR,
       SCENE_CONFIG.CAMERA_FAR
     );
-    
+
     // Calculate isometric-like position (45° azimuth, 30° elevation)
     const elevationRad = (SCENE_CONFIG.CAMERA_ELEVATION * Math.PI) / 180;
     const azimuthRad = (45 * Math.PI) / 180; // 45 degrees for isometric view
-    
+
     const distance = SCENE_CONFIG.CAMERA_DISTANCE;
     const horizontalDistance = distance * Math.cos(elevationRad);
-    
+
     // Camera starts at fixed position relative to origin (not terrainPosition)
     camera.position.set(
       horizontalDistance * Math.sin(azimuthRad),  // x
       distance * Math.sin(elevationRad),          // y (height)
       horizontalDistance * Math.cos(azimuthRad)   // z
     );
-    
+
     // Look at the terrain center (which includes terrainPosition offset)
     camera.lookAt(
       SCENE_CONFIG.CAMERA_LOOK_AT.x + terrainPosition.x,
@@ -250,12 +280,16 @@ export function ThreeScene({
       COLORS.gridDim
     );
     gridHelper.position.set(terrainPosition.x, SCENE_CONFIG.GRID_Y_OFFSET + terrainPosition.y, terrainPosition.z);
-    (gridHelper.material as THREE.Material).transparent = true;
-    (gridHelper.material as THREE.Material).opacity = SCENE_CONFIG.GRID_OPACITY;
+    // GridHelper can return array of materials - handle both cases safely
+    const gridMaterials = Array.isArray(gridHelper.material) ? gridHelper.material : [gridHelper.material];
+    gridMaterials.forEach((mat: THREE.Material) => {
+      mat.transparent = true;
+      mat.opacity = SCENE_CONFIG.GRID_OPACITY;
+    });
     scene.add(gridHelper);
     gridHelperRef.current = gridHelper;
 
-    // Add 2D axis visualization (Functional↔Social, Structured↔Emergent)
+    // Add 2D axis visualization (Functional↔Social, Aligned↔Divergent)
     // Center dividing lines showing quadrants
     const axisY = 0.01; // Slightly above grid to be visible
 
@@ -274,7 +308,7 @@ export function ThreeScene({
     scene.add(xAxisLine);
     xAxisLineRef.current = xAxisLine;
 
-    // Z-axis line (Structured at -Z, Emergent at +Z)
+    // Z-axis line (Aligned at -Z, Divergent at +Z)
     const zAxisGeom = new THREE.BufferGeometry().setFromPoints([
       new THREE.Vector3(terrainPosition.x, axisY + terrainPosition.y, -terrainSize / 2 + terrainPosition.z),
       new THREE.Vector3(terrainPosition.x, axisY + terrainPosition.y, terrainSize / 2 + terrainPosition.z)
@@ -283,7 +317,7 @@ export function ThreeScene({
       color: COLORS.accent,
       transparent: true,
       opacity: 0.8,
-      linewidth: 4  
+      linewidth: 2
     });
     const zAxisLine = new THREE.Line(zAxisGeom, zAxisMat);
     scene.add(zAxisLine);
@@ -300,10 +334,10 @@ export function ThreeScene({
     });
 
     const quadrantPositions = [
-      { x: -terrainSize * 0.4, z: -terrainSize * 0.4 }, // Functional + Structured
-      { x: terrainSize * 0.4, z: -terrainSize * 0.4 },  // Social + Structured
-      { x: -terrainSize * 0.4, z: terrainSize * 0.4 },  // Functional + Emergent
-      { x: terrainSize * 0.4, z: terrainSize * 0.4 }    // Social + Emergent
+      { x: -terrainSize * 0.4, z: -terrainSize * 0.4 }, // Functional + Aligned
+      { x: terrainSize * 0.4, z: -terrainSize * 0.4 },  // Social + Aligned
+      { x: -terrainSize * 0.4, z: terrainSize * 0.4 },  // Functional + Divergent
+      { x: terrainSize * 0.4, z: terrainSize * 0.4 }    // Social + Divergent
     ];
 
     quadrantPositions.forEach(pos => {
@@ -318,13 +352,13 @@ export function ThreeScene({
     const boundaryY = 0.01;
     const halfSize = terrainSize / 2;
     const boundaryPoints = [
-      // Bottom edge (Structured, -Z)
+      // Bottom edge (Aligned, -Z)
       new THREE.Vector3(-halfSize + terrainPosition.x, boundaryY + terrainPosition.y, -halfSize + terrainPosition.z),
       new THREE.Vector3(halfSize + terrainPosition.x, boundaryY + terrainPosition.y, -halfSize + terrainPosition.z),
       // Right edge (Social, +X)
       new THREE.Vector3(halfSize + terrainPosition.x, boundaryY + terrainPosition.y, -halfSize + terrainPosition.z),
       new THREE.Vector3(halfSize + terrainPosition.x, boundaryY + terrainPosition.y, halfSize + terrainPosition.z),
-      // Top edge (Emergent, +Z)
+      // Top edge (Divergent, +Z)
       new THREE.Vector3(halfSize + terrainPosition.x, boundaryY + terrainPosition.y, halfSize + terrainPosition.z),
       new THREE.Vector3(-halfSize + terrainPosition.x, boundaryY + terrainPosition.y, halfSize + terrainPosition.z),
       // Left edge (Functional, -X)
@@ -346,10 +380,10 @@ export function ThreeScene({
     // Add corner posts (vertical lines at each corner)
     const postHeight = 0.5;
     const corners = [
-      { x: -halfSize, z: -halfSize, label: 'FUNC+STR' },
-      { x: halfSize, z: -halfSize, label: 'SOC+STR' },
-      { x: -halfSize, z: halfSize, label: 'FUNC+EMG' },
-      { x: halfSize, z: halfSize, label: 'SOC+EMG' }
+      { x: -halfSize, z: -halfSize, label: 'FUNC+SUP' },
+      { x: halfSize, z: -halfSize, label: 'SOC+SUP' },
+      { x: -halfSize, z: halfSize, label: 'FUNC+DIR' },
+      { x: halfSize, z: halfSize, label: 'SOC+DIR' }
     ];
 
     corners.forEach(corner => {
@@ -372,12 +406,12 @@ export function ThreeScene({
       const w = container.clientWidth;
       const h = container.clientHeight;
       const aspect = w / h;
-      
+
       if (rendererRef.current) {
         rendererRef.current.setSize(w, h);
         rendererRef.current.setPixelRatio(Math.min(window.devicePixelRatio, SCENE_CONFIG.MAX_PIXEL_RATIO));
       }
-      
+
       if (cameraRef.current) {
         if (cameraRef.current instanceof THREE.PerspectiveCamera) {
           cameraRef.current.aspect = aspect;
@@ -398,6 +432,12 @@ export function ThreeScene({
       if (pathLineRef.current && pathLineRef.current.material instanceof LineMaterial) {
         pathLineRef.current.material.resolution.set(w, h);
       }
+      // Update multiple path materials
+      pathLinesRef.current.forEach(pathLine => {
+        if (pathLine && pathLine.material instanceof LineMaterial) {
+          pathLine.material.resolution.set(w, h);
+        }
+      });
     };
     window.addEventListener('resize', handleResize);
 
@@ -522,18 +562,19 @@ export function ThreeScene({
     const terrain = new THREE.Mesh(geometry, material);
     terrain.rotation.x = -Math.PI / 2;
     terrain.position.set(terrainPosition.x, terrainPosition.y, terrainPosition.z);
-    terrain.visible = false; // Hidden - only showing contours
+    terrain.visible = showTerrain; // Controlled by showTerrain prop
     scene.add(terrain);
     terrainRef.current = terrain;
 
-  }, [heightmap, size, terrainSize, terrainHeight]);
+  }, [heightmap, size, terrainSize, terrainHeight, showTerrain]);
 
-  // Update terrain position when terrainPosition changes
+  // Update terrain position and visibility when terrainPosition or showTerrain changes
   useEffect(() => {
     if (terrainRef.current) {
       terrainRef.current.position.set(terrainPosition.x, terrainPosition.y, terrainPosition.z);
+      terrainRef.current.visible = showTerrain;
     }
-  }, [terrainPosition]);
+  }, [terrainPosition, showTerrain]);
 
   // Create/update contour lines
   useEffect(() => {
@@ -603,6 +644,121 @@ export function ThreeScene({
 
   }, [contours, showContours, size, terrainSize, terrainHeight, terrainPosition, contourColors]);
 
+  // Create/update distance lines between nearby points
+  useEffect(() => {
+    if (!sceneRef.current) return;
+    const scene = sceneRef.current;
+
+    // Clear old distance lines
+    distanceLinesRef.current.forEach(line => {
+      scene.remove(line);
+      line.geometry.dispose();
+      if (line.material instanceof THREE.Material) {
+        line.material.dispose();
+      }
+    });
+    distanceLinesRef.current = [];
+
+    if (!showDistanceLines) return;
+
+    // Collect all points from all visible paths
+    const allPoints: Array<{
+      position: THREE.Vector3;
+      pathIndex: number;
+      pointIndex: number;
+      pattern?: string;
+    }> = [];
+
+    if (paths && paths.length > 0) {
+      paths.forEach((pathData, pathIdx) => {
+        if (!pathData.points || pathData.points.length === 0) return;
+
+        const visibleCount = timelineProgress >= 0.99
+          ? pathData.points.length
+          : Math.ceil(pathData.points.length * timelineProgress);
+        const visiblePoints = pathData.points.slice(0, visibleCount);
+
+        visiblePoints.forEach((p, pointIdx) => {
+          let yPosition: number;
+          if (p.pad?.emotionalIntensity !== undefined) {
+            yPosition = p.pad.emotionalIntensity * terrainHeight + MARKER_CONFIG.PATH_Y_OFFSET;
+          } else if (p.padHeight !== undefined) {
+            yPosition = p.padHeight * terrainHeight + MARKER_CONFIG.PATH_Y_OFFSET;
+          } else {
+            yPosition = p.height * terrainHeight + MARKER_CONFIG.PATH_Y_OFFSET;
+          }
+
+          const x = (p.x - 0.5) * terrainSize + terrainPosition.x;
+          const y = yPosition + terrainPosition.y;
+          const z = (p.y - 0.5) * terrainSize + terrainPosition.z;
+
+          allPoints.push({
+            position: new THREE.Vector3(x, y, z),
+            pathIndex: pathIdx,
+            pointIndex: pointIdx,
+            pattern: pathData.pattern
+          });
+        });
+      });
+    }
+
+    // Find pairs of points within distance threshold
+    const lineSegments: THREE.Vector3[] = [];
+    const lineColors: number[] = []; // Store colors for each vertex
+    const thresholdSquared = distanceThreshold * distanceThreshold;
+    const tempColor1 = new THREE.Color();
+    const tempColor2 = new THREE.Color();
+
+    for (let i = 0; i < allPoints.length; i++) {
+      for (let j = i + 1; j < allPoints.length; j++) {
+        const p1 = allPoints[i].position;
+        const p2 = allPoints[j].position;
+
+        // Calculate squared distance (avoiding sqrt for performance)
+        const dx = p2.x - p1.x;
+        const dy = p2.y - p1.y;
+        const dz = p2.z - p1.z;
+        const distSquared = dx * dx + dy * dy + dz * dz;
+
+        // Only connect points from different paths and within threshold
+        // If connectSamePatternOnly is true, also check if patterns match
+        const patternsMatch = !connectSamePatternOnly || (allPoints[i].pattern && allPoints[j].pattern && allPoints[i].pattern === allPoints[j].pattern);
+
+        if (allPoints[i].pathIndex !== allPoints[j].pathIndex && patternsMatch && distSquared <= thresholdSquared) {
+          lineSegments.push(p1, p2);
+
+          // Get colors from the source paths (paths is guaranteed to exist here due to earlier check)
+          const color1Str = paths![allPoints[i].pathIndex].color;
+          const color2Str = paths![allPoints[j].pathIndex].color;
+
+          tempColor1.set(color1Str);
+          tempColor2.set(color2Str);
+
+          // Push colors for both vertices of the segment
+          lineColors.push(tempColor1.r, tempColor1.g, tempColor1.b);
+          lineColors.push(tempColor2.r, tempColor2.g, tempColor2.b);
+        }
+      }
+    }
+
+    if (lineSegments.length > 0) {
+      const geometry = new THREE.BufferGeometry().setFromPoints(lineSegments);
+      geometry.setAttribute('color', new THREE.Float32BufferAttribute(lineColors, 3));
+
+      const material = new THREE.LineBasicMaterial({
+        vertexColors: true, // Enable vertex colors
+        transparent: true,
+        opacity: 0.4, // Slightly increased opacity for colored lines
+        linewidth: 1
+      });
+
+      const lineSegmentsObj = new THREE.LineSegments(geometry, material);
+      lineSegmentsObj.renderOrder = 500; // Render before paths but after terrain
+      scene.add(lineSegmentsObj);
+      distanceLinesRef.current.push(lineSegmentsObj);
+    }
+  }, [paths, showDistanceLines, distanceThreshold, connectSamePatternOnly, timelineProgress, terrainSize, terrainHeight, terrainPosition]);
+
   // Create/update markers and path
   useEffect(() => {
     if (!sceneRef.current) return;
@@ -615,14 +771,23 @@ export function ThreeScene({
         m.group.traverse(obj => {
           if (obj instanceof THREE.Mesh || obj instanceof THREE.Line) {
             if (obj.geometry) obj.geometry.dispose();
-            if (obj.material && obj.material instanceof THREE.Material) obj.material.dispose();
+            if (obj.material) {
+              // Handle both single material and material arrays
+              const materials = Array.isArray(obj.material) ? obj.material : [obj.material];
+              materials.forEach(mat => {
+                if (mat instanceof THREE.Material) {
+                  mat.dispose();
+                }
+              });
+            }
           }
         });
       }
     });
     markersRef.current = [];
+    hitboxesRef.current = []; // Clear cached hitboxes
 
-    // Clear old path
+    // Clear old paths
     if (pathLineRef.current) {
       scene.remove(pathLineRef.current);
       pathLineRef.current.geometry.dispose();
@@ -630,82 +795,276 @@ export function ThreeScene({
         pathLineRef.current.material.dispose();
       }
     }
+    // Clear old multiple paths
+    pathLinesRef.current.forEach(pathLine => {
+      if (pathLine) {
+        scene.remove(pathLine);
+        pathLine.geometry.dispose();
+        if (pathLine.material instanceof LineMaterial) {
+          // LineMaterial may have internal textures that need disposal
+          pathLine.material.dispose();
+        }
+      }
+    });
+    pathLinesRef.current = [];
 
     // Show all markers by default, but allow timeline control for animation
-    // If timelineProgress is 1.0, show all; otherwise show progressive reveal
-    const visibleCount = timelineProgress >= 0.99
-      ? pathPoints.length
-      : Math.ceil(pathPoints.length * timelineProgress);
-    const limitedCount = Math.min(visibleCount, MARKER_CONFIG.MAX_MARKERS);
-    const visiblePoints = pathPoints.slice(0, limitedCount);
+    // Skip markers when using multiple paths (paths prop)
+    let visiblePoints: typeof pathPoints = [];
+    if (!(paths && paths.length > 0) && pathPoints.length > 0) {
+      // If timelineProgress is 1.0, show all; otherwise show progressive reveal
+      const visibleCount = timelineProgress >= 0.99
+        ? pathPoints.length
+        : Math.ceil(pathPoints.length * timelineProgress);
+      const limitedCount = Math.min(visibleCount, MARKER_CONFIG.MAX_MARKERS);
+      visiblePoints = pathPoints.slice(0, limitedCount);
 
-    // Create markers
-    visiblePoints.forEach((point, idx) => {
-      const marker = createMarkerGroup(point, idx, terrainSize, terrainHeight, terrainPosition, markerColors);
-      scene.add(marker.group);
-      markersRef.current.push(marker);
-    });
-
-    // Create path line with gradient colors based on PAD incline/decline
-    if (visiblePoints.length >= 2) {
-      // Calculate PAD changes for each segment
-      const padChanges = calculatePathPadChanges(visiblePoints);
-      
-      // Build positions and colors for line segments
-      const positions: number[] = [];
-      const colors: number[] = [];
-      
-      for (let i = 0; i < visiblePoints.length; i++) {
-        const p = visiblePoints[i];
-        // Z-height is DIRECTLY from PAD emotional intensity
-        let yPosition: number;
-        if (p.pad?.emotionalIntensity !== undefined) {
-          // Use emotional intensity directly for Z-height
-          yPosition = p.pad.emotionalIntensity * terrainHeight + MARKER_CONFIG.PATH_Y_OFFSET;
-        } else if (p.padHeight !== undefined) {
-          // Fallback: use padHeight if emotionalIntensity not available
-          yPosition = p.padHeight * terrainHeight + MARKER_CONFIG.PATH_Y_OFFSET;
-        } else {
-          // Last resort: use terrain height
-          yPosition = p.height * terrainHeight + MARKER_CONFIG.PATH_Y_OFFSET;
-        }
-
-        const x = (p.x - 0.5) * terrainSize + terrainPosition.x;
-        const y = yPosition + terrainPosition.y;
-        const z = (p.y - 0.5) * terrainSize + terrainPosition.z;
-        
-        positions.push(x, y, z);
-        
-        // Get color for this segment (use previous segment's change, or neutral for first point)
-        const change = i > 0 ? padChanges[i - 1] : 0;
-        const color = getPadChangeColor(change);
-        colors.push(color.r, color.g, color.b);
+      // Create markers (only if showMarkers is true)
+      if (showMarkers) {
+        hitboxesRef.current = []; // Clear cached hitboxes
+        visiblePoints.forEach((point, idx) => {
+          const marker = createMarkerGroup(point, idx, terrainSize, terrainHeight, terrainPosition, markerColors);
+          scene.add(marker.group);
+          markersRef.current.push(marker);
+          // Cache hitbox for raycasting performance
+          if (marker.hitbox) {
+            hitboxesRef.current.push(marker.hitbox);
+          }
+        });
+      } else {
+        hitboxesRef.current = []; // Clear if markers disabled
       }
-      
-      // Use Line2 for actually thick lines (LineBasicMaterial ignores linewidth in WebGL)
-      const pathGeom = new LineGeometry();
-      pathGeom.setPositions(positions);
-      pathGeom.setColors(colors);
-
-      const pathMat = new LineMaterial({
-        vertexColors: true,
-        linewidth: 3, // Thinner line with darker colors
-        resolution: new THREE.Vector2(window.innerWidth, window.innerHeight),
-        dashed: false,
-        alphaToCoverage: true, // Better antialiasing
-        worldUnits: false // Use screen space pixels for consistent thickness
-      });
-
-      const pathLine = new Line2(pathGeom, pathMat);
-      scene.add(pathLine);
-      pathLineRef.current = pathLine;
     }
 
-  }, [pathPoints, timelineProgress, terrainSize, terrainHeight, terrainPosition, markerColors]);
+    // Render multiple paths if provided, otherwise render single path
+    if (showPaths) {
+      if (paths && paths.length > 0) {
+        // Render multiple paths with distinct colors
+        paths.forEach((pathData: PathWithColor, pathIdx: number) => {
+          if (pathData.points.length < 2) {
+            console.warn(`Path ${pathIdx} has less than 2 points: ${pathData.points.length}`);
+            return;
+          }
+
+          const visibleCount = timelineProgress >= 0.99
+            ? pathData.points.length
+            : Math.ceil(pathData.points.length * timelineProgress);
+          const visiblePoints = pathData.points.slice(0, visibleCount);
+
+          // Skip paths with less than 2 visible points (need at least 2 points for a line)
+          if (visiblePoints.length < 2) {
+            return;
+          }
+
+          // Build positions for this path
+          const positions: number[] = [];
+          const colors: number[] = [];
+
+          // Parse color (supports both hex and rgba)
+          let r: number, g: number, b: number, a: number;
+          if (pathData.color.startsWith('rgba')) {
+            const match = pathData.color.match(/rgba?\((\d+),\s*(\d+),\s*(\d+)(?:,\s*([\d.]+))?\)/);
+            if (match) {
+              r = parseInt(match[1], 10) / 255;
+              g = parseInt(match[2], 10) / 255;
+              b = parseInt(match[3], 10) / 255;
+              a = match[4] ? parseFloat(match[4]) : 1.0;
+            } else {
+              r = g = b = 0;
+              a = 0.7;
+            }
+          } else {
+            // Hex color
+            const hex = pathData.color.replace('#', '');
+            r = parseInt(hex.substring(0, 2), 16) / 255;
+            g = parseInt(hex.substring(2, 4), 16) / 255;
+            b = parseInt(hex.substring(4, 6), 16) / 255;
+            a = 1.0;
+          }
+
+          // Defined colors for roles (matching marker colors) - Parse hex to RGB
+          const userColorHex = markerColors.user.replace('#', '');
+          const userR = parseInt(userColorHex.substring(0, 2), 16) / 255;
+          const userG = parseInt(userColorHex.substring(2, 4), 16) / 255;
+          const userB = parseInt(userColorHex.substring(4, 6), 16) / 255;
+
+          const aiColorHex = markerColors.assistant.replace('#', '');
+          const aiR = parseInt(aiColorHex.substring(0, 2), 16) / 255;
+          const aiG = parseInt(aiColorHex.substring(2, 4), 16) / 255;
+          const aiB = parseInt(aiColorHex.substring(4, 6), 16) / 255;
+
+          const useVertexColors = coloringMode === 'role';
+
+          for (let i = 0; i < visiblePoints.length; i++) {
+            const p = visiblePoints[i];
+
+            // Filter by role visibility
+            if (p.role === 'user' && !visibleRoles.user) continue;
+            if (p.role === 'assistant' && !visibleRoles.assistant) continue;
+            let yPosition: number;
+            if (p.pad?.emotionalIntensity !== undefined) {
+              yPosition = p.pad.emotionalIntensity * terrainHeight + MARKER_CONFIG.PATH_Y_OFFSET;
+            } else if (p.padHeight !== undefined) {
+              yPosition = p.padHeight * terrainHeight + MARKER_CONFIG.PATH_Y_OFFSET;
+            } else {
+              yPosition = p.height * terrainHeight + MARKER_CONFIG.PATH_Y_OFFSET;
+            }
+
+            const x = (p.x - 0.5) * terrainSize + terrainPosition.x;
+            const y = yPosition + terrainPosition.y;
+            const z = (p.y - 0.5) * terrainSize + terrainPosition.z;
+
+            positions.push(x, y, z);
+
+            if (useVertexColors) {
+              // Color by role
+              if (p.role === 'user') {
+                colors.push(userR, userG, userB);
+              } else {
+                colors.push(aiR, aiG, aiB);
+              }
+            } else {
+              // Color by path (constant)
+              colors.push(r, g, b);
+            }
+          }
+
+          // Create markers or use vertex dots in the shader (for performance we might want to use POINTS later)
+          // But for now, let's create actual markers if requested
+          if (showMarkers) {
+            visiblePoints.forEach((point, idx) => {
+              // Only create occasional markers for performance if very dense?
+              // Or just limits
+              if (idx % 2 !== 0 && visiblePoints.length > 50) return; // simple decimation for performance
+
+              const marker = createMarkerGroup(point, idx, terrainSize, terrainHeight, terrainPosition, markerColors);
+              scene.add(marker.group);
+              markersRef.current.push(marker);
+
+              if (marker.hitbox) {
+                marker.hitbox.userData = { ...marker.hitbox.userData, pathIndex: pathIdx };
+                hitboxesRef.current.push(marker.hitbox);
+              }
+            });
+          }
+
+          const pathGeom = new LineGeometry();
+          pathGeom.setPositions(positions);
+          pathGeom.setColors(colors);
+
+          const pathMat = new LineMaterial({
+            color: useVertexColors ? new THREE.Color(0xffffff) : new THREE.Color(r, g, b), // Set base to white if vertex colors used
+            vertexColors: useVertexColors,
+            linewidth: 1, // Thin paths for multiview
+            resolution: new THREE.Vector2(window.innerWidth, window.innerHeight),
+            dashed: false,
+            dashScale: 1,
+            dashSize: 0,
+            gapSize: 0,
+            alphaToCoverage: false,
+            worldUnits: false,
+            transparent: false, // No transparency needed for full opacity
+            opacity: 1.0, // Full opacity
+            depthTest: true, // Enable depth testing
+            depthWrite: false // Don't write to depth buffer (render on top)
+          });
+
+          const pathLine = new Line2(pathGeom, pathMat);
+          pathLine.visible = true; // Explicitly set visibility
+          pathLine.renderOrder = 1000; // High render order to render on top
+          pathLine.frustumCulled = false; // Don't cull lines
+          scene.add(pathLine);
+          pathLinesRef.current.push(pathLine);
+
+          // Update material resolution on resize
+          const updateResolution = () => {
+            pathMat.resolution.set(window.innerWidth, window.innerHeight);
+          };
+          window.addEventListener('resize', updateResolution);
+
+          // Store cleanup function
+          (pathLine as any)._cleanup = () => {
+            window.removeEventListener('resize', updateResolution);
+          };
+
+          if (import.meta.env.DEV && pathIdx === 0) {
+            console.log(`✅ Rendered path ${pathIdx}: ${visiblePoints.length} points, color: ${pathData.color}, opacity: ${a}`);
+          }
+        });
+
+        if (import.meta.env.DEV) {
+          console.log(`✅ Total paths rendered: ${paths.length}`);
+        }
+      } else if (visiblePoints.length >= 2) {
+        // Single path with PAD-based gradient colors
+        const padChanges = calculatePathPadChanges(visiblePoints);
+        const positions: number[] = [];
+        const colors: number[] = [];
+
+        for (let i = 0; i < visiblePoints.length; i++) {
+          const p = visiblePoints[i];
+          let yPosition: number;
+          if (p.pad?.emotionalIntensity !== undefined) {
+            yPosition = p.pad.emotionalIntensity * terrainHeight + MARKER_CONFIG.PATH_Y_OFFSET;
+          } else if (p.padHeight !== undefined) {
+            yPosition = p.padHeight * terrainHeight + MARKER_CONFIG.PATH_Y_OFFSET;
+          } else {
+            yPosition = p.height * terrainHeight + MARKER_CONFIG.PATH_Y_OFFSET;
+          }
+
+          const x = (p.x - 0.5) * terrainSize + terrainPosition.x;
+          const y = yPosition + terrainPosition.y;
+          const z = (p.y - 0.5) * terrainSize + terrainPosition.z;
+
+          positions.push(x, y, z);
+          const change = i > 0 ? padChanges[i - 1] : 0;
+          const color = getPadChangeColor(change);
+          colors.push(color.r, color.g, color.b);
+        }
+
+        const pathGeom = new LineGeometry();
+        pathGeom.setPositions(positions);
+        pathGeom.setColors(colors);
+
+        const pathMat = new LineMaterial({
+          vertexColors: true,
+          linewidth: 2,
+          resolution: new THREE.Vector2(window.innerWidth, window.innerHeight),
+          dashed: false,
+          alphaToCoverage: true,
+          worldUnits: false
+        });
+
+        const pathLine = new Line2(pathGeom, pathMat);
+        pathLine.visible = showPaths;
+        scene.add(pathLine);
+        pathLineRef.current = pathLine;
+      }
+    }
+
+  }, [pathPoints, paths, timelineProgress, terrainSize, terrainHeight, terrainPosition, markerColors, showMarkers, showPaths, coloringMode, visibleRoles]);
+
+  // Update path visibility when showPaths changes
+  useEffect(() => {
+    if (pathLineRef.current) {
+      pathLineRef.current.visible = showPaths;
+    }
+  }, [showPaths]);
+
+  // Update marker visibility when showMarkers changes
+  useEffect(() => {
+    markersRef.current.forEach(m => {
+      if (m && m.group) {
+        m.group.visible = showMarkers;
+      }
+    });
+  }, [showMarkers]);
 
   // Create/update projection marker showing conversation position on 2D axis
+  // Skip projection marker when using multiple paths (paths prop)
   useEffect(() => {
     if (!sceneRef.current || pathPoints.length === 0) return;
+    if (paths && paths.length > 0) return; // Skip when using multiple paths
     const scene = sceneRef.current;
 
     // Clear old projection marker
@@ -794,14 +1153,14 @@ export function ThreeScene({
     scene.add(group);
     projectionMarkerRef.current = group;
 
-  }, [pathPoints, terrainSize, terrainHeight, terrainPosition]);
+  }, [pathPoints, paths, terrainSize, terrainHeight, terrainPosition]);
 
   // Update grid and axis elements position when terrainPosition changes
   useEffect(() => {
     if (!sceneRef.current) return;
     const axisY = 0.01;
     const halfSize = terrainSize / 2;
-    
+
     // Update grid helper
     if (gridHelperRef.current) {
       gridHelperRef.current.position.set(
@@ -810,7 +1169,7 @@ export function ThreeScene({
         terrainPosition.z
       );
     }
-    
+
     // Update X-axis line
     if (xAxisLineRef.current) {
       const xAxisGeom = new THREE.BufferGeometry().setFromPoints([
@@ -820,7 +1179,7 @@ export function ThreeScene({
       xAxisLineRef.current.geometry.dispose();
       xAxisLineRef.current.geometry = xAxisGeom;
     }
-    
+
     // Update Z-axis line
     if (zAxisLineRef.current) {
       const zAxisGeom = new THREE.BufferGeometry().setFromPoints([
@@ -830,7 +1189,7 @@ export function ThreeScene({
       zAxisLineRef.current.geometry.dispose();
       zAxisLineRef.current.geometry = zAxisGeom;
     }
-    
+
     // Update quadrant markers
     const quadrantPositions = [
       { x: -terrainSize * 0.4, z: -terrainSize * 0.4 },
@@ -844,7 +1203,7 @@ export function ThreeScene({
         marker.position.set(pos.x + terrainPosition.x, axisY + terrainPosition.y, pos.z + terrainPosition.z);
       }
     });
-    
+
     // Update boundary frame
     if (boundaryFrameRef.current) {
       const boundaryY = 0.01;
@@ -861,7 +1220,7 @@ export function ThreeScene({
       boundaryFrameRef.current.geometry.dispose();
       boundaryFrameRef.current.geometry = new THREE.BufferGeometry().setFromPoints(boundaryPoints);
     }
-    
+
     // Update corner posts
     const corners = [
       { x: -halfSize, z: -halfSize },
@@ -881,7 +1240,7 @@ export function ThreeScene({
         post.geometry = postGeom;
       }
     });
-    
+
     // Update camera initial position to account for terrain position
     // (This is handled in animation loop, but we can set initial position here)
     // The animation loop will handle the view changes
@@ -951,7 +1310,7 @@ export function ThreeScene({
     if (composerRef.current) {
       composerRef.current.dispose();
       composerRef.current = null;
-      
+
       // Composer will be recreated on next frame in animation loop
     }
   }, [cameraView, cameraDistance]);
@@ -973,16 +1332,16 @@ export function ThreeScene({
 
       // Calculate center of visible path points in terrain-local space (before terrainPosition offset)
       // const visiblePoints = pathPoints.slice(0, Math.ceil(pathPoints.length * timelineProgress));
-          
-            // Camera anchor: terrain center (world space)
+
+      // Camera anchor: terrain center (world space)
       const centerX = terrainPosition.x;
       const centerZ = terrainPosition.z;
 
       // Pick a stable height to look at (keeps camera from bobbing with emotion height)
       const centerY = terrainPosition.y + terrainHeight * 0.35; // tweak 0.25–0.6
 
-          
-          // Camera position based on view mode
+
+      // Camera position based on view mode
       // All views now support user-controlled rotation, elevation, and distance
       if (cameraView === 'top') {
         // Top view: directly above with optional rotation
@@ -1037,11 +1396,12 @@ export function ThreeScene({
 
       // Contour animation removed - contours are static for better visibility
 
-      // Raycast for hover (throttled for performance)
-      if (frameCount % ANIMATION_CONFIG.RAYCAST_THROTTLE === 0) {
+      // Raycast for hover (throttled for performance, only if showMarkers is true)
+      // Use cached hitbox array for better performance
+      if (showMarkers && frameCount % ANIMATION_CONFIG.RAYCAST_THROTTLE === 0) {
         raycasterRef.current.setFromCamera(mouseRef.current, camera);
         const intersects = raycasterRef.current.intersectObjects(
-          markersRef.current.filter(m => m).map(m => m.hitbox).filter(h => h),
+          hitboxesRef.current,
           false
         );
 
@@ -1098,7 +1458,7 @@ export function ThreeScene({
         frameRef.current = null;
       }
     };
-  }, [hoveredPoint, lockedPoint, onPointHover, cameraView, cameraDistance, cameraElevation, cameraRotation, terrainPosition, timelineProgress, pathPoints]);
+  }, [hoveredPoint, lockedPoint, onPointHover, cameraView, cameraDistance, cameraElevation, cameraRotation, terrainPosition, timelineProgress, pathPoints, showMarkers, showPaths]);
 
   return (
     <div
@@ -1185,7 +1545,7 @@ function createMarkerGroup(
     // Last resort: use terrain height (not ideal, but handles missing PAD data)
     worldY = point.height * terrainHeight;
   }
-  
+
   // Apply terrain position offset to Y
   worldY += terrainPosition.y;
 
@@ -1197,10 +1557,10 @@ function createMarkerGroup(
   let markerColor: string;
 
   if (point.role === 'user') {
-    // User messages: purple-blue for clear distinction
+    // User messages: purple for clear distinction (matches 2D: #7b68ee, 3D uses darker #4a3a8a)
     markerColor = userMarker;
   } else if (point.role === 'assistant') {
-    // Assistant messages: orange for clear distinction
+    // Assistant messages: orange for clear distinction (matches 2D: #f97316, 3D uses darker #cc5500)
     markerColor = assistantMarker;
   } else {
     // Fallback: use functional/social distinction

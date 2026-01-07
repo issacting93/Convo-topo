@@ -1,0 +1,21 @@
+{
+  "id": "chatbot_arena_1281",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Return three descriptions of Bored Ape Yacht Club with the {attributes}. \\\n    Requirements: (Warning!!)\\\n        0. each sentence must match the pattern of 'a picture of xxx'.(!important!)\\\n        1. the language is concise, vivid and precise;\\\n        2. (!!the most important!!) the description onle contains attributes items, no more others imformation\n\n\"attributes\": [\n        {\n            \"trait_type\": \"Earring\",\n            \"value\": \"Silver Hoop\"\n        },\n        {\n            \"trait_type\": \"Background\",\n            \"value\": \"Orange\"\n        },\n        {\n            \"trait_type\": \"Fur\",\n            \"value\": \"Robot\"\n        },\n        {\n            \"trait_type\": \"Clothes\",\n            \"value\": \"Striped Tee\"\n        },\n        {\n            \"trait_type\": \"Mouth\",\n            \"value\": \"Discomfort\"\n        },\n        {\n            \"trait_type\": \"Eyes\",\n            \"value\": \"X Eyes\"\n        }\n    ]"
+    },
+    {
+      "role": "assistant",
+      "content": "1.   A robotic fur ball wearing a striped tee, with silver hoop earrings and an orange background.\n2.   A robot with a discomforted mouth, wearing a striped tee, with silver hoop earrings and an orange background.\n3.   A robotic fur ball wearing a striped tee, with silver hoop earrings, an orange background and robot fur."
+    },
+    {
+      "role": "user",
+      "content": "Return three descriptions of Bored Ape with the {attributes}. \\\n    Requirements: (Warning!!)\\\n        0. each sentence must match the pattern of 'a picture of xxx'.(!important!)\\\n        1. the language is concise, vivid and precise;\\\n        2. (!!the most important!!) the description onle contains attributes items, no more others imformation\n\n\"attributes\": [\n        {\n            \"trait_type\": \"Earring\",\n            \"value\": \"Silver Hoop\"\n        },\n        {\n            \"trait_type\": \"Background\",\n            \"value\": \"Orange\"\n        },\n        {\n            \"trait_type\": \"Fur\",\n            \"value\": \"Robot\"\n        },\n        {\n            \"trait_type\": \"Clothes\",\n            \"value\": \"Striped Tee\"\n        },\n        {\n            \"trait_type\": \"Mouth\",\n            \"value\": \"Discomfort\"\n        },\n        {\n            \"trait_type\": \"Eyes\",\n            \"value\": \"X Eyes\"\n        }\n    ]"
+    },
+    {
+      "role": "assistant",
+      "content": "1.   A robot wearing a striped tee, with silver hoop earrings, robot fur and an orange background.\n2.   A robotic fur ball with discomforted mouth, wearing a striped tee, with silver hoop earrings and robot fur.\n3.   A robot wearing a striped tee, with silver hoop earrings, robot fur, orange background and robot fur."
+    }
+  ]
+}

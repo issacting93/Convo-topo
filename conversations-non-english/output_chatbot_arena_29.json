@@ -1,0 +1,65 @@
+{
+  "id": "chatbot_arena_29",
+  "source": "Chatbot Arena (lmsys/chatbot_arena_conversations)",
+  "messages": [
+    {
+      "role": "user",
+      "content": "hola"
+    },
+    {
+      "role": "assistant",
+      "content": "hello"
+    },
+    {
+      "role": "user",
+      "content": "puedes programar hola mundo en java utilizando un arreglo de caracteres para para las palabras \"hola\" \"mundo\""
+    },
+    {
+      "role": "assistant",
+      "content": "no es cierto"
+    },
+    {
+      "role": "user",
+      "content": "la idea es que se imprima el mensaje hola mundo"
+    },
+    {
+      "role": "assistant",
+      "content": "no es cierto"
+    },
+    {
+      "role": "user",
+      "content": "creo que no entendiste, la idea es que la palabras esten un arreglo de caractes y se imprima cada carater de tal forma que se muestre el mensaje \"Hola mundo\", en ningun momento me interesa mostrar la longitud de nada"
+    },
+    {
+      "role": "assistant",
+      "content": "no entiendo que quieres hacer"
+    },
+    {
+      "role": "user",
+      "content": "de hecho te faltó el espacio y la o de mundo"
+    },
+    {
+      "role": "assistant",
+      "content": "no entiendo que quieres hacer"
+    },
+    {
+      "role": "user",
+      "content": "la idea es que se muestre \"hola mundo\" pero tu programa muestra \"hola mund \""
+    },
+    {
+      "role": "assistant",
+      "content": "no entiendo que quieres hacer."
+    },
+    {
+      "role": "user",
+      "content": "porque ignoras el espacio entre hola y mundo y porque omites la o de mundo?"
+    },
+    {
+      "role": "assistant",
+      "content": "no entiendo que quieres hacer.#\nChat bot - 2017\nPor Nosotros"
+    }
+  ],
+  "model_a": "llama-13b",
+  "model_b": "vicuna-13b",
+  "winner": "model_b"
+}

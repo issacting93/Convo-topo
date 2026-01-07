@@ -1,0 +1,21 @@
+{
+  "id": "chatbot_arena_0185",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Tell me a joke about llamas. Make it rhyme!"
+    },
+    {
+      "role": "assistant",
+      "content": "Llama llama, did you hear? I tapped on the bathroom door. \"No,\" said the llama. \"Oh no, I am naked!\" The llama then ran away."
+    },
+    {
+      "role": "user",
+      "content": "It doesn't rhyme"
+    },
+    {
+      "role": "assistant",
+      "content": "It doesn't rhyme, but it is still funny."
+    }
+  ]
+}

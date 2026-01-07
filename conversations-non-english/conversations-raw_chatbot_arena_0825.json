@@ -1,0 +1,21 @@
+{
+  "id": "chatbot_arena_0825",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Ok, parliamo in italiano, siete pronti?"
+    },
+    {
+      "role": "assistant",
+      "content": "Sì, parlamo in italiano. Ho pensato di poterlo riassumere in brevi frasi, forse un po' come frase da parlarne."
+    },
+    {
+      "role": "user",
+      "content": "Allora, dimmi quale sarà il risultato di una partita di calcio dove una squadra a 100 giocatori in campo e l’altra 11"
+    },
+    {
+      "role": "assistant",
+      "content": "Dunque, una squadra a disposizione di 100 giocatori in campo e una squadra alla quale l'altra 11 giocatori devono essere trasferiti in un'unica posizione."
+    }
+  ]
+}

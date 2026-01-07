@@ -1,0 +1,148 @@
+{
+  "id": "cornell-2",
+  "messages": [
+    {
+      "role": "user",
+      "content": "No, no, it's my fault -- we didn't have a proper introduction ---"
+    },
+    {
+      "role": "assistant",
+      "content": "Cameron."
+    },
+    {
+      "role": "user",
+      "content": "The thing is, Cameron -- I'm at the mercy of a particularly hideous breed of loser.  My sister.  I can't date until she does."
+    },
+    {
+      "role": "assistant",
+      "content": "Seems like she could get a date easy enough..."
+    }
+  ],
+  "classification": {
+    "abstain": false,
+    "interactionPattern": {
+      "category": "casual-chat",
+      "confidence": 0.7,
+      "evidence": [
+        "No, no, it's my fault -- we didn't have a proper introduction ---",
+        "The thing is, Cameron -- I'm at the mercy of a particularly hideous breed of loser.  My sister.  I can't date until she does."
+      ],
+      "rationale": "The conversation is casual with no specific instrumental goal.",
+      "alternative": "storytelling"
+    },
+    "powerDynamics": {
+      "category": "human-led",
+      "confidence": 0.8,
+      "evidence": [
+        "No, no, it's my fault -- we didn't have a proper introduction ---",
+        "The thing is, Cameron -- I'm at the mercy of a particularly hideous breed of loser.  My sister.  I can't date until she does."
+      ],
+      "rationale": "The human is leading the conversation by introducing topics and steering the direction.",
+      "alternative": null
+    },
+    "emotionalTone": {
+      "category": "neutral",
+      "confidence": 0.6,
+      "evidence": [
+        "No, no, it's my fault -- we didn't have a proper introduction ---",
+        "The thing is, Cameron -- I'm at the mercy of a particularly hideous breed of loser.  My sister.  I can't date until she does."
+      ],
+      "rationale": "The conversation does not have a strong emotional coloring.",
+      "alternative": "playful"
+    },
+    "engagementStyle": {
+      "category": "reactive",
+      "confidence": 0.7,
+      "evidence": [
+        "Seems like she could get a date easy enough..."
+      ],
+      "rationale": "The AI is responding to the human's statements without strong direction.",
+      "alternative": null
+    },
+    "knowledgeExchange": {
+      "category": "personal-sharing",
+      "confidence": 0.9,
+      "evidence": [
+        "The thing is, Cameron -- I'm at the mercy of a particularly hideous breed of loser.  My sister.  I can't date until she does."
+      ],
+      "rationale": "The human is sharing personal experiences and feelings.",
+      "alternative": null
+    },
+    "conversationPurpose": {
+      "category": "self-expression",
+      "confidence": 0.8,
+      "evidence": [
+        "The thing is, Cameron -- I'm at the mercy of a particularly hideous breed of loser.  My sister.  I can't date until she does."
+      ],
+      "rationale": "The human is expressing personal thoughts and feelings.",
+      "alternative": "relationship-building"
+    },
+    "topicDepth": {
+      "category": "surface",
+      "confidence": 0.7,
+      "evidence": [
+        "The thing is, Cameron -- I'm at the mercy of a particularly hideous breed of loser.  My sister.  I can't date until she does."
+      ],
+      "rationale": "The conversation is brief and introductory about the human's personal situation.",
+      "alternative": null
+    },
+    "turnTaking": {
+      "category": "balanced",
+      "confidence": 0.7,
+      "evidence": [
+        "No, no, it's my fault -- we didn't have a proper introduction ---",
+        "Cameron.",
+        "The thing is, Cameron -- I'm at the mercy of a particularly hideous breed of loser.  My sister.  I can't date until she does.",
+        "Seems like she could get a date easy enough..."
+      ],
+      "rationale": "Both the human and the AI have roughly equal message lengths.",
+      "alternative": null
+    },
+    "humanRole": {
+      "distribution": {
+        "seeker": 0.0,
+        "learner": 0.0,
+        "director": 0.2,
+        "collaborator": 0.0,
+        "sharer": 0.8,
+        "challenger": 0.0
+      },
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "role": "sharer",
+          "quote": "The thing is, Cameron -- I'm at the mercy of a particularly hideous breed of loser.  My sister.  I can't date until she does."
+        }
+      ],
+      "rationale": "The human is primarily sharing personal narrative and context.",
+      "alternative": null
+    },
+    "aiRole": {
+      "distribution": {
+        "expert": 0.0,
+        "advisor": 0.0,
+        "facilitator": 0.0,
+        "reflector": 0.8,
+        "peer": 0.2,
+        "affiliative": 0.0
+      },
+      "confidence": 0.7,
+      "evidence": [
+        {
+          "role": "reflector",
+          "quote": "Seems like she could get a date easy enough..."
+        }
+      ],
+      "rationale": "The AI is primarily reflecting and validating the human's statements.",
+      "alternative": null
+    }
+  },
+  "classificationMetadata": {
+    "model": "gpt-4",
+    "provider": "openai",
+    "timestamp": "2025-12-18T11:08:08.776803",
+    "promptVersion": "1.1.0",
+    "processingTimeMs": 61295,
+    "windowed": false
+  }
+}

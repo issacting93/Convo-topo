@@ -1,0 +1,21 @@
+{
+  "id": "chatbot_arena_1712",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Hae \"käyttäjät\" taulusta kaikki tiedot"
+    },
+    {
+      "role": "assistant",
+      "content": "Tämä on käyttäjätyöpika, joka löytyy täällä: https://www.teknologiateollisuus.fi/k%C3%A4ytt%C3%A4j%C3%A4j%C3%A4-ja-tutkimuskeskus/tutkimuskeskus/teknologia-ja-yhteisö/oppimisen-koulutus/tiedon-ja-tekstien-kirjoittaminen-ja-kirjoittaminen-ja-koulutus"
+    },
+    {
+      "role": "user",
+      "content": "Käyttäen SQL, hae \"käyttäjät\" taulusta kaikki rivit"
+    },
+    {
+      "role": "assistant",
+      "content": "Tämä on SQL-komento, jolla löytyy \"käyttäjät\" taulusta kaikki rivit:\n\nSELECT * FROM \"käyttäjät\";"
+    }
+  ]
+}

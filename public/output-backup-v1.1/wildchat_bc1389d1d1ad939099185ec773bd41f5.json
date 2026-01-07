@@ -1,0 +1,158 @@
+{
+  "id": "wildchat_bc1389d1d1ad939099185ec773bd41f5",
+  "source": "wildchat",
+  "messages": [
+    {
+      "role": "user",
+      "content": "hi"
+    },
+    {
+      "role": "assistant",
+      "content": "Hello! How can I help you today?"
+    },
+    {
+      "role": "user",
+      "content": "idk"
+    },
+    {
+      "role": "assistant",
+      "content": "That's okay! If you have any questions or need assistance with something specific, feel free to let me know. I'm here to help!"
+    }
+  ],
+  "metadata": {
+    "model": "gpt-3.5-turbo-0613",
+    "timestamp": "2023-08-18T18:04:07+00:00",
+    "turn_count": 2,
+    "language": "English",
+    "country": "Ireland",
+    "state": "Leinster",
+    "toxic": false,
+    "redacted": false
+  },
+  "classification": {
+    "abstain": false,
+    "interactionPattern": {
+      "category": "question-answer",
+      "confidence": 0.5,
+      "evidence": [
+        "Hello! How can I help you today?"
+      ],
+      "rationale": "The AI asks a question and the human responds, although not with a direct answer.",
+      "alternative": "casual-chat"
+    },
+    "powerDynamics": {
+      "category": "ai-led",
+      "confidence": 0.5,
+      "evidence": [
+        "Hello! How can I help you today?"
+      ],
+      "rationale": "The AI initiates the conversation and attempts to guide it, although the human does not provide much direction.",
+      "alternative": "balanced"
+    },
+    "emotionalTone": {
+      "category": "neutral",
+      "confidence": 0.5,
+      "evidence": [
+        "hi",
+        "idk"
+      ],
+      "rationale": "The human's responses are neutral and do not convey a strong emotional tone.",
+      "alternative": "professional"
+    },
+    "engagementStyle": {
+      "category": "reactive",
+      "confidence": 0.5,
+      "evidence": [
+        "That's okay! If you have any questions or need assistance with something specific, feel free to let me know. I'm here to help!"
+      ],
+      "rationale": "The AI is responding to the human's lack of direction without providing strong direction itself.",
+      "alternative": "questioning"
+    },
+    "knowledgeExchange": {
+      "category": "factual-info",
+      "confidence": 0.3,
+      "evidence": [
+        "Hello! How can I help you today?"
+      ],
+      "rationale": "The AI offers to provide factual information or assistance, although no specific knowledge is exchanged.",
+      "alternative": null
+    },
+    "conversationPurpose": {
+      "category": "information-seeking",
+      "confidence": 0.3,
+      "evidence": [
+        "Hello! How can I help you today?"
+      ],
+      "rationale": "The AI's purpose is to provide information or assistance, although the human does not specify a need for information.",
+      "alternative": null
+    },
+    "topicDepth": {
+      "category": "surface",
+      "confidence": 0.9,
+      "evidence": [
+        "hi",
+        "idk"
+      ],
+      "rationale": "The conversation is brief and does not delve into any specific topic.",
+      "alternative": null
+    },
+    "turnTaking": {
+      "category": "balanced",
+      "confidence": 0.7,
+      "evidence": [
+        "hi",
+        "Hello! How can I help you today?",
+        "idk",
+        "That's okay! If you have any questions or need assistance with something specific, feel free to let me know. I'm here to help!"
+      ],
+      "rationale": "Both the human and AI contribute two turns to the conversation.",
+      "alternative": null
+    },
+    "humanRole": {
+      "distribution": {
+        "seeker": 0.5,
+        "learner": 0.0,
+        "director": 0.0,
+        "collaborator": 0.0,
+        "sharer": 0.5,
+        "challenger": 0.0
+      },
+      "confidence": 0.5,
+      "evidence": [
+        {
+          "role": "seeker",
+          "quote": "idk"
+        }
+      ],
+      "rationale": "The human could be seen as a seeker because they do not know what they want, or a sharer because they are expressing their uncertainty.",
+      "alternative": null
+    },
+    "aiRole": {
+      "distribution": {
+        "expert": 0.0,
+        "advisor": 0.5,
+        "facilitator": 0.5,
+        "reflector": 0.0,
+        "peer": 0.0,
+        "affiliative": 0.0
+      },
+      "confidence": 0.5,
+      "evidence": [
+        {
+          "role": "advisor",
+          "quote": "If you have any questions or need assistance with something specific, feel free to let me know. I'm here to help!"
+        }
+      ],
+      "rationale": "The AI could be seen as an advisor because they offer to provide assistance, or a facilitator because they are trying to guide the conversation.",
+      "alternative": null
+    }
+  },
+  "classificationMetadata": {
+    "model": "gpt-4",
+    "provider": "openai",
+    "timestamp": "2026-01-03T16:55:59.429815",
+    "promptVersion": "1.1.0",
+    "processingTimeMs": 21988,
+    "windowed": false
+  }
+}

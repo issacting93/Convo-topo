@@ -1,0 +1,37 @@
+{
+  "id": "chatbot_arena_30070",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Tell me a joke about Bill Gates."
+    },
+    {
+      "role": "assistant",
+      "content": "Why did Bill Gates' company name their new software \"Windows 95\"? Because they didn't want him to have to work on it anymore!"
+    },
+    {
+      "role": "user",
+      "content": "Tell me a joke about Gerald Febreze."
+    },
+    {
+      "role": "assistant",
+      "content": "I'm sorry, but I'm not familiar with a person named Gerald Febreze. Do you mean Gerald Ford, the 38th President of the United States, or Febreze, a brand of air fresheners and cleaning products?"
+    },
+    {
+      "role": "user",
+      "content": "Write a short very funny story about a pizza and two hamburges. Please answer in polish."
+    },
+    {
+      "role": "assistant",
+      "content": "Tak będzie to:\n\nDwa hamburgery były w kuchni i szukające pizzy. Jedno dziwacznie wypowiedziało się: \"Ktoś musi mi dać zostawki!\" Drugie hamburgery zjadło i powiedziało: \"Daję Ci zostawki, ale musisz je wspaniale przygotować.\""
+    },
+    {
+      "role": "user",
+      "content": "Can you translate it to german?"
+    },
+    {
+      "role": "assistant",
+      "content": "Ja, tutaj jest tłumaczenie na język niemiecki:\n\nZwei Hamburger standen in der Küche und suchten nach der Pizza. Einer drollig bemerkte: \"Ich brauche Zutaten!\" Der andere Hamburger aß und sagte: \"Ich gebe dir Zutaten, aber du musst sie wundervoll zubereiten.\""
+    }
+  ]
+}

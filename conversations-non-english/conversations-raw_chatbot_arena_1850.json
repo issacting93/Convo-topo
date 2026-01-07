@@ -1,0 +1,21 @@
+{
+  "id": "chatbot_arena_1850",
+  "messages": [
+    {
+      "role": "user",
+      "content": "test"
+    },
+    {
+      "role": "assistant",
+      "content": "hello there! how can i help you?"
+    },
+    {
+      "role": "user",
+      "content": "ты знаешь русский?"
+    },
+    {
+      "role": "assistant",
+      "content": "позвоним!"
+    }
+  ]
+}

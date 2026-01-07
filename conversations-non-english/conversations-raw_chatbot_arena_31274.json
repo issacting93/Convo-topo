@@ -1,0 +1,45 @@
+{
+  "id": "chatbot_arena_31274",
+  "messages": [
+    {
+      "role": "user",
+      "content": "hi, do you speak russian language?"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes, I do speak Russian."
+    },
+    {
+      "role": "user",
+      "content": "если я буду писать на русском, ты меня поймешь?"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes, if I write in Russian, you will understand me?"
+    },
+    {
+      "role": "user",
+      "content": "отгадай загадку.   зимой и летом это дерево одного цвета, что это за дерево?"
+    },
+    {
+      "role": "assistant",
+      "content": "This is a rainbow tree. In the summer it has multi-colored leaves and in the winter it has bare branches."
+    },
+    {
+      "role": "user",
+      "content": "какие еще есть варианты?"
+    },
+    {
+      "role": "assistant",
+      "content": "What other options are there?"
+    },
+    {
+      "role": "user",
+      "content": "нет ты меня не понял, не нужно переводить мой текст на английский"
+    },
+    {
+      "role": "assistant",
+      "content": "No, you didn't understand me, it's not necessary to translate my text into English."
+    }
+  ]
+}

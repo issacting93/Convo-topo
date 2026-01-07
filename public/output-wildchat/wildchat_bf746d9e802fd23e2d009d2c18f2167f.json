@@ -1,0 +1,70 @@
+{
+  "id": "wildchat_bf746d9e802fd23e2d009d2c18f2167f",
+  "source": "wildchat",
+  "messages": [
+    {
+      "role": "user",
+      "content": "What does Ezekiel 45:8 and 46:16?",
+      "pad": {
+        "p": 0.5,
+        "a": 0.3,
+        "d": 0.4
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "There seems to be a typographical error in your question as it is not clear what you are asking regarding Ezekiel 45:8 and 46:16. \n\nIf you are asking about the content of those specific verses in the Bible, here is their content:\n\nEzekiel 45:8 (ESV): \"This land shall be his possession in Israel. And my princes shall no more oppress my people, but they shall let the house of Israel have the land according to their tribes.\"\n\nEzekiel 46:16 (ESV): \"Thus says the Lord God: If the prince makes a gift to any of his sons as his inheritance, it shall belong to his sons. It is their property by inheritance.\"",
+      "pad": {
+        "p": 0.6,
+        "a": 0.2,
+        "d": 0.5
+      }
+    },
+    {
+      "role": "user",
+      "content": "What does Zechariah 14:20-20 say?",
+      "pad": {
+        "p": 0.5,
+        "a": 0.3,
+        "d": 0.4
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "I apologize, but there seems to be an error in your reference. There is no Zechariah 14:20-20 in the Bible. The book of Zechariah only has 14 chapters. If you have any other questions or need assistance with a different verse, please let me know.",
+      "pad": {
+        "p": 0.5,
+        "a": 0.3,
+        "d": 0.5
+      }
+    },
+    {
+      "role": "user",
+      "content": "I meant Zechariah 14:20-21.",
+      "pad": {
+        "p": 0.7,
+        "a": 0.4,
+        "d": 0.6
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "Zechariah 14:20-21 (ESV) says:\n\n\"On that day there shall be inscribed on the bells of the horses, 'Holy to the Lord.' And the pots in the house of the Lord shall be as the bowls before the altar. And every pot in Jerusalem and Judah shall be holy to the Lord of hosts, so that all who sacrifice may come and take of them and boil the meat of the sacrifice in them. And there shall no longer be a trader in the house of the Lord of hosts on that day.\"\n\nThis passage is part of the concluding verses of the book of Zechariah, describing a future \"day of the Lord\" when there will be holiness and devotion to God esteemed even in ordinary things like horses' bells and pots. It suggests a time of complete dedication and consecration to the Lord, where everything will be set apart for His purposes. Furthermore, it mentions that everyone will have access to the sacred vessels for boiling sacrifices, symbolizing a restoration of worship and unity among the people. Lastly, it states that there will no longer be any dishonest or corrupt individuals in the house of the Lord.",
+      "pad": {
+        "p": 0.8,
+        "a": 0.5,
+        "d": 0.7
+      }
+    }
+  ],
+  "metadata": {
+    "model": "gpt-3.5-turbo-0613",
+    "timestamp": "2023-10-05T23:17:07+00:00",
+    "turn_count": 3,
+    "language": "English",
+    "country": "United States",
+    "state": "Connecticut",
+    "toxic": false,
+    "redacted": false
+  }
+}

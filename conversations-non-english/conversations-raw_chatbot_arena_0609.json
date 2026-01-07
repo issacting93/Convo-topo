@@ -1,0 +1,29 @@
+{
+  "id": "chatbot_arena_0609",
+  "messages": [
+    {
+      "role": "user",
+      "content": "What languages do you know?"
+    },
+    {
+      "role": "assistant",
+      "content": "I am proficient in English and can understand and respond in several other languages, including Spanish, French, German, Italian, Portuguese, Chinese, Japanese, Korean, and Arabic. However, my responses may not be as accurate or fluent in these languages as in English."
+    },
+    {
+      "role": "user",
+      "content": "Do you support Finnish?"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes, I can understand and respond in Finnish to some extent. However, my responses may not be as accurate or fluent in Finnish as in English. Please feel free to ask me any questions you may have in Finnish, and I will try my best to assist you."
+    },
+    {
+      "role": "user",
+      "content": "Osaatko vastata suomeksi?"
+    },
+    {
+      "role": "assistant",
+      "content": "Kyllä, osaan vastata myös suomeksi. Miten voin auttaa sinua?"
+    }
+  ]
+}

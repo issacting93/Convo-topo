@@ -1,0 +1,119 @@
+{
+  "id": "test-1",
+  "messages": [
+    {
+      "role": "user",
+      "content": "I'm looking for help with Python programming. Can you explain how to use list comprehensions?"
+    },
+    {
+      "role": "assistant",
+      "content": "List comprehensions are a concise way to create lists in Python. They follow the syntax: [expression for item in iterable if condition]. For example: [x**2 for x in range(10) if x % 2 == 0] creates a list of squares for even numbers."
+    },
+    {
+      "role": "user",
+      "content": "That's helpful! Can you show me a more complex example?"
+    },
+    {
+      "role": "assistant",
+      "content": "Sure! Here's a nested example: [[x*y for y in range(1, 4)] for x in range(1, 4)] creates a 3x3 multiplication table. You can also combine multiple conditions and transformations."
+    },
+    {
+      "role": "user",
+      "content": "Thanks! I think I understand now."
+    }
+  ],
+  "classification": {
+    "abstain": true,
+    "interactionPattern": {
+      "category": "question-answer",
+      "confidence": 0.5,
+      "evidence": [],
+      "rationale": "Failed to parse JSON response",
+      "alternative": null
+    },
+    "powerDynamics": {
+      "category": "balanced",
+      "confidence": 0.5,
+      "evidence": [],
+      "rationale": "Default",
+      "alternative": null
+    },
+    "emotionalTone": {
+      "category": "neutral",
+      "confidence": 0.5,
+      "evidence": [],
+      "rationale": "Default",
+      "alternative": null
+    },
+    "engagementStyle": {
+      "category": "reactive",
+      "confidence": 0.5,
+      "evidence": [],
+      "rationale": "Default",
+      "alternative": null
+    },
+    "knowledgeExchange": {
+      "category": "factual-info",
+      "confidence": 0.5,
+      "evidence": [],
+      "rationale": "Default",
+      "alternative": null
+    },
+    "conversationPurpose": {
+      "category": "information-seeking",
+      "confidence": 0.5,
+      "evidence": [],
+      "rationale": "Default",
+      "alternative": null
+    },
+    "topicDepth": {
+      "category": "moderate",
+      "confidence": 0.5,
+      "evidence": [],
+      "rationale": "Default",
+      "alternative": null
+    },
+    "turnTaking": {
+      "category": "balanced",
+      "confidence": 0.5,
+      "evidence": [],
+      "rationale": "Default",
+      "alternative": null
+    },
+    "humanRole": {
+      "distribution": {
+        "seeker": 1.0,
+        "learner": 0.0,
+        "director": 0.0,
+        "collaborator": 0.0,
+        "sharer": 0.0,
+        "challenger": 0.0
+      },
+      "confidence": 0.5,
+      "evidence": [],
+      "rationale": "Default",
+      "alternative": null
+    },
+    "aiRole": {
+      "distribution": {
+        "expert": 1.0,
+        "advisor": 0.0,
+        "facilitator": 0.0,
+        "reflector": 0.0,
+        "peer": 0.0,
+        "affiliative": 0.0
+      },
+      "confidence": 0.5,
+      "evidence": [],
+      "rationale": "Default",
+      "alternative": null
+    },
+    "classificationMetadata": {
+      "model": "microsoft/Phi-3-mini-4k-instruct",
+      "provider": "huggingface",
+      "timestamp": "2025-12-26T12:24:56.041140",
+      "promptVersion": "v1.1",
+      "processingTimeMs": 130042
+    }
+  }
+}

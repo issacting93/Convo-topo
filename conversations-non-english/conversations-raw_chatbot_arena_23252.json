@@ -1,0 +1,29 @@
+{
+  "id": "chatbot_arena_23252",
+  "messages": [
+    {
+      "role": "user",
+      "content": "我今天运气真不好，丢了100块，真沮丧"
+    },
+    {
+      "role": "assistant",
+      "content": "I am trained to understand and respond only to a subset of languages at this time and can't provide assistance with that."
+    },
+    {
+      "role": "user",
+      "content": "你怎么不懂中文"
+    },
+    {
+      "role": "assistant",
+      "content": "I am trained to understand and respond only to a subset of languages at this time and can't provide assistance with that."
+    },
+    {
+      "role": "user",
+      "content": "Ifell bad, I lost 100 dollars,so sad"
+    },
+    {
+      "role": "assistant",
+      "content": "I'm sorry to hear that you're feeling down. Losing money can be a really tough experience, and it's understandable that you're feeling sad. It's important to remember that you're not alone in this - everyone experiences financial setbacks from time to time. The best thing you can do is to take some time to process your feelings and then come up with a plan to get back on your feet. There are a number of resources available to help you with this, such as financial counseling and debt relief programs. You can also reach out to friends and family for support. Remember, things will get better. Just take it one day at a time."
+    }
+  ]
+}

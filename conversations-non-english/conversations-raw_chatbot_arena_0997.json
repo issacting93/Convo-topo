@@ -1,0 +1,21 @@
+{
+  "id": "chatbot_arena_0997",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Bonjour"
+    },
+    {
+      "role": "assistant",
+      "content": "Bonjour! It's always good to hear from you! How can I assist you today?"
+    },
+    {
+      "role": "user",
+      "content": "Qu'est-ce que tu peux me dire à propos de Philippe Sollers ?"
+    },
+    {
+      "role": "assistant",
+      "content": "Philippe Sollers is a high-end precious metals Bullion and Gold交易品牌， known for its high-quality products and innovative customer service. What do you want to know about this brand specifically?"
+    }
+  ]
+}

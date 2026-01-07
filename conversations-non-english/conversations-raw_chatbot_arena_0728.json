@@ -1,0 +1,21 @@
+{
+  "id": "chatbot_arena_0728",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Hola"
+    },
+    {
+      "role": "assistant",
+      "content": "¡Hola! ¿En qué puedo ayudarte hoy?"
+    },
+    {
+      "role": "user",
+      "content": "Quiera hablar con alguien "
+    },
+    {
+      "role": "assistant",
+      "content": "Por supuesto, estaré encantado de hablar contigo. ¿De qué te gustaría hablar?"
+    }
+  ]
+}

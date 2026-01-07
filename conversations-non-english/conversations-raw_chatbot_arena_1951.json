@@ -1,0 +1,21 @@
+{
+  "id": "chatbot_arena_1951",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Does a wire whisk lack a handle?"
+    },
+    {
+      "role": "assistant",
+      "content": "No, a wire whisk does have a handle."
+    },
+    {
+      "role": "user",
+      "content": "Would a kitchen table fit inside an Egyptian pyramid?"
+    },
+    {
+      "role": "assistant",
+      "content": "No, a kitchen table would not fit inside an Egyptian pyramid."
+    }
+  ]
+}

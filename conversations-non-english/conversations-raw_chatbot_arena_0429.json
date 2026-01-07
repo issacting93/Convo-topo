@@ -1,0 +1,21 @@
+{
+  "id": "chatbot_arena_0429",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Gib mir 20 klar voneinander abgegrenzte Stichworte zu einem Wirtschaftssektor. Jeder Aufzählungspunkt darf nur ein Wort enthalten und darf kein Eigenname sein. Der Sektor ist AUTOMATEN NON-FOOD und Unternehmen in dem Sektor sind zum Beispiel: Speed Queen, KAYAKOMAT, Used Products.'"
+    },
+    {
+      "role": "assistant",
+      "content": "AUTOMATEN, NUDE, VERBREITUNG, KIEN, STOLE, MENSCHEN, ABGEHRLENZEN"
+    },
+    {
+      "role": "user",
+      "content": "Gib mir 20 klar voneinander abgegrenzte Stichworte zu einem Wirtschaftssektor. Jeder Aufzählungspunkt darf nur ein Wort enthalten und darf kein Eigenname sein. Der Sektor ist AUTOMATEN FOOD und Unternehmen in dem Sektor sind zum Beispiel: MERK Automaten, BistroBox, Tubz Europe. Antworte auf deutsch!"
+    },
+    {
+      "role": "assistant",
+      "content": "AUTOMATEN, NUDE, VERBREITUNG, KIEN, STOLE, MENSCHEN, ABGEHRLENZEN\n\nAUTOMATEN FOOD, BISTRO BOX, TUBS EUROPA"
+    }
+  ]
+}

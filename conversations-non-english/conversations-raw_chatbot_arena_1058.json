@@ -1,0 +1,21 @@
+{
+  "id": "chatbot_arena_1058",
+  "messages": [
+    {
+      "role": "user",
+      "content": "hi"
+    },
+    {
+      "role": "assistant",
+      "content": "Hello! How can I assist you today?"
+    },
+    {
+      "role": "user",
+      "content": "please translate \"返すのは明日でもいいです。\""
+    },
+    {
+      "role": "assistant",
+      "content": "The translation of \"返すのは明日でもいいです。\" from Japanese to English is \"It's okay to return it tomorrow.\""
+    }
+  ]
+}

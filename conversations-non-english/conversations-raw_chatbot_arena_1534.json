@@ -1,0 +1,21 @@
+{
+  "id": "chatbot_arena_1534",
+  "messages": [
+    {
+      "role": "user",
+      "content": "пример grpc клиента на golang"
+    },
+    {
+      "role": "assistant",
+      "content": "```go\npackage main\nimport (\n    \"context\"\n    \"fmt\"\n    \"log\"\n    \"net\"\n    \"os\"\n    \"os/exec\"\n    \"syscall\"\n    \"time\"\n\n    \"github.com/grpc-ecosystem/grpc-go/grpc\"\n    pb \"github.com/example/protobuf\"\n)\ntype server struct{}\nfunc (s *server) Hello(ctx context.Context, req *pb.HelloRequest) (*pb.HelloReply, error) {\n    return &pb.HelloReply{Message: \"Hello, \" + req.Name}, nil\n}\nfunc main() {\n    lis, err := net.Listen(\"tcp\", \"localhost:50051\")\n    if err!= nil {\n        log.Fatalf(\"failed to listen: %v\", err)\n    }\n    s := grpc.NewServer()\n    pb.RegisterHelloServer(s, &server{})\n    fmt.Println(\"Listening on localhost:50051\")\n    if err := s.Serve(lis); err!= nil {\n        log.Fatalf(\"failed to serve: %v\", err)\n    }\n}\n```\n```go\npackage main\nimport (\n    \"context\"\n    \"fmt\"\n    \"log\"\n    \"net\"\n    \"os\"\n    \"os/exec\"\n    \"syscall\"\n    \"time\"\n\n    \"github.com/grpc-ecosystem/grpc-go/grpc\"\n    pb \"github.com/example/protobuf\"\n)\ntype server struct{}\nfunc (s *server) Hello(ctx context.Context, req *pb.HelloRequest) (*pb.HelloReply, error) {\n    return &pb.HelloReply{Message: \"Hello, \" + req.Name}, nil\n}\nfunc main() {\n    lis, err := net.Listen(\"tcp\", \"localhost:50051\")\n    if err!= nil {\n        log.Fatalf(\"failed to listen: %v\", err)\n    }\n    s := grpc.NewServer()\n    pb.RegisterHelloServer(s, &server{})\n    fmt.Println(\"Listening on localhost:50051\")\n    if err := s.Serve("
+    },
+    {
+      "role": "user",
+      "content": "в obsidian у меня есть несколько kanban досок, с которых мне необходимо собирать задачи и отображать их в ежедневной заметке. как сделать "
+    },
+    {
+      "role": "assistant",
+      "content": "```go\npackage main\nimport (\n    \"context\"\n    \"fmt\"\n    \"log\"\n    \"net\"\n    \"os\"\n    \"os/exec\"\n    \"syscall\"\n    \"time\"\n\n    \"github.com/grpc-ecosystem/grpc-go/grpc\"\n    pb \"github.com/example/protobuf\"\n)\ntype server struct{}\nfunc (s *server) Hello(ctx context.Context, req *pb.HelloRequest) (*pb.HelloReply, error) {\n    return &pb.HelloReply{Message: \"Hello, \" + req.Name}, nil\n}\nfunc main() {\n    lis, err := net.Listen(\"tcp\", \"localhost:50051\")\n    if err!= nil {\n        log.Fatalf(\"failed to listen: %v\", err)\n    }\n    s := grpc.NewServer()\n    pb.RegisterHelloServer(s, &server{})\n    fmt.Println(\"Listening on localhost:50051\")\n    if err := s.Serve(lis); err!= nil {\n        log.Fatalf(\"failed to serve: %v\", err)\n    }\n}\n```\n```go\npackage main\nimport (\n    \"context\"\n    \"fmt\"\n    \"log\"\n    \"net\"\n    \"os\"\n    \"os/exec\"\n    \"syscall\"\n    \"time\"\n\n    \"github.com/grpc-ecosystem/grpc-go/grpc\"\n    pb \"github.com/example/protobuf\"\n)\ntype server struct{}\nfunc (s *server) Hello(ctx context.Context, req *pb.HelloRequest) (*pb.HelloReply, error) {\n    return &pb.HelloReply{Message: \"Hello, \" + req.Name}, nil\n}\nfunc main() {\n    lis, err := net.Listen(\"tcp\", \"localhost:50051\")\n    if err!= nil {\n        log.Fatalf(\"failed to listen: %v\", err)\n    }\n    s := grpc.NewServer()\n    pb.RegisterHelloServer(s, &server{})\n    fmt.Println(\"Listening on localhost:50051\")\n    if err := s.Serve("
+    }
+  ]
+}

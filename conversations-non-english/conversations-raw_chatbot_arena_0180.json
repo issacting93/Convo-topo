@@ -1,0 +1,21 @@
+{
+  "id": "chatbot_arena_0180",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Create a screenshot taking chrome extensions"
+    },
+    {
+      "role": "assistant",
+      "content": "Take Screenshot Extension for Chrome"
+    },
+    {
+      "role": "user",
+      "content": "No code written "
+    },
+    {
+      "role": "assistant",
+      "content": "Screenshot Extension for Chrome\n\nTake a screenshot of any website with a single click.\n\nUsers can now capture screenshots of up to 16 corners of the browser window.\n\nSave screenshots to your device's device storage.\n\nUsers can now capture screenshots of up to 16 corners of the browser window.\n\nIt works with custom themes."
+    }
+  ]
+}

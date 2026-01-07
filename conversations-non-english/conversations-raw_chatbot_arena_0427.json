@@ -1,0 +1,21 @@
+{
+  "id": "chatbot_arena_0427",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Hey llllamaaa"
+    },
+    {
+      "role": "assistant",
+      "content": "Hello! How can I assist you today?"
+    },
+    {
+      "role": "user",
+      "content": "Czy możesz pomóc mi w konfiguracji DNSMASQ w routerze asus RT-AX88U z oprogramowaniem Asuswrt-Merlin :388.2?"
+    },
+    {
+      "role": "assistant",
+      "content": "I\\'m sorry, but I\\'m not familiar with the device you\\'re using. Can you please provide more information about your router and the software you\\'re using? Additionally, what operating system are you using?"
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "id": "chatbot_arena_0897",
+  "messages": [
+    {
+      "role": "user",
+      "content": "hola"
+    },
+    {
+      "role": "assistant",
+      "content": "¡Hola! ¿En qué puedo ayudarte?"
+    },
+    {
+      "role": "user",
+      "content": "puedes ayudarme modificando un guió para un video de youtube?"
+    },
+    {
+      "role": "assistant",
+      "content": "Por supuesto, estaré encantado de ayudarte. ¿En qué consiste el guión y cuáles son tus necesidades específicas?"
+    }
+  ]
+}

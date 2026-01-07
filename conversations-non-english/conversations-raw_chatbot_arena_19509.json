@@ -1,0 +1,37 @@
+{
+  "id": "chatbot_arena_19509",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Ahoj, hovoríš po Slovensky?"
+    },
+    {
+      "role": "assistant",
+      "content": "Pozdrav! Každý, kto ma rozumí, volám po Slovensku."
+    },
+    {
+      "role": "user",
+      "content": "Ako sa volá hlavné mesto Slovenska?"
+    },
+    {
+      "role": "assistant",
+      "content": "Hlavné mesto Slovenska je Bratislava."
+    },
+    {
+      "role": "user",
+      "content": "Kto je v súčasnosti prezidentom Slovenska?"
+    },
+    {
+      "role": "assistant",
+      "content": "Andrej Kiska"
+    },
+    {
+      "role": "user",
+      "content": "Kto začal 2. svetovú vojnu?"
+    },
+    {
+      "role": "assistant",
+      "content": "Predsedajúci Vojenská republika Ján Slobodan Miloševič."
+    }
+  ]
+}

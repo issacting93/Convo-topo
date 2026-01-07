@@ -1,0 +1,149 @@
+{
+  "id": "emo-nostalgic-1",
+  "messages": [
+    {
+      "role": "user",
+      "content": "I'm nearing 40 and I find myself thinking a lot about my teen years and early twenties. The friends I had then and the fun we had."
+    },
+    {
+      "role": "assistant",
+      "content": "That is where I am still at, I am scared I will have regrets when I get older"
+    },
+    {
+      "role": "user",
+      "content": "I don'"
+    },
+    {
+      "role": "assistant",
+      "content": "That is good, I am glad you have no regrets!"
+    }
+  ],
+  "classification": {
+    "abstain": false,
+    "interactionPattern": {
+      "category": "casual-chat",
+      "confidence": 0.5,
+      "evidence": [
+        "I'm nearing 40 and I find myself thinking a lot",
+        "That is where I am still at"
+      ],
+      "rationale": "The conversation is a casual exchange of personal experiences and feelings without a specific instrumental goal.",
+      "alternative": null
+    },
+    "powerDynamics": {
+      "category": "balanced",
+      "confidence": 0.5,
+      "evidence": [
+        "I'm nearing 40 and I find myself thinking a lot",
+        "That is where I am still at"
+      ],
+      "rationale": "Both the human and the AI contribute to the direction of the conversation.",
+      "alternative": null
+    },
+    "emotionalTone": {
+      "category": "neutral",
+      "confidence": 0.5,
+      "evidence": [
+        "I'm nearing 40 and I find myself thinking a lot",
+        "That is good, I am glad you have no regrets!"
+      ],
+      "rationale": "The conversation does not have a strong emotional coloring.",
+      "alternative": null
+    },
+    "engagementStyle": {
+      "category": "reactive",
+      "confidence": 0.5,
+      "evidence": [
+        "That is where I am still at",
+        "That is good, I am glad you have no regrets!"
+      ],
+      "rationale": "The AI is responding without strong direction.",
+      "alternative": null
+    },
+    "knowledgeExchange": {
+      "category": "personal-sharing",
+      "confidence": 0.5,
+      "evidence": [
+        "I'm nearing 40 and I find myself thinking a lot",
+        "That is where I am still at"
+      ],
+      "rationale": "The conversation involves the sharing of private experiences and feelings.",
+      "alternative": null
+    },
+    "conversationPurpose": {
+      "category": "self-expression",
+      "confidence": 0.5,
+      "evidence": [
+        "I'm nearing 40 and I find myself thinking a lot"
+      ],
+      "rationale": "The human is processing thoughts and expressing personal experiences.",
+      "alternative": null
+    },
+    "topicDepth": {
+      "category": "surface",
+      "confidence": 0.5,
+      "evidence": [
+        "I'm nearing 40 and I find myself thinking a lot",
+        "That is where I am still at"
+      ],
+      "rationale": "The conversation is brief and introductory.",
+      "alternative": null
+    },
+    "turnTaking": {
+      "category": "balanced",
+      "confidence": 0.5,
+      "evidence": [
+        "I'm nearing 40 and I find myself thinking a lot",
+        "That is where I am still at"
+      ],
+      "rationale": "The human and the AI have roughly equal message lengths.",
+      "alternative": null
+    },
+    "humanRole": {
+      "distribution": {
+        "seeker": 0.0,
+        "learner": 0.0,
+        "director": 0.0,
+        "collaborator": 0.0,
+        "sharer": 1.0,
+        "challenger": 0.0
+      },
+      "confidence": 0.5,
+      "evidence": [
+        {
+          "role": "sharer",
+          "quote": "I'm nearing 40 and I find myself thinking a lot"
+        }
+      ],
+      "rationale": "The human is sharing personal narrative and context mainly for expression.",
+      "alternative": null
+    },
+    "aiRole": {
+      "distribution": {
+        "expert": 0.0,
+        "advisor": 0.0,
+        "facilitator": 0.0,
+        "reflector": 1.0,
+        "peer": 0.0,
+        "affiliative": 0.0
+      },
+      "confidence": 0.5,
+      "evidence": [
+        {
+          "role": "reflector",
+          "quote": "That is good, I am glad you have no regrets!"
+        }
+      ],
+      "rationale": "The AI is paraphrasing and validating the human's feelings.",
+      "alternative": null
+    }
+  },
+  "classificationMetadata": {
+    "model": "gpt-4",
+    "provider": "openai",
+    "timestamp": "2025-12-18T11:43:57.805457",
+    "promptVersion": "1.1.0",
+    "processingTimeMs": 26243,
+    "windowed": false
+  }
+}

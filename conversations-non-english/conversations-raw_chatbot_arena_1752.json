@@ -1,0 +1,21 @@
+{
+  "id": "chatbot_arena_1752",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Given a dialogue, identify the topic of the conversationtopic:\\nasic information\\nSimilarity in sbstract thinking\\nDepressed mood\\nAnorexia nervosa\\n\\ndialogue:\\ndoctor: So, have you ever been in this situation for more than two weeks straight, depressed, eating, sleeping, and feeling unwell all day?\\npatient: No, never before, and I never stopped eating when my son ran on the road."
+    },
+    {
+      "role": "assistant",
+      "content": "The topic of the conversation is depressed mood and the patient's symptoms of depression, including lack of appetite and lack of interest in eating. The conversation also mentions the patient's history of eating disorders and their son's recent accident."
+    },
+    {
+      "role": "user",
+      "content": "Given a dialogue, identify the topic of the conversation. Just only respond the topic.\\n\\ntopic:\\nasic information\\nSimilarity in sbstract thinking\\nDepressed mood\\nAnorexia nervosa\\n\\ndialogue:\\ndoctor: So, have you ever been in this situation for more than two weeks straight, depressed, eating, sleeping, and feeling unwell all day?\\npatient: No, never before, and I never stopped eating when my son ran on the road."
+    },
+    {
+      "role": "assistant",
+      "content": "Depressed mood"
+    }
+  ]
+}

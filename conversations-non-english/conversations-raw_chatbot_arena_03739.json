@@ -1,0 +1,37 @@
+{
+  "id": "chatbot_arena_03739",
+  "messages": [
+    {
+      "role": "user",
+      "content": "qué emperador romano acabó su mandato y decidió irse al campo a cultivar coles?"
+    },
+    {
+      "role": "assistant",
+      "content": "Julio Cesar"
+    },
+    {
+      "role": "user",
+      "content": "otra pista: es el emperador que acabó con la crisis del siglo III"
+    },
+    {
+      "role": "assistant",
+      "content": "correcto"
+    },
+    {
+      "role": "user",
+      "content": "Diocleciano se retiró a cultivar "
+    },
+    {
+      "role": "assistant",
+      "content": "Augusto se retiró a cultivar"
+    },
+    {
+      "role": "user",
+      "content": "las cabras no se pueden cultivar"
+    },
+    {
+      "role": "assistant",
+      "content": "Augusto se retiró a cultivar las cabras"
+    }
+  ]
+}

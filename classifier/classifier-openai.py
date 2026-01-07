@@ -496,7 +496,18 @@ def main():
     
     print(f"Loading from {input_path}...")
     with open(input_path) as f:
-        conversations = json.load(f)
+        data = json.load(f)
+    
+    # Handle both single conversation (dict) and list of conversations
+    if isinstance(data, dict):
+        # Single conversation object
+        conversations = [data]
+    elif isinstance(data, list):
+        # List of conversations
+        conversations = data
+    else:
+        raise ValueError(f"Unexpected data type: {type(data)}. Expected dict or list.")
+    
     print(f"Found {len(conversations)} conversations")
     
     # Apply limit

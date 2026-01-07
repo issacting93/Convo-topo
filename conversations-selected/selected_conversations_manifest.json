@@ -1,0 +1,149 @@
+{
+  "total_selected": 20,
+  "selection_criteria": {
+    "target_count": 4,
+    "strategy": "diverse_by_length_and_source"
+  },
+  "conversations": [
+    {
+      "file": "chatbot_arena_31876.json",
+      "source": "chatbot_arena",
+      "messages": 10,
+      "length": 2249,
+      "exchanges": 9
+    },
+    {
+      "file": "chatbot_arena_17468.json",
+      "source": "chatbot_arena",
+      "messages": 10,
+      "length": 2362,
+      "exchanges": 9
+    },
+    {
+      "file": "chatbot_arena_20469.json",
+      "source": "chatbot_arena",
+      "messages": 10,
+      "length": 764,
+      "exchanges": 9
+    },
+    {
+      "file": "oasst-d52d6758-0798-4b19-b59f-614f0291713f_0036.json",
+      "source": "openassistant",
+      "messages": 10,
+      "length": 3845,
+      "exchanges": 8
+    },
+    {
+      "file": "oasst-054a1929-e0a0-48dc-acdf-d1245276dde1_0055.json",
+      "source": "openassistant",
+      "messages": 11,
+      "length": 2329,
+      "exchanges": 10
+    },
+    {
+      "file": "oasst-f849b054-567b-460e-895a-28c299ec08d2_0064.json",
+      "source": "openassistant",
+      "messages": 11,
+      "length": 1539,
+      "exchanges": 9
+    },
+    {
+      "file": "chatbot_arena_0979.json",
+      "source": "chatbot_arena",
+      "messages": 14,
+      "length": 4380,
+      "exchanges": 13
+    },
+    {
+      "file": "chatbot_arena_0242.json",
+      "source": "chatbot_arena",
+      "messages": 12,
+      "length": 1936,
+      "exchanges": 11
+    },
+    {
+      "file": "chatbot_arena_28653.json",
+      "source": "chatbot_arena",
+      "messages": 14,
+      "length": 7566,
+      "exchanges": 13
+    },
+    {
+      "file": "chatbot_arena_14118.json",
+      "source": "chatbot_arena",
+      "messages": 12,
+      "length": 3479,
+      "exchanges": 11
+    },
+    {
+      "file": "chatbot_arena_0218.json",
+      "source": "chatbot_arena",
+      "messages": 17,
+      "length": 1040,
+      "exchanges": 16
+    },
+    {
+      "file": "oasst-ea3ce59f-18da-46df-bcbb-b46e8c7d9ac7_0047.json",
+      "source": "openassistant",
+      "messages": 12,
+      "length": 8007,
+      "exchanges": 11
+    },
+    {
+      "file": "oasst-6371394f-0f6f-4fb4-a327-c6503d1210ff_0033.json",
+      "source": "openassistant",
+      "messages": 12,
+      "length": 3959,
+      "exchanges": 9
+    },
+    {
+      "file": "oasst-491c6de3-84e0-4cc6-aae2-50516d628a71_0089.json",
+      "source": "openassistant",
+      "messages": 13,
+      "length": 3416,
+      "exchanges": 7
+    },
+    {
+      "file": "oasst-72115199-6685-4332-a496-0f69b762647a_0016.json",
+      "source": "openassistant",
+      "messages": 12,
+      "length": 4471,
+      "exchanges": 7
+    },
+    {
+      "file": "oasst-ad592ee4-5f6d-4bdd-9d81-3d48de7fb402_0028.json",
+      "source": "openassistant",
+      "messages": 13,
+      "length": 3239,
+      "exchanges": 10
+    },
+    {
+      "file": "chatbot_arena_07757.json",
+      "source": "chatbot_arena",
+      "messages": 30,
+      "length": 1021,
+      "exchanges": 29
+    },
+    {
+      "file": "chatbot_arena_1181.json",
+      "source": "chatbot_arena",
+      "messages": 18,
+      "length": 1408,
+      "exchanges": 17
+    },
+    {
+      "file": "oasst-2.json",
+      "source": "openassistant",
+      "messages": 50,
+      "length": 21528,
+      "exchanges": 33
+    },
+    {
+      "file": "oasst-3.json",
+      "source": "openassistant",
+      "messages": 35,
+      "length": 9068,
+      "exchanges": 19
+    }
+  ]
+}

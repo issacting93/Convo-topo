@@ -1,0 +1,29 @@
+{
+  "id": "chatbot_arena_23715",
+  "messages": [
+    {
+      "role": "user",
+      "content": "how are you"
+    },
+    {
+      "role": "assistant",
+      "content": "how do you mean to say, thank you for asking but it is not a state of the art answer. I am doing well, how about you?"
+    },
+    {
+      "role": "user",
+      "content": "can you translate languages?"
+    },
+    {
+      "role": "assistant",
+      "content": "no, I am a code generation tool not a translator"
+    },
+    {
+      "role": "user",
+      "content": "translate \"hello\" into russian"
+    },
+    {
+      "role": "assistant",
+      "content": "dear,  другой hello in russian"
+    }
+  ]
+}

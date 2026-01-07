@@ -1,0 +1,49 @@
+{
+  "id": "chatbot_arena_28",
+  "source": "Chatbot Arena (lmsys/chatbot_arena_conversations)",
+  "messages": [
+    {
+      "role": "user",
+      "content": "REWRITE An AYUSH Hospital is a healthcare facility wherein medical/surgical/para surgical treatment procedures and interventions are carried out by AYUSH Medical\nPractitioner(s) comprising of any of the following:\na.\nCentral or State Government AYUSH Hospital; or\nb.\nTeaching Hospital attached to AYUSH College recognized by the Central Government/Central Council of Indian Medicine/Central Council of Homeopathy;\nor\nc.\nAYUSH Hospital, standalone or co-located with In-patient healthcare facility of any recognized system of medicine, registered with the local authorities,\nwherever applicable, and is under the supervision of a qualified registered AYUSH Medical Practitioner and must comply with all the following criterion:\ni.\nHaving at least 5 in-patient beds\nii.\nHaving qualified AYUSH Medical Practitioner in charge round the clock;\niii.\nHaving dedicated AYUSH therapy sections as required and/or has equipped operation theatre where surgical procedures are to be carried out;\niv.\nMaintaining daily records of the patients and making them accessible to the insurance company’s authorized representative"
+    },
+    {
+      "role": "assistant",
+      "content": "An AYUSH hospital is a type of healthcare facility where medical, surgical, and para-surgical treatment procedures are performed by AYUSH medical practitioners. These hospitals can be categorized as either central or state government-run AYUSH hospitals, teaching hospitals attached to AYUSH colleges recognized by the government, or standalone or co-located hospitals with in-patient healthcare facilities that are registered with local authorities.\n\nTo be considered an AYUSH hospital, the facility must meet certain criteria. Firstly, it must have at least five in-patient beds. Secondly, there must be a qualified and registered AYUSH medical practitioner in charge at all times. Thirdly, the hospital must have dedicated AYUSH therapy sections and/or an equipped operation theatre for surgical procedures. Lastly, the hospital must maintain daily records of its patients and make them accessible to insurance company representatives."
+    },
+    {
+      "role": "user",
+      "content": "REWRITE IN HINDI Grace Period means the specified period of time immediately following the premium due date during which a payment can be made to renew or continue\na Policy in force without loss of conti"
+    },
+    {
+      "role": "assistant",
+      "content": "Grace Period अर्थाDocuments\nGrace Period हिंदी में महत्व"
+    },
+    {
+      "role": "user",
+      "content": "REWRITE Grace Period means the specified period of time immediately following the premium due date during which a payment can be made to renew or continue\na Policy in force without loss of continuity benefits such as waiting periods and coverage of Pre-existing Diseases. Coverage is not available for the period\nfor which no premium is received."
+    },
+    {
+      "role": "assistant",
+      "content": "Grace Period का अर्थ हिंदी में इस अंश में विकल्प दिया गया है - प्रमुख अर्थ के लिए लागू करने से पूर्व अधिक और विशेष अधिक में लागू करने से प्रमुख अर्थ की प्रतिबद्धता सही होगी। पूर्व अधिक और विशेष अधिक शामिल होने से प्रमुख अर्थ के लिए विशेष अधिक के लिए लागू करने से प्रमुख अर्थ की प्रतिबद्धता होगी। अन्यथियों से प्रमुख अर्थ के लिए विशेष अधिक के लिए लागू करने से प्रमुख अर्थ की प्रतिबद्धता होगी। अन्यथियों से प्रमुख अर्थ के लिए लागू करने से प्रमुख अर्थ की प्रतिबद्धता होगी।"
+    },
+    {
+      "role": "user",
+      "content": "REWRITE IN ENGLISH Grace Period means the specified period of time immediately following the premium due date during which a payment can be made to renew or continue a Policy in force without loss of continuity benefits such as waiting periods and coverage of Pre-existing Diseases. Coverage is not available for the period for which no premium is received."
+    },
+    {
+      "role": "assistant",
+      "content": "The Grace Period refers to a specified time frame after the premium due date during which a payment can be made to renew or keep a policy in force without interrupting the continuity of benefits like waiting periods and coverage for pre-existing diseases. However, coverage will not be available for the period during which no premium is paid."
+    },
+    {
+      "role": "user",
+      "content": "TRANSLATE IN HINDI"
+    },
+    {
+      "role": "assistant",
+      "content": "Grace Period हिंदी में अर्थ होता है होम्योपैथी से प्रमुख अर्थ के लिए लागू करने से होम्योपैथी की प्रतिबद्धता होगी अन्यथियों से होम्योपैथी के लिए लागू करने से होम्योपैथी की प्रतिबद्धता होगी। होम्योपैथी इस अंश में होने से होम्योपैथी के लिए विशेष अधिक के लिए लागू करने से होम्योपैथी की प्रतिबद्धता होगी।"
+    }
+  ],
+  "model_a": "vicuna-13b",
+  "model_b": "koala-13b",
+  "winner": "tie (bothbad)"
+}

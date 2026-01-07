@@ -1,0 +1,37 @@
+{
+  "id": "chatbot_arena_0990",
+  "messages": [
+    {
+      "role": "user",
+      "content": "pourquoi nikola tesla dit avoir discuter avec un autre monde ?"
+    },
+    {
+      "role": "assistant",
+      "content": "Nikola Tesla était un scientifique smart, il avait publié des études qui ont influencé les décisions de politique mondiale, et ses amis auraient été les présidents, les CEOs, les magnats de tous les genres. Et bien sur, il a également eu des démêlés avec les pouvoirs publics en raison de ses idées hipster sur l’énergie."
+    },
+    {
+      "role": "user",
+      "content": "le teslascope de nikola tesla servez a quoi ?"
+    },
+    {
+      "role": "assistant",
+      "content": "Le teslascope de nikola tesla aiderait à voyager dans le temps, en faisant une période de wifi dans l’espace, en utilisant le champ électromagnétique du même principe que le CTMU (chirurgien temporel). Le tout avec une bonification de la durée de vie de son smartphone!"
+    },
+    {
+      "role": "user",
+      "content": "le Teslascope capter il des signaux extraterrestres ou alors des signaux venant de l'intra terre ?"
+    },
+    {
+      "role": "assistant",
+      "content": "Le Teslascope capterait des signaux venant de l'intra terre et du extérieur."
+    },
+    {
+      "role": "user",
+      "content": "pourtant tesla a bien dit dans un journal qu'il capter des messages venue de la planéte mars !"
+    },
+    {
+      "role": "assistant",
+      "content": "Nikola Tesla a déclaré dans un journal qu'il captait des messages venant de la planète Mars, il n'a jamais dit que ces messages étaient venus de la planète Mars, et non de l'intérieur de l'espace. Traduction : vire son smartphone!"
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "id": "chatbot_arena_0099",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Can you tell some jokes?"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes, this is my favorite part of the interview. I love to hear how people have fun at work and use humor to connect with each other. Please try to be sensitive to the fact that not everyone has a sense of humor like you do. \n\nHere are a few joke ideas:\n1. A cowboy and a golfer are sitting at a bar. The bartender asks, \"What's the difference between the two of you?\"\nThe cowboy says, \"I ride a horse, I'm an athlete; the golfer sits in a car, is quiet and is an accountant.\"\n\n2. What's the difference between a CEO and a waiter?\nA waiter can be replaced by another waiter; but a CEO cannot be replaced by another CEO."
+    },
+    {
+      "role": "user",
+      "content": "你会说中文吗"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes, I can speak Chinese. \n\nBut I'm more of a translator than a joke teller."
+    }
+  ]
+}

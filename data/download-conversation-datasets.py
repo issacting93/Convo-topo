@@ -21,8 +21,30 @@ def download_sharegpt(output_dir="conversations-raw", limit=None):
         return []
     
     print("📥 Downloading ShareGPT dataset...")
+    
+    # Try multiple ShareGPT dataset variants
+    sharegpt_datasets = [
+        "anon8231489123/ShareGPT_Vicuna_unfiltered",
+        "RyokoAI/ShareGPT52K",
+        "liuhaotian/ShareGPT4V"
+    ]
+    
+    dataset = None
+    for dataset_name in sharegpt_datasets:
+        try:
+            print(f"  Trying {dataset_name}...")
+            dataset = load_dataset(dataset_name, split="train")
+            print(f"  ✅ Successfully loaded {dataset_name}")
+            break
+        except Exception as e:
+            print(f"  ⚠️  Failed to load {dataset_name}: {e}")
+            continue
+    
+    if dataset is None:
+        print("❌ Could not load any ShareGPT dataset variant")
+        return []
+    
     try:
-        dataset = load_dataset("anon8231489123/ShareGPT_Vicuna_unfiltered", split="train")
         
         conversations = []
         output_path = Path(output_dir)

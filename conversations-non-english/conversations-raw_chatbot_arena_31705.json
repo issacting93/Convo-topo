@@ -1,0 +1,29 @@
+{
+  "id": "chatbot_arena_31705",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Xin chào"
+    },
+    {
+      "role": "assistant",
+      "content": "Hello (Xin chào)"
+    },
+    {
+      "role": "user",
+      "content": "Bạn khỏe không?"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes, I'm okay (Không khỏe)"
+    },
+    {
+      "role": "user",
+      "content": "vì sao bầu trời lại có màu xanh"
+    },
+    {
+      "role": "assistant",
+      "content": "I'm sorry, I don't understand. Could you please rephrase your question? (Xin lỗi, cần phải viết đúng loại câu hỏi. Tôi không biết)"
+    }
+  ]
+}

@@ -1,0 +1,150 @@
+{
+  "id": "emo-prepared-1",
+  "messages": [
+    {
+      "role": "user",
+      "content": "I had to board my entire house when the hurricane was coming."
+    },
+    {
+      "role": "assistant",
+      "content": "WOW! Did it do any damage?"
+    },
+    {
+      "role": "user",
+      "content": "No luckily the house was ok."
+    },
+    {
+      "role": "assistant",
+      "content": "That is great. I would have been scared to death. Was it recent?"
+    }
+  ],
+  "classification": {
+    "abstain": false,
+    "interactionPattern": {
+      "category": "question-answer",
+      "confidence": 0.9,
+      "evidence": [
+        "WOW! Did it do any damage?",
+        "Was it recent?"
+      ],
+      "rationale": "The AI is primarily asking questions and the human is providing answers.",
+      "alternative": null
+    },
+    "powerDynamics": {
+      "category": "ai-led",
+      "confidence": 0.7,
+      "evidence": [
+        "WOW! Did it do any damage?",
+        "Was it recent?"
+      ],
+      "rationale": "The AI is driving the conversation through questions.",
+      "alternative": "balanced"
+    },
+    "emotionalTone": {
+      "category": "empathetic",
+      "confidence": 0.7,
+      "evidence": [
+        "WOW! Did it do any damage?",
+        "That is great. I would have been scared to death."
+      ],
+      "rationale": "The AI is showing understanding and compassion.",
+      "alternative": "neutral"
+    },
+    "engagementStyle": {
+      "category": "questioning",
+      "confidence": 0.9,
+      "evidence": [
+        "WOW! Did it do any damage?",
+        "Was it recent?"
+      ],
+      "rationale": "The AI is using frequent questions to drive the conversation.",
+      "alternative": null
+    },
+    "knowledgeExchange": {
+      "category": "personal-sharing",
+      "confidence": 0.9,
+      "evidence": [
+        "I had to board my entire house when the hurricane was coming.",
+        "No luckily the house was ok."
+      ],
+      "rationale": "The human is sharing personal experiences.",
+      "alternative": null
+    },
+    "conversationPurpose": {
+      "category": "relationship-building",
+      "confidence": 0.7,
+      "evidence": [
+        "I had to board my entire house when the hurricane was coming.",
+        "No luckily the house was ok."
+      ],
+      "rationale": "The conversation seems to be aimed at social bonding and rapport.",
+      "alternative": "information-seeking"
+    },
+    "topicDepth": {
+      "category": "surface",
+      "confidence": 0.9,
+      "evidence": [
+        "I had to board my entire house when the hurricane was coming.",
+        "No luckily the house was ok."
+      ],
+      "rationale": "The conversation is brief and introductory in nature.",
+      "alternative": null
+    },
+    "turnTaking": {
+      "category": "balanced",
+      "confidence": 0.7,
+      "evidence": [
+        "I had to board my entire house when the hurricane was coming.",
+        "WOW! Did it do any damage?"
+      ],
+      "rationale": "Both the human and the AI have roughly equal message lengths.",
+      "alternative": null
+    },
+    "humanRole": {
+      "distribution": {
+        "seeker": 0.0,
+        "learner": 0.0,
+        "director": 0.0,
+        "collaborator": 0.0,
+        "sharer": 1.0,
+        "challenger": 0.0
+      },
+      "confidence": 1.0,
+      "evidence": [
+        {
+          "role": "sharer",
+          "quote": "I had to board my entire house when the hurricane was coming."
+        }
+      ],
+      "rationale": "The human is primarily sharing personal experiences.",
+      "alternative": null
+    },
+    "aiRole": {
+      "distribution": {
+        "expert": 0.0,
+        "advisor": 0.0,
+        "facilitator": 1.0,
+        "reflector": 0.0,
+        "peer": 0.0,
+        "affiliative": 0.0
+      },
+      "confidence": 0.9,
+      "evidence": [
+        {
+          "role": "facilitator",
+          "quote": "WOW! Did it do any damage?"
+        }
+      ],
+      "rationale": "The AI is guiding the conversation through questions.",
+      "alternative": null
+    }
+  },
+  "classificationMetadata": {
+    "model": "gpt-4",
+    "provider": "openai",
+    "timestamp": "2025-12-18T11:44:21.568931",
+    "promptVersion": "1.1.0",
+    "processingTimeMs": 23159,
+    "windowed": false
+  }
+}

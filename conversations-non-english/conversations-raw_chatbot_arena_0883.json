@@ -1,0 +1,21 @@
+{
+  "id": "chatbot_arena_0883",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Order the capitals of the german states by the number of inhabitants"
+    },
+    {
+      "role": "assistant",
+      "content": "The five biggest cities of Germany are Berlin, Hamburg, Munich, Cologne and Frankfurt am Main. The states with the five biggest cities are North Rhine-Westphalia, Bavaria, Baden-Württemberg, Hessen and Berlin.\n\nThe biggest state by area is Bavaria with 5.9 million inhabitants. The smallest state is Berlin with 3.7 million inhabitants."
+    },
+    {
+      "role": "user",
+      "content": "Germany has 16 states. Make a list of all 16 states and their capitals and their capital's population, ordered by the population of their capitals"
+    },
+    {
+      "role": "assistant",
+      "content": "North Rhine-Westphalia\nBavaria\nBaden-Württemberg\nHessen\nBerlin\nHamburg\nMunich\nCologne\nFrankfurt am Main\nDüsseldorf\nEssen\nReutlingen\nKarlsruhe\nMannheim\nStuttgart\nNuremberg"
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "id": "chatbot_arena_0286",
+  "messages": [
+    {
+      "role": "user",
+      "content": "hola"
+    },
+    {
+      "role": "assistant",
+      "content": "你好！请问有什么需要帮助的吗？"
+    },
+    {
+      "role": "user",
+      "content": "en español "
+    },
+    {
+      "role": "assistant",
+      "content": "好的，请问有什么关于西班牙文需要帮助的吗？"
+    }
+  ]
+}

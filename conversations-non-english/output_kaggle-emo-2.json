@@ -1,0 +1,129 @@
+{
+  "id": "kaggle-emo-2",
+  "messages": [
+    {
+      "role": "user",
+      "content": "We no longer talk."
+    },
+    {
+      "role": "assistant",
+      "content": ""
+    }
+  ],
+  "classification": {
+    "abstain": true,
+    "interactionPattern": {
+      "category": "casual-chat",
+      "confidence": 0.3,
+      "evidence": [
+        "We no longer talk."
+      ],
+      "rationale": "The conversation is too short to definitively categorize, but the user's statement could be interpreted as a casual comment.",
+      "alternative": null
+    },
+    "powerDynamics": {
+      "category": "human-led",
+      "confidence": 0.3,
+      "evidence": [
+        "We no longer talk."
+      ],
+      "rationale": "The human initiates the conversation, but it's too short to determine a clear pattern.",
+      "alternative": null
+    },
+    "emotionalTone": {
+      "category": "neutral",
+      "confidence": 0.3,
+      "evidence": [
+        "We no longer talk."
+      ],
+      "rationale": "The statement is neutral, but the conversation is too short to determine a clear emotional tone.",
+      "alternative": null
+    },
+    "engagementStyle": {
+      "category": "reactive",
+      "confidence": 0.3,
+      "evidence": [
+        "We no longer talk."
+      ],
+      "rationale": "The human's statement is reactive, but the conversation is too short to determine a clear engagement style.",
+      "alternative": null
+    },
+    "knowledgeExchange": {
+      "category": "personal-sharing",
+      "confidence": 0.3,
+      "evidence": [
+        "We no longer talk."
+      ],
+      "rationale": "The user's statement could be interpreted as sharing personal feelings, but the conversation is too short to definitively categorize.",
+      "alternative": null
+    },
+    "conversationPurpose": {
+      "category": "self-expression",
+      "confidence": 0.3,
+      "evidence": [
+        "We no longer talk."
+      ],
+      "rationale": "The user's statement could be interpreted as self-expression, but the conversation is too short to definitively categorize.",
+      "alternative": null
+    },
+    "topicDepth": {
+      "category": "surface",
+      "confidence": 0.3,
+      "evidence": [
+        "We no longer talk."
+      ],
+      "rationale": "The conversation is too short to explore any topic in depth.",
+      "alternative": null
+    },
+    "turnTaking": {
+      "category": "user-dominant",
+      "confidence": 0.3,
+      "evidence": [
+        "We no longer talk."
+      ],
+      "rationale": "The user is the only one who has taken a turn, but the conversation is too short to determine a clear pattern.",
+      "alternative": null
+    },
+    "humanRole": {
+      "distribution": {
+        "seeker": 0.0,
+        "learner": 0.0,
+        "director": 0.0,
+        "collaborator": 0.0,
+        "sharer": 0.5,
+        "challenger": 0.5
+      },
+      "confidence": 0.3,
+      "evidence": [
+        {
+          "role": "sharer",
+          "quote": "We no longer talk."
+        }
+      ],
+      "rationale": "The user's statement could be interpreted as sharing personal feelings or challenging the AI, but the conversation is too short to definitively categorize.",
+      "alternative": null
+    },
+    "aiRole": {
+      "distribution": {
+        "expert": 0,
+        "advisor": 0,
+        "facilitator": 0,
+        "reflector": 0,
+        "peer": 0,
+        "affiliative": 0
+      },
+      "confidence": 0.3,
+      "evidence": [],
+      "rationale": "The AI has not taken a turn, so it's impossible to categorize its role.",
+      "alternative": null
+    }
+  },
+  "classificationMetadata": {
+    "model": "gpt-4",
+    "provider": "openai",
+    "timestamp": "2025-12-18T11:16:44.366111",
+    "promptVersion": "1.1.0",
+    "processingTimeMs": 20945,
+    "windowed": false
+  }
+}

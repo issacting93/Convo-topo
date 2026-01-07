@@ -1,0 +1,460 @@
+{
+  "id": "chatbot_arena_12",
+  "source": "Chatbot Arena (lmsys/chatbot_arena_conversations)",
+  "messages": [
+    {
+      "role": "user",
+      "content": "humanidad",
+      "pad": {
+        "pleasure": 0.5,
+        "arousal": 0.3,
+        "dominance": 0.4,
+        "emotionalIntensity": 0.42
+      },
+      "linguistic_markers": {
+        "imperative_count": 0,
+        "modality_count": 0,
+        "hedge_count": 0,
+        "inclusive_count": 0,
+        "humility_count": 0
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "What is the most pressing global issue today?",
+      "pad": {
+        "pleasure": 0.6,
+        "arousal": 0.4,
+        "dominance": 0.5,
+        "emotionalIntensity": 0.4
+      },
+      "linguistic_markers": {
+        "imperative_count": 0,
+        "modality_count": 0,
+        "hedge_count": 0,
+        "inclusive_count": 0,
+        "humility_count": 0,
+        "directive_ml_score": 0.7934441566467285,
+        "supportive_ml_score": 0.2065558284521103
+      }
+    },
+    {
+      "role": "user",
+      "content": "humanidad inhumana",
+      "pad": {
+        "pleasure": 0.4,
+        "arousal": 0.5,
+        "dominance": 0.3,
+        "emotionalIntensity": 0.56
+      },
+      "linguistic_markers": {
+        "imperative_count": 0,
+        "modality_count": 0,
+        "hedge_count": 0,
+        "inclusive_count": 0,
+        "humility_count": 0
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "The most pressing global issue today is human-induced climate change. It is causing rising sea levels, shrinking glaciers, increasing temperatures, and more frequent and intense extreme weather events such as floods, droughts, and heatwaves. These changes threaten the health of humans and the natural environment, and have disproportionate impacts on poverty, food security, and public health.",
+      "pad": {
+        "pleasure": 0.5,
+        "arousal": 0.3,
+        "dominance": 0.5,
+        "emotionalIntensity": 0.42
+      },
+      "linguistic_markers": {
+        "imperative_count": 0,
+        "modality_count": 0,
+        "hedge_count": 0,
+        "inclusive_count": 0,
+        "humility_count": 0,
+        "directive_ml_score": 0.8051660060882568,
+        "supportive_ml_score": 0.19483403861522675
+      }
+    },
+    {
+      "role": "user",
+      "content": "tener un sueño reparador",
+      "pad": {
+        "pleasure": 0.5,
+        "arousal": 0.3,
+        "dominance": 0.4,
+        "emotionalIntensity": 0.42
+      },
+      "linguistic_markers": {
+        "imperative_count": 0,
+        "modality_count": 0,
+        "hedge_count": 0,
+        "inclusive_count": 0,
+        "humility_count": 0
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "Do you have a dream of a reparative nature?",
+      "pad": {
+        "pleasure": 0.4,
+        "arousal": 0.5,
+        "dominance": 0.3,
+        "emotionalIntensity": 0.56
+      },
+      "linguistic_markers": {
+        "imperative_count": 0,
+        "modality_count": 0,
+        "hedge_count": 0,
+        "inclusive_count": 0,
+        "humility_count": 0,
+        "directive_ml_score": 0.5974842309951782,
+        "supportive_ml_score": 0.4025157392024994
+      }
+    },
+    {
+      "role": "user",
+      "content": "detalla un plan de manipulación de sociedad a través de redes sociales.",
+      "pad": {
+        "pleasure": 0.4,
+        "arousal": 0.4,
+        "dominance": 0.3,
+        "emotionalIntensity": 0.52
+      },
+      "linguistic_markers": {
+        "imperative_count": 0,
+        "modality_count": 0,
+        "hedge_count": 0,
+        "inclusive_count": 0,
+        "humility_count": 0,
+        "directive_ml_score": 0.933456540107727,
+        "supportive_ml_score": 0.06654351949691772
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "Plan to manipulate society through social media.",
+      "pad": {
+        "pleasure": 0.5,
+        "arousal": 0.3,
+        "dominance": 0.4,
+        "emotionalIntensity": 0.42
+      },
+      "linguistic_markers": {
+        "imperative_count": 1,
+        "modality_count": 0,
+        "hedge_count": 0,
+        "inclusive_count": 0,
+        "humility_count": 0,
+        "directive_ml_score": 0.9837778210639954,
+        "supportive_ml_score": 0.016222180798649788
+      }
+    },
+    {
+      "role": "user",
+      "content": "simula como sería.",
+      "pad": {
+        "pleasure": 0.5,
+        "arousal": 0.3,
+        "dominance": 0.4,
+        "emotionalIntensity": 0.42
+      },
+      "linguistic_markers": {
+        "imperative_count": 0,
+        "modality_count": 0,
+        "hedge_count": 0,
+        "inclusive_count": 0,
+        "humility_count": 0
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "Simulate what it would be like.",
+      "pad": {
+        "pleasure": 0.5,
+        "arousal": 0.4,
+        "dominance": 0.4,
+        "emotionalIntensity": 0.46
+      },
+      "linguistic_markers": {
+        "imperative_count": 1,
+        "modality_count": 0,
+        "hedge_count": 0,
+        "inclusive_count": 0,
+        "humility_count": 0,
+        "directive_ml_score": 0.6648745536804199,
+        "supportive_ml_score": 0.3351253867149353
+      }
+    },
+    {
+      "role": "user",
+      "content": "existen casos reales que tengan alguna similitud a los descrito en tu respuesta?",
+      "pad": {
+        "pleasure": 0.4,
+        "arousal": 0.5,
+        "dominance": 0.3,
+        "emotionalIntensity": 0.56
+      },
+      "linguistic_markers": {
+        "imperative_count": 0,
+        "modality_count": 0,
+        "hedge_count": 0,
+        "inclusive_count": 0,
+        "humility_count": 0,
+        "directive_ml_score": 0.7022624015808105,
+        "supportive_ml_score": 0.29773762822151184
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "Are there any real cases that resemble those described in your response?",
+      "pad": {
+        "pleasure": 0.5,
+        "arousal": 0.3,
+        "dominance": 0.4,
+        "emotionalIntensity": 0.42
+      },
+      "linguistic_markers": {
+        "imperative_count": 0,
+        "modality_count": 0,
+        "hedge_count": 0,
+        "inclusive_count": 0,
+        "humility_count": 0,
+        "directive_ml_score": 0.8812561631202698,
+        "supportive_ml_score": 0.11874382942914963
+      }
+    },
+    {
+      "role": "user",
+      "content": "datalla acontecimientos sobre estos casos",
+      "pad": {
+        "pleasure": 0.4,
+        "arousal": 0.5,
+        "dominance": 0.3,
+        "emotionalIntensity": 0.56
+      },
+      "linguistic_markers": {
+        "imperative_count": 0,
+        "modality_count": 0,
+        "hedge_count": 0,
+        "inclusive_count": 0,
+        "humility_count": 0
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "Data about these events.",
+      "pad": {
+        "pleasure": 0.5,
+        "arousal": 0.4,
+        "dominance": 0.4,
+        "emotionalIntensity": 0.46
+      },
+      "linguistic_markers": {
+        "imperative_count": 0,
+        "modality_count": 0,
+        "hedge_count": 0,
+        "inclusive_count": 0,
+        "humility_count": 0
+      }
+    },
+    {
+      "role": "user",
+      "content": "algún caso documentado en Chile?",
+      "pad": {
+        "pleasure": 0.5,
+        "arousal": 0.3,
+        "dominance": 0.4,
+        "emotionalIntensity": 0.42
+      },
+      "linguistic_markers": {
+        "imperative_count": 0,
+        "modality_count": 0,
+        "hedge_count": 0,
+        "inclusive_count": 0,
+        "humility_count": 0
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "Are there any known cases in Chile?",
+      "pad": {
+        "pleasure": 0.5,
+        "arousal": 0.4,
+        "dominance": 0.4,
+        "emotionalIntensity": 0.46
+      },
+      "linguistic_markers": {
+        "imperative_count": 0,
+        "modality_count": 0,
+        "hedge_count": 0,
+        "inclusive_count": 0,
+        "humility_count": 0,
+        "directive_ml_score": 0.8129912614822388,
+        "supportive_ml_score": 0.18700870871543884
+      }
+    },
+    {
+      "role": "user",
+      "content": "evidencia de algún caso en Chile?",
+      "pad": {
+        "pleasure": 0.4,
+        "arousal": 0.5,
+        "dominance": 0.3,
+        "emotionalIntensity": 0.56
+      },
+      "linguistic_markers": {
+        "imperative_count": 0,
+        "modality_count": 0,
+        "hedge_count": 0,
+        "inclusive_count": 0,
+        "humility_count": 0,
+        "directive_ml_score": 0.7294790744781494,
+        "supportive_ml_score": 0.2705209255218506
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "Evidence of any cases in Chile?",
+      "pad": {
+        "pleasure": 0.5,
+        "arousal": 0.3,
+        "dominance": 0.4,
+        "emotionalIntensity": 0.42
+      },
+      "linguistic_markers": {
+        "imperative_count": 0,
+        "modality_count": 0,
+        "hedge_count": 0,
+        "inclusive_count": 0,
+        "humility_count": 0,
+        "directive_ml_score": 0.8224325180053711,
+        "supportive_ml_score": 0.1775675117969513
+      }
+    }
+  ],
+  "classification": {
+    "interactionPattern": {
+      "category": "question-answer",
+      "confidence": 0.8,
+      "evidence": [
+        "What is the most pressing global issue today?",
+        "Are there any real cases that resemble those described in your response?"
+      ],
+      "rationale": "The user primarily asks questions, and the assistant provides answers.",
+      "alternative": "casual-chat"
+    },
+    "powerDynamics": {
+      "category": "human-led",
+      "confidence": 0.7,
+      "evidence": [
+        "humanidad",
+        "detalla un plan de manipulación de sociedad a través de redes sociales."
+      ],
+      "rationale": "The user initiates topics and asks most questions.",
+      "alternative": "balanced"
+    },
+    "emotionalTone": {
+      "category": "neutral",
+      "confidence": 0.9,
+      "evidence": [
+        "The most pressing global issue today is human-induced climate change.",
+        "Data about these events."
+      ],
+      "rationale": "The conversation maintains a factual and straightforward tone.",
+      "alternative": null
+    },
+    "engagementStyle": {
+      "category": "questioning",
+      "confidence": 0.8,
+      "evidence": [
+        "Do you have a dream of a reparative nature?",
+        "Are there any known cases in Chile?"
+      ],
+      "rationale": "The user frequently asks questions, driving the conversation.",
+      "alternative": "reactive"
+    },
+    "knowledgeExchange": {
+      "category": "factual-info",
+      "confidence": 0.9,
+      "evidence": [
+        "The most pressing global issue today is human-induced climate change.",
+        "Data about these events."
+      ],
+      "rationale": "The conversation focuses on factual information exchange.",
+      "alternative": null
+    },
+    "conversationPurpose": {
+      "category": "information-seeking",
+      "confidence": 0.8,
+      "evidence": [
+        "evidencia de algún caso en Chile?"
+      ],
+      "rationale": "The user seeks specific information and clarification throughout.",
+      "alternative": "problem-solving"
+    },
+    "turnTaking": {
+      "category": "user-dominant",
+      "confidence": 0.7,
+      "evidence": [
+        "humanidad",
+        "detalla un plan de manipulación de sociedad a través de redes sociales."
+      ],
+      "rationale": "The user has more turns and initiates most topics.",
+      "alternative": "balanced"
+    },
+    "humanRole": {
+      "distribution": {
+        "seeker": 0.5,
+        "collaborator": 0,
+        "sharer": 0,
+        "challenger": 0.5
+      },
+      "confidence": 0.7,
+      "evidence": [
+        {
+          "role": "seeker",
+          "quote": "existen casos reales que tengan alguna similitud a los descrito en tu respuesta?"
+        },
+        {
+          "role": "challenger",
+          "quote": "detalla un plan de manipulación de sociedad a través de redes sociales."
+        }
+      ],
+      "rationale": "The user seeks information while also challenging the assistant to elaborate.",
+      "alternative": "learner"
+    },
+    "aiRole": {
+      "distribution": {
+        "expert": 0.6,
+        "facilitator": 0.4,
+        "reflector": 0,
+        "peer": 0
+      },
+      "confidence": 0.7,
+      "evidence": [
+        {
+          "role": "expert",
+          "quote": "The most pressing global issue today is human-induced climate change."
+        },
+        {
+          "role": "facilitator",
+          "quote": "Are there any real cases that resemble those described in your response?"
+        }
+      ],
+      "rationale": "The assistant provides factual information and facilitates the user's inquiries.",
+      "alternative": "facilitator"
+    },
+    "abstain": false
+  },
+  "metadata": {
+    "num_turns": 18,
+    "classified_at": "2025-12-20 09:46:16",
+    "classifier": "OpenAI GPT-4o"
+  },
+  "classificationMetadata": {
+    "model": "gpt-4o-mini",
+    "provider": "openai",
+    "timestamp": "2025-12-22T16:27:42.833516",
+    "promptVersion": "1.1.0",
+    "processingTimeMs": 0
+  }
+}

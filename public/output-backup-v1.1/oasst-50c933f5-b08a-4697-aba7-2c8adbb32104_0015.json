@@ -1,0 +1,253 @@
+{
+  "id": "oasst-50c933f5-b08a-4697-aba7-2c8adbb32104_0015",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Where is Brian?",
+      "pad": {
+        "pleasure": 0.5,
+        "arousal": 0.3,
+        "dominance": 0.4,
+        "emotionalIntensity": 0.42
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "There are many persons named Brian.  Can you specify some more information, such as Brian's surname or other identifying information?",
+      "pad": {
+        "pleasure": 0.6,
+        "arousal": 0.4,
+        "dominance": 0.5,
+        "emotionalIntensity": 0.4
+      }
+    },
+    {
+      "role": "user",
+      "content": "He plays guitar, curly hair, not from USA",
+      "pad": {
+        "pleasure": 0.5,
+        "arousal": 0.3,
+        "dominance": 0.4,
+        "emotionalIntensity": 0.42
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "You may be referring to Brian Harold May, who is an English musician known worldwide for being the lead guitarist of the rock band Queen. He also has curly hair, so it fits your description. As for his whereabouts, it seems he is currently living in south-east London, although this information may be inaccurate.",
+      "pad": {
+        "pleasure": 0.7,
+        "arousal": 0.5,
+        "dominance": 0.6,
+        "emotionalIntensity": 0.38
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "I understand Brian plays guitar. He has curly hair and he is not from USA. Can you tell me more information including where Brian is from and if he is related to you?",
+      "pad": {
+        "pleasure": 0.5,
+        "arousal": 0.4,
+        "dominance": 0.5,
+        "emotionalIntensity": 0.46
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "There are many curly haired guitarists around the world. Can you give some more information?",
+      "pad": {
+        "pleasure": 0.4,
+        "arousal": 0.3,
+        "dominance": 0.4,
+        "emotionalIntensity": 0.48
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "I'm sorry, but I don't have any information about Brian. Can you please provide more context or details about who Brian is and what you're looking for? I'll do my best to help you with the information I have.",
+      "pad": {
+        "pleasure": 0.5,
+        "arousal": 0.4,
+        "dominance": 0.5,
+        "emotionalIntensity": 0.46
+      }
+    },
+    {
+      "role": "user",
+      "content": "It is a French joke, can you tell me more about the background.",
+      "pad": {
+        "pleasure": 0.7,
+        "arousal": 0.6,
+        "dominance": 0.5,
+        "emotionalIntensity": 0.42
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "The joke comes from the famous comedian, Gad Elmaleh, and the joke plays on the teaching method used in French schools for learning English throughout the 80s and into the 90s.\nThe joke from his sketch goes like this (translated into English) :\n\n```Because I know a little English too, I learned English in school when I was little like all of you.\nWe all had the same dumb class!\nWith that famous existential question that you just had to find an answer to: “Where is Brian?”\nBrian traumatized all of you as well…\nYou didn’t know who Brian was, you didn’t care, but you had to find out where he was in the house in order to learn English, that was it.\nYou had to find the members of Brian’s family in order to learn English, and what happened?\n“Where is Brian?” and like an idiot you calmly responded: “Brian is in the kitchen”…```\n\nHere is a YouTube video of the original routine, if you're interested: https://www.youtube.com/watch?v=7SSkObIf9Ic",
+      "pad": {
+        "pleasure": 0.6,
+        "arousal": 0.5,
+        "dominance": 0.5,
+        "emotionalIntensity": 0.44
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "This is a French inside joke that references a common English teaching manual used in France in the 1970s and 1980s.\n\nThe \"Where is Brian\" joke originates from famous comedian, Gad Elmaleh who recalls being traumatized learning English in school while young. He says \"You didn’t know who Brian was, you didn’t care, but you had to find out where he was in the house in order to learn English, that was it.\"\n\nThe correct response is \"Brian is in the kitchen.\" Try it with your French friends!",
+      "pad": {
+        "pleasure": 0.4,
+        "arousal": 0.3,
+        "dominance": 0.4,
+        "emotionalIntensity": 0.48
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "Sorry, i would need more details on the joke to see if i can find information about it's origin.",
+      "pad": {
+        "pleasure": 0.5,
+        "arousal": 0.4,
+        "dominance": 0.5,
+        "emotionalIntensity": 0.46
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "Brian was told there was a monster in his closet by a voice that came from under his bed. Brian has decided to seek refuge alongside the unfamiliar voice rather than risk joining the monster that is hiding in the closet.",
+      "pad": {
+        "pleasure": 0.6,
+        "arousal": 0.5,
+        "dominance": 0.5,
+        "emotionalIntensity": 0.44
+      }
+    }
+  ],
+  "classification": {
+    "abstain": false,
+    "interactionPattern": {
+      "category": "storytelling",
+      "confidence": 0.9,
+      "evidence": [
+        "There are many persons named Brian. Can you specify some more information, such as Brian's surname or other identifying information?"
+      ],
+      "rationale": "...",
+      "alternative": null
+    },
+    "powerDynamics": {
+      "category": "human-led",
+      "confidence": 0.8,
+      "evidence": [
+        "There are many persons named Brian. Can you specify some more information, such as Brian's surname or other identifying information?"
+      ],
+      "rationale": "...",
+      "alternative": null
+    },
+    "emotionalTone": {
+      "category": "neutral",
+      "confidence": 0.9,
+      "evidence": [
+        "Sorry, i would need more details on the joke to see if i can find information about it's origin."
+      ],
+      "rationale": "...",
+      "alternative": null
+    },
+    "engagementStyle": {
+      "category": "exploring",
+      "confidence": 0.8,
+      "evidence": [
+        "Can you tell me more information including where Brian is from and if he is related to you?"
+      ],
+      "rationale": "...",
+      "alternative": null
+    },
+    "knowledgeExchange": {
+      "category": "opinion-exchange",
+      "confidence": 0.7,
+      "evidence": [
+        "The joke comes from the famous comedian, Gad Elmaleh, and the joke plays on the teaching method used in French schools for learning English throughout the 80s and into the 90s."
+      ],
+      "rationale": "...",
+      "alternative": null
+    },
+    "conversationPurpose": {
+      "category": "self-expression",
+      "confidence": 0.9,
+      "evidence": [
+        "The joke from his sketch goes like this (translated into English) :"
+      ],
+      "rationale": "...",
+      "alternative": null
+    },
+    "topicDepth": {
+      "category": "surface",
+      "confidence": 0.8,
+      "evidence": [
+        "Sorry, i would need more details on the joke to see if i can find information about it's origin."
+      ],
+      "rationale": "...",
+      "alternative": null
+    },
+    "turnTaking": {
+      "category": "balanced",
+      "confidence": 0.8,
+      "evidence": [
+        "Can you tell me more information including where Brian is from and if he is related to you?"
+      ],
+      "rationale": "...",
+      "alternative": null
+    },
+    "humanRole": {
+      "distribution": {
+        "seeker": 0.6666666666666666,
+        "learner": 0.3333333333333333,
+        "director": 0.0,
+        "collaborator": 0.0,
+        "sharer": 0.0,
+        "challenger": 0.0
+      },
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "role": "seeker",
+          "quote": "Where is Brian?"
+        }
+      ],
+      "rationale": "...",
+      "alternative": null
+    },
+    "aiRole": {
+      "distribution": {
+        "expert": 0.6666666666666666,
+        "advisor": 0.3333333333333333,
+        "facilitator": 0.0,
+        "reflector": 0.0,
+        "peer": 0.0,
+        "affiliative": 0.0
+      },
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "role": "expert",
+          "quote": "The joke comes from the famous comedian, Gad Elmaleh..."
+        }
+      ],
+      "rationale": "...",
+      "alternative": null
+    },
+    "classificationMetadata": {
+      "model": "llama3.2:latest",
+      "provider": "ollama",
+      "timestamp": "2025-12-26T08:19:51.658056Z",
+      "promptVersion": "v1.1",
+      "processingTimeMs": 39006
+    }
+  },
+  "classificationMetadata": {
+    "model": "unknown",
+    "provider": "openassistant",
+    "timestamp": "2025-12-28T12:47:21.596346Z",
+    "promptVersion": "v1.1",
+    "processingTimeMs": 0,
+    "backfilled": true
+  }
+}

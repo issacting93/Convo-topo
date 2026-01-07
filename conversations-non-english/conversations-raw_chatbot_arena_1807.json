@@ -1,0 +1,21 @@
+{
+  "id": "chatbot_arena_1807",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Explícame como si tuviera 5 años qué es un Transformer en Deep Learning"
+    },
+    {
+      "role": "assistant",
+      "content": "Un transformer en deep learning es un tipo de red neuronal artificial. Está compuesta de una serie de capas de neuronas que se conectan entre sí. Las capas internas comprimen el activo de las capas externas para producir una representación más abstracta del mismo. Esto se traduce en una mayor capacidad de representación y compresión del activo. Los transformers tienen unas propiedades muy interesantes que los hacen útiles para texto, voz, imagen y otros tipos de datos."
+    },
+    {
+      "role": "user",
+      "content": "Y qué aplicaciones prácticas tiene?"
+    },
+    {
+      "role": "assistant",
+      "content": "Los transformers se utilizan en muchos procesos de aprendizaje automático, como la generación de texto, la traducción, la predicción y la clasificación. Están siendo utilizados cada vez más para aplicaciones como el reconocimiento de voz, la identificación de objetos en imágenes, el diseño de redes sociales y el análisis del comportamiento del usuario."
+    }
+  ]
+}

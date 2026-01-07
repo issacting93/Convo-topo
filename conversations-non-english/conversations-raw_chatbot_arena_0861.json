@@ -1,0 +1,21 @@
+{
+  "id": "chatbot_arena_0861",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Hãy chat bằng tiếng việt"
+    },
+    {
+      "role": "assistant",
+      "content": "Nhận biết bằng tiếng Việt"
+    },
+    {
+      "role": "user",
+      "content": "Tìm kiếm thông tin gdp của việt nam trong 10 năm gần nhât"
+    },
+    {
+      "role": "assistant",
+      "content": "GDP của Việt Nam trong 10 năm gần nhất"
+    }
+  ]
+}

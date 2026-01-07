@@ -1,0 +1,37 @@
+{
+  "id": "chatbot_arena_10901",
+  "messages": [
+    {
+      "role": "user",
+      "content": "привет"
+    },
+    {
+      "role": "assistant",
+      "content": "Hello▌"
+    },
+    {
+      "role": "user",
+      "content": "как тебя зовут?"
+    },
+    {
+      "role": "assistant",
+      "content": "Hello! How can I assist you today?"
+    },
+    {
+      "role": "user",
+      "content": "can you speak russian?"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes, I can speak some Russian, but I am not fluent in the language. What language would you like me to speak?"
+    },
+    {
+      "role": "user",
+      "content": "write something in russain"
+    },
+    {
+      "role": "assistant",
+      "content": "Here is a quote in Russian: \"Человек, который считает себя богом, никогда не станет делать вид, что он не бог. Если он поймёт, что он не бог, он станет человеком, который не делает вид, что он не делает вид, что он не делает вид, что он не делает вид, что он не делает вид. Но ты, о человеческом, не думаешь, что ты не бог. Ты думаешь, что ты человек, который не думает, что он не бог.\""
+    }
+  ]
+}

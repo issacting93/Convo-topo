@@ -1,0 +1,21 @@
+{
+  "id": "chatbot_arena_0424",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Hello"
+    },
+    {
+      "role": "assistant",
+      "content": "Hello! How can I assist you today?"
+    },
+    {
+      "role": "user",
+      "content": "You know sketchware?"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes, I am familiar with Sketchware. It is a popular software used for creating digital artwork, including designs for websites, applications, and more. It was developed by Adobe and was first released in 2004. Sketchware is known for its user-friendly interface and ability to create complex designs quickly. It is often used by developers and designers for quick and easy原型 designs."
+    }
+  ]
+}

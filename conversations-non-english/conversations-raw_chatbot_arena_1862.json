@@ -1,0 +1,21 @@
+{
+  "id": "chatbot_arena_1862",
+  "messages": [
+    {
+      "role": "user",
+      "content": "hola, cómo estás?"
+    },
+    {
+      "role": "assistant",
+      "content": "Hola! Estoy bien y en algo de buen salud. En qué puedo ayudarte hoy?"
+    },
+    {
+      "role": "user",
+      "content": "que me puedes decir del Club San Lorenzo?"
+    },
+    {
+      "role": "assistant",
+      "content": "El Club San Lorenzo es un club de ftbol en Colombia. Se encuentra en la ciudad de San Lorenzo, en la región de Bogotá, y se encuentra en el centro de la ciudad. El club está una importante parte del ftbol en Colombia y se encuentra en un lugar con una gran audiencia. Los equipos de ftbol del Club San Lorenzo participan en campeones y campeones de ftbol, y se han visto grandes juegos en la ftbol de Colombia."
+    }
+  ]
+}

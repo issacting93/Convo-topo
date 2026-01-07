@@ -1,0 +1,21 @@
+{
+  "id": "chatbot_arena_0617",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Kan du svenska?"
+    },
+    {
+      "role": "assistant",
+      "content": "Ja, jag kan svenska."
+    },
+    {
+      "role": "user",
+      "content": "Kan du förklara skillnad mellan uttryck \"på den tiden\" och \"vid den tiden\"?"
+    },
+    {
+      "role": "assistant",
+      "content": "Ja, det kan jag. \"På den tiden\" används ofta i spoken language om tiden och betyder \"at that time\". Som exempel kan jag ge \"alla gick på bio den pågående weekenden\" eller \"få höll sig inne på kvällen den 23:e\". \"Vid den tiden\" används ofta i written language och innebär \"at that time\"/\"at the time\"/\"on that time\". Som exempel kan jag ge \"allt gick vandalen vidare vidare på bio under natten\"."
+    }
+  ]
+}

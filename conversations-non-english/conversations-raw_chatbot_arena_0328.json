@@ -1,0 +1,21 @@
+{
+  "id": "chatbot_arena_0328",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Écris une blague pour geek"
+    },
+    {
+      "role": "assistant",
+      "content": "Un avion japonais est arrivé à la dernière minute au concours de l'aviation, le pilote a eu peur et a mal tourné, le coup d'État de l'aviation!"
+    },
+    {
+      "role": "user",
+      "content": "écris un poème à huit stiques en alexandrin"
+    },
+    {
+      "role": "assistant",
+      "content": "à la dernière minute, le pilote a vu la catastrophe de l'avion, il a mal tourné et fait un coup d'État de l'aviation"
+    }
+  ]
+}

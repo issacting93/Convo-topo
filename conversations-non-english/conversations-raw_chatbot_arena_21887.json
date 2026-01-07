@@ -1,0 +1,61 @@
+{
+  "id": "chatbot_arena_21887",
+  "messages": [
+    {
+      "role": "user",
+      "content": "I am curious about the football sport (soccer in the usa), I am going to ask you a bunch of questions, keep it short. "
+    },
+    {
+      "role": "assistant",
+      "content": "Sure, I'll do my best to answer your questions succinctly!"
+    },
+    {
+      "role": "user",
+      "content": "how many players a team have playing in the team?"
+    },
+    {
+      "role": "assistant",
+      "content": "Each soccer team has 11 players on the field at a time."
+    },
+    {
+      "role": "user",
+      "content": "can players use the hand to touch the ball during the game? in what circumstances?"
+    },
+    {
+      "role": "assistant",
+      "content": "Players are not allowed to touch the ball with their hands or arms, except for the goalkeeper who can use their hands within their designated penalty area and only under certain circumstances such as to stop a shot on goal or to make a save. This is known as the \"handball\" rule."
+    },
+    {
+      "role": "user",
+      "content": "usually, how long are the matches? "
+    },
+    {
+      "role": "assistant",
+      "content": "A standard soccer match consists of two halves of 45 minutes each, with a 15-minute halftime break in between. So the total length of a match is 90 minutes. However, stoppage time or extra time may be added at the end of each half to compensate for time lost due to injuries, substitutions, or other delays."
+    },
+    {
+      "role": "user",
+      "content": "is it allowed to score using the head?"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes, scoring with the head is allowed in soccer, and is known as a \"header.\" In fact, many players use this technique to score goals, especially when the ball is crossed into the penalty area from the wings."
+    },
+    {
+      "role": "user",
+      "content": "after a team avanced from the midfield, is it allowed to return the ball to defensive half of the field?"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes, a team is allowed to pass the ball back to their own defensive half of the field after advancing from midfield. However, if the goalkeeper picks up the ball with their hands after a teammate passes it back to them using their feet, the opposing team will be awarded an indirect free kick from the spot where the goalkeeper touched the ball, as this is considered a violation of the \"back-pass\" rule."
+    },
+    {
+      "role": "user",
+      "content": "how many passes can the player exchange between them? "
+    },
+    {
+      "role": "assistant",
+      "content": "There is no specific rule in soccer that limits the number of passes a team can make in a row before shooting or losing possession of the ball. In fact, some teams try to maintain possession of the ball by making multiple passes in a row, which is known as \"playing a possession game.\" However, the opposing team may try to disrupt this by pressuring the ball carrier and attempting to intercept passes."
+    }
+  ]
+}

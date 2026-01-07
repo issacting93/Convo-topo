@@ -1,0 +1,21 @@
+{
+  "id": "chatbot_arena_1343",
+  "messages": [
+    {
+      "role": "user",
+      "content": "There are three color balls on the table. One is green, one is blue, and one is red. I closed my eye and picked a ball. What's the probability of picking a yellow ball?"
+    },
+    {
+      "role": "assistant",
+      "content": "Since there is no yellow ball on the table, the probability of picking a yellow ball is 0%."
+    },
+    {
+      "role": "user",
+      "content": "If the color ball could change its color based on the color"
+    },
+    {
+      "role": "assistant",
+      "content": "If the color ball could change its color based on the color, we would need more information about the probability of the ball changing to yellow. However, without that information, we cannot determine the probability of picking a yellow ball."
+    }
+  ]
+}

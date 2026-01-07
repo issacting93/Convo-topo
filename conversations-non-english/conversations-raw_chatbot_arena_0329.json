@@ -1,0 +1,21 @@
+{
+  "id": "chatbot_arena_0329",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Podemos por exemplo listar as propriedades principais de plantas da permacultura em uma tabela como:"
+    },
+    {
+      "role": "assistant",
+      "content": "Animals:\n\n* Conexão com os diferentes tipos de plantas\n* Conexão com os diferentes tipos de símbolos e símbolos de plantas\n* Conexão com os diferentes tipos de fruticultura\n* Conexão com os diferentes tipos de pesca\n* Conexão com os diferentes tipos de recheio de plantas\n* Conexão com os diferentes tipos de transporte e vida marítima\n* Conexão com os diferentes tipos de vida orgânica\n* Conexão com os diferentes tipos de corolário de símbolos e símbolos de plantas\n* Conexão com os diferentes tipos de fruticultura\n* Conexão com os diferentes tipos de pesca\n* Conexão com os diferentes tipos de recheio de plantas\n* Conexão com os diferentes tipos de transporte e vida marítima\n* Conexão com os diferentes tipos de abastecimento\n* Conexão com os diferentes tipos de distribuição de recursos naturais\n* Conexão com os diferentes tipos de pesca\n* Conexão com os diferentes tipos de corolário de símbolos e símbolos de plantas\n* Conexão com os diferentes tipos de fruticultura\n* Conexão com os diferentes tipos de pesca\n* Conexão com os diferentes tipos de transporte e vida marítima\n* Conexão com os diferentes tipos de abastecimento\n* Conexão com os diferentes tipos de distribuição de recursos naturais\n* Conexão com os diferentes tipos de pesca"
+    },
+    {
+      "role": "user",
+      "content": "E a partir da tabela construir um esquema de banco de dados:"
+    },
+    {
+      "role": "assistant",
+      "content": "Banco de Dados\n\n* Nome do banco de dados\n* Tipo de banco de dados\n* Dados da tabela\n* Dados do banco de dados\n* Dados do banco de dados\n* Dados do banco de dados\n* Dados do banco de dados\n* Dados do banco de dados\n* Dados do banco de dados\n* Dados do banco de dados\n* Dados do banco de dados\n* Dados do banco de dados\n* Dados do banco de dados\n* Dados do banco de dados\n* Dados do banco de dados\n* Dados do banco de dados\n* Dados do banco de dados\n* Dados do banco de dados\n* Dados do banco de dados\n* Dados do banco de dados\n* Dados do banco de dados\n* Dados do banco de dados\n* Dados do banco de dados\n* Dados do banco de dados\n* Dados do banco de dados\n* Dados do banco de dados\n* Dados do banco de dados\n* Dados do banco de dados\n* Dados do banco de dados\n* Dados do banco de dados\n* Dados do banco de dados\n* Dados do banco de dados\n* Dados do banco de dados\n* Dados do banco de dados\n* Dados do banco de dados\n* Dados do banco de dados\n* Dados do banco de dados\n* Dados do banco de dados\n* Dados do banco de dados\n* Dados do banco de dados\n* Dados do banco de dados\n* Dados do banco de dados\n* Dados do banco de dados\n* Dados do banco de dados\n* Dados do banco de dados\n* Dados do banco de dados\n* Dados do banco de dados\n* Dados do banco de dados\n* Dados do banco de dados\n* Dados do banco de dados\n* Dados do banco de"
+    }
+  ]
+}

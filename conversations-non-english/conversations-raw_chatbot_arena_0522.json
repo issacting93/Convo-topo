@@ -1,0 +1,21 @@
+{
+  "id": "chatbot_arena_0522",
+  "messages": [
+    {
+      "role": "user",
+      "content": "What is your favorite food"
+    },
+    {
+      "role": "assistant",
+      "content": "As an AI language model, I don't have the ability to like or dislike food because I don't have taste buds. However, I can assist you with any information or tasks you need help with."
+    },
+    {
+      "role": "user",
+      "content": "Você consegue falar em portugues?\n"
+    },
+    {
+      "role": "assistant",
+      "content": "Sim, eu consigo falar em português. Em que posso ajudá-lo?"
+    }
+  ]
+}

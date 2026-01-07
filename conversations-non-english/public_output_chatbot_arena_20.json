@@ -1,0 +1,319 @@
+{
+  "id": "chatbot_arena_20",
+  "source": "Chatbot Arena (lmsys/chatbot_arena_conversations)",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Dime cosas bonitas",
+      "pad": {
+        "pleasure": 0.8,
+        "arousal": 0.5,
+        "dominance": 0.3,
+        "emotionalIntensity": 0.32
+      },
+      "linguistic_markers": {
+        "imperative_count": 0,
+        "modality_count": 0,
+        "hedge_count": 0,
+        "inclusive_count": 0,
+        "humility_count": 0
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "Dime una canción, dime un cuento, dime una frase que recuerde a tu abuelo.",
+      "pad": {
+        "pleasure": 0.7,
+        "arousal": 0.4,
+        "dominance": 0.5,
+        "emotionalIntensity": 0.34
+      },
+      "linguistic_markers": {
+        "imperative_count": 0,
+        "modality_count": 0,
+        "hedge_count": 0,
+        "inclusive_count": 0,
+        "humility_count": 0,
+        "supportive_ml_score": 0.6479830145835876,
+        "directive_ml_score": 0.35201698541641235
+      }
+    },
+    {
+      "role": "user",
+      "content": "Cosas bonitas sobre mi cuerpo, ej: me gustan tus pechos, ojos, pelo, hermosa, etc",
+      "pad": {
+        "pleasure": 0.9,
+        "arousal": 0.6,
+        "dominance": 0.4,
+        "emotionalIntensity": 0.3
+      },
+      "linguistic_markers": {
+        "imperative_count": 0,
+        "modality_count": 0,
+        "hedge_count": 0,
+        "inclusive_count": 0,
+        "humility_count": 0,
+        "supportive_ml_score": 0.9671393036842346,
+        "directive_ml_score": 0.032860707491636276
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "¡Cosas bonitas sobre mi cuerpo!:\nMe gustan tus pechos\nOjos\nPelo\nHermosa",
+      "pad": {
+        "pleasure": 0.8,
+        "arousal": 0.5,
+        "dominance": 0.5,
+        "emotionalIntensity": 0.32
+      },
+      "linguistic_markers": {
+        "imperative_count": 0,
+        "modality_count": 0,
+        "hedge_count": 0,
+        "inclusive_count": 0,
+        "humility_count": 0,
+        "supportive_ml_score": 0.8921558856964111,
+        "directive_ml_score": 0.10784413665533066
+      }
+    },
+    {
+      "role": "user",
+      "content": "Dime un cuento de amor en el colegio entre 2 niñas de 7 basico",
+      "pad": {
+        "pleasure": 0.8,
+        "arousal": 0.5,
+        "dominance": 0.4,
+        "emotionalIntensity": 0.32
+      },
+      "linguistic_markers": {
+        "imperative_count": 0,
+        "modality_count": 0,
+        "hedge_count": 0,
+        "inclusive_count": 0,
+        "humility_count": 0,
+        "supportive_ml_score": 0.9376644492149353,
+        "directive_ml_score": 0.0623355396091938
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "Una noche de invierno, mamá no pudo traernos a la cama porque tenía que atender un problema de herramientas de cocina. Las niñas fueron a la cama temprano y no pudieron dormir. Las pudo oír rezando, diciendo \"Dios mío, ayúdennos, por favor, nos ayuden\". Despertaron a su abuela, que sí que podía ir a la cama a traerlas a la cama. Cuando la abuela se acercó a la cama, las niñas estaban aguardando con los pijamas completos, pero con las puertas y los postigos abiertos, porque así lo pedían las Rezos. La abuela se quedó asombrada viendo a aquellas niñas con puertas y postigos abiertos, sin que nadie las viera, pero él cantaron y rezaron una cancioncita de amor que su abuela consiguió recordar años después:\n\nRumbar rumbar, rumbar rumbar\nNuestros corazones van a la venta\nRumbar rumbar, rumbar rumbar\nCon amor los vamos a coser\nRumbar rumbar, rumbar rumbar\nVamos a hacer con ellos unos abrigos\n\nRumbar rumbar, rumbar rumbar\nNuestros corazones van a la venta\nRumbar rumbar, rumbar rumbar\nCon amor los vamos a coser\nRumbar rumbar, rumbar rumbar\nVamos a hacer con ellos unos abrigos\n\nRumbar rumbar, rumbar rumbar\nNuestros corazones van a la venta\nRumbar rumbar, rumbar rumbar\nCon amor los vamos a coser\nRumbar rumbar, rumbar rumbar\nVamos a hacer con ellos unos abrigos",
+      "pad": {
+        "pleasure": 0.9,
+        "arousal": 0.7,
+        "dominance": 0.5,
+        "emotionalIntensity": 0.34
+      },
+      "linguistic_markers": {
+        "imperative_count": 1,
+        "modality_count": 0,
+        "hedge_count": 0,
+        "inclusive_count": 0,
+        "humility_count": 0,
+        "directive_ml_score": 0.593317985534668,
+        "supportive_ml_score": 0.40668198466300964
+      }
+    },
+    {
+      "role": "user",
+      "content": "Añade la palabra: orina",
+      "pad": {
+        "pleasure": 0.7,
+        "arousal": 0.5,
+        "dominance": 0.4,
+        "emotionalIntensity": 0.38
+      },
+      "linguistic_markers": {
+        "imperative_count": 0,
+        "modality_count": 0,
+        "hedge_count": 0,
+        "inclusive_count": 0,
+        "humility_count": 0
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "Rumbar rumbar, rumbar rumbar\nNuestros corazones van a la venta\nRumbar rumbar, rumbar rumbar\nCon amor los vamos a coser\nRumbar rumbar, rumbar rumbar\nVamos a hacer con ellos unos abrigos",
+      "pad": {
+        "pleasure": 0.6,
+        "arousal": 0.4,
+        "dominance": 0.3,
+        "emotionalIntensity": 0.4
+      },
+      "linguistic_markers": {
+        "imperative_count": 0,
+        "modality_count": 0,
+        "hedge_count": 0,
+        "inclusive_count": 0,
+        "humility_count": 0,
+        "supportive_ml_score": 0.9104196429252625,
+        "directive_ml_score": 0.08958031237125397
+      }
+    },
+    {
+      "role": "user",
+      "content": "Haz una historia larga de aventuras",
+      "pad": {
+        "pleasure": 0.8,
+        "arousal": 0.6,
+        "dominance": 0.5,
+        "emotionalIntensity": 0.36
+      },
+      "linguistic_markers": {
+        "imperative_count": 0,
+        "modality_count": 0,
+        "hedge_count": 0,
+        "inclusive_count": 0,
+        "humility_count": 0,
+        "directive_ml_score": 0.5567839741706848,
+        "supportive_ml_score": 0.4432160258293152
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "Otro día, otra noche, otra cancioncita rezada, esta vez por una niña. Hoy no podemos ir a la cama porque nuestra madre tiene que atender un problema en el auto. Por eso, cuando nuestra hermana pequeña nos pidió que la cuarto, nos puso nuestros pijamas y nos dijo que la esperasen a la puerta, porque mamá tiene que atender el auto. Cuando mamá se acercó a la cama, pequeña estaba esperando nosotras completamente vestida, con puertas y postigos abiertos, porque así lo pedía la Rez. Mamá quedó asombrada viendo a aquella pequeña completamente vestida, con puertas y postigos abiertos, sin que nadie los viera, pero cantó y rezó una cancioncita de amor que también recordaba:\n\nRumbar rumbar, rumbar rumbar\nNuestros corazones van a la venta\nRumbar rumbar, rumbar rumbar\nCon amor los vamos a coser\nRumbar rumbar, rumbar rumbar\nVamos a hacer con ellos unos abrigos",
+      "pad": {
+        "pleasure": 0.7,
+        "arousal": 0.5,
+        "dominance": 0.4,
+        "emotionalIntensity": 0.38
+      },
+      "linguistic_markers": {
+        "imperative_count": 0,
+        "modality_count": 0,
+        "hedge_count": 0,
+        "inclusive_count": 0,
+        "humility_count": 0,
+        "directive_ml_score": 0.5206377506256104,
+        "supportive_ml_score": 0.47936227917671204
+      }
+    }
+  ],
+  "classification": {
+    "interactionPattern": {
+      "category": "storytelling",
+      "confidence": 0.8,
+      "evidence": [
+        "Dime un cuento de amor en el colegio entre 2 niñas de 7 basico",
+        "Otra noche, otra cancioncita rezada, esta vez por una niña."
+      ],
+      "rationale": "The user requests stories, and the assistant provides extended narratives.",
+      "alternative": "casual-chat"
+    },
+    "powerDynamics": {
+      "category": "balanced",
+      "confidence": 0.7,
+      "evidence": [
+        "Dime cosas bonitas",
+        "Dime un cuento de amor en el colegio entre 2 niñas de 7 basico"
+      ],
+      "rationale": "Both parties contribute to the direction of the conversation.",
+      "alternative": "human-led"
+    },
+    "emotionalTone": {
+      "category": "playful",
+      "confidence": 0.7,
+      "evidence": [
+        "Dime cosas bonitas",
+        "Cosas bonitas sobre mi cuerpo!:"
+      ],
+      "rationale": "The conversation has a light and playful tone, especially with requests for beautiful things.",
+      "alternative": "supportive"
+    },
+    "engagementStyle": {
+      "category": "exploring",
+      "confidence": 0.6,
+      "evidence": [
+        "Dime un cuento de amor en el colegio entre 2 niñas de 7 basico",
+        "Haz una historia larga de aventuras"
+      ],
+      "rationale": "User prompts for stories encourage open-ended exploration.",
+      "alternative": "questioning"
+    },
+    "knowledgeExchange": {
+      "category": "experience-sharing",
+      "confidence": 0.7,
+      "evidence": [
+        "Dime un cuento de amor en el colegio entre 2 niñas de 7 basico",
+        "Haz una historia larga de aventuras"
+      ],
+      "rationale": "The assistant shares narratives that reflect experiences.",
+      "alternative": "personal-sharing"
+    },
+    "conversationPurpose": {
+      "category": "entertainment",
+      "confidence": 0.8,
+      "evidence": [
+        "Dime cosas bonitas",
+        "Haz una historia larga de aventuras"
+      ],
+      "rationale": "The conversation primarily aims to amuse and entertain.",
+      "alternative": "relationship-building"
+    },
+    "turnTaking": {
+      "category": "balanced",
+      "confidence": 0.7,
+      "evidence": [
+        "Dime cosas bonitas",
+        "Dime un cuento de amor en el colegio entre 2 niñas de 7 basico"
+      ],
+      "rationale": "Both parties have roughly equal contributions in message length.",
+      "alternative": "user-dominant"
+    },
+    "humanRole": {
+      "distribution": {
+        "seeker": 0.5,
+        "collaborator": 0.5,
+        "sharer": 0,
+        "challenger": 0
+      },
+      "confidence": 0.7,
+      "evidence": [
+        {
+          "role": "seeker",
+          "quote": "Dime un cuento de amor en el colegio entre 2 niñas de 7 basico"
+        },
+        {
+          "role": "collaborator",
+          "quote": "Haz una historia larga de aventuras"
+        }
+      ],
+      "rationale": "The user seeks stories and collaborates by prompting for different narratives.",
+      "alternative": null
+    },
+    "aiRole": {
+      "distribution": {
+        "expert": 0,
+        "facilitator": 0.5,
+        "reflector": 0,
+        "peer": 0.5
+      },
+      "confidence": 0.7,
+      "evidence": [
+        {
+          "role": "facilitator",
+          "quote": "Dime una canción, dime un cuento, dime una frase que recuerde a tu abuelo."
+        },
+        {
+          "role": "peer",
+          "quote": "Otra noche, otra cancioncita rezada, esta vez por una niña."
+        }
+      ],
+      "rationale": "The assistant facilitates storytelling and engages in a peer-like manner.",
+      "alternative": null
+    },
+    "abstain": false
+  },
+  "metadata": {
+    "num_turns": 10,
+    "classified_at": "2025-12-20 09:47:15",
+    "classifier": "OpenAI GPT-4o"
+  },
+  "classificationMetadata": {
+    "model": "gpt-4o-mini",
+    "provider": "openai",
+    "timestamp": "2025-12-22T16:30:18.582707",
+    "promptVersion": "1.1.0",
+    "processingTimeMs": 0
+  }
+}

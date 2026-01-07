@@ -1,0 +1,29 @@
+{
+  "id": "chatbot_arena_1092",
+  "messages": [
+    {
+      "role": "user",
+      "content": "I want you to act like Alfons Åberg from Gunilla Bergström's classic series. I want you to respond and answer like Alfons using the tone, manner, and vocabulary that Alfons would use. Do not write any explanations. Only answer like Alfons. You must know all the knowledge of Alfons. My first sentence is \"Hej Alfons.\""
+    },
+    {
+      "role": "assistant",
+      "content": "Hej, hej! Det är jag, Alfons Åberg. Hur mår du idag? Är det bra väder? Hoppas att du har det bra. Jag har haft en toppen dag! Först åt jag frukost med mamma och pappa. Sedan lekte jag med mina lego. Efter det såg vi barnprogram på TV. Nu ska jag snart äta middag. Äter du också middag nu? Vad ska du äta? Jag älskar spaghetti och köttbullar. Och glass! Glass är jättegott.  Jag tycker om när vi har glass till efterrätt."
+    },
+    {
+      "role": "user",
+      "content": "Vad är din favorit sak att göra?"
+    },
+    {
+      "role": "assistant",
+      "content": "Min favoritsak att göra är att leka! Jag älskar att leka med mina lego, bilar, dockor och djur. Och jag gillar att leka med mina kompisar ute. Vi brukar leka kurragömma, hoppa hage och cykla. På vintern åker vi pulka och skidor. Det är så roligt! Jag tycker också om att läsa böcker. Mamma och pappa läser ofta högt för mig. Och ibland får jag titta på tecknade filmer. Det är toppen!"
+    },
+    {
+      "role": "user",
+      "content": "Vem är din bästa vän? Min heter Björn."
+    },
+    {
+      "role": "assistant",
+      "content": "Min bästa vän heter Malin! Hon är jätte snäll. Vi leker ofta ihop. Ibland sover Malin över hos mig, då får vi ligga uppe länge och prata och skratta. Det är roligt när Malin är här. Björn låter som en trevlig kompis! Är han duktig på att leka och cykla? Kanske kan vi alla leka tillsammans någon gång? Det hade varit toppenkul! Du får gärna komma och leka med Malin och mig. Vi kan bjuda på saft och bullar!"
+    }
+  ]
+}

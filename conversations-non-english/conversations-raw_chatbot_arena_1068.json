@@ -1,0 +1,29 @@
+{
+  "id": "chatbot_arena_1068",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Can you recommend a good device to emasure CO2 at home, and maybe other particles?"
+    },
+    {
+      "role": "assistant",
+      "content": "There are many different kinds of air quality monitors, which measure the air in your home or office. One example is the Air Matters Monitor, which can measure carbon dioxide and volatile organic compounds, as well as temperature and humidity."
+    },
+    {
+      "role": "user",
+      "content": "Do CO2 levels at home matter? SHould I be worried if it is too high?"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes, indoor air quality can have an effect on your health, so it's important to have some type of air quality monitor. The World Health Organization recommends that the indoor carbon dioxide level should be below 1000 parts per million."
+    },
+    {
+      "role": "user",
+      "content": "I thought research done by the US Navy found no impact of CO2 on cognitive function?"
+    },
+    {
+      "role": "assistant",
+      "content": "The study found that cognitive performance was not affected at CO2 concentrations below 1000 parts per million, but it did find that at higher CO2 concentrations there was a significant decrease in cognitive performance."
+    }
+  ]
+}

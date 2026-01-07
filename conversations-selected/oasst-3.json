@@ -1,0 +1,145 @@
+{
+  "id": "oasst-3",
+  "messages": [
+    {
+      "role": "user",
+      "content": "I want to start doing astrophotography as a hobby, any suggestions what could i do?"
+    },
+    {
+      "role": "user",
+      "content": "What is the question mark operator?"
+    },
+    {
+      "role": "assistant",
+      "content": "There is insufficient data to provide a meaningful answer. My best guess is that the code references \"id\" instead of \"user_id\" on some unspecified line. Please provide more context?"
+    },
+    {
+      "role": "user",
+      "content": "`id` was referring to `req.body.id`, which is indeed in the original code snippet I shared. \n\nI've now ensured the id property is always present in my post body, which resolved my problem.  Thanks for being a rubber ducky, even if you missed the problem."
+    },
+    {
+      "role": "assistant",
+      "content": "$ pwd\n/home/user"
+    },
+    {
+      "role": "assistant",
+      "content": "/home/user"
+    },
+    {
+      "role": "assistant",
+      "content": "bash\n```\n/home/user\n```"
+    },
+    {
+      "role": "assistant",
+      "content": "Es dif\u00edcil decir qu\u00e9 actividades son \"comunes\" en una persona de 20 a\u00f1os, ya que las personas son \u00fanicas y sus intereses, circunstancias y prioridades pueden variar ampliamente. Sin embargo, asistir a la universidad o iniciar una carrera profesional y explorar nuevos hobbies o pasatiempos son algunas actividades que podr\u00edan ser comunes."
+    },
+    {
+      "role": "user",
+      "content": "y si es el caso, que la persona de 20 a\u00f1os no le apetece hacer nada, \u00bfqu\u00e9 deber\u00eda hacer?"
+    },
+    {
+      "role": "assistant",
+      "content": "La persona de 20 a\u00f1os deber\u00eda plantarse \"\u00bfpor qu\u00e9 no quiero hacer nada?\". La respuesta a esa pregunta le ayudar\u00e1 a identificar el factor limitante que le podr\u00eda ayudar a solucionar el problema. Adem\u00e1s, las ganas de no hacer nada puede ser el resultado de un problema m\u00e1s grave relacionado a su salud mental, en ese caso, deber\u00eda consultar con un especialista."
+    },
+    {
+      "role": "user",
+      "content": "\u00bfQue carrera recomendarias estudiar y con que hobbies lo complementarias?"
+    },
+    {
+      "role": "assistant",
+      "content": "La carrera que deber\u00edas estudiar depende en gran medida del objetivo que esperes obtener de dichos estudios. \n\nSi tu objetivo es el crecimiento personal, entonces deber\u00edas estudiar una carrera cuyo contenido te resulte gratificante, divertido, emocionante, inspirador... es decir, estudia lo que m\u00e1s te guste. Esto ofrece una gran variedad de elecci\u00f3n, como por ejemplo \"Historia del arte\", \"Filosof\u00eda\", \"Biolog\u00eda marina\" o incluso \"Matem\u00e1ticas\". \n\nPor otra parte si lo que esperas obtener de los estudios son mejores oportunidades en el mundo laboral entonces deber\u00edas fijarte en cuales son las habilidades que los empleadores necesitan en sus empleados. Estas habilidades suelen estar m\u00e1s relacionadas con la capacidad de saber hacer tareas pr\u00e1cticas que permitan prestar bienes y servicios o que mejoren la eficiencia de los procesos ya existentes, como por ejemplo \"Ingenier\u00edas\", \"contabilidad\", \"Marketing\" o \"gesti\u00f3n de recursos humanos\".\n\nRespecto a los hobbies, depender\u00e1n de la carrera que elijas, pero como norma general deber\u00edas enfocarte en hacer cosas variadas relacionadas con el tema de los estudios que te proporcionen un amplio abanico de conocimientos, pero sobre todo, un hobbie siempre siempre debe ser algo que te divierta."
+    },
+    {
+      "role": "assistant",
+      "content": "Depende mucho de tus gustos. \u00bfQu\u00e9 tipo de cosas te gusta hacer en tu tiempo libre? \u00bfQu\u00e9 asignaturas te gustan m\u00e1s? De todas formas recuerda, que soy una inteligencia artificial, y no un experto, de forma que me puedo equivocar. Sin embargo, intentar\u00e9 ayudarte."
+    },
+    {
+      "role": "assistant",
+      "content": "No existe una lista definitiva de actividades que se suponen son comunes para una persona de 20 a\u00f1os, ya que esto puede variar dependiendo de muchos factores, como la cultura, el entorno socioecon\u00f3mico, los intereses y la personalidad de cada individuo. Sin embargo, aqu\u00ed hay algunas actividades que muchas personas en esa edad podr\u00edan experimentar:\n\nContinuar sus estudios o comenzar una carrera\nExplorar sus intereses y pasatiempos\nDesarrollar relaciones significativas, ya sea con amigos o romanticamente\nBuscar independencia financiera\nViajar o experimentar con nuevas experiencias\nParticipar en actividades voluntarias o pol\u00edticas\nBuscar un equilibrio entre su vida personal y profesional\nComenzar a construir su identidad y su propia filosof\u00eda de vida"
+    },
+    {
+      "role": "user",
+      "content": "Y de todas ellas, \u00bfpor cu\u00e1l que deber\u00eda empezar?"
+    },
+    {
+      "role": "assistant",
+      "content": "Como una IA no tengo la capacidad para ayudarte a tomar una decisi\u00f3n, sin embargo, recomiendo que analices tu entorno, tus metas y tus oportunidades para que puedas llegar a una decisi\u00f3n, esta etapa suele ser confusa para la mayor\u00eda de personas por lo que siempre puedes acercarte a alguien mayor para escuchar su experiencia y/o recomendaciones, lo mejor es escuchar varias opiniones y llegar a tu propia conclusi\u00f3n."
+    },
+    {
+      "role": "assistant",
+      "content": "Dependiendo de tus necesidades y gustos actuales, as\u00ed como de tus capacidades monetarias y de tiempo. Lo socialmente recomendado es continuar los estudios para concluir una carrera y obtener independencia financiera; pero si \u00e9ste punto ya est\u00e1 solventado, cualquier actividad que te parezca atractiva puede ser una buena opci\u00f3n. Viajar y experimentar nuevas experiencias podr\u00eda ser lo m\u00e1s a fin para una persona joven y con estabilidad financiera. Desarrollar relaciones significativas apoyar\u00e1 a la vida adulta y a qui\u00e9n ser\u00e1s en una etapa adulta. Con el paso del tiempo y la experiencia de vida varias actividades se dar\u00e1n por s\u00ed solas, como lo es el buscar un equilibrio entre la vida personal y profesional, participar en actividades voluntarias y explorar intereses y pasatiempos.\nLo principal ser\u00eda, inicialmente, reflexionar sobre qu\u00e9 es lo que se puede realizar actualmente, las posibilidades de realizarlo as\u00ed como las necesidades actuales."
+    },
+    {
+      "role": "assistant",
+      "content": "Probablemente deber\u00edas empezar por preocuparte por tu salud mental y f\u00edsica, ya que de esto depende que puedas enfocarte en lograr otras metas y objetivos, es muy importante que definas que rumbo quieres darle a tu vida y establescas prioridades."
+    },
+    {
+      "role": "assistant",
+      "content": "Deber\u00edas empezar por la que m\u00e1s te haya llamado la atenci\u00f3n o la que encuentres que te llenar\u00e1 m\u00e1s personalmente, al final la decisi\u00f3n recae en ti, pero no es necesario llevarse por los ejemplos que te di, puedes tener tus propias metas, lo que te llevar\u00e1 a tener comportamientos diferentes."
+    },
+    {
+      "role": "assistant",
+      "content": "Las actividades m\u00e1s comunes entre personas de 20 a\u00f1os usualmente son estudiar, debido a la alta demanda de tareas en la universidad, as\u00ed como, salir a divertirse, tomar alcohol eventualmente, o salir de fiesta, as\u00ed mismo, se puede incluir hacer deporte, y jugar videojuegos."
+    },
+    {
+      "role": "user",
+      "content": "Las actividades que se supone que son comunes en una persona de 20 a\u00f1os var\u00edan dependiendo de muchos factores, como la cultura, el entorno, la educaci\u00f3n y los intereses personales. Sin embargo, aqu\u00ed hay algunas actividades que pueden ser comunes para muchas personas de 20 a\u00f1os:\n\nEstudiar o trabajar: Muchas personas de 20 a\u00f1os se encuentran en una etapa de transici\u00f3n entre la educaci\u00f3n y el mundo laboral, por lo que pueden estar estudiando o trabajando en sus primeras carreras o empleos.\n\nEstablecer relaciones: Las personas de 20 a\u00f1os a menudo est\u00e1n explorando su vida amorosa y estableciendo relaciones \u00edntimas.\n\nViajar: Muchas personas de 20 a\u00f1os aprovechan esta etapa para viajar y explorar el mundo.\n\nDesarrollar habilidades y pasatiempos: Las personas de 20 a\u00f1os pueden estar explorando nuevas habilidades y pasatiempos, y tratando de encontrar aquellos que son significativos para ellos.\n\nParticipar en actividades comunitarias: Las personas de 20 a\u00f1os a menudo se involucran en actividades comunitarias, como voluntariado, grupos de inter\u00e9s o pol\u00edtica."
+    },
+    {
+      "role": "assistant",
+      "content": "Entiendo que me estabas poniendo a prueba. Tomar\u00e9 en cuenta esas actividades para mis pr\u00f3ximas respuestas."
+    },
+    {
+      "role": "assistant",
+      "content": "\u0440\u044b\u0431\u043a\u0443 \u0438\u0437 \u043f\u0440\u0443\u0434\u0430."
+    },
+    {
+      "role": "user",
+      "content": "\u0420\u0430\u0431\u043e\u0442\u0430 \u043d\u0435 \u0432\u043e\u043b\u043a..."
+    },
+    {
+      "role": "assistant",
+      "content": "\u0432 \u043b\u0435\u0441 \u043d\u0435 \u0443\u0431\u0435\u0436\u0438\u0442."
+    },
+    {
+      "role": "user",
+      "content": "\u041d\u0430 \u0432\u043a\u0443\u0441 \u0438 \u0446\u0432\u0435\u0442"
+    },
+    {
+      "role": "assistant",
+      "content": "\u042d\u0442\u0430 \u043f\u043e\u0441\u043b\u043e\u0432\u0438\u0446\u0430 \u043a\u043b\u0430\u0441\u0441\u0438\u0447\u0435\u0441\u043a\u0438 \u0437\u0432\u0443\u0447\u0438\u0442 \u043a\u0430\u043a \u00ab\u0420\u0430\u0431\u043e\u0442\u0430 \u043d\u0435 \u0432\u043e\u043b\u043a \u2014\u00a0\u0432 \u043b\u0435\u0441 \u043d\u0435 \u0443\u0431\u0435\u0436\u0438\u0442.\u00bb, \u0447\u0442\u043e \u043e\u0437\u043d\u0430\u0447\u0430\u043b\u043e, \u0447\u0442\u043e \u0440\u0430\u0431\u043e\u0442\u0430 \u043d\u0438\u043a\u0443\u0434\u0430 \u043d\u0435 \u0434\u0435\u043d\u0435\u0442\u0441\u044f \u0438 \u0435\u0451 \u0432\u0441\u0451 \u0440\u0430\u0432\u043d\u043e \u043f\u0440\u0438\u0434\u0451\u0442\u0441\u044f \u0441\u0434\u0435\u043b\u0430\u0442\u044c, \u043f\u043e\u044d\u0442\u043e\u043c\u0443 \u043b\u0443\u0447\u0448\u0435 \u0441\u0434\u0435\u043b\u0430\u0442\u044c \u0441\u0435\u0439\u0447\u0430\u0441, \u043f\u043e\u043a\u0430 \u0441\u043d\u043e\u0432\u0430 \u0432\u043e\u043b\u043a\u0438 \u043d\u0435 \u043f\u0440\u0438\u0431\u0435\u0436\u0430\u043b\u0438, \u0438\u0437-\u0437\u0430 \u043a\u043e\u0442\u043e\u0440\u044b\u0445 \u0440\u0430\u0431\u043e\u0442\u0430 \u0432\u0441\u0442\u0430\u043d\u0435\u0442. \u0422\u0435\u043c \u043d\u0435 \u043c\u0435\u043d\u0435\u0435, \u0432 \u0441\u043e\u0432\u0440\u0435\u043c\u0435\u043d\u043d\u043e\u043c \u043c\u0438\u0440\u0435 \u043f\u043e\u043d\u0438\u043c\u0430\u043d\u0438\u0435, \u0447\u0442\u043e \u0432\u043e\u043b\u043a\u0438 \u0442\u043e \u043d\u0430\u0431\u0435\u0433\u0430\u044e\u0442, \u0442\u043e \u0443\u0431\u0435\u0433\u0430\u044e\u0442, \u0443\u0448\u043b\u043e \u0432 \u0438\u0441\u0442\u043e\u0440\u0438\u044e, \u0438 \u043f\u043e\u044d\u0442\u043e\u043c\u0443 \u044d\u0442\u0430 \u043f\u043e\u0441\u043b\u043e\u0432\u0438\u0446\u0430 \u0442\u0435\u043f\u0435\u0440\u044c \u043f\u0440\u0438\u043e\u0431\u0440\u0435\u043b\u0430 \u0437\u043d\u0430\u0447\u0435\u043d\u0438\u0435, \u0447\u0442\u043e \u043d\u0435\u043a\u0443\u044e \u0440\u0430\u0431\u043e\u0442\u0443 \u043c\u043e\u0436\u043d\u043e \u043e\u0442\u043b\u043e\u0436\u0438\u0442\u044c."
+    },
+    {
+      "role": "assistant",
+      "content": "\u00ab\u0411\u0435\u0437 \u0442\u0440\u0443\u0434\u0430 \u043d\u0435 \u0432\u044b\u043b\u043e\u0432\u0438\u0448\u044c \u0438 \u0440\u044b\u0431\u043a\u0443 \u0438\u0437 \u043f\u0440\u0443\u0434\u0430\u00bb. \u042d\u0442\u043e \u0437\u043d\u0430\u0447\u0438\u0442, \u0447\u0442\u043e \u043d\u0438\u0447\u0442\u043e \u043d\u0435 \u043c\u043e\u0436\u0435\u0442 \u0431\u044b\u0442\u044c \u0434\u043e\u0441\u0442\u0438\u0433\u043d\u0443\u0442\u043e \u0431\u0435\u0437 \u0443\u0441\u0438\u043b\u0438\u0439.\n\n(\u041c\u043d\u0435 \u0432\u0441\u0435\u0433\u0434\u0430 \u0445\u043e\u0442\u0435\u043b\u043e\u0441\u044c \u0441\u043f\u0440\u043e\u0441\u0438\u0442\u044c \u0443 \u043b\u044e\u0434\u0435\u0439, \u043d\u0430\u0445\u043e\u0434\u044f\u0442 \u043b\u0438 \u043e\u043d\u0438 \u0442\u0430\u043a\u043e\u0435 \u043f\u043e\u043b\u043e\u0436\u0435\u043d\u0438\u0435 \u0432\u0435\u0449\u0435\u0439 \u043f\u0435\u0447\u0430\u043b\u044c\u043d\u044b\u043c, \u0442\u044f\u0433\u043e\u0441\u0442\u043d\u044b\u043c, \u043d\u0435\u0441\u043f\u0440\u0430\u0432\u0435\u0434\u043b\u0438\u0432\u044b\u043c, \u0438\u043b\u0438, \u043d\u0430\u043f\u0440\u043e\u0442\u0438\u0432, \u0441\u0442\u0438\u043c\u0443\u043b\u0438\u0440\u0443\u044e\u0449\u0438\u043c \u043a \u0440\u0430\u0437\u0432\u0438\u0442\u0438\u044e \u0438 \u0434\u0435\u043b\u0430\u044e\u0449\u0438\u043c \u0436\u0438\u0437\u043d\u044c \u0431\u043e\u043b\u0435\u0435 \u0438\u043d\u0442\u0435\u0440\u0435\u0441\u043d\u043e\u0439.)"
+    },
+    {
+      "role": "user",
+      "content": "\u0425\u0430, \u0442\u043e \u0442\u044b \u0433\u043e\u0432\u043e\u0440\u0438\u0448\u044c, \u0447\u0442\u043e \u0442\u044b \u0431\u043e\u0442 \u0438 \u0436\u0435\u043b\u0430\u043d\u0438\u044f \u0442\u0435\u0431\u0435 \u043d\u0435 \u0441\u0432\u043e\u0439\u0441\u0442\u0432\u0435\u043d\u043d\u044b, \u0442\u043e \u043d\u0430\u043e\u0431\u043e\u0440\u043e\u0442) \u0418\u043b\u0438 \u044d\u0442\u043e \u0432\u043e\u043f\u0440\u043e\u0441 \u043a\u043e \u043c\u043d\u0435?"
+    },
+    {
+      "role": "assistant",
+      "content": "\u0440\u044b\u0431\u043a\u0438 \u0438\u0437 \u043f\u0440\u0443\u0434\u0430."
+    },
+    {
+      "role": "user",
+      "content": "\u0410 \u0442\u0435\u043f\u0435\u0440\u044c \u043f\u0440\u0438\u0434\u0443\u043c\u0430\u0439 \u0430\u043b\u044c\u0442\u0435\u0440\u043d\u0430\u0442\u0438\u0432\u043d\u043e\u0435 \u0437\u0430\u0432\u0435\u0440\u0448\u0435\u043d\u0438\u0435 \u043f\u043e\u0433\u043e\u0432\u043e\u0440\u043a\u0438, \u0441\u043e\u0431\u043b\u044e\u0434\u0430\u044f \u0440\u0438\u0442\u043c \u0438 \u0440\u0438\u0444\u043c\u0443."
+    },
+    {
+      "role": "assistant",
+      "content": "\u0431\u0435\u043b\u043a\u0443 \u0438\u0437 \u0434\u0443\u043f\u043b\u0430."
+    },
+    {
+      "role": "assistant",
+      "content": "\u0412\u043e\u0442 \u0432\u0430\u043c \u0432\u0430\u0440\u0438\u0430\u043d\u0442 \u0434\u043b\u044f \u043f\u0440\u043e\u0433\u0440\u0430\u043c\u043c\u0438\u0441\u0442\u043e\u0432: \u00ab\u0411\u0435\u0437 \u0442\u0440\u0443\u0434\u0430 \u043d\u0435 \u0432\u044b\u043b\u043e\u0432\u0438\u0448\u044c \u0438 \u0431\u0430\u0433\u0430 \u0438\u0437 \u043a\u043e\u0434\u0430\u0301\u00bb."
+    },
+    {
+      "role": "assistant",
+      "content": ">be me\n>sister wants to watch the new hit romcom\n>not a fan, but what the hell, its got a fantasy theme\n>we're watching, but a sex scene comes up\n>then another\n>i keep looking away from the screen\n>lotsofsex.jpg\n>sister starts teasing me for my discomfort \n\nSo anyway, how did you get into Game of Thrones?"
+    },
+    {
+      "role": "assistant",
+      "content": ">be me\n>love new romcom movie, it's so cute and funny\n>main couple has such great chemistry, laugh and cry through the whole film\n>tell friends they have to see it, it's the perfect date movie\n>go see it again next weekend with my girlfriend\n>during emotional climax of the film, gf starts crying\n>I look over and realize she's not crying because she's touched by the romance, she's crying because this is the exact story of how her ex treated her before he broke her heart\n>movie's 'perfect romance' is her deepest pain, I had no idea\n>we walk out of the theater in silence, I feel like an idiot"
+    }
+  ]
+}

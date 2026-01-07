@@ -1,0 +1,265 @@
+{
+  "id": "chatbot_arena_07480",
+  "messages": [
+    {
+      "role": "user",
+      "content": "What is the capital of england",
+      "pad": {
+        "pleasure": 0.5,
+        "arousal": 0.3,
+        "dominance": 0.4,
+        "emotionalIntensity": 0.42
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "London is the capital city of England",
+      "pad": {
+        "pleasure": 0.8,
+        "arousal": 0.2,
+        "dominance": 0.5,
+        "emotionalIntensity": 0.2
+      }
+    },
+    {
+      "role": "user",
+      "content": "what about france?",
+      "pad": {
+        "pleasure": 0.5,
+        "arousal": 0.3,
+        "dominance": 0.4,
+        "emotionalIntensity": 0.42
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "Paris is the capital of France",
+      "pad": {
+        "pleasure": 0.8,
+        "arousal": 0.2,
+        "dominance": 0.5,
+        "emotionalIntensity": 0.2
+      }
+    },
+    {
+      "role": "user",
+      "content": "and the population size?",
+      "pad": {
+        "pleasure": 0.6,
+        "arousal": 0.3,
+        "dominance": 0.4,
+        "emotionalIntensity": 0.36
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "around 13 million people",
+      "pad": {
+        "pleasure": 0.7,
+        "arousal": 0.2,
+        "dominance": 0.5,
+        "emotionalIntensity": 0.26
+      }
+    },
+    {
+      "role": "user",
+      "content": "what about the whole country?",
+      "pad": {
+        "pleasure": 0.6,
+        "arousal": 0.3,
+        "dominance": 0.4,
+        "emotionalIntensity": 0.36
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "france has more than 86 million people altogether",
+      "pad": {
+        "pleasure": 0.7,
+        "arousal": 0.2,
+        "dominance": 0.5,
+        "emotionalIntensity": 0.26
+      }
+    },
+    {
+      "role": "user",
+      "content": "and the previous country?",
+      "pad": {
+        "pleasure": 0.5,
+        "arousal": 0.3,
+        "dominance": 0.4,
+        "emotionalIntensity": 0.42
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "england was the previous country indeed",
+      "pad": {
+        "pleasure": 0.8,
+        "arousal": 0.2,
+        "dominance": 0.5,
+        "emotionalIntensity": 0.2
+      }
+    },
+    {
+      "role": "user",
+      "content": "what is the population of that?",
+      "pad": {
+        "pleasure": 0.6,
+        "arousal": 0.3,
+        "dominance": 0.4,
+        "emotionalIntensity": 0.36
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "around 51 million people altogether",
+      "pad": {
+        "pleasure": 0.8,
+        "arousal": 0.2,
+        "dominance": 0.5,
+        "emotionalIntensity": 0.2
+      }
+    }
+  ],
+  "classification": {
+    "abstain": false,
+    "interactionPattern": {
+      "category": "question-answer",
+      "confidence": 0.9,
+      "evidence": [
+        "What is the capital of england",
+        "London is the capital city of England"
+      ],
+      "rationale": "",
+      "alternative": null
+    },
+    "powerDynamics": {
+      "category": "human-led",
+      "confidence": 0.8,
+      "evidence": [
+        "USER: What is the capital of england",
+        "ASSISTANT: London is the capital city of England"
+      ],
+      "rationale": "",
+      "alternative": null
+    },
+    "emotionalTone": {
+      "category": "neutral",
+      "confidence": 0.9,
+      "evidence": [
+        "London is the capital city of England",
+        "Paris is the capital of France",
+        "around 13 million people",
+        "france has more than 86 million people altogether"
+      ],
+      "rationale": "",
+      "alternative": null
+    },
+    "engagementStyle": {
+      "category": "questioning",
+      "confidence": 0.8,
+      "evidence": [
+        "USER: What is the capital of england",
+        "ASSISTANT: London is the capital city of England"
+      ],
+      "rationale": "",
+      "alternative": null
+    },
+    "knowledgeExchange": {
+      "category": "factual-info",
+      "confidence": 0.9,
+      "evidence": [
+        "London is the capital city of England",
+        "Paris is the capital of France",
+        "around 13 million people",
+        "france has more than 86 million people altogether"
+      ],
+      "rationale": "",
+      "alternative": null
+    },
+    "conversationPurpose": {
+      "category": "information-seeking",
+      "confidence": 0.9,
+      "evidence": [
+        "USER: What is the capital of england",
+        "ASSISTANT: London is the capital city of England"
+      ],
+      "rationale": "",
+      "alternative": null
+    },
+    "topicDepth": {
+      "category": "surface",
+      "confidence": 0.8,
+      "evidence": [
+        "USER: What is the capital of england",
+        "ASSISTANT: London is the capital city of England"
+      ],
+      "rationale": "",
+      "alternative": null
+    },
+    "turnTaking": {
+      "category": "user-dominant",
+      "confidence": 0.8,
+      "evidence": [
+        "USER: What is the capital of england",
+        "ASSISTANT: London is the capital city of England"
+      ],
+      "rationale": "",
+      "alternative": null
+    },
+    "humanRole": {
+      "distribution": {
+        "seeker": 1.0,
+        "learner": 0.0,
+        "director": 0.0,
+        "collaborator": 0.0,
+        "sharer": 0.0,
+        "challenger": 0.0
+      },
+      "confidence": 0.9,
+      "evidence": [
+        {
+          "role": "seeker",
+          "quote": "What is the capital of england"
+        }
+      ],
+      "rationale": "",
+      "alternative": null
+    },
+    "aiRole": {
+      "distribution": {
+        "expert": 1.0,
+        "advisor": 0.0,
+        "facilitator": 0.0,
+        "reflector": 0.0,
+        "peer": 0.0,
+        "affiliative": 0.0
+      },
+      "confidence": 0.9,
+      "evidence": [
+        {
+          "role": "expert",
+          "quote": "London is the capital city of England"
+        }
+      ],
+      "rationale": "",
+      "alternative": null
+    },
+    "classificationMetadata": {
+      "model": "llama3.2:latest",
+      "provider": "ollama",
+      "timestamp": "2025-12-26T06:28:25.144629Z",
+      "promptVersion": "v1.1",
+      "processingTimeMs": 18148
+    }
+  },
+  "classificationMetadata": {
+    "model": "unknown",
+    "provider": "unknown",
+    "timestamp": "2025-12-28T12:47:21.624225Z",
+    "promptVersion": "v1.1",
+    "processingTimeMs": 0,
+    "backfilled": true
+  }
+}

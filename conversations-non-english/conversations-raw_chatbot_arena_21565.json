@@ -1,0 +1,29 @@
+{
+  "id": "chatbot_arena_21565",
+  "messages": [
+    {
+      "role": "user",
+      "content": "If I had a large, square, pane of glass that was standing upright, and I allowed it to fall over onto a smooth, flat surface, what would happen to the glass?"
+    },
+    {
+      "role": "assistant",
+      "content": "The glass would shatter into many pieces."
+    },
+    {
+      "role": "user",
+      "content": "Would the air being pushed out of the way have any effect, or would the glass still break?"
+    },
+    {
+      "role": "assistant",
+      "content": "The air being pushed out of the way would have no effect, and the glass would still break."
+    },
+    {
+      "role": "user",
+      "content": "What of the cushion of air just before the glass is flat?"
+    },
+    {
+      "role": "assistant",
+      "content": "The air just before the glass is flat would cause the glass to shatter into more pieces."
+    }
+  ]
+}

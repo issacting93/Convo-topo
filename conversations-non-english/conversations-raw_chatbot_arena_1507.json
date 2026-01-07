@@ -1,0 +1,21 @@
+{
+  "id": "chatbot_arena_1507",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Faça um codigo inedito McEliece em python explicando os passos"
+    },
+    {
+      "role": "assistant",
+      "content": "Aqui está um código implementando o criptosistema McEliece em Python:\n\n1. Gerar a matriz geradora G e a matriz de paridade H de um código Goppa. Escolhemos um polinômio g(x) e geramos G e H a partir dele.\n\n```python\ndef generate_gh(g_poly, n, k):\n    g_matrix = []\n    h_matrix = []\n    for i in range(n):\n        if g_poly[i] == 1:\n            g_matrix.append([1 if j == i else 0 for j in range(n)])\n            h_matrix.append([1 if j == i else 0 for j in range(k)])\n    return g_matrix, h_matrix  \n```\n\n2. Gerar a matriz de permutação P aleatória. Esta será a chave privada.\n\n```python\nimport random\ndef generate_p(n):\n    p = list(range(n))\n    random.shuffle(p)\n    return p\n```\n\n3. Calcular a matriz pública G' = G*P. Esta é a chave pública.\n\n```python \ndef calculate_gp(g_matrix, p):\n    gp_matrix = []\n    for row in g_matrix:\n        new_row = [row[i] for i in p]\n        gp_matrix.append(new_row)\n    return gp_matrix\n```\n\n4. Cifrar a mensagem m multiplicando por G' e adicionando erros aleatórios.\n\n```python\ndef encrypt(m, gp_matrix, e_bits):\n    m_vector = list(m)\n    e_vector = generate_error_vector(len(m_vector), e_bits)\n    c_vector = [m_vector[i] ^ e_vector[i] for i in range(len(m_vector))]\n    c_matrix = matrix_vector_multiplication(gp_matrix, c_vector)\n    return c_matrix \n```\n\n5. Decifrar multiplicando a cifra por P^-1 e então por H.\n\n```python\ndef decrypt(c_matrix, p_inv, h_matrix):\n    c_vector = matrix_vector_multiplication(p"
+    },
+    {
+      "role": "user",
+      "content": "Redefinir com o programa a seguir com interação grafica tkinter Define os pontos de criptografia\np = [[0x00000000, 0x79140000, 0xFFFFFFFF, 0xFFFFFFFF],\n[0x79140000, 0xFFFFFFFF, 0xFFFFFFFF, 0x79140000],\n[0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0x79140000],\n[0xFFFFFFFF, 0x79140000, 0xFFFFFFFF, 0xFFFFFFFF]]\n\nDefine a função G\ndef G(x, y, p):\nvar L = (x + y) % 2\nvar L2 = L * L\nvar R = (x - y) % 2\nvar R2 = R * R\nvar R3 = R2 + L2\nvar s = (1 - L2 - R2) % 2\nvar r = (1 - R3) % 2\nvar result = 0\nif (s < r):\nresult = 1\nelse:\nresult = 0\nreturn result\n\nDefine a função H\ndef H(x, y, p):\nvar L = (x + y) % 2\nvar L2 = L * L\nvar R = (x - y) % 2\nvar R2 = R * R\nvar R3 = R2 + L2\nvar s = (1 - L2 - R2) % 2\nvar r = (1 - R3) % 2\nvar result = 0\nif (s < r):\nresult = 1\nelse:\nresult = 0\nreturn result\n\nCriptografe os dados\nvar message = \"Segredo Aqui\"\nvar n = len(message)\nvar k = 8\n\nGerar a chave privada P\nvar P = []\nfor i in range(k):\nP.append(G(R(i), R(i+1), p))"
+    },
+    {
+      "role": "assistant",
+      "content": "Aqui está a implementação em Python com interface gráfica usando Tkinter:\n\n```python\nfrom tkinter import *\n\np = [[0x00000000, 0x79140000, 0xFFFFFFFF, 0xFFFFFFFF],  \n     [0x79140000, 0xFFFFFFFF, 0xFFFFFFFF, 0x79140000],\n     [0xFFFFFFFF, 0xFFFFFFFF, 0xFFFFFFFF, 0x79140000],\n     [0xFFFFFFFF, 0x79140000, 0xFFFFFFFF, 0xFFFFFFFF]]\n\ndef G(x, y, p):\n    L = (x + y) % 2\n    L2 = L * L\n    R = (x - y) % 2\n    R2 = R * R\n    R3 = R2 + L2\n    s = (1 - L2 - R2) % 2\n    r = (1 - R3) % 2\n    result = 0\n    if (s < r):\n        result = 1\n    else:\n        result = 0\n    return result\n\ndef H(x, y, p):\n    L = (x + y) % 2\n    L2 = L * L\n    R = (x - y) % 2\n    R2 = R * R\n    R3 = R2 + L2\n    s = (1 - L2 - R2) % 2\n    r = (1 - R3) % 2\n    result = 0\n    if (s < r):\n        result = 1\n    else:\n        result = 0\n    return result\n\nroot = Tk()\n\nmessage = StringVar()\nmessage.set(\"Segredo Aqui\")\n\nn = len(message.get())\nk = 8\n\nP = []\nfor i in range(k):\n    P.append(G(R(i), R(i+1), p))\n\nLabel(root, text=\"Mensagem:\").grid(row=0, column=0)\nEntry(root, textvariable=message).grid(row=0, column=1)\n\nButton(root, text=\"Criptografar\", command=lambda: encrypt(message.get(), n, k, P, p)).grid(row=1, column=0)\nButton(root, text=\"Decriptografar\", command=lambda: decrypt(message.get(), n, k, P, p)).grid(row=1, column=1)"
+    }
+  ]
+}

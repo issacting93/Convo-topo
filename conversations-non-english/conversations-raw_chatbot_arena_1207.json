@@ -1,0 +1,45 @@
+{
+  "id": "chatbot_arena_1207",
+  "messages": [
+    {
+      "role": "user",
+      "content": "how do you say good morning in Turkish?"
+    },
+    {
+      "role": "assistant",
+      "content": "Good morning in Turkish is \"günaydın\"."
+    },
+    {
+      "role": "user",
+      "content": "how do I ask for a thing's price in Turkish?"
+    },
+    {
+      "role": "assistant",
+      "content": "The Turkish word for price is \"faydası\". To ask a price, you can say \"kimse faydasıyı bilir mi?\" which means \"Does anybody know the price?\""
+    },
+    {
+      "role": "user",
+      "content": "who was the first person to land on the moon?"
+    },
+    {
+      "role": "assistant",
+      "content": "Neil Armstrong was the first person to land on the moon."
+    },
+    {
+      "role": "user",
+      "content": "why did Steve Jobs named his company Apple?"
+    },
+    {
+      "role": "assistant",
+      "content": "When Steve Jobs and Steve Wozniak were having difficulty coming up with a name for the company, they went to a local fruit store and came up with the name Apple to refer to its computer, which was named Apple I"
+    },
+    {
+      "role": "user",
+      "content": "how much coffee should I use with 800 ml of water?"
+    },
+    {
+      "role": "assistant",
+      "content": "27 grams of coffee is enough for 800 ml of water."
+    }
+  ]
+}

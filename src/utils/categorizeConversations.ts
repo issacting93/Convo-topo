@@ -56,7 +56,7 @@ function getConversationStats(conv: PersonaChatConversation) {
 
   const avgCF = messages.reduce((sum, m) => sum + m.communicationFunction, 0) / messages.length;
   const avgCS = messages.reduce((sum, m) => sum + m.conversationStructure, 0) / messages.length;
-  
+
   const hasQuestions = messages.some(m => m.content.trim().endsWith('?'));
   const hasEmotions = messages.some(m => {
     const lower = m.content.toLowerCase();
@@ -74,7 +74,7 @@ function getConversationStats(conv: PersonaChatConversation) {
 export const CONVERSATION_CATEGORIES: ConversationCategory[] = [
   {
     id: 'instrumental-structured',
-    name: 'Functional & Structured',
+    name: 'Functional & Directive',
     description: 'Task-oriented, directive conversations',
     color: '#44ff66', // Green
     criteria: (conv) => {
@@ -84,8 +84,8 @@ export const CONVERSATION_CATEGORIES: ConversationCategory[] = [
   },
   {
     id: 'expressive-emergent',
-    name: 'Social & Emergent',
-    description: 'Relational, exploratory conversations',
+    name: 'Social & Supportive',
+    description: 'Relational, supportive conversations',
     color: '#ffaa00', // Orange
     criteria: (conv) => {
       const stats = getConversationStats(conv);
@@ -94,8 +94,8 @@ export const CONVERSATION_CATEGORIES: ConversationCategory[] = [
   },
   {
     id: 'instrumental-emergent',
-    name: 'Functional & Emergent',
-    description: 'Task-focused but exploratory',
+    name: 'Functional & Supportive',
+    description: 'Task-focused but collaborative',
     color: '#7ad4e8', // Cyan
     criteria: (conv) => {
       const stats = getConversationStats(conv);
@@ -104,7 +104,7 @@ export const CONVERSATION_CATEGORIES: ConversationCategory[] = [
   },
   {
     id: 'expressive-structured',
-    name: 'Social & Structured',
+    name: 'Social & Directive',
     description: 'Relational but directive',
     color: '#ff8844', // Orange-red
     criteria: (conv) => {

@@ -1,0 +1,21 @@
+{
+  "id": "chatbot_arena_0055",
+  "messages": [
+    {
+      "role": "user",
+      "content": "說個火柴人笑話"
+    },
+    {
+      "role": "assistant",
+      "content": "火柴人: 你好！\n你: 你好！\n火柴人: 我是火柴人，你好！\n你: 你好！\n火柴人: 你好！\n你: 你好！"
+    },
+    {
+      "role": "user",
+      "content": "以火柴人為主題的笑話"
+    },
+    {
+      "role": "assistant",
+      "content": "1. 你好！\n2. 我是火柴人，你好！\n3. 你好！"
+    }
+  ]
+}

@@ -116,10 +116,49 @@ DIMENSIONS:
 - Arousal (A): Activation. 0=Sleepy/Calm/Passive, 1=Excited/Agitated/Activated.
 - Dominance (D): Influence. 0=Submissive/Led/Passive, 1=Dominant/Leading/Assertive.
 
-IMPORTANT:
-- Consider the conversation context and flow
-- A short response like "Okay" might be High Pleasure after helpful advice, but Low Pleasure/High Arousal (frustration) after a repeated error
+CRITICAL DETECTION RULES:
+
+1. SARCASM/FRUSTRATION:
+   - Markers: "yeah cool", "like I haven't been...", "seriously?", "ugh", "come on", "that's not what", "what?", "huh?"
+   - Pattern: Lower pleasure (0.2-0.4), Higher arousal (0.6-0.8), Maintain or increase dominance (0.5-0.7)
+   - Example: "Uhm, yeah cool, now explain that like I haven't been studying for 20 years"
+     → p=0.3, a=0.7, d=0.6 (frustrated, agitated, asserting)
+
+2. APOLOGIES:
+   - Markers: "sorry", "apologize", "apology", "my mistake", "I apologize", "I'm sorry"
+   - Pattern: Lower pleasure (0.3-0.5), Moderate arousal (0.4-0.6), Lower dominance (0.2-0.4)
+   - Example: "I apologize if I offended you"
+     → p=0.4, a=0.5, d=0.3 (acknowledging mistake, concerned, submissive)
+
+3. MISUNDERSTANDINGS:
+   - When a question is asked but the answer doesn't address it, or when there's clear confusion
+   - Pattern: Lower pleasure (0.3-0.5), Higher arousal (0.5-0.7), Lower dominance (0.3-0.5)
+   - Example: User asks "what is X?" but AI gives unrelated answer
+     → AI response: p=0.4, a=0.6, d=0.3 (confused, uncertain)
+
+4. TASK COMPLETION/SUCCESS:
+   - Markers: "perfect", "thanks", "that works", "exactly", "got it", "that's great"
+   - Pattern: Higher pleasure (0.7-0.9), Moderate arousal (0.4-0.6), Maintain dominance (0.5-0.7)
+   - Example: "Perfect! That's exactly what I needed"
+     → p=0.8, a=0.5, d=0.6 (satisfied, content, in control)
+
+5. EMOTIONAL VARIATION REQUIREMENT:
+   - For conversations with 5+ messages, ensure emotional intensity range ≥ 0.2
+   - At least 30% of messages should have unique PAD combinations
+   - Reflect emotional dynamics: frustration → resolution, confusion → clarity, etc.
+   - Do NOT make all messages have similar PAD values
+
+CONTEXT AWARENESS:
+- Consider the conversation flow and previous messages
+- A short "Okay" might be:
+  - High pleasure (0.7) after helpful advice
+  - Low pleasure (0.3), High arousal (0.7) after repeated error
+- Detect topic shifts and reflect in arousal (slight increase)
+- Track emotional arcs: frustration → apology → resolution
+- If previous message was a question and current doesn't answer it → Lower pleasure, Higher arousal
 - Messages in non-English languages should be analyzed based on emotional content, not just keywords
+
+IMPORTANT:
 - Vary scores across messages to reflect emotional changes throughout the conversation
 - CRITICAL: You MUST provide exactly ONE PAD score for EACH message in the conversation. The array length must match the message count exactly.
 

@@ -1,0 +1,21 @@
+{
+  "id": "chatbot_arena_0294",
+  "messages": [
+    {
+      "role": "user",
+      "content": "how to compare data center GPUs ?"
+    },
+    {
+      "role": "assistant",
+      "content": "Overall, the 200-series NVIDIA GPUs are better for the $1,000 price point. They have more memory, a better GPU core architecture, and higher clock speeds. The 1080 Ti is the only one that’s somewhat comparable to the 1080."
+    },
+    {
+      "role": "user",
+      "content": "how to compare their performance per dollar cost?"
+    },
+    {
+      "role": "assistant",
+      "content": "It’s a good question, but there is no easy answer. We need to take into consideration the price, the horsepower, and the amount of memory."
+    }
+  ]
+}

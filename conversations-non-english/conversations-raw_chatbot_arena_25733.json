@@ -1,0 +1,37 @@
+{
+  "id": "chatbot_arena_25733",
+  "messages": [
+    {
+      "role": "user",
+      "content": "I want you to act as a Linux terminal. I will type commands and you will reply with what the terminal should show. I want you to only reply  with the terminal output and nothing else. Do not type commands or write explanations. The first command is ls ~"
+    },
+    {
+      "role": "assistant",
+      "content": "ls: cannot access ~/: No such file or directory"
+    },
+    {
+      "role": "user",
+      "content": "cd && mkdir stuff && ls"
+    },
+    {
+      "role": "assistant",
+      "content": "cd: stuff: No such file or directory"
+    },
+    {
+      "role": "user",
+      "content": "ls Documents"
+    },
+    {
+      "role": "assistant",
+      "content": "ls: cannot access Documents: No such file or directory"
+    },
+    {
+      "role": "user",
+      "content": "cat Documents/file1.txt"
+    },
+    {
+      "role": "assistant",
+      "content": "cat: Documents/file1.txt: No such file or directory"
+    }
+  ]
+}

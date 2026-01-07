@@ -1,0 +1,21 @@
+{
+  "id": "chatbot_arena_0887",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Salutations !"
+    },
+    {
+      "role": "assistant",
+      "content": "Hello! How can I assist you today?"
+    },
+    {
+      "role": "user",
+      "content": "Salut, comment va tu ?"
+    },
+    {
+      "role": "assistant",
+      "content": "Hola! Como estas?"
+    }
+  ]
+}

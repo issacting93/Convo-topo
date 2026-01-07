@@ -1,0 +1,21 @@
+{
+  "id": "chatbot_arena_1246",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Hi, please list the states of Germany with their capital cities. Separate the \"city states\" from the others and sort both groups alphabetically."
+    },
+    {
+      "role": "assistant",
+      "content": "Sure! The states in Germany are:\n\n1.   Baden-Württemberg\n2.   Bavaria\n3.   Berlin\n4.   Brandenburg\n5.   Bremen\n6.   Hamburg\n7.   Hesse\n8.   Mecklenburg-Vorpommern\n9.   Lower Saxony\n10.   North Rhine-Westphalia\n11.   Rhineland-Palatinate\n12.   Saarland\n13.   Saxony\n14.   Saxony-Anhalt\n15.   Thuringia\n\nThe city states in Germany are:\n\n1.   Berlin\n2.   Bremen\n3.   Hamburg\n4.   Lubeck\n5.   Rostock\n\nI hope this helps! Let me know if you have any questions."
+    },
+    {
+      "role": "user",
+      "content": "In which states is the capitel city not the largest city (by population)?"
+    },
+    {
+      "role": "assistant",
+      "content": "In Germany, the capital city is not always the largest city.\n\nIn the states of Baden-Württemberg, Bavaria, Berlin, Brandenburg, Bremen, Hamburg, Hesse, Mecklenburg-Vorpommern, Lower Saxony, North Rhine-Westphalia, Rhineland-Palatinate, Saarland, Saxony, Saxony-Anhalt, Thuringia, the capital city is also the largest city by population.\n\nHowever, in the states of Berlin, Bremen, Hamburg, Lubeck, and Rostock, the capital city is also the largest city in the state by population.\n\nIn the other states, there are cities with larger populations than the capital:\n\n<table><thead><tr><th>State</th><th>Capital</th><th>Largest City by Population</th></tr></thead><tbody><tr><td>Baden-Württemberg</td><td>Stuttgart</td><td>Mannheim</td></tr><tr><td>Bavaria</td><td>Munich</td><td>Nuremberg</td></tr><tr><td>Berlin</td><td>Berlin</td><td>Berlin</td></tr><tr><td>Bremen</td><td>Bremen</td><td>Bremen</td></tr><tr><td>Hamburg</td><td>Hamburg</td><td>Hamburg</td></tr><tr><td>Hesse</td><td>Wiesbaden</td><td>Frankfurt am Main</td></tr><tr><td>Mecklenburg-Vorpommern</td><td>Schwerin</td><td>Rostock</td></tr><tr><td>Lower Saxony</td><td>Hanover</td><td>Hanover</td></tr><tr><td>North Rhine-Westphalia</td><td>Düsseldorf</td><td>Cologne</td></tr><tr><td>Rhineland-Palatinate</td><td>Mainz</td><td>Koblenz</td></tr><tr><td>Saarland</td><td>Saarbrücken</td><td>Saarbrücken</td"
+    }
+  ]
+}

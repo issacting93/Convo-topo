@@ -1,0 +1,21 @@
+{
+  "id": "chatbot_arena_1696",
+  "messages": [
+    {
+      "role": "user",
+      "content": "siema co tam"
+    },
+    {
+      "role": "assistant",
+      "content": "Witaj! Jestem tu, aby pomóc. A u Ciebie jak się masz?"
+    },
+    {
+      "role": "user",
+      "content": "czy telewizor powinno się wyłączać z zasilania?"
+    },
+    {
+      "role": "assistant",
+      "content": "Tak, zaleca się wyłączenie telewizora z zasilania, gdy nie jest używany. W ten sposób można zaoszczędzić energię i zwiększyć żywotność urządzenia. Zaleca się również wyłączenie telewizora z zasilania podczas burzy lub gdy nie będzie używany przez dłuższy czas."
+    }
+  ]
+}

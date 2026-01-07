@@ -1,0 +1,21 @@
+{
+  "id": "chatbot_arena_0393",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Guess the riddle. \"I save a history for those who is not blind. I can keep the better record, but you will not comprehend it. Friends of corpses in the past, but now I'm a friend and a witness of the girls' breakfast.\""
+    },
+    {
+      "role": "assistant",
+      "content": "The answer is the diary. A diary is a history for those who is not blind. It can keep the better record, but people won't comprehend it. The diary is a friend and a witness of a person."
+    },
+    {
+      "role": "user",
+      "content": "No. The answer is photograph"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes. A photograph is a history for those who is not blind. It can keep a better record, but you will not comprehend it. The photograph is a friend and a witness of a person."
+    }
+  ]
+}

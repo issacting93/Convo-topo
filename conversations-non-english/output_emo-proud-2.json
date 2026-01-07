@@ -1,0 +1,154 @@
+{
+  "id": "emo-proud-2",
+  "messages": [
+    {
+      "role": "user",
+      "content": "I felt proud when I had accomplished a dream that I wanted to do for a long time. It was absailing!!"
+    },
+    {
+      "role": "assistant",
+      "content": "I'm not familiar with abseiling, but I'm glad that you felt good about it."
+    },
+    {
+      "role": "user",
+      "content": "absailing, its when you rappeling down a building. What have you down that amazing?"
+    },
+    {
+      "role": "assistant",
+      "content": "Oh, I see. No, I've never done that."
+    },
+    {
+      "role": "assistant",
+      "content": "so what have you done?"
+    }
+  ],
+  "classification": {
+    "abstain": false,
+    "interactionPattern": {
+      "category": "casual-chat",
+      "confidence": 0.7,
+      "evidence": [
+        "I felt proud when I had accomplished a dream",
+        "absailing, its when you rappeling down a building."
+      ],
+      "rationale": "The conversation is a social exchange without a specific instrumental goal. The human is sharing their experiences and asking the AI about its experiences.",
+      "alternative": "question-answer"
+    },
+    "powerDynamics": {
+      "category": "human-led",
+      "confidence": 0.8,
+      "evidence": [
+        "I felt proud when I had accomplished a dream",
+        "absailing, its when you rappeling down a building."
+      ],
+      "rationale": "The human is leading the conversation by sharing their experiences and asking the AI questions.",
+      "alternative": null
+    },
+    "emotionalTone": {
+      "category": "neutral",
+      "confidence": 0.7,
+      "evidence": [
+        "I'm not familiar with abseiling, but I'm glad that you felt good about it.",
+        "Oh, I see. No, I've never done that."
+      ],
+      "rationale": "The AI responds in a neutral tone without strong emotional coloring.",
+      "alternative": null
+    },
+    "engagementStyle": {
+      "category": "reactive",
+      "confidence": 0.9,
+      "evidence": [
+        "I'm not familiar with abseiling, but I'm glad that you felt good about it.",
+        "Oh, I see. No, I've never done that."
+      ],
+      "rationale": "The AI is responding to the human's statements without providing strong direction.",
+      "alternative": null
+    },
+    "knowledgeExchange": {
+      "category": "personal-sharing",
+      "confidence": 0.9,
+      "evidence": [
+        "I felt proud when I had accomplished a dream",
+        "absailing, its when you rappeling down a building."
+      ],
+      "rationale": "The human is sharing personal experiences and feelings.",
+      "alternative": null
+    },
+    "conversationPurpose": {
+      "category": "self-expression",
+      "confidence": 0.9,
+      "evidence": [
+        "I felt proud when I had accomplished a dream",
+        "absailing, its when you rappeling down a building."
+      ],
+      "rationale": "The human is expressing their thoughts and feelings about a personal accomplishment.",
+      "alternative": null
+    },
+    "topicDepth": {
+      "category": "surface",
+      "confidence": 0.8,
+      "evidence": [
+        "I felt proud when I had accomplished a dream",
+        "absailing, its when you rappeling down a building."
+      ],
+      "rationale": "The conversation is brief and introductory, with the human sharing a personal experience.",
+      "alternative": null
+    },
+    "turnTaking": {
+      "category": "balanced",
+      "confidence": 0.7,
+      "evidence": [
+        "I felt proud when I had accomplished a dream",
+        "absailing, its when you rappeling down a building."
+      ],
+      "rationale": "Both the human and the AI have roughly equal message lengths.",
+      "alternative": null
+    },
+    "humanRole": {
+      "distribution": {
+        "seeker": 0.2,
+        "learner": 0.0,
+        "director": 0.0,
+        "collaborator": 0.0,
+        "sharer": 0.8,
+        "challenger": 0.0
+      },
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "role": "sharer",
+          "quote": "I felt proud when I had accomplished a dream"
+        }
+      ],
+      "rationale": "The human is mainly sharing their personal experiences and feelings.",
+      "alternative": null
+    },
+    "aiRole": {
+      "distribution": {
+        "expert": 0.0,
+        "advisor": 0.0,
+        "facilitator": 0.0,
+        "reflector": 0.8,
+        "peer": 0.2,
+        "affiliative": 0.0
+      },
+      "confidence": 0.7,
+      "evidence": [
+        {
+          "role": "reflector",
+          "quote": "I'm not familiar with abseiling, but I'm glad that you felt good about it."
+        }
+      ],
+      "rationale": "The AI is mainly reflecting the human's statements and responding in a neutral tone.",
+      "alternative": null
+    }
+  },
+  "classificationMetadata": {
+    "model": "gpt-4",
+    "provider": "openai",
+    "timestamp": "2025-12-18T11:46:04.413249",
+    "promptVersion": "1.1.0",
+    "processingTimeMs": 55997,
+    "windowed": false
+  }
+}

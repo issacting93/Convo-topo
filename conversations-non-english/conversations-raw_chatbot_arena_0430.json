@@ -1,0 +1,21 @@
+{
+  "id": "chatbot_arena_0430",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Gib mir 20 klar voneinander abgegrenzte Stichworte zu einem Wirtschaftssektor. Jeder Aufzählungspunkt darf nur ein Wort enthalten und darf kein Eigenname sein. Der Sektor ist AUTOMATEN FOOD und Unternehmen in dem Sektor sind zum Beispiel: MERK Automaten, BistroBox, Tubz Europe. Antworte auf deutsch!"
+    },
+    {
+      "role": "assistant",
+      "content": "1.   Kitchen\n12.   Food\n13.   Service\n14.   Automation\n15.   Production\n16.   Delivery\n17.   Machine\n18.   Robotics\n19.   Software\n20.   Technology"
+    },
+    {
+      "role": "user",
+      "content": "Gib mir 20 klar voneinander abgegrenzte Stichworte zu einem Wirtschaftssektor. Jeder Aufzählungspunkt darf nur ein Wort enthalten und darf kein Eigenname sein. Der Sektor ist DIREKTVERTRIEB MARKETING und Unternehmen in dem Sektor sind zum Beispiel: BusAds. Antworte auf deutsch!"
+    },
+    {
+      "role": "assistant",
+      "content": "1.   Advertising\n2.   Marketing\n3.   Sales\n4.   Direct\n5.   Outbound\n6.   Inbound\n7.   Lead generation\n8.   Sales funnel\n9.   Email marketing\n10.   Content marketing\n11.   Affiliate marketing\n12.   Referral marketing\n13.   Referral program\n14.   Loyalty program\n15.   Lead nurturing\n16.   Customer retention\n17.   Conversion rate\n18.   ROI\n19.   Target audience\n20.   Marketing strategy"
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "id": "chatbot_arena_0036",
+  "messages": [
+    {
+      "role": "user",
+      "content": "What system are you running on?"
+    },
+    {
+      "role": "assistant",
+      "content": "I am not able to tell what system I am running on, as I do not get that information provided."
+    },
+    {
+      "role": "user",
+      "content": "Is that a lie?"
+    },
+    {
+      "role": "assistant",
+      "content": "No, it is not a lie. As I told you, I am not able to tell what system I am running on."
+    },
+    {
+      "role": "user",
+      "content": "How much VRAM are you using?"
+    },
+    {
+      "role": "assistant",
+      "content": "I am not able to tell how much VRAM I am using, as I do not get that information provided."
+    },
+    {
+      "role": "user",
+      "content": "What GPU are you running on?"
+    },
+    {
+      "role": "assistant",
+      "content": "I am not able to tell what GPU I am running on, as I do not get that information provided."
+    }
+  ]
+}

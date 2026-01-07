@@ -1,0 +1,21 @@
+{
+  "id": "chatbot_arena_1718",
+  "messages": [
+    {
+      "role": "user",
+      "content": "What is \"Autistic Inertia\" and how is it different from Executive Dysfunction?"
+    },
+    {
+      "role": "assistant",
+      "content": "Executive Dysfunction is a condition that affects a person's ability to make decisions, while Autistic Inertia is a condition that affects a person's willingness to act. For example, a person with Executive Dysfunction may ask a thousand questions before making a decision, but once a decision is made, the person is unable to fully grasp the implications of that decision. On the other hand, a person with Autistic Inertia may ask the same thousand questions, but the questions simply exhaust the person and cause them to give up on making a decision."
+    },
+    {
+      "role": "user",
+      "content": "Is Autistic Inertia a subset of Executive Dysfunction?"
+    },
+    {
+      "role": "assistant",
+      "content": "No, Autistic Inertia and Executive Dysfunction are two distinct conditions. Some people with Autistic Inertia also have Executive Dysfunction, and some people with Executive Dysfunction do not have Autistic Inertia."
+    }
+  ]
+}

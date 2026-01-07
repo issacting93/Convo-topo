@@ -1,0 +1,21 @@
+{
+  "id": "chatbot_arena_0135",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Write a poem with only four lines, all ending on one single rhyme."
+    },
+    {
+      "role": "assistant",
+      "content": "In the sun, a butterfly dances,Their wings flutter, a sight to see,Their colors bright, a sight to catch,A moment of peace, a moment of grace."
+    },
+    {
+      "role": "user",
+      "content": "No, only four lines!"
+    },
+    {
+      "role": "assistant",
+      "content": "A leaf falls from the tree,A rustle in the breeze,A shadow on the ground,A fleeting peace."
+    }
+  ]
+}

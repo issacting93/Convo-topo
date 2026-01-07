@@ -1,0 +1,57 @@
+{
+  "id": "oasst-23d9e3ba-adb4-44ff-9382-9ca4dcf5450f_0098",
+  "messages": [
+    {
+      "role": "user",
+      "content": "What languages is Open Assistant written in?"
+    },
+    {
+      "role": "assistant",
+      "content": "The core of Open Assistant is written in Python, but it uses libraries and connects to tools written in a variety of languages. The source code for Open Assistant is available on GitHub for anyone to view and edit: https://github.com/LAION-AI/Open-Assistant"
+    },
+    {
+      "role": "user",
+      "content": "Could I run OpenAssistant on my machine?"
+    },
+    {
+      "role": "assistant",
+      "content": "Depends on what machine you have.\nBut\n1) The model as well as everything else is open source. So in principle you could\n2) Right now (2023) the hardware to run a large model is still expensive. But the very fast improvements we have seen in the last years are not going to slow down. So the answer might very well be yes soon."
+    },
+    {
+      "role": "assistant",
+      "content": "Yes, by installing the libraries and the language required."
+    },
+    {
+      "role": "user",
+      "content": "How would I do that? Can you give me a quick step by step guide on how to install everything needed to run OpenAssistant?"
+    },
+    {
+      "role": "assistant",
+      "content": "Open Assistant is developed by LAION AI, for the development of Open Assistant, Python is majorly used as it is popular among the Machine Learning and AI communities. Python is relatively easier to learn, due to it's simple syntax. Python is mainly used in AI because it has wide support for machine learning libraries and tools."
+    },
+    {
+      "role": "user",
+      "content": "What languages other than Python are used?"
+    },
+    {
+      "role": "assistant",
+      "content": "As of February 2023, Github's breakdown of languages in the LAION-AI/Open-Assistant repo is as follows:\n\n - Python 67.6%\n - TypeScript 29.9%\n - JavaScript 1.8%\n - Shell 0.6%\n - CSS 0.1%\n\nThe model scripts and server backend mainly consist of Python, while the web frontend accounts for the TypeScript, Javascript and CSS."
+    },
+    {
+      "role": "assistant",
+      "content": "Open Assistant utilizes a combination of technologies to deliver an efficient and effective user experience, including TypeScript, JavaScript, and Shell. TypeScript, a statically typed superset of JavaScript, is used to improve the robustness and maintainability of the codebase. JavaScript, a high-level, dynamic programming language, is used to provide interactive functionality within the interface. Shell, a command-line interface for interacting with the operating system, is used for automation and scripting tasks. By using a combination of these technologies, the development team of Open Assistant is able to create a well-rounded and powerful virtual assistant."
+    },
+    {
+      "role": "assistant",
+      "content": "Python, TypeScript, JavaScript, shell, CSS, Mako"
+    },
+    {
+      "role": "user",
+      "content": "in what proportion are these languages ​​used?"
+    },
+    {
+      "role": "assistant",
+      "content": "Cada día esto se escribe en más idiomas, los creadores de esta plataforma que somos todos nosotros, aportamos cada uno un granito de arena, para que cada vez llegue a más gente diferente en sus idiomas"
+    }
+  ]
+}

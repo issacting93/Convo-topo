@@ -1,0 +1,13 @@
+# Cluster Statistics Summary
+
+| Cluster Name | Size | Size % | Avg Intensity | Path Straightness | Drift Magnitude | Intensity Variance | Valley Density | Peak Density | Final X | Final Y | Most Common Pattern | Most Common Purpose | Q&A Pattern % | Info-Seeking Purpose % |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| StraightPath_Stable_FunctionalStructured_QA_InfoSeeking | 111 | 29.3% | 0.463 | 0.912 | 0.599 | 0.001 | 0.000 | 0.000 | 0.081 | 0.074 | question-answer | information-seeking | 77.5% | 82.9% |
+| StraightPath_Stable_FunctionalStructured_Advisory_InfoSeeking | 103 | 27.2% | 0.499 | 1.115 | 0.282 | 0.000 | 0.000 | 0.000 | 0.320 | 0.297 | advisory | information-seeking | 41.7% | 57.3% |
+| Valley_FunctionalStructured_QA_InfoSeeking | 60 | 15.8% | 0.379 | 0.560 | 0.601 | 0.006 | 0.152 | 0.000 | 0.103 | 0.069 | question-answer | information-seeking | 88.3% | 80.0% |
+| StraightPath_Stable_MinimalDrift_Narrative_SelfExpression | 53 | 14.0% | 0.495 | 0.943 | 0.066 | 0.000 | 0.001 | 0.000 | 0.485 | 0.524 | storytelling | self-expression | 5.3% | 0.0% |
+| StraightPath_Stable_SocialEmergent_Narrative_Entertainment | 34 | 9.0% | 0.472 | 0.930 | 0.367 | 0.002 | 0.021 | 0.000 | 0.792 | 0.469 | storytelling | entertainment | 20.6% | 2.9% |
+| SocialEmergent_Casual_Entertainment | 10 | 2.6% | 0.388 | 0.741 | 0.573 | 0.003 | 0.110 | 0.000 | 0.905 | 0.905 | casual-chat | entertainment | 0.0% | 0.0% |
+| Peak_Volatile_FunctionalStructured_QA_InfoSeeking | 8 | 2.1% | 0.466 | 0.417 | 0.601 | 0.013 | 0.061 | 0.087 | 0.226 | 0.171 | question-answer | information-seeking | 50.0% | 50.0% |
+
+

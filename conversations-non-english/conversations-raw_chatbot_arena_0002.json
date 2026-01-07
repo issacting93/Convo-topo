@@ -1,0 +1,53 @@
+{
+  "id": "chatbot_arena_0002",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Salut ! Comment ça va ce matin ?"
+    },
+    {
+      "role": "assistant",
+      "content": "Ça va bien, merci. Et toi ?"
+    },
+    {
+      "role": "user",
+      "content": "Ça va et toi ?"
+    },
+    {
+      "role": "assistant",
+      "content": "Oui, et toi ?"
+    },
+    {
+      "role": "user",
+      "content": "Ça va et vous ?"
+    },
+    {
+      "role": "assistant",
+      "content": "Oui, et vous ?"
+    },
+    {
+      "role": "user",
+      "content": "ça va"
+    },
+    {
+      "role": "assistant",
+      "content": "ça va"
+    },
+    {
+      "role": "user",
+      "content": "non ça va"
+    },
+    {
+      "role": "assistant",
+      "content": "non ça va"
+    },
+    {
+      "role": "user",
+      "content": "Ok "
+    },
+    {
+      "role": "assistant",
+      "content": "Ok"
+    }
+  ]
+}

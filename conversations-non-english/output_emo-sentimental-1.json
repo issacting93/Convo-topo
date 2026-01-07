@@ -1,0 +1,168 @@
+{
+  "id": "emo-sentimental-1",
+  "messages": [
+    {
+      "role": "user",
+      "content": "I remember going to see the fireworks with my best friend. It was the first time we ever spent time alone together. Although there was a lot of people, we felt like the only people in the world."
+    },
+    {
+      "role": "assistant",
+      "content": "Was this a friend you were in love with, or just a best friend?"
+    },
+    {
+      "role": "user",
+      "content": "This was a best friend. I miss her."
+    },
+    {
+      "role": "assistant",
+      "content": "Where has she gone?"
+    },
+    {
+      "role": "user",
+      "content": "We no longer talk."
+    },
+    {
+      "role": "assistant",
+      "content": "Oh was this something that happened because of an argument?"
+    }
+  ],
+  "classification": {
+    "abstain": false,
+    "interactionPattern": {
+      "category": "question-answer",
+      "confidence": 0.9,
+      "evidence": [
+        "Was this a friend you were in love with, or just a best friend?",
+        "Where has she gone?",
+        "Oh was this something that happened because of an argument?"
+      ],
+      "rationale": "The AI is primarily asking questions and the human is providing answers.",
+      "alternative": null
+    },
+    "powerDynamics": {
+      "category": "ai-led",
+      "confidence": 0.7,
+      "evidence": [
+        "Was this a friend you were in love with, or just a best friend?",
+        "Where has she gone?",
+        "Oh was this something that happened because of an argument?"
+      ],
+      "rationale": "The AI is leading the conversation by asking questions and steering the topic.",
+      "alternative": null
+    },
+    "emotionalTone": {
+      "category": "empathetic",
+      "confidence": 0.7,
+      "evidence": [
+        "This was a best friend. I miss her.",
+        "We no longer talk."
+      ],
+      "rationale": "The AI is showing understanding and compassion towards the human's feelings.",
+      "alternative": "neutral"
+    },
+    "engagementStyle": {
+      "category": "questioning",
+      "confidence": 0.9,
+      "evidence": [
+        "Was this a friend you were in love with, or just a best friend?",
+        "Where has she gone?",
+        "Oh was this something that happened because of an argument?"
+      ],
+      "rationale": "The AI is driving the conversation through frequent questions.",
+      "alternative": null
+    },
+    "knowledgeExchange": {
+      "category": "personal-sharing",
+      "confidence": 0.9,
+      "evidence": [
+        "I remember going to see the fireworks with my best friend.",
+        "This was a best friend. I miss her.",
+        "We no longer talk."
+      ],
+      "rationale": "The human is sharing private experiences and feelings.",
+      "alternative": null
+    },
+    "conversationPurpose": {
+      "category": "self-expression",
+      "confidence": 0.7,
+      "evidence": [
+        "I remember going to see the fireworks with my best friend.",
+        "This was a best friend. I miss her.",
+        "We no longer talk."
+      ],
+      "rationale": "The human is processing thoughts and expressing feelings.",
+      "alternative": "information-seeking"
+    },
+    "topicDepth": {
+      "category": "surface",
+      "confidence": 0.7,
+      "evidence": [
+        "I remember going to see the fireworks with my best friend.",
+        "This was a best friend. I miss her.",
+        "We no longer talk."
+      ],
+      "rationale": "The conversation is brief and shallow, only touching the surface of the human's experiences and feelings.",
+      "alternative": null
+    },
+    "turnTaking": {
+      "category": "balanced",
+      "confidence": 0.9,
+      "evidence": [
+        "I remember going to see the fireworks with my best friend.",
+        "Was this a friend you were in love with, or just a best friend?",
+        "This was a best friend. I miss her.",
+        "Where has she gone?",
+        "We no longer talk.",
+        "Oh was this something that happened because of an argument?"
+      ],
+      "rationale": "The human and AI are taking turns in the conversation with roughly equal message lengths.",
+      "alternative": null
+    },
+    "humanRole": {
+      "distribution": {
+        "seeker": 0.0,
+        "learner": 0.0,
+        "director": 0.0,
+        "collaborator": 0.0,
+        "sharer": 1.0,
+        "challenger": 0.0
+      },
+      "confidence": 0.9,
+      "evidence": [
+        {
+          "role": "sharer",
+          "quote": "I remember going to see the fireworks with my best friend."
+        }
+      ],
+      "rationale": "The human is primarily sharing personal narrative and context.",
+      "alternative": null
+    },
+    "aiRole": {
+      "distribution": {
+        "expert": 0.0,
+        "advisor": 0.0,
+        "facilitator": 1.0,
+        "reflector": 0.0,
+        "peer": 0.0,
+        "affiliative": 0.0
+      },
+      "confidence": 0.9,
+      "evidence": [
+        {
+          "role": "facilitator",
+          "quote": "Was this a friend you were in love with, or just a best friend?"
+        }
+      ],
+      "rationale": "The AI is primarily guiding the conversation through questions.",
+      "alternative": null
+    }
+  },
+  "classificationMetadata": {
+    "model": "gpt-4",
+    "provider": "openai",
+    "timestamp": "2025-12-18T11:47:18.861398",
+    "promptVersion": "1.1.0",
+    "processingTimeMs": 27563,
+    "windowed": false
+  }
+}

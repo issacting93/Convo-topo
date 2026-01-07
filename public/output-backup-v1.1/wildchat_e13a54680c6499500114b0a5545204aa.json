@@ -1,0 +1,161 @@
+{
+  "id": "wildchat_e13a54680c6499500114b0a5545204aa",
+  "source": "wildchat",
+  "messages": [
+    {
+      "role": "user",
+      "content": "How old was Ronald Regan when he won in 1984?"
+    },
+    {
+      "role": "assistant",
+      "content": "Ronald Reagan was 73 years old when he won the presidential election in 1984."
+    },
+    {
+      "role": "user",
+      "content": "How old was Biden when we won in 2020?"
+    },
+    {
+      "role": "assistant",
+      "content": "Joe Biden was 78 years old when he won the presidential election in 2020."
+    }
+  ],
+  "metadata": {
+    "model": "gpt-3.5-turbo-0613",
+    "timestamp": "2023-08-16T20:50:31+00:00",
+    "turn_count": 2,
+    "language": "English",
+    "country": "United States",
+    "state": "Connecticut",
+    "toxic": false,
+    "redacted": false
+  },
+  "classification": {
+    "abstain": false,
+    "interactionPattern": {
+      "category": "question-answer",
+      "confidence": 1.0,
+      "evidence": [
+        "How old was Ronald Regan when he won in 1984?",
+        "How old was Biden when we won in 2020?"
+      ],
+      "rationale": "The human is asking questions and the AI is providing answers.",
+      "alternative": null
+    },
+    "powerDynamics": {
+      "category": "human-led",
+      "confidence": 1.0,
+      "evidence": [
+        "How old was Ronald Regan when he won in 1984?",
+        "How old was Biden when we won in 2020?"
+      ],
+      "rationale": "The human is leading the conversation by asking questions.",
+      "alternative": null
+    },
+    "emotionalTone": {
+      "category": "neutral",
+      "confidence": 1.0,
+      "evidence": [
+        "How old was Ronald Regan when he won in 1984?",
+        "How old was Biden when we won in 2020?"
+      ],
+      "rationale": "There is no strong emotional coloring in the conversation.",
+      "alternative": null
+    },
+    "engagementStyle": {
+      "category": "questioning",
+      "confidence": 1.0,
+      "evidence": [
+        "How old was Ronald Regan when he won in 1984?",
+        "How old was Biden when we won in 2020?"
+      ],
+      "rationale": "The human is driving the conversation by asking questions.",
+      "alternative": null
+    },
+    "knowledgeExchange": {
+      "category": "factual-info",
+      "confidence": 1.0,
+      "evidence": [
+        "Ronald Reagan was 73 years old when he won the presidential election in 1984.",
+        "Joe Biden was 78 years old when he won the presidential election in 2020."
+      ],
+      "rationale": "The AI is providing factual information in response to the human's questions.",
+      "alternative": null
+    },
+    "conversationPurpose": {
+      "category": "information-seeking",
+      "confidence": 1.0,
+      "evidence": [
+        "How old was Ronald Regan when he won in 1984?",
+        "How old was Biden when we won in 2020?"
+      ],
+      "rationale": "The human is seeking specific information.",
+      "alternative": null
+    },
+    "topicDepth": {
+      "category": "surface",
+      "confidence": 1.0,
+      "evidence": [
+        "How old was Ronald Regan when he won in 1984?",
+        "How old was Biden when we won in 2020?"
+      ],
+      "rationale": "The conversation is brief and the topics are not explored in depth.",
+      "alternative": null
+    },
+    "turnTaking": {
+      "category": "balanced",
+      "confidence": 1.0,
+      "evidence": [
+        "How old was Ronald Regan when he won in 1984?",
+        "How old was Biden when we won in 2020?"
+      ],
+      "rationale": "Both the human and the AI are taking turns in the conversation.",
+      "alternative": null
+    },
+    "humanRole": {
+      "distribution": {
+        "seeker": 1.0,
+        "learner": 0.0,
+        "director": 0.0,
+        "collaborator": 0.0,
+        "sharer": 0.0,
+        "challenger": 0.0
+      },
+      "confidence": 1.0,
+      "evidence": [
+        {
+          "role": "seeker",
+          "quote": "How old was Ronald Regan when he won in 1984?"
+        }
+      ],
+      "rationale": "The human is seeking information.",
+      "alternative": null
+    },
+    "aiRole": {
+      "distribution": {
+        "expert": 1.0,
+        "advisor": 0.0,
+        "facilitator": 0.0,
+        "reflector": 0.0,
+        "peer": 0.0,
+        "affiliative": 0.0
+      },
+      "confidence": 1.0,
+      "evidence": [
+        {
+          "role": "expert",
+          "quote": "Ronald Reagan was 73 years old when he won the presidential election in 1984."
+        }
+      ],
+      "rationale": "The AI is providing expert information in response to the human's questions.",
+      "alternative": null
+    }
+  },
+  "classificationMetadata": {
+    "model": "gpt-4",
+    "provider": "openai",
+    "timestamp": "2026-01-03T17:04:29.754901",
+    "promptVersion": "1.1.0",
+    "processingTimeMs": 20288,
+    "windowed": false
+  }
+}

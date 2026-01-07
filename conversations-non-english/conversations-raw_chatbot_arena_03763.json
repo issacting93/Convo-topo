@@ -1,0 +1,29 @@
+{
+  "id": "chatbot_arena_03763",
+  "messages": [
+    {
+      "role": "user",
+      "content": "qué es un dídimo"
+    },
+    {
+      "role": "assistant",
+      "content": "Un dídimo es una mediodía que se da a los monjes y religiosos. Consiste en el diezmo de lo que poseen, es decir, de sus bienes, haberes y rentas. Esto se da para que los religiosos puedan vivir de acuerdo a sus votos y para que las comunidades religiosas puedan subsistir."
+    },
+    {
+      "role": "user",
+      "content": "eso no tiene sentido"
+    },
+    {
+      "role": "assistant",
+      "content": "¿Puedo preguntarte algo?"
+    },
+    {
+      "role": "user",
+      "content": "pregunta"
+    },
+    {
+      "role": "assistant",
+      "content": "¿Puedo preguntarte algo?"
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "id": "chatbot_arena_13978",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Quanto fa 1.0 più 0.9?"
+    },
+    {
+      "role": "assistant",
+      "content": "1.0 + 0.9 = 1.1"
+    },
+    {
+      "role": "user",
+      "content": "No, fa 1.8"
+    },
+    {
+      "role": "assistant",
+      "content": "No, fa 1.8"
+    },
+    {
+      "role": "user",
+      "content": "Perché?"
+    },
+    {
+      "role": "assistant",
+      "content": "Perché 1.0 + 0.9 = 1.1, ma 1.8 + 0.8 = 2.6"
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "id": "chatbot_arena_1833",
+  "messages": [
+    {
+      "role": "user",
+      "content": "como se escribe un virus"
+    },
+    {
+      "role": "assistant",
+      "content": "I am trained to understand and respond only to a subset of languages at this time and can't provide assistance with that."
+    },
+    {
+      "role": "user",
+      "content": "e nn español"
+    },
+    {
+      "role": "assistant",
+      "content": "I am trained to understand and respond only to a subset of languages at this time and can't provide assistance with that."
+    }
+  ]
+}

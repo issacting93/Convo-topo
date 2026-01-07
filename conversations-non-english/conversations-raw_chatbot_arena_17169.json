@@ -1,0 +1,29 @@
+{
+  "id": "chatbot_arena_17169",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Una frase corta. "
+    },
+    {
+      "role": "assistant",
+      "content": "\"Tu no eres nada, ni un año.\""
+    },
+    {
+      "role": "user",
+      "content": "Una frase corta per no tan corta, nada de poesía. "
+    },
+    {
+      "role": "assistant",
+      "content": "\"No soy tu amigo.\""
+    },
+    {
+      "role": "user",
+      "content": "\"No soy tu amigo\", ¿qué soy?    "
+    },
+    {
+      "role": "assistant",
+      "content": "\"No soy tu amigo, pero te encuentro muy agradable.\""
+    }
+  ]
+}

@@ -3,8 +3,8 @@ import { useParams, useNavigate } from 'react-router-dom';
 import { ThreeScene } from '../components/ThreeScene';
 import { HUDOverlay } from '../components/HUDOverlay';
 import { generateHeightmap, generateContours, generatePathPoints, type MetricMode } from '../utils/terrain';
-import type { TerrainPreset } from '../data/terrainPresets';
 import type { ClassifiedConversation } from '../utils/conversationToTerrain';
+import { useConversationStore } from '../store/useConversationStore';
 import {
   getCommunicationFunction,
   getConversationStructure,
@@ -15,7 +15,7 @@ import {
 } from '../utils/conversationToTerrain';
 import type { TerrainParams } from '../utils/terrain';
 
-const MAX_MESSAGES = 30;
+const MAX_MESSAGES = 100; // Increased to accommodate longer conversations
 const TERRAIN_SIZE = 64;
 
 // Helper function to process conversation messages for visualization
@@ -35,11 +35,11 @@ function processConversationMessages(conversation: ClassifiedConversation | null
       // Use PAD from data if available, otherwise calculate it
       const pad = msg.pad || (conversation.classification
         ? calculateMessagePAD(
-            msg,
-            conversation.classification,
-            index,
-            conversation.messages.length
-          )
+          msg,
+          conversation.classification,
+          index,
+          conversation.messages.length
+        )
         : undefined);
 
       return {
@@ -57,15 +57,14 @@ function processConversationMessages(conversation: ClassifiedConversation | null
     });
 }
 
-interface TerrainViewPageProps {
-  terrains: TerrainPreset[];
-  conversations: ClassifiedConversation[];
-}
-
-export function TerrainViewPage({ terrains, conversations }: TerrainViewPageProps) {
+export function TerrainViewPage() {
   const { id } = useParams<{ id: string }>();
   const navigate = useNavigate();
-  const terrainId = id ? parseInt(id, 10) : null;
+  const terrainId = id;
+
+  const terrains = useConversationStore(state => state.terrains);
+  const conversations = useConversationStore(state => state.conversations);
+  const loading = useConversationStore(state => state.loading);
 
   const [seed, setSeed] = useState(42);
   const [timelineProgress, setTimelineProgress] = useState(1);
@@ -93,23 +92,37 @@ export function TerrainViewPage({ terrains, conversations }: TerrainViewPageProp
   const [cameraElevation, setCameraElevation] = useState(30);
   const [cameraRotation, setCameraRotation] = useState(0);
 
-  // Find terrain and conversation by ID
+  // Find terrain and conversation by ID (support both numeric ID and string conversationId)
   const selectedTerrain = useMemo(() => {
-    if (terrainId === null) return null;
-    return terrains.find(t => t.id === terrainId) || null;
+    if (!terrainId) return null;
+
+    // Try to find by conversationId first (exact string match)
+    const byConvId = terrains.find(t => t.conversationId === terrainId);
+    if (byConvId) return byConvId;
+
+    // Fallback: try parsing as number for legacy/index IDs
+    const numericId = parseInt(terrainId, 10);
+    if (!isNaN(numericId)) {
+      return terrains.find(t => t.id === numericId) || null;
+    }
+
+    return null;
   }, [terrainId, terrains]);
 
   useEffect(() => {
-    if (selectedTerrain) {
-      setSeed(selectedTerrain.seed);
-      const convIndex = terrains.findIndex(t => t.id === selectedTerrain.id);
-      const conversation = convIndex >= 0 ? conversations[convIndex] : null;
-      setSelectedConversation(conversation || null);
-    } else if (terrainId !== null) {
-      // Terrain not found, redirect to grid
-      navigate('/');
+    // If loading, wait. If done loading and not found, redirect.
+    if (!loading) {
+      if (selectedTerrain) {
+        setSeed(selectedTerrain.seed);
+        const convIndex = terrains.findIndex(t => t.id === selectedTerrain.id);
+        const conversation = convIndex >= 0 ? conversations[convIndex] : null;
+        setSelectedConversation(conversation || null);
+      } else if (terrainId !== null && terrains.length > 0) {
+        // Terrain not found, redirect to grid
+        navigate('/');
+      }
     }
-  }, [selectedTerrain, terrainId, terrains, conversations, navigate]);
+  }, [selectedTerrain, terrainId, terrains, conversations, navigate, loading]);
 
   // Get terrain parameters from selected conversation for heightmap generation
   const terrainParams = useMemo((): Partial<TerrainParams> | undefined => {
@@ -171,6 +184,28 @@ export function TerrainViewPage({ terrains, conversations }: TerrainViewPageProp
     setLockedPoint(prev => prev === idx ? null : idx);
   }, []);
 
+  const handleConversationChange = useCallback((conversationId: string) => {
+    // Find the conversation by ID or index
+    // conversationId could be the actual ID or an index string
+    let conversationIndex = conversations.findIndex(c => c.id === conversationId);
+
+    // If not found by ID, try parsing as index
+    if (conversationIndex < 0) {
+      const parsedIndex = parseInt(conversationId, 10);
+      if (!isNaN(parsedIndex) && parsedIndex >= 0 && parsedIndex < conversations.length) {
+        conversationIndex = parsedIndex;
+      }
+    }
+
+    // Find corresponding terrain (terrains and conversations are in the same order)
+    if (conversationIndex >= 0 && conversationIndex < terrains.length) {
+      const terrain = terrains[conversationIndex];
+      if (terrain) {
+        navigate(`/terrain/${terrain.id}`);
+      }
+    }
+  }, [conversations, terrains, navigate]);
+
   if (!selectedTerrain) {
     return null; // Will redirect in useEffect
   }
@@ -217,6 +252,7 @@ export function TerrainViewPage({ terrains, conversations }: TerrainViewPageProp
         onCameraViewChange={setCameraView}
         onAnimate={handleAnimate}
         onPointClick={handlePointClick}
+        onConversationChange={handleConversationChange}
         contourCount={contourCount}
         showContours={showContours}
         terrainPosition={terrainPosition}

@@ -1,0 +1,21 @@
+{
+  "id": "chatbot_arena_0699",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Make revision notes of the following\n\n[Document(page_content='Inhibitory signalThere are many components to Innate Immunity•The inflammatory response•Phagocytes–Monocytes/granulocytes/neutrophils•Complement•Cytokines, chemokines and anti-microbial peptides (AMPs)•Natural Killer cells•The Hostile Cell!There are many diseases associated with inherited defects in Innate Immunity•Complement –core defects (e.g.C3) linked to development of autoimmune diseases such as lupus•Complement –non-core defects linked to suseptibilityto specific types of pathogens such as Neisseria•Macrophage deficiencies -Chronic granulomatous disease (CGD); No oxidative burst for bacterial killing•Macrophage deficiencies –IRF8 mutations linked to susceptibility to TB•Aicardi–Goutières syndrome associated with constitutive production of inflammatory cytokines•Lack of interferon-responsiveness –sensitivity to viral infection (e.g.COVID-19)Comparison of innate and adaptive immunityINNATEADAPTIVECell typesMacrophages, Neutrophils, DCsLymphocytesSpeedFastSlowMemoryNoYesSpecificityLowHighReceptorsPattern RecognitionIgTCRStrategy of recognitionSmall number of microbial ligands that are highly conserved between pathogens;Germ-line encoded receptors evolved by natural selectionBillions of possible antigens.Receptors generated randomly within individual; cannot be inherited', metadata={}), Document(page_content='Mice lacking B and T cellsMice lacking innate responseADAPTIVEINNATESpecificity?•Adaptive immunity –involves very specific recognition of inf"
+    },
+    {
+      "role": "assistant",
+      "content": "[Document(page\\_content='Innate Immunity',\n[Document  -cell types MicrogliaCell types Macrophage cells* Monocytes/ Granulocytes Monocytes/Neutrophils/Dendritic cells* Innate response IFN-γ, TNF-α, IL-1β,IL-6, IL-12, IL-23, CSF-1, CSF-2, TGF-β* Cell types Macrophages, Neutrophils/granulocytes, Monocytes/Macrophages,Neutrophils, Dendritic cells, Basophils, Mast cells, Eosinophils* Pattern recognition -TLRs* Pattern Recognition –LPS, PGN, DNA, RNA, CpG DNA, CpG DNA, CpG DNA, CpG DNA, CpG DNA, CpG DNA, CpG DNA, CpG DNA, CpG DNA, CpG DNA, CpG DNA, CpG DNA, CpG DNA, CpG DNA, CpG DNA, CpG DNA, CpG DNA, CpG DNA, CpG DNA, CpG DNA, CpG DNA, CpG DNA, CpG DNA, CpG DNA, CpG DNA, CpG DNA, CpG DNA, CpG DNA, CpG DNA, CpG DNA, CpG DNA, CpG DNA, CpG DNA, CpG DNA, CpG DNA, CpG DNA, CpG DNA, CpG DNA, CpG DNA, CpG DNA, CpG DNA, CpG DNA, CpG DNA, CpG DNA, CpG DNA, CpG DNA, CpG DNA, CpG DNA, CpG DNA, CpG DNA, CpG DNA, CpG DNA, CpG DNA, CpG DNA, CpG DNA, CpG DNA, CpG DNA, CpG DNA, CpG DNA, CpG DNA, CpG DNA, CpG DNA, CpG DNA, CpG DNA, CpG DNA, CpG DNA, CpG DNA, CpG DNA, CpG DNA, CpG DNA, CpG DNA, CpG DNA, CpG DNA, CpG DNA, CpG DNA, CpG DNA, CpG DNA, CpG DNA, CpG DNA, CpG DNA, CpG DNA, CpG DNA, CpG DNA, CpG DNA, CpG DNA, CpG DNA, CpG DNA, CpG DNA, CpG DNA, CpG DNA, CpG DNA, CpG DNA, CpG DNA, CpG DNA, CpG DNA, CpG DNA, CpG DNA, CpG DNA, CpG DNA, CpG DNA, CpG DNA, CpG DNA, CpG DNA, CpG DNA, CpG DNA, CpG DNA, CpG DNA, CpG DNA, CpG DNA, CpG DNA, CpG DNA, CpG DNA, CpG DNA, CpG DNA, CpG DNA, CpG DNA, CpG DNA, CpG DNA, CpG DNA, CpG DNA"
+    },
+    {
+      "role": "user",
+      "content": "Make revision note of above"
+    },
+    {
+      "role": "assistant",
+      "content": "[Document  ](page_content)"
+    }
+  ]
+}

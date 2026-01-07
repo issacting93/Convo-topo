@@ -1,0 +1,21 @@
+{
+  "id": "chatbot_arena_1999",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Привет как дела?"
+    },
+    {
+      "role": "assistant",
+      "content": "Hi, how are you?"
+    },
+    {
+      "role": "user",
+      "content": "отлично"
+    },
+    {
+      "role": "assistant",
+      "content": "Great! How can I help you today?"
+    }
+  ]
+}

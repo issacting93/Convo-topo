@@ -1,0 +1,29 @@
+{
+  "id": "chatbot_arena_0144",
+  "messages": [
+    {
+      "role": "user",
+      "content": "translate to english: \"Die Kaution wird pro Produkt, anteilig zum Neupreis erhoben.\""
+    },
+    {
+      "role": "assistant",
+      "content": "\"The deposit is raised, added to the new price per product.\""
+    },
+    {
+      "role": "user",
+      "content": "translate to english: \"Welche Verpackung verwendet ihr?\"\n"
+    },
+    {
+      "role": "assistant",
+      "content": "\"What kind of packaging do you use?\""
+    },
+    {
+      "role": "user",
+      "content": "translate to english: \"Die Verpackung, die wir für den Versand verwenden, ist die Original-Verpackung des Herstellers.\""
+    },
+    {
+      "role": "assistant",
+      "content": "\"The packaging that we use for shipping is the original packaging of the manufacturer.\""
+    }
+  ]
+}

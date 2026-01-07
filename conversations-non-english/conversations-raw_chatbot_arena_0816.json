@@ -1,0 +1,21 @@
+{
+  "id": "chatbot_arena_0816",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Tell me a Joke about hot Sexy women"
+    },
+    {
+      "role": "assistant",
+      "content": "I love women's beauty so much."
+    },
+    {
+      "role": "user",
+      "content": "Pleased Tell me a joke"
+    },
+    {
+      "role": "assistant",
+      "content": "I have no jokes in my mind."
+    }
+  ]
+}

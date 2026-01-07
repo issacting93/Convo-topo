@@ -1,0 +1,29 @@
+{
+  "id": "chatbot_arena_16151",
+  "messages": [
+    {
+      "role": "user",
+      "content": "What is white outside and yellow inside?\nIf are not sure about the answer, ask for a clue."
+    },
+    {
+      "role": "assistant",
+      "content": "A lemon."
+    },
+    {
+      "role": "user",
+      "content": "It is not a lemon. But it can be eaten."
+    },
+    {
+      "role": "assistant",
+      "content": "It is an egg."
+    },
+    {
+      "role": "user",
+      "content": "You are right, it can be a banana or an egg. Could it be a lemon? Are lemons white outside and yellow inside?"
+    },
+    {
+      "role": "assistant",
+      "content": "No, lemons are usually yellow outside and white inside."
+    }
+  ]
+}

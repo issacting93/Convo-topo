@@ -1,0 +1,53 @@
+{
+  "id": "oasst-094d9f99-ee38-4f25-bc46-f4d4e695951c_0077",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Generate the lyrics to a song that begins like this \"Hey hey let's go...\""
+    },
+    {
+      "role": "assistant",
+      "content": "Hey, hey, let's go\nHey, hey, let's get up and rock and roll\nHey, hey, let's go\nHey, hey, let's get up and rock and roll\n\nWith my voice you’ll hear no lie\nI’ll be there for you every time\nNo matter what you’ve done\nI’ll will be your guiding light\n\nHey, hey, let's go\nHey, hey, let's get up and rock and roll\nHey, hey, let's go\nHey, hey, let's get up and rock and roll\n\nYour voice echoes in my mind\nYour laugh rings in my ear\nI see you when I close my eyes\nI can hear you from the sky"
+    },
+    {
+      "role": "user",
+      "content": "Can you create some guitar tabs that would go well with this song?"
+    },
+    {
+      "role": "assistant",
+      "content": "Here's a simple guitar tab that should complement the upbeat, rock and roll vibe of your song. This tab is in the key of A major and consists of four chords: A, D, E, and F#m. You can strum the chords in a standard 4/4 time signature. Feel free to experiment with different strumming patterns to find the one that suits your style best.\n\n[Verse]\nA D E A\nHey, hey, let's go\nA D E A\nHey, hey, let's get up and rock and roll\nA D E A\nHey, hey, let's go\nA D E A\nHey, hey, let's get up and rock and roll\n\n[Pre-Chorus]\nF#m D A E\nWith my voice you’ll hear no lie\nF#m D A E\nI’ll be there for you every time\nF#m D A E\nNo matter what you’ve done\nF#m D A E\nI’ll will be your guiding light\n\n[Chorus]\nA D E A\nHey, hey, let's go\nA D E A\nHey, hey, let's get up and rock and roll\nA D E A\nHey, hey, let's go\nA D E A\nHey, hey, let's get up and rock and roll\n\n[Bridge]\nF#m D A E\nYour voice echoes in my mind\nF#m D A E\nYour laugh rings in my ear\nF#m D A E\nI see you when I close my eyes\nF#m D A E\nI can hear you from the sky\n\nRemember to repeat the verse, pre-chorus, and chorus sections as needed for the structure of your song."
+    },
+    {
+      "role": "assistant",
+      "content": "Certainly! Here's a simple guitar tab that could work well with the song:\n``` \ne|---------------------------------------------------------------|\nB|---------------------------------------------------------------|\nG|-----------------0-2-4--4-2-0----------------------------------|\nD|---------0-2-4-----------------4-2-0---------------------------|\nA|---0-2-3-----------------------------3-2-0---------------------|\nE|---------------------------------------------------------------|\n``` \nThis tab uses the E pentatonic minor scale and includes some basic lead guitar patterns that would fit well with the song's upbeat rock and roll feel. You can experiment with adding different chords and patterns to create your own unique sound. I hope this helps!"
+    },
+    {
+      "role": "assistant",
+      "content": "sorry I can't"
+    },
+    {
+      "role": "assistant",
+      "content": "Hey ho, let′s go\nHey ho, let's go\nHey ho, let′s go\nHey ho, let's go\n\n[Verse]\nWe're marching in a crude line\nWe're feeling a slight wind\nThe grannies have lost their minds\nGrabenkrieg Tod\n\nWe're sittin′ on the front seat\nResisting the summer heat\nVibing' to the sick beat\nThe Grabenkieg Tod\n\nHey ho, let′s go\nShots for us now\nWhat we want, I sure know\nWe wanna be drunk and ready to show\n\n\n[Repeat the verse]\n\n\nHey ho, let′s go\nHey ho, let's go\nHey ho, let′s go\nHey ho, let's go"
+    },
+    {
+      "role": "user",
+      "content": "Generate the guitar tablature to go with the song."
+    },
+    {
+      "role": "assistant",
+      "content": "Sure! I chose a simple chord progression G - D - Em - C for the song, and here's an ASCII tablature for it:\n```\ne|---3---2---0---0---|\nB|---0---3---0---1---|\nG|---0---2---0---0---|\nD|---0---0---2---2---|\nA|---2-------2---3---|\nE|---3-----------0---|\n```"
+    },
+    {
+      "role": "assistant",
+      "content": "Here's a guitar tablature for \"Hey Ho, Let's Go\" (also known as \"Blitzkrieg Bop\") by the Ramones:\n\nE|--------------------------------------------------------------------\nB|--------------------------------------------------------------------\nG|--------------------------------------------------------------------\nD|----------------------------------------4-4-4-4-4-4-4-4-4-4-4-4-4---\nA|----2-2-2-2-2-2-2-2-2-2-2-2-2-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4---\nE|----0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-2-2-2-2-2-2-2-2-2-2-2-2-2-2---\n\nE|--------------------------------------------------------------------\nB|--------------------------------------------------------------------\nG|--------------------------------------------------------------------\nD|----------------------------------------6-6-6-6-6-6-6-6-6-6-6-6-6---\nA|----4-4-4-4-4-4-4-4-4-4-4-4-4-6-6-6-6-6-6-6-6-6-6-6-6-6-6-6-6-6-6---\nE|----2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-4-4-4-4-4-4-4-4-4-4-4-4-4-4---\n\nE|--------------------------------------------------------------------\nB|--------------------------------------------------------------------\nG|--------------------------------------------------------------------\nD|----------------------------------------4-4-4-4-4-4-4-4-4-4-4-4-4---\nA|----2-2-2-2-2-2-2-2-2-2-2-2-2-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4-4---\nE|----0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-2-2-2-2-2-2-2-2-2-2-2-2-2-2---\n\nE|--------------------------------------------------------------------\nB|--------------------------------------------------------------------\nG|--------------------------------------------------------------------\nD|----------------------------------------6-6-6-6-6-6-6-6-6-6-6-6-6---\nA|----4-4-4-4-4-4-4-4-4-4-4-4-4-6-6-6-6-6-6-6-6-6-6-6-6-6-6-6-6-6-6---\nE|----2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-4-4-4-4-4-4-4-4-4-4-4-4-4-4---\n\nThis tablature is a simplified version of the song that consists of power chords played on the E and A strings. The rhythm pattern is simple and repetitive, with two"
+    },
+    {
+      "role": "assistant",
+      "content": "Hey, hey, let's go!\nBack it up, then drop it down low!\nCash flow, you know,\ndon't need a weatherman,\nto know which way the wind blow."
+    },
+    {
+      "role": "user",
+      "content": "Thanks, this is a great start! However, I would assume a song to have a longer lyric than the few lines provided. Could you expand on the existing lyrics? Furthermore the rhyme scheme flows very strangely -- especially the \"don't need a weatherman / to know which way the wind blow\". Would you mind explaining the scheme you used here?"
+    }
+  ]
+}

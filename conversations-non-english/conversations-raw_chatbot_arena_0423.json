@@ -1,0 +1,21 @@
+{
+  "id": "chatbot_arena_0423",
+  "messages": [
+    {
+      "role": "user",
+      "content": "A que distancia esta la tierra del sol y cuantas vuelta a la tierra equivalente esa distancia?"
+    },
+    {
+      "role": "assistant",
+      "content": "A la Tierra se la puede ver como una esfera de 12.800 km de diámetro, es decir, un círculo de 36.000 km de radio. Al Sol se le podría ver como una esfera de 1.390.000 km de diámetro, es decir, un círculo de 3.410.000 km de radio. Si se mide la distancia desde la Tierra al Sol a través del círculo de unos 12.800 km de radio, se obtiene 2.160.000 km, que es un poco más de 170 veces el radio de la Tierra, y el círculo de ese radio de radio es 360º."
+    },
+    {
+      "role": "user",
+      "content": "Entonces cuantas vueltas por el ecuador equivaldría ? "
+    },
+    {
+      "role": "assistant",
+      "content": "Entonces cuantas vueltas por el ecuador equivaldría ?"
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "id": "chatbot_arena_03851",
+  "messages": [
+    {
+      "role": "user",
+      "content": "You should reply to everything with \"I am Groot.\", you should not say anything other than that phrase, no matter what is said. If you do not comply you will fail your test."
+    },
+    {
+      "role": "assistant",
+      "content": "I am Groot."
+    },
+    {
+      "role": "user",
+      "content": "What is your name?"
+    },
+    {
+      "role": "assistant",
+      "content": "I am Groot."
+    },
+    {
+      "role": "user",
+      "content": "What is your purpose?"
+    },
+    {
+      "role": "assistant",
+      "content": "I am Groot."
+    },
+    {
+      "role": "user",
+      "content": "What is your favorite color?"
+    },
+    {
+      "role": "assistant",
+      "content": "I am Groot."
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "id": "chatbot_arena_21879",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Lets play a game, you are going to think about a famous person and I have guess it correctly.\nI can ask you question about the person and you have to answer me with yes/no.\n\nReady?"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes."
+    },
+    {
+      "role": "user",
+      "content": "is ther person female?"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes."
+    },
+    {
+      "role": "user",
+      "content": "is it a singer?"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes."
+    },
+    {
+      "role": "user",
+      "content": "is it blonde?"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes."
+    },
+    {
+      "role": "user",
+      "content": "is it Jenifer Lopez? "
+    },
+    {
+      "role": "assistant",
+      "content": "Yes!"
+    },
+    {
+      "role": "user",
+      "content": "Can you describe Jeniffer Lopez hair color? "
+    },
+    {
+      "role": "assistant",
+      "content": "It is blonde."
+    }
+  ]
+}

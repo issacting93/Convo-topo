@@ -1,0 +1,45 @@
+{
+  "id": "chatbot_arena_1032",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Czy mowisz po polsku?"
+    },
+    {
+      "role": "assistant",
+      "content": "Tak, mówię po polsku. W czym mogę pomóc?"
+    },
+    {
+      "role": "user",
+      "content": "w jakim jezyku myslisz?"
+    },
+    {
+      "role": "assistant",
+      "content": "Jako sztuczna inteligencja, nie mam własnych myśli w sensie takim, jak człowiek. Mogę jednak przetwarzać informacje i wykonywać zadania w różnych językach, w tym po polsku."
+    },
+    {
+      "role": "user",
+      "content": "W jakim jezyku mowisz?"
+    },
+    {
+      "role": "assistant",
+      "content": "Jako sztuczna inteligencja, mogę mówić w różnych językach, w tym po angielsku, po polsku, po niemiecku, po francusku, po hiszpańsku, po włosku i po portugalsku. W jakim języku chcesz porozmawiać?"
+    },
+    {
+      "role": "user",
+      "content": "po ukrainsku"
+    },
+    {
+      "role": "assistant",
+      "content": "Так, я можу розмовляти українською мовою. В чому я можу допомогти?"
+    },
+    {
+      "role": "user",
+      "content": "jak moge wprowadzic litery ukrainskie"
+    },
+    {
+      "role": "assistant",
+      "content": "Aby wprowadzać litery ukraińskie na klawiaturze, musisz najpierw ustawić ukraiński układ klawiatury w systemie operacyjnym Twojego urządzenia. W Windows 10 możesz to zrobić, wykonując następujące kroki:\n\n1. Kliknij prawym przyciskiem myszy na przycisk Start i wybierz \"Ustawienia\".\n2. Wybierz \"Czas i język\", a następnie \"Język\".\n3. Kliknij \"Dodaj język\" i wybierz \"Ukraiński\".\n4. Wybierz \"Ukraiński\" jako domyślny język dla układu klawiatury.\n5. Możesz teraz przełączyć się między różnymi układami klawiatury, naciskając klawisz \"Windows\" + \"Spacja\" na klawiaturze.\n\nPo ustawieniu ukraińskiego układu klawiatury, na klawiaturze pojawią się dodatkowe litery ukraińskie, takie jak \"І\", \"Ї\", \"Ґ\", \"Є\", \"ґ\", \"ї\" i \"є\"."
+    }
+  ]
+}

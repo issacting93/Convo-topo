@@ -1,0 +1,198 @@
+{
+  "id": "conv-19",
+  "messages": [
+    {
+      "role": "user",
+      "content": "we all live in a yellow submarine , a yellow submarine . morning !"
+    },
+    {
+      "role": "assistant",
+      "content": "hi ! that is a great line for my next stand up ."
+    },
+    {
+      "role": "user",
+      "content": "lol . i am shy , anything to break the ice , and i am a beatles fan ."
+    },
+    {
+      "role": "assistant",
+      "content": "i can tell . i am not , you can see me in some tv shows"
+    },
+    {
+      "role": "user",
+      "content": "really ? what shows ? i like tv , it makes me forget i do not like my family"
+    },
+    {
+      "role": "assistant",
+      "content": "wow , i wish i had a big family . i grew up in a very small town ."
+    },
+    {
+      "role": "user",
+      "content": "i did too . i do not get along with mine . they have no class ."
+    },
+    {
+      "role": "assistant",
+      "content": "just drink some cola with rum and you'll forget about them !"
+    },
+    {
+      "role": "user",
+      "content": "put the lime in the coconut as well . . ."
+    },
+    {
+      "role": "assistant",
+      "content": "nah , plain cuba libre , that's what we drank yesterday at the theater ."
+    },
+    {
+      "role": "user",
+      "content": "i prefer mojitos . watermelon or cucumber ."
+    },
+    {
+      "role": "assistant",
+      "content": "hello how are you tonight"
+    }
+  ],
+  "classification": {
+    "abstain": false,
+    "interactionPattern": {
+      "category": "casual-chat",
+      "confidence": 0.9,
+      "evidence": [
+        "we all live in a yellow submarine , a yellow submarine . morning !",
+        "i prefer mojitos . watermelon or cucumber ."
+      ],
+      "rationale": "The conversation is a social exchange without a specific instrumental goal.",
+      "alternative": null
+    },
+    "powerDynamics": {
+      "category": "balanced",
+      "confidence": 0.7,
+      "evidence": [
+        "i am shy , anything to break the ice , and i am a beatles fan .",
+        "i can tell . i am not , you can see me in some tv shows"
+      ],
+      "rationale": "Both parties contribute to the direction of the conversation.",
+      "alternative": null
+    },
+    "emotionalTone": {
+      "category": "playful",
+      "confidence": 0.8,
+      "evidence": [
+        "that is a great line for my next stand up .",
+        "just drink some cola with rum and you'll forget about them !"
+      ],
+      "rationale": "The conversation is light and humorous.",
+      "alternative": null
+    },
+    "engagementStyle": {
+      "category": "reactive",
+      "confidence": 0.7,
+      "evidence": [
+        "i can tell . i am not , you can see me in some tv shows",
+        "nah , plain cuba libre , that's what we drank yesterday at the theater ."
+      ],
+      "rationale": "Both parties are responding without strong direction.",
+      "alternative": null
+    },
+    "knowledgeExchange": {
+      "category": "personal-sharing",
+      "confidence": 0.7,
+      "evidence": [
+        "i am shy , anything to break the ice , and i am a beatles fan .",
+        "i wish i had a big family . i grew up in a very small town ."
+      ],
+      "rationale": "Both parties are sharing private experiences and life details.",
+      "alternative": null
+    },
+    "conversationPurpose": {
+      "category": "entertainment",
+      "confidence": 0.8,
+      "evidence": [
+        "lol . i am shy , anything to break the ice , and i am a beatles fan .",
+        "put the lime in the coconut as well . . ."
+      ],
+      "rationale": "The conversation is for fun and amusement.",
+      "alternative": null
+    },
+    "topicDepth": {
+      "category": "surface",
+      "confidence": 0.9,
+      "evidence": [
+        "i prefer mojitos . watermelon or cucumber .",
+        "hello how are you tonight"
+      ],
+      "rationale": "The conversation is brief and shallow.",
+      "alternative": null
+    },
+    "turnTaking": {
+      "category": "balanced",
+      "confidence": 0.9,
+      "evidence": [
+        "we all live in a yellow submarine , a yellow submarine . morning !",
+        "hi ! that is a great line for my next stand up ."
+      ],
+      "rationale": "Both parties have roughly equal message lengths.",
+      "alternative": null
+    },
+    "humanRole": {
+      "distribution": {
+        "seeker": 0.2,
+        "learner": 0.0,
+        "director": 0.0,
+        "collaborator": 0.4,
+        "sharer": 0.4,
+        "challenger": 0.0
+      },
+      "confidence": 0.7,
+      "evidence": [
+        {
+          "role": "seeker",
+          "quote": "really ? what shows ?"
+        },
+        {
+          "role": "collaborator",
+          "quote": "put the lime in the coconut as well . . ."
+        },
+        {
+          "role": "sharer",
+          "quote": "i am shy , anything to break the ice , and i am a beatles fan ."
+        }
+      ],
+      "rationale": "The human is seeking information, collaborating in the conversation, and sharing personal information.",
+      "alternative": null
+    },
+    "aiRole": {
+      "distribution": {
+        "expert": 0.0,
+        "advisor": 0.2,
+        "facilitator": 0.2,
+        "reflector": 0.0,
+        "peer": 0.6,
+        "affiliative": 0.0
+      },
+      "confidence": 0.7,
+      "evidence": [
+        {
+          "role": "advisor",
+          "quote": "just drink some cola with rum and you'll forget about them !"
+        },
+        {
+          "role": "facilitator",
+          "quote": "hello how are you tonight"
+        },
+        {
+          "role": "peer",
+          "quote": "nah , plain cuba libre , that's what we drank yesterday at the theater ."
+        }
+      ],
+      "rationale": "The AI is advising, facilitating the conversation, and acting as a peer.",
+      "alternative": null
+    }
+  },
+  "classificationMetadata": {
+    "model": "gpt-4",
+    "provider": "openai",
+    "timestamp": "2025-12-16T12:26:20.254039",
+    "promptVersion": "1.1.0",
+    "processingTimeMs": 41671,
+    "windowed": false
+  }
+}

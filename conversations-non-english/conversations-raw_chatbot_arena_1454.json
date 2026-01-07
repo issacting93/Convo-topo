@@ -1,0 +1,21 @@
+{
+  "id": "chatbot_arena_1454",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Was ist die Normadatenbank der ARD?"
+    },
+    {
+      "role": "assistant",
+      "content": "Die Normadatenbank der ARD ist eine zentrale Datenbank für die Archivierung von Fernseh- und Hörfunkbeiträgen innerhalb der ARD. In dieser Datenbank werden Metadaten wie Titel, Autoren, Sendezeitpunkt usw. zu allen gesendeten Beiträgen der ARD-Sender gespeichert. Die Normadatenbank dient dazu, diese Daten zentral abrufbar zu machen und den Austausch von Beiträgen zwischen den ARD-Sendern zu erleichtern.\n\nDie wichtigsten Funktionen der Normadatenbank sind:\n\n• Zentrale Erfassung von Metadaten zu allen gesendeten Beiträgen der ARD wie Titel, Autoren, Sendezeitpunkt, Dauer, Inhalte usw.\n\n• Strukturierte und standardisierte Beschreibung der Beiträge nach festgelegten Regeln\n\n• Möglichkeit der Recherche in diesen Metadaten, um Beiträge wiederzufinden und auszutauschen\n\n• Unterstützung der crossmedialen Zusammenarbeit zwischen den ARD-Sendern, indem die Daten zur Verfügung gestellt werden\n\n• Langfristige Archivierung der Metadaten, auch wenn die eigentlichen Beitragsdaten gelöscht werden\n\n• Erleichterung des Rechteclearing, da alle relevanten Produktionsdaten zentral vorliegen\n\nSo dient die Normadatenbank als zentrales \"Gedächtnis\" der ARD und als Grundlage für die Zusammenarbeit und den Austausch zwischen den verschiedenen Sendern und Anstalten innerhalb der ARD."
+    },
+    {
+      "role": "user",
+      "content": "Was ist die Normdatenbank der ARD?"
+    },
+    {
+      "role": "assistant",
+      "content": "Die Normdatenbank der ARD ist etwas anderes als die Normadatenbank. Die Normdatenbank enthält kontrollierte Vokabulare, also standardisierte Begriffe und Schlagworte, die zur Verschlagwortung und Kategorisierung von Medieninhalten genutzt werden. Solche Normdaten oder kontrollierten Vokabulare sind wichtig, um Inhalte einheitlich und strukturiert zu beschreiben.\n\nDie Normdatenbank der ARD umfasst verschiedene Normdatenbereiche wie:\n\n• Sachgruppen: Hierunter fallen hierarchische Kategoriensysteme zur Inhaltsbeschreibung, z.B. für Themen, Orte, Zeiträume etc.\n\n• Personendaten: Enthält Daten wie Vorname, Nachname, alternative Namensschreibweisen, Lebensdaten etc. von Personen.\n\n• Körperschaften: Enthält Daten über Organisationen, Firmen, Verbände, Institutionen etc. wie offizieller Name, alternative Namen, Sitz, Gründungsjahr etc.\n\n• Schlagwortnormdatei: Enthält ein kontrolliertes Vokabular für die Verschlagwortung von Medieninhalten mit eindeutigen Begriffen.\n\n• Geografikum: Enthält standardisierte geografische Begriffe zur Ortsangabe mit Koordinaten, Verwaltungseinheiten etc. \n\nDiese Normdaten werden genutzt, um in der Normadatenbank der ARD und in anderen Mediendatenbanken die Beiträge und Inhalte strukturiert zu beschreiben und zu kategorisieren. So sorgen die Normdaten für eine einheitliche und kontrollierte Sprache, um Medieninhalte standardisiert erschließen und auffinden zu können.\n\nDie Normdatenbank steht neben der ARD auch anderen Rundfunkanstalten und Medienunternehmen zur Verfügung. Sie trägt damit zu einem branchenübergreifenden Standard bei."
+    }
+  ]
+}

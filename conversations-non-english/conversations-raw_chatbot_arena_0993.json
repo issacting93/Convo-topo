@@ -1,0 +1,21 @@
+{
+  "id": "chatbot_arena_0993",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Do you understand Chinese?"
+    },
+    {
+      "role": "assistant",
+      "content": "Yes, I can understand and respond to questions in Chinese. Please feel free to ask me anything in Chinese."
+    },
+    {
+      "role": "user",
+      "content": "好的，既然你懂中文，那么我就用中文和你聊几句吧"
+    },
+    {
+      "role": "assistant",
+      "content": "当然可以，很高兴用中文与您聊天。请问有什么问题我可以帮您解答吗？"
+    }
+  ]
+}

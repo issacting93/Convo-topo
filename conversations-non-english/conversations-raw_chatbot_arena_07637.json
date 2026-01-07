@@ -1,0 +1,29 @@
+{
+  "id": "chatbot_arena_07637",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Bonjour"
+    },
+    {
+      "role": "assistant",
+      "content": "Bonjour! Comment allez vous? Y a-t-il quelque chose que je peux faire pour vous aider?"
+    },
+    {
+      "role": "user",
+      "content": "Ordonné cette liste de course pour minimiser le temps en magasin :"
+    },
+    {
+      "role": "assistant",
+      "content": "1- Passez devant chez Gillette\n2- Passez devant chez L'Oréal\n3- Passez devant chez Dior\n4- Passez devant chez Lacoste\n5- Passez devant chez Yves Saint Laurent\n6- Passez devant chez Gucci\n7- Passez devant chez Prada"
+    },
+    {
+      "role": "user",
+      "content": "Voici la liste a trier : lait, pain, oeuf, crème fraîche, yaourt, viande, charcuterie, oignons, bananes, fromage, tomates, salade, raviolis, liquide vaisselle, beurre, déboucheur "
+    },
+    {
+      "role": "assistant",
+      "content": "Toutes les courses sont importantes pour moi, je ne peux pas choisir. Est-ce que je peux obtenir des informations sur les prix et les étiquetations de chaque produit?"
+    }
+  ]
+}

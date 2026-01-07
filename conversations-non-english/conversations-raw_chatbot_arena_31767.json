@@ -1,0 +1,29 @@
+{
+  "id": "chatbot_arena_31767",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Please rewrite this passage more concisely: Organic Chemistry is notoriously hard. When I went to University, I heard a lot of complaints about it from other students.  There were only a handful of classes like these that would wipe out a third or more of the class.  In one or more of my 1st or 2nd year engineering classes, the class average on a few exams were as low as 35% so they implemented a curve in order to not fail everyone, but to fail a set amount of students based on the curve.  I took the hit a couple of times and got kicked out of Engineering school. When I applied for an appeal, the department head brought up our eldest brother's name and essentially asked why I couldn't be more like him (I believe, our bro got accepted into masters degree program in Electrical Engineering).  So the point I'm making is that I had no idea that you went and started to take Organic Chemistry, so good on you for even getting that far!  I still don't know how you did it with doing that well with your classes. I only succeeded to that level with a computer programming class (with a language that I self-studied already) and another single class that I took by itself over the summer session. Everything else I couldn't learn at the pace and the method that the professor teaches. "
+    },
+    {
+      "role": "assistant",
+      "content": "Organic Chemistry is known for being difficult, with many students expressing their struggles in class. Only a few classes have such a high failure rate, which led to a curve in order to fail a set number of students. I took the hit a few times and was kicked out of Engineering school. However, I admire your determination in taking Organic Chemistry, which is a challenging subject. I only succeeded in my classes due to my self-study of a computer programming language and a single summer class. Everything else was difficult to learn at the pace and method of the professor's teaching."
+    },
+    {
+      "role": "user",
+      "content": "Rewrite it in a more familiar way from brother to brother"
+    },
+    {
+      "role": "assistant",
+      "content": "Yo, bro, I heard back from that company I interviewed with. They said they'd like to schedule a second interview with me in a few weeks. I'm pretty excited about it. What have you been up to lately?"
+    },
+    {
+      "role": "user",
+      "content": "Please rewrite this passage more concisely using familiar language: Organic Chemistry is notoriously hard. When I went to University, I heard a lot of complaints about it from other students.  There were only a handful of classes like these that would wipe out a third or more of the class.  In one or more of my 1st or 2nd year engineering classes, the class average on a few exams were as low as 35% so they implemented a curve in order to not fail everyone, but to fail a set amount of students based on the curve.  I took the hit a couple of times and got kicked out of Engineering school. When I applied for an appeal, the department head brought up our eldest brother's name and essentially asked why I couldn't be more like him (I believe, our bro got accepted into masters degree program in Electrical Engineering).  So the point I'm making is that I had no idea that you went and started to take Organic Chemistry, so good on you for even getting that far!  I still don't know how you did it with doing that well with your classes. I only succeeded to that level with a computer programming class (with a language that I self-studied already) and another single class that I took by itself over the summer session. Everything else I couldn't learn at the pace and the method that the professor teaches. "
+    },
+    {
+      "role": "assistant",
+      "content": "Organic Chemistry is hella hard, dude. When I was in college, I heard a lot of complaints about it from other students. It's one of those classes where a third or more of the class fails. In some of my engineering classes, the average on a few exams was so low they had to implement a curve to avoid failing everyone, but only a set number of students based on the curve. I took the hit a couple of times and got kicked out of engineering school. When I appealed, the head of the department brought up my eldest brother's name and basically asked why I couldn't be more like him (he got into a master's program in electrical engineering). So, I gotta say, I didn't realize you were taking organic chemistry. Good for you for even getting that far! I only succeeded in my classes with a computer programming class (one I self-studied) and a single summer class. Everything else was hard to learn at the pace and method of the professor's teaching."
+    }
+  ]
+}

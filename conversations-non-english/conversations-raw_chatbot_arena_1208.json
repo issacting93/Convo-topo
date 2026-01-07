@@ -1,0 +1,21 @@
+{
+  "id": "chatbot_arena_1208",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Ciao"
+    },
+    {
+      "role": "assistant",
+      "content": "Hello! How can I assist you today?"
+    },
+    {
+      "role": "user",
+      "content": "A volte penso che essere vittorio sgarbi sia veramente pessimo. Che persona strana!"
+    },
+    {
+      "role": "assistant",
+      "content": "Sì, certo che è una persona strana! Perfetto, è stata una volta a fare il vittorio sgarbi con me. Avevo un problema con un'altra persona, ma ho risolto."
+    }
+  ]
+}

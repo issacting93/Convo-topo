@@ -1,0 +1,21 @@
+{
+  "id": "chatbot_arena_1935",
+  "messages": [
+    {
+      "role": "user",
+      "content": "reformuler cette phrase \"Nous donnons les moyennes d'échantillon de $X$ et de $T$ observées  $\\overline x=1.565$ et $\\overline t=0.37$.\""
+    },
+    {
+      "role": "assistant",
+      "content": "Nous donnons les moyennes de l'échantillon de $X$ et de $T$ observées: $\\bar x=1.565$ et $\\bar t=0.37$."
+    },
+    {
+      "role": "user",
+      "content": "prière de reformuler \"En fait loi $X$ ainsi que les paramètres $\\mu$ et $\\sigma$ sont inconnus. Pour estimer les paramètres, ils ont exécutés l'algorithme $100$ fois et ont  enregistrés  une moyenne $\\overline x=15$ mn  et une variance $s^2=9$ des temps de réponse.\""
+    },
+    {
+      "role": "assistant",
+      "content": "En fait, la loi de la distribution de $X$ et les paramètres de la distribution de $T$ n'ont pas été connu en préparation du test. Les auteurs ont exécuté l'algorithme $100$ fois et enregistré une moyenne de $15$ mn et une variance de $9$ des temps de réponse, ce qui a été considéré comme un niveau de confiance acceptable pour les résultats."
+    }
+  ]
+}

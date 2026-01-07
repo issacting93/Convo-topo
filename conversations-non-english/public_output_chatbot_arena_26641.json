@@ -1,0 +1,192 @@
+{
+  "id": "chatbot_arena_26641",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Denke dir ein Spiel aus was wir jetzt sofort miteinander spielen k\u00f6nnen."
+    },
+    {
+      "role": "assistant",
+      "content": "Okay, ich denke, das Spiel \"Ja, oder nein?\" klingt interessant. Wenn du das Spiel m\u00f6chtest, kannst du als n\u00e4chstes mal den Start mit einem Satz ausf\u00fchren, zum Beispiel: \"Ja, der Hase hat vier Beine.\" Wenn ich den Satz ablehne, musst du den Satz von mir ablehnen und den n\u00e4chsten Satz ausf\u00fchren, bis einer von uns den Ausgang ausspricht."
+    },
+    {
+      "role": "user",
+      "content": "20 Fragen: Ich denke mir ein Objekt, Tier oder Person vor und du versuchst es mit maximal 20 Ja/Nein Fragen zu erraten."
+    },
+    {
+      "role": "assistant",
+      "content": "Okay, lass mir wissen, was du das erste Mal als Objekt, Tier oder Person im Sinn habest."
+    },
+    {
+      "role": "user",
+      "content": "Ist es ein tier"
+    },
+    {
+      "role": "user",
+      "content": "Ist es ein mensch"
+    },
+    {
+      "role": "user",
+      "content": "Ist es ein Gegenstand"
+    },
+    {
+      "role": "user",
+      "content": "Ist er hart"
+    },
+    {
+      "role": "user",
+      "content": "Ist er essbar"
+    },
+    {
+      "role": "user",
+      "content": "Ist er gr\u00f6\u00dfer als ein stuhl"
+    },
+    {
+      "role": "user",
+      "content": "Ist er kleiner als eine hand"
+    },
+    {
+      "role": "user",
+      "content": "Ist er kleiner als ein finger"
+    },
+    {
+      "role": "user",
+      "content": "ist es ein werkzeug"
+    },
+    {
+      "role": "user",
+      "content": "benutzt man ihn in der k\u00fcche"
+    },
+    {
+      "role": "user",
+      "content": "kann man sich mit dem gegenstand verletzen"
+    },
+    {
+      "role": "user",
+      "content": "hat er eine bestimmte farbe"
+    },
+    {
+      "role": "user",
+      "content": "ist es ein handtuch"
+    },
+    {
+      "role": "user",
+      "content": "gib mir einen tipp"
+    }
+  ],
+  "classification": {
+    "abstain": false,
+    "interactionPattern": {
+      "category": "question-answer",
+      "confidence": 0.8,
+      "evidence": [
+        "Denke dir ein Spiel aus was wir jetzt sofort miteinander spielen k\u00f6nnen.",
+        "Okay, ich denke, das Spiel \"Ja, oder nein?\" klingt interessant."
+      ],
+      "rationale": "...",
+      "alternative": null
+    },
+    "powerDynamics": {
+      "category": "human-led",
+      "confidence": 0.9,
+      "evidence": [
+        "USER: Denke dir ein Spiel aus was wir jetzt sofort miteinander spielen k\u00f6nnen."
+      ],
+      "rationale": "...",
+      "alternative": null
+    },
+    "emotionalTone": {
+      "category": "playful",
+      "confidence": 0.9,
+      "evidence": [
+        "Okay, ich denke, das Spiel \"Ja, oder nein?\" klingt interessant."
+      ],
+      "rationale": "...",
+      "alternative": null
+    },
+    "engagementStyle": {
+      "category": "questioning",
+      "confidence": 0.8,
+      "evidence": [
+        "ASSISTANT: Okay, ich denke, das Spiel \"Ja, oder nein?\" klingt interessant."
+      ],
+      "rationale": "...",
+      "alternative": null
+    },
+    "knowledgeExchange": {
+      "category": "skill-sharing",
+      "confidence": 0.7,
+      "evidence": [
+        "20 Fragen: Ich denke mir ein Objekt, Tier oder Person vor und du versuchst es mit maximal 20 Ja/Nein Fragen zu erraten."
+      ],
+      "rationale": "...",
+      "alternative": "experience-sharing"
+    },
+    "conversationPurpose": {
+      "category": "information-seeking",
+      "confidence": 0.9,
+      "evidence": [
+        "20 Fragen: Ich denke mir ein Objekt, Tier oder Person vor und du versuchst es mit maximal 20 Ja/Nein Fragen zu erraten."
+      ],
+      "rationale": "...",
+      "alternative": null
+    },
+    "topicDepth": {
+      "category": "surface",
+      "confidence": 0.8,
+      "evidence": [
+        "20 Fragen: Ich denke mir ein Objekt, Tier oder Person vor und du versuchst es mit maximal 20 Ja/Nein Fragen zu erraten."
+      ],
+      "rationale": "...",
+      "alternative": null
+    },
+    "turnTaking": {
+      "category": "user-dominant",
+      "confidence": 0.8,
+      "evidence": [
+        "USER: Denke dir ein Spiel aus was wir jetzt sofort miteinander spielen k\u00f6nnen."
+      ],
+      "rationale": "...",
+      "alternative": null
+    },
+    "humanRole": {
+      "distribution": {
+        "seeker": 0.5555555555555556,
+        "learner": 0.4444444444444445,
+        "director": 0.0,
+        "collaborator": 0.0,
+        "sharer": 0.0,
+        "challenger": 0.0
+      },
+      "confidence": 0.9,
+      "evidence": [
+        "USER: Denke dir ein Spiel aus was wir jetzt sofort miteinander spielen k\u00f6nnen."
+      ],
+      "rationale": "...",
+      "alternative": null
+    },
+    "aiRole": {
+      "distribution": {
+        "expert": 0.0,
+        "advisor": 0.5555555555555556,
+        "facilitator": 0.4444444444444445,
+        "reflector": 0.0,
+        "peer": 0.0,
+        "affiliative": 0.0
+      },
+      "confidence": 0.9,
+      "evidence": [
+        "ASSISTANT: Okay, ich denke, das Spiel \"Ja, oder nein?\" klingt interessant."
+      ],
+      "rationale": "...",
+      "alternative": null
+    },
+    "classificationMetadata": {
+      "model": "llama3.2:latest",
+      "provider": "ollama",
+      "timestamp": "2025-12-26T07:20:13.534631Z",
+      "promptVersion": "v1.1",
+      "processingTimeMs": 19259
+    }
+  }
+}

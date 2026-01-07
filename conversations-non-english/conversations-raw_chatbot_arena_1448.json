@@ -1,0 +1,21 @@
+{
+  "id": "chatbot_arena_1448",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Tere, kuidas teil täna läheb?"
+    },
+    {
+      "role": "assistant",
+      "content": "Tere! Mul on kõik hästi, aitäh küsimast. Kuidas saan teid aidata?"
+    },
+    {
+      "role": "user",
+      "content": "Kas täna on ilus ilm?"
+    },
+    {
+      "role": "assistant",
+      "content": "Kahjuks ma ei saa vastata teie küsimusele, sest ma ei saa ilmaga otse suhelda. Kas ma saan teid millegi muuga aidata?"
+    }
+  ]
+}

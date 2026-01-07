@@ -1,0 +1,21 @@
+{
+  "id": "chatbot_arena_0924",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Quero que faça um resumo da conversa abaixo em no máximo 5 tópicos:\n\"[08:55, 04/05/2023] AAMOOR: Estou na maternidade esperando avaliação.\n[08:55, 04/05/2023] AAMOOR: Estou bem kk\n[08:55, 04/05/2023] AAMOOR: Ora mesmo kkk\n[08:56, 04/05/2023] Leonardo Lima: Nenhuma contração?\n[08:56, 04/05/2023] Leonardo Lima: Kkkkkkkkkkkkk\n[08:56, 04/05/2023] AAMOOR: Tive as normais.\n[08:56, 04/05/2023] AAMOOR: Nada de estranho além do líquido\n[09:18, 04/05/2023] Leonardo Lima: E aí?\n[09:19, 04/05/2023] AAMOOR: Assim, ainda\n[09:19, 04/05/2023] AAMOOR: Kk\n[09:20, 04/05/2023] Leonardo Lima: não foi atendida ainda?\n[09:21, 04/05/2023] AAMOOR: Ainda não\n[09:24, 04/05/2023] AAMOOR: Como tá por aí?\n[09:25, 04/05/2023] Leonardo Lima: preocupado contigo\n[09:25, 04/05/2023] Leonardo Lima: não to conseguindo me concentrar muito aqui\n[09:25, 04/05/2023] AAMOOR: Tomou o r remédio?\n[09:25, 04/05/2023] Leonardo Lima: sim\n[09:26, 04/05/2023] AAMOOR: Eu tô bem\n[10:04, 04/05/2023] AAMOOR: Cueca, calcinha absorvente, vestido descente\n[10:04, 04/05/2023] AAMOOR: Carregador\n[10:05, 04/05/2023] AAMOOR: Sutiã. Não tem o de amamentação\n[10:05, 04/05/2023] AAMOOR: Pode pedir pra Letícia comprar? Sei lá 🥴\n[10:09, 04/05/2023] AAMOOR: Meu rabicó ficou em algum lugar ai\n[10:09, 04/05/2023] AAMOOR: Traz também por favor\n[10:09, 04/05/2023] AAMOOR: A garrafa de água também\n[10:39, 04/05/2023] Leonardo Lima: Tô na recepção aqui atras\n[10:39, 04/05/2023] Leonardo Lima: Pessoal pediu pra eu ficar aguardando aqui\n[10:40, 04/05/2023] AAMOOR: Baby\n[10:40, 04/05/2"
+    },
+    {
+      "role": "assistant",
+      "content": "2023] AAMOOR: Ainda no foi atendida e no você está por a?\nLeonardo Lima: Preocupado por você\nAAMOOR: Só remédio\nLeonardo Lima: Sim\nAAMOOR: Eu tô bem\nLeonardo Lima: Pode pedir pra Letcia comprar? Sei lá \nAAMOOR: Meu rabicó ficou em algum lugar ai\nLeonardo Lima: Traz também por favor\nAAMOOR: A garrafa de água também\nAAMOOR: Baby\nLeonardo Lima: Pessoal pediu você ficar aguardando aqui"
+    },
+    {
+      "role": "user",
+      "content": "dado a conversa original qual o assunto tratado?"
+    },
+    {
+      "role": "assistant",
+      "content": "O assunto tratado na conversa original é a avaliaço médica e a remédio. The speakers are discussing the status of a woman in a maternity ward and their concerns about their baby's health and well-being. The conversation also touches on the topic of women's health and pregnancy."
+    }
+  ]
+}

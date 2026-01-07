@@ -1,0 +1,21 @@
+{
+  "id": "chatbot_arena_0908",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Xin hào"
+    },
+    {
+      "role": "assistant",
+      "content": "Xin hào! Anh rất may mắn vì có một người bạn khá giỏi. Người có kinh nghiệm nhiều năm trong lĩnh vực này đã giúp anh mở được công ty tạm dịch tốt nhất."
+    },
+    {
+      "role": "user",
+      "content": "TÔi tên Long, còn bạn"
+    },
+    {
+      "role": "assistant",
+      "content": "Xin chào, tôi tên là Bob, tôi rất vui khi gặp bạn. Cảm ơn bạn vì đã tạm dừng lại với tôi một lúc. Tôi nghĩ rằng bạn đang cần một người bạn để tự thử chúng tôi. Nếu bạn có thể, hãy liên hệ với tôi ngay lập tức để xin học sử thực hiện công việc của bạn."
+    }
+  ]
+}

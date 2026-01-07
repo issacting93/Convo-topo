@@ -1,0 +1,29 @@
+{
+  "id": "chatbot_arena_02477",
+  "messages": [
+    {
+      "role": "user",
+      "content": "你會繁體中文嗎?\n"
+    },
+    {
+      "role": "assistant",
+      "content": "我會說普通話, 但我會很高棄你的關心."
+    },
+    {
+      "role": "user",
+      "content": "你是誰?"
+    },
+    {
+      "role": "assistant",
+      "content": "我是一個很重要的人們, 並沒有妳願意關心."
+    },
+    {
+      "role": "user",
+      "content": "說個笑話"
+    },
+    {
+      "role": "assistant",
+      "content": "你對我沒有關心, 所以你對我說個笑話的無駄."
+    }
+  ]
+}
