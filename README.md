@@ -129,9 +129,45 @@ import { calculatePAD, detectSpikes } from './lib/cartography/src/conversation-e
 
 See [Packaging Guide](docs/technical/PACKAGING_GUIDE.md) for full integration details.
 
+## 🧭 Project Status (2026)
+
+This project has evolved into two distinct products:
+
+### 1. The Flight Recorder (Application)
+A visual forensics tool for analyzing LLM breakdowns.
+- **Goal**: Detect "Interaction Friction" and "Emotional Volatility" in real-time.
+- **View**: A Seismograph-style dashboard showing the conversation's "heartbeat".
+- **Use Case**: Debugging prompt failures, identifying user frustration.
+
+### 2. The Conversation Engine (SDK)
+A reuseable TypeScript library for analyzing conversation data.
+- **Goal**: Provide standard metrics for any chat application.
+- **Exports**: PAD Scoring, Linguistic Markers, Trajectories, Spike Detection.
+- **Integration**: Available as a git submodule (see `docs/technical/PACKAGING_GUIDE.md`).
+
+---
+
+## 🏗 Architecture
+
+The project is built on a **"Cartography Operating System"** (COS) concept:
+- **Data Layer**: Standardized `Conversation` schema + `Taxonomy`.
+- **Logic Layer**: Pure-functional "Engines" (PAD, Linguistics, Coordinates).
+- **View Layer**: React/Three.js renderers (Terrain, Flight Recorder).
+
+## 📚 Documentation
+
+- [Flight Recorder Spec](docs/technical/PRODUCT_FLIGHT_RECORDER.md)
+- [SDK Packaging Guide](docs/technical/PACKAGING_GUIDE.md)
+- [Reusability Roadmap](docs/technical/REUSABILITY_ROADMAP.md)
+- [What Actually Works](docs/technical/WHAT_ACTUALLY_WORKS.md) (Retrospective)
+
+---
+
 ## Why This Matters
 
-As human–AI conversations become longer, more relational, and more consequential, traditional analytic methods struggle to capture their **multidimensional, temporal, and affective nature**. Conversational Cartography proposes that spatial representations—grounded in cognitive tools research—can make these hidden dynamics legible.
+As human–AI conversations become longer and more relational, traditional analytic methods (pass/fail) struggle to capture their **temporal and affective nature**. 
+
+We provide the "ECG" for conversations—visualizing not just *what* was said, but *how* it felt and *where* it went wrong.
 
 The contribution is not simply a new visualization technique, but a **new way of thinking with conversations**: treating dialogue as something that can be mapped, traversed, and examined as an external cognitive object.
 

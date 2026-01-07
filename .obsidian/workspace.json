@@ -185,6 +185,7 @@
   },
   "active": "0c8fa85cc27f138a",
   "lastOpenFiles": [
+    "docs/technical/COS.md",
     "scripts/demo_engine.ts",
     "docs/technical/PACKAGING_GUIDE.md",
     "src/conversation-engine.ts",
@@ -198,7 +199,6 @@
     "scripts/inspect_pad.ts",
     "src/pages/FlightRecorderPage.tsx",
     "src/utils/volatility.ts",
-    "volatility_report.txt",
     "docs/SEISMOGRAPH_DEBUGGING_TOOL.md",
     "docs/technical/PRODUCT_FLIGHT_RECORDER.md",
     "docs/DATA_DRIVEN_PROJECT_CONCEPTS.md",

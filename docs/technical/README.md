@@ -4,14 +4,13 @@ Technical documentation covering data structures, APIs, implementation details, 
 
 ## Available Documentation
 
-- **[Data Structure](DATA_STRUCTURE.md)** - Data folders and organization
+- **[System Architecture (COS)](COS.md)** - The "Cartography Operating System" philosophy
+- **[Conversation Engine SDK](PACKAGING_GUIDE.md)** - How to reuse the analysis engines
+- **[Flight Recorder Product Spec](PRODUCT_FLIGHT_RECORDER.md)** - Anomaly detection system
+- **[Reusability Roadmap](REUSABILITY_ROADMAP.md)** - Plan for SDK extraction
 - **[Data Sources](DATA_SOURCES.md)** - Where data comes from and how it's used
-- **[Dimension Mapping](DIMENSION_MAPPING.md)** - How classifications map to terrain
 - **[Terrain Visualization Data Flow](TERRAIN_VISUALIZATION_DATA_FLOW.md)** - Data flow through the system
 - **[Conversation Terrain Integration](CONVERSATION_TERRAIN_INTEGRATION.md)** - How conversations become terrains
-- **[Metrics Analysis](METRICS_ANALYSIS.md)** - Analysis of conversation metrics
-- **[API Options](API_OPTIONS.md)** - API configuration options
-- **[Workflow](WORKFLOW.md)** - Development workflow
 
 ## Quick Links
 
