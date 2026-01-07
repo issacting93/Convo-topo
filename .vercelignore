@@ -1,0 +1,86 @@
+# Documentation (not needed for deployment)
+docs/
+
+# Analysis reports (not needed for deployment)
+reports/
+
+# Raw conversation data (not needed - only public/output is used)
+conversations-raw/
+conversations-filtered/
+conversations-non-english/
+conversations-selected/
+
+# Classifier scripts and data (Python, not needed)
+classifier/
+data/
+
+# Python virtual environment
+.venv/
+venv/
+env/
+ENV/
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Scripts (Python analysis scripts, not needed)
+scripts/
+
+# Archive and unrelated projects
+archive/
+temp_classify/
+
+# Build artifacts (Vercel builds these)
+build/
+dist/
+*.egg-info/
+
+# Logs and temporary files
+logs/
+*.log
+volatility_report.txt
+unclassified-conversations.txt
+reclassify.log
+
+# IDE and OS files
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# Backup and quarantine folders
+public/output-backup-*/
+public/output-quarantine/
+public/output-wildchat/
+
+# Node (already handled by Vercel, but explicit)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# Vercel config (already in repo)
+.vercel/
+
+# Git
+.git/
+.gitignore
+
+# README and documentation files in root
+RECLASSIFICATION_READY.md
+*.md
+!README.md
+
+# Requirements (Python, not needed)
+requirements.txt
+
