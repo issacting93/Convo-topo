@@ -102,5 +102,153 @@
     "state": "Baladiyat ad Dawhah",
     "toxic": false,
     "redacted": false
+  },
+  "classification": {
+    "abstain": false,
+    "interactionPattern": {
+      "category": "advisory",
+      "confidence": 0.72,
+      "evidence": [
+        "Write a user story where I am enhancing the existing ecommerce page",
+        "Acceptance Criteria:",
+        "Based on your clarification, here are all the possible combinations:"
+      ],
+      "rationale": "User requests a product artifact (user story) and later constraints; AI responds with structured user story/acceptance criteria and enumerated outputs.",
+      "alternative": "question-answer"
+    },
+    "powerDynamics": {
+      "category": "human-led",
+      "confidence": 0.78,
+      "evidence": [
+        "Write a user story",
+        "to consider this also in US",
+        "now give me all the different combinations"
+      ],
+      "rationale": "Human sets the agenda, adds requirements, and repeatedly redirects the AI to correct/produce specific outputs.",
+      "alternative": null
+    },
+    "emotionalTone": {
+      "category": "professional",
+      "confidence": 0.8,
+      "evidence": [
+        "Acceptance Criteria:",
+        "Note: This enhancement should be implemented and visible on both the web and mobile web versions"
+      ],
+      "rationale": "Business/requirements-writing register with structured criteria and implementation notes; minimal affect beyond brief apologies.",
+      "alternative": "neutral"
+    },
+    "engagementStyle": {
+      "category": "directive-iterative",
+      "confidence": 0.74,
+      "evidence": [
+        "Write a user story",
+        "now give me all the different combinations",
+        "then give me all the combinations.."
+      ],
+      "rationale": "Human issues directives and iteratively refines constraints; AI iterates outputs in response.",
+      "alternative": "questioning"
+    },
+    "knowledgeExchange": {
+      "category": "skill-sharing",
+      "confidence": 0.66,
+      "evidence": [
+        "Write a user story",
+        "Acceptance Criteria:"
+      ],
+      "rationale": "Exchange centers on producing a requirements artifact (user story + acceptance criteria) and enumerating valid combinations under rules.",
+      "alternative": "factual-info"
+    },
+    "conversationPurpose": {
+      "category": "problem-solving",
+      "confidence": 0.73,
+      "evidence": [
+        "we need to create all the different combinations",
+        "now give me all the different combinations"
+      ],
+      "rationale": "Goal is to resolve specification details (valid cabin/flex combinations) and produce a usable user story/criteria.",
+      "alternative": "collaborative-refinement"
+    },
+    "topicDepth": {
+      "category": "moderate",
+      "confidence": 0.67,
+      "evidence": [
+        "this is applicable for both web and mweb..",
+        "we have economy and economy double, business and business double"
+      ],
+      "rationale": "Includes multiple constraints (platforms, fare variants, allowed/disallowed combinations) but not exhaustive implementation detail.",
+      "alternative": "surface"
+    },
+    "turnTaking": {
+      "category": "assistant-dominant",
+      "confidence": 0.7,
+      "evidence": [
+        "Acceptance Criteria:",
+        "Note: This enhancement should be implemented and visible on both the web and mweb versions"
+      ],
+      "rationale": "AI responses are substantially longer and more structured than user turns, especially in story/criteria sections.",
+      "alternative": "balanced"
+    },
+    "humanRole": {
+      "distribution": {
+        "information-seeker": 0.1,
+        "provider": 0.05,
+        "director": 0.7,
+        "collaborator": 0.15,
+        "social-expressor": 0.0,
+        "relational-peer": 0.0
+      },
+      "confidence": 0.77,
+      "evidence": [
+        {
+          "role": "director",
+          "quote": "Write a user story where I am enhancing the existing ecommerce page"
+        },
+        {
+          "role": "director",
+          "quote": "now give me all the different combinations"
+        },
+        {
+          "role": "collaborator",
+          "quote": "actually there is something like flex for each cabin class"
+        }
+      ],
+      "rationale": "Human primarily directs deliverables and constraints (user story, include flex, enumerate combinations), with some collaborative specification additions.",
+      "alternative": null
+    },
+    "aiRole": {
+      "distribution": {
+        "expert-system": 0.35,
+        "learning-facilitator": 0.0,
+        "advisor": 0.55,
+        "co-constructor": 0.1,
+        "social-facilitator": 0.0,
+        "relational-peer": 0.0
+      },
+      "confidence": 0.74,
+      "evidence": [
+        {
+          "role": "advisor",
+          "quote": "Acceptance Criteria:"
+        },
+        {
+          "role": "expert-system",
+          "quote": "There are six different cabin combinations excluding the same cabin type."
+        },
+        {
+          "role": "advisor",
+          "quote": "Based on your clarification, here are all the possible combinations:"
+        }
+      ],
+      "rationale": "AI provides structured guidance/requirements (user story + acceptance criteria) and authoritative enumerations of combinations; limited joint exploration.",
+      "alternative": null
+    }
+  },
+  "classificationMetadata": {
+    "model": "gpt-5.2",
+    "provider": "openai",
+    "timestamp": "2026-01-08T16:53:06.156949",
+    "promptVersion": "2.0-social-role-theory",
+    "processingTimeMs": 15714,
+    "fewShotExamples": "yes"
   }
 }

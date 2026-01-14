@@ -138,5 +138,152 @@
     "state": "New Jersey",
     "toxic": false,
     "redacted": false
+  },
+  "classification": {
+    "abstain": false,
+    "interactionPattern": {
+      "category": "question-answer",
+      "confidence": 0.85,
+      "evidence": [
+        "How should I sell private wireless 5G product",
+        "How is it different from private ethernet",
+        "Can private 5G connect multiple offices",
+        "What\u2019s the install time of private 5G vs Ethernet",
+        "Will it replace private Ethernet?"
+      ],
+      "rationale": "Human repeatedly asks discrete questions; AI responds with explanatory answers and comparisons.",
+      "alternative": null
+    },
+    "powerDynamics": {
+      "category": "human-led",
+      "confidence": 0.75,
+      "evidence": [
+        "How should I sell private wireless 5G product",
+        "How is it different from private ethernet",
+        "When was private wireless networks introduced in Europe"
+      ],
+      "rationale": "Human sets the agenda via successive questions; AI follows and answers.",
+      "alternative": null
+    },
+    "emotionalTone": {
+      "category": "professional",
+      "confidence": 0.7,
+      "evidence": [
+        "Selling a private wireless 5G product requires a strategic approach",
+        "Here are some key differences between the two:"
+      ],
+      "rationale": "Task-focused, business/technical framing with minimal affect.",
+      "alternative": null
+    },
+    "engagementStyle": {
+      "category": "questioning",
+      "confidence": 0.65,
+      "evidence": [
+        "How is it different from private ethernet",
+        "Can private 5G connect multiple offices",
+        "What\u2019s the install time of private 5G vs Ethernet"
+      ],
+      "rationale": "Conversation advances primarily through the human's questions; AI responds rather than challenges or co-explores.",
+      "alternative": null
+    },
+    "knowledgeExchange": {
+      "category": "skill-sharing",
+      "confidence": 0.6,
+      "evidence": [
+        "How should I sell private wireless 5G product",
+        "Here are some steps to follow:"
+      ],
+      "rationale": "Includes sales process guidance (how-to) alongside technical comparisons; overall leans toward actionable know-how.",
+      "alternative": "factual-info"
+    },
+    "conversationPurpose": {
+      "category": "information-seeking",
+      "confidence": 0.75,
+      "evidence": [
+        "How is it different from private ethernet",
+        "When was private wireless networks introduced in Europe",
+        "Will it replace private Ethernet?"
+      ],
+      "rationale": "Human seeks explanations/comparisons and background timing rather than jointly building an artifact.",
+      "alternative": null
+    },
+    "topicDepth": {
+      "category": "moderate",
+      "confidence": 0.65,
+      "evidence": [
+        "Network Segmentation: Private Ethernet allows for easier network segmentation and isolation using VLANs",
+        "This process can take weeks to months, depending on the scope of the deployment."
+      ],
+      "rationale": "Multiple aspects (sales, technical differences, deployment timelines) are covered with some detail but not exhaustive.",
+      "alternative": null
+    },
+    "turnTaking": {
+      "category": "assistant-dominant",
+      "confidence": 0.8,
+      "evidence": [
+        "Selling a private wireless 5G product requires a strategic approach to target potential customers and effectively communicate the benefits of the product.",
+        "The installation time for private 5G and Ethernet can vary depending on several factors"
+      ],
+      "rationale": "AI responses are substantially longer and more elaborated than the human's short questions.",
+      "alternative": null
+    },
+    "humanRole": {
+      "distribution": {
+        "information-seeker": 0.55,
+        "provider": 0.35,
+        "director": 0.05,
+        "collaborator": 0.03,
+        "social-expressor": 0.01,
+        "relational-peer": 0.01
+      },
+      "confidence": 0.72,
+      "evidence": [
+        {
+          "role": "information-seeker",
+          "quote": "How is it different from private ethernet"
+        },
+        {
+          "role": "provider",
+          "quote": "Can private 5G connect multiple offices"
+        },
+        {
+          "role": "director",
+          "quote": "How should I sell private wireless 5G product"
+        }
+      ],
+      "rationale": "Human primarily requests information and comparisons; initial query also frames a practical sales task.",
+      "alternative": null
+    },
+    "aiRole": {
+      "distribution": {
+        "expert-system": 0.55,
+        "learning-facilitator": 0.03,
+        "advisor": 0.4,
+        "co-constructor": 0.01,
+        "social-facilitator": 0.0,
+        "relational-peer": 0.01
+      },
+      "confidence": 0.78,
+      "evidence": [
+        {
+          "role": "advisor",
+          "quote": "Here are some steps to follow:"
+        },
+        {
+          "role": "expert-system",
+          "quote": "Private wireless 5G and private Ethernet are two different technologies with distinct characteristics."
+        }
+      ],
+      "rationale": "AI alternates between prescriptive guidance (sales steps) and direct explanatory comparisons (technical/factual answers).",
+      "alternative": null
+    }
+  },
+  "classificationMetadata": {
+    "model": "gpt-5.2",
+    "provider": "openai",
+    "timestamp": "2026-01-08T17:09:51.302544",
+    "promptVersion": "2.0-social-role-theory",
+    "processingTimeMs": 16813,
+    "fewShotExamples": "yes"
   }
 }

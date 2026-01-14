@@ -1,0 +1,139 @@
+{
+  "date": "1767992711.3270137",
+  "total_conversations": 563,
+  "source_breakdown": {
+    "chatbot_arena": 328,
+    "wildchat": 185,
+    "oasst": 32,
+    "cornell": 9,
+    "kaggle": 9
+  },
+  "role_distributions": {
+    "human": {
+      "dominant": {
+        "provider": 111,
+        "information-seeker": 269,
+        "social-expressor": 9,
+        "director": 50,
+        "seeker": 40,
+        "collaborator": 3,
+        "sharer": 1,
+        "philosophical-explorer": 1
+      },
+      "dominant_pct": {
+        "provider": 19.715808170515096,
+        "information-seeker": 47.7797513321492,
+        "social-expressor": 1.5985790408525755,
+        "director": 8.880994671403197,
+        "seeker": 7.104795737122557,
+        "collaborator": 0.5328596802841918,
+        "sharer": 0.17761989342806395,
+        "philosophical-explorer": 0.17761989342806395
+      }
+    },
+    "ai": {
+      "dominant": {
+        "expert-system": 148,
+        "facilitator": 233,
+        "social-facilitator": 13,
+        "relational-peer": 10,
+        "advisor": 28,
+        "expert": 41,
+        "peer": 1,
+        "unable-to-engage": 3,
+        "reflector": 1,
+        "creative-partner": 2,
+        "co-constructor": 4,
+        "learning-facilitator": 1
+      },
+      "dominant_pct": {
+        "expert-system": 26.287744227353464,
+        "facilitator": 41.3854351687389,
+        "social-facilitator": 2.3090586145648313,
+        "relational-peer": 1.7761989342806392,
+        "advisor": 4.9733570159857905,
+        "expert": 7.282415630550622,
+        "peer": 0.17761989342806395,
+        "unable-to-engage": 0.5328596802841918,
+        "reflector": 0.17761989342806395,
+        "creative-partner": 0.3552397868561279,
+        "co-constructor": 0.7104795737122558,
+        "learning-facilitator": 0.17761989342806395
+      }
+    }
+  },
+  "role_pairs": {
+    "provider\u2192expert-system": 85,
+    "information-seeker\u2192facilitator": 223,
+    "social-expressor\u2192social-facilitator": 2,
+    "information-seeker\u2192expert-system": 44,
+    "provider\u2192social-facilitator": 7,
+    "director\u2192expert-system": 19,
+    "information-seeker\u2192relational-peer": 1,
+    "director\u2192advisor": 8,
+    "social-expressor\u2192facilitator": 7,
+    "seeker\u2192expert": 35,
+    "provider\u2192advisor": 18,
+    "director\u2192peer": 1,
+    "seeker\u2192unable-to-engage": 3,
+    "collaborator\u2192facilitator": 1,
+    "director\u2192expert": 4,
+    "director\u2192relational-peer": 9,
+    "sharer\u2192reflector": 1,
+    "director\u2192creative-partner": 1,
+    "director\u2192co-constructor": 4,
+    "director\u2192social-facilitator": 4,
+    "collaborator\u2192expert": 2,
+    "philosophical-explorer\u2192creative-partner": 1,
+    "seeker\u2192facilitator": 1,
+    "seeker\u2192advisor": 1,
+    "information-seeker\u2192advisor": 1,
+    "provider\u2192learning-facilitator": 1
+  },
+  "role_pairs_pct": {
+    "provider\u2192expert-system": 15.097690941385435,
+    "information-seeker\u2192facilitator": 39.60923623445826,
+    "social-expressor\u2192social-facilitator": 0.3552397868561279,
+    "information-seeker\u2192expert-system": 7.8152753108348145,
+    "provider\u2192social-facilitator": 1.2433392539964476,
+    "director\u2192expert-system": 3.374777975133215,
+    "information-seeker\u2192relational-peer": 0.17761989342806395,
+    "director\u2192advisor": 1.4209591474245116,
+    "social-expressor\u2192facilitator": 1.2433392539964476,
+    "seeker\u2192expert": 6.216696269982238,
+    "provider\u2192advisor": 3.197158081705151,
+    "director\u2192peer": 0.17761989342806395,
+    "seeker\u2192unable-to-engage": 0.5328596802841918,
+    "collaborator\u2192facilitator": 0.17761989342806395,
+    "director\u2192expert": 0.7104795737122558,
+    "director\u2192relational-peer": 1.5985790408525755,
+    "sharer\u2192reflector": 0.17761989342806395,
+    "director\u2192creative-partner": 0.17761989342806395,
+    "director\u2192co-constructor": 0.7104795737122558,
+    "director\u2192social-facilitator": 0.7104795737122558,
+    "collaborator\u2192expert": 0.3552397868561279,
+    "philosophical-explorer\u2192creative-partner": 0.17761989342806395,
+    "seeker\u2192facilitator": 0.17761989342806395,
+    "seeker\u2192advisor": 0.17761989342806395,
+    "information-seeker\u2192advisor": 0.17761989342806395,
+    "provider\u2192learning-facilitator": 0.17761989342806395
+  },
+  "key_statistics": {
+    "information_seeker_facilitator": {
+      "count": 224,
+      "percentage": 39.786856127886324
+    },
+    "seeker_expert_static": {
+      "count": 79,
+      "percentage": 14.031971580817052
+    },
+    "non_seeker_expert": {
+      "count": 484,
+      "percentage": 85.96802841918296
+    },
+    "static_conversations": {
+      "count": 10,
+      "percentage": 1.7761989342806392
+    }
+  }
+}

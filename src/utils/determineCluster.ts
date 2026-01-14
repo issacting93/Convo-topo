@@ -22,9 +22,9 @@ async function loadClusterAssignmentsOnce(): Promise<Map<string, CartographyClus
   }
 
   const assignments = new Map<string, CartographyCluster>();
-  
+
   try {
-    const assignment = await getClusterAssignment(''); // This will trigger loading
+    await getClusterAssignment(''); // This will trigger loading
     // Actually, we need to load all assignments
     const { loadClusterAssignments } = await import('./loadClusterAssignments');
     clusterAssignmentsCache = await loadClusterAssignments();
@@ -79,15 +79,13 @@ export function computeClusterFromCharacteristics(conversation: Conversation): C
 
   const pattern = classification.interactionPattern?.category || 'unknown';
   const purpose = classification.conversationPurpose?.category || 'unknown';
-  const tone = classification.emotionalTone?.category || 'neutral';
-  
+  // tone variable removed
+
   // Calculate average emotional intensity from PAD scores
   const padScores = conversation.messages
     .map(msg => msg.pad?.emotionalIntensity || 0)
     .filter(v => v > 0);
-  const avgIntensity = padScores.length > 0 
-    ? padScores.reduce((a, b) => a + b, 0) / padScores.length 
-    : 0.4;
+  // avgIntensity variable removed
   const intensityVariance = padScores.length > 1
     ? computeVariance(padScores)
     : 0;
@@ -104,15 +102,23 @@ export function computeClusterFromCharacteristics(conversation: Conversation): C
   const humanRoles = classification.humanRole?.distribution || {};
   const aiRoles = classification.aiRole?.distribution || {};
 
-  // Determine functional vs social (from human roles)
-  const functionalRoles = (humanRoles.director || 0) + (humanRoles.challenger || 0);
-  const socialRoles = (humanRoles.sharer || 0) + (humanRoles.collaborator || 0);
+  // Determine functional vs social (from human roles) - Social Role Theory taxonomy
+  // Instrumental roles (Functional) vs Expressive roles (Social)
+  const functionalRoles = (humanRoles.director || humanRoles['challenger'] || 0) +
+    (humanRoles['information-seeker'] || humanRoles['seeker'] || 0) +
+    (humanRoles['provider'] || humanRoles['learner'] || 0) +
+    (humanRoles.collaborator || humanRoles['co-constructor'] || 0);
+  const socialRoles = (humanRoles['social-expressor'] || humanRoles.sharer || 0) +
+    (humanRoles['relational-peer'] || humanRoles.peer || 0);
   const isFunctional = functionalRoles > socialRoles;
 
   // Determine aligned vs divergent (approximated from AI roles when linguistic data unavailable)
   // Note: This is a fallback approximation. Primary calculation uses linguistic alignment.
-  const alignedRoles = (aiRoles.expert || 0) + (aiRoles.advisor || 0);
-  const divergentRoles = (aiRoles.facilitator || 0) + (aiRoles.peer || 0);
+  // High Authority (Structured/Aligned) vs Low Authority (Emergent/Divergent)
+  const alignedRoles = (aiRoles['expert-system'] || aiRoles.expert || 0) +
+    (aiRoles.advisor || 0);
+  const divergentRoles = (aiRoles['learning-facilitator'] || aiRoles['facilitator'] || 0) +
+    (aiRoles['social-facilitator'] || aiRoles.reflector || 0);
   const isStructured = alignedRoles > divergentRoles; // Using legacy variable name for compatibility
 
   // Cluster 6: Peak_Volatile - High intensity variance and peaks

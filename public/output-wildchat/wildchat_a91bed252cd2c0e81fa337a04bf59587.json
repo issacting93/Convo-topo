@@ -57,5 +57,146 @@
     "state": "Alberta",
     "toxic": false,
     "redacted": false
+  },
+  "classification": {
+    "abstain": false,
+    "interactionPattern": {
+      "category": "advisory",
+      "confidence": 0.7,
+      "evidence": [
+        "write me a python program you can test",
+        "How to Test the Program:"
+      ],
+      "rationale": "User requests a program; AI responds with a complete program plus step-by-step testing guidance.",
+      "alternative": "question-answer"
+    },
+    "powerDynamics": {
+      "category": "human-led",
+      "confidence": 0.75,
+      "evidence": [
+        "write me a python program you can test",
+        "How can I assist you today?"
+      ],
+      "rationale": "Human sets the agenda with requests; AI follows by providing the requested output and asking how to help.",
+      "alternative": null
+    },
+    "emotionalTone": {
+      "category": "professional",
+      "confidence": 0.8,
+      "evidence": [
+        "Certainly! Let\u2019s create a simple Python program",
+        "How can I assist you today?"
+      ],
+      "rationale": "Task-focused, courteous, and instructional language without strong affect.",
+      "alternative": "supportive"
+    },
+    "engagementStyle": {
+      "category": "directive-iterative",
+      "confidence": 0.7,
+      "evidence": [
+        "Copy the program code.",
+        "Paste it into a Python environment"
+      ],
+      "rationale": "AI gives procedural steps and instructions for execution/testing.",
+      "alternative": "reactive"
+    },
+    "knowledgeExchange": {
+      "category": "skill-sharing",
+      "confidence": 0.85,
+      "evidence": [
+        "Let\u2019s create a simple Python program",
+        "How to Test the Program:"
+      ],
+      "rationale": "Exchange centers on programming know-how and how to run/test code.",
+      "alternative": null
+    },
+    "conversationPurpose": {
+      "category": "problem-solving",
+      "confidence": 0.7,
+      "evidence": [
+        "write me a python program you can test",
+        "You can test this program in your Python environment."
+      ],
+      "rationale": "Goal is to produce a runnable program and enable the user to test it.",
+      "alternative": "information-seeking"
+    },
+    "topicDepth": {
+      "category": "moderate",
+      "confidence": 0.65,
+      "evidence": [
+        "calculates the factorial of a number using recursion",
+        "This simple program provides an excellent example of recursion in Python."
+      ],
+      "rationale": "Includes a full example program and brief conceptual framing (recursion), but not extensive exploration.",
+      "alternative": "surface"
+    },
+    "turnTaking": {
+      "category": "assistant-dominant",
+      "confidence": 0.9,
+      "evidence": [
+        "Certainly! Let\u2019s create a simple Python program that calculates the factorial of a number using recursion.",
+        "It seems like your message might not have come through completely."
+      ],
+      "rationale": "AI contributes substantially longer messages than the human across the exchange.",
+      "alternative": null
+    },
+    "humanRole": {
+      "distribution": {
+        "information-seeker": 0.2,
+        "provider": 0.55,
+        "director": 0.25,
+        "collaborator": 0.0,
+        "social-expressor": 0.0,
+        "relational-peer": 0.0
+      },
+      "confidence": 0.72,
+      "evidence": [
+        {
+          "role": "provider",
+          "quote": "hi is this chatgpt 4"
+        },
+        {
+          "role": "director",
+          "quote": "write me a python program you can test"
+        }
+      ],
+      "rationale": "Human primarily requests/queries the AI (provider/information-seeker) and issues a direct instruction for deliverable (director).",
+      "alternative": null
+    },
+    "aiRole": {
+      "distribution": {
+        "expert-system": 0.55,
+        "learning-facilitator": 0.05,
+        "advisor": 0.35,
+        "co-constructor": 0.0,
+        "social-facilitator": 0.05,
+        "relational-peer": 0.0
+      },
+      "confidence": 0.78,
+      "evidence": [
+        {
+          "role": "expert-system",
+          "quote": "Let\u2019s create a simple Python program that calculates the factorial of a number using recursion."
+        },
+        {
+          "role": "advisor",
+          "quote": "How to Test the Program:"
+        },
+        {
+          "role": "social-facilitator",
+          "quote": "How can I assist you today?"
+        }
+      ],
+      "rationale": "AI provides authoritative technical content (expert-system) plus procedural recommendations for testing (advisor), with brief service-oriented prompts (social-facilitator).",
+      "alternative": null
+    }
+  },
+  "classificationMetadata": {
+    "model": "gpt-5.2",
+    "provider": "openai",
+    "timestamp": "2026-01-08T17:04:06.142316",
+    "promptVersion": "2.0-social-role-theory",
+    "processingTimeMs": 12062,
+    "fewShotExamples": "yes"
   }
 }

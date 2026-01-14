@@ -189,10 +189,11 @@ export function PADTimelinePage() {
   return (
     <div style={{
       width: '100vw',
-      height: '100vh',
+      minHeight: '100vh',
       background: '#ffffff',
       position: 'relative',
-      overflow: 'auto',
+      overflowY: 'auto',
+      overflowX: 'hidden',
       display: 'flex',
       flexDirection: 'column'
     }}>

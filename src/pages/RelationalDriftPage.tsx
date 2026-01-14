@@ -178,10 +178,11 @@ export function RelationalDriftPage() {
   return (
     <div style={{
       width: '100vw',
-      height: '100vh',
+      minHeight: '100vh',
       background: '#ffffff',
       position: 'relative',
-      overflow: 'auto',
+      overflowY: 'auto',
+      overflowX: 'hidden',
       display: 'flex',
       flexDirection: 'column'
     }}>
@@ -343,7 +344,8 @@ export function RelationalDriftPage() {
                             opacity={opacity}
                           />
                         )}
-                        {false && (
+                        {/* Early average marker text (enabled) */}
+                        {(
                           <text
                             x={toSvgX(drift.earlyAvg.x)}
                             y={toSvgY(drift.earlyAvg.y) - 15}
@@ -368,7 +370,8 @@ export function RelationalDriftPage() {
                             opacity={opacity}
                           />
                         )}
-                        {false && (
+                        {/* Late average marker text (enabled) */}
+                        {(
                           <text
                             x={toSvgX(drift.lateAvg.x)}
                             y={toSvgY(drift.lateAvg.y) - 15}
@@ -446,7 +449,7 @@ export function RelationalDriftPage() {
               </div>
 
               {/* Drift Statistics */}
-              {false && selectedDrifts.length > 0 && (
+              {selectedDrifts.length > 0 && (
                 <div style={{
                   marginTop: 12,
                   padding: '12px 16px',

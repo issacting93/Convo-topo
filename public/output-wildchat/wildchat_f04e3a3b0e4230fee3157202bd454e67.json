@@ -66,5 +66,156 @@
     "state": "British Columbia",
     "toxic": false,
     "redacted": false
+  },
+  "classification": {
+    "abstain": false,
+    "interactionPattern": {
+      "category": "question-answer",
+      "confidence": 0.78,
+      "evidence": [
+        "can you list the ingredients of sunblock lotion",
+        "can you provide a sunscreen formula with these ingredients",
+        "can you list some brand name"
+      ],
+      "rationale": "Human repeatedly requests outputs; AI responds with lists and a sample formula.",
+      "alternative": "advisory"
+    },
+    "powerDynamics": {
+      "category": "human-led",
+      "confidence": 0.74,
+      "evidence": [
+        "can you list the ingredients of sunblock lotion",
+        "can you provide a sunscreen formula with these ingredients",
+        "i am going to run a beauty brand, can you list some brand name"
+      ],
+      "rationale": "Human sets the agenda via successive requests that shift topics (ingredients \u2192 formula \u2192 brand naming).",
+      "alternative": "balanced"
+    },
+    "emotionalTone": {
+      "category": "professional",
+      "confidence": 0.72,
+      "evidence": [
+        "common ingredients in sunblock lotion include:",
+        "It is recommended to consult a qualified cosmetic chemist",
+        "Remember to research potential trade mark issues"
+      ],
+      "rationale": "Task-focused, informational, and cautionary language without relational or playful cues.",
+      "alternative": "neutral"
+    },
+    "engagementStyle": {
+      "category": "directive-iterative",
+      "confidence": 0.63,
+      "evidence": [
+        "can you list the ingredients of sunblock lotion",
+        "can you provide a sunscreen formula with these ingredients",
+        "can you list some brand name"
+      ],
+      "rationale": "Human issues a sequence of directives/requests that iteratively move toward product creation needs.",
+      "alternative": "questioning"
+    },
+    "knowledgeExchange": {
+      "category": "skill-sharing",
+      "confidence": 0.62,
+      "evidence": [
+        "I can provide a general formula for sunblock lotion",
+        "These percentages are just an example",
+        "It is recommended to consult a qualified cosmetic chemist"
+      ],
+      "rationale": "AI provides a how-to style example formula and guidance about formulation complexity.",
+      "alternative": "factual-info"
+    },
+    "conversationPurpose": {
+      "category": "problem-solving",
+      "confidence": 0.66,
+      "evidence": [
+        "can you provide a sunscreen formula with these ingredients",
+        "i am going to run a beauty brand"
+      ],
+      "rationale": "Requests aim at creating a product and brand assets (formula + brand names).",
+      "alternative": "information-seeking"
+    },
+    "topicDepth": {
+      "category": "moderate",
+      "confidence": 0.6,
+      "evidence": [
+        "10% Zinc oxide",
+        "It's important to note that formulation of sunblock can be complex"
+      ],
+      "rationale": "Includes some technical detail (percentages, ingredient types) but remains high-level and non-exhaustive.",
+      "alternative": "surface"
+    },
+    "turnTaking": {
+      "category": "assistant-dominant",
+      "confidence": 0.86,
+      "evidence": [
+        "However, common ingredients in sunblock lotion include:",
+        "However, I can provide a general formula for sunblock lotion",
+        "Sure, here are some name ideas for a beauty brand:"
+      ],
+      "rationale": "AI responses are substantially longer (multi-item lists and explanations) than the short user prompts.",
+      "alternative": null
+    },
+    "humanRole": {
+      "distribution": {
+        "information-seeker": 0.25,
+        "provider": 0.55,
+        "director": 0.15,
+        "collaborator": 0.05,
+        "social-expressor": 0.0,
+        "relational-peer": 0.0
+      },
+      "confidence": 0.72,
+      "evidence": [
+        {
+          "role": "provider",
+          "quote": "can you list the ingredients of sunblock lotion"
+        },
+        {
+          "role": "provider",
+          "quote": "can you provide a sunscreen formula with these ingredients"
+        },
+        {
+          "role": "director",
+          "quote": "i am going to run a beauty brand, can you list some brand name"
+        }
+      ],
+      "rationale": "Human primarily requests information/outputs from the AI, with some directive framing tied to a business goal.",
+      "alternative": "information-seeker"
+    },
+    "aiRole": {
+      "distribution": {
+        "expert-system": 0.55,
+        "learning-facilitator": 0.0,
+        "advisor": 0.35,
+        "co-constructor": 0.05,
+        "social-facilitator": 0.0,
+        "relational-peer": 0.05
+      },
+      "confidence": 0.76,
+      "evidence": [
+        {
+          "role": "expert-system",
+          "quote": "common ingredients in sunblock lotion include:"
+        },
+        {
+          "role": "advisor",
+          "quote": "It is recommended to consult a qualified cosmetic chemist"
+        },
+        {
+          "role": "expert-system",
+          "quote": "Sure, here are some name ideas for a beauty brand:"
+        }
+      ],
+      "rationale": "AI provides direct informational lists and a sample formula (expert-system) plus cautionary recommendations (advisor).",
+      "alternative": "advisor"
+    }
+  },
+  "classificationMetadata": {
+    "model": "gpt-5.2",
+    "provider": "openai",
+    "timestamp": "2026-01-08T17:15:57.338552",
+    "promptVersion": "2.0-social-role-theory",
+    "processingTimeMs": 24232,
+    "fewShotExamples": "yes"
   }
 }

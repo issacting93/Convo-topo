@@ -4,19 +4,43 @@
   "messages": [
     {
       "role": "user",
-      "content": "How old was Ronald Regan when he won in 1984?"
+      "content": "How old was Ronald Regan when he won in 1984?",
+      "pad": {
+        "pleasure": 0.5,
+        "arousal": 0.7,
+        "dominance": 0.6,
+        "emotionalIntensity": 0.25819888974716104
+      }
     },
     {
       "role": "assistant",
-      "content": "Ronald Reagan was 73 years old when he won the presidential election in 1984."
+      "content": "Ronald Reagan was 73 years old when he won the presidential election in 1984.",
+      "pad": {
+        "pleasure": 0.5,
+        "arousal": 0.7,
+        "dominance": 0.4,
+        "emotionalIntensity": 0.25819888974716104
+      }
     },
     {
       "role": "user",
-      "content": "How old was Biden when we won in 2020?"
+      "content": "How old was Biden when we won in 2020?",
+      "pad": {
+        "pleasure": 0.5,
+        "arousal": 0.7,
+        "dominance": 0.6,
+        "emotionalIntensity": 0.25819888974716104
+      }
     },
     {
       "role": "assistant",
-      "content": "Joe Biden was 78 years old when he won the presidential election in 2020."
+      "content": "Joe Biden was 78 years old when he won the presidential election in 2020.",
+      "pad": {
+        "pleasure": 0.5,
+        "arousal": 0.7,
+        "dominance": 0.4,
+        "emotionalIntensity": 0.25819888974716104
+      }
     }
   ],
   "metadata": {
@@ -28,5 +52,146 @@
     "state": "Connecticut",
     "toxic": false,
     "redacted": false
+  },
+  "classification": {
+    "abstain": false,
+    "interactionPattern": {
+      "category": "question-answer",
+      "confidence": 0.85,
+      "evidence": [
+        "How old was Ronald Regan when he won in 1984?",
+        "Ronald Reagan was 73 years old when he won the presidential election in 1984.",
+        "How old was Biden when we won in 2020?",
+        "Joe Biden was 78 years old when he won the presidential election in 2020."
+      ],
+      "rationale": "Human asks factual questions; AI provides direct factual answers.",
+      "alternative": null
+    },
+    "powerDynamics": {
+      "category": "human-led",
+      "confidence": 0.75,
+      "evidence": [
+        "How old was Ronald Regan when he won in 1984?",
+        "How old was Biden when we won in 2020?"
+      ],
+      "rationale": "Human sets the agenda by initiating and steering both queries; AI responds.",
+      "alternative": null
+    },
+    "emotionalTone": {
+      "category": "neutral",
+      "confidence": 0.65,
+      "evidence": [
+        "Ronald Reagan was 73 years old when he won the presidential election in 1984.",
+        "Joe Biden was 78 years old when he won the presidential election in 2020."
+      ],
+      "rationale": "Utterances are purely informational with no explicit affective language.",
+      "alternative": "professional"
+    },
+    "engagementStyle": {
+      "category": "questioning",
+      "confidence": 0.7,
+      "evidence": [
+        "How old was Ronald Regan when he won in 1984?",
+        "How old was Biden when we won in 2020?"
+      ],
+      "rationale": "Human engagement is driven by direct questions; AI replies without adding questions.",
+      "alternative": "reactive"
+    },
+    "knowledgeExchange": {
+      "category": "factual-info",
+      "confidence": 0.85,
+      "evidence": [
+        "Ronald Reagan was 73 years old when he won the presidential election in 1984.",
+        "Joe Biden was 78 years old when he won the presidential election in 2020."
+      ],
+      "rationale": "Exchange centers on factual ages tied to election years.",
+      "alternative": null
+    },
+    "conversationPurpose": {
+      "category": "information-seeking",
+      "confidence": 0.8,
+      "evidence": [
+        "How old was Ronald Regan when he won in 1984?",
+        "How old was Biden when we won in 2020?"
+      ],
+      "rationale": "Human seeks specific factual answers.",
+      "alternative": null
+    },
+    "topicDepth": {
+      "category": "surface",
+      "confidence": 0.75,
+      "evidence": [
+        "How old was Ronald Regan when he won in 1984?",
+        "Joe Biden was 78 years old when he won the presidential election in 2020."
+      ],
+      "rationale": "Brief, single-fact queries with no elaboration or follow-up depth.",
+      "alternative": null
+    },
+    "turnTaking": {
+      "category": "balanced",
+      "confidence": 0.6,
+      "evidence": [
+        "How old was Ronald Regan when he won in 1984?",
+        "Ronald Reagan was 73 years old when he won the presidential election in 1984.",
+        "How old was Biden when we won in 2020?",
+        "Joe Biden was 78 years old when he won the presidential election in 2020."
+      ],
+      "rationale": "Two turns each; AI turns slightly longer but overall exchange is symmetrical.",
+      "alternative": "assistant-dominant"
+    },
+    "humanRole": {
+      "distribution": {
+        "information-seeker": 0.45,
+        "provider": 0.5,
+        "director": 0.03,
+        "collaborator": 0.01,
+        "social-expressor": 0,
+        "relational-peer": 0.01
+      },
+      "confidence": 0.55,
+      "evidence": [
+        {
+          "role": "provider",
+          "quote": "How old was Ronald Regan when he won in 1984?"
+        },
+        {
+          "role": "provider",
+          "quote": "How old was Biden when we won in 2020?"
+        }
+      ],
+      "rationale": "Human primarily requests information from the AI via direct factual questions; minimal directing beyond selecting the questions.",
+      "alternative": "information-seeker"
+    },
+    "aiRole": {
+      "distribution": {
+        "expert-system": 0.95,
+        "learning-facilitator": 0,
+        "advisor": 0.02,
+        "co-constructor": 0.01,
+        "social-facilitator": 0.01,
+        "relational-peer": 0.01
+      },
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "role": "expert-system",
+          "quote": "Ronald Reagan was 73 years old when he won the presidential election in 1984."
+        },
+        {
+          "role": "expert-system",
+          "quote": "Joe Biden was 78 years old when he won the presidential election in 2020."
+        }
+      ],
+      "rationale": "AI provides direct factual answers with high epistemic authority and no scaffolding or relational talk.",
+      "alternative": null
+    }
+  },
+  "classificationMetadata": {
+    "model": "gpt-5.2",
+    "provider": "openai",
+    "timestamp": "2026-01-08T17:12:36.890411",
+    "promptVersion": "2.0-social-role-theory",
+    "processingTimeMs": 14707,
+    "fewShotExamples": "yes"
   }
 }

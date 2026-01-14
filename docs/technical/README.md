@@ -1,20 +1,19 @@
-# Technical Documentation
+# Technical Implementation Documentation
 
-Technical documentation covering data structures, APIs, implementation details, and system architecture.
+This folder contains technical documentation for implementation details, tools, and system components.
 
-## Available Documentation
+## Files
 
-- **[System Architecture (COS)](COS.md)** - The "Cartography Operating System" philosophy
-- **[Conversation Engine SDK](PACKAGING_GUIDE.md)** - How to reuse the analysis engines
-- **[Flight Recorder Product Spec](PRODUCT_FLIGHT_RECORDER.md)** - Anomaly detection system
-- **[Reusability Roadmap](REUSABILITY_ROADMAP.md)** - Plan for SDK extraction
-- **[Data Sources](DATA_SOURCES.md)** - Where data comes from and how it's used
-- **[Terrain Visualization Data Flow](TERRAIN_VISUALIZATION_DATA_FLOW.md)** - Data flow through the system
-- **[Conversation Terrain Integration](CONVERSATION_TERRAIN_INTEGRATION.md)** - How conversations become terrains
+- **CLUSTER_DASHBOARD_IMPLEMENTATION.md** - Implementation details for cluster dashboard
+- **CONVERSATION_COMPARISON_CAPABILITIES.md** - Documentation of comparison features
+- **SEISMOGRAPH_DEBUGGING_TOOL.md** - Documentation for debugging tool
+- **REUSABLE_COMPONENTS.md** - Documentation of reusable components
+- **TERRAIN_VS_CLASSIFIER_INDEPENDENCE.md** - Technical analysis of independence
 
-## Quick Links
+## Purpose
 
-- [User Guides](../guides/) - Step-by-step guides
-- [Research Documentation](../research/) - Academic papers and research
-- [Main Project README](../../README.md) - Project overview
-
+These documents provide:
+- Implementation details for developers
+- Tool documentation
+- Component specifications
+- Technical architecture details

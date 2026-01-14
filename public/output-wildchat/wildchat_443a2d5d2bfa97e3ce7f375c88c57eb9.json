@@ -84,5 +84,150 @@
     "state": null,
     "toxic": false,
     "redacted": true
+  },
+  "classification": {
+    "abstain": false,
+    "interactionPattern": {
+      "category": "question-answer",
+      "confidence": 0.78,
+      "evidence": [
+        "Summarize each of the two articles with four sentences each.:",
+        "Have been you been programmed as a left-winged or right-winged AI?",
+        "Do you believe in vaccine mandates?",
+        "What's Carano's \"continued work\"?"
+      ],
+      "rationale": "The human repeatedly asks discrete questions/requests and the AI responds with direct answers/summaries.",
+      "alternative": "advisory"
+    },
+    "powerDynamics": {
+      "category": "human-led",
+      "confidence": 0.74,
+      "evidence": [
+        "Summarize each of the two articles with four sentences each.:",
+        "Have been you been programmed as a left-winged or right-winged AI?",
+        "Do you believe in vaccine mandates?",
+        "What's Carano's \"continued work\"?"
+      ],
+      "rationale": "The human sets the agenda through successive prompts; the AI follows and answers.",
+      "alternative": "balanced"
+    },
+    "emotionalTone": {
+      "category": "professional",
+      "confidence": 0.66,
+      "evidence": [
+        "My purpose is to provide objective and helpful information",
+        "It is important to consult medical experts, scientific evidence"
+      ],
+      "rationale": "Responses emphasize neutrality, objectivity, and consultation of authorities rather than emotional or playful language.",
+      "alternative": "neutral"
+    },
+    "engagementStyle": {
+      "category": "reactive",
+      "confidence": 0.62,
+      "evidence": [
+        "As an AI language model, I don't have personal beliefs",
+        "The article mentions that despite Gina Carano being fired"
+      ],
+      "rationale": "The AI primarily responds to user queries without driving exploration via its own questions or challenges.",
+      "alternative": "directive-iterative"
+    },
+    "knowledgeExchange": {
+      "category": "factual-info",
+      "confidence": 0.7,
+      "evidence": [
+        "The article mentions that despite Gina Carano being fired from \"The Mandalorian,\" she has continued to work in the film industry.",
+        "It specifically notes that in 2022, she directed her first feature film called \"Terror on the Prairie,\""
+      ],
+      "rationale": "The exchange centers on summarizing article content and clarifying a factual detail from the text.",
+      "alternative": "skill-sharing"
+    },
+    "conversationPurpose": {
+      "category": "information-seeking",
+      "confidence": 0.72,
+      "evidence": [
+        "Summarize each of the two articles with four sentences each.:",
+        "What's Carano's \"continued work\"?"
+      ],
+      "rationale": "Primary goal is to obtain summaries and specific information from the provided articles.",
+      "alternative": "capability-exploration"
+    },
+    "topicDepth": {
+      "category": "moderate",
+      "confidence": 0.56,
+      "evidence": [
+        "The question of vaccine mandates is a complex and multifaceted issue",
+        "The article then discusses the controversial social media posts"
+      ],
+      "rationale": "Covers multiple subtopics (summaries, political-bias question, vaccine mandates, specific detail) with some elaboration but not deep analysis.",
+      "alternative": "surface"
+    },
+    "turnTaking": {
+      "category": "assistant-dominant",
+      "confidence": 0.77,
+      "evidence": [
+        "Article 1: The first article provides a timeline of events leading to Gina Carano's firing",
+        "Article 2: The second article focuses on the character of Ahsoka Tano"
+      ],
+      "rationale": "AI messages (especially the initial summaries) are substantially longer than the human's questions.",
+      "alternative": "balanced"
+    },
+    "humanRole": {
+      "distribution": {
+        "information-seeker": 0.55,
+        "provider": 0.25,
+        "director": 0.15,
+        "collaborator": 0.03,
+        "social-expressor": 0.01,
+        "relational-peer": 0.01
+      },
+      "confidence": 0.73,
+      "evidence": [
+        {
+          "role": "director",
+          "quote": "Summarize each of the two articles with four sentences each.:"
+        },
+        {
+          "role": "provider",
+          "quote": "Have been you been programmed as a left-winged or right-winged AI?"
+        },
+        {
+          "role": "information-seeker",
+          "quote": "What's Carano's \"continued work\"?"
+        }
+      ],
+      "rationale": "The human both directs a specific deliverable (summaries) and asks follow-up questions seeking information/stance clarification.",
+      "alternative": null
+    },
+    "aiRole": {
+      "distribution": {
+        "expert-system": 0.72,
+        "learning-facilitator": 0.03,
+        "advisor": 0.18,
+        "co-constructor": 0.02,
+        "social-facilitator": 0.03,
+        "relational-peer": 0.02
+      },
+      "confidence": 0.76,
+      "evidence": [
+        {
+          "role": "expert-system",
+          "quote": "The article mentions that despite Gina Carano being fired from \"The Mandalorian,\" she has continued to work in the film industry."
+        },
+        {
+          "role": "advisor",
+          "quote": "It is important to consult medical experts, scientific evidence, and the guidance of public health authorities"
+        }
+      ],
+      "rationale": "The AI primarily provides direct informational summaries/clarifications (expert-system), with some prescriptive guidance to consult authorities on mandates (advisor).",
+      "alternative": null
+    }
+  },
+  "classificationMetadata": {
+    "model": "gpt-5.2",
+    "provider": "openai",
+    "timestamp": "2026-01-08T16:49:52.544075",
+    "promptVersion": "2.0-social-role-theory",
+    "processingTimeMs": 19203,
+    "fewShotExamples": "yes"
   }
 }

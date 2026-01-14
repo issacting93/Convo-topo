@@ -299,11 +299,11 @@ This approach:
 
 ---
 
-## Abstract (150 words - Draft)
+## Abstract (150 words - Updated)
 
-**Conversational Topography: A Visual Interface for Seeing Relational Drift in Human-LLM Dialogue**
+**Conversational Cartography: Mapping Human-AI Interaction as Navigable Terrain**
 
-Human-LLM conversations increasingly mediate work, learning, and emotional processing, yet contemporary interfaces present dialogue as linear transcripts—poorly equipped to reveal relational positioning patterns that unfold across turns. The most consequential shifts often occur invisibly: not in what is said, but in how people position themselves relationally—delegating agency, seeking authority, building rapport. This pictorial presents Conversational Topography, an interactive system that represents conversation as navigable terrain. The X-axis encodes functional versus social orientation; the Y-axis encodes structured versus emergent role-taking; the Z-axis encodes emotional intensity using the Pleasure-Arousal-Dominance (PAD) model, revealing friction (peaks) and affiliation (valleys). Through annotated visualizations, we demonstrate how the terrain metaphor makes relational drift visible, showing patterns that remain invisible in transcripts—frustration peaks preceding role inversions, affiliation valleys marking smooth coordination, spatial clustering revealing interactional patterns. The contribution is methodological and visual: we offer a way of staging encounters with patterns that typically remain invisible, using spatial affordances to support human interpretation of relational dynamics and inviting reflection on what should—and should not—be made legible in AI-mediated relationships.
+Human-LLM conversations increasingly mediate work, learning, and emotional processing, yet contemporary interfaces present dialogue as linear transcripts—poorly equipped to reveal relational positioning patterns across turns. The most consequential shifts often occur invisibly: not in what is said, but in how people position themselves relationally—delegating agency, seeking authority, building rapport. This pictorial presents Conversational Cartography, mapping 538 conversations as navigable terrain. The X-axis encodes functional versus social orientation; the Y-axis encodes aligned versus divergent structure; the Z-axis encodes emotional intensity via the Pleasure-Arousal-Dominance (PAD) model, revealing friction (peaks) and affiliation (valleys). We demonstrate how the terrain metaphor makes relational drift visible: interactions with identical role classifications take dramatically different affective trajectories (74.8x variance ratio), yet clustering identifies 7 relational positioning patterns with trajectory features driving 60.8% separation. Spatial analysis reveals 72% functional/structured patterns, expressive roles nearly absent (<3%). Contribution: using spatial affordances to reveal what relational possibilities are foreclosed.
 
 ---
 

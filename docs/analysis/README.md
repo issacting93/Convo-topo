@@ -1,120 +1,50 @@
 # Analysis Documentation
 
-This directory contains analysis of conversation patterns, classification quality, and spatial clustering.
+This folder contains analytical documents examining specific aspects of the data, patterns, and system behavior.
 
----
+**Last Updated:** 2026-01-10  
+**Dataset Status:** 569 conversations classified (333 Chatbot Arena, 186 WildChat, 32 OASST, 18 human-human)  
+**New Taxonomy:** 538 conversations (94.6%) with GPT-5.2 + 2.0-social-role-theory
 
-## Core Analysis Documents
+## Files
 
-### Classification Quality & Corrections
+### Core Analysis Documents
 
-**1. [CLASSIFICATION_QUALITY_SUMMARY.md](CLASSIFICATION_QUALITY_SUMMARY.md)** ⭐ **Start Here**
-- Executive summary of classification quality analysis
-- Key findings: 100% of sample had issues, systematic biases identified
-- Action plan with priorities
-- Quick wins list
+- **ALIGNMENT_ANALYSIS.md** - Analysis of linguistic alignment (Y-axis) and document alignment
+- **COLLABORATOR_TERRAIN_ANALYSIS.md** - Terrain analysis of collaborator conversations (case studies)
+- **NON_SEEKER_EXPERT_ANALYSIS.md** - Analysis of non-seeker→expert conversations
+- **PAD_MEANINGFUL_UNDERSTANDING_ANALYSIS.md** - Critical analysis of PAD model reliability
+- **WHY_CONVERSATIONS_ARE_STATIC.md** - Analysis of why role shifts are rare
+- **SPATIAL_CLUSTERING_ANALYSIS.md** - Analysis of spatial clustering patterns
 
-**2. [MISCLASSIFICATION_PATTERNS_ANALYSIS.md](MISCLASSIFICATION_PATTERNS_ANALYSIS.md)**
-- Detailed analysis of 7 misclassification patterns
-- Examples from 8 sampled conversations
-- Root cause analysis
-- Quantitative findings
+### Status and Validation
 
-**3. [CLASSIFICATION_CORRECTION_FRAMEWORK.md](CLASSIFICATION_CORRECTION_FRAMEWORK.md)**
-- Step-by-step correction process
-- Automated detection scripts
-- Role rebalancing guidelines
-- X-axis calculation formulas
+- **UPDATE_STATUS.md** - Current status of analysis documents (last updated: 2026-01-09)
+- **VALIDATION_REPORT.md** - Comprehensive validation of all analysis documents against current dataset
 
-**4. [CLASSIFICATION_APPROACH_ANALYSIS.md](CLASSIFICATION_APPROACH_ANALYSIS.md)**
-- Critical analysis of classification approach
-- Theoretical inconsistencies identified
-- Strengths and weaknesses
-- Recommendations for improvement
+## Purpose
 
-### Pattern & Spatial Analysis
+These documents provide:
+- Deep dives into specific conversation types or patterns
+- Analysis of system limitations and strengths
+- Examination of data characteristics
+- Insights into user behavior patterns
+- Validation of claims against current dataset
 
-**5. [PATTERN_EMERGENCE_ANALYSIS.md](PATTERN_EMERGENCE_ANALYSIS.md)**
-- What causes different conversation patterns to emerge
-- Primary factors (Purpose, Roles) and secondary factors (Topic, Emotions)
-- Pattern evolution over time
-- Why similar structures can have different patterns
+## Important Notes
 
-**6. [SPATIAL_CLUSTERING_ANALYSIS.md](SPATIAL_CLUSTERING_ANALYSIS.md)**
-- What spatial clustering reveals about conversation types
-- Maps conversation types to different regions of the terrain
-- Systematic relationships between type and positioning
-- Practical implications for analysis and design
+### Dataset Size References
 
-### Conversation Comparisons
+Some documents reference "345 validated conversations" - this refers to a validated subset used for specific analyses. The current full classified dataset has **569 conversations** (as of 2026-01-10), with **538 conversations** using the new taxonomy (GPT-5.2 + 2.0-social-role-theory).
 
-**7. [COMPARISON_CHATBOT_ARENA_0440_0450.md](COMPARISON_CHATBOT_ARENA_0440_0450.md)**
-- Detailed comparison of two specific conversations
-- Structural similarities but substantive differences
-- Why they look similar but are fundamentally different
+### Number Verification
 
----
+- **✅ Confirmed:** 82.7% trajectory feature importance, 7 clusters, variance ratios (82x/41x)
+- **✅ Verified:** Role distribution percentages with 538 conversations (new taxonomy only):
+  - Provider→Expert-System: 34.4%
+  - Information-Seeker→Expert-System: 21.2%
+  - Provider dominant: 46.1%
+  - Expert-System dominant: 67.1%
+- **📝 Updated:** Documents updated with verified statistics from re-classified dataset
 
-## Document Relationships
-
-### Classification Quality Workflow
-
-1. **Start with:** `CLASSIFICATION_QUALITY_SUMMARY.md` (overview)
-2. **Deep dive:** `MISCLASSIFICATION_PATTERNS_ANALYSIS.md` (detailed patterns)
-3. **Apply fixes:** `CLASSIFICATION_CORRECTION_FRAMEWORK.md` (how to correct)
-4. **Understand approach:** `CLASSIFICATION_APPROACH_ANALYSIS.md` (theoretical analysis)
-
-### Pattern Analysis Workflow
-
-1. **Understand emergence:** `PATTERN_EMERGENCE_ANALYSIS.md` (why patterns arise)
-2. **See spatial mapping:** `SPATIAL_CLUSTERING_ANALYSIS.md` (where patterns cluster)
-3. **Compare examples:** `COMPARISON_CHATBOT_ARENA_0440_0450.md` (concrete comparison)
-
----
-
-## Key Findings Summary
-
-### Classification Quality
-- **100% of sample** had classification issues
-- **Systematic biases:** Seeker over-weighted (+17%), Sharer under-weighted (-12%)
-- **7 patterns identified:** Pseudo-problem-solving, collaboration blindness, etc.
-- **Correction framework:** Automated detection + manual review process
-
-### Pattern Emergence
-- **Primary drivers:** Conversation purpose, role pairings, topic/domain
-- **Secondary factors:** Emotional dynamics, power dynamics, length
-- **Pattern evolution:** Some patterns stable, others evolve mid-conversation
-
-### Spatial Clustering
-- **Conversation types map to regions:** Technical (lower-left), Creative (upper-right)
-- **Systematic positioning:** Similar patterns cluster together
-- **Reveals invisible patterns:** Only visible when viewing multiple conversations
-
----
-
-## Related Documentation
-
-- **Cluster Analysis**: `../cluster-analysis/` - Path cluster analysis and archetypes
-- **Calculations**: `../calculations/` - How dimensions are calculated
-- **Technical**: `../technical/` - Implementation details
-- **Research Findings**: `../RESEARCH_FINDINGS_REPORT_REFRAMED.md` - Comprehensive findings
-
----
-
-## Status
-
-**Classification Quality Analysis:** ✅ Complete (2026-01-05)
-- Patterns documented
-- Correction framework created
-- Reclassification completed (v1.2)
-
-**Pattern Analysis:** ✅ Complete
-- Emergence factors identified
-- Spatial mapping documented
-
-**Next Steps:**
-- ✅ Reclassification completed (v1.2, 340 conversations)
-- Validate correction framework effectiveness
-- Extend taxonomy based on findings
-
-**Note**: Reclassification v1.2 has been completed. See `../DATA_GUIDE.md` for current status (historical completion summary archived in `../archive/status/RECLASSIFICATION_COMPLETE.md`).
+See `VALIDATION_REPORT.md` for detailed validation status.

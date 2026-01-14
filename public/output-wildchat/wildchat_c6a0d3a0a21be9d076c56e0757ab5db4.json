@@ -84,5 +84,149 @@
     "state": "Missouri",
     "toxic": false,
     "redacted": false
+  },
+  "classification": {
+    "abstain": false,
+    "interactionPattern": {
+      "category": "question-answer",
+      "confidence": 0.78,
+      "evidence": [
+        "is there AI in assassins creed",
+        "Yes, there are elements of AI (Artificial Intelligence) in the Assassin's Creed series.",
+        "how do i learn Game AI"
+      ],
+      "rationale": "Human asks direct questions; AI responds with explanatory answers and steps.",
+      "alternative": "advisory"
+    },
+    "powerDynamics": {
+      "category": "human-led",
+      "confidence": 0.72,
+      "evidence": [
+        "is there AI in assassins creed",
+        "How do i begin to learn this AI",
+        "how do i learn Game AI"
+      ],
+      "rationale": "Human sets the agenda through successive questions; AI follows and responds.",
+      "alternative": "balanced"
+    },
+    "emotionalTone": {
+      "category": "professional",
+      "confidence": 0.66,
+      "evidence": [
+        "How may I assist you today?",
+        "Learning about AI can be a rewarding but also challenging experience.",
+        "Here are some steps you can take"
+      ],
+      "rationale": "Task-focused, polite, instructional tone with minimal affect.",
+      "alternative": "neutral"
+    },
+    "engagementStyle": {
+      "category": "directive-iterative",
+      "confidence": 0.74,
+      "evidence": [
+        "Here are some steps you can take to begin your AI learning journey:",
+        "If you want to learn Game AI, the following are the steps you can take:",
+        "Try to learn one concept at a time and avoid jumping ahead."
+      ],
+      "rationale": "AI provides step-by-step guidance and recommendations rather than open exploration.",
+      "alternative": "questioning"
+    },
+    "knowledgeExchange": {
+      "category": "skill-sharing",
+      "confidence": 0.8,
+      "evidence": [
+        "Here are some steps you can take to begin your AI learning journey:",
+        "Learn the basics of game development:",
+        "Practice by creating simple Game AI"
+      ],
+      "rationale": "Exchange centers on how-to learning pathways and practice suggestions.",
+      "alternative": "factual-info"
+    },
+    "conversationPurpose": {
+      "category": "information-seeking",
+      "confidence": 0.7,
+      "evidence": [
+        "is there AI in assassins creed",
+        "How do i begin to learn this AI",
+        "how do i learn Game AI"
+      ],
+      "rationale": "Human primarily seeks explanations and guidance on learning AI/Game AI.",
+      "alternative": "problem-solving"
+    },
+    "topicDepth": {
+      "category": "moderate",
+      "confidence": 0.62,
+      "evidence": [
+        "Choose an AI specialization:",
+        "They cover topics like behavior trees, state machines",
+        "Learn AI fundamentals: Learn the fundamentals of AI like search techniques"
+      ],
+      "rationale": "Moves beyond surface definitions into multiple subtopics and learning steps, but not deeply technical.",
+      "alternative": "surface"
+    },
+    "turnTaking": {
+      "category": "assistant-dominant",
+      "confidence": 0.86,
+      "evidence": [
+        "Here are some steps you can take to begin your AI learning journey:",
+        "If you want to learn Game AI, the following are the steps you can take:"
+      ],
+      "rationale": "AI responses are substantially longer and more detailed than the human's short questions.",
+      "alternative": null
+    },
+    "humanRole": {
+      "distribution": {
+        "information-seeker": 0.7,
+        "provider": 0.25,
+        "director": 0.03,
+        "collaborator": 0.01,
+        "social-expressor": 0.01,
+        "relational-peer": 0.0
+      },
+      "confidence": 0.74,
+      "evidence": [
+        {
+          "role": "information-seeker",
+          "quote": "how do i learn Game AI"
+        },
+        {
+          "role": "provider",
+          "quote": "is there AI in assassins creed"
+        }
+      ],
+      "rationale": "Human primarily requests information and learning guidance via direct questions; minimal directing beyond topic selection.",
+      "alternative": "director"
+    },
+    "aiRole": {
+      "distribution": {
+        "expert-system": 0.25,
+        "learning-facilitator": 0.05,
+        "advisor": 0.65,
+        "co-constructor": 0.03,
+        "social-facilitator": 0.02,
+        "relational-peer": 0.0
+      },
+      "confidence": 0.78,
+      "evidence": [
+        {
+          "role": "advisor",
+          "quote": "Here are some steps you can take to begin your AI learning journey:"
+        },
+        {
+          "role": "expert-system",
+          "quote": "Yes, there are elements of AI (Artificial Intelligence) in the Assassin's Creed series."
+        }
+      ],
+      "rationale": "AI mainly prescribes step-by-step learning actions (advisor) and also provides direct factual explanation about game AI/NPCs (expert-system).",
+      "alternative": "expert-system"
+    }
+  },
+  "classificationMetadata": {
+    "model": "gpt-5.2",
+    "provider": "openai",
+    "timestamp": "2026-01-08T17:09:00.566537",
+    "promptVersion": "2.0-social-role-theory",
+    "processingTimeMs": 15134,
+    "fewShotExamples": "yes"
   }
 }

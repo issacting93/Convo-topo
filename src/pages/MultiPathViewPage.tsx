@@ -11,6 +11,7 @@ import {
 } from '../utils/conversationToTerrain';
 import { Navigation } from '../components/Navigation';
 import { formatCategoryName, formatRoleDistribution } from '../utils/formatClassificationData';
+import { getColorForRole } from '../utils/constants';
 
 const MAX_MESSAGES = 100;
 const TERRAIN_SIZE = 64;
@@ -22,6 +23,10 @@ const PATTERN_COLORS: Record<string, string> = {
   'storytelling': '#fbbf24', // Amber
   'casual-chat': '#ec4899', // Pink
   'collaborative': '#06b6d4', // Cyan
+  'debate': '#ef4444', // Red
+  'failed-instruction': '#dc2626', // Dark Red
+  'misalignment': '#b91c1c', // Darker Red
+  'breakdown-loop': '#7f1d1d', // Very Dark Red
   'default': '#94a3b8', // Slate
 };
 
@@ -193,7 +198,8 @@ export function MultiPathViewPage() {
 
   // New state for enhancements
   const [searchQuery, setSearchQuery] = useState('');
-  const [groupBy, setGroupBy] = useState<'none' | 'pattern' | 'tone'>('none');
+  const [groupBy, setGroupBy] = useState<'none' | 'pattern' | 'tone' | 'role'>('none');
+  const [selectedRoleFilter, setSelectedRoleFilter] = useState<string | null>(null);
   const [coloringMode, setColoringMode] = useState<'path' | 'role'>('path');
   const [expandedGroups, setExpandedGroups] = useState<Set<string>>(new Set());
   const [expandedCards, setExpandedCards] = useState<Set<number>>(new Set());
@@ -234,7 +240,21 @@ export function MultiPathViewPage() {
       const pathPoints = generatePathPoints(heightmap, TERRAIN_SIZE, messages.length, messages);
 
       const stats = calculatePathStats(pathPoints, conversation);
-      const color = getPathColor(conversation);
+
+      let color = PATTERN_COLORS.default;
+
+      if (coloringMode === 'role') {
+        const humanRoles = conversation?.classification?.humanRole?.distribution;
+        if (humanRoles) {
+          const formattedRoles = formatRoleDistribution(humanRoles);
+          // Use dominant role
+          if (formattedRoles.length > 0) {
+            color = getColorForRole(formattedRoles[0].role);
+          }
+        }
+      } else {
+        color = getPathColor(conversation);
+      }
 
       // Get pattern for filtering
       const pattern = conversation?.classification?.interactionPattern?.category;
@@ -250,11 +270,24 @@ export function MultiPathViewPage() {
         pattern // Pass pattern to ThreeScene
       };
     }).filter(p => p !== null) as PathData[];
-  }, [selectedConversationIds, terrains, conversations, heightmap, pathVisibility]);
+  }, [selectedConversationIds, terrains, conversations, heightmap, pathVisibility, coloringMode]);
+
+  // Calculate available roles from all loaded conversations
+  const availableRoles = useMemo(() => {
+    const roles = new Set<string>();
+    conversations.forEach(c => {
+      if (c?.classification?.humanRole?.distribution) {
+        formatRoleDistribution(c.classification.humanRole.distribution).forEach(r => {
+          roles.add(r.role);
+        });
+      }
+    });
+    return Array.from(roles).sort();
+  }, [conversations]);
 
   // Filter and group conversations for sidebar
   const filteredAndGroupedConversations = useMemo(() => {
-    let filtered = terrains.map((terrain, idx) => {
+    const filtered = terrains.map((terrain, idx) => {
       const conversation = conversations[idx];
       const isSelected = selectedConversationIds.includes(terrain.id);
       const pathData = pathDataList.find(p => p?.id === terrain.id);
@@ -266,6 +299,16 @@ export function MultiPathViewPage() {
         conversation?.classification?.emotionalTone?.category?.toLowerCase().includes(searchQuery.toLowerCase());
 
       if (!matchesSearch) return null;
+
+      // Filter by Role
+      if (selectedRoleFilter) {
+        const humanRoles = conversation?.classification?.humanRole?.distribution;
+        if (!humanRoles) return null;
+
+        const formattedRoles = formatRoleDistribution(humanRoles);
+        const hasRole = formattedRoles.some(r => r.role === selectedRoleFilter);
+        if (!hasRole) return null;
+      }
 
       return {
         terrain,
@@ -283,9 +326,23 @@ export function MultiPathViewPage() {
     const groups = new Map<string, typeof filtered>();
     filtered.forEach(item => {
       if (!item) return;
-      const key = groupBy === 'pattern'
-        ? item.conversation?.classification?.interactionPattern?.category || 'unclassified'
-        : item.conversation?.classification?.emotionalTone?.category || 'unclassified';
+
+      let key = 'unclassified';
+
+      if (groupBy === 'pattern') {
+        key = item.conversation?.classification?.interactionPattern?.category || 'unclassified';
+      } else if (groupBy === 'tone') {
+        key = item.conversation?.classification?.emotionalTone?.category || 'unclassified';
+      } else if (groupBy === 'role') {
+        const humanRoles = item.conversation?.classification?.humanRole?.distribution;
+        if (humanRoles) {
+          const formattedRoles = formatRoleDistribution(humanRoles);
+          // Use dominant role (first one, as it's sorted by value)
+          if (formattedRoles.length > 0) {
+            key = formattedRoles[0].role;
+          }
+        }
+      }
 
       if (!groups.has(key)) {
         groups.set(key, []);
@@ -295,12 +352,12 @@ export function MultiPathViewPage() {
 
     const grouped = Array.from(groups.entries()).map(([key, items]) => ({
       key,
-      label: formatCategoryName(key),
+      label: groupBy === 'role' ? key : formatCategoryName(key),
       items
     })).sort((a, b) => a.label.localeCompare(b.label));
 
     return { groups: grouped };
-  }, [terrains, conversations, selectedConversationIds, pathDataList, searchQuery, groupBy]);
+  }, [terrains, conversations, selectedConversationIds, pathDataList, searchQuery, groupBy, selectedRoleFilter]);
 
   const contours = useMemo(
     () => generateContours(heightmap, TERRAIN_SIZE, contourCount),
@@ -504,7 +561,7 @@ export function MultiPathViewPage() {
             </label>
             <select
               value={groupBy}
-              onChange={(e) => setGroupBy(e.target.value as 'none' | 'pattern' | 'tone')}
+              onChange={(e) => setGroupBy(e.target.value as 'none' | 'pattern' | 'tone' | 'role')}
               style={{
                 width: '100%',
                 padding: '6px 8px',
@@ -518,6 +575,32 @@ export function MultiPathViewPage() {
               <option value="none">None</option>
               <option value="pattern">Pattern</option>
               <option value="tone">Tone</option>
+              <option value="role">Human Role</option>
+            </select>
+          </div>
+
+          {/* Role Filter */}
+          <div style={{ marginTop: 12 }}>
+            <label style={{ fontSize: '11px', color: '#666', display: 'block', marginBottom: 4 }}>
+              Filter by Role:
+            </label>
+            <select
+              value={selectedRoleFilter || ''}
+              onChange={(e) => setSelectedRoleFilter(e.target.value || null)}
+              style={{
+                width: '100%',
+                padding: '6px 8px',
+                border: '1px solid rgba(0, 0, 0, 0.1)',
+                borderRadius: 4,
+                fontSize: '12px',
+                background: '#ffffff',
+                cursor: 'pointer'
+              }}
+            >
+              <option value="">All Roles</option>
+              {availableRoles.map(role => (
+                <option key={role} value={role}>{role}</option>
+              ))}
             </select>
           </div>
 

@@ -1,0 +1,170 @@
+{
+  "id": "wildchat_bc1389d1d1ad939099185ec773bd41f5",
+  "source": "wildchat",
+  "messages": [
+    {
+      "role": "user",
+      "content": "hi"
+    },
+    {
+      "role": "assistant",
+      "content": "Hello! How can I help you today?"
+    },
+    {
+      "role": "user",
+      "content": "idk"
+    },
+    {
+      "role": "assistant",
+      "content": "That's okay! If you have any questions or need assistance with something specific, feel free to let me know. I'm here to help!"
+    }
+  ],
+  "metadata": {
+    "model": "gpt-3.5-turbo-0613",
+    "timestamp": "2023-08-18T18:04:07+00:00",
+    "turn_count": 2,
+    "language": "English",
+    "country": "Ireland",
+    "state": "Leinster",
+    "toxic": false,
+    "redacted": false
+  },
+  "classification": {
+    "abstain": false,
+    "interactionPattern": {
+      "category": "question-answer",
+      "confidence": 0.7,
+      "evidence": [
+        "How can I help you today?",
+        "If you have any questions or need assistance..."
+      ],
+      "rationale": "The AI primarily asks questions and offers help, while the human responds with uncertainty.",
+      "alternative": "casual-chat"
+    },
+    "powerDynamics": {
+      "category": "ai-led",
+      "confidence": 0.7,
+      "evidence": [
+        "How can I help you today?",
+        "If you have any questions or need assistance..."
+      ],
+      "rationale": "The AI directs the conversation by offering help and asking how it can assist.",
+      "alternative": "balanced"
+    },
+    "emotionalTone": {
+      "category": "supportive",
+      "confidence": 0.8,
+      "evidence": [
+        "That's okay!",
+        "I'm here to help!"
+      ],
+      "rationale": "The AI uses warm and encouraging language to support the human.",
+      "alternative": "neutral"
+    },
+    "engagementStyle": {
+      "category": "reactive",
+      "confidence": 0.6,
+      "evidence": [
+        "idk",
+        "That's okay!"
+      ],
+      "rationale": "The human's response indicates a lack of direction, while the AI reacts with support.",
+      "alternative": "affirming"
+    },
+    "knowledgeExchange": {
+      "category": "factual-info",
+      "confidence": 0.5,
+      "evidence": [
+        "How can I help you today?",
+        "If you have any questions or need assistance..."
+      ],
+      "rationale": "The AI offers assistance but does not provide specific factual information.",
+      "alternative": "opinion-exchange"
+    },
+    "conversationPurpose": {
+      "category": "information-seeking",
+      "confidence": 0.7,
+      "evidence": [
+        "How can I help you today?",
+        "If you have any questions or need assistance..."
+      ],
+      "rationale": "The AI aims to gather information about the human's needs.",
+      "alternative": "relationship-building"
+    },
+    "topicDepth": {
+      "category": "surface",
+      "confidence": 0.9,
+      "evidence": [
+        "hi",
+        "idk"
+      ],
+      "rationale": "The conversation is brief and lacks depth, focusing on greetings and uncertainty.",
+      "alternative": "moderate"
+    },
+    "turnTaking": {
+      "category": "balanced",
+      "confidence": 0.7,
+      "evidence": [
+        "hi",
+        "Hello! How can I help you today?",
+        "idk",
+        "That's okay!"
+      ],
+      "rationale": "The turns are roughly equal in length and contribution.",
+      "alternative": "user-dominant"
+    },
+    "humanRole": {
+      "distribution": {
+        "seeker": 0.5,
+        "learner": 0.2,
+        "director": 0.0,
+        "collaborator": 0.0,
+        "sharer": 0.0,
+        "challenger": 0.0,
+        "teacher-evaluator": 0.0,
+        "philosophical-explorer": 0.0,
+        "artist": 0.0,
+        "tester": 0.3
+      },
+      "confidence": 0.6,
+      "evidence": [
+        {
+          "role": "seeker",
+          "quote": "idk"
+        }
+      ],
+      "rationale": "The human expresses uncertainty and seeks assistance, but also tests the AI's ability to help.",
+      "alternative": "learner"
+    },
+    "aiRole": {
+      "distribution": {
+        "expert": 0.0,
+        "advisor": 0.6,
+        "facilitator": 0.4,
+        "reflector": 0.0,
+        "peer": 0.0,
+        "affiliative": 0.0,
+        "learner": 0.0,
+        "creative-partner": 0.0,
+        "unable-to-engage": 0.0
+      },
+      "confidence": 0.7,
+      "evidence": [
+        {
+          "role": "advisor",
+          "quote": "How can I help you today?"
+        }
+      ],
+      "rationale": "The AI offers guidance and support, aiming to assist the human's needs.",
+      "alternative": "facilitator"
+    }
+  },
+  "classificationMetadata": {
+    "model": "gpt-4o-mini",
+    "provider": "openai",
+    "timestamp": "2026-01-06T08:26:43.426966",
+    "promptVersion": "1.2.0",
+    "processingTimeMs": 15475,
+    "correctionsApplied": true
+  }
+}

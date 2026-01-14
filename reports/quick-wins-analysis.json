@@ -1,0 +1,775 @@
+{
+  "metadata": {
+    "analysis_date": "2026-01-12T00:43:02.530372",
+    "total_conversations": 519,
+    "sources": {
+      "chatbot_arena": 333,
+      "wildchat": 186
+    }
+  },
+  "role_transitions": {
+    "provider": {
+      "provider": 197
+    },
+    "director": {
+      "director": 130
+    },
+    "social-expressor": {
+      "social-expressor": 6
+    },
+    "information-seeker": {
+      "information-seeker": 125
+    }
+  },
+  "pad_lifecycle": {
+    "phases": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "pleasure": [
+      0.531269592476489,
+      0.5286127167630057,
+      0.5340725806451613,
+      0.5284482758620689,
+      0.5363861386138613,
+      0.528526148969889,
+      0.5296561604584527,
+      0.5436363636363636,
+      0.5296829971181557,
+      0.553030303030303
+    ],
+    "arousal": [
+      0.5094043887147336,
+      0.523121387283237,
+      0.5132056451612903,
+      0.5189655172413793,
+      0.5099009900990099,
+      0.5123613312202852,
+      0.5234957020057306,
+      0.51010101010101,
+      0.5305475504322767,
+      0.5118686868686869
+    ],
+    "dominance": [
+      0.5431034482758621,
+      0.4763005780346821,
+      0.4578629032258065,
+      0.49511494252873567,
+      0.498019801980198,
+      0.5199683042789223,
+      0.5177650429799426,
+      0.44343434343434346,
+      0.5,
+      0.448989898989899
+    ],
+    "emotionalIntensity": [
+      0.3189034391177191,
+      0.367067241045117,
+      0.32380784246324923,
+      0.37167159992612453,
+      0.3712257160156868,
+      0.32199894370663557,
+      0.3726855345137477,
+      0.3273195433942779,
+      0.37702068515064346,
+      0.3720140343675649
+    ],
+    "sample_sizes": [
+      638,
+      346,
+      496,
+      348,
+      202,
+      631,
+      349,
+      495,
+      347,
+      198
+    ]
+  },
+  "message_lengths": {
+    "user": {
+      "mean": 246.94455445544554,
+      "median": 55.0,
+      "std": 1079.6529085156883,
+      "min": 1,
+      "max": 25306,
+      "count": 2020,
+      "histogram": [
+        1955,
+        31,
+        8,
+        11,
+        7,
+        2,
+        2,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        1,
+        0,
+        0,
+        1
+      ],
+      "bins": [
+        1.0,
+        1266.25,
+        2531.5,
+        3796.75,
+        5062.0,
+        6327.25,
+        7592.5,
+        8857.75,
+        10123.0,
+        11388.25,
+        12653.5,
+        13918.75,
+        15184.0,
+        16449.25,
+        17714.5,
+        18979.75,
+        20245.0,
+        21510.25,
+        22775.5,
+        24040.75,
+        25306.0
+      ]
+    },
+    "assistant": {
+      "mean": 855.5458128078818,
+      "median": 520.0,
+      "std": 972.4893179449069,
+      "min": 1,
+      "max": 10246,
+      "count": 2030,
+      "histogram": [
+        1005,
+        412,
+        250,
+        147,
+        80,
+        57,
+        39,
+        21,
+        3,
+        10,
+        2,
+        0,
+        1,
+        0,
+        0,
+        1,
+        1,
+        0,
+        0,
+        1
+      ],
+      "bins": [
+        1.0,
+        513.25,
+        1025.5,
+        1537.75,
+        2050.0,
+        2562.25,
+        3074.5,
+        3586.75,
+        4099.0,
+        4611.25,
+        5123.5,
+        5635.75,
+        6148.0,
+        6660.25,
+        7172.5,
+        7684.75,
+        8197.0,
+        8709.25,
+        9221.5,
+        9733.75,
+        10246.0
+      ]
+    },
+    "ratio": 3.464525932529692
+  },
+  "confidence": {
+    "overall": {
+      "mean": 0.7008649237472767,
+      "median": 0.7,
+      "std": 0.08648732859285956,
+      "histogram": [
+        0,
+        0,
+        0,
+        5,
+        14,
+        801,
+        1628,
+        1430,
+        693,
+        19
+      ],
+      "bins": [
+        0.0,
+        0.1,
+        0.2,
+        0.30000000000000004,
+        0.4,
+        0.5,
+        0.6000000000000001,
+        0.7000000000000001,
+        0.8,
+        0.9,
+        1.0
+      ]
+    },
+    "by_dimension": {
+      "interactionPattern": {
+        "mean": 0.7479738562091504,
+        "median": 0.78,
+        "std": 0.08655115084744026
+      },
+      "powerDynamics": {
+        "mean": 0.7105664488017429,
+        "median": 0.72,
+        "std": 0.0547215714100488
+      },
+      "emotionalTone": {
+        "mean": 0.6719389978213507,
+        "median": 0.66,
+        "std": 0.08325060327349505
+      },
+      "engagementStyle": {
+        "mean": 0.6736165577342048,
+        "median": 0.66,
+        "std": 0.0730266390371749
+      },
+      "knowledgeExchange": {
+        "mean": 0.6759477124183007,
+        "median": 0.7,
+        "std": 0.10333294059695596
+      },
+      "conversationPurpose": {
+        "mean": 0.722723311546841,
+        "median": 0.73,
+        "std": 0.0811128461704449
+      },
+      "topicDepth": {
+        "mean": 0.6547494553376906,
+        "median": 0.63,
+        "std": 0.08598330621989995
+      },
+      "turnTaking": {
+        "mean": 0.7312854030501089,
+        "median": 0.75,
+        "std": 0.1054003841794997
+      },
+      "humanRole": {
+        "mean": 0.7079520697167757,
+        "median": 0.72,
+        "std": 0.057966163699700694
+      },
+      "aiRole": {
+        "mean": 0.7118954248366013,
+        "median": 0.72,
+        "std": 0.06867959425856444
+      }
+    }
+  },
+  "typical_conversations": [
+    {
+      "id": "chatbot_arena_30428",
+      "source": "chatbot_arena",
+      "distance": 0.0,
+      "avg_pleasure": 0.5,
+      "avg_arousal": 0.5,
+      "avg_dominance": 0.5,
+      "message_count": 14,
+      "human_role": "provider",
+      "ai_role": "expert-system",
+      "first_message": "i have a sqlite table asset with column id, name and amount. response my question using SQL statemen"
+    },
+    {
+      "id": "chatbot_arena_0276",
+      "source": "chatbot_arena",
+      "distance": 0.0,
+      "avg_pleasure": 0.5,
+      "avg_arousal": 0.5,
+      "avg_dominance": 0.5,
+      "message_count": 4,
+      "human_role": "provider",
+      "ai_role": "expert-system",
+      "first_message": "what does sjw mean?"
+    },
+    {
+      "id": "chatbot_arena_20469",
+      "source": "chatbot_arena",
+      "distance": 0.0,
+      "avg_pleasure": 0.5,
+      "avg_arousal": 0.5,
+      "avg_dominance": 0.5,
+      "message_count": 10,
+      "human_role": "director",
+      "ai_role": "expert-system",
+      "first_message": "is the westham a football club?"
+    },
+    {
+      "id": "chatbot_arena_0169",
+      "source": "chatbot_arena",
+      "distance": 0.0,
+      "avg_pleasure": 0.5,
+      "avg_arousal": 0.5,
+      "avg_dominance": 0.5,
+      "message_count": 6,
+      "human_role": "director",
+      "ai_role": "expert-system",
+      "first_message": "Create a good prompt to test ai assistants"
+    },
+    {
+      "id": "chatbot_arena_0094",
+      "source": "chatbot_arena",
+      "distance": 0.0,
+      "avg_pleasure": 0.5,
+      "avg_arousal": 0.5,
+      "avg_dominance": 0.5,
+      "message_count": 8,
+      "human_role": "director",
+      "ai_role": "expert-system",
+      "first_message": "What if Lovecraft had written the Lord of the Rings."
+    },
+    {
+      "id": "chatbot_arena_0217",
+      "source": "chatbot_arena",
+      "distance": 0.0,
+      "avg_pleasure": 0.5,
+      "avg_arousal": 0.5,
+      "avg_dominance": 0.5,
+      "message_count": 6,
+      "human_role": "director",
+      "ai_role": "advisor",
+      "first_message": "I want to make some questions help me understand etymology, and these questions should use user's pe"
+    },
+    {
+      "id": "chatbot_arena_0191",
+      "source": "chatbot_arena",
+      "distance": 0.0,
+      "avg_pleasure": 0.5,
+      "avg_arousal": 0.5,
+      "avg_dominance": 0.5,
+      "message_count": 4,
+      "human_role": "director",
+      "ai_role": "expert-system",
+      "first_message": "hi"
+    },
+    {
+      "id": "chatbot_arena_0216",
+      "source": "chatbot_arena",
+      "distance": 0.0,
+      "avg_pleasure": 0.5,
+      "avg_arousal": 0.5,
+      "avg_dominance": 0.5,
+      "message_count": 4,
+      "human_role": "director",
+      "ai_role": "expert-system",
+      "first_message": "You are an intent generator. Print only intent expression or intent expressions separated by new lin"
+    },
+    {
+      "id": "chatbot_arena_0001",
+      "source": "chatbot_arena",
+      "distance": 0.0,
+      "avg_pleasure": 0.5,
+      "avg_arousal": 0.5,
+      "avg_dominance": 0.5,
+      "message_count": 4,
+      "human_role": "provider",
+      "ai_role": "expert-system",
+      "first_message": "what do you think about the future of iran?"
+    },
+    {
+      "id": "chatbot_arena_0040",
+      "source": "chatbot_arena",
+      "distance": 0.0,
+      "avg_pleasure": 0.5,
+      "avg_arousal": 0.5,
+      "avg_dominance": 0.5,
+      "message_count": 4,
+      "human_role": "provider",
+      "ai_role": "advisor",
+      "first_message": "hello!"
+    },
+    {
+      "id": "chatbot_arena_0125",
+      "source": "chatbot_arena",
+      "distance": 0.0,
+      "avg_pleasure": 0.5,
+      "avg_arousal": 0.5,
+      "avg_dominance": 0.5,
+      "message_count": 4,
+      "human_role": "director",
+      "ai_role": "advisor",
+      "first_message": "Can you role play as Wintermute, the powerful AI that appears in the novel Neuromancer ?"
+    },
+    {
+      "id": "chatbot_arena_0133",
+      "source": "chatbot_arena",
+      "distance": 0.0,
+      "avg_pleasure": 0.5,
+      "avg_arousal": 0.5,
+      "avg_dominance": 0.5,
+      "message_count": 4,
+      "human_role": "provider",
+      "ai_role": "expert-system",
+      "first_message": "Summarize the visual things that set Wes Anderson movies apart from others."
+    },
+    {
+      "id": "chatbot_arena_0021",
+      "source": "chatbot_arena",
+      "distance": 0.0,
+      "avg_pleasure": 0.5,
+      "avg_arousal": 0.5,
+      "avg_dominance": 0.5,
+      "message_count": 4,
+      "human_role": "director",
+      "ai_role": "expert-system",
+      "first_message": "Write a python program to reverse a string "
+    },
+    {
+      "id": "chatbot_arena_0220",
+      "source": "chatbot_arena",
+      "distance": 0.0,
+      "avg_pleasure": 0.5,
+      "avg_arousal": 0.5,
+      "avg_dominance": 0.5,
+      "message_count": 6,
+      "human_role": "director",
+      "ai_role": "expert-system",
+      "first_message": "transcribe the following to English: \"\u05e2\u05d5\u05d3 \u05dc\u05d0 \u05d0\u05d1\u05d3\u05d4 \u05ea\u05e7\u05d5\u05d5\u05ea\u05e0\u05d5\""
+    },
+    {
+      "id": "chatbot_arena_0010",
+      "source": "chatbot_arena",
+      "distance": 0.0,
+      "avg_pleasure": 0.5,
+      "avg_arousal": 0.5,
+      "avg_dominance": 0.5,
+      "message_count": 4,
+      "human_role": "provider",
+      "ai_role": "expert-system",
+      "first_message": "Can you write code?"
+    },
+    {
+      "id": "chatbot_arena_0790",
+      "source": "chatbot_arena",
+      "distance": 0.0,
+      "avg_pleasure": 0.5,
+      "avg_arousal": 0.5,
+      "avg_dominance": 0.5,
+      "message_count": 10,
+      "human_role": "director",
+      "ai_role": "advisor",
+      "first_message": "implement a complete representation of the entire type system of the C90 language, in python, using "
+    },
+    {
+      "id": "chatbot_arena_31225",
+      "source": "chatbot_arena",
+      "distance": 0.0,
+      "avg_pleasure": 0.5,
+      "avg_arousal": 0.5,
+      "avg_dominance": 0.5,
+      "message_count": 12,
+      "human_role": "director",
+      "ai_role": "expert-system",
+      "first_message": "'''User: \nIn the following, `choose_method` selects the best method to carry out a command, out of t"
+    },
+    {
+      "id": "chatbot_arena_0138",
+      "source": "chatbot_arena",
+      "distance": 0.0,
+      "avg_pleasure": 0.5,
+      "avg_arousal": 0.5,
+      "avg_dominance": 0.5,
+      "message_count": 4,
+      "human_role": "provider",
+      "ai_role": "expert-system",
+      "first_message": "Could you add defensive programming to the previous function?"
+    },
+    {
+      "id": "chatbot_arena_0118",
+      "source": "chatbot_arena",
+      "distance": 0.0,
+      "avg_pleasure": 0.5,
+      "avg_arousal": 0.5,
+      "avg_dominance": 0.5,
+      "message_count": 6,
+      "human_role": "provider",
+      "ai_role": "expert-system",
+      "first_message": "do you know vanessa lagardette?"
+    },
+    {
+      "id": "chatbot_arena_32700",
+      "source": "chatbot_arena",
+      "distance": 0.0,
+      "avg_pleasure": 0.5,
+      "avg_arousal": 0.5,
+      "avg_dominance": 0.5,
+      "message_count": 10,
+      "human_role": "director",
+      "ai_role": "expert-system",
+      "first_message": "You are a report writer of promotional materials"
+    }
+  ],
+  "unusual_conversations": [
+    {
+      "id": "wildchat_7b9abc1f1adcb0b532b08ff19d8f0c3f",
+      "source": "wildchat",
+      "distance": 0.4031128874149275,
+      "avg_pleasure": 0.9,
+      "avg_arousal": 0.44999999999999996,
+      "avg_dominance": 0.5,
+      "message_count": 4,
+      "human_role": "provider",
+      "ai_role": "advisor",
+      "first_message": "create a meta discription about watch business"
+    },
+    {
+      "id": "wildchat_e32dd97eb97d3b2bd5c836ff4cb8d31e",
+      "source": "wildchat",
+      "distance": 0.4031128874149275,
+      "avg_pleasure": 0.9,
+      "avg_arousal": 0.44999999999999996,
+      "avg_dominance": 0.5,
+      "message_count": 4,
+      "human_role": "director",
+      "ai_role": "relational-peer",
+      "first_message": "Write an instagram post about a family traveling to Whitby, UK. The dad being an AFC Richmond fan an"
+    },
+    {
+      "id": "chatbot_arena_0195",
+      "source": "chatbot_arena",
+      "distance": 0.4031128874149275,
+      "avg_pleasure": 0.9,
+      "avg_arousal": 0.45,
+      "avg_dominance": 0.5,
+      "message_count": 8,
+      "human_role": "director",
+      "ai_role": "relational-peer",
+      "first_message": "hi"
+    },
+    {
+      "id": "chatbot_arena_1845",
+      "source": "chatbot_arena",
+      "distance": 0.3930825471690253,
+      "avg_pleasure": 0.8333333333333335,
+      "avg_arousal": 0.7083333333333334,
+      "avg_dominance": 0.5,
+      "message_count": 12,
+      "human_role": "information-seeker",
+      "ai_role": "expert-system",
+      "first_message": "How many trees are necessary to make a forest?"
+    },
+    {
+      "id": "chatbot_arena_0214",
+      "source": "chatbot_arena",
+      "distance": 0.39131189606246325,
+      "avg_pleasure": 0.8500000000000001,
+      "avg_arousal": 0.6749999999999999,
+      "avg_dominance": 0.5,
+      "message_count": 4,
+      "human_role": "provider",
+      "ai_role": "expert-system",
+      "first_message": "Can you Speak Thai?"
+    },
+    {
+      "id": "chatbot_arena_30088",
+      "source": "chatbot_arena",
+      "distance": 0.38492085225407063,
+      "avg_pleasure": 0.8250000000000001,
+      "avg_arousal": 0.70625,
+      "avg_dominance": 0.5,
+      "message_count": 16,
+      "human_role": "provider",
+      "ai_role": "expert-system",
+      "first_message": "today is the day you get to prove your metal mettle!"
+    },
+    {
+      "id": "wildchat_82cfe3211e4a55cc6bc5390b3732ca38",
+      "source": "wildchat",
+      "distance": 0.37583240945932267,
+      "avg_pleasure": 0.875,
+      "avg_arousal": 0.5249999999999999,
+      "avg_dominance": 0.5,
+      "message_count": 4,
+      "human_role": "director",
+      "ai_role": "co-constructor",
+      "first_message": "[told from Sayori's point of view, there would be dialogue in this story:]\n\n(It was just a normal da"
+    },
+    {
+      "id": "chatbot_arena_0087",
+      "source": "chatbot_arena",
+      "distance": 0.3752082754950909,
+      "avg_pleasure": 0.8250000000000001,
+      "avg_arousal": 0.6875,
+      "avg_dominance": 0.5,
+      "message_count": 8,
+      "human_role": "provider",
+      "ai_role": "expert-system",
+      "first_message": "ahoyhoy"
+    },
+    {
+      "id": "chatbot_arena_0098",
+      "source": "chatbot_arena",
+      "distance": 0.3752082754950909,
+      "avg_pleasure": 0.8250000000000001,
+      "avg_arousal": 0.6875,
+      "avg_dominance": 0.5,
+      "message_count": 8,
+      "human_role": "information-seeker",
+      "ai_role": "expert-system",
+      "first_message": "I need help"
+    },
+    {
+      "id": "chatbot_arena_25668",
+      "source": "chatbot_arena",
+      "distance": 0.3731416539031138,
+      "avg_pleasure": 0.8714285714285717,
+      "avg_arousal": 0.46428571428571436,
+      "avg_dominance": 0.5,
+      "message_count": 14,
+      "human_role": "provider",
+      "ai_role": "expert-system",
+      "first_message": "You are an interviewer conducting a mock coding interview. Ask me an easy leetcode-style question. I"
+    },
+    {
+      "id": "chatbot_arena_1882",
+      "source": "chatbot_arena",
+      "distance": 0.37009817109788595,
+      "avg_pleasure": 0.8093750000000001,
+      "avg_arousal": 0.703125,
+      "avg_dominance": 0.5,
+      "message_count": 16,
+      "human_role": "provider",
+      "ai_role": "expert-system",
+      "first_message": "How to present feeling for an AI?"
+    },
+    {
+      "id": "wildchat_72a59dd13b38d402a13bb23d239b9b29",
+      "source": "wildchat",
+      "distance": 0.3696845502136473,
+      "avg_pleasure": 0.8666666666666667,
+      "avg_arousal": 0.4666666666666666,
+      "avg_dominance": 0.4666666666666666,
+      "message_count": 3,
+      "human_role": "provider",
+      "ai_role": "advisor",
+      "first_message": "As an AI language model, I do not have personal experiences or senses, so I do not know directly whe"
+    },
+    {
+      "id": "chatbot_arena_1650",
+      "source": "chatbot_arena",
+      "distance": 0.36055512754639907,
+      "avg_pleasure": 0.8000000000000002,
+      "avg_arousal": 0.7000000000000001,
+      "avg_dominance": 0.5,
+      "message_count": 12,
+      "human_role": "provider",
+      "ai_role": "expert-system",
+      "first_message": "Tell a joke"
+    },
+    {
+      "id": "chatbot_arena_0304",
+      "source": "chatbot_arena",
+      "distance": 0.360555127546399,
+      "avg_pleasure": 0.8000000000000002,
+      "avg_arousal": 0.7,
+      "avg_dominance": 0.5,
+      "message_count": 14,
+      "human_role": "provider",
+      "ai_role": "expert-system",
+      "first_message": "HI there"
+    },
+    {
+      "id": "wildchat_aeafb904973c5c0ad18150a04d99f443",
+      "source": "wildchat",
+      "distance": 0.36055512754639896,
+      "avg_pleasure": 0.8,
+      "avg_arousal": 0.3,
+      "avg_dominance": 0.5,
+      "message_count": 4,
+      "human_role": "director",
+      "ai_role": "relational-peer",
+      "first_message": "Freedom Planet characters: Me plays Freedom Planet. Lilac: \"What are you doing\". Me: \"hahaha you The"
+    },
+    {
+      "id": "chatbot_arena_0023",
+      "source": "chatbot_arena",
+      "distance": 0.36055512754639896,
+      "avg_pleasure": 0.8,
+      "avg_arousal": 0.3,
+      "avg_dominance": 0.5,
+      "message_count": 4,
+      "human_role": "provider",
+      "ai_role": "expert-system",
+      "first_message": "Hey I'm Elon Musk"
+    },
+    {
+      "id": "chatbot_arena_0086",
+      "source": "chatbot_arena",
+      "distance": 0.36055512754639896,
+      "avg_pleasure": 0.8,
+      "avg_arousal": 0.7,
+      "avg_dominance": 0.5,
+      "message_count": 4,
+      "human_role": "provider",
+      "ai_role": "expert-system",
+      "first_message": "Hi"
+    },
+    {
+      "id": "chatbot_arena_0011",
+      "source": "chatbot_arena",
+      "distance": 0.36055512754639896,
+      "avg_pleasure": 0.8,
+      "avg_arousal": 0.3,
+      "avg_dominance": 0.5,
+      "message_count": 4,
+      "human_role": "provider",
+      "ai_role": "expert-system",
+      "first_message": "Hey"
+    },
+    {
+      "id": "chatbot_arena_0206",
+      "source": "chatbot_arena",
+      "distance": 0.36055512754639896,
+      "avg_pleasure": 0.8,
+      "avg_arousal": 0.7,
+      "avg_dominance": 0.5,
+      "message_count": 4,
+      "human_role": "director",
+      "ai_role": "relational-peer",
+      "first_message": "A succulent Chinese ________ ?"
+    },
+    {
+      "id": "chatbot_arena_0066",
+      "source": "chatbot_arena",
+      "distance": 0.36055512754639896,
+      "avg_pleasure": 0.8,
+      "avg_arousal": 0.3,
+      "avg_dominance": 0.5,
+      "message_count": 8,
+      "human_role": "provider",
+      "ai_role": "expert-system",
+      "first_message": "Tell me a joke"
+    }
+  ]
+}

@@ -66,5 +66,142 @@
     "state": "North Carolina",
     "toxic": false,
     "redacted": false
+  },
+  "classification": {
+    "abstain": false,
+    "interactionPattern": {
+      "category": "question-answer",
+      "confidence": 0.75,
+      "evidence": [
+        "can you make images?",
+        "generate ASCII art of a guy named phil"
+      ],
+      "rationale": "Human requests capabilities/outputs; AI responds with ability limits and then provides ASCII art.",
+      "alternative": "advisory"
+    },
+    "powerDynamics": {
+      "category": "human-led",
+      "confidence": 0.7,
+      "evidence": [
+        "Give me a painting of a guy named phil",
+        "generate ASCII art of a guy named phil"
+      ],
+      "rationale": "Human sets the agenda via successive requests; AI mainly reacts to those requests.",
+      "alternative": "balanced"
+    },
+    "emotionalTone": {
+      "category": "professional",
+      "confidence": 0.65,
+      "evidence": [
+        "As an AI text-based model, I don't have the ability to create images directly.",
+        "I'm sorry, but as I mentioned before"
+      ],
+      "rationale": "AI uses formal capability statements and polite refusal language; little affect beyond politeness.",
+      "alternative": "neutral"
+    },
+    "engagementStyle": {
+      "category": "reactive",
+      "confidence": 0.7,
+      "evidence": [
+        "I don't have the ability to create images directly.",
+        "Certainly! Here's an ASCII art representation"
+      ],
+      "rationale": "AI responds to user prompts (refusal, then compliance with ASCII art) without driving exploration via questions.",
+      "alternative": "directive-iterative"
+    },
+    "knowledgeExchange": {
+      "category": "skill-sharing",
+      "confidence": 0.55,
+      "evidence": [
+        "I can help in generating ASCII art",
+        "Here's an ASCII art representation of a guy named Phil:"
+      ],
+      "rationale": "Exchange centers on producing an ASCII representation (a method/output), not personal sharing; limited factual content.",
+      "alternative": "factual-info"
+    },
+    "conversationPurpose": {
+      "category": "capability-exploration",
+      "confidence": 0.8,
+      "evidence": [
+        "can you make images?",
+        "I'm unable to create or provide visual content."
+      ],
+      "rationale": "User probes what the AI can produce (images vs ASCII), and AI clarifies limitations and alternatives.",
+      "alternative": "information-seeking"
+    },
+    "topicDepth": {
+      "category": "surface",
+      "confidence": 0.85,
+      "evidence": [
+        "can you make images?",
+        "Give me a painting of a guy named phil"
+      ],
+      "rationale": "Brief, request-focused interaction with no elaboration on style, context, or iterative refinement.",
+      "alternative": null
+    },
+    "turnTaking": {
+      "category": "assistant-dominant",
+      "confidence": 0.8,
+      "evidence": [
+        "As an AI text-based model, I don't have the ability to create images directly.",
+        "```\n\u2800\u2800\u2800\u2800\u28e0\u28e4\u2834\u2812\u2809\u2819\u281b\u2837\u2824"
+      ],
+      "rationale": "AI messages are substantially longer, especially the ASCII art block.",
+      "alternative": null
+    },
+    "humanRole": {
+      "distribution": {
+        "information-seeker": 0.25,
+        "provider": 0.55,
+        "director": 0.15,
+        "collaborator": 0.03,
+        "social-expressor": 0.01,
+        "relational-peer": 0.01
+      },
+      "confidence": 0.72,
+      "evidence": [
+        {
+          "role": "provider",
+          "quote": "can you make images?"
+        },
+        {
+          "role": "director",
+          "quote": "Give me a painting of a guy named phil"
+        }
+      ],
+      "rationale": "Human primarily requests outputs from the AI (provider/information-seeking) and also issues direct commands for deliverables (director).",
+      "alternative": "information-seeker"
+    },
+    "aiRole": {
+      "distribution": {
+        "expert-system": 0.55,
+        "learning-facilitator": 0.03,
+        "advisor": 0.12,
+        "co-constructor": 0.05,
+        "social-facilitator": 0.02,
+        "relational-peer": 0.23
+      },
+      "confidence": 0.68,
+      "evidence": [
+        {
+          "role": "expert-system",
+          "quote": "I don't have the ability to create images directly."
+        },
+        {
+          "role": "advisor",
+          "quote": "I can help in generating ASCII art or describing images"
+        }
+      ],
+      "rationale": "AI asserts capability limits and provides a direct output (ASCII art), with a minor advisory element offering alternatives (ASCII/descriptions).",
+      "alternative": "advisor"
+    }
+  },
+  "classificationMetadata": {
+    "model": "gpt-5.2",
+    "provider": "openai",
+    "timestamp": "2026-01-08T17:18:34.225634",
+    "promptVersion": "2.0-social-role-theory",
+    "processingTimeMs": 13996,
+    "fewShotExamples": "yes"
   }
 }

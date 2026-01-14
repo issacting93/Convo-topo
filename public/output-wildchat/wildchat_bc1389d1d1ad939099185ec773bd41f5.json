@@ -4,19 +4,43 @@
   "messages": [
     {
       "role": "user",
-      "content": "hi"
+      "content": "hi",
+      "pad": {
+        "pleasure": 0.5,
+        "arousal": 0.3,
+        "dominance": 0.6,
+        "emotionalIntensity": 0.25819888974716115
+      }
     },
     {
       "role": "assistant",
-      "content": "Hello! How can I help you today?"
+      "content": "Hello! How can I help you today?",
+      "pad": {
+        "pleasure": 0.5,
+        "arousal": 0.3,
+        "dominance": 0.4,
+        "emotionalIntensity": 0.25819888974716115
+      }
     },
     {
       "role": "user",
-      "content": "idk"
+      "content": "idk",
+      "pad": {
+        "pleasure": 0.5,
+        "arousal": 0.3,
+        "dominance": 0.6,
+        "emotionalIntensity": 0.25819888974716115
+      }
     },
     {
       "role": "assistant",
-      "content": "That's okay! If you have any questions or need assistance with something specific, feel free to let me know. I'm here to help!"
+      "content": "That's okay! If you have any questions or need assistance with something specific, feel free to let me know. I'm here to help!",
+      "pad": {
+        "pleasure": 0.5,
+        "arousal": 0.3,
+        "dominance": 0.4,
+        "emotionalIntensity": 0.25819888974716115
+      }
     }
   ],
   "metadata": {

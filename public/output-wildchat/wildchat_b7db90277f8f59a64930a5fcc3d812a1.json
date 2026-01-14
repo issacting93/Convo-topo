@@ -4,15 +4,33 @@
   "messages": [
     {
       "role": "user",
-      "content": "1.1.7\tDowntime is defined as any period of time when a machine is not in production that required for changeovers, setups, tool changes, routine machine maintenance, and other tasks that can cause a loss of revenue for the company. "
+      "content": "1.1.7\tDowntime is defined as any period of time when a machine is not in production that required for changeovers, setups, tool changes, routine machine maintenance, and other tasks that can cause a loss of revenue for the company. ",
+      "pad": {
+        "pleasure": 0.5,
+        "arousal": 0.3,
+        "dominance": 0.6,
+        "emotionalIntensity": 0.25819888974716115
+      }
     },
     {
       "role": "assistant",
-      "content": "During downtime, the machine is not producing goods or generating income for the company. This could be due to various reasons such as changeovers, setups, tool changes, routine machine maintenance, or any other tasks that temporarily prevent the machine from being in production. Downtime can result in a loss of revenue for the company as it impacts the overall productivity and efficiency of the manufacturing process. It is important for companies to identify and minimize downtime to optimize production and maximize profits."
+      "content": "During downtime, the machine is not producing goods or generating income for the company. This could be due to various reasons such as changeovers, setups, tool changes, routine machine maintenance, or any other tasks that temporarily prevent the machine from being in production. Downtime can result in a loss of revenue for the company as it impacts the overall productivity and efficiency of the manufacturing process. It is important for companies to identify and minimize downtime to optimize production and maximize profits.",
+      "pad": {
+        "pleasure": 0.5,
+        "arousal": 0.3,
+        "dominance": 0.4,
+        "emotionalIntensity": 0.25819888974716115
+      }
     },
     {
       "role": "assistant",
-      "content": "Downtime is a period of time when a machine is not operational and therefore not producing goods or generating revenue for the company. This can occur during changeovers, setups, tool changes, routine machine maintenance, and other tasks that require the machine to be offline. These activities are necessary for the efficient operation and maintenance of the machine, but they also result in a temporary loss of productivity. Companies aim to keep downtime to a minimum by efficiently managing these tasks and optimizing the production schedule to maximize revenue generation."
+      "content": "Downtime is a period of time when a machine is not operational and therefore not producing goods or generating revenue for the company. This can occur during changeovers, setups, tool changes, routine machine maintenance, and other tasks that require the machine to be offline. These activities are necessary for the efficient operation and maintenance of the machine, but they also result in a temporary loss of productivity. Companies aim to keep downtime to a minimum by efficiently managing these tasks and optimizing the production schedule to maximize revenue generation.",
+      "pad": {
+        "pleasure": 0.5,
+        "arousal": 0.3,
+        "dominance": 0.4,
+        "emotionalIntensity": 0.25819888974716115
+      }
     }
   ],
   "metadata": {

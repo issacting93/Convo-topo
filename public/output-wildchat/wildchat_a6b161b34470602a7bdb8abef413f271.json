@@ -66,5 +66,148 @@
     "state": "California",
     "toxic": false,
     "redacted": false
+  },
+  "classification": {
+    "abstain": false,
+    "interactionPattern": {
+      "category": "question-answer",
+      "confidence": 0.85,
+      "evidence": [
+        "How many times would you expect (on average) for a 7 to be rolled?",
+        "What is the expected value FOR THE STREET HUSTLER per game.",
+        "What is the probability that the entire system will succeed?",
+        "Therefore, you would expect a 7 to be rolled approximately 5 times on average"
+      ],
+      "rationale": "Human repeatedly asks probability/expected value questions; AI provides direct computed answers with brief explanations.",
+      "alternative": null
+    },
+    "powerDynamics": {
+      "category": "human-led",
+      "confidence": 0.75,
+      "evidence": [
+        "You decide to roll it 60 times.",
+        "The game is as follows.",
+        "What is the probability that the entire system will succeed?"
+      ],
+      "rationale": "Human sets the agenda by introducing each new problem and requesting specific calculations; AI responds.",
+      "alternative": null
+    },
+    "emotionalTone": {
+      "category": "professional",
+      "confidence": 0.7,
+      "evidence": [
+        "To calculate the expected value for the street hustler per game, we need to multiply",
+        "To find the probability that the entire system will succeed, we need to calculate"
+      ],
+      "rationale": "Task-focused, instructional math language with no relational or affective content.",
+      "alternative": null
+    },
+    "engagementStyle": {
+      "category": "reactive",
+      "confidence": 0.6,
+      "evidence": [
+        "Since each number has an equal chance of coming up",
+        "Now, we can calculate the expected value:",
+        "Since the two systems are independent, we can multiply their probabilities"
+      ],
+      "rationale": "AI primarily responds to posed questions with explanations and calculations rather than steering with questions.",
+      "alternative": "directive-iterative"
+    },
+    "knowledgeExchange": {
+      "category": "skill-sharing",
+      "confidence": 0.65,
+      "evidence": [
+        "The expected value is calculated by multiplying the probability of an event by the number of times",
+        "we need to multiply each possible outcome by its corresponding probability and sum them up."
+      ],
+      "rationale": "AI explains methods (expected value, independence) while solving, not just giving bare numeric facts.",
+      "alternative": "factual-info"
+    },
+    "conversationPurpose": {
+      "category": "information-seeking",
+      "confidence": 0.8,
+      "evidence": [
+        "How many times would you expect (on average) for a 7 to be rolled?",
+        "What is the expected value FOR THE STREET HUSTLER per game.",
+        "What is the probability that the entire system will succeed?"
+      ],
+      "rationale": "Human requests specific computed answers across multiple probability scenarios.",
+      "alternative": null
+    },
+    "topicDepth": {
+      "category": "moderate",
+      "confidence": 0.6,
+      "evidence": [
+        "You decide to roll it 60 times.",
+        "Both systems work 90% of the time.",
+        "Expected Value = (P(1, 2, 3, 4) * $10) + (P(5) * -$20) + (P(6) * -$26)"
+      ],
+      "rationale": "Multiple related quantitative problems with worked steps, but not extended exploration beyond solving.",
+      "alternative": "surface"
+    },
+    "turnTaking": {
+      "category": "assistant-dominant",
+      "confidence": 0.7,
+      "evidence": [
+        "Since each number has an equal chance of coming up, the probability of rolling a 7 on any given roll is 1/12.",
+        "To calculate the expected value for the street hustler per game, we need to multiply each possible outcome by its corresponding probability and sum them up."
+      ],
+      "rationale": "AI turns are substantially longer due to step-by-step calculations; human turns are shorter prompts.",
+      "alternative": null
+    },
+    "humanRole": {
+      "distribution": {
+        "information-seeker": 0.9,
+        "provider": 0.05,
+        "director": 0.03,
+        "collaborator": 0.02,
+        "social-expressor": 0.0,
+        "relational-peer": 0.0
+      },
+      "confidence": 0.78,
+      "evidence": [
+        {
+          "role": "information-seeker",
+          "quote": "How many times would you expect (on average) for a 7 to be rolled?"
+        },
+        {
+          "role": "information-seeker",
+          "quote": "What is the expected value FOR THE STREET HUSTLER per game."
+        }
+      ],
+      "rationale": "Human repeatedly requests computations and explanations, positioning self as seeking information.",
+      "alternative": null
+    },
+    "aiRole": {
+      "distribution": {
+        "expert-system": 0.75,
+        "learning-facilitator": 0.05,
+        "advisor": 0.05,
+        "co-constructor": 0.1,
+        "social-facilitator": 0.03,
+        "relational-peer": 0.02
+      },
+      "confidence": 0.75,
+      "evidence": [
+        {
+          "role": "expert-system",
+          "quote": "Expected number of times a 7 is rolled = (Probability of rolling a 7) * (Number of rolls) = (1/12) * 60 = 5."
+        },
+        {
+          "role": "expert-system",
+          "quote": "Therefore, the probability that the entire system will succeed is 0.81 or 81%."
+        }
+      ],
+      "rationale": "AI provides direct solutions with authoritative explanations and formulas, consistent with an expert-system role.",
+      "alternative": null
+    }
+  },
+  "classificationMetadata": {
+    "model": "gpt-5.2",
+    "provider": "openai",
+    "timestamp": "2026-01-08T17:03:38.159961",
+    "promptVersion": "2.0-social-role-theory",
+    "processingTimeMs": 16488,
+    "fewShotExamples": "yes"
   }
 }

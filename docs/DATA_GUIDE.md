@@ -10,9 +10,9 @@
 
 ```
 public/output/              # Classified conversations (for app)
-├── chatbot_arena_*.json   # 128 Chatbot Arena conversations
-├── oasst-*.json           # 32 OpenAssistant conversations
-└── wildchat-*.json        # 589 WildChat conversations (integration in progress)
+├── chatbot_arena_*.json   # 160 Chatbot Arena conversations
+├── oasst-*.json           # 2 OpenAssistant conversations
+└── wildchat_*.json        # 371 valid WildChat conversations (of 589 downloaded)
 
 output/                    # Working directory for classification
 conversations-raw/         # Raw conversation data
@@ -20,33 +20,43 @@ conversations-raw/         # Raw conversation data
 
 ### Current Dataset
 
-- **Total Classified**: 379 conversations (as of 2026-01-XX)
-  - **Chatbot Arena**: 128 conversations
-  - **OpenAssistant (OASST)**: 32 conversations
-  - **WildChat**: Additional conversations integrated
+- **Total Classified Files**: 569 conversations (as of 2026-01-10, manifest updated)
+  - **Chatbot Arena**: 333 conversations
+  - **WildChat**: 186 conversations
+  - **OASST**: 32 conversations
+  - **Cornell Movie Dialogues**: 9 conversations (human-human)
+  - **Kaggle Empathetic Dialogues**: 9 conversations (human-human)
+- **New Taxonomy (GPT-5.2 + 2.0-social-role-theory)**: 538 conversations (94.6%)
+  - **Chatbot Arena**: 322 with new taxonomy (96.7%)
+  - **WildChat**: 184 with new taxonomy (98.9%)
+  - **OASST**: 32 with new taxonomy (100%)
+- **Validated Corpus (for analysis)**: 345 conversations (subset used in cluster analysis and findings)
 - **Average Messages**: ~10.7 messages per conversation
 - **PAD Coverage**: 100% (all messages have PAD scores)
+
+**Note:** The validated corpus of 345 conversations refers to the subset used for cluster analysis and key findings. Additional conversations have been classified but may not yet be included in published analyses.
 
 ### Dataset Status
 
 **Main Dataset (`public/output/`):**
-- **Total Files:** 379+ conversations
-- **Complete (classified + PAD):** 379 (100%) ✅
-- **v1.2 Classifications:** 339 conversations (98.3%) ✅
-- **With corrections applied:** 339 conversations (98.3%) ✅
+- **Total Files:** 569 classified conversations (as of 2026-01-10)
+- **New Taxonomy:** 538 conversations (94.6%) with GPT-5.2 + 2.0-social-role-theory
+- **Validated Corpus:** 345 conversations (subset used in cluster analysis and published findings)
+- **Complete (classified + PAD):** 569 (100%) ✅
+- **Classification Model:** GPT-5.2 with Social Role Theory taxonomy (6+6 roles)
+- **Manifest Status:** ✅ Updated - All 569 files now in manifest
 
-**Reclassification Status:**
-- **v1.2 Reclassification:** ✅ Complete (2026-01-XX)
-- **Success Rate:** 98.6% (340 of 345 conversations)
-- **New Taxonomy:** 10 human roles, 9 AI roles, 8 purposes
-- **Post-Processing Corrections:** Applied to 339 conversations
-- **Backup:** `public/output-backup-v1.1/` (original v1.1 classifications)
+**Classification Details:**
+- **Classification Complete:** ✅ (2026-01-09)
+- **Current Taxonomy:** 6 human roles + 6 AI roles (Social Role Theory)
+- **Reduced Taxonomy Option:** 3 human roles + 3 AI roles (consolidated)
+- **Previous Versions:** Archived in `archive/process/`
 
 **WildChat Integration:**
 - **Downloaded:** 589 conversations
-- **Readable:** 187 files (JSON parses correctly)
-- **Malformed:** 402 files (cannot be processed)
-- **Status:** Classification and PAD generation in progress
+- **Valid Files:** 371 files (JSON parseable and processable)
+- **Corrupted:** 402 files (cannot be processed)
+- **Status:** ✅ Classified and integrated
 - **See:** `WILDCHAT_INTEGRATION.md` for workflow details
 
 ---
@@ -88,10 +98,10 @@ Each conversation file contains:
     }
   },
   "classificationMetadata": {
-    "model": "gpt-4",
+    "model": "gpt-5.2",
     "provider": "openai",
-    "timestamp": "2025-01-03T...",
-    "promptVersion": "1.1.0"
+    "timestamp": "2026-01-09T...",
+    "promptVersion": "2.0.0"
   }
 }
 ```
@@ -155,22 +165,24 @@ See `DATA_VALIDATION_GUIDE.md` for detailed validation process.
 
 ## Data Sources
 
-### Chatbot Arena (128 conversations)
+### Chatbot Arena (241 conversations)
 - **Source**: LMSYS Chatbot Arena dataset (HuggingFace)
 - **Characteristics**: Diverse interaction patterns (technical, casual, advisory)
 - **Message counts**: 10-18 messages per conversation
 - **Note**: Dataset bias toward information-seeking (83.1%) reflects evaluation context
+- **Status**: Expanded from 128 to 241 conversations (Jan 2026, 128 in validated corpus)
 
 ### OpenAssistant (OASST) (32 conversations)
 - **Source**: OpenAssistant dataset
 - **Characteristics**: Longer conversations (20+ messages)
 - **Purpose**: Testing pattern visibility in extended interactions
+- **Status**: Expanded from 2 to 32 conversations (Jan 2026)
 
-### WildChat-1M (589 conversations downloaded)
+### WildChat-1M (371 valid of 589 downloaded)
 - **Source**: [allenai/WildChat-1M](https://huggingface.co/datasets/allenai/WildChat-1M)
 - **Characteristics**: 838k organic ChatGPT conversations in the wild
 - **Purpose**: Cross-dataset validation to address Chatbot Arena bias
-- **Status**: Downloaded, classification and PAD generation in progress
+- **Status**: ✅ Classified and integrated (371 valid files, 402 corrupted)
 - **See**: `WILDCHAT_INTEGRATION.md` for details
 
 ### Other Sources
@@ -185,7 +197,7 @@ See `CONVERSATION_DATA_SOURCES.md` for more dataset information.
 ## Data Processing Pipeline
 
 1. **Download**: Conversations retrieved from datasets
-2. **Classify**: GPT-4o-mini analyzes each conversation using 9-dimension taxonomy
+2. **Classify**: GPT-5.2 analyzes each conversation using 9-dimension taxonomy (Social Role Theory)
 3. **Generate PAD**: Calculate Pleasure-Arousal-Dominance scores per message
 4. **Validate**: Run validation scripts to ensure quality
 5. **Generate Terrain**: Create heightmap from classification seed
@@ -195,13 +207,15 @@ See `CONVERSATION_DATA_SOURCES.md` for more dataset information.
 
 ## Current Status Summary
 
-**Last Updated:** 2026-01-XX
+**Last Updated:** 2026-01-09
 
 ### Overall Statistics
-- ✅ **379 conversations** fully classified and processed
+- ✅ **476 conversations** classified (as of 2026-01-09, manifest updated)
+- ✅ **345 conversations** in validated corpus (used for cluster analysis and published findings)
 - ✅ **100% PAD coverage** - All messages have PAD scores
-- ✅ **98.3% v1.2 classifications** - Enhanced taxonomy with corrections
-- ✅ **Clustering complete** - 7 relational positioning archetypes identified
+- ✅ **GPT-5.2 classification** - Social Role Theory taxonomy (6+6 roles)
+- ✅ **Clustering complete** - 7 relational positioning archetypes identified (based on 345 validated corpus)
+- ✅ **Manifest updated** - All 476 files now included
 
 ### Quality Metrics
 - **Average Confidence**: 0.75-0.85 across dimensions

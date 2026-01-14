@@ -1,0 +1,97 @@
+{
+  "date": "1767995481.3369858",
+  "filter": {
+    "model": "gpt-5.2",
+    "prompt_version": "2.0-social-role-theory"
+  },
+  "total_conversations": 538,
+  "source_breakdown": {
+    "chatbot_arena": 322,
+    "wildchat": 184,
+    "oasst": 32
+  },
+  "role_distributions": {
+    "human": {
+      "dominant": {
+        "provider": 248,
+        "director": 155,
+        "social-expressor": 8,
+        "information-seeker": 127
+      },
+      "dominant_pct": {
+        "provider": 46.09665427509294,
+        "director": 28.810408921933085,
+        "social-expressor": 1.486988847583643,
+        "information-seeker": 23.605947955390334
+      }
+    },
+    "ai": {
+      "dominant": {
+        "expert-system": 361,
+        "advisor": 107,
+        "social-facilitator": 15,
+        "learning-facilitator": 4,
+        "co-constructor": 36,
+        "relational-peer": 15
+      },
+      "dominant_pct": {
+        "expert-system": 67.1003717472119,
+        "advisor": 19.888475836431226,
+        "social-facilitator": 2.7881040892193307,
+        "learning-facilitator": 0.7434944237918215,
+        "co-constructor": 6.691449814126393,
+        "relational-peer": 2.7881040892193307
+      }
+    }
+  },
+  "role_pairs": {
+    "provider\u2192expert-system": 185,
+    "provider\u2192advisor": 54,
+    "director\u2192expert-system": 62,
+    "director\u2192advisor": 39,
+    "social-expressor\u2192social-facilitator": 3,
+    "information-seeker\u2192expert-system": 114,
+    "information-seeker\u2192advisor": 12,
+    "social-expressor\u2192learning-facilitator": 3,
+    "provider\u2192social-facilitator": 7,
+    "director\u2192co-constructor": 35,
+    "information-seeker\u2192relational-peer": 1,
+    "director\u2192relational-peer": 14,
+    "social-expressor\u2192advisor": 2,
+    "director\u2192social-facilitator": 5,
+    "provider\u2192co-constructor": 1,
+    "provider\u2192learning-facilitator": 1
+  },
+  "role_pairs_pct": {
+    "provider\u2192expert-system": 34.386617100371744,
+    "provider\u2192advisor": 10.037174721189592,
+    "director\u2192expert-system": 11.524163568773234,
+    "director\u2192advisor": 7.24907063197026,
+    "social-expressor\u2192social-facilitator": 0.5576208178438662,
+    "information-seeker\u2192expert-system": 21.189591078066915,
+    "information-seeker\u2192advisor": 2.2304832713754648,
+    "social-expressor\u2192learning-facilitator": 0.5576208178438662,
+    "provider\u2192social-facilitator": 1.3011152416356877,
+    "director\u2192co-constructor": 6.5055762081784385,
+    "information-seeker\u2192relational-peer": 0.18587360594795538,
+    "director\u2192relational-peer": 2.6022304832713754,
+    "social-expressor\u2192advisor": 0.37174721189591076,
+    "director\u2192social-facilitator": 0.929368029739777,
+    "provider\u2192co-constructor": 0.18587360594795538,
+    "provider\u2192learning-facilitator": 0.18587360594795538
+  },
+  "key_statistics": {
+    "information_seeker_facilitator": {
+      "count": 0,
+      "percentage": 0.0
+    },
+    "seeker_expert_static": {
+      "count": 114,
+      "percentage": 21.189591078066915
+    },
+    "non_seeker_expert": {
+      "count": 424,
+      "percentage": 78.81040892193309
+    }
+  }
+}

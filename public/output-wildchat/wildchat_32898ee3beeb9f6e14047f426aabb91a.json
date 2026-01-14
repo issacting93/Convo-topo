@@ -4,15 +4,33 @@
   "messages": [
     {
       "role": "assistant",
-      "content": "Hello! How can I assist you today?"
+      "content": "Hello! How can I assist you today?",
+      "pad": {
+        "pleasure": 0.5,
+        "arousal": 0.3,
+        "dominance": 0.4,
+        "emotionalIntensity": 0.25819888974716115
+      }
     },
     {
       "role": "user",
-      "content": "Methods of percussion"
+      "content": "Methods of percussion",
+      "pad": {
+        "pleasure": 0.5,
+        "arousal": 0.3,
+        "dominance": 0.6,
+        "emotionalIntensity": 0.25819888974716115
+      }
     },
     {
       "role": "assistant",
-      "content": "Percussion instruments can be played in a variety of ways, including:\n\n1. Striking: This is the most common method of playing percussion instruments, where the player strikes or hits the instrument with their hands, mallets, drumsticks, or other implements.\n\n2. Shaking: Some percussion instruments, such as maracas or tambourines, are played by shaking them to create a rhythmic sound.\n\n3. Scraping: Instruments like the guiro or cabasa are played by scraping a stick or mallet along their surface to produce a scraping sound.\n\n4. Rubbing: Some percussion instruments, like the vibraslap or flexatone, are played by rubbing a stick or mallet against a resonating surface to create a unique sound.\n\n5. Stomping: Some percussion instruments, such as the cajon or stomping tube, are played by stomping or tapping on them with the feet to create a percussive sound.\n\nThese are just a few examples of the many ways percussion instruments can be played. Each instrument has its own unique playing techniques and methods that can be explored and experimented with to create a wide range of sounds and rhythms."
+      "content": "Percussion instruments can be played in a variety of ways, including:\n\n1. Striking: This is the most common method of playing percussion instruments, where the player strikes or hits the instrument with their hands, mallets, drumsticks, or other implements.\n\n2. Shaking: Some percussion instruments, such as maracas or tambourines, are played by shaking them to create a rhythmic sound.\n\n3. Scraping: Instruments like the guiro or cabasa are played by scraping a stick or mallet along their surface to produce a scraping sound.\n\n4. Rubbing: Some percussion instruments, like the vibraslap or flexatone, are played by rubbing a stick or mallet against a resonating surface to create a unique sound.\n\n5. Stomping: Some percussion instruments, such as the cajon or stomping tube, are played by stomping or tapping on them with the feet to create a percussive sound.\n\nThese are just a few examples of the many ways percussion instruments can be played. Each instrument has its own unique playing techniques and methods that can be explored and experimented with to create a wide range of sounds and rhythms.",
+      "pad": {
+        "pleasure": 0.5,
+        "arousal": 0.3,
+        "dominance": 0.4,
+        "emotionalIntensity": 0.25819888974716115
+      }
     }
   ],
   "metadata": {

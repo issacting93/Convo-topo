@@ -102,5 +102,158 @@
     "state": "Tel Aviv",
     "toxic": false,
     "redacted": false
+  },
+  "classification": {
+    "abstain": false,
+    "interactionPattern": {
+      "category": "advisory",
+      "confidence": 0.78,
+      "evidence": [
+        "I need a text   describing me aS A host in airbnb",
+        "now  write a text about dizengof 223 tel aviv area.",
+        "please also add the amasing beaches 5 minutes walk from the appartement"
+      ],
+      "rationale": "Human requests specific written texts and iterative edits; AI delivers drafted copy meeting constraints.",
+      "alternative": "question-answer"
+    },
+    "powerDynamics": {
+      "category": "human-led",
+      "confidence": 0.84,
+      "evidence": [
+        "I need a text   describing me aS A host in airbnb",
+        "great! now take all the airbnb words out",
+        "now  write a text about dizengof 223 tel aviv area. add a recomendation"
+      ],
+      "rationale": "Human sets agenda and constraints; AI follows instructions and revises output accordingly.",
+      "alternative": null
+    },
+    "emotionalTone": {
+      "category": "professional",
+      "confidence": 0.73,
+      "evidence": [
+        "Hello! How can I assist you today?",
+        "I am dedicated to ensuring a seamless experience throughout your visit.",
+        "please also add the amasing beaches 5 minutes walk from the appartement"
+      ],
+      "rationale": "Task-focused service tone oriented to producing marketing-style descriptions; minimal affect beyond polite positivity.",
+      "alternative": "supportive"
+    },
+    "engagementStyle": {
+      "category": "directive-iterative",
+      "confidence": 0.86,
+      "evidence": [
+        "great! now take all the airbnb words out",
+        "now  write a text about dizengof 223 tel aviv area. add a recomendation",
+        "please also add the amasing beaches 5 minutes walk from the appartement"
+      ],
+      "rationale": "Human gives successive directives; AI iteratively updates the text to match requested edits/additions.",
+      "alternative": null
+    },
+    "knowledgeExchange": {
+      "category": "skill-sharing",
+      "confidence": 0.62,
+      "evidence": [
+        "I need a text   describing me aS A host in airbnb",
+        "now  write a text about dizengof 223 tel aviv area.",
+        "add a recomendation about a bar name 223"
+      ],
+      "rationale": "Exchange centers on producing usable copy (a writing task) rather than sharing personal experiences or debating opinions.",
+      "alternative": "factual-info"
+    },
+    "conversationPurpose": {
+      "category": "collaborative-refinement",
+      "confidence": 0.82,
+      "evidence": [
+        "great! now take all the airbnb words out",
+        "great! please also add the amasing beaches 5 minutes walk from the appartement",
+        "now  write a text about dizengof 223 tel aviv area. add a recomendation"
+      ],
+      "rationale": "User requests revisions and additions across turns, refining drafts toward a final description.",
+      "alternative": "problem-solving"
+    },
+    "topicDepth": {
+      "category": "moderate",
+      "confidence": 0.66,
+      "evidence": [
+        "add a recomendation about a bar name 223",
+        "a bakery name bakery with amasing bread and coffe",
+        "amasing beaches 5 minutes walk from the appartement"
+      ],
+      "rationale": "More than a single sentence request; includes multiple features (bar, bakery, beaches) but not deeply detailed.",
+      "alternative": "surface"
+    },
+    "turnTaking": {
+      "category": "assistant-dominant",
+      "confidence": 0.9,
+      "evidence": [
+        "As an Airbnb host, you can expect a warm and welcoming experience from me.",
+        "Nestled in the vibrant streets of Dizengoff 223 in Tel Aviv, this area offers a truly immersive and exciting experience.",
+        "In addition to its vibrant streets and bustling attractions, Dizengoff 223 in Tel Aviv has the added advantage of being just a short 5-minute walk away from the incredible beaches."
+      ],
+      "rationale": "AI responses are substantially longer and more content-heavy than the user's short directives.",
+      "alternative": null
+    },
+    "humanRole": {
+      "distribution": {
+        "information-seeker": 0.05,
+        "provider": 0.05,
+        "director": 0.8,
+        "collaborator": 0.1,
+        "social-expressor": 0.0,
+        "relational-peer": 0.0
+      },
+      "confidence": 0.83,
+      "evidence": [
+        {
+          "role": "director",
+          "quote": "great! now take all the airbnb words out"
+        },
+        {
+          "role": "director",
+          "quote": "now  write a text about dizengof 223 tel aviv area."
+        },
+        {
+          "role": "collaborator",
+          "quote": "great! please also add the amasing beaches 5 minutes walk from the appartement"
+        }
+      ],
+      "rationale": "Human primarily issues instructions and constraints for text generation, with minor iterative refinement that resembles collaboration.",
+      "alternative": null
+    },
+    "aiRole": {
+      "distribution": {
+        "expert-system": 0.1,
+        "learning-facilitator": 0.0,
+        "advisor": 0.55,
+        "co-constructor": 0.3,
+        "social-facilitator": 0.05,
+        "relational-peer": 0.0
+      },
+      "confidence": 0.74,
+      "evidence": [
+        {
+          "role": "advisor",
+          "quote": "As a host, you can expect a warm and welcoming experience from me."
+        },
+        {
+          "role": "co-constructor",
+          "quote": "For those seeking an unforgettable evening, look no further than the bar aptly named \"223,\""
+        },
+        {
+          "role": "social-facilitator",
+          "quote": "Hello! How can I assist you today?"
+        }
+      ],
+      "rationale": "AI produces polished, prescriptive marketing-style copy and incorporates user-specified elements across revisions (co-construction), with minimal social opening.",
+      "alternative": null
+    }
+  },
+  "classificationMetadata": {
+    "model": "gpt-5.2",
+    "provider": "openai",
+    "timestamp": "2026-01-08T16:41:39.851726",
+    "promptVersion": "2.0-social-role-theory",
+    "processingTimeMs": 21857,
+    "fewShotExamples": "yes"
   }
 }

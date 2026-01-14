@@ -1,7 +1,8 @@
 import { useMemo, useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { ScatterChart, Scatter, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Cell } from 'recharts';
-import { getCommunicationFunction, getConversationStructure } from '../utils/conversationToTerrain';
+import { getCommunicationFunction, getConversationStructure, getConversationSource, getDominantHumanRole, getDominantAiRole, mapOldRoleToNew } from '../utils/conversationToTerrain';
+import { formatRoleName } from '../utils/formatClassificationData';
 import { generate2DPathPoints } from '../utils/terrain';
 import { FilterPanel, type FilterState } from '../components/FilterPanel';
 import { Navigation } from '../components/Navigation';
@@ -14,13 +15,16 @@ interface ConversationPoint {
   name: string;
   pattern: string;
   tone: string;
+  source: 'chatbot_arena' | 'wildchat' | 'oasst'; // Source classification
   messageCount: number;
   maxEI: number;
+  humanRole?: string; // Dominant human role
+  aiRole?: string; // Dominant AI role
   pathPoints?: Array<{ x: number; y: number; role: 'user' | 'assistant' }>;
 }
 
 interface ClusterData {
-  pattern: string;
+  source: 'chatbot_arena' | 'wildchat' | 'oasst';
   points: ConversationPoint[];
   color: string;
   label: string;
@@ -38,37 +42,22 @@ const THEME = {
   accentRgba: (alpha: number) => `rgba(123, 104, 238, ${alpha})`,
 };
 
-// Cluster color mapping
-const PATTERN_COLORS: Record<string, { color: string; label: string; description: string }> = {
-  'question-answer': {
+// Source color mapping
+const SOURCE_COLORS: Record<'chatbot_arena' | 'wildchat' | 'oasst', { color: string; label: string; description: string }> = {
+  'chatbot_arena': {
     color: '#7b68ee', // Purple
-    label: 'Technical Support / Problem-Solving',
-    description: 'Functional, Directive interactions. Paths show post-frustration drift toward supportive/collaborative (users adapt when AI fails).'
+    label: 'Chatbot Arena',
+    description: 'Head-to-head comparison conversations. Users compare different AI models side-by-side in structured evaluation context.'
   },
-  'advisory': {
+  'wildchat': {
     color: '#4ade80', // Green
-    label: 'Advisory / Supportive',
-    description: 'Functional to Social, Directive interactions. Paths show moderate intensity with supportive coordination.'
+    label: 'WildChat',
+    description: 'Organic ChatGPT usage in the wild. Natural user interactions representing real-world AI conversations.'
   },
-  'storytelling': {
+  'oasst': {
     color: '#fbbf24', // Amber
-    label: 'Creative Collaboration',
-    description: 'Social, Divergent styles. Paths show smooth valleys (affiliation) and exploration.'
-  },
-  'casual-chat': {
-    color: '#ec4899', // Pink
-    label: 'Casual Social',
-    description: 'Social, Mixed alignment. Paths show low intensity and smooth coordination.'
-  },
-  'collaborative': {
-    color: '#06b6d4', // Cyan
-    label: 'Collaborative',
-    description: 'Mixed functional/social, Divergent styles. Paths show exploration and co-creation.'
-  },
-  'default': {
-    color: '#94a3b8', // Slate
-    label: 'Other Patterns',
-    description: 'Various interaction patterns.'
+    label: 'OASST',
+    description: 'OpenAssistant conversations. Instruction-following and task-oriented interactions from the OASST dataset.'
   }
 };
 
@@ -86,7 +75,8 @@ export function SpatialClusteringPage() {
     pattern: 'all',
     tone: 'all',
     intensityRange: [0, 1],
-    messageCountRange: [0, 100]
+    messageCountRange: [0, 100],
+    source: 'all'
   });
 
   // Calculate available filter values
@@ -168,6 +158,12 @@ export function SpatialClusteringPage() {
           return false;
         }
 
+        // Filter by source (chatbot_arena, wildchat, oasst)
+        if (filters.source && filters.source !== 'all') {
+          const source = getConversationSource(conv);
+          if (source !== filters.source) return false;
+        }
+
         return true;
       })
       .map(conv => {
@@ -175,6 +171,7 @@ export function SpatialClusteringPage() {
         const y = getConversationStructure(conv);
         const pattern = conv.classification?.interactionPattern?.category || 'unknown';
         const tone = conv.classification?.emotionalTone?.category || 'neutral';
+        const source = getConversationSource(conv);
 
         // Calculate max emotional intensity
         const padValues = conv.messages
@@ -194,6 +191,12 @@ export function SpatialClusteringPage() {
           pathPoints = generate2DPathPoints(preparedMessages);
         }
 
+        // Get dominant roles
+        const humanRole = getDominantHumanRole(conv);
+        const aiRole = getDominantAiRole(conv);
+        const mappedHumanRole = humanRole ? mapOldRoleToNew(humanRole.role, 'human') : undefined;
+        const mappedAiRole = aiRole ? mapOldRoleToNew(aiRole.role, 'ai') : undefined;
+
         return {
           x: x * 100, // Scale to 0-100 for better chart display
           y: y * 100,
@@ -201,30 +204,34 @@ export function SpatialClusteringPage() {
           name: conv.id,
           pattern: pattern,
           tone: tone,
+          source: source,
           messageCount: conv.messages?.length || 0,
           maxEI: maxEI,
+          humanRole: mappedHumanRole,
+          aiRole: mappedAiRole,
           pathPoints: pathPoints
         };
       });
   }, [conversations, filters]);
 
-  // Group by pattern
+  // Group by source (three separate datasets)
   const clusters = useMemo((): ClusterData[] => {
-    const grouped: Record<string, ConversationPoint[]> = {};
+    const grouped: Record<'chatbot_arena' | 'wildchat' | 'oasst', ConversationPoint[]> = {
+      chatbot_arena: [],
+      wildchat: [],
+      oasst: []
+    };
 
     conversationPoints.forEach(point => {
-      const pattern = point.pattern;
-      if (!grouped[pattern]) {
-        grouped[pattern] = [];
-      }
-      grouped[pattern].push(point);
+      grouped[point.source].push(point);
     });
 
     return Object.entries(grouped)
-      .map(([pattern, points]) => ({
-        pattern,
+      .filter(([_, points]) => points.length > 0)
+      .map(([source, points]) => ({
+        source: source as 'chatbot_arena' | 'wildchat' | 'oasst',
         points,
-        ...PATTERN_COLORS[pattern] || PATTERN_COLORS.default
+        ...SOURCE_COLORS[source as 'chatbot_arena' | 'wildchat' | 'oasst']
       }))
       .sort((a, b) => b.points.length - a.points.length); // Sort by count
   }, [conversationPoints]);
@@ -284,9 +291,16 @@ export function SpatialClusteringPage() {
           <div style={{ color: THEME.foregroundMuted, lineHeight: 1.6 }}>
             <div><strong>Pattern:</strong> {data.pattern}</div>
             <div><strong>Tone:</strong> {data.tone}</div>
+            <div><strong>Source:</strong> {SOURCE_COLORS[data.source].label}</div>
+            {data.humanRole && (
+              <div><strong>Human Role:</strong> {formatRoleName(data.humanRole, 'human')}</div>
+            )}
+            {data.aiRole && (
+              <div><strong>AI Role:</strong> {formatRoleName(data.aiRole, 'ai')}</div>
+            )}
             <div><strong>Messages:</strong> {data.messageCount}</div>
-            <div><strong>Max EI:</strong> {data.maxEI.toFixed(3)}</div>
-            <div><strong>Position:</strong> ({data.x.toFixed(1)}, {data.y.toFixed(1)})</div>
+            <div><strong>Max EI:</strong> {isNaN(data.maxEI) ? 'N/A' : data.maxEI.toFixed(3)}</div>
+            <div><strong>Position:</strong> ({isNaN(data.x) ? 'N/A' : data.x.toFixed(1)}, {isNaN(data.y) ? 'N/A' : data.y.toFixed(1)})</div>
             <div style={{ marginTop: 6, fontSize: '11px', fontStyle: 'italic', color: THEME.accent }}>
               Click to pin & select
             </div>
@@ -300,12 +314,13 @@ export function SpatialClusteringPage() {
   return (
     <div style={{
       width: '100vw',
-      height: '100vh',
+      minHeight: '100vh',
       background: '#ffffff',
       position: 'relative',
-      overflow: 'auto',
       display: 'flex',
-      flexDirection: 'column'
+      flexDirection: 'column',
+      overflowY: 'auto',
+      overflowX: 'hidden'
     }}>
       {/* Header */}
       <div style={{
@@ -339,7 +354,7 @@ export function SpatialClusteringPage() {
               fontSize: '14px',
               color: THEME.foregroundMuted
             }}>
-              Conversations plotted in relational space (X: Functional ↔ Social, Y: Aligned ↔ Divergent) - Both axes now use observable linguistic markers
+              Conversations plotted in relational space (X: Functional ↔ Social, Y: Aligned ↔ Divergent) - Color coded by source (Evaluation Context: Purple, Organic Usage: Green)
             </p>
           </div>
 
@@ -372,7 +387,7 @@ export function SpatialClusteringPage() {
         padding: '24px',
         display: 'flex',
         gap: 24,
-        overflow: 'auto'
+        minHeight: 0 // Allow flex child to shrink below content size
       }}>
         {/* Chart Area */}
         <div style={{
@@ -431,11 +446,11 @@ export function SpatialClusteringPage() {
               {/* Render each cluster */}
               {clusters.map((cluster) => (
                 <Scatter
-                  key={cluster.pattern}
+                  key={cluster.source}
                   name={cluster.label}
                   data={cluster.points}
                   fill={cluster.color}
-                  opacity={selectedCluster === null || selectedCluster === cluster.pattern ? 0.7 : 0.2}
+                  opacity={selectedCluster === null || selectedCluster === cluster.source ? 0.7 : 0.2}
                   onClick={handlePointClick}
                   cursor="pointer"
                 >
@@ -467,11 +482,13 @@ export function SpatialClusteringPage() {
             color: THEME.foreground,
             lineHeight: 1.6
           }}>
-            <strong>Figure: Conversation Clustering in Relational Space</strong>
+            <strong>Figure: Conversation Clustering by Source</strong>
             <br />
-            Viewing multiple conversations reveals spatial clustering—conversations of similar types cluster in relational space.
-            This reveals systematic patterns that extend beyond individual interactions, demonstrating how individual conversations
-            participate in broader patterns of human-AI relation.
+            Conversations are color-coded by source: <span style={{ color: SOURCE_COLORS.chatbot_arena.color, fontWeight: 600 }}>Chatbot Arena (Purple)</span> for head-to-head comparison conversations,
+            <span style={{ color: SOURCE_COLORS.wildchat.color, fontWeight: 600 }}> WildChat (Green)</span> for organic usage in the wild,
+            and <span style={{ color: SOURCE_COLORS.oasst.color, fontWeight: 600 }}>OASST (Amber)</span> for instruction-following conversations.
+            This visualization shows how conversations from different sources cluster in relational space, revealing systematic differences
+            between evaluation contexts and organic usage patterns.
           </div>
         </div>
 
@@ -525,11 +542,18 @@ export function SpatialClusteringPage() {
               </div>
               <div style={{ fontSize: '12px', color: THEME.foregroundMuted, lineHeight: 1.6 }}>
                 <div><strong>ID:</strong> {pinnedTooltip.name}</div>
+                <div><strong>Source:</strong> {SOURCE_COLORS[pinnedTooltip.source].label}</div>
                 <div><strong>Pattern:</strong> {pinnedTooltip.pattern}</div>
                 <div><strong>Tone:</strong> {pinnedTooltip.tone}</div>
+                {pinnedTooltip.humanRole && (
+                  <div><strong>Human Role:</strong> {formatRoleName(pinnedTooltip.humanRole, 'human')}</div>
+                )}
+                {pinnedTooltip.aiRole && (
+                  <div><strong>AI Role:</strong> {formatRoleName(pinnedTooltip.aiRole, 'ai')}</div>
+                )}
                 <div><strong>Messages:</strong> {pinnedTooltip.messageCount}</div>
-                <div><strong>Max EI:</strong> {pinnedTooltip.maxEI.toFixed(3)}</div>
-                <div><strong>Position:</strong> ({pinnedTooltip.x.toFixed(1)}, {pinnedTooltip.y.toFixed(1)})</div>
+                <div><strong>Max EI:</strong> {isNaN(pinnedTooltip.maxEI) ? 'N/A' : pinnedTooltip.maxEI.toFixed(3)}</div>
+                <div><strong>Position:</strong> ({isNaN(pinnedTooltip.x) ? 'N/A' : pinnedTooltip.x.toFixed(1)}, {isNaN(pinnedTooltip.y) ? 'N/A' : pinnedTooltip.y.toFixed(1)})</div>
               </div>
               <button
                 onClick={() => navigate(`/terrain/${pinnedTooltip.id}`)}
@@ -613,20 +637,20 @@ export function SpatialClusteringPage() {
               fontWeight: 600,
               color: THEME.foreground
             }}>
-              Interaction Clusters
+              Source Clusters
             </h2>
 
             <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
               {clusters.map((cluster) => (
                 <div
-                  key={cluster.pattern}
-                  onClick={() => setSelectedCluster(selectedCluster === cluster.pattern ? null : cluster.pattern)}
+                  key={cluster.source}
+                  onClick={() => setSelectedCluster(selectedCluster === cluster.source ? null : cluster.source)}
                   style={{
                     padding: '12px',
-                    background: selectedCluster === cluster.pattern
+                    background: selectedCluster === cluster.source
                       ? THEME.accentRgba(0.1)
                       : THEME.borderRgba(0.05),
-                    border: `2px solid ${selectedCluster === cluster.pattern ? cluster.color : THEME.border}`,
+                    border: `2px solid ${selectedCluster === cluster.source ? cluster.color : THEME.border}`,
                     borderRadius: 6,
                     cursor: 'pointer',
                     transition: 'all 0.2s ease'
@@ -671,6 +695,50 @@ export function SpatialClusteringPage() {
                   }}>
                     {cluster.description}
                   </div>
+
+                  {/* Role statistics for this cluster */}
+                  {cluster.points.length > 0 && (() => {
+                    const clusterHumanRoles: Record<string, number> = {};
+                    const clusterAiRoles: Record<string, number> = {};
+
+                    cluster.points.forEach(point => {
+                      if (point.humanRole) {
+                        clusterHumanRoles[point.humanRole] = (clusterHumanRoles[point.humanRole] || 0) + 1;
+                      }
+                      if (point.aiRole) {
+                        clusterAiRoles[point.aiRole] = (clusterAiRoles[point.aiRole] || 0) + 1;
+                      }
+                    });
+
+                    const topHumanRole = Object.entries(clusterHumanRoles).sort((a, b) => b[1] - a[1])[0];
+                    const topAiRole = Object.entries(clusterAiRoles).sort((a, b) => b[1] - a[1])[0];
+
+                    if (topHumanRole || topAiRole) {
+                      return (
+                        <div style={{
+                          marginTop: 8,
+                          paddingTop: 8,
+                          borderTop: `1px solid ${THEME.borderRgba(0.2)}`,
+                          fontSize: '11px',
+                          color: THEME.foregroundMuted
+                        }}>
+                          {topHumanRole && (
+                            <div style={{ marginBottom: 4 }}>
+                              <span style={{ fontWeight: 600 }}>Human: </span>
+                              {formatRoleName(topHumanRole[0], 'human')} ({topHumanRole[1]}/{cluster.points.length})
+                            </div>
+                          )}
+                          {topAiRole && (
+                            <div>
+                              <span style={{ fontWeight: 600 }}>AI: </span>
+                              {formatRoleName(topAiRole[0], 'ai')} ({topAiRole[1]}/{cluster.points.length})
+                            </div>
+                          )}
+                        </div>
+                      );
+                    }
+                    return null;
+                  })()}
                 </div>
               ))}
             </div>
@@ -724,7 +792,9 @@ export function SpatialClusteringPage() {
               <div style={{ display: 'flex', justifyContent: 'space-between' }}>
                 <span style={{ color: THEME.foregroundMuted }}>Avg Messages:</span>
                 <span style={{ fontWeight: 500, color: THEME.foreground }}>
-                  {Math.round(conversationPoints.reduce((sum, p) => sum + p.messageCount, 0) / conversationPoints.length)}
+                  {conversationPoints.length > 0
+                    ? Math.round(conversationPoints.reduce((sum, p) => sum + p.messageCount, 0) / conversationPoints.length)
+                    : 0}
                 </span>
               </div>
             </div>

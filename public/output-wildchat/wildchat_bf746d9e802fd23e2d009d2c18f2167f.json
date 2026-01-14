@@ -66,5 +66,153 @@
     "state": "Connecticut",
     "toxic": false,
     "redacted": false
+  },
+  "classification": {
+    "abstain": false,
+    "interactionPattern": {
+      "category": "question-answer",
+      "confidence": 0.85,
+      "evidence": [
+        "What does Ezekiel 45:8 and 46:16?",
+        "What does Zechariah 14:20-20 say?",
+        "Zechariah 14:20-21 (ESV) says:"
+      ],
+      "rationale": "Human asks for verse meaning/content; AI responds by quoting and explaining.",
+      "alternative": null
+    },
+    "powerDynamics": {
+      "category": "human-led",
+      "confidence": 0.75,
+      "evidence": [
+        "What does Ezekiel 45:8 and 46:16?",
+        "What does Zechariah 14:20-20 say?",
+        "I meant Zechariah 14:20-21."
+      ],
+      "rationale": "Human sets agenda by selecting passages and correcting the reference; AI follows with answers.",
+      "alternative": null
+    },
+    "emotionalTone": {
+      "category": "professional",
+      "confidence": 0.7,
+      "evidence": [
+        "There seems to be a typographical error in your question",
+        "I apologize, but there seems to be an error in your reference."
+      ],
+      "rationale": "Task-focused, polite correction and informational delivery without relational/emotional content.",
+      "alternative": "neutral"
+    },
+    "engagementStyle": {
+      "category": "reactive",
+      "confidence": 0.65,
+      "evidence": [
+        "If you are asking about the content of those specific verses in the Bible, here is their content:",
+        "Zechariah 14:20-21 (ESV) says:"
+      ],
+      "rationale": "AI primarily responds to user prompts by providing requested content and brief explanation, not driving with questions.",
+      "alternative": "directive-iterative"
+    },
+    "knowledgeExchange": {
+      "category": "factual-info",
+      "confidence": 0.75,
+      "evidence": [
+        "Ezekiel 45:8 (ESV):",
+        "Ezekiel 46:16 (ESV):",
+        "Zechariah 14:20-21 (ESV) says:"
+      ],
+      "rationale": "Exchange centers on quoting scripture text and giving an explanatory summary of the passage.",
+      "alternative": "meaning-making"
+    },
+    "conversationPurpose": {
+      "category": "information-seeking",
+      "confidence": 0.8,
+      "evidence": [
+        "What does Ezekiel 45:8 and 46:16?",
+        "What does Zechariah 14:20-21 say?"
+      ],
+      "rationale": "User requests what verses say/mean; AI provides the content and interpretation.",
+      "alternative": null
+    },
+    "topicDepth": {
+      "category": "moderate",
+      "confidence": 0.65,
+      "evidence": [
+        "This passage is part of the concluding verses of the book of Zechariah",
+        "It suggests a time of complete dedication and consecration to the Lord"
+      ],
+      "rationale": "Beyond quoting, AI adds interpretive context, but discussion remains limited to a short explanation.",
+      "alternative": "surface"
+    },
+    "turnTaking": {
+      "category": "assistant-dominant",
+      "confidence": 0.8,
+      "evidence": [
+        "This passage is part of the concluding verses of the book of Zechariah, describing a future \"day of the Lord\"",
+        "Furthermore, it mentions that everyone will have access to the sacred vessels for boiling sacrifices"
+      ],
+      "rationale": "AI responses are substantially longer than the user's brief questions/corrections.",
+      "alternative": null
+    },
+    "humanRole": {
+      "distribution": {
+        "information-seeker": 0.55,
+        "provider": 0.4,
+        "director": 0.05,
+        "collaborator": 0.0,
+        "social-expressor": 0.0,
+        "relational-peer": 0.0
+      },
+      "confidence": 0.72,
+      "evidence": [
+        {
+          "role": "information-seeker",
+          "quote": "What does Ezekiel 45:8 and 46:16?"
+        },
+        {
+          "role": "provider",
+          "quote": "What does Zechariah 14:20-20 say?"
+        },
+        {
+          "role": "director",
+          "quote": "I meant Zechariah 14:20-21."
+        }
+      ],
+      "rationale": "Human primarily requests information about scripture passages and provides a correction to the requested reference.",
+      "alternative": null
+    },
+    "aiRole": {
+      "distribution": {
+        "expert-system": 0.75,
+        "learning-facilitator": 0.0,
+        "advisor": 0.05,
+        "co-constructor": 0.0,
+        "social-facilitator": 0.0,
+        "relational-peer": 0.2
+      },
+      "confidence": 0.78,
+      "evidence": [
+        {
+          "role": "expert-system",
+          "quote": "If you are asking about the content of those specific verses in the Bible, here is their content:"
+        },
+        {
+          "role": "expert-system",
+          "quote": "Zechariah 14:20-21 (ESV) says:"
+        },
+        {
+          "role": "relational-peer",
+          "quote": "If you have any other questions or need assistance with a different verse, please let me know."
+        }
+      ],
+      "rationale": "AI provides direct verse quotations and interpretive explanation (high epistemic authority), with minor polite conversational facilitation.",
+      "alternative": null
+    }
+  },
+  "classificationMetadata": {
+    "model": "gpt-5.2",
+    "provider": "openai",
+    "timestamp": "2026-01-08T17:07:57.728773",
+    "promptVersion": "2.0-social-role-theory",
+    "processingTimeMs": 19046,
+    "fewShotExamples": "yes"
   }
 }

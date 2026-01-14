@@ -102,5 +102,151 @@
     "state": "Bogra",
     "toxic": false,
     "redacted": false
+  },
+  "classification": {
+    "abstain": false,
+    "interactionPattern": {
+      "category": "advisory",
+      "confidence": 0.72,
+      "evidence": [
+        "write 400 words review article on Coleman Cabin Tent with Instant Setup",
+        "short pros and cons",
+        "why buy in 50 words"
+      ],
+      "rationale": "Human requests marketing/review deliverables; AI provides evaluative guidance (review, pros/cons, purchase rationale).",
+      "alternative": "question-answer"
+    },
+    "powerDynamics": {
+      "category": "human-led",
+      "confidence": 0.78,
+      "evidence": [
+        "write 400 words review article",
+        "short cons",
+        "shorter cons",
+        "why buy in 50 words"
+      ],
+      "rationale": "Human sets agenda and constraints repeatedly; AI follows requested formats and lengths.",
+      "alternative": null
+    },
+    "emotionalTone": {
+      "category": "professional",
+      "confidence": 0.74,
+      "evidence": [
+        "Coleman Cabin Tent with Instant Setup is an excellent addition to any camper's gear.",
+        "Pros:",
+        "Cons:"
+      ],
+      "rationale": "Task-focused product-review language with structured headings and bullet points; minimal affective/relational content.",
+      "alternative": "neutral"
+    },
+    "engagementStyle": {
+      "category": "directive-iterative",
+      "confidence": 0.8,
+      "evidence": [
+        "short pros and cons",
+        "short cons",
+        "shorter cons",
+        "why buy in 50 words"
+      ],
+      "rationale": "Human iteratively tightens constraints; AI revises output accordingly.",
+      "alternative": null
+    },
+    "knowledgeExchange": {
+      "category": "skill-sharing",
+      "confidence": 0.56,
+      "evidence": [
+        "write 400 words review article",
+        "why buy in 50 words"
+      ],
+      "rationale": "Exchange centers on producing marketing/review copy (a writing task) rather than personal sharing; however content is also product claims.",
+      "alternative": "factual-info"
+    },
+    "conversationPurpose": {
+      "category": "problem-solving",
+      "confidence": 0.62,
+      "evidence": [
+        "short pros and cons",
+        "shorter cons",
+        "why buy in 50 words"
+      ],
+      "rationale": "Goal is to generate and refine specific text outputs under constraints (length/format).",
+      "alternative": "information-seeking"
+    },
+    "topicDepth": {
+      "category": "moderate",
+      "confidence": 0.6,
+      "evidence": [
+        "Design",
+        "Durability",
+        "Weather Resistance"
+      ],
+      "rationale": "Covers multiple product aspects but without deep technical detail or sourcing.",
+      "alternative": "surface"
+    },
+    "turnTaking": {
+      "category": "assistant-dominant",
+      "confidence": 0.86,
+      "evidence": [
+        "Coleman Cabin Tent with Instant Setup is an excellent addition to any camper's gear.",
+        "Pros:",
+        "The cons of the Coleman Cabin Tent are that it can be heavy and difficult to carry"
+      ],
+      "rationale": "AI responses are substantially longer than the human's short directives.",
+      "alternative": null
+    },
+    "humanRole": {
+      "distribution": {
+        "information-seeker": 0.05,
+        "provider": 0.1,
+        "director": 0.8,
+        "collaborator": 0.05,
+        "social-expressor": 0.0,
+        "relational-peer": 0.0
+      },
+      "confidence": 0.82,
+      "evidence": [
+        {
+          "role": "director",
+          "quote": "write 400 words review article on Coleman Cabin Tent with Instant Setup"
+        },
+        {
+          "role": "director",
+          "quote": "why buy in 50 words"
+        }
+      ],
+      "rationale": "Human primarily issues instructions specifying deliverables and constraints (length, content type).",
+      "alternative": null
+    },
+    "aiRole": {
+      "distribution": {
+        "expert-system": 0.55,
+        "learning-facilitator": 0.0,
+        "advisor": 0.4,
+        "co-constructor": 0.05,
+        "social-facilitator": 0.0,
+        "relational-peer": 0.0
+      },
+      "confidence": 0.76,
+      "evidence": [
+        {
+          "role": "expert-system",
+          "quote": "The tent has an impressive setup time of around 60 seconds"
+        },
+        {
+          "role": "advisor",
+          "quote": "We highly recommend this tent to anyone looking for a high-quality, easy-to-use tent"
+        }
+      ],
+      "rationale": "AI provides assertive product descriptions and evaluative recommendations; limited co-construction beyond complying with revisions.",
+      "alternative": null
+    }
+  },
+  "classificationMetadata": {
+    "model": "gpt-5.2",
+    "provider": "openai",
+    "timestamp": "2026-01-08T16:52:16.197096",
+    "promptVersion": "2.0-social-role-theory",
+    "processingTimeMs": 14674,
+    "fewShotExamples": "yes"
   }
 }

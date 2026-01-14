@@ -156,5 +156,146 @@
     "state": null,
     "toxic": false,
     "redacted": false
+  },
+  "classification": {
+    "abstain": false,
+    "interactionPattern": {
+      "category": "question-answer",
+      "confidence": 0.75,
+      "evidence": [
+        "\u8bf7\u5bf9\u4e0b\u5217\u53e5\u5b50\u8bed\u8a00\u8fdb\u884c\u6da6\u8272\u5904\u7406",
+        "\u8bf7\u7528\u82f1\u8bed\u7ffb\u8bd1\u4e0b\u5217\u53e5\u5b50",
+        "Dementia is a complex neurodegenerative disease that encompasses",
+        "Fig4. Abnormal glutamate reuptake in vascular dementia."
+      ],
+      "rationale": "Human repeatedly requests polishing/translation; AI provides rewritten/translated outputs in response.",
+      "alternative": "advisory"
+    },
+    "powerDynamics": {
+      "category": "human-led",
+      "confidence": 0.7,
+      "evidence": [
+        "\u8bf7\u5bf9\u4e0b\u5217\u53e5\u5b50\u8bed\u8a00\u8fdb\u884c\u6da6\u8272\u5904\u7406",
+        "\u8bf7\u7528\u82f1\u8bed\u7ffb\u8bd1\u4e0b\u5217\u53e5\u5b50"
+      ],
+      "rationale": "Human sets the agenda with repeated imperatives specifying the task; AI follows.",
+      "alternative": "balanced"
+    },
+    "emotionalTone": {
+      "category": "professional",
+      "confidence": 0.85,
+      "evidence": [
+        "Dementia is a complex neurodegenerative disease",
+        "Activation of NMDARs requires the binding",
+        "Abnormal glutamate release in vascular dementia."
+      ],
+      "rationale": "Technical academic language with no relational or affective content.",
+      "alternative": "neutral"
+    },
+    "engagementStyle": {
+      "category": "directive-iterative",
+      "confidence": 0.8,
+      "evidence": [
+        "\u8bf7\u5bf9\u4e0b\u5217\u53e5\u5b50\u8bed\u8a00\u8fdb\u884c\u6da6\u8272\u5904\u7406",
+        "\u8bf7\u7528\u82f1\u8bed\u7ffb\u8bd1\u4e0b\u5217\u53e5\u5b50"
+      ],
+      "rationale": "Human issues repeated directives for successive text segments; interaction proceeds in iterative task cycles.",
+      "alternative": "reactive"
+    },
+    "knowledgeExchange": {
+      "category": "skill-sharing",
+      "confidence": 0.65,
+      "evidence": [
+        "\u8bf7\u5bf9\u4e0b\u5217\u53e5\u5b50\u8bed\u8a00\u8fdb\u884c\u6da6\u8272\u5904\u7406",
+        "\u8bf7\u7528\u82f1\u8bed\u7ffb\u8bd1\u4e0b\u5217\u53e5\u5b50"
+      ],
+      "rationale": "Exchange centers on language editing/translation (a writing skill/service) rather than personal sharing.",
+      "alternative": "factual-info"
+    },
+    "conversationPurpose": {
+      "category": "problem-solving",
+      "confidence": 0.7,
+      "evidence": [
+        "\u8bf7\u5bf9\u4e0b\u5217\u53e5\u5b50\u8bed\u8a00\u8fdb\u884c\u6da6\u8272\u5904\u7406",
+        "\u8bf7\u7528\u82f1\u8bed\u7ffb\u8bd1\u4e0b\u5217\u53e5\u5b50"
+      ],
+      "rationale": "Purpose is to improve academic phrasing and produce English translations\u2014instrumental completion of a writing task.",
+      "alternative": "information-seeking"
+    },
+    "topicDepth": {
+      "category": "moderate",
+      "confidence": 0.6,
+      "evidence": [
+        "Activation of NMDARs leads to Na+/Ca2+ influx and K+ outflow.",
+        "mGluRs play a crucial role in mediating synaptic plasticity",
+        "triggering a calcium-dependent cascade of cell death"
+      ],
+      "rationale": "Specialized neuroscience content appears across multiple turns, but discussion is limited to rewriting/translation without deeper exploration.",
+      "alternative": "surface"
+    },
+    "turnTaking": {
+      "category": "assistant-dominant",
+      "confidence": 0.75,
+      "evidence": [
+        "Dementia is a complex neurodegenerative disease that encompasses molecular changes within neurons to their ultimate demise",
+        "Fig3. Excessive activation of glutamate receptors. In vascular dementia, the excessive release of glutamate leads to over-activation"
+      ],
+      "rationale": "AI responses are consistently longer than the human prompts, which mainly contain short instructions plus quoted text.",
+      "alternative": "balanced"
+    },
+    "humanRole": {
+      "distribution": {
+        "information-seeker": 0.05,
+        "provider": 0.15,
+        "director": 0.75,
+        "collaborator": 0.03,
+        "social-expressor": 0.01,
+        "relational-peer": 0.01
+      },
+      "confidence": 0.78,
+      "evidence": [
+        {
+          "role": "director",
+          "quote": "\u8bf7\u5bf9\u4e0b\u5217\u53e5\u5b50\u8bed\u8a00\u8fdb\u884c\u6da6\u8272\u5904\u7406"
+        },
+        {
+          "role": "director",
+          "quote": "\u8bf7\u7528\u82f1\u8bed\u7ffb\u8bd1\u4e0b\u5217\u53e5\u5b50"
+        }
+      ],
+      "rationale": "Human primarily directs the AI to perform specific deliverables (polish/translate) rather than co-developing content.",
+      "alternative": null
+    },
+    "aiRole": {
+      "distribution": {
+        "expert-system": 0.55,
+        "learning-facilitator": 0.02,
+        "advisor": 0.25,
+        "co-constructor": 0.12,
+        "social-facilitator": 0.03,
+        "relational-peer": 0.03
+      },
+      "confidence": 0.7,
+      "evidence": [
+        {
+          "role": "expert-system",
+          "quote": "Dementia is a complex neurodegenerative disease that encompasses molecular changes within neurons"
+        },
+        {
+          "role": "advisor",
+          "quote": "It is worth noting that neural changes occur up to two decades prior to the onset of cognitive symptoms"
+        }
+      ],
+      "rationale": "AI provides authoritative rewritten/translated academic text (expert linguistic output), with some framing/wording choices that resemble prescriptive editing.",
+      "alternative": "co-constructor"
+    }
+  },
+  "classificationMetadata": {
+    "model": "gpt-5.2",
+    "provider": "openai",
+    "timestamp": "2026-01-08T16:56:42.610327",
+    "promptVersion": "2.0-social-role-theory",
+    "processingTimeMs": 16307,
+    "fewShotExamples": "yes"
   }
 }

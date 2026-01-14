@@ -120,5 +120,149 @@
     "state": "Rajasthan",
     "toxic": false,
     "redacted": false
+  },
+  "classification": {
+    "abstain": false,
+    "interactionPattern": {
+      "category": "question-answer",
+      "confidence": 0.72,
+      "evidence": [
+        "Concentrated Marketing.100 words",
+        "Traditional behavior models of consumer behavior.100 words",
+        "Secondary research. Short note in 100 words",
+        "Secondary research refers to the process of gathering information and data from existing sources"
+      ],
+      "rationale": "User repeatedly prompts for short write-ups; AI responds with definitions/explanations each time.",
+      "alternative": "advisory"
+    },
+    "powerDynamics": {
+      "category": "human-led",
+      "confidence": 0.78,
+      "evidence": [
+        "Pricing Strategies.Short note in 100 words",
+        "Consumer Products. Short note in 100 words",
+        "Secondary research. Short note in 100 words"
+      ],
+      "rationale": "Human sets the agenda by selecting topics and specifying output length/format; AI follows.",
+      "alternative": null
+    },
+    "emotionalTone": {
+      "category": "professional",
+      "confidence": 0.86,
+      "evidence": [
+        "Concentrated marketing is a marketing strategy",
+        "Traditional behavior models of consumer behavior are theories and frameworks",
+        "Pricing strategies refer to the approaches and techniques used by companies"
+      ],
+      "rationale": "Academic/definition style with no relational or emotional language.",
+      "alternative": "neutral"
+    },
+    "engagementStyle": {
+      "category": "directive-iterative",
+      "confidence": 0.62,
+      "evidence": [
+        "Pricing Strategies.100 words",
+        "Pricing Strategies.Short note in 100 words",
+        "Consumer Products. Short note in 100 words"
+      ],
+      "rationale": "User issues repeated directives with constraints; interaction proceeds via successive requested outputs.",
+      "alternative": "reactive"
+    },
+    "knowledgeExchange": {
+      "category": "factual-info",
+      "confidence": 0.84,
+      "evidence": [
+        "Concentrated marketing is a marketing strategy",
+        "Traditional behavior models of consumer behavior are theories and frameworks",
+        "Secondary research refers to the process of gathering information and data from existing sources"
+      ],
+      "rationale": "AI provides definitional, descriptive information rather than personal experience or opinions.",
+      "alternative": "skill-sharing"
+    },
+    "conversationPurpose": {
+      "category": "information-seeking",
+      "confidence": 0.8,
+      "evidence": [
+        "Concentrated Marketing.100 words",
+        "Traditional behavior models of consumer behavior.100 words",
+        "Secondary research. Short note in 100 words"
+      ],
+      "rationale": "User requests concise informational notes on multiple marketing topics.",
+      "alternative": "problem-solving"
+    },
+    "topicDepth": {
+      "category": "surface",
+      "confidence": 0.74,
+      "evidence": [
+        "Pricing strategies refer to the approaches and techniques used by companies to determine the price",
+        "Consumer products are goods or services that are purchased by individuals for personal use or consumption"
+      ],
+      "rationale": "Responses are brief overviews/definitions without extended nuance or deep analysis.",
+      "alternative": "moderate"
+    },
+    "turnTaking": {
+      "category": "assistant-dominant",
+      "confidence": 0.83,
+      "evidence": [
+        "Concentrated marketing is a marketing strategy where a company focuses its resources and efforts",
+        "Pricing strategies refer to the approaches and techniques used by companies to determine the price of their products or services."
+      ],
+      "rationale": "AI turns are substantially longer than the user's short prompts.",
+      "alternative": null
+    },
+    "humanRole": {
+      "distribution": {
+        "information-seeker": 0.25,
+        "provider": 0.55,
+        "director": 0.2,
+        "collaborator": 0.0,
+        "social-expressor": 0.0,
+        "relational-peer": 0.0
+      },
+      "confidence": 0.74,
+      "evidence": [
+        {
+          "role": "provider",
+          "quote": "Traditional behavior models of consumer behavior.100 words"
+        },
+        {
+          "role": "director",
+          "quote": "Pricing Strategies.Short note in 100 words"
+        }
+      ],
+      "rationale": "Human primarily prompts the AI for content (provider/information-seeker) while also directing format/length (director).",
+      "alternative": null
+    },
+    "aiRole": {
+      "distribution": {
+        "expert-system": 0.9,
+        "learning-facilitator": 0.0,
+        "advisor": 0.05,
+        "co-constructor": 0.0,
+        "social-facilitator": 0.0,
+        "relational-peer": 0.05
+      },
+      "confidence": 0.86,
+      "evidence": [
+        {
+          "role": "expert-system",
+          "quote": "Secondary research refers to the process of gathering information and data from existing sources"
+        },
+        {
+          "role": "expert-system",
+          "quote": "Traditional behavior models of consumer behavior are theories and frameworks that explain how consumers make purchasing decisions"
+        }
+      ],
+      "rationale": "AI provides direct definitional explanations with high epistemic authority and minimal interactional scaffolding.",
+      "alternative": null
+    }
+  },
+  "classificationMetadata": {
+    "model": "gpt-5.2",
+    "provider": "openai",
+    "timestamp": "2026-01-08T16:57:00.025974",
+    "promptVersion": "2.0-social-role-theory",
+    "processingTimeMs": 16806,
+    "fewShotExamples": "yes"
   }
 }

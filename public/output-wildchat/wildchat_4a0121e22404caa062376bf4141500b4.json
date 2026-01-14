@@ -66,5 +66,142 @@
     "state": "Punjab",
     "toxic": false,
     "redacted": false
+  },
+  "classification": {
+    "abstain": false,
+    "interactionPattern": {
+      "category": "question-answer",
+      "confidence": 0.75,
+      "evidence": [
+        "what is the youtube algorithm of 2023",
+        "Hello! How can I help you today?"
+      ],
+      "rationale": "Human asks for information and AI responds with explanatory content and guidelines.",
+      "alternative": "advisory"
+    },
+    "powerDynamics": {
+      "category": "human-led",
+      "confidence": 0.7,
+      "evidence": [
+        "i want to create a youtube channel for oddly satisfying videos",
+        "what is the youtube algorithm of 2023"
+      ],
+      "rationale": "Human sets the agenda (YouTube channel + algorithm) through requests/questions; AI follows.",
+      "alternative": "balanced"
+    },
+    "emotionalTone": {
+      "category": "professional",
+      "confidence": 0.65,
+      "evidence": [
+        "Here are some steps to follow and tips to create your channel",
+        "I can provide you with some general guidelines"
+      ],
+      "rationale": "Task-focused, instructional language with minimal affect.",
+      "alternative": "supportive"
+    },
+    "engagementStyle": {
+      "category": "directive-iterative",
+      "confidence": 0.7,
+      "evidence": [
+        "Here are some steps to follow and tips to create your channel",
+        "1. Create a Google account or use an existing one:"
+      ],
+      "rationale": "AI provides step-by-step directives and recommendations rather than open exploration.",
+      "alternative": "reactive"
+    },
+    "knowledgeExchange": {
+      "category": "skill-sharing",
+      "confidence": 0.7,
+      "evidence": [
+        "Here are some steps to follow and tips to create your channel",
+        "I can provide you with some general guidelines"
+      ],
+      "rationale": "Exchange centers on how-to guidance for creating/optimizing a channel and content strategy.",
+      "alternative": "factual-info"
+    },
+    "conversationPurpose": {
+      "category": "information-seeking",
+      "confidence": 0.7,
+      "evidence": [
+        "what is the youtube algorithm of 2023",
+        "according to latest youtube algorithm of 2023"
+      ],
+      "rationale": "Primary aim is to obtain information about the 2023 algorithm and how to align content with it.",
+      "alternative": "problem-solving"
+    },
+    "topicDepth": {
+      "category": "moderate",
+      "confidence": 0.6,
+      "evidence": [
+        "The YouTube algorithm of 2023 prioritizes watch time and user engagement.",
+        "Factors like watch time, audience retention, likes, comments, and shares"
+      ],
+      "rationale": "Multiple factors and steps are listed, but discussion remains general rather than deeply technical.",
+      "alternative": "surface"
+    },
+    "turnTaking": {
+      "category": "assistant-dominant",
+      "confidence": 0.85,
+      "evidence": [
+        "Here are some steps to follow and tips to create your channel",
+        "However, based on trends and how the algorithm has evolved over the years"
+      ],
+      "rationale": "AI responses are substantially longer and more content-heavy than the human turns.",
+      "alternative": "balanced"
+    },
+    "humanRole": {
+      "distribution": {
+        "information-seeker": 0.55,
+        "provider": 0.35,
+        "director": 0.1,
+        "collaborator": 0.0,
+        "social-expressor": 0.0,
+        "relational-peer": 0.0
+      },
+      "confidence": 0.7,
+      "evidence": [
+        {
+          "role": "provider",
+          "quote": "what is the youtube algorithm of 2023"
+        },
+        {
+          "role": "director",
+          "quote": "i want to create a youtube channel for oddly satisfying videos"
+        }
+      ],
+      "rationale": "Human primarily requests information from the AI and specifies a task goal (create a channel aligned to the algorithm).",
+      "alternative": "information-seeker"
+    },
+    "aiRole": {
+      "distribution": {
+        "expert-system": 0.35,
+        "learning-facilitator": 0.0,
+        "advisor": 0.6,
+        "co-constructor": 0.05,
+        "social-facilitator": 0.0,
+        "relational-peer": 0.0
+      },
+      "confidence": 0.75,
+      "evidence": [
+        {
+          "role": "advisor",
+          "quote": "Here are some steps to follow and tips to create your channel"
+        },
+        {
+          "role": "expert-system",
+          "quote": "I can provide you with some general guidelines that are likely to remain relevant in 2023."
+        }
+      ],
+      "rationale": "AI gives prescriptive step-by-step guidance (advisor) plus generalized explanatory information about ranking factors (expert-system).",
+      "alternative": "expert-system"
+    }
+  },
+  "classificationMetadata": {
+    "model": "gpt-5.2",
+    "provider": "openai",
+    "timestamp": "2026-01-08T16:50:58.587036",
+    "promptVersion": "2.0-social-role-theory",
+    "processingTimeMs": 17781,
+    "fewShotExamples": "yes"
   }
 }

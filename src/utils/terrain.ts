@@ -63,7 +63,7 @@ export function generateHeightmap(
   let peakBoost: number;
 
   switch (metricMode) {
-    case 'uncertainty':
+    case 'uncertainty': {
       // Confidence/uncertainty visualization (inverted: low confidence = high elevation)
       const uncertainty = 1.0 - avgConfidence;
       baseHeight = 0.3 + (uncertainty * 0.5);
@@ -72,6 +72,7 @@ export function generateHeightmap(
       variation = 0.5 + (uncertainty * 0.4); // Rougher when uncertain
       peakBoost = 1.0;
       break;
+    }
 
     case 'affect':
       // Affective/Evaluative Lens: PAD model visualization
@@ -364,10 +365,36 @@ export function generate2DPathPoints(
   return points;
 }
 
-export function generatePathPoints(
-  heightmap: Float32Array,
-  size: number,
-  count: number,
+import { toVisualizationSpace } from './coordinates';
+
+export interface PathCoordinate {
+  x: number;
+  y: number;
+  index: number;
+  communicationFunction: number;
+  conversationStructure: number;
+  role: 'user' | 'assistant';
+  content: string;
+  humanRole?: string;
+  aiRole?: string;
+  roleConfidence?: number;
+  pad?: {
+    pleasure: number;
+    arousal: number;
+    dominance: number;
+    emotionalIntensity: number;
+  };
+  analysis: {
+    expressiveScore: number;
+    alignmentScore: number;
+  };
+}
+
+/**
+ * Generate 2D path coordinates based on conversation dynamics.
+ * Does NOT sample heightmap.
+ */
+export function generatePathCoordinates(
   messages: Array<{
     role: 'user' | 'assistant';
     content: string;
@@ -382,11 +409,14 @@ export function generatePathPoints(
       dominance: number;
       emotionalIntensity: number;
     };
-  }>
-): PathPoint[] {
-  const points: PathPoint[] = [];
+  }>,
+  count: number = 0 // Optional override for point count
+): PathCoordinate[] {
+  const points: PathCoordinate[] = [];
 
-  if (count === 0) return points;
+  // Use actual message count if count not specified or 0
+  const pointCount = count || messages.length;
+  if (pointCount === 0) return points;
 
   // All conversations start at the center (0.5, 0.5) - the origin point
   const startX = 0.5;
@@ -407,20 +437,20 @@ export function generatePathPoints(
 
   // Calculate conversation-level target based on classification
   // This is where the conversation "wants" to drift toward
-  const targetX = 0.1 + messages[0].communicationFunction * 0.8;
-  const targetY = 0.1 + messages[0].conversationStructure * 0.8;
+  const targetX = toVisualizationSpace(messages[0].communicationFunction);
+  const targetY = toVisualizationSpace(messages[0].conversationStructure);
 
   // Track cumulative position (starts at origin, drifts toward target)
   let currentX = startX;
   let currentY = startY;
 
-  for (let i = 0; i < count; i++) {
+  for (let i = 0; i < pointCount; i++) {
     const message = messages[i % messages.length];
     const analysis = messageAnalyses[i % messageAnalyses.length];
-    const progress = i / Math.max(count - 1, 1); // 0 to 1
+    const progress = i / Math.max(pointCount - 1, 1); // 0 to 1
 
     // Calculate drift per message
-    // Drift is influenced by:
+    // drift is influenced by:
     // 1. Message characteristics (expressive/structured scores)
     // 2. Conversation target (where classification says it should go)
     // 3. Temporal progression (more drift as conversation progresses)
@@ -453,33 +483,70 @@ export function generatePathPoints(
     currentX = Math.max(margin, Math.min(1.0 - margin, currentX));
     currentY = Math.max(margin, Math.min(1.0 - margin, currentY));
 
-    const tx = Math.floor(currentX * (size - 1));
-    const ty = Math.floor(currentY * (size - 1));
-    const height = heightmap[ty * size + tx] ?? 0;
-
-    // Calculate PAD-based height if PAD data is available
-    // emotionalIntensity drives Z-height: high = frustration peaks, low = affiliation valleys
-    const padHeight = message.pad?.emotionalIntensity;
-
     points.push({
       x: currentX,
       y: currentY,
-      height,
-      padHeight, // PAD-based height override
       index: i,
       communicationFunction: message.communicationFunction,
       conversationStructure: message.conversationStructure,
       role: message.role,
       content: message.content,
-      // Include role information for visual encoding
       humanRole: message.humanRole,
       aiRole: message.aiRole,
       roleConfidence: message.roleConfidence,
-      // Include PAD scores for affective/evaluative lens
-      pad: message.pad
+      pad: message.pad,
+      analysis // Store analysis for later use
     });
   }
   return points;
+}
+
+export function generatePathPoints(
+  heightmap: Float32Array,
+  size: number,
+  count: number,
+  messages: Array<{
+    role: 'user' | 'assistant';
+    content: string;
+    communicationFunction: number;
+    conversationStructure: number;
+    humanRole?: string;
+    aiRole?: string;
+    roleConfidence?: number;
+    pad?: {
+      pleasure: number;
+      arousal: number;
+      dominance: number;
+      emotionalIntensity: number;
+    };
+  }>
+): PathPoint[] {
+  // 1. Generate geometry
+  const coords = generatePathCoordinates(messages, count);
+
+  // 2. Sample heightmap
+  return coords.map(pt => {
+    const tx = Math.floor(pt.x * (size - 1));
+    const ty = Math.floor(pt.y * (size - 1));
+    // Safe lookup
+    const idx = ty * size + tx;
+    const height = (idx >= 0 && idx < heightmap.length) ? heightmap[idx] : 0;
+
+    // Calculate PAD-based height if PAD data is available
+    // emotionalIntensity drives Z-height: high = frustration peaks, low = affiliation valleys
+    // Fallback: If no PAD data (e.g. human/raw datasets), use expressiveScore as a proxy for intensity
+    const padHeight = pt.pad?.emotionalIntensity ?? (pt.analysis.expressiveScore * 0.8);
+
+    // Destructure to remove 'analysis' from final object if not needed in PathPoint, 
+    // or just pass it locally. PathPoint interface doesn't have 'analysis', so we exclude it.
+    const { analysis, ...rest } = pt;
+
+    return {
+      ...rest,
+      height,
+      padHeight
+    };
+  });
 }
 
 export function getHeightAt(

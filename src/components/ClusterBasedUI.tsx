@@ -5,7 +5,7 @@
  * This bridges the Cartography visualization system with GenUI's visual language generation.
  */
 
-import React, { useMemo } from 'react';
+import { useMemo } from 'react';
 import { Conversation } from '../schemas/conversationSchema';
 import { determineCluster } from '../utils/determineCluster';
 import { clusterToUserProfile, getLanguageForCluster } from '../utils/clusterToGenUI';
@@ -24,7 +24,7 @@ interface ClusterBasedUIProps {
 export function ClusterBasedUI({ conversation, className }: ClusterBasedUIProps) {
   // Determine cluster
   const cluster = useMemo(() => determineCluster(conversation), [conversation]);
-  
+
   // Generate user profile from cluster
   const userProfile = useMemo(() => {
     // Extract topics from conversation messages
@@ -113,7 +113,7 @@ function getAttributeDescription(attribute: string, value: string): string {
       'mixed': 'Both tasks and relationships',
     },
   };
-  
+
   return descriptions[attribute]?.[value] || value;
 }
 
@@ -121,7 +121,7 @@ function GenUIWrapper({ userProfile }: { userProfile: UserProfile }) {
   // Import GenUI's generation function
   // For now, we'll create a simple wrapper that shows the profile info
   // Full integration would require importing GenUI's App component
-  
+
   return (
     <div className="border border-gray-300 dark:border-gray-700 rounded-lg p-6 bg-white dark:bg-gray-900">
       <div className="mb-4">
@@ -135,7 +135,7 @@ function GenUIWrapper({ userProfile }: { userProfile: UserProfile }) {
               {getAttributeDescription('zone', userProfile.primaryZone)}
             </div>
           </div>
-          
+
           <div className="pb-2 border-b border-gray-200 dark:border-gray-700">
             <div className="font-medium text-gray-700 dark:text-gray-300 mb-1">
               How does the conversation change?
@@ -144,7 +144,7 @@ function GenUIWrapper({ userProfile }: { userProfile: UserProfile }) {
               {getAttributeDescription('movement', userProfile.movement)}
             </div>
           </div>
-          
+
           <div className="pb-2 border-b border-gray-200 dark:border-gray-700">
             <div className="font-medium text-gray-700 dark:text-gray-300 mb-1">
               How intense are the emotions?
@@ -153,7 +153,7 @@ function GenUIWrapper({ userProfile }: { userProfile: UserProfile }) {
               {getAttributeDescription('intensity', userProfile.intensity)}
             </div>
           </div>
-          
+
           <div className="pb-2 border-b border-gray-200 dark:border-gray-700">
             <div className="font-medium text-gray-700 dark:text-gray-300 mb-1">
               How many topics are covered?
@@ -162,7 +162,7 @@ function GenUIWrapper({ userProfile }: { userProfile: UserProfile }) {
               {getAttributeDescription('diversity', userProfile.diversity)}
             </div>
           </div>
-          
+
           <div>
             <div className="font-medium text-gray-700 dark:text-gray-300 mb-1">
               What's the main purpose?

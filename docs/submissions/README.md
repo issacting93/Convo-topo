@@ -30,10 +30,18 @@ Guidance for framing the DIS submission, including:
 - Transforms weakness into strength
 
 ### **[DIS_SUBMISSION.md](DIS_SUBMISSION.md)**
-Complete DIS submission documentation with detailed content.
+**Final Submission Draft (Critical Design Framing):**
+- Implements the "Conversational Cartography" narrative
+- Incorporates 82.7% trajectory finding as design insight
+- Discusses methodological circularity and dataset bias as features
 
-### **[C_AND_C_2026_SUBMISSION.md](C_AND_C_2026_SUBMISSION.md)**
-C&C 2026 pictorial submission guide with:
+
+### **[DIS_PICTORIAL_SUBMISSION.md](DIS_PICTORIAL_SUBMISSION.md)**
+**Pictorial Submission Guide (12-Page Visual Argument):**
+- Layouts and visual strategy for the DIS Pictorial track
+- Translates critical framing into visual narrative
+- Page-by-page content outline
+
 - Abstract (147 words)
 - Page structure (12 pages)
 - Selected conversation examples

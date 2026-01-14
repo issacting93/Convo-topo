@@ -1,0 +1,210 @@
+{
+  "id": "wildchat_fe9706ad4bd2ec1c8cad97c1732e9244",
+  "source": "wildchat",
+  "messages": [
+    {
+      "role": "user",
+      "content": "can you make images?",
+      "pad": {
+        "p": 0.5,
+        "a": 0.4,
+        "d": 0.5
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "As an AI text-based model, I don't have the ability to create images directly. However, I can help in generating ASCII art or describing images to the best of my ability based on text descriptions.",
+      "pad": {
+        "p": 0.6,
+        "a": 0.4,
+        "d": 0.5
+      }
+    },
+    {
+      "role": "user",
+      "content": "Give me a painting of a guy named phil",
+      "pad": {
+        "p": 0.4,
+        "a": 0.5,
+        "d": 0.4
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "I'm sorry, but as I mentioned before, I am an AI text-based model and I'm unable to create or provide visual content.",
+      "pad": {
+        "p": 0.4,
+        "a": 0.6,
+        "d": 0.3
+      }
+    },
+    {
+      "role": "user",
+      "content": "generate ASCII art of a guy named phil",
+      "pad": {
+        "p": 0.7,
+        "a": 0.5,
+        "d": 0.6
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "Certainly! Here's an ASCII art representation of a guy named Phil:\n\n```\n\u2800\u2800\u2800\u2800\u28e0\u28e4\u2834\u2812\u2809\u2819\u281b\u2837\u2824\u2824\u2824\u2824\u2824\u2824\u2824\u2824\u2824\u2836\u2836\u2836\u2824\u2824\u2824\u2824\u2836\u2836\u2826\u2824\u2824\u2824\u2824\u2824\u28c4\u2840\u2800\n\u2800\u2880\u2874\u28e0\u28ff\u280f\u2800\u2880\u2874\u283e\u283f\u28bf\u28c4\u2800\u2824\u2824\u2824\u2820\u2820\u2824\u2808\u2800\u2800\u2800\u2800\u2800\u2800\u2800\u2800\u2800\u2800\u2800\u2800\u2808\u2819\u28bf\u28ff\u285f\u2800\n\u2800\u28b8\u287f\u281f\u2801\u28b0\u284e\u28f4\u281f\u2800\u2880\u2838\u280b\u2880\u2824\u2824\u2834\u2832\u2836\u2836\u2806\u2800\u2800\u2800\u2800\u2800\u2800\u2800\u2800\u2800\u2800\u2800\u2800\u2800\u2800\u2808\u283b\u28ff\u280f\u2800\n\u2800\u2838\u284f\u2800\u2800\u2800\u28b8\u2807\u2800\u28e0\u2803\u2801\u2800\u2800\u2800\u2800\u2800\u2800\u2800\u2800\u2800\u2800\u2800\u2800\u2800\u2800\u2800\u2800\u2800\u2800\u2800\u2800\u2800\u2800\u2800\u2800\u2808\u28ff\u2801\u2800\n\u2800\u2800\u283b\u28c6\u2800\u2800\u2800\u2838\u2846\u281b\u2881\u2840\u2800\u2800\u2800\u2800\u2800\u2800\u2800\u2800\u2800\u2800\u2800\u28e0\u2834\u2812\u2802\u2880\u2840\u2800\u2800\u2800\u2800\u2800\u2800\u28fc\u2807\u2800\u2800\n\u2800\u2800\u2808\u283b\u28c4\u2800\u2800\u2800\u2818\u28c6\u28a2\u2808\u2833\u2824\u2824\u28a4\u28c4\u28c0\u28e0\u28e4\u2864\u2824\u2836\u2836\u2836\u283f\u281b\u2819\u283f\u283f\u287f\u283f\u289b\u280f\u2800\u2800\u2800\n\u2800\u2800\u2800\u2800\u283b\u28f7\u28e4\u2824\u2836\u283f\u287f\u281b\u2812\u2822\u2824\u2824\u2804\u2809\u2899\u287f\u283b\u28f6\u28f6\u2864\u2834\u2812\u280b\u2809\u2809\u2819\u283b\u28f6\u28f6\u283e\u283f\u2837\u2824\u282d\u2825\u2880\n\u2800\u2800\u2800\u2800\u28f8\u2847\u2800\u2800\u2800\u2800\u28b8\u2800\u2880\u28c0\u28e4\u28c0\u2820\u2824\u2800\u2880\u2874\u2802\u2801\u2820\u28c4\u28c0\u2848\u28b3\u2802\u2840\u2800\u2800\u2800\u28c0\u2840\u2800\u2811\u2820\u2840\n\u2800\u2800\u2800\u2800\u283b\u28ff\u2800\u2800\u2800\u2800\u2838\u283f\u281b\u283f\u283f\u2827\u2812\u2802\u281c\u28a4\u28f4\u281f\u2800\u2800\u2809\u2813\u283b\u28ff\u281b\u283f\u2886\u2800\u28e0\u281f\u2801\u2800\u2833\u2812\u280b\u2880\n\u2800\u2800\u2800\u2800\u2800\u283b\u28c6\u2800\u2800\u2800\u2800\u2800\u2800\u2800\u2800\u2800\u2800\u28c0\u28e0\u2820\u28f4\u281f\u2800\u2800\u2800\u2800\u2880\u2874\u2803\u2800\u2800\u2808\u283b\u28c6\u2800\u2880\u2840\u2800\u2830\u2807\n\u2800\u2800\u2800\u2800\u2800\u2800\u28bb\u28f7\u28e4\u28e4\u28c0\u28c0\u28e0\u28e4\u28e4\u28e4\u28e4\u28c0\u2838\u28af\u2803\u2800\u2800\u2800\u2860\u280a\u2800\u2800\u2800\u2800\u2800\u2800\u2819\u28ff\u28ff\u28fe\u28fe\u28ff\u2840\n\u2800\u2800\u2800\u2800\u2800\u2800\u28b8\u285f\u283f\u283f\u283f\u287f\u283b\u283f\u283f\u281b\u281b\u2801\u2800\u2800\u2800\u2800\u2800\u2800\u2800\u2800\u2800\u2800\u2800\u2800\u2800\u28fc\u281f\u283b\u283f\u281f\u2809\u2809\u283b\u28e7\n\u2800\u2800\u2800\u2800\u2800\u28f0\u281f\u2880\u2800\u2800\u2800\u2800\u2800\u2800\u2800\u2800\u2800\u2800\u2800\u2800\u2800\u2800\u2800\u2800\u2800\u2800\u2812\u28a0\u28f4\u28ff\u28ff\u2803\u2800\u2800\u2800\u2800\u2800\u2800\u28b9\n\u2800\u2800\u2800\u2800\u2824\u283f\u2801\u2800\u2800\u2800\u2800\u2800\u2800\u2800\u2800\u2800\u2800\u2800\u2800\u2800\u2800\u2800\u2800\u2800\u2824\u285e\u2809\u2801\u2800\u2800\u2800\u2800\u2800\u2800\u2800\u2800\u2800\u28b8\n\u2800\u2800\u2800\u2800\u2800\u2800\u2800\u2800\u2800\u2800\u2800\u2800\u2800\u2800\u2800\u2800\u2800\u2800\u2800\u2800\u2800\u2800\u2800\u2800\u2800\u2800\u2800\u2800\u2800\u2800\u2800\u2800\u2800\u2800\u2800\u2800\u28b8\n```",
+      "pad": {
+        "p": 0.8,
+        "a": 0.5,
+        "d": 0.7
+      }
+    }
+  ],
+  "metadata": {
+    "model": "gpt-3.5-turbo-0613",
+    "timestamp": "2023-12-07T14:18:26+00:00",
+    "turn_count": 3,
+    "language": "English",
+    "country": "United States",
+    "state": "North Carolina",
+    "toxic": false,
+    "redacted": false
+  },
+  "classification": {
+    "abstain": false,
+    "interactionPattern": {
+      "category": "question-answer",
+      "confidence": 0.8,
+      "evidence": [
+        "can you make images?",
+        "I'm sorry, but as I mentioned before, I am an AI text-based model and I'm unable to create or provide visual content."
+      ],
+      "rationale": "The human asks questions, and the AI provides answers, fitting the question-answer pattern.",
+      "alternative": null
+    },
+    "powerDynamics": {
+      "category": "human-led",
+      "confidence": 0.9,
+      "evidence": [
+        "can you make images?",
+        "Give me a painting of a guy named phil"
+      ],
+      "rationale": "The human initiates the topics and asks the questions, leading the conversation.",
+      "alternative": null
+    },
+    "emotionalTone": {
+      "category": "neutral",
+      "confidence": 0.9,
+      "evidence": [
+        "As an AI text-based model, I don't have the ability to create images directly.",
+        "I'm sorry, but as I mentioned before, I am an AI text-based model and I'm unable to create or provide visual content."
+      ],
+      "rationale": "The tone is factual and straightforward without strong emotional coloring.",
+      "alternative": null
+    },
+    "engagementStyle": {
+      "category": "reactive",
+      "confidence": 0.7,
+      "evidence": [
+        "I'm sorry, but as I mentioned before, I am an AI text-based model and I'm unable to create or provide visual content."
+      ],
+      "rationale": "The AI responds to the human's requests without strong direction or initiative.",
+      "alternative": "affirming"
+    },
+    "knowledgeExchange": {
+      "category": "factual-info",
+      "confidence": 0.9,
+      "evidence": [
+        "As an AI text-based model, I don't have the ability to create images directly.",
+        "However, I can help in generating ASCII art or describing images to the best of my ability based on text descriptions."
+      ],
+      "rationale": "The conversation primarily involves factual information about the AI's capabilities.",
+      "alternative": null
+    },
+    "conversationPurpose": {
+      "category": "capability-exploration",
+      "confidence": 0.8,
+      "evidence": [
+        "can you make images?",
+        "Give me a painting of a guy named phil",
+        "generate ASCII art of a guy named phil"
+      ],
+      "rationale": "The human is probing the AI's abilities related to image generation.",
+      "alternative": "information-seeking"
+    },
+    "topicDepth": {
+      "category": "surface",
+      "confidence": 0.8,
+      "evidence": [
+        "can you make images?",
+        "Give me a painting of a guy named phil"
+      ],
+      "rationale": "The topics are brief and do not delve into complex discussions.",
+      "alternative": null
+    },
+    "turnTaking": {
+      "category": "balanced",
+      "confidence": 0.7,
+      "evidence": [
+        "can you make images?",
+        "As an AI text-based model, I don't have the ability to create images directly."
+      ],
+      "rationale": "Both parties contribute to the conversation, but the human initiates more.",
+      "alternative": "user-dominant"
+    },
+    "humanRole": {
+      "distribution": {
+        "seeker": 0.5,
+        "learner": 0.2,
+        "director": 0.0,
+        "collaborator": 0.0,
+        "sharer": 0.0,
+        "challenger": 0.0,
+        "teacher-evaluator": 0.0,
+        "philosophical-explorer": 0.0,
+        "artist": 0.0,
+        "tester": 0.3
+      },
+      "confidence": 0.7,
+      "evidence": [
+        {
+          "role": "seeker",
+          "quote": "can you make images?"
+        },
+        {
+          "role": "tester",
+          "quote": "generate ASCII art of a guy named phil"
+        }
+      ],
+      "rationale": "The human seeks information about capabilities and tests the AI's ability to generate ASCII art.",
+      "alternative": "learner"
+    },
+    "aiRole": {
+      "distribution": {
+        "expert": 1.0,
+        "advisor": 0.0,
+        "facilitator": 0.0,
+        "reflector": 0.0,
+        "peer": 0.0,
+        "affiliative": 0.0,
+        "learner": 0.0,
+        "creative-partner": 0.0,
+        "unable-to-engage": 0.0
+      },
+      "confidence": 0.6,
+      "evidence": [
+        {
+          "role": "expert",
+          "quote": "As an AI text-based model, I don't have the ability to create images directly."
+        }
+      ],
+      "rationale": "The AI provides factual information about its capabilities, fitting the expert role.",
+      "alternative": "advisor"
+    }
+  },
+  "classificationMetadata": {
+    "model": "gpt-4o-mini",
+    "provider": "openai",
+    "timestamp": "2026-01-06T12:11:50.233954",
+    "promptVersion": "1.2.0",
+    "processingTimeMs": 24354,
+    "correctionsApplied": true
+  }
+}

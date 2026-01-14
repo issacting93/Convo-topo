@@ -174,5 +174,159 @@
     "state": "Kyiv City",
     "toxic": false,
     "redacted": false
+  },
+  "classification": {
+    "abstain": false,
+    "interactionPattern": {
+      "category": "question-answer",
+      "confidence": 0.78,
+      "evidence": [
+        "why is validation rules not working?",
+        "onBlur did not help",
+        "I want to keep my method onChange",
+        "still doesnt help"
+      ],
+      "rationale": "Human repeatedly asks for diagnosis/fix; AI responds with explanations and suggested changes.",
+      "alternative": "advisory"
+    },
+    "powerDynamics": {
+      "category": "human-led",
+      "confidence": 0.74,
+      "evidence": [
+        "why is validation rules not working?",
+        "I want to keep my method onChange",
+        "maybe I am doing something wrong?"
+      ],
+      "rationale": "Human sets the agenda (validation not working) and constrains solution space (keep onChange).",
+      "alternative": "balanced"
+    },
+    "emotionalTone": {
+      "category": "professional",
+      "confidence": 0.72,
+      "evidence": [
+        "why is validation rules not working?",
+        "try changing the mode of the useForm hook to 'onSubmit'.",
+        "Make sure that the name property in the Controller component matches"
+      ],
+      "rationale": "Technical, task-focused language with minimal affect; troubleshooting style.",
+      "alternative": "neutral"
+    },
+    "engagementStyle": {
+      "category": "directive-iterative",
+      "confidence": 0.76,
+      "evidence": [
+        "you can try changing the mode of the useForm hook to 'onSubmit'.",
+        "you can add the 'onChange' and 'onBlur' event handlers",
+        "Make sure that the name property in the Controller component matches"
+      ],
+      "rationale": "AI proposes stepwise fixes; human tests and reports back, prompting further directives.",
+      "alternative": "questioning"
+    },
+    "knowledgeExchange": {
+      "category": "skill-sharing",
+      "confidence": 0.8,
+      "evidence": [
+        "To set the onSubmit mode, pass the mode option to the useForm() function:",
+        "add the 'onChange' and 'onBlur' event handlers to the Input component",
+        "try logging the errors object in the onSubmit function"
+      ],
+      "rationale": "Exchange centers on implementation guidance and debugging techniques for react-hook-form.",
+      "alternative": "factual-info"
+    },
+    "conversationPurpose": {
+      "category": "problem-solving",
+      "confidence": 0.83,
+      "evidence": [
+        "why is validation rules not working?",
+        "I can submit the form without the fields being filled in",
+        "still doesnt help"
+      ],
+      "rationale": "Goal is to fix a malfunctioning validation behavior in code.",
+      "alternative": "information-seeking"
+    },
+    "topicDepth": {
+      "category": "moderate",
+      "confidence": 0.7,
+      "evidence": [
+        "my Controller that container the form:",
+        "my form container:",
+        "within the formState errors is always empty object"
+      ],
+      "rationale": "Substantial code context and multiple debugging attempts, but not exhaustive deep dive into library internals.",
+      "alternative": "deep"
+    },
+    "turnTaking": {
+      "category": "assistant-dominant",
+      "confidence": 0.86,
+      "evidence": [
+        "My input component:",
+        "In that case, you can try changing the mode of the useForm hook to 'onSubmit'.",
+        "If the errors object inside formState is always an empty object"
+      ],
+      "rationale": "AI responses are consistently longer and more elaborated than human follow-ups.",
+      "alternative": "balanced"
+    },
+    "humanRole": {
+      "distribution": {
+        "information-seeker": 0.7,
+        "provider": 0.15,
+        "director": 0.1,
+        "collaborator": 0.05,
+        "social-expressor": 0.0,
+        "relational-peer": 0.0
+      },
+      "confidence": 0.74,
+      "evidence": [
+        {
+          "role": "information-seeker",
+          "quote": "why is validation rules not working?"
+        },
+        {
+          "role": "director",
+          "quote": "I want to keep my method onChange"
+        },
+        {
+          "role": "provider",
+          "quote": "errors are empty. maybe I am doing something wrong?"
+        }
+      ],
+      "rationale": "Primarily seeks technical help, provides diagnostic feedback from tests, and sets a constraint on acceptable solutions.",
+      "alternative": null
+    },
+    "aiRole": {
+      "distribution": {
+        "expert-system": 0.35,
+        "learning-facilitator": 0.05,
+        "advisor": 0.55,
+        "co-constructor": 0.05,
+        "social-facilitator": 0.0,
+        "relational-peer": 0.0
+      },
+      "confidence": 0.77,
+      "evidence": [
+        {
+          "role": "advisor",
+          "quote": "you can try changing the mode of the useForm hook to 'onSubmit'."
+        },
+        {
+          "role": "advisor",
+          "quote": "you can add the 'onChange' and 'onBlur' event handlers to the Input component"
+        },
+        {
+          "role": "expert-system",
+          "quote": "If the errors object is empty, it means that the form validation is not working correctly."
+        }
+      ],
+      "rationale": "AI mainly prescribes actions and code changes (advisor), with some explanatory diagnosis (expert-system).",
+      "alternative": null
+    }
+  },
+  "classificationMetadata": {
+    "model": "gpt-5.2",
+    "provider": "openai",
+    "timestamp": "2026-01-08T17:10:27.382202",
+    "promptVersion": "2.0-social-role-theory",
+    "processingTimeMs": 16683,
+    "fewShotExamples": "yes"
   }
 }

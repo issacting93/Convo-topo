@@ -797,15 +797,26 @@ def main():
     """Main analysis function."""
     script_dir = Path(__file__).parent
     project_root = script_dir.parent
-    data_dir = project_root / 'public' / 'output'
-    
-    if not data_dir.exists():
-        print(f"Error: Data directory not found: {data_dir}")
-        return
-    
-    print("Loading conversations...")
-    conversations = load_conversations(data_dir)
-    print(f"Loaded {len(conversations)} conversations")
+
+    # Load from all data directories
+    data_dirs = [
+        project_root / 'public' / 'output',           # Chatbot Arena
+        project_root / 'public' / 'output-wildchat',  # WildChat
+        project_root / 'public' / 'output-oasst',     # OASST
+        project_root / 'public' / 'output-human-human' # Human-Human
+    ]
+
+    print("Loading conversations from all sources...")
+    conversations = []
+    for data_dir in data_dirs:
+        if data_dir.exists():
+            dir_convs = load_conversations(data_dir)
+            conversations.extend(dir_convs)
+            print(f"  Loaded {len(dir_convs)} from {data_dir.name}")
+        else:
+            print(f"  Skipping {data_dir.name} (not found)")
+
+    print(f"\nTotal loaded: {len(conversations)} conversations")
     
     print("\nExtracting trajectory features...")
     features_list, feature_vectors = extract_features(conversations)

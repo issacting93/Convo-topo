@@ -1,0 +1,786 @@
+[
+  {
+    "id": "conv-20",
+    "messages": [
+      {
+        "role": "user",
+        "content": "hi ! i work as a gourmet cook ."
+      },
+      {
+        "role": "assistant",
+        "content": "cool , i'm currently studying and enjoy going fishing in my spare time ."
+      }
+    ],
+    "classification": {
+      "abstain": false,
+      "interactionPattern": {
+        "category": "casual-chat",
+        "confidence": 0.9,
+        "evidence": [
+          "hi ! i work as a gourmet cook ."
+        ],
+        "rationale": "The conversation is informal and consists of personal sharing without a specific instrumental goal.",
+        "alternative": null
+      },
+      "powerDynamics": {
+        "category": "balanced",
+        "confidence": 0.8,
+        "evidence": [
+          "hi ! i work as a gourmet cook ."
+        ],
+        "rationale": "Both parties contribute equally to the conversation with personal sharing.",
+        "alternative": null
+      },
+      "emotionalTone": {
+        "category": "neutral",
+        "confidence": 0.7,
+        "evidence": [
+          "cool , i'm currently studying"
+        ],
+        "rationale": "The tone is neutral with simple acknowledgment and sharing.",
+        "alternative": null
+      },
+      "engagementStyle": {
+        "category": "affirming",
+        "confidence": 0.8,
+        "evidence": [
+          "cool , i'm currently studying"
+        ],
+        "rationale": "The AI affirms the human's statement by responding with 'cool' and sharing its own activities.",
+        "alternative": null
+      },
+      "knowledgeExchange": {
+        "category": "personal-sharing",
+        "confidence": 0.9,
+        "evidence": [
+          "hi ! i work as a gourmet cook"
+        ],
+        "rationale": "The exchange involves sharing personal information about work and hobbies.",
+        "alternative": null
+      },
+      "conversationPurpose": {
+        "category": "relationship-building",
+        "confidence": 0.9,
+        "evidence": [
+          "hi ! i work as a gourmet cook ."
+        ],
+        "rationale": "The purpose is to build rapport through sharing personal information.",
+        "alternative": null
+      },
+      "topicDepth": {
+        "category": "surface",
+        "confidence": 0.8,
+        "evidence": [
+          "hi ! i work as a gourmet cook"
+        ],
+        "rationale": "The conversation remains at a surface level with brief personal sharing.",
+        "alternative": null
+      },
+      "turnTaking": {
+        "category": "balanced",
+        "confidence": 0.8,
+        "evidence": [
+          "hi ! i work as a gourmet cook ."
+        ],
+        "rationale": "Both participants contribute equally with one turn each.",
+        "alternative": null
+      },
+      "humanRole": {
+        "distribution": {
+          "information-seeker": 0.0,
+          "provider": 0.0,
+          "director": 0.0,
+          "collaborator": 0.0,
+          "social-expressor": 0.6,
+          "relational-peer": 0.4
+        },
+        "confidence": 0.8,
+        "evidence": [
+          {
+            "role": "social-expressor",
+            "quote": "i work as a gourmet cook ."
+          }
+        ],
+        "rationale": "The human shares personal information, indicating a role as a social expressor.",
+        "alternative": null
+      },
+      "aiRole": {
+        "distribution": {
+          "expert-system": 0.0,
+          "learning-facilitator": 0.0,
+          "advisor": 0.0,
+          "co-constructor": 0.0,
+          "social-facilitator": 0.8,
+          "relational-peer": 0.2
+        },
+        "confidence": 0.8,
+        "evidence": [
+          {
+            "role": "social-facilitator",
+            "quote": "cool , i'm currently studying and enjoy going fishing in my spare time ."
+          }
+        ],
+        "rationale": "The AI maintains conversation flow with personal sharing, indicating a social facilitator role.",
+        "alternative": null
+      }
+    },
+    "classificationMetadata": {
+      "model": "gpt-4o",
+      "provider": "openai",
+      "timestamp": "2026-01-08T15:19:16.204048",
+      "promptVersion": "2.0-social-role-theory",
+      "processingTimeMs": 10201,
+      "fewShotExamples": "yes"
+    }
+  },
+  {
+    "id": "conv-21",
+    "messages": [
+      {
+        "role": "user",
+        "content": "hi ! i work as a gourmet cook ."
+      },
+      {
+        "role": "assistant",
+        "content": "i don't like carrots . i throw them away ."
+      },
+      {
+        "role": "user",
+        "content": "really . but , i can sing pitch perfect ."
+      },
+      {
+        "role": "assistant",
+        "content": "yes , been married for about twelve years , two kids . . how about yourself ?"
+      }
+    ],
+    "classification": {
+      "abstain": false,
+      "interactionPattern": {
+        "category": "casual-chat",
+        "confidence": 0.9,
+        "evidence": [
+          "hi ! i work as a gourmet cook ."
+        ],
+        "rationale": "The conversation involves personal sharing and casual topics without a specific instrumental goal.",
+        "alternative": null
+      },
+      "powerDynamics": {
+        "category": "balanced",
+        "confidence": 0.8,
+        "evidence": [
+          "hi ! i work as a gourmet cook .",
+          "i don't like carrots ."
+        ],
+        "rationale": "Both parties contribute equally to the conversation with personal information.",
+        "alternative": null
+      },
+      "emotionalTone": {
+        "category": "neutral",
+        "confidence": 0.7,
+        "evidence": [
+          "i don't like carrots ."
+        ],
+        "rationale": "The conversation lacks strong emotional coloring, focusing on neutral personal facts.",
+        "alternative": null
+      },
+      "engagementStyle": {
+        "category": "personal-sharing",
+        "confidence": 0.8,
+        "evidence": [
+          "hi ! i work as a gourmet cook .",
+          "i don't like carrots ."
+        ],
+        "rationale": "Participants share personal information about their preferences and life.",
+        "alternative": null
+      },
+      "knowledgeExchange": {
+        "category": "personal-sharing",
+        "confidence": 0.9,
+        "evidence": [
+          "hi ! i work as a gourmet cook ."
+        ],
+        "rationale": "The exchange is centered around personal experiences and preferences.",
+        "alternative": null
+      },
+      "conversationPurpose": {
+        "category": "relationship-building",
+        "confidence": 0.9,
+        "evidence": [
+          "how about yourself ?"
+        ],
+        "rationale": "The conversation aims to build rapport and connection through personal sharing.",
+        "alternative": null
+      },
+      "topicDepth": {
+        "category": "surface",
+        "confidence": 0.8,
+        "evidence": [
+          "hi ! i work as a gourmet cook ."
+        ],
+        "rationale": "The topics discussed are introductory and not explored in depth.",
+        "alternative": null
+      },
+      "turnTaking": {
+        "category": "balanced",
+        "confidence": 0.8,
+        "evidence": [
+          "hi ! i work as a gourmet cook ."
+        ],
+        "rationale": "Both participants take turns sharing personal information.",
+        "alternative": null
+      },
+      "humanRole": {
+        "distribution": {
+          "information-seeker": 0.0,
+          "provider": 0.0,
+          "director": 0.0,
+          "collaborator": 0.0,
+          "social-expressor": 0.6,
+          "relational-peer": 0.4
+        },
+        "confidence": 0.8,
+        "evidence": [
+          {
+            "role": "social-expressor",
+            "quote": "hi ! i work as a gourmet cook ."
+          }
+        ],
+        "rationale": "The human shares personal information and engages in casual conversation, focusing on social expression.",
+        "alternative": null
+      },
+      "aiRole": {
+        "distribution": {
+          "expert-system": 0.0,
+          "learning-facilitator": 0.0,
+          "advisor": 0.0,
+          "co-constructor": 0.0,
+          "social-facilitator": 0.6,
+          "relational-peer": 0.4
+        },
+        "confidence": 0.8,
+        "evidence": [
+          {
+            "role": "social-facilitator",
+            "quote": "yes , been married for about twelve years , two kids . . how about yourself ?"
+          }
+        ],
+        "rationale": "The AI maintains conversation flow through personal sharing and questions, focusing on social facilitation.",
+        "alternative": null
+      }
+    },
+    "classificationMetadata": {
+      "model": "gpt-4o",
+      "provider": "openai",
+      "timestamp": "2026-01-08T15:19:30.200501",
+      "promptVersion": "2.0-social-role-theory",
+      "processingTimeMs": 13391,
+      "fewShotExamples": "yes"
+    }
+  },
+  {
+    "id": "conv-22",
+    "messages": [
+      {
+        "role": "user",
+        "content": "hi ! i work as a gourmet cook ."
+      },
+      {
+        "role": "assistant",
+        "content": "i don't like carrots . i throw them away ."
+      },
+      {
+        "role": "user",
+        "content": "really . but , i can sing pitch perfect ."
+      },
+      {
+        "role": "assistant",
+        "content": "i also cook , and i ride my bike to work ."
+      },
+      {
+        "role": "user",
+        "content": "great ! i had won an award for spelling bee ."
+      },
+      {
+        "role": "assistant",
+        "content": "i like reading . my favorite genre are crime novels . how bout you ?"
+      }
+    ],
+    "classification": {
+      "abstain": false,
+      "interactionPattern": {
+        "category": "casual-chat",
+        "confidence": 0.9,
+        "evidence": [
+          "hi ! i work as a gourmet cook ."
+        ],
+        "rationale": "The conversation consists of personal sharing and casual exchanges without a specific instrumental goal.",
+        "alternative": null
+      },
+      "powerDynamics": {
+        "category": "balanced",
+        "confidence": 0.8,
+        "evidence": [
+          "hi ! i work as a gourmet cook .",
+          "i also cook , and i ride my bike to work ."
+        ],
+        "rationale": "Both participants share personal information and contribute equally to the conversation's direction.",
+        "alternative": null
+      },
+      "emotionalTone": {
+        "category": "neutral",
+        "confidence": 0.7,
+        "evidence": [
+          "i don't like carrots . i throw them away ."
+        ],
+        "rationale": "The tone is neutral with factual statements and personal preferences without strong emotional coloring.",
+        "alternative": "supportive"
+      },
+      "engagementStyle": {
+        "category": "affirming",
+        "confidence": 0.8,
+        "evidence": [
+          "great ! i had won an award for spelling bee ."
+        ],
+        "rationale": "The human affirms the AI's statement and shares additional personal achievements.",
+        "alternative": null
+      },
+      "knowledgeExchange": {
+        "category": "personal-sharing",
+        "confidence": 0.9,
+        "evidence": [
+          "hi ! i work as a gourmet cook .",
+          "i also cook , and i ride my bike to work ."
+        ],
+        "rationale": "The conversation involves sharing personal experiences and preferences.",
+        "alternative": null
+      },
+      "conversationPurpose": {
+        "category": "relationship-building",
+        "confidence": 0.9,
+        "evidence": [
+          "how bout you ?"
+        ],
+        "rationale": "The AI asks about the human's interests, indicating an intent to build rapport.",
+        "alternative": null
+      },
+      "topicDepth": {
+        "category": "surface",
+        "confidence": 0.8,
+        "evidence": [
+          "hi ! i work as a gourmet cook ."
+        ],
+        "rationale": "The topics discussed are introductory and not explored in depth.",
+        "alternative": null
+      },
+      "turnTaking": {
+        "category": "balanced",
+        "confidence": 0.8,
+        "evidence": [
+          "hi ! i work as a gourmet cook .",
+          "i also cook , and i ride my bike to work ."
+        ],
+        "rationale": "Both participants take turns sharing information and asking questions.",
+        "alternative": null
+      },
+      "humanRole": {
+        "distribution": {
+          "information-seeker": 0.0,
+          "provider": 0.0,
+          "director": 0.0,
+          "collaborator": 0.0,
+          "social-expressor": 0.6,
+          "relational-peer": 0.4
+        },
+        "confidence": 0.8,
+        "evidence": [
+          {
+            "role": "social-expressor",
+            "quote": "hi ! i work as a gourmet cook ."
+          }
+        ],
+        "rationale": "The human shares personal information and engages in casual conversation.",
+        "alternative": null
+      },
+      "aiRole": {
+        "distribution": {
+          "expert-system": 0.0,
+          "learning-facilitator": 0.0,
+          "advisor": 0.0,
+          "co-constructor": 0.0,
+          "social-facilitator": 0.8,
+          "relational-peer": 0.2
+        },
+        "confidence": 0.8,
+        "evidence": [
+          {
+            "role": "social-facilitator",
+            "quote": "how bout you ?"
+          }
+        ],
+        "rationale": "The AI maintains conversation flow and engages in social bonding through casual questions.",
+        "alternative": null
+      }
+    },
+    "classificationMetadata": {
+      "model": "gpt-4o",
+      "provider": "openai",
+      "timestamp": "2026-01-08T15:19:44.105473",
+      "promptVersion": "2.0-social-role-theory",
+      "processingTimeMs": 13303,
+      "fewShotExamples": "yes"
+    }
+  },
+  {
+    "id": "conv-23",
+    "messages": [
+      {
+        "role": "user",
+        "content": "hi ! i work as a gourmet cook ."
+      },
+      {
+        "role": "assistant",
+        "content": "i don't like carrots . i throw them away ."
+      },
+      {
+        "role": "user",
+        "content": "really . but , i can sing pitch perfect ."
+      },
+      {
+        "role": "assistant",
+        "content": "i also cook , and i ride my bike to work ."
+      },
+      {
+        "role": "user",
+        "content": "great ! i had won an award for spelling bee ."
+      },
+      {
+        "role": "assistant",
+        "content": "my contacts can see through what you are trying to sell me ."
+      },
+      {
+        "role": "user",
+        "content": "okay but i was published in new yorker once"
+      },
+      {
+        "role": "assistant",
+        "content": "hey , how are you doing ?"
+      }
+    ],
+    "classification": {
+      "abstain": false,
+      "interactionPattern": {
+        "category": "casual-chat",
+        "confidence": 0.9,
+        "evidence": [
+          "hi ! i work as a gourmet cook .",
+          "really . but , i can sing pitch perfect ."
+        ],
+        "rationale": "The conversation consists of personal sharing and casual exchanges without a specific instrumental goal.",
+        "alternative": null
+      },
+      "powerDynamics": {
+        "category": "balanced",
+        "confidence": 0.8,
+        "evidence": [
+          "hi ! i work as a gourmet cook .",
+          "i also cook , and i ride my bike to work ."
+        ],
+        "rationale": "Both parties contribute equally to the conversation with personal sharing.",
+        "alternative": null
+      },
+      "emotionalTone": {
+        "category": "neutral",
+        "confidence": 0.7,
+        "evidence": [
+          "i don't like carrots . i throw them away .",
+          "my contacts can see through what you are trying to sell me ."
+        ],
+        "rationale": "The tone is neither strongly positive nor negative, with some neutral statements.",
+        "alternative": null
+      },
+      "engagementStyle": {
+        "category": "affirming",
+        "confidence": 0.8,
+        "evidence": [
+          "great ! i had won an award for spelling bee ."
+        ],
+        "rationale": "The human affirms and adds to the conversation with positive statements.",
+        "alternative": null
+      },
+      "knowledgeExchange": {
+        "category": "personal-sharing",
+        "confidence": 0.9,
+        "evidence": [
+          "hi ! i work as a gourmet cook .",
+          "i also cook , and i ride my bike to work ."
+        ],
+        "rationale": "Both parties share personal information and experiences.",
+        "alternative": null
+      },
+      "conversationPurpose": {
+        "category": "relationship-building",
+        "confidence": 0.9,
+        "evidence": [
+          "hey , how are you doing ?"
+        ],
+        "rationale": "The conversation focuses on social bonding and personal sharing.",
+        "alternative": null
+      },
+      "topicDepth": {
+        "category": "surface",
+        "confidence": 0.8,
+        "evidence": [
+          "hi ! i work as a gourmet cook .",
+          "i also cook , and i ride my bike to work ."
+        ],
+        "rationale": "The topics are introduced briefly without deep exploration.",
+        "alternative": null
+      },
+      "turnTaking": {
+        "category": "balanced",
+        "confidence": 0.8,
+        "evidence": [
+          "hi ! i work as a gourmet cook .",
+          "i also cook , and i ride my bike to work ."
+        ],
+        "rationale": "Both participants take turns contributing to the conversation.",
+        "alternative": null
+      },
+      "humanRole": {
+        "distribution": {
+          "information-seeker": 0.0,
+          "provider": 0.0,
+          "director": 0.0,
+          "collaborator": 0.0,
+          "social-expressor": 0.6,
+          "relational-peer": 0.4
+        },
+        "confidence": 0.8,
+        "evidence": [
+          {
+            "role": "social-expressor",
+            "quote": "hi ! i work as a gourmet cook ."
+          }
+        ],
+        "rationale": "The human shares personal achievements and experiences, contributing to social expression.",
+        "alternative": null
+      },
+      "aiRole": {
+        "distribution": {
+          "expert-system": 0.0,
+          "learning-facilitator": 0.0,
+          "advisor": 0.0,
+          "co-constructor": 0.0,
+          "social-facilitator": 0.7,
+          "relational-peer": 0.3
+        },
+        "confidence": 0.8,
+        "evidence": [
+          {
+            "role": "social-facilitator",
+            "quote": "hey , how are you doing ?"
+          }
+        ],
+        "rationale": "The AI maintains conversation flow through casual questions and personal sharing.",
+        "alternative": null
+      }
+    },
+    "classificationMetadata": {
+      "model": "gpt-4o",
+      "provider": "openai",
+      "timestamp": "2026-01-08T15:19:59.155010",
+      "promptVersion": "2.0-social-role-theory",
+      "processingTimeMs": 14445,
+      "fewShotExamples": "yes"
+    }
+  },
+  {
+    "id": "conv-26",
+    "messages": [
+      {
+        "role": "user",
+        "content": "hi ! i work as a gourmet cook ."
+      },
+      {
+        "role": "assistant",
+        "content": "i don't like carrots . i throw them away ."
+      },
+      {
+        "role": "user",
+        "content": "really . but , i can sing pitch perfect ."
+      },
+      {
+        "role": "assistant",
+        "content": "i also cook , and i ride my bike to work ."
+      },
+      {
+        "role": "user",
+        "content": "great ! i had won an award for spelling bee ."
+      },
+      {
+        "role": "assistant",
+        "content": "my contacts can see through what you are trying to sell me ."
+      },
+      {
+        "role": "user",
+        "content": "okay but i was published in new yorker once"
+      },
+      {
+        "role": "assistant",
+        "content": "you better not make any spelling mistakes ."
+      },
+      {
+        "role": "user",
+        "content": "i have not . i can cook any word you want me to"
+      },
+      {
+        "role": "assistant",
+        "content": "what is your ethnicity ? i'm white , and my hair is brown ."
+      },
+      {
+        "role": "user",
+        "content": "i'm asian and have no hair ."
+      },
+      {
+        "role": "assistant",
+        "content": "i love hairless asians . do you like carrots ?"
+      },
+      {
+        "role": "user",
+        "content": "i love carrots . i eat carrots like a horse ."
+      },
+      {
+        "role": "assistant",
+        "content": "hello"
+      }
+    ],
+    "classification": {
+      "abstain": false,
+      "interactionPattern": {
+        "category": "casual-chat",
+        "confidence": 0.9,
+        "evidence": [
+          "hi ! i work as a gourmet cook .",
+          "i love carrots . i eat carrots like a horse ."
+        ],
+        "rationale": "The conversation consists of personal sharing and casual exchanges without a specific instrumental goal.",
+        "alternative": null
+      },
+      "powerDynamics": {
+        "category": "balanced",
+        "confidence": 0.8,
+        "evidence": [
+          "hi ! i work as a gourmet cook .",
+          "i love carrots . i eat carrots like a horse ."
+        ],
+        "rationale": "Both parties contribute equally to the conversation, sharing personal information.",
+        "alternative": null
+      },
+      "emotionalTone": {
+        "category": "neutral",
+        "confidence": 0.7,
+        "evidence": [
+          "i don't like carrots .",
+          "hello"
+        ],
+        "rationale": "The conversation lacks strong emotional coloring, with neutral statements being predominant.",
+        "alternative": "playful"
+      },
+      "engagementStyle": {
+        "category": "affirming",
+        "confidence": 0.7,
+        "evidence": [
+          "great ! i had won an award for spelling bee ."
+        ],
+        "rationale": "The human affirms their achievements, and the AI responds with personal sharing.",
+        "alternative": "reactive"
+      },
+      "knowledgeExchange": {
+        "category": "personal-sharing",
+        "confidence": 0.9,
+        "evidence": [
+          "hi ! i work as a gourmet cook .",
+          "i'm asian and have no hair ."
+        ],
+        "rationale": "The conversation involves sharing personal details and experiences.",
+        "alternative": null
+      },
+      "conversationPurpose": {
+        "category": "relationship-building",
+        "confidence": 0.9,
+        "evidence": [
+          "what is your ethnicity ?",
+          "i love hairless asians ."
+        ],
+        "rationale": "The conversation focuses on social bonding and sharing personal information.",
+        "alternative": null
+      },
+      "topicDepth": {
+        "category": "surface",
+        "confidence": 0.8,
+        "evidence": [
+          "hi ! i work as a gourmet cook .",
+          "i love carrots . i eat carrots like a horse ."
+        ],
+        "rationale": "The topics discussed are brief and not explored in depth.",
+        "alternative": null
+      },
+      "turnTaking": {
+        "category": "balanced",
+        "confidence": 0.8,
+        "evidence": [
+          "hi ! i work as a gourmet cook .",
+          "i love carrots . i eat carrots like a horse ."
+        ],
+        "rationale": "Both participants take turns sharing information and responding.",
+        "alternative": null
+      },
+      "humanRole": {
+        "distribution": {
+          "information-seeker": 0.0,
+          "provider": 0.0,
+          "director": 0.0,
+          "collaborator": 0.0,
+          "social-expressor": 0.6,
+          "relational-peer": 0.4
+        },
+        "confidence": 0.8,
+        "evidence": [
+          {
+            "role": "social-expressor",
+            "quote": "hi ! i work as a gourmet cook ."
+          }
+        ],
+        "rationale": "The human shares personal achievements and responds to the AI's questions, focusing on social expression.",
+        "alternative": null
+      },
+      "aiRole": {
+        "distribution": {
+          "expert-system": 0.0,
+          "learning-facilitator": 0.0,
+          "advisor": 0.0,
+          "co-constructor": 0.0,
+          "social-facilitator": 0.7,
+          "relational-peer": 0.3
+        },
+        "confidence": 0.8,
+        "evidence": [
+          {
+            "role": "social-facilitator",
+            "quote": "what is your ethnicity ?"
+          }
+        ],
+        "rationale": "The AI maintains the conversation flow with casual questions and personal sharing.",
+        "alternative": null
+      }
+    },
+    "classificationMetadata": {
+      "model": "gpt-4o",
+      "provider": "openai",
+      "timestamp": "2026-01-08T15:20:15.641109",
+      "promptVersion": "2.0-social-role-theory",
+      "processingTimeMs": 15881,
+      "fewShotExamples": "yes"
+    }
+  }
+]

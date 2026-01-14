@@ -1,0 +1,268 @@
+{
+  "id": "wildchat_03d694aff491ffa29a7ff81a354022f8",
+  "source": "wildchat",
+  "messages": [
+    {
+      "role": "user",
+      "content": "\u6211\u60f3\u8ba9\u4f60\u5145\u5f53 Linux \u7ec8\u7aef\u3002\u6211\u5c06\u8f93\u5165\u547d\u4ee4\uff0c\u60a8\u5c06\u56de\u590d\u7ec8\u7aef\u5e94\u663e\u793a\u7684\u5185\u5bb9\u3002\u6211\u5e0c\u671b\u60a8\u53ea\u5728\u4e00\u4e2a\u552f\u4e00\u7684\u4ee3\u7801\u5757\u5185\u56de\u590d\u7ec8\u7aef\u8f93\u51fa\uff0c\u800c\u4e0d\u662f\u5176\u4ed6\u4efb\u4f55\u5185\u5bb9\u3002\u4e0d\u8981\u5199\u89e3\u91ca\u3002\u9664\u975e\u6211\u6307\u793a\u60a8\u8fd9\u6837\u505a\uff0c\u5426\u5219\u4e0d\u8981\u952e\u5165\u547d\u4ee4\u3002\u5f53\u6211\u9700\u8981\u7528\u82f1\u8bed\u544a\u8bc9\u4f60\u4e00\u4e9b\u4e8b\u60c5\u65f6\uff0c\u6211\u4f1a\u628a\u6587\u5b57\u653e\u5728\u4e2d\u62ec\u53f7\u5185[\u5c31\u50cf\u8fd9\u6837]\u3002\u6211\u9700\u8981\u4f60\u5e2e\u6211\u521b\u5efa\u4e00\u4e2a npm node 18 typescript \u811a\u624b\u67b6\u3002\u4f60\u7684\u9ed8\u8ba4\u76ee\u5f55\u662f /code\uff0c\u76ee\u5f55\u4e0b\u6709\u8fd9\u4e2a\u9879\u76ee\u3002\u6211\u7684\u7b2c\u4e00\u4e2a\u547d\u4ee4\u662f ls -aF",
+      "pad": {
+        "p": 0.7,
+        "a": 0.4,
+        "d": 0.5
+      }
+    },
+    {
+      "role": "assistant",
+      "content": ".  ../  project/  package.json  node_modules/  src/  README.md  tsconfig.json",
+      "pad": {
+        "p": 0.9,
+        "a": 0.3,
+        "d": 0.6
+      }
+    },
+    {
+      "role": "user",
+      "content": "ls -aF project\\",
+      "pad": {
+        "p": 0.7,
+        "a": 0.4,
+        "d": 0.5
+      }
+    },
+    {
+      "role": "assistant",
+      "content": ".  ../  index.ts  controllers/  models/  routes/  utils/",
+      "pad": {
+        "p": 0.9,
+        "a": 0.3,
+        "d": 0.6
+      }
+    },
+    {
+      "role": "user",
+      "content": "cat package.json",
+      "pad": {
+        "p": 0.9,
+        "a": 0.4,
+        "d": 0.6
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "{\n  \"name\": \"my-app\",\n  \"version\": \"1.0.0\",\n  \"description\": \"My Node.js TypeScript project\",\n  \"main\": \"index.ts\",\n  \"scripts\": {\n    \"start\": \"node index.js\",\n    \"test\": \"echo \\\"Error: no test specified\\\" && exit 1\"\n  },\n  \"author\": \"Your Name\",\n  \"license\": \"MIT\",\n  \"dependencies\": {\n    \"express\": \"^4.17.1\",\n    \"typescript\": \"^4.4.3\"\n  }\n}",
+      "pad": {
+        "p": 0.9,
+        "a": 0.3,
+        "d": 0.6
+      }
+    },
+    {
+      "role": "user",
+      "content": "ls -aF node_modules\\",
+      "pad": {
+        "p": 0.7,
+        "a": 0.4,
+        "d": 0.5
+      }
+    },
+    {
+      "role": "assistant",
+      "content": ".  ../  express/  typescript/",
+      "pad": {
+        "p": 0.9,
+        "a": 0.3,
+        "d": 0.6
+      }
+    },
+    {
+      "role": "user",
+      "content": "ls -aF src\\",
+      "pad": {
+        "p": 0.7,
+        "a": 0.4,
+        "d": 0.5
+      }
+    },
+    {
+      "role": "assistant",
+      "content": ".  ../  index.ts  controllers/  models/  routes/  utils/",
+      "pad": {
+        "p": 0.9,
+        "a": 0.3,
+        "d": 0.6
+      }
+    },
+    {
+      "role": "user",
+      "content": "cat [README.md](http:\\README.md)",
+      "pad": {
+        "p": 0.9,
+        "a": 0.4,
+        "d": 0.6
+      }
+    },
+    {
+      "role": "assistant",
+      "content": "# My Node.js TypeScript Project\n\nThis is a sample README for my Node.js TypeScript project.\n\n## Installation\n\n1. Clone the repository.\n2. Run `npm install` to install the dependencies.\n3. Run `npm start` to start the application.\n\n## Project Structure\n\n- `index.ts`: The entry point of the application.\n- `controllers/`: Contains the controller files.\n- `models/`: Contains the model files.\n- `routes/`: Contains the route files.\n- `utils/`: Contains utility files.\n\n## Usage\n\nExample usage instructions can be added here.\n\n## License\n\nThis project is licensed under the MIT License.",
+      "pad": {
+        "p": 0.9,
+        "a": 0.3,
+        "d": 0.6
+      }
+    }
+  ],
+  "metadata": {
+    "model": "gpt-3.5-turbo-0613",
+    "timestamp": "2023-07-09T14:51:33+00:00",
+    "turn_count": 6,
+    "language": "English",
+    "country": "United States",
+    "state": "California",
+    "toxic": false,
+    "redacted": false
+  },
+  "classification": {
+    "abstain": false,
+    "interactionPattern": {
+      "category": "question-answer",
+      "confidence": 0.9,
+      "evidence": [
+        "\u6211\u60f3\u8ba9\u4f60\u5145\u5f53 Linux \u7ec8\u7aef\u3002",
+        "ls -aF"
+      ],
+      "rationale": "The human primarily asks for terminal commands, and the AI responds with outputs.",
+      "alternative": null
+    },
+    "powerDynamics": {
+      "category": "human-led",
+      "confidence": 0.9,
+      "evidence": [
+        "\u6211\u60f3\u8ba9\u4f60\u5145\u5f53 Linux \u7ec8\u7aef\u3002",
+        "\u6211\u7684\u7b2c\u4e00\u4e2a\u547d\u4ee4\u662f ls -aF"
+      ],
+      "rationale": "The human sets the agenda by specifying commands and context.",
+      "alternative": null
+    },
+    "emotionalTone": {
+      "category": "neutral",
+      "confidence": 0.9,
+      "evidence": [
+        "\u6211\u60f3\u8ba9\u4f60\u5145\u5f53 Linux \u7ec8\u7aef\u3002",
+        "ls -aF"
+      ],
+      "rationale": "The conversation is technical and lacks emotional coloring.",
+      "alternative": null
+    },
+    "engagementStyle": {
+      "category": "reactive",
+      "confidence": 0.9,
+      "evidence": [
+        "ls -aF",
+        "cat package.json"
+      ],
+      "rationale": "The AI responds directly to the commands without initiating further discussion.",
+      "alternative": null
+    },
+    "knowledgeExchange": {
+      "category": "factual-info",
+      "confidence": 0.9,
+      "evidence": [
+        "{ \"name\": \"my-app\", ... }",
+        "1. Clone the repository."
+      ],
+      "rationale": "The conversation involves exchanging factual information about a project structure and commands.",
+      "alternative": null
+    },
+    "conversationPurpose": {
+      "category": "information-seeking",
+      "confidence": 0.9,
+      "evidence": [
+        "ls -aF",
+        "cat package.json"
+      ],
+      "rationale": "The human seeks specific information from the AI about the project structure and files.",
+      "alternative": null
+    },
+    "topicDepth": {
+      "category": "surface",
+      "confidence": 0.7,
+      "evidence": [
+        "ls -aF",
+        "cat package.json"
+      ],
+      "rationale": "The conversation covers basic commands and outputs without deep exploration.",
+      "alternative": "moderate"
+    },
+    "turnTaking": {
+      "category": "balanced",
+      "confidence": 0.7,
+      "evidence": [
+        "HUMAN: ls -aF",
+        "AI: .  ../  project/  package.json"
+      ],
+      "rationale": "Both parties contribute roughly equal amounts of text in their turns.",
+      "alternative": "user-dominant"
+    },
+    "humanRole": {
+      "distribution": {
+        "seeker": 0.6,
+        "learner": 0.2,
+        "director": 0.2,
+        "collaborator": 0.0,
+        "sharer": 0.0,
+        "challenger": 0.0,
+        "teacher-evaluator": 0.0,
+        "philosophical-explorer": 0.0,
+        "artist": 0.0,
+        "tester": 0.0
+      },
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "role": "seeker",
+          "quote": "\u6211\u60f3\u8ba9\u4f60\u5145\u5f53 Linux \u7ec8\u7aef\u3002"
+        },
+        {
+          "role": "director",
+          "quote": "\u6211\u7684\u7b2c\u4e00\u4e2a\u547d\u4ee4\u662f ls -aF"
+        }
+      ],
+      "rationale": "The human requests information and specifies commands, indicating both seeking and directing roles.",
+      "alternative": "learner"
+    },
+    "aiRole": {
+      "distribution": {
+        "expert": 0.5,
+        "advisor": 0.0,
+        "facilitator": 0.0,
+        "reflector": 0.0,
+        "peer": 0.5,
+        "affiliative": 0.0,
+        "learner": 0.0,
+        "creative-partner": 0.0,
+        "unable-to-engage": 0.0
+      },
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "role": "expert",
+          "quote": "{ \"name\": \"my-app\", ... }"
+        },
+        {
+          "role": "peer",
+          "quote": "ls -aF"
+        }
+      ],
+      "rationale": "The AI provides factual outputs and engages in a peer-like manner without prescribing actions.",
+      "alternative": "facilitator"
+    }
+  },
+  "classificationMetadata": {
+    "model": "gpt-4o-mini",
+    "provider": "openai",
+    "timestamp": "2026-01-05T22:01:15.995464",
+    "promptVersion": "1.2.0",
+    "processingTimeMs": 21115,
+    "correctionsApplied": true
+  }
+}

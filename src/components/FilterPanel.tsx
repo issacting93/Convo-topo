@@ -5,6 +5,7 @@ export interface FilterState {
   tone: string; // 'all' | specific tone
   intensityRange: [number, number]; // [min, max]
   messageCountRange: [number, number]; // [min, max]
+  source?: string; // 'all' | 'chatbot_arena' | 'wildchat' | 'oasst'
 }
 
 interface FilterPanelProps {
@@ -51,14 +52,16 @@ export function FilterPanel({
     filters.intensityRange[0] !== 0 ||
     filters.intensityRange[1] !== 1 ||
     filters.messageCountRange[0] !== messageCountRange[0] ||
-    filters.messageCountRange[1] !== messageCountRange[1];
+    filters.messageCountRange[1] !== messageCountRange[1] ||
+    (filters.source && filters.source !== 'all');
 
   const resetFilters = () => {
     onFiltersChange({
       pattern: 'all',
       tone: 'all',
       intensityRange: [0, 1], // Reset to full range 0-1
-      messageCountRange: messageCountRange // Keep using provided full range
+      messageCountRange: messageCountRange, // Keep using provided full range
+      source: 'all'
     });
   };
 
@@ -237,6 +240,38 @@ export function FilterPanel({
             />
           </div>
         </div>
+
+        {/* Source Filter */}
+        <div>
+          <label style={{
+            display: 'block',
+            fontSize: '13px',
+            fontWeight: 500,
+            color: THEME.foreground,
+            marginBottom: 8
+          }}>
+            Source
+          </label>
+          <select
+            value={filters.source || 'all'}
+            onChange={(e) => updateFilter('source', e.target.value)}
+            style={{
+              width: '100%',
+              padding: '6px 10px',
+              background: THEME.card,
+              border: `1px solid ${THEME.border}`,
+              borderRadius: 4,
+              color: THEME.foreground,
+              fontSize: '13px',
+              cursor: 'pointer'
+            }}
+          >
+            <option value="all">All Sources</option>
+            <option value="chatbot_arena">Chatbot Arena</option>
+            <option value="wildchat">WildChat</option>
+            <option value="oasst">OASST</option>
+          </select>
+        </div>
       </div>
 
       {/* Filter Summary */}
@@ -259,6 +294,14 @@ export function FilterPanel({
             )}
             {(filters.messageCountRange[0] !== messageCountRange[0] || filters.messageCountRange[1] !== messageCountRange[1]) && (
               <li>Messages: {filters.messageCountRange[0]} - {filters.messageCountRange[1]}</li>
+            )}
+            {filters.source && filters.source !== 'all' && (
+              <li>Source: {
+                filters.source === 'chatbot_arena' ? 'Chatbot Arena' :
+                filters.source === 'wildchat' ? 'WildChat' :
+                filters.source === 'oasst' ? 'OASST' :
+                filters.source
+              }</li>
             )}
           </ul>
         </div>

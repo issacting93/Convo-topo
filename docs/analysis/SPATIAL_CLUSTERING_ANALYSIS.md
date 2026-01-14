@@ -1,4 +1,4 @@
-# Spatial Clustering Analysis: What It Tells Us
+	# Spatial Clustering Analysis: What It Tells Us
 
 Spatial clustering refers to how conversations with similar interaction patterns occupy similar regions in the 3D terrain space. This reveals systematic relationships between conversation types and relational positioning.
 

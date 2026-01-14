@@ -1,7 +1,7 @@
 import { useState, useMemo } from 'react';
 import type { TerrainParams } from '../utils/terrain';
 import { generate2DPathPoints } from '../utils/terrain';
-import { getCommunicationFunction, getConversationStructure, type ClassifiedConversation, getDominantHumanRole, getDominantAiRole } from '../utils/conversationToTerrain';
+import { getCommunicationFunction, getConversationStructure, type ClassifiedConversation, getDominantHumanRole, getDominantAiRole, mapOldRoleToNew } from '../utils/conversationToTerrain';
 import { getPadChangeColorHex } from '../utils/padPathColors';
 import { Navigation } from './Navigation';
 // Removed unused import: getClassificationStats
@@ -311,14 +311,28 @@ export function CompactGridView({ terrains, conversations, onSelectTerrain }: Co
 
         if (selectedHumanRole !== 'all') {
           const dominantHumanRole = getDominantHumanRole(conversation);
-          if (!dominantHumanRole || dominantHumanRole.role !== selectedHumanRole) {
+          if (!dominantHumanRole) {
+            return false;
+          }
+          // Map old role names to new taxonomy for comparison
+          const mappedRole = mapOldRoleToNew(dominantHumanRole.role, 'human');
+          const mappedSelected = mapOldRoleToNew(selectedHumanRole, 'human');
+          // Check both original and mapped names for backward compatibility
+          if (dominantHumanRole.role !== selectedHumanRole && mappedRole !== mappedSelected && mappedRole !== selectedHumanRole) {
             return false;
           }
         }
 
         if (selectedAiRole !== 'all') {
           const dominantAiRole = getDominantAiRole(conversation);
-          if (!dominantAiRole || dominantAiRole.role !== selectedAiRole) {
+          if (!dominantAiRole) {
+            return false;
+          }
+          // Map old role names to new taxonomy for comparison
+          const mappedRole = mapOldRoleToNew(dominantAiRole.role, 'ai');
+          const mappedSelected = mapOldRoleToNew(selectedAiRole, 'ai');
+          // Check both original and mapped names for backward compatibility
+          if (dominantAiRole.role !== selectedAiRole && mappedRole !== mappedSelected && mappedRole !== selectedAiRole) {
             return false;
           }
         }
@@ -397,12 +411,17 @@ export function CompactGridView({ terrains, conversations, onSelectTerrain }: Co
             }}
           >
             <option value="all">All Human Roles</option>
-            <option value="seeker">Seeker</option>
-            <option value="learner">Learner</option>
+            <option value="information-seeker">Information-Seeker</option>
+            <option value="provider">Provider</option>
             <option value="director">Director</option>
             <option value="collaborator">Collaborator</option>
-            <option value="sharer">Sharer</option>
-            <option value="challenger">Challenger</option>
+            <option value="social-expressor">Social-Expressor</option>
+            <option value="relational-peer">Relational-Peer</option>
+            {/* Backward compatibility */}
+            <option value="seeker">Seeker (Old)</option>
+            <option value="learner">Learner (Old)</option>
+            <option value="sharer">Sharer (Old)</option>
+            <option value="challenger">Challenger (Old)</option>
           </select>
 
           <select
@@ -418,12 +437,18 @@ export function CompactGridView({ terrains, conversations, onSelectTerrain }: Co
             }}
           >
             <option value="all">All AI Roles</option>
-            <option value="expert">Expert</option>
+            <option value="expert-system">Expert-System</option>
+            <option value="learning-facilitator">Learning-Facilitator</option>
             <option value="advisor">Advisor</option>
-            <option value="facilitator">Facilitator</option>
-            <option value="reflector">Reflector</option>
-            <option value="peer">Peer</option>
-            <option value="affiliative">Affiliative</option>
+            <option value="co-constructor">Co-Constructor</option>
+            <option value="social-facilitator">Social-Facilitator</option>
+            <option value="relational-peer">Relational-Peer</option>
+            {/* Backward compatibility */}
+            <option value="expert">Expert (Old)</option>
+            <option value="facilitator">Facilitator (Old)</option>
+            <option value="reflector">Reflector (Old)</option>
+            <option value="peer">Peer (Old)</option>
+            <option value="affiliative">Affiliative (Old)</option>
           </select>
 
           <select

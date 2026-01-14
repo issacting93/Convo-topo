@@ -4,15 +4,33 @@
   "messages": [
     {
       "role": "assistant",
-      "content": "As an AI language model, I do not have personal experiences or senses, so I do not know directly whether something smells great or not. However, if you provide descriptions or context about a specific situation or scent, I can try to help you understand if it is typically considered enjoyable or pleasant."
+      "content": "As an AI language model, I do not have personal experiences or senses, so I do not know directly whether something smells great or not. However, if you provide descriptions or context about a specific situation or scent, I can try to help you understand if it is typically considered enjoyable or pleasant.",
+      "pad": {
+        "pleasure": 1,
+        "arousal": 0.4,
+        "dominance": 0.4,
+        "emotionalIntensity": 0.6000000000000001
+      }
     },
     {
       "role": "user",
-      "content": "I want to introduce myself"
+      "content": "I want to introduce myself",
+      "pad": {
+        "pleasure": 0.8,
+        "arousal": 0.5,
+        "dominance": 0.6,
+        "emotionalIntensity": 0.36514837167011077
+      }
     },
     {
       "role": "assistant",
-      "content": "Of course! I can help you with that. Here's an example of how you can introduce yourself:\n\n\"Hi, my name is [Your Name]. I'm [age] years old and I live in [city, country]. I enjoy [hobbies or interests]. I'm [occupation or student major], and I'm passionate about [something you're passionate about or interested in]. I'm looking forward to engaging in interesting conversations and getting to know everyone here.\"\n\nFeel free to personalize and adapt this introduction to reflect your own unique qualities and experiences."
+      "content": "Of course! I can help you with that. Here's an example of how you can introduce yourself:\n\n\"Hi, my name is [Your Name]. I'm [age] years old and I live in [city, country]. I enjoy [hobbies or interests]. I'm [occupation or student major], and I'm passionate about [something you're passionate about or interested in]. I'm looking forward to engaging in interesting conversations and getting to know everyone here.\"\n\nFeel free to personalize and adapt this introduction to reflect your own unique qualities and experiences.",
+      "pad": {
+        "pleasure": 0.8,
+        "arousal": 0.5,
+        "dominance": 0.4,
+        "emotionalIntensity": 0.36514837167011077
+      }
     }
   ],
   "metadata": {
@@ -24,5 +42,134 @@
     "state": null,
     "toxic": false,
     "redacted": false
+  },
+  "classification": {
+    "abstain": false,
+    "interactionPattern": {
+      "category": "advisory",
+      "confidence": 0.65,
+      "evidence": [
+        "I want to introduce myself",
+        "Here's an example of how you can introduce yourself:"
+      ],
+      "rationale": "Human states a goal; AI responds with a suggested template and guidance, functioning as advice rather than pure Q&A.",
+      "alternative": "question-answer"
+    },
+    "powerDynamics": {
+      "category": "human-led",
+      "confidence": 0.6,
+      "evidence": [
+        "I want to introduce myself",
+        "I can help you with that."
+      ],
+      "rationale": "Human sets the agenda/topic; AI follows by providing assistance.",
+      "alternative": "balanced"
+    },
+    "emotionalTone": {
+      "category": "supportive",
+      "confidence": 0.65,
+      "evidence": [
+        "Of course! I can help you with that.",
+        "Feel free to personalize and adapt this introduction"
+      ],
+      "rationale": "AI uses encouraging, enabling language oriented toward helping the user succeed.",
+      "alternative": "professional"
+    },
+    "engagementStyle": {
+      "category": "directive-iterative",
+      "confidence": 0.6,
+      "evidence": [
+        "Here's an example of how you can introduce yourself:",
+        "Feel free to personalize and adapt this introduction"
+      ],
+      "rationale": "AI provides a concrete template and instructs the user to adapt it (lightly directive guidance).",
+      "alternative": "affirming"
+    },
+    "knowledgeExchange": {
+      "category": "skill-sharing",
+      "confidence": 0.7,
+      "evidence": [
+        "Here's an example of how you can introduce yourself:",
+        "Feel free to personalize and adapt this introduction"
+      ],
+      "rationale": "AI shares a method/template for performing a communicative task (self-introduction).",
+      "alternative": "factual-info"
+    },
+    "conversationPurpose": {
+      "category": "problem-solving",
+      "confidence": 0.6,
+      "evidence": [
+        "I want to introduce myself",
+        "I can help you with that."
+      ],
+      "rationale": "The exchange centers on accomplishing a practical task (crafting an introduction).",
+      "alternative": "collaborative-refinement"
+    },
+    "topicDepth": {
+      "category": "surface",
+      "confidence": 0.75,
+      "evidence": [
+        "I want to introduce myself",
+        "Here's an example of how you can introduce yourself:"
+      ],
+      "rationale": "The conversation stays at a generic/template level without deeper personalization or extended exploration.",
+      "alternative": null
+    },
+    "turnTaking": {
+      "category": "assistant-dominant",
+      "confidence": 0.8,
+      "evidence": [
+        "I want to introduce myself",
+        "Feel free to personalize and adapt this introduction to reflect your own unique qualities and experiences."
+      ],
+      "rationale": "AI's response is substantially longer and more content-heavy than the human's brief request.",
+      "alternative": null
+    },
+    "humanRole": {
+      "distribution": {
+        "information-seeker": 0.25,
+        "provider": 0.55,
+        "director": 0.15,
+        "collaborator": 0.03,
+        "social-expressor": 0.02,
+        "relational-peer": 0
+      },
+      "confidence": 0.6,
+      "evidence": [
+        {
+          "role": "director",
+          "quote": "I want to introduce myself"
+        }
+      ],
+      "rationale": "Human expresses a desired action/outcome, implicitly requesting the AI's help; this is primarily seeking assistance from the AI with slight directive framing.",
+      "alternative": "information-seeker"
+    },
+    "aiRole": {
+      "distribution": {
+        "expert-system": 0.15,
+        "learning-facilitator": 0.05,
+        "advisor": 0.7,
+        "co-constructor": 0.05,
+        "social-facilitator": 0.03,
+        "relational-peer": 0.02
+      },
+      "confidence": 0.7,
+      "evidence": [
+        {
+          "role": "advisor",
+          "quote": "Here's an example of how you can introduce yourself:"
+        }
+      ],
+      "rationale": "AI provides prescriptive guidance via an example template and encourages adaptation, consistent with an instrumental advising role.",
+      "alternative": "expert-system"
+    }
+  },
+  "classificationMetadata": {
+    "model": "gpt-5.2",
+    "provider": "openai",
+    "timestamp": "2026-01-08T16:57:44.255081",
+    "promptVersion": "2.0-social-role-theory",
+    "processingTimeMs": 16073,
+    "fewShotExamples": "yes"
   }
 }

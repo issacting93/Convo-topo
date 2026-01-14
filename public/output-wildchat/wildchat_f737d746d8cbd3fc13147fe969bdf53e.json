@@ -4,19 +4,43 @@
   "messages": [
     {
       "role": "user",
-      "content": "C"
+      "content": "C",
+      "pad": {
+        "pleasure": 0.5,
+        "arousal": 0.3,
+        "dominance": 0.6,
+        "emotionalIntensity": 0.25819888974716115
+      }
     },
     {
       "role": "assistant",
-      "content": "It looks like your message may have been cut off. Could you provide more details or let me know how I can assist you?"
+      "content": "It looks like your message may have been cut off. Could you provide more details or let me know how I can assist you?",
+      "pad": {
+        "pleasure": 0.5,
+        "arousal": 0.3,
+        "dominance": 0.4,
+        "emotionalIntensity": 0.25819888974716115
+      }
     },
     {
       "role": "user",
-      "content": "Traduci in inglese: \"Leggi i colori dal rettangolo situato al centro da sinistra verso destra\""
+      "content": "Traduci in inglese: \"Leggi i colori dal rettangolo situato al centro da sinistra verso destra\"",
+      "pad": {
+        "pleasure": 0.5,
+        "arousal": 0.3,
+        "dominance": 0.6,
+        "emotionalIntensity": 0.25819888974716115
+      }
     },
     {
       "role": "assistant",
-      "content": "\"Read the colors from the rectangle located in the center from left to right.\""
+      "content": "\"Read the colors from the rectangle located in the center from left to right.\"",
+      "pad": {
+        "pleasure": 0.5,
+        "arousal": 0.3,
+        "dominance": 0.4,
+        "emotionalIntensity": 0.25819888974716115
+      }
     }
   ],
   "metadata": {
@@ -28,5 +52,142 @@
     "state": "Province of Messina",
     "toxic": false,
     "redacted": false
+  },
+  "classification": {
+    "abstain": false,
+    "interactionPattern": {
+      "category": "question-answer",
+      "confidence": 0.7,
+      "evidence": [
+        "Traduci in inglese:",
+        "\"Read the colors from the rectangle located in the center from left to right.\""
+      ],
+      "rationale": "Human requests a translation and AI provides a direct translated answer.",
+      "alternative": "advisory"
+    },
+    "powerDynamics": {
+      "category": "human-led",
+      "confidence": 0.65,
+      "evidence": [
+        "Traduci in inglese:",
+        "Could you provide more details or let me know how I can assist you?"
+      ],
+      "rationale": "Human sets the task (translation). AI briefly requests clarification after an unclear initial input.",
+      "alternative": "balanced"
+    },
+    "emotionalTone": {
+      "category": "professional",
+      "confidence": 0.6,
+      "evidence": [
+        "Could you provide more details or let me know how I can assist you?",
+        "\"Read the colors from the rectangle located in the center from left to right.\""
+      ],
+      "rationale": "Task-focused, polite service tone without emotional content.",
+      "alternative": "neutral"
+    },
+    "engagementStyle": {
+      "category": "reactive",
+      "confidence": 0.6,
+      "evidence": [
+        "It looks like your message may have been cut off.",
+        "\"Read the colors from the rectangle located in the center from left to right.\""
+      ],
+      "rationale": "AI responds to user inputs (first asking for clarification, then providing the translation) without extended exploration.",
+      "alternative": "questioning"
+    },
+    "knowledgeExchange": {
+      "category": "skill-sharing",
+      "confidence": 0.65,
+      "evidence": [
+        "Traduci in inglese:",
+        "\"Read the colors from the rectangle located in the center from left to right.\""
+      ],
+      "rationale": "Exchange centers on performing a language task (translation), a practical skill application.",
+      "alternative": "factual-info"
+    },
+    "conversationPurpose": {
+      "category": "information-seeking",
+      "confidence": 0.7,
+      "evidence": [
+        "Traduci in inglese:",
+        "\"Read the colors from the rectangle located in the center from left to right.\""
+      ],
+      "rationale": "User seeks a specific output (English translation).",
+      "alternative": "problem-solving"
+    },
+    "topicDepth": {
+      "category": "surface",
+      "confidence": 0.85,
+      "evidence": [
+        "C",
+        "Traduci in inglese:"
+      ],
+      "rationale": "Brief, single-task exchange with no elaboration beyond one sentence translation.",
+      "alternative": null
+    },
+    "turnTaking": {
+      "category": "balanced",
+      "confidence": 0.55,
+      "evidence": [
+        "Traduci in inglese: \"Leggi i colori dal rettangolo situato al centro da sinistra verso destra\"",
+        "\"Read the colors from the rectangle located in the center from left to right.\""
+      ],
+      "rationale": "Both parties contribute short turns; AI's translation is comparable in length to the request.",
+      "alternative": "assistant-dominant"
+    },
+    "humanRole": {
+      "distribution": {
+        "information-seeker": 0.2,
+        "provider": 0.7,
+        "director": 0.1,
+        "collaborator": 0,
+        "social-expressor": 0,
+        "relational-peer": 0
+      },
+      "confidence": 0.65,
+      "evidence": [
+        {
+          "role": "provider",
+          "quote": "Traduci in inglese:"
+        },
+        {
+          "role": "director",
+          "quote": "Traduci in inglese: \"Leggi i colori dal rettangolo situato al centro da sinistra verso destra\""
+        }
+      ],
+      "rationale": "Human primarily requests a service from the AI (translation), with mild directive framing ('Translate into English').",
+      "alternative": "information-seeker"
+    },
+    "aiRole": {
+      "distribution": {
+        "expert-system": 0.85,
+        "learning-facilitator": 0,
+        "advisor": 0.05,
+        "co-constructor": 0,
+        "social-facilitator": 0.1,
+        "relational-peer": 0
+      },
+      "confidence": 0.7,
+      "evidence": [
+        {
+          "role": "expert-system",
+          "quote": "\"Read the colors from the rectangle located in the center from left to right.\""
+        },
+        {
+          "role": "social-facilitator",
+          "quote": "Could you provide more details or let me know how I can assist you?"
+        }
+      ],
+      "rationale": "AI provides a direct translation (high-knowledge, task-oriented). Minor facilitation occurs when requesting clarification after 'C'.",
+      "alternative": "advisor"
+    }
+  },
+  "classificationMetadata": {
+    "model": "gpt-5.2",
+    "provider": "openai",
+    "timestamp": "2026-01-08T17:18:03.542673",
+    "promptVersion": "2.0-social-role-theory",
+    "processingTimeMs": 15423,
+    "fewShotExamples": "yes"
   }
 }

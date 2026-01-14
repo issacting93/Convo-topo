@@ -4,19 +4,43 @@
   "messages": [
     {
       "role": "user",
-      "content": "(The cafe owner, Stella, who resembles Lorraine Kelly, sometimes uses hypnosis on David) David (docile) works at a cafe, a job he enjoys. One afternoon, a couple of weeks after he started working there, his friend Victoria popped in to say hi. (Stella will embarrass him in front of her)"
+      "content": "(The cafe owner, Stella, who resembles Lorraine Kelly, sometimes uses hypnosis on David) David (docile) works at a cafe, a job he enjoys. One afternoon, a couple of weeks after he started working there, his friend Victoria popped in to say hi. (Stella will embarrass him in front of her)",
+      "pad": {
+        "pleasure": 0.3,
+        "arousal": 0.5,
+        "dominance": 0.6,
+        "emotionalIntensity": 0.25819888974716115
+      }
     },
     {
       "role": "assistant",
-      "content": "Stella, who was behind the counter, spotted Victoria and loudly exclaimed, \"David, your girlfriend is here!\" David's face turned bright red as he tried to correct Stella, \"No, she's just a friend, Stella.\"\n\nHowever, Stella continued to tease him and asked Victoria if she was interested in taking David on a date. Victoria laughed awkwardly and quickly made an excuse to leave. David felt humiliated and frustrated with Stella's behavior, but he couldn't seem to confront her about it.\n\nLittle did David know, Stella had been using hypnosis on him whenever he felt upset or angry, causing him to become docile and submissive. He found it difficult to stand up for himself and speak his mind around her.\n\nDespite the embarrassment and discomfort he felt, David continued to work at the cafe, hoping to find a way to break free from Stella's hypnotic influence."
+      "content": "Stella, who was behind the counter, spotted Victoria and loudly exclaimed, \"David, your girlfriend is here!\" David's face turned bright red as he tried to correct Stella, \"No, she's just a friend, Stella.\"\n\nHowever, Stella continued to tease him and asked Victoria if she was interested in taking David on a date. Victoria laughed awkwardly and quickly made an excuse to leave. David felt humiliated and frustrated with Stella's behavior, but he couldn't seem to confront her about it.\n\nLittle did David know, Stella had been using hypnosis on him whenever he felt upset or angry, causing him to become docile and submissive. He found it difficult to stand up for himself and speak his mind around her.\n\nDespite the embarrassment and discomfort he felt, David continued to work at the cafe, hoping to find a way to break free from Stella's hypnotic influence.",
+      "pad": {
+        "pleasure": 0.1,
+        "arousal": 1,
+        "dominance": 0.4,
+        "emotionalIntensity": 0.7483314773547884
+      }
     },
     {
       "role": "user",
-      "content": "try this again, with Victoria and David starting to chat and catch up, and then Stella walking over and showing off her power over the staff"
+      "content": "try this again, with Victoria and David starting to chat and catch up, and then Stella walking over and showing off her power over the staff",
+      "pad": {
+        "pleasure": 0.3,
+        "arousal": 0.5,
+        "dominance": 0.6,
+        "emotionalIntensity": 0.25819888974716115
+      }
     },
     {
       "role": "assistant",
-      "content": "David was delighted to see his friend Victoria again. They had gone to school together and hadn't seen each other in years. They caught up on old times, sharing stories and laughing over cups of coffee.\n\nJust as they were about to say their goodbyes, Stella walked over. \"Hey, David,\" she said with a smirk. \"Is this your new girlfriend?\" Victoria looked confused, but David blushed and shook his head.\n\nStella continued, \"I was just telling my staff how easy it is to hypnotize you. Watch this, David.\" She snapped her fingers, and David immediately looked dazed and compliant.\n\nVictoria was taken aback by Stella's behavior. \"What's going on? Are you okay, David?\" she asked, concerned.\n\nDavid tried to speak but found that his words came out slurred. \"I'm fine, Victoria. Stella's just...good at hypnotizing people, I guess.\"\n\nBut Victoria wasn't convinced. She noticed that all the staff members seemed to be under Stella's control, and it made her uncomfortable. She said a quick goodbye to David and left, feeling uneasy about the whole situation.\n\nDavid felt embarrassed and ashamed that he couldn't stand up against Stella's power. He knew he needed to find a way to break free from her grip and regain his independence."
+      "content": "David was delighted to see his friend Victoria again. They had gone to school together and hadn't seen each other in years. They caught up on old times, sharing stories and laughing over cups of coffee.\n\nJust as they were about to say their goodbyes, Stella walked over. \"Hey, David,\" she said with a smirk. \"Is this your new girlfriend?\" Victoria looked confused, but David blushed and shook his head.\n\nStella continued, \"I was just telling my staff how easy it is to hypnotize you. Watch this, David.\" She snapped her fingers, and David immediately looked dazed and compliant.\n\nVictoria was taken aback by Stella's behavior. \"What's going on? Are you okay, David?\" she asked, concerned.\n\nDavid tried to speak but found that his words came out slurred. \"I'm fine, Victoria. Stella's just...good at hypnotizing people, I guess.\"\n\nBut Victoria wasn't convinced. She noticed that all the staff members seemed to be under Stella's control, and it made her uncomfortable. She said a quick goodbye to David and left, feeling uneasy about the whole situation.\n\nDavid felt embarrassed and ashamed that he couldn't stand up against Stella's power. He knew he needed to find a way to break free from her grip and regain his independence.",
+      "pad": {
+        "pleasure": 0.3,
+        "arousal": 0.8,
+        "dominance": 0.4,
+        "emotionalIntensity": 0.4320493798938574
+      }
     }
   ],
   "metadata": {
@@ -28,5 +52,143 @@
     "state": "Renfrewshire",
     "toxic": false,
     "redacted": false
+  },
+  "classification": {
+    "abstain": false,
+    "interactionPattern": {
+      "category": "storytelling",
+      "confidence": 0.78,
+      "evidence": [
+        "(The cafe owner, Stella, who resembles Lorraine Kelly, sometimes uses hypnosis on David)",
+        "David was delighted to see his friend Victoria again.",
+        "Stella continued, \"I was just telling my staff how easy it is to hypnotize you.\""
+      ],
+      "rationale": "The exchange centers on generating and revising a narrative scene with characters and plot progression rather than Q&A or advice.",
+      "alternative": "collaborative"
+    },
+    "powerDynamics": {
+      "category": "human-led",
+      "confidence": 0.74,
+      "evidence": [
+        "(Stella will embarrass him in front of her)",
+        "try this again, with Victoria and David starting to chat and catch up"
+      ],
+      "rationale": "The human sets constraints and requests a rewrite; the AI follows the specified scene direction.",
+      "alternative": "balanced"
+    },
+    "emotionalTone": {
+      "category": "serious",
+      "confidence": 0.66,
+      "evidence": [
+        "David felt humiliated and frustrated with Stella's behavior",
+        "causing him to become docile and submissive",
+        "Victoria was taken aback by Stella's behavior."
+      ],
+      "rationale": "The content emphasizes humiliation, coercive control, and discomfort, giving the narrative a serious tone.",
+      "alternative": "neutral"
+    },
+    "engagementStyle": {
+      "category": "directive-iterative",
+      "confidence": 0.63,
+      "evidence": [
+        "try this again, with Victoria and David starting to chat and catch up"
+      ],
+      "rationale": "The human issues a revision directive and specifies how the scene should unfold; the AI complies with a new version.",
+      "alternative": "reactive"
+    },
+    "knowledgeExchange": {
+      "category": "experience-sharing",
+      "confidence": 0.54,
+      "evidence": [
+        "They caught up on old times, sharing stories and laughing over cups of coffee.",
+        "Despite the embarrassment and discomfort he felt, David continued to work at the cafe"
+      ],
+      "rationale": "The interaction exchanges narrative experiences/events rather than facts or how-to instructions.",
+      "alternative": "personal-sharing"
+    },
+    "conversationPurpose": {
+      "category": "collaborative-refinement",
+      "confidence": 0.72,
+      "evidence": [
+        "try this again",
+        "(Stella will embarrass him in front of her)"
+      ],
+      "rationale": "The human requests a revised version of the story with specific elements, indicating iterative refinement of a creative output.",
+      "alternative": "entertainment"
+    },
+    "topicDepth": {
+      "category": "moderate",
+      "confidence": 0.6,
+      "evidence": [
+        "Little did David know, Stella had been using hypnosis on him",
+        "She snapped her fingers, and David immediately looked dazed and compliant."
+      ],
+      "rationale": "The narrative includes multiple characters and a control dynamic, but remains a short scene without extensive development.",
+      "alternative": "surface"
+    },
+    "turnTaking": {
+      "category": "assistant-dominant",
+      "confidence": 0.86,
+      "evidence": [
+        "However, Stella continued to tease him and asked Victoria if she was interested in taking David on a date.",
+        "But Victoria wasn't convinced. She noticed that all the staff members seemed to be under Stella's control"
+      ],
+      "rationale": "AI responses are substantially longer and contain most of the narrative content.",
+      "alternative": null
+    },
+    "humanRole": {
+      "distribution": {
+        "information-seeker": 0.02,
+        "provider": 0.03,
+        "director": 0.75,
+        "collaborator": 0.18,
+        "social-expressor": 0.01,
+        "relational-peer": 0.01
+      },
+      "confidence": 0.76,
+      "evidence": [
+        {
+          "role": "director",
+          "quote": "(Stella will embarrass him in front of her)"
+        },
+        {
+          "role": "director",
+          "quote": "try this again, with Victoria and David starting to chat and catch up, and then Stella walking over and showing off her power over the staff"
+        }
+      ],
+      "rationale": "The human specifies plot constraints and directs a rewrite, controlling deliverables and scene structure.",
+      "alternative": "collaborator"
+    },
+    "aiRole": {
+      "distribution": {
+        "expert-system": 0.029,
+        "learning-facilitator": 0,
+        "advisor": 0,
+        "co-constructor": 0.971,
+        "social-facilitator": 0,
+        "relational-peer": 0
+      },
+      "confidence": 0.62,
+      "evidence": [
+        {
+          "role": "co-constructor",
+          "quote": "David was delighted to see his friend Victoria again."
+        },
+        {
+          "role": "co-constructor",
+          "quote": "Stella continued, \"I was just telling my staff how easy it is to hypnotize you.\""
+        }
+      ],
+      "rationale": "The AI generates revised narrative content in response to the human's constraints, effectively co-producing the story.",
+      "alternative": "expert-system"
+    }
+  },
+  "classificationMetadata": {
+    "model": "gpt-5.2",
+    "provider": "openai",
+    "timestamp": "2026-01-08T17:13:46.008356",
+    "promptVersion": "2.0-social-role-theory",
+    "processingTimeMs": 15797,
+    "fewShotExamples": "yes"
   }
 }

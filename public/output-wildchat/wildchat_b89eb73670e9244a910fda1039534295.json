@@ -156,5 +156,155 @@
     "state": "Tehran",
     "toxic": false,
     "redacted": false
+  },
+  "classification": {
+    "abstain": false,
+    "interactionPattern": {
+      "category": "question-answer",
+      "confidence": 0.78,
+      "evidence": [
+        "this table is the result of t-test for momentum effect in up and down market states. explain it:",
+        "what is SE?",
+        "provide 4 main future research directions"
+      ],
+      "rationale": "User repeatedly requests explanations/summaries; AI provides direct explanatory responses and recommendations.",
+      "alternative": "advisory"
+    },
+    "powerDynamics": {
+      "category": "human-led",
+      "confidence": 0.74,
+      "evidence": [
+        "explain it:",
+        "explain it in english:",
+        "provide a full discussion based on these results"
+      ],
+      "rationale": "Human sets agenda via successive prompts specifying tasks (explain, summarize, discuss, future directions).",
+      "alternative": "balanced"
+    },
+    "emotionalTone": {
+      "category": "professional",
+      "confidence": 0.86,
+      "evidence": [
+        "These tables present the results of t-tests examining the momentum effect",
+        "The provided table represents the outcome of an Ordinary Least Squares (OLS) regression analysis"
+      ],
+      "rationale": "Technical, academic/statistical language with no relational or affective content.",
+      "alternative": "neutral"
+    },
+    "engagementStyle": {
+      "category": "directive-iterative",
+      "confidence": 0.71,
+      "evidence": [
+        "explain it:",
+        "summarize this:",
+        "provide a full discussion based on these results"
+      ],
+      "rationale": "User issues sequential directives that iteratively expand deliverables (explain \u2192 English \u2192 summarize \u2192 discussion \u2192 future directions).",
+      "alternative": "questioning"
+    },
+    "knowledgeExchange": {
+      "category": "skill-sharing",
+      "confidence": 0.63,
+      "evidence": [
+        "explain it :",
+        "the following table is the result of OSL regression for measuring the effect of investor sentiment on momentum return. explain it :",
+        "\"SE\" stands for Standard Error."
+      ],
+      "rationale": "Exchange centers on interpreting statistical outputs and concepts (t-tests, OLS, standard error), i.e., methodological know-how.",
+      "alternative": "factual-info"
+    },
+    "conversationPurpose": {
+      "category": "information-seeking",
+      "confidence": 0.66,
+      "evidence": [
+        "explain it:",
+        "what is SE?",
+        "explain it in english:"
+      ],
+      "rationale": "Primary goal is obtaining explanations/interpretations and definitions; later requests extend to discussion and future directions.",
+      "alternative": "problem-solving"
+    },
+    "topicDepth": {
+      "category": "deep",
+      "confidence": 0.67,
+      "evidence": [
+        "provide a full discussion based on these results",
+        "provide 4 main future research directions"
+      ],
+      "rationale": "Moves beyond basic explanation to synthesis, implications, and research agenda across multiple analyses (t-tests + OLS).",
+      "alternative": "moderate"
+    },
+    "turnTaking": {
+      "category": "assistant-dominant",
+      "confidence": 0.8,
+      "evidence": [
+        "These tables present the results of t-tests examining the momentum effect in stock prices during up and down market phases",
+        "The analysis and results discussed offer a nuanced view on the dynamics of momentum investing strategies"
+      ],
+      "rationale": "AI responses are substantially longer and more elaborated than user prompts throughout.",
+      "alternative": "balanced"
+    },
+    "humanRole": {
+      "distribution": {
+        "information-seeker": 0.25,
+        "provider": 0.45,
+        "director": 0.25,
+        "collaborator": 0.03,
+        "social-expressor": 0.01,
+        "relational-peer": 0.01
+      },
+      "confidence": 0.72,
+      "evidence": [
+        {
+          "role": "provider",
+          "quote": "what is SE?"
+        },
+        {
+          "role": "director",
+          "quote": "provide a full discussion based on these results"
+        },
+        {
+          "role": "provider",
+          "quote": "explain it in english:"
+        }
+      ],
+      "rationale": "Human primarily requests explanations/definitions (provider/information-seeker) and also directs deliverables (director) such as summaries and future directions.",
+      "alternative": null
+    },
+    "aiRole": {
+      "distribution": {
+        "expert-system": 0.62,
+        "learning-facilitator": 0.03,
+        "advisor": 0.25,
+        "co-constructor": 0.08,
+        "social-facilitator": 0.01,
+        "relational-peer": 0.01
+      },
+      "confidence": 0.78,
+      "evidence": [
+        {
+          "role": "expert-system",
+          "quote": "\"SE\" stands for Standard Error."
+        },
+        {
+          "role": "expert-system",
+          "quote": "These tables present the results of t-tests examining the momentum effect"
+        },
+        {
+          "role": "advisor",
+          "quote": "Four main directions that could be particularly fruitful for expanding our understanding are:"
+        }
+      ],
+      "rationale": "AI mainly provides direct technical explanations (expert-system) and also offers prescriptive research directions (advisor), with minor co-construction via structured discussion sections.",
+      "alternative": null
+    }
+  },
+  "classificationMetadata": {
+    "model": "gpt-5.2",
+    "provider": "openai",
+    "timestamp": "2026-01-08T17:06:52.660146",
+    "promptVersion": "2.0-social-role-theory",
+    "processingTimeMs": 16306,
+    "fewShotExamples": "yes"
   }
 }

@@ -3,6 +3,7 @@
  */
 
 import type { ClassifiedConversation } from './conversationToTerrain';
+import { mapOldRoleToNew } from './conversationToTerrain';
 
 /**
  * Format category name from snake-case to Title Case
@@ -12,6 +13,14 @@ export function formatCategoryName(category: string): string {
     .split('-')
     .map(word => word.charAt(0).toUpperCase() + word.slice(1))
     .join(' ');
+}
+
+/**
+ * Format role name for display (maps old roles to new and formats)
+ */
+export function formatRoleName(role: string, roleType: 'human' | 'ai'): string {
+  const mappedRole = mapOldRoleToNew(role, roleType);
+  return formatCategoryName(mappedRole);
 }
 
 /**

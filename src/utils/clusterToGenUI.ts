@@ -22,7 +22,7 @@ export type CartographyCluster =
 /**
  * GenUI visual language IDs
  */
-export type GenUILanguageId = 
+export type GenUILanguageId =
   | 'instrumental'
   | 'relational'
   | 'analytical'
@@ -37,22 +37,22 @@ export type GenUILanguageId =
 export const CLUSTER_TO_LANGUAGE: Record<CartographyCluster, GenUILanguageId> = {
   // Cluster 1: Instrumental communication, minimal relational negotiation
   'StraightPath_Stable_FunctionalStructured_QA_InfoSeeking': 'instrumental',
-  
+
   // Cluster 2: Task-oriented with brief rapport-building
   'Valley_FunctionalStructured_QA_InfoSeeking': 'instrumental',
-  
+
   // Cluster 3: Information-seeking through narrative and relationship-building
   'SocialEmergent_Narrative_InfoSeeking': 'exploratory',
-  
+
   // Cluster 4: Pure relational communication, relationship-building as primary goal
   'SocialEmergent_Narrative_Entertainment': 'relational',
-  
+
   // Cluster 5: Self-expression conversations with minimal relational positioning
   'MeanderingPath_Narrative_SelfExpression': 'exploratory',
-  
+
   // Cluster 6: Frustrated information-seeking with emotional peaks
   'Peak_Volatile_FunctionalStructured_QA_InfoSeeking': 'analytical',
-  
+
   // Cluster 7: Explicit relationship-building where connection is the explicit purpose
   'SocialEmergent_Narrative_Relational': 'relational',
 };
@@ -88,6 +88,11 @@ export function clusterToUserProfile(
     primaryZone: CLUSTER_TO_ZONE[cluster],
     conversations: conversationCount || 0,
     recentTopics: recentTopics || [],
+    movement: 'anchored',
+    intensity: 'calm',
+    linguisticStyle: 'neutral',
+    diversity: 'focused',
+    temporalOrientation: 'mixed',
   };
 
   // Map cluster characteristics to profile attributes

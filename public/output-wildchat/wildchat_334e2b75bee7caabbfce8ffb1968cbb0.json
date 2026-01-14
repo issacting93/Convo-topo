@@ -102,5 +102,157 @@
     "state": "National Capital Territory of Delhi",
     "toxic": false,
     "redacted": false
+  },
+  "classification": {
+    "abstain": false,
+    "interactionPattern": {
+      "category": "advisory",
+      "confidence": 0.78,
+      "evidence": [
+        "give me social posts for rivaah by tanishq. visual, copy and post copy.",
+        "Visual:",
+        "Copy:",
+        "Post Copy:"
+      ],
+      "rationale": "User requests marketing deliverables; AI responds with recommended visuals and ready-to-use copy (prescriptive content generation).",
+      "alternative": "question-answer"
+    },
+    "powerDynamics": {
+      "category": "human-led",
+      "confidence": 0.74,
+      "evidence": [
+        "give me a social post for the brides to be, a modern take",
+        "no, copy should be short, 5-6 words. give me the social posts again.",
+        "give me visual, copy and post copy."
+      ],
+      "rationale": "Human repeatedly sets constraints and requests revisions; AI follows the specified format and length.",
+      "alternative": "balanced"
+    },
+    "emotionalTone": {
+      "category": "professional",
+      "confidence": 0.72,
+      "evidence": [
+        "give me social posts for rivaah by tanishq. visual, copy and post copy.",
+        "Choose a post that resonates best with your target audience and aligns with the brand's messaging."
+      ],
+      "rationale": "Businesslike marketing task with brand-alignment language; limited interpersonal affect beyond promotional phrasing.",
+      "alternative": "neutral"
+    },
+    "engagementStyle": {
+      "category": "directive-iterative",
+      "confidence": 0.77,
+      "evidence": [
+        "give me more social posts, 5-6 posts.",
+        "no, copy should be short, 5-6 words. give me the social posts again."
+      ],
+      "rationale": "User directs outputs and iterates constraints; AI provides successive revised lists.",
+      "alternative": "reactive"
+    },
+    "knowledgeExchange": {
+      "category": "skill-sharing",
+      "confidence": 0.7,
+      "evidence": [
+        "give me social posts for rivaah by tanishq. visual, copy and post copy.",
+        "Visual:",
+        "Copy:",
+        "Post Copy:"
+      ],
+      "rationale": "Exchange centers on producing marketing assets (how-to/creative execution) rather than personal sharing or factual definitions.",
+      "alternative": "factual-info"
+    },
+    "conversationPurpose": {
+      "category": "collaborative-refinement",
+      "confidence": 0.76,
+      "evidence": [
+        "give me a social post for the brides to be, a modern take, a heartfelt social post",
+        "no, copy should be short, 5-6 words. give me the social posts again.",
+        "give me more social posts, 5-6 posts."
+      ],
+      "rationale": "User requests multiple revisions and additional variants, refining outputs toward desired constraints.",
+      "alternative": "problem-solving"
+    },
+    "topicDepth": {
+      "category": "moderate",
+      "confidence": 0.6,
+      "evidence": [
+        "a modern take, a heartfelt social post",
+        "copy should be short, 5-6 words."
+      ],
+      "rationale": "Some specification of audience and style constraints, but no deep strategic discussion or detailed campaign planning.",
+      "alternative": "surface"
+    },
+    "turnTaking": {
+      "category": "assistant-dominant",
+      "confidence": 0.82,
+      "evidence": [
+        "Visual:",
+        "Copy:",
+        "Post Copy:"
+      ],
+      "rationale": "AI outputs are substantially longer and more content-heavy than the user's brief directives.",
+      "alternative": "balanced"
+    },
+    "humanRole": {
+      "distribution": {
+        "information-seeker": 0.05,
+        "provider": 0.1,
+        "director": 0.75,
+        "collaborator": 0.1,
+        "social-expressor": 0.0,
+        "relational-peer": 0.0
+      },
+      "confidence": 0.78,
+      "evidence": [
+        {
+          "role": "director",
+          "quote": "no, copy should be short, 5-6 words. give me the social posts again."
+        },
+        {
+          "role": "director",
+          "quote": "give me visual, copy and post copy."
+        },
+        {
+          "role": "collaborator",
+          "quote": "give me a social post for the brides to be, a modern take, a heartfelt social post"
+        }
+      ],
+      "rationale": "Human primarily specifies deliverables, constraints, and revision requests (high control), with minor collaborative shaping via style requirements.",
+      "alternative": null
+    },
+    "aiRole": {
+      "distribution": {
+        "expert-system": 0.15,
+        "learning-facilitator": 0.0,
+        "advisor": 0.55,
+        "co-constructor": 0.3,
+        "social-facilitator": 0.0,
+        "relational-peer": 0.0
+      },
+      "confidence": 0.73,
+      "evidence": [
+        {
+          "role": "advisor",
+          "quote": "Choose a post that resonates best with your target audience and aligns with the brand's messaging."
+        },
+        {
+          "role": "co-constructor",
+          "quote": "Visual: - An image showcasing a modern bride wearing a unique Rivaah statement necklace"
+        },
+        {
+          "role": "advisor",
+          "quote": "Copy: 1. \"Dare to be different on your special day. Choose Rivaah by Tanishq"
+        }
+      ],
+      "rationale": "AI provides prescriptive marketing recommendations and ready-to-use copy (advisor) while iteratively generating variants to match user constraints (co-constructor).",
+      "alternative": null
+    }
+  },
+  "classificationMetadata": {
+    "model": "gpt-5.2",
+    "provider": "openai",
+    "timestamp": "2026-01-08T16:47:29.735063",
+    "promptVersion": "2.0-social-role-theory",
+    "processingTimeMs": 19117,
+    "fewShotExamples": "yes"
   }
 }

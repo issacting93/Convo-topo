@@ -228,5 +228,158 @@
     "state": "Moscow",
     "toxic": false,
     "redacted": false
+  },
+  "classification": {
+    "abstain": false,
+    "interactionPattern": {
+      "category": "question-answer",
+      "confidence": 0.78,
+      "evidence": [
+        "Write an paragraph long essay about how this video is exciting.",
+        "What is the state of our Nation's scientific prowess?",
+        "Could you tell me about the origins and power of Delusions and how these compare with Visions?"
+      ],
+      "rationale": "Human repeatedly requests outputs and asks questions; AI responds with extended answers.",
+      "alternative": "advisory"
+    },
+    "powerDynamics": {
+      "category": "human-led",
+      "confidence": 0.82,
+      "evidence": [
+        "make it even longer.",
+        "remove the CGI part.",
+        "Let me ask you one more question."
+      ],
+      "rationale": "Human sets tasks, constraints, and topic shifts; AI follows.",
+      "alternative": null
+    },
+    "emotionalTone": {
+      "category": "professional",
+      "confidence": 0.74,
+      "evidence": [
+        "Hello! How can I assist you today?",
+        "The state of our Nation's scientific prowess is a topic of complex analysis and debate.",
+        "Thank you for your kind words."
+      ],
+      "rationale": "Predominantly formal, explanatory, and task-focused language with minimal affect.",
+      "alternative": "neutral"
+    },
+    "engagementStyle": {
+      "category": "directive-iterative",
+      "confidence": 0.77,
+      "evidence": [
+        "Write an paragraph long essay",
+        "make it even longer.",
+        "remove the CGI part."
+      ],
+      "rationale": "Human issues directives and iteratively refines the output; AI revises accordingly.",
+      "alternative": "questioning"
+    },
+    "knowledgeExchange": {
+      "category": "factual-info",
+      "confidence": 0.63,
+      "evidence": [
+        "What is the state of our Nation's scientific prowess?",
+        "Could you tell me where the energy of the Visions comes from? What is their origin?",
+        "Delusions are artificial constructs created by the Fatui"
+      ],
+      "rationale": "Later turns focus on lore/explanatory information (origins, comparisons, motivations).",
+      "alternative": "opinion-exchange"
+    },
+    "conversationPurpose": {
+      "category": "information-seeking",
+      "confidence": 0.66,
+      "evidence": [
+        "What are people's thoughts on Raiden Ei?",
+        "Could you tell me about the origins and power of Delusions and how these compare with Visions?",
+        "Why do the Fatui want the Gnosis?"
+      ],
+      "rationale": "Primary goal becomes obtaining explanations and perspectives across multiple topics.",
+      "alternative": "problem-solving"
+    },
+    "topicDepth": {
+      "category": "moderate",
+      "confidence": 0.64,
+      "evidence": [
+        "Could you tell me where the energy of the Visions comes from? What is their origin?",
+        "origins and power of Delusions and how these compare with Visions?",
+        "why are Delusions manufactured at all if they are so dangerous?"
+      ],
+      "rationale": "Sustained multi-question exploration of a domain (Genshin lore) with some elaboration, not exhaustive.",
+      "alternative": "surface"
+    },
+    "turnTaking": {
+      "category": "assistant-dominant",
+      "confidence": 0.86,
+      "evidence": [
+        "This video is undeniably filled with an abundance of excitement that thrills and captivates its audience.",
+        "The state of our Nation's scientific prowess is a topic of complex analysis and debate.",
+        "In the world of Genshin Impact, Delusions are items that grant immense power"
+      ],
+      "rationale": "AI responses are substantially longer than human prompts throughout.",
+      "alternative": null
+    },
+    "humanRole": {
+      "distribution": {
+        "information-seeker": 0.35,
+        "provider": 0.05,
+        "director": 0.55,
+        "collaborator": 0.03,
+        "social-expressor": 0.0,
+        "relational-peer": 0.02
+      },
+      "confidence": 0.72,
+      "evidence": [
+        {
+          "role": "director",
+          "quote": "Write an paragraph long essay about how this video is exciting."
+        },
+        {
+          "role": "director",
+          "quote": "remove the CGI part."
+        },
+        {
+          "role": "information-seeker",
+          "quote": "What is the key to manipulating electro energy without the use of a Vision?"
+        }
+      ],
+      "rationale": "Human primarily directs content generation and revisions, and later asks many information questions.",
+      "alternative": null
+    },
+    "aiRole": {
+      "distribution": {
+        "expert-system": 0.78,
+        "learning-facilitator": 0.02,
+        "advisor": 0.08,
+        "co-constructor": 0.04,
+        "social-facilitator": 0.06,
+        "relational-peer": 0.02
+      },
+      "confidence": 0.76,
+      "evidence": [
+        {
+          "role": "expert-system",
+          "quote": "The state of our Nation's scientific prowess is a topic of complex analysis and debate."
+        },
+        {
+          "role": "expert-system",
+          "quote": "In the world of Genshin Impact, Delusions are items that grant immense power"
+        },
+        {
+          "role": "social-facilitator",
+          "quote": "Hello! How can I assist you today?"
+        }
+      ],
+      "rationale": "AI mainly provides extended explanatory answers and rewritten text, with minor service-oriented prompting.",
+      "alternative": null
+    }
+  },
+  "classificationMetadata": {
+    "model": "gpt-5.2",
+    "provider": "openai",
+    "timestamp": "2026-01-08T16:59:06.003426",
+    "promptVersion": "2.0-social-role-theory",
+    "processingTimeMs": 14854,
+    "fewShotExamples": "yes"
   }
 }

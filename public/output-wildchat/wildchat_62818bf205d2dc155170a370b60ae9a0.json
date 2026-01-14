@@ -66,5 +66,142 @@
     "state": null,
     "toxic": false,
     "redacted": false
+  },
+  "classification": {
+    "abstain": false,
+    "interactionPattern": {
+      "category": "advisory",
+      "confidence": 0.78,
+      "evidence": [
+        "Polish the writing to meet the academic style, improve the spelling, grammar, clarity, concisio and overall readability.",
+        "Table of Modifications:"
+      ],
+      "rationale": "The human repeatedly requests writing improvement with specified deliverables; the AI responds with revised text plus a modifications table (guidance/editing service).",
+      "alternative": "question-answer"
+    },
+    "powerDynamics": {
+      "category": "human-led",
+      "confidence": 0.74,
+      "evidence": [
+        "Below is a paragraph from an academic paper.",
+        "Furthermore, list all modifigstign and explain the reasons to do so in markdown table."
+      ],
+      "rationale": "The human sets the agenda and constraints (polish, rewrite when necessary, provide a markdown table), and the AI follows those instructions.",
+      "alternative": "balanced"
+    },
+    "emotionalTone": {
+      "category": "professional",
+      "confidence": 0.86,
+      "evidence": [
+        "Polish the writing to meet the academic style",
+        "The objective is to compare the overall heat transfer performance"
+      ],
+      "rationale": "The exchange is task-focused and academic, with formal language and no explicit emotional content.",
+      "alternative": "neutral"
+    },
+    "engagementStyle": {
+      "category": "directive-iterative",
+      "confidence": 0.72,
+      "evidence": [
+        "Polish the writing to meet the academic style",
+        "When necessary, rewrite the whole sentence."
+      ],
+      "rationale": "The human issues directives and repeats the same instruction across multiple paragraphs; the AI iteratively delivers revised versions and tables.",
+      "alternative": "reactive"
+    },
+    "knowledgeExchange": {
+      "category": "skill-sharing",
+      "confidence": 0.7,
+      "evidence": [
+        "Polish the writing to meet the academic style",
+        "list all modifigstign and explain the reasons"
+      ],
+      "rationale": "The interaction centers on editing/writing skill application (improving clarity, concision, grammar) and explaining edits.",
+      "alternative": "factual-info"
+    },
+    "conversationPurpose": {
+      "category": "problem-solving",
+      "confidence": 0.73,
+      "evidence": [
+        "improve the spelling, grammar, clarity, concisio and overall readability.",
+        "Table of Modifications:"
+      ],
+      "rationale": "The purpose is to fix and improve academic prose and document changes, i.e., an instrumental editing task.",
+      "alternative": "collaborative-refinement"
+    },
+    "topicDepth": {
+      "category": "moderate",
+      "confidence": 0.62,
+      "evidence": [
+        "forced convection heat transfer under velocities ranging from 10 to 25 m/s.",
+        "Pressure drop versus volumetric heat transfer coefficient curves"
+      ],
+      "rationale": "The content is technical and specific, but the conversation does not deeply debate concepts; it focuses on rewriting paragraphs.",
+      "alternative": "surface"
+    },
+    "turnTaking": {
+      "category": "assistant-dominant",
+      "confidence": 0.8,
+      "evidence": [
+        "The difference in heat transfer performance of the metal foam is significant at velocities of 10m/s and 25m/s.",
+        "This study focuses on the 3D modeling and simulation analysis of the Weaire-Phelan, Kelvin, and metal foam structures"
+      ],
+      "rationale": "AI responses are substantially longer (full rewritten paragraphs plus tables) than the human prompts.",
+      "alternative": "balanced"
+    },
+    "humanRole": {
+      "distribution": {
+        "information-seeker": 0.05,
+        "provider": 0.1,
+        "director": 0.75,
+        "collaborator": 0.1,
+        "social-expressor": 0.0,
+        "relational-peer": 0.0
+      },
+      "confidence": 0.78,
+      "evidence": [
+        {
+          "role": "director",
+          "quote": "Polish the writing to meet the academic style, improve the spelling, grammar, clarity, concisio and overall readability."
+        },
+        {
+          "role": "director",
+          "quote": "Furthermore, list all modifigstign and explain the reasons to do so in markdown table."
+        }
+      ],
+      "rationale": "The human primarily directs the task and specifies outputs (polish, rewrite, and produce a markdown table explaining modifications).",
+      "alternative": null
+    },
+    "aiRole": {
+      "distribution": {
+        "expert-system": 0.25,
+        "learning-facilitator": 0.05,
+        "advisor": 0.55,
+        "co-constructor": 0.15,
+        "social-facilitator": 0.0,
+        "relational-peer": 0.0
+      },
+      "confidence": 0.74,
+      "evidence": [
+        {
+          "role": "advisor",
+          "quote": "Consequently, the Weaire-Phelan structure also experiences inadequate heat transfer in certain areas"
+        },
+        {
+          "role": "advisor",
+          "quote": "Table of Modifications:"
+        }
+      ],
+      "rationale": "The AI performs prescriptive editing (rewriting text) and provides structured change documentation, reflecting an instrumental, high-authority advisory/editor role.",
+      "alternative": "expert-system"
+    }
+  },
+  "classificationMetadata": {
+    "model": "gpt-5.2",
+    "provider": "openai",
+    "timestamp": "2026-01-08T16:55:06.486718",
+    "promptVersion": "2.0-social-role-theory",
+    "processingTimeMs": 17246,
+    "fewShotExamples": "yes"
   }
 }

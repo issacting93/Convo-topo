@@ -123,7 +123,7 @@ export function extractLinguisticFeatures(
   const structureMarkers = [
     /\b(first(ly)?|second(ly)?|third(ly)?|finally|lastly|in conclusion)\b/g,
     /\b(step \d+|step one|step two|part \d+|section \d+)\b/g,
-    /\b(\d+[\.\)] |[-*] |• )/g, // Lists
+    /\b(\d+[.)] |[-*] |• )/g, // Lists
     /\b(in summary|to summarize|in conclusion|overall|in short)\b/g,
   ];
   const structureCount = structureMarkers.reduce((sum, pattern) => {

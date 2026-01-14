@@ -156,5 +156,159 @@
     "state": "Connecticut",
     "toxic": false,
     "redacted": false
+  },
+  "classification": {
+    "abstain": false,
+    "interactionPattern": {
+      "category": "question-answer",
+      "confidence": 0.85,
+      "evidence": [
+        "Who were Mustafa Kemal Atat\u00fcrk, Josip Broz Tito, Lee Kuan Yew, and France-Albert Ren\u00e9?",
+        "What about Gustav III of Sweden?",
+        "How was the Riksdag of the Estates different from the Estates-General in France and Parliament in Great Britain?",
+        "Gustav III implemented significant reforms to reshape the Riksdag of the Estates in Sweden."
+      ],
+      "rationale": "The human repeatedly asks historical questions; the AI responds with explanatory answers.",
+      "alternative": "advisory"
+    },
+    "powerDynamics": {
+      "category": "human-led",
+      "confidence": 0.8,
+      "evidence": [
+        "Who were Mustafa Kemal Atat\u00fcrk, Josip Broz Tito, Lee Kuan Yew, and France-Albert Ren\u00e9?",
+        "No bullet points.",
+        "Please write your answer in paragraphs of full sentences. No bullet points"
+      ],
+      "rationale": "The human sets the agenda through successive questions and also specifies formatting constraints.",
+      "alternative": null
+    },
+    "emotionalTone": {
+      "category": "professional",
+      "confidence": 0.75,
+      "evidence": [
+        "What were their track records on human rights?",
+        "The Riksdag of the Estates in Sweden had some legislative power, albeit limited",
+        "The Riksdag of the Estates in Sweden, the Estates-General in France, and the Parliament in Great Britain were all representative bodies"
+      ],
+      "rationale": "The exchange is formal, academic, and task-focused without relational or affective language.",
+      "alternative": "neutral"
+    },
+    "engagementStyle": {
+      "category": "questioning",
+      "confidence": 0.75,
+      "evidence": [
+        "How were peasants selected to the Riksdag of the Estates?",
+        "Did the Riksdag of the Estates have any real legislative power unlike the Estates-General?",
+        "If Gustav III wanted to ensure his government was full of loyal supporters, why hold elections to begin with?"
+      ],
+      "rationale": "The human drives progress via a chain of questions that narrow and extend the topic.",
+      "alternative": "directive-iterative"
+    },
+    "knowledgeExchange": {
+      "category": "factual-info",
+      "confidence": 0.8,
+      "evidence": [
+        "Gustav III of Sweden was the King of Sweden from 1771 until his assassination in 1792.",
+        "The Revolution of 1772 in Sweden refers to a bloodless coup d'\u00e9tat",
+        "The Riksdag of the Estates in Sweden had a four-estate system"
+      ],
+      "rationale": "The AI provides historical descriptions and comparative institutional facts rather than personal experience or opinions.",
+      "alternative": "skill-sharing"
+    },
+    "conversationPurpose": {
+      "category": "information-seeking",
+      "confidence": 0.85,
+      "evidence": [
+        "Who were Mustafa Kemal Atat\u00fcrk, Josip Broz Tito, Lee Kuan Yew, and France-Albert Ren\u00e9?",
+        "How was the Riksdag of the Estates different from the Estates-General in France and Parliament in Great Britain?",
+        "So how did Gustav III reform the Riksdag of the Estates?"
+      ],
+      "rationale": "The human seeks explanations about historical figures and political institutions.",
+      "alternative": "capability-exploration"
+    },
+    "topicDepth": {
+      "category": "moderate",
+      "confidence": 0.65,
+      "evidence": [
+        "How was the Riksdag of the Estates different from the Estates-General in France and Parliament in Great Britain?",
+        "Did the Riksdag of the Estates have any real legislative power unlike the Estates-General?",
+        "One of Gustav III's key reforms was the introduction of the Union and Security Act in 1789."
+      ],
+      "rationale": "The dialogue goes beyond definitions into institutional comparisons and reform details, but remains survey-level.",
+      "alternative": "deep"
+    },
+    "turnTaking": {
+      "category": "assistant-dominant",
+      "confidence": 0.8,
+      "evidence": [
+        "Mustafa Kemal Atat\u00fcrk was the founder and first President of Turkey.",
+        "The Riksdag of the Estates in Sweden, the Estates-General in France, and the Parliament in Great Britain were all representative bodies",
+        "The Riksdag of the Estates in Sweden had some legislative power, albeit limited, unlike the Estates-General in France."
+      ],
+      "rationale": "AI responses are substantially longer and more elaborated than the human prompts.",
+      "alternative": "balanced"
+    },
+    "humanRole": {
+      "distribution": {
+        "information-seeker": 0.55,
+        "provider": 0.35,
+        "director": 0.1,
+        "collaborator": 0.0,
+        "social-expressor": 0.0,
+        "relational-peer": 0.0
+      },
+      "confidence": 0.72,
+      "evidence": [
+        {
+          "role": "provider",
+          "quote": "Who were Mustafa Kemal Atat\u00fcrk, Josip Broz Tito, Lee Kuan Yew, and France-Albert Ren\u00e9?"
+        },
+        {
+          "role": "information-seeker",
+          "quote": "How was the Riksdag of the Estates different from the Estates-General in France and Parliament in Great Britain?"
+        },
+        {
+          "role": "director",
+          "quote": "Please write your answer in paragraphs of full sentences. No bullet points"
+        }
+      ],
+      "rationale": "Primarily asks for information from the AI, with occasional directive formatting constraints.",
+      "alternative": null
+    },
+    "aiRole": {
+      "distribution": {
+        "expert-system": 0.85,
+        "learning-facilitator": 0.0,
+        "advisor": 0.1,
+        "co-constructor": 0.05,
+        "social-facilitator": 0.0,
+        "relational-peer": 0.0
+      },
+      "confidence": 0.78,
+      "evidence": [
+        {
+          "role": "expert-system",
+          "quote": "Mustafa Kemal Atat\u00fcrk was the founder and first President of Turkey."
+        },
+        {
+          "role": "expert-system",
+          "quote": "The Revolution of 1772 in Sweden refers to a bloodless coup d'\u00e9tat"
+        },
+        {
+          "role": "advisor",
+          "quote": "You raise a valid question. Despite Gustav III's desire to have a government filled with loyal supporters, holding elections served several purposes for him."
+        }
+      ],
+      "rationale": "Delivers direct explanatory content with high epistemic authority; occasional justificatory framing resembles advisory explanation.",
+      "alternative": null
+    }
+  },
+  "classificationMetadata": {
+    "model": "gpt-5.2",
+    "provider": "openai",
+    "timestamp": "2026-01-08T17:16:35.996971",
+    "promptVersion": "2.0-social-role-theory",
+    "processingTimeMs": 20224,
+    "fewShotExamples": "yes"
   }
 }

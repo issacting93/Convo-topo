@@ -120,5 +120,162 @@
     "state": "Florida",
     "toxic": false,
     "redacted": false
+  },
+  "classification": {
+    "abstain": false,
+    "interactionPattern": {
+      "category": "advisory",
+      "confidence": 0.78,
+      "evidence": [
+        "Write a brokerage contract for estimating millwork",
+        "Please note that notarizing a contract is atypical",
+        "add section specifying that it is the job of the Client to manage Change Orders",
+        "specify in section 3 that \"completion\" means"
+      ],
+      "rationale": "User requests drafting and revisions to a contract; AI provides drafted legal-style language and guidance (including a caution about notarization).",
+      "alternative": "collaborative"
+    },
+    "powerDynamics": {
+      "category": "human-led",
+      "confidence": 0.74,
+      "evidence": [
+        "Write a brokerage contract for estimating millwork",
+        "Add notary signature to the above agreement",
+        "add section specifying that it is the job of the Client to manage Change Orders",
+        "specify in section 3 that \"completion\" means"
+      ],
+      "rationale": "Human sets agenda and issues directives for specific edits; AI follows those instructions.",
+      "alternative": "balanced"
+    },
+    "emotionalTone": {
+      "category": "professional",
+      "confidence": 0.86,
+      "evidence": [
+        "BROKERAGE CONTRACT FOR ESTIMATING MILLWORK",
+        "NOW, THEREFORE, in consideration of the mutual covenants",
+        "Please note that notarizing a contract is atypical"
+      ],
+      "rationale": "Formal, business/legal drafting with minimal affective language.",
+      "alternative": null
+    },
+    "engagementStyle": {
+      "category": "directive-iterative",
+      "confidence": 0.8,
+      "evidence": [
+        "Add notary signature to the above agreement",
+        "add section specifying that it is the job of the Client to manage Change Orders",
+        "specify in section 3 that \"completion\" means"
+      ],
+      "rationale": "User directs successive revisions; AI iteratively updates sections in response.",
+      "alternative": "reactive"
+    },
+    "knowledgeExchange": {
+      "category": "skill-sharing",
+      "confidence": 0.7,
+      "evidence": [
+        "Write a brokerage contract for estimating millwork",
+        "you can add the following after the signature lines:",
+        "A typical title for the owner of a construction company could be \"President\" or \"CEO\""
+      ],
+      "rationale": "Exchange centers on how-to drafting (contract clauses/blocks) plus practical naming conventions for titles.",
+      "alternative": "factual-info"
+    },
+    "conversationPurpose": {
+      "category": "problem-solving",
+      "confidence": 0.76,
+      "evidence": [
+        "Write a brokerage contract for estimating millwork",
+        "Add notary signature to the above agreement",
+        "add section specifying that it is the job of the Client to manage Change Orders",
+        "specify in section 3 that \"completion\" means"
+      ],
+      "rationale": "Primary goal is producing a usable contract and refining terms to meet the user's needs.",
+      "alternative": "collaborative-refinement"
+    },
+    "topicDepth": {
+      "category": "moderate",
+      "confidence": 0.66,
+      "evidence": [
+        "release and forever discharge KRB Builders",
+        "fee equal to 4.5% of the total estimated contract amount",
+        "Change Orders",
+        "\"completion\" shall mean that the Client has been awarded the project contract"
+      ],
+      "rationale": "Multiple specific contractual provisions are drafted/modified, but without extensive negotiation or edge-case analysis.",
+      "alternative": "surface"
+    },
+    "turnTaking": {
+      "category": "assistant-dominant",
+      "confidence": 0.72,
+      "evidence": [
+        "This Brokerage Contract for Estimating Millwork (hereinafter, the \"Agreement\") is made",
+        "On _______________ (date), before me, a Notary Public",
+        "8. Change Orders"
+      ],
+      "rationale": "AI produces substantially longer text blocks (full contract language and clauses) than the user's short directives.",
+      "alternative": "balanced"
+    },
+    "humanRole": {
+      "distribution": {
+        "information-seeker": 0.05,
+        "provider": 0.15,
+        "director": 0.75,
+        "collaborator": 0.05,
+        "social-expressor": 0.0,
+        "relational-peer": 0.0
+      },
+      "confidence": 0.78,
+      "evidence": [
+        {
+          "role": "director",
+          "quote": "Write a brokerage contract for estimating millwork"
+        },
+        {
+          "role": "director",
+          "quote": "Add notary signature to the above agreement"
+        },
+        {
+          "role": "provider",
+          "quote": "what is a typical title for the owner of a construction company"
+        }
+      ],
+      "rationale": "Human primarily directs deliverables and specific edits (high control), with one informational question about titles.",
+      "alternative": "provider"
+    },
+    "aiRole": {
+      "distribution": {
+        "expert-system": 0.55,
+        "learning-facilitator": 0.0,
+        "advisor": 0.35,
+        "co-constructor": 0.1,
+        "social-facilitator": 0.0,
+        "relational-peer": 0.0
+      },
+      "confidence": 0.76,
+      "evidence": [
+        {
+          "role": "expert-system",
+          "quote": "This Brokerage Contract for Estimating Millwork (hereinafter, the \"Agreement\") is made"
+        },
+        {
+          "role": "advisor",
+          "quote": "Please note that notarizing a contract is atypical"
+        },
+        {
+          "role": "co-constructor",
+          "quote": "For the purpose of this Agreement, \"completion\" shall mean"
+        }
+      ],
+      "rationale": "AI provides authoritative drafted text (expert-system) plus prescriptive guidance/caveat about notarization (advisor), and performs iterative edits aligned to user constraints (co-constructor).",
+      "alternative": "advisor"
+    }
+  },
+  "classificationMetadata": {
+    "model": "gpt-5.2",
+    "provider": "openai",
+    "timestamp": "2026-01-08T16:55:51.167993",
+    "promptVersion": "2.0-social-role-theory",
+    "processingTimeMs": 15837,
+    "fewShotExamples": "yes"
   }
 }

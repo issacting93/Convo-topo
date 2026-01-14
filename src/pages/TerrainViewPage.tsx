@@ -78,9 +78,9 @@ export function TerrainViewPage() {
   const [terrainPosition, setTerrainPosition] = useState({ x: 0, y: 0, z: -2.5 });
   const [cameraView, setCameraView] = useState<'default' | 'side' | 'top'>('default');
   const [contourColors, setContourColors] = useState({
-    minor: '#303030',
-    major: '#202020',
-    index: '#101010'
+    minor: '#404040',
+    major: '#808080',
+    index: '#ffffff'
   });
   const [markerColors, setMarkerColors] = useState({
     user: '#4a3a8a',
@@ -214,28 +214,39 @@ export function TerrainViewPage() {
     <div style={{
       width: '100vw',
       height: '100vh',
-      background: '#ffffff',
+      background: '#000000',
       position: 'relative',
-      overflow: 'hidden'
+      overflow: 'hidden',
+      display: 'flex',
+      flexDirection: 'column'
     }}>
-      <ThreeScene
-        heightmap={heightmap}
-        pathPoints={pathPoints}
-        contours={contours}
-        hoveredPoint={hoveredPoint}
-        lockedPoint={lockedPoint}
-        terrainPosition={terrainPosition}
-        cameraView={cameraView}
-        cameraDistance={cameraDistance}
-        cameraElevation={cameraElevation}
-        cameraRotation={cameraRotation}
-        contourColors={contourColors}
-        markerColors={markerColors}
-        timelineProgress={timelineProgress}
-        showContours={showContours}
-        onPointHover={setHoveredPoint}
-        onPointClick={handlePointClick}
-      />
+      <div style={{
+        flex: 1,
+        position: 'relative',
+        minHeight: 0,
+        width: '100%',
+        height: '100%'
+      }}>
+        <ThreeScene
+          heightmap={heightmap}
+          pathPoints={pathPoints}
+          contours={contours}
+          hoveredPoint={hoveredPoint}
+          lockedPoint={lockedPoint}
+          terrainPosition={terrainPosition}
+          cameraView={cameraView}
+          cameraDistance={cameraDistance}
+          cameraElevation={cameraElevation}
+          cameraRotation={cameraRotation}
+          contourColors={contourColors}
+          markerColors={markerColors}
+          timelineProgress={timelineProgress}
+          showContours={showContours}
+          onPointHover={setHoveredPoint}
+          onPointClick={handlePointClick}
+          backgroundColor="#000000"
+        />
+      </div>
 
       <HUDOverlay
         pathPoints={pathPoints}

@@ -66,5 +66,158 @@
     "state": "Wellington Region",
     "toxic": false,
     "redacted": false
+  },
+  "classification": {
+    "abstain": false,
+    "interactionPattern": {
+      "category": "advisory",
+      "confidence": 0.78,
+      "evidence": [
+        "Here\u2019s a structure to consider:",
+        "Here's how to approach this:",
+        "This approach can subvert several common narrative tropes in intriguing ways:"
+      ],
+      "rationale": "The AI primarily provides structured guidance and recommendations for how to tell the story and subvert tropes.",
+      "alternative": "question-answer"
+    },
+    "powerDynamics": {
+      "category": "human-led",
+      "confidence": 0.74,
+      "evidence": [
+        "how could a simple story ... be told well and in depth, in series form?",
+        "how could her ending most of the resistance members and agents she meets subvert certain tropes?",
+        "could it be subversive if her motivation for doing the deed is from being tired of all the conflict"
+      ],
+      "rationale": "The human sets the agenda through successive questions; the AI responds within those frames.",
+      "alternative": "balanced"
+    },
+    "emotionalTone": {
+      "category": "professional",
+      "confidence": 0.8,
+      "evidence": [
+        "Telling a story ... offers a rich canvas to explore character development",
+        "Here's how to approach this:",
+        "This narrative approach allows for a deep exploration of themes"
+      ],
+      "rationale": "The exchange is analytical and craft-focused, with formal explanatory language rather than affective support.",
+      "alternative": "neutral"
+    },
+    "engagementStyle": {
+      "category": "directive-iterative",
+      "confidence": 0.7,
+      "evidence": [
+        "Here\u2019s a structure to consider:",
+        "### Season 1: The Emergence",
+        "### 1. The 'Power Corrupts' Subversion"
+      ],
+      "rationale": "The AI gives organized, stepwise frameworks (seasons, numbered trope subversions) that function as prescriptive guidance.",
+      "alternative": "exploring"
+    },
+    "knowledgeExchange": {
+      "category": "skill-sharing",
+      "confidence": 0.77,
+      "evidence": [
+        "To tell this story well and in-depth, each season should build upon the last",
+        "To subvert certain tropes ... the narrative can take unconventional routes",
+        "This narrative approach allows for a deep exploration of themes"
+      ],
+      "rationale": "The content is about narrative craft (structuring a series, trope subversion), i.e., how-to guidance.",
+      "alternative": "opinion-exchange"
+    },
+    "conversationPurpose": {
+      "category": "problem-solving",
+      "confidence": 0.72,
+      "evidence": [
+        "be told well and in depth, in series form?",
+        "how could her ending ... subvert certain tropes?",
+        "could it be subversive if her motivation ... is from being tired"
+      ],
+      "rationale": "The human seeks solutions for writing/plotting challenges; the AI provides methods to achieve desired narrative effects.",
+      "alternative": "information-seeking"
+    },
+    "topicDepth": {
+      "category": "moderate",
+      "confidence": 0.66,
+      "evidence": [
+        "### Season 1: The Emergence",
+        "### Season 5: The New Dawn",
+        "### Subversion of the \"Hero's Journey\" Trope"
+      ],
+      "rationale": "Multiple seasons and several trope subversions are outlined, but without highly specific scene-level detail.",
+      "alternative": "deep"
+    },
+    "turnTaking": {
+      "category": "assistant-dominant",
+      "confidence": 0.86,
+      "evidence": [
+        "Here\u2019s a structure to consider:",
+        "Here's how to approach this:",
+        "Overall, by focusing on a protagonist motivated by a desire to end conflict"
+      ],
+      "rationale": "AI responses are substantially longer and more elaborated than the human\u2019s brief questions.",
+      "alternative": "balanced"
+    },
+    "humanRole": {
+      "distribution": {
+        "information-seeker": 0.55,
+        "provider": 0.35,
+        "director": 0.05,
+        "collaborator": 0.05,
+        "social-expressor": 0.0,
+        "relational-peer": 0.0
+      },
+      "confidence": 0.73,
+      "evidence": [
+        {
+          "role": "information-seeker",
+          "quote": "how could a simple story ... be told well and in depth, in series form?"
+        },
+        {
+          "role": "provider",
+          "quote": "how could her ending most of the resistance members and agents she meets subvert certain tropes?"
+        },
+        {
+          "role": "provider",
+          "quote": "could it be subversive if her motivation for doing the deed is from being tired of all the conflict  and political intrigue?"
+        }
+      ],
+      "rationale": "The human repeatedly asks for explanations and evaluation of narrative choices, positioning themselves as seeking expertise from the AI.",
+      "alternative": null
+    },
+    "aiRole": {
+      "distribution": {
+        "expert-system": 0.15,
+        "learning-facilitator": 0.05,
+        "advisor": 0.7,
+        "co-constructor": 0.1,
+        "social-facilitator": 0.0,
+        "relational-peer": 0.0
+      },
+      "confidence": 0.78,
+      "evidence": [
+        {
+          "role": "advisor",
+          "quote": "Here\u2019s a structure to consider:"
+        },
+        {
+          "role": "advisor",
+          "quote": "Here's how to approach this:"
+        },
+        {
+          "role": "advisor",
+          "quote": "This approach can subvert several common narrative tropes in intriguing ways:"
+        }
+      ],
+      "rationale": "The AI provides prescriptive frameworks (season structure, trope-subversion strategies) and evaluative guidance rather than primarily eliciting the user\u2019s ideas.",
+      "alternative": null
+    }
+  },
+  "classificationMetadata": {
+    "model": "gpt-5.2",
+    "provider": "openai",
+    "timestamp": "2026-01-08T17:08:31.240533",
+    "promptVersion": "2.0-social-role-theory",
+    "processingTimeMs": 18318,
+    "fewShotExamples": "yes"
   }
 }

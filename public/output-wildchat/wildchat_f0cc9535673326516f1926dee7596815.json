@@ -174,5 +174,165 @@
     "state": "West Bengal",
     "toxic": false,
     "redacted": false
+  },
+  "classification": {
+    "abstain": false,
+    "interactionPattern": {
+      "category": "question-answer",
+      "confidence": 0.78,
+      "evidence": [
+        "Write a paragraph within 100 words on \"A VISIT TO A ZOO\"",
+        "Write a letter within 100 words to the headmaster",
+        "Write a newspaper report within 100 words",
+        "how to be instragram creater and earn in easy tips",
+        "To become an Instagram creator and start earning, here are some easy tips:"
+      ],
+      "rationale": "The human repeatedly requests specific written outputs; the AI responds with completed drafts or tips.",
+      "alternative": "advisory"
+    },
+    "powerDynamics": {
+      "category": "human-led",
+      "confidence": 0.74,
+      "evidence": [
+        "Write a paragraph within 100 words",
+        "using easy word and sentence",
+        "Write a letter within 100 words",
+        "in bengali",
+        "what is Chandrayan 3 in bengali within 30second."
+      ],
+      "rationale": "The human sets the agenda, constraints (word limit, language, simplicity), and switches tasks; AI follows.",
+      "alternative": "balanced"
+    },
+    "emotionalTone": {
+      "category": "professional",
+      "confidence": 0.66,
+      "evidence": [
+        "Write a newspaper report within 100 words",
+        "Subject: Permission and Help for Tree Plantation Programme",
+        "To become an Instagram creator and start earning, here are some easy tips:"
+      ],
+      "rationale": "Task-focused, school-style writing and informational guidance with minimal affective language.",
+      "alternative": "neutral"
+    },
+    "engagementStyle": {
+      "category": "directive-iterative",
+      "confidence": 0.72,
+      "evidence": [
+        "Write a paragraph within 100 words",
+        "using easy words and sentence",
+        "Write a letter within 100 words",
+        "in bengali"
+      ],
+      "rationale": "Human gives directives and iteratively refines constraints (easy words, 100 words, Bengali).",
+      "alternative": "reactive"
+    },
+    "knowledgeExchange": {
+      "category": "skill-sharing",
+      "confidence": 0.63,
+      "evidence": [
+        "Write a newspaper report within 100 words",
+        "Write a letter to the headmaster",
+        "how to be instragram creater and earn in easy tips"
+      ],
+      "rationale": "Exchange centers on producing written genres and practical how-to guidance (writing tasks, creator tips).",
+      "alternative": "factual-info"
+    },
+    "conversationPurpose": {
+      "category": "problem-solving",
+      "confidence": 0.62,
+      "evidence": [
+        "Write a paragraph within 100 words",
+        "Write a letter within 100 words",
+        "Write a newspaper report within 100 words",
+        "how to be instragram creater and earn in easy tips"
+      ],
+      "rationale": "The interaction aims to complete assignments and generate usable text/tips rather than socialize.",
+      "alternative": "information-seeking"
+    },
+    "topicDepth": {
+      "category": "surface",
+      "confidence": 0.7,
+      "evidence": [
+        "Write a paragraph within 100 words",
+        "what is Chandrayan 3 in bengali within 30second.",
+        "how to be instragram creater and earn in easy tips"
+      ],
+      "rationale": "Multiple topics are addressed briefly with short-form outputs and no extended exploration.",
+      "alternative": "moderate"
+    },
+    "turnTaking": {
+      "category": "assistant-dominant",
+      "confidence": 0.76,
+      "evidence": [
+        "Last weekend, I had the opportunity to visit a zoo with my family.",
+        "I hope this letter finds you in good health and high spirits.",
+        "Man Killed by Wild Elephant in Jaldapara National Park",
+        "To become an Instagram creator and start earning, here are some easy tips:"
+      ],
+      "rationale": "AI responses are substantially longer (full paragraphs/letters/reports) than the human prompts.",
+      "alternative": "balanced"
+    },
+    "humanRole": {
+      "distribution": {
+        "information-seeker": 0.1,
+        "provider": 0.25,
+        "director": 0.6,
+        "collaborator": 0.03,
+        "social-expressor": 0.01,
+        "relational-peer": 0.01
+      },
+      "confidence": 0.78,
+      "evidence": [
+        {
+          "role": "director",
+          "quote": "Write a paragraph within 100 words on \"A VISIT TO A ZOO\""
+        },
+        {
+          "role": "director",
+          "quote": "Write a letter within 100 words to the headmaster"
+        },
+        {
+          "role": "provider",
+          "quote": "what is Chandrayan 3 in bengali within 30second."
+        }
+      ],
+      "rationale": "The human primarily directs deliverables with constraints; occasionally asks for brief explanations/tips.",
+      "alternative": null
+    },
+    "aiRole": {
+      "distribution": {
+        "expert-system": 0.35,
+        "learning-facilitator": 0.02,
+        "advisor": 0.25,
+        "co-constructor": 0.08,
+        "social-facilitator": 0.0,
+        "relational-peer": 0.3
+      },
+      "confidence": 0.64,
+      "evidence": [
+        {
+          "role": "expert-system",
+          "quote": "Man Killed by Wild Elephant in Jaldapara National Park"
+        },
+        {
+          "role": "advisor",
+          "quote": "To become an Instagram creator and start earning, here are some easy tips:"
+        },
+        {
+          "role": "relational-peer",
+          "quote": "Last week, I went to the zoo with my family."
+        }
+      ],
+      "rationale": "AI mainly produces authoritative drafts (reports/letters) and gives prescriptive tips; some outputs use a first-person narrative voice.",
+      "alternative": null
+    }
+  },
+  "classificationMetadata": {
+    "model": "gpt-5.2",
+    "provider": "openai",
+    "timestamp": "2026-01-08T17:16:15.165793",
+    "promptVersion": "2.0-social-role-theory",
+    "processingTimeMs": 17217,
+    "fewShotExamples": "yes"
   }
 }

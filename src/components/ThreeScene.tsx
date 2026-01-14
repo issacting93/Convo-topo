@@ -1,5 +1,6 @@
 import { useRef, useEffect } from 'react';
 import * as THREE from 'three';
+import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 import { EffectComposer } from 'three/addons/postprocessing/EffectComposer.js';
 import { RenderPass } from 'three/addons/postprocessing/RenderPass.js';
 import { UnrealBloomPass } from 'three/addons/postprocessing/UnrealBloomPass.js';
@@ -9,6 +10,8 @@ import { LineMaterial } from 'three/addons/lines/LineMaterial.js';
 import type { Contour, PathPoint } from '../utils/terrain';
 import { COLORS } from '../utils/constants';
 import { calculatePathPadChanges, getPadChangeColor } from '../utils/padPathColors';
+import { TerrainFresnelShader } from '../utils/shaders';
+import { createTextSprite } from '../utils/threeHelpers';
 
 // Scene configuration constants
 const SCENE_CONFIG = {
@@ -32,13 +35,13 @@ const SCENE_CONFIG = {
 
 // Lighting configuration
 const LIGHTING_CONFIG = {
-  AMBIENT_INTENSITY: 0.2,
-  DIR_LIGHT_1_INTENSITY: 1.0,
+  AMBIENT_INTENSITY: 0.7,  // Increased for white background
+  DIR_LIGHT_1_INTENSITY: 1.2,
   DIR_LIGHT_1_POSITION: { x: 5, y: 10, z: 5 },
-  DIR_LIGHT_2_INTENSITY: 0.6,
+  DIR_LIGHT_2_INTENSITY: 0.8,
   DIR_LIGHT_2_POSITION: { x: -5, y: 8, z: -5 },
-  TERRAIN_BRIGHTEN: 2.2,  // Increased from 1.5 for more brightness
-  TERRAIN_EMISSIVE_INTENSITY: 0.95,  // Increased from 0.2 for more glow
+  TERRAIN_BRIGHTEN: 1.0,  // No multiplier needed for light colors
+  TERRAIN_EMISSIVE_INTENSITY: 0,  // No emissive for light terrain
 } as const;
 
 // Marker configuration
@@ -76,6 +79,8 @@ const ANIMATION_CONFIG = {
   MARKER_FLOAT_AMPLITUDE: 0.03,
   RAYCAST_THROTTLE: 3,
   CONTOUR_ANIMATION_THROTTLE: 2,
+  AUTO_LOCK_DELAY: 5000, // milliseconds before auto-locking camera
+  AUTO_LOCK_DURATION: 2000, // milliseconds for smooth transition back
 } as const;
 
 // Post-processing configuration
@@ -107,7 +112,9 @@ interface ThreeSceneProps {
   showTerrain?: boolean;
   showMarkers?: boolean;
   showPaths?: boolean;
-  coloringMode?: 'path' | 'role'; // New prop
+  showPathPoints?: boolean;
+  showDropLines?: boolean;
+  coloringMode?: 'path' | 'role' | 'source'; // New prop
   visibleRoles?: { user: boolean; assistant: boolean }; // Filter by role
   showDistanceLines?: boolean;
   distanceThreshold?: number;
@@ -122,6 +129,7 @@ interface ThreeSceneProps {
   backgroundColor?: string; // Custom background color
   onPointHover: (index: number | null) => void;
   onPointClick: (index: number) => void;
+  lineWidth?: number;
 }
 
 interface MarkerRef {
@@ -144,8 +152,10 @@ export function ThreeScene({
   timelineProgress,
   showContours,
   showTerrain = false,
-  showMarkers = true,
+  showMarkers = false,
   showPaths = true,
+  showPathPoints = false,
+  showDropLines = false,
   coloringMode = 'path', // Default to path-based coloring
   visibleRoles = { user: true, assistant: true },
   showDistanceLines = false,
@@ -158,14 +168,16 @@ export function ThreeScene({
   cameraRotation = 0,
   contourColors = { minor: '#a0d080', major: '#b0e090', index: '#c0f0a0' },
   markerColors = { user: '#4a3a8a', userGlow: '#5a4a9a', assistant: '#cc5500', assistantGlow: '#dd6600' },
-  backgroundColor,
-  onPointHover,
-  onPointClick
+  backgroundColor = '#ffffff',
+  onPointHover = () => { },
+  onPointClick = () => { },
+  lineWidth = 1.5,
 }: ThreeSceneProps) {
   const containerRef = useRef<HTMLDivElement>(null);
   const sceneRef = useRef<THREE.Scene | null>(null);
   const rendererRef = useRef<THREE.WebGLRenderer | null>(null);
   const cameraRef = useRef<THREE.PerspectiveCamera | THREE.OrthographicCamera | null>(null);
+  const controlsRef = useRef<OrbitControls | null>(null);
   const frameRef = useRef<number | null>(null);
   const markersRef = useRef<MarkerRef[]>([]);
   const hitboxesRef = useRef<THREE.Mesh[]>([]); // Cached hitboxes for raycasting
@@ -185,9 +197,11 @@ export function ThreeScene({
   const mouseRef = useRef(new THREE.Vector2());
   const raycasterRef = useRef(new THREE.Raycaster());
   const composerRef = useRef<EffectComposer | null>(null);
-  const rotationYRef = useRef(0); // Rotation angle around Y-axis (in radians)
-  const isDraggingRef = useRef(false);
-  const lastMouseXRef = useRef(0);
+  const autoLockTimerRef = useRef<number | null>(null);
+  const lockedCameraPositionRef = useRef<THREE.Vector3 | null>(null);
+  const lockedCameraTargetRef = useRef<THREE.Vector3 | null>(null);
+  const isAutoLockingRef = useRef(false);
+  const autoLockStartTimeRef = useRef(0);
 
   const size = Math.sqrt(heightmap.length);
   const terrainSize = SCENE_CONFIG.TERRAIN_SIZE;
@@ -249,6 +263,52 @@ export function ThreeScene({
     renderer.toneMappingExposure = 1.2;
     container.appendChild(renderer.domElement);
     rendererRef.current = renderer;
+
+    // OrbitControls for better camera interaction
+    const controls = new OrbitControls(camera, renderer.domElement);
+    controls.enableDamping = true; // Smooth camera movement
+    controls.dampingFactor = 0.05;
+    controls.screenSpacePanning = true; // Pan in screen space
+    controls.minDistance = 5; // Minimum zoom distance
+    controls.maxDistance = 50; // Maximum zoom distance
+    controls.maxPolarAngle = Math.PI / 2; // Prevent camera from going below ground
+    controls.target.set(
+      SCENE_CONFIG.CAMERA_LOOK_AT.x + terrainPosition.x,
+      SCENE_CONFIG.CAMERA_LOOK_AT.y + terrainPosition.y,
+      SCENE_CONFIG.CAMERA_LOOK_AT.z + terrainPosition.z
+    );
+    controls.update();
+    controlsRef.current = controls;
+
+    // Store initial locked position
+    lockedCameraPositionRef.current = camera.position.clone();
+    lockedCameraTargetRef.current = controls.target.clone();
+
+    // Reset auto-lock timer when user interacts with controls
+    const resetAutoLockTimer = () => {
+      // Clear existing timer
+      if (autoLockTimerRef.current !== null) {
+        clearTimeout(autoLockTimerRef.current);
+      }
+      // Cancel any ongoing auto-lock animation
+      isAutoLockingRef.current = false;
+
+      // Set new timer
+      autoLockTimerRef.current = window.setTimeout(() => {
+        // Start auto-lock animation
+        isAutoLockingRef.current = true;
+        autoLockStartTimeRef.current = Date.now();
+      }, ANIMATION_CONFIG.AUTO_LOCK_DELAY);
+    };
+
+    // Listen for control changes (when user interacts)
+    controls.addEventListener('start', resetAutoLockTimer);
+    controls.addEventListener('change', () => {
+      // If user is actively controlling, ensure we're not auto-locking
+      if (controls.enabled && !isAutoLockingRef.current) {
+        resetAutoLockTimer();
+      }
+    });
 
     // Ambient light
     const ambient = new THREE.AmbientLight(0x445566, LIGHTING_CONFIG.AMBIENT_INTENSITY);
@@ -401,6 +461,39 @@ export function ThreeScene({
       cornerPostsRef.current.push(post);
     });
 
+    // Add Axis Labels (Text Sprites)
+    const labelProps = {
+      fontsize: 32,
+      fontface: 'Arial, Helvetica, sans-serif',
+      borderThickness: 0,
+      textColor: 'rgba(255, 255, 255, 0.9)',
+      backgroundColor: { r: 0, g: 0, b: 0, a: 0.0 }
+    };
+
+    // X-Axis Labels (-X: Functional, +X: Social)
+    const funcLabel = createTextSprite('Functional', labelProps);
+    funcLabel.position.set(-terrainSize / 2 - 1.5 + terrainPosition.x, 0.5 + terrainPosition.y, terrainPosition.z);
+    scene.add(funcLabel);
+
+    const socialLabel = createTextSprite('Social', labelProps);
+    socialLabel.position.set(terrainSize / 2 + 1.5 + terrainPosition.x, 0.5 + terrainPosition.y, terrainPosition.z);
+    scene.add(socialLabel);
+
+    // Z-Axis Labels in 3D (Y-Axis in 2D Chart) (-Z: Aligned, +Z: Divergent)
+    const alignedLabel = createTextSprite('Aligned', labelProps);
+    alignedLabel.position.set(terrainPosition.x, 0.5 + terrainPosition.y, -terrainSize / 2 - 1.5 + terrainPosition.z);
+    scene.add(alignedLabel);
+
+    const divergentLabel = createTextSprite('Divergent', labelProps);
+    divergentLabel.position.set(terrainPosition.x, 0.5 + terrainPosition.y, terrainSize / 2 + 1.5 + terrainPosition.z);
+    scene.add(divergentLabel);
+
+    // Height Label
+    const intensityLabel = createTextSprite('Intensity', { ...labelProps, fontsize: 24, textColor: '#' + COLORS.accent.getHexString() });
+    intensityLabel.position.set(terrainSize / 2 + 1 + terrainPosition.x, terrainHeight + 1.0 + terrainPosition.y, -terrainSize / 2 - 1 + terrainPosition.z);
+    scene.add(intensityLabel);
+
+
     // Handle resize
     const handleResize = () => {
       const w = container.clientWidth;
@@ -441,7 +534,7 @@ export function ThreeScene({
     };
     window.addEventListener('resize', handleResize);
 
-    // Mouse interaction
+    // Mouse interaction for hover and click
     const handleMouseMove = (e: MouseEvent) => {
       if (!rendererRef.current) return;
       const rect = rendererRef.current.domElement.getBoundingClientRect();
@@ -449,46 +542,10 @@ export function ThreeScene({
       const normalizedY = -((e.clientY - rect.top) / rect.height) * 2 + 1;
       mouseRef.current.x = normalizedX;
       mouseRef.current.y = normalizedY;
-
-      // Handle rotation drag
-      if (isDraggingRef.current) {
-        const deltaX = e.clientX - lastMouseXRef.current;
-        // Convert pixel movement to rotation (sensitivity factor)
-        // Negative to reverse direction: drag right = rotate left, drag left = rotate right
-        const rotationSpeed = 0.005;
-        rotationYRef.current -= deltaX * rotationSpeed;
-        lastMouseXRef.current = e.clientX;
-      }
     };
     renderer.domElement.addEventListener('mousemove', handleMouseMove);
 
-    const handleMouseDown = (e: MouseEvent) => {
-      // Only start dragging on left mouse button
-      if (e.button === 0) {
-        isDraggingRef.current = true;
-        lastMouseXRef.current = e.clientX;
-        if (rendererRef.current) {
-          rendererRef.current.domElement.style.cursor = 'grabbing';
-        }
-      }
-    };
-    renderer.domElement.addEventListener('mousedown', handleMouseDown);
-
-    const handleMouseUp = () => {
-      isDraggingRef.current = false;
-      if (rendererRef.current) {
-        rendererRef.current.domElement.style.cursor = 'default';
-      }
-    };
-    renderer.domElement.addEventListener('mouseup', handleMouseUp);
-    renderer.domElement.addEventListener('mouseleave', handleMouseUp); // Stop dragging when mouse leaves
-
-    const handleClick = (e: MouseEvent) => {
-      // Only trigger click if we didn't drag (to avoid accidental clicks after rotation)
-      if (isDraggingRef.current) {
-        e.preventDefault();
-        return;
-      }
+    const handleClick = () => {
       if (!raycasterRef.current || !cameraRef.current) return;
       raycasterRef.current.setFromCamera(mouseRef.current, cameraRef.current);
       const intersects = raycasterRef.current.intersectObjects(
@@ -502,16 +559,28 @@ export function ThreeScene({
     };
     renderer.domElement.addEventListener('click', handleClick);
 
+    // Start initial auto-lock timer
+    resetAutoLockTimer();
+
     return () => {
       window.removeEventListener('resize', handleResize);
       renderer.domElement.removeEventListener('mousemove', handleMouseMove);
-      renderer.domElement.removeEventListener('mousedown', handleMouseDown);
-      renderer.domElement.removeEventListener('mouseup', handleMouseUp);
-      renderer.domElement.removeEventListener('mouseleave', handleMouseUp);
       renderer.domElement.removeEventListener('click', handleClick);
       if (frameRef.current !== null) {
         cancelAnimationFrame(frameRef.current);
         frameRef.current = null;
+      }
+
+      // Clear auto-lock timer
+      if (autoLockTimerRef.current !== null) {
+        clearTimeout(autoLockTimerRef.current);
+        autoLockTimerRef.current = null;
+      }
+
+      // Dispose controls
+      if (controlsRef.current) {
+        controlsRef.current.dispose();
+        controlsRef.current = null;
       }
 
       // Dispose composer and all its passes
@@ -531,7 +600,7 @@ export function ThreeScene({
       rendererRef.current = null;
       cameraRef.current = null;
     };
-  }, [onPointClick]);
+  }, [onPointClick, terrainPosition, backgroundColor]);
 
   // Create/update terrain mesh (visual context backdrop)
   // NOTE: Terrain serves as visual context, but marker Z-heights are calculated
@@ -551,13 +620,21 @@ export function ThreeScene({
 
     const geometry = createTerrainGeometry(heightmap, size, terrainSize, terrainHeight);
 
-    const material = new THREE.MeshLambertMaterial({
-      vertexColors: true,
-      transparent: false,
-      side: THREE.DoubleSide,
-      emissive: new THREE.Color(0x334455),  // Brighter emissive color (was 0x223344)
-      emissiveIntensity: LIGHTING_CONFIG.TERRAIN_EMISSIVE_INTENSITY
+    const shader = TerrainFresnelShader;
+    const material = new THREE.ShaderMaterial({
+      uniforms: THREE.UniformsUtils.clone(shader.uniforms),
+      vertexShader: shader.vertexShader,
+      fragmentShader: shader.fragmentShader,
+      transparent: true,
+      side: THREE.DoubleSide
     });
+
+    // Configure uniforms
+    material.uniforms.uBaseColor.value.setHex(0xffffff);
+    material.uniforms.uRimColor.value.setHex(0xffffff);
+    material.uniforms.uFresnelPower.value = 3.0; // Sharp rim
+    material.uniforms.uBaseOpacity.value = 0.05; // Very transparent center
+    material.uniforms.uRimOpacity.value = 0.6;   // Subtler rim
 
     const terrain = new THREE.Mesh(geometry, material);
     terrain.rotation.x = -Math.PI / 2;
@@ -799,10 +876,28 @@ export function ThreeScene({
     pathLinesRef.current.forEach(pathLine => {
       if (pathLine) {
         scene.remove(pathLine);
+        // Cleanup related points
+        if ((pathLine as any)._relatedPoints) {
+          const points = (pathLine as any)._relatedPoints;
+          scene.remove(points);
+          points.geometry.dispose();
+          points.material.dispose();
+        }
+        // Cleanup drop lines
+        if ((pathLine as any)._relatedDropLines) {
+          const dropLines = (pathLine as any)._relatedDropLines;
+          scene.remove(dropLines);
+          dropLines.geometry.dispose();
+          dropLines.material.dispose();
+        }
         pathLine.geometry.dispose();
         if (pathLine.material instanceof LineMaterial) {
           // LineMaterial may have internal textures that need disposal
           pathLine.material.dispose();
+        }
+        // Call cleanup function if it exists
+        if ((pathLine as any)._cleanup) {
+          (pathLine as any)._cleanup();
         }
       }
     });
@@ -837,7 +932,7 @@ export function ThreeScene({
     }
 
     // Render multiple paths if provided, otherwise render single path
-    if (showPaths) {
+    if (showPaths || showPathPoints || showDropLines) {
       if (paths && paths.length > 0) {
         // Render multiple paths with distinct colors
         paths.forEach((pathData: PathWithColor, pathIdx: number) => {
@@ -955,7 +1050,7 @@ export function ThreeScene({
           const pathMat = new LineMaterial({
             color: useVertexColors ? new THREE.Color(0xffffff) : new THREE.Color(r, g, b), // Set base to white if vertex colors used
             vertexColors: useVertexColors,
-            linewidth: 1, // Thin paths for multiview
+            linewidth: lineWidth, // Use prop
             resolution: new THREE.Vector2(window.innerWidth, window.innerHeight),
             dashed: false,
             dashScale: 1,
@@ -975,6 +1070,57 @@ export function ThreeScene({
           pathLine.frustumCulled = false; // Don't cull lines
           scene.add(pathLine);
           pathLinesRef.current.push(pathLine);
+
+          // Render points if requested
+          if (showPathPoints) {
+            const pointsGeom = new THREE.BufferGeometry().setAttribute('position', new THREE.Float32BufferAttribute(positions, 3));
+            // Use white for "dataism" aesthetic (high contrast on dark background) regardless of path color
+            // unless we want to strictly follow coloringMode. Reference images show white dots.
+            // Let's stick to White for now as it pops against colored lines.
+
+            const pointsMat = new THREE.PointsMaterial({
+              color: 0xffffff, // White nodes
+              size: 0.12,      // Slightly smaller, crisp
+              sizeAttenuation: true,
+              transparent: true,
+              opacity: 0.9     // High opacity
+            });
+
+            const pointsObj = new THREE.Points(pointsGeom, pointsMat);
+            scene.add(pointsObj);
+            (pathLine as any)._relatedPoints = pointsObj;
+          }
+
+          // Render vertical drop lines (stems) if requested
+          if (showDropLines) {
+            const dropPositions: number[] = [];
+            // Create pairs of vertices: [x,y,z] -> [x, terrainBase, z]
+            // We need to iterate the positions array (flat)
+            for (let i = 0; i < positions.length; i += 3) {
+              const x = positions[i];
+              const y = positions[i + 1];
+              const z = positions[i + 2];
+
+              // Only drop lines for points significantly above ground? 
+              // Or all points. Let's do all for the "grid" look.
+              dropPositions.push(x, y, z);
+              dropPositions.push(x, terrainPosition.y, z); // Drop to terrain base level
+            }
+
+            const dropGeom = new THREE.BufferGeometry();
+            dropGeom.setAttribute('position', new THREE.Float32BufferAttribute(dropPositions, 3));
+
+            const dropMat = new THREE.LineBasicMaterial({
+              color: 0xffffff, // White/Grey stems
+              transparent: true,
+              opacity: 0.15,   // Very faint
+              depthWrite: false
+            });
+
+            const dropLines = new THREE.LineSegments(dropGeom, dropMat);
+            scene.add(dropLines);
+            (pathLine as any)._relatedDropLines = dropLines;
+          }
 
           // Update material resolution on resize
           const updateResolution = () => {
@@ -1042,7 +1188,7 @@ export function ThreeScene({
       }
     }
 
-  }, [pathPoints, paths, timelineProgress, terrainSize, terrainHeight, terrainPosition, markerColors, showMarkers, showPaths, coloringMode, visibleRoles]);
+  }, [pathPoints, paths, timelineProgress, terrainSize, terrainHeight, terrainPosition, markerColors, showMarkers, showPaths, showPathPoints, showDropLines, coloringMode, visibleRoles, lineWidth]);
 
   // Update path visibility when showPaths changes
   useEffect(() => {
@@ -1198,7 +1344,7 @@ export function ThreeScene({
       { x: terrainSize * 0.4, z: terrainSize * 0.4 }
     ];
     quadrantMarkersRef.current.forEach((marker, idx) => {
-      if (marker) {
+      if (marker && quadrantPositions[idx]) {
         const pos = quadrantPositions[idx];
         marker.position.set(pos.x + terrainPosition.x, axisY + terrainPosition.y, pos.z + terrainPosition.z);
       }
@@ -1232,6 +1378,8 @@ export function ThreeScene({
     cornerPostsRef.current.forEach((post, idx) => {
       if (post) {
         const corner = corners[idx];
+        if (!corner) return; // Fix: avoid crash if idx is out of bounds
+
         const postGeom = new THREE.BufferGeometry().setFromPoints([
           new THREE.Vector3(corner.x + terrainPosition.x, terrainPosition.y, corner.z + terrainPosition.z),
           new THREE.Vector3(corner.x + terrainPosition.x, postHeight + terrainPosition.y, corner.z + terrainPosition.z)
@@ -1245,6 +1393,52 @@ export function ThreeScene({
     // (This is handled in animation loop, but we can set initial position here)
     // The animation loop will handle the view changes
   }, [terrainPosition, terrainSize]);
+
+  // Update locked position when camera view/distance/elevation/rotation changes
+  useEffect(() => {
+    if (!cameraRef.current || !controlsRef.current) return;
+
+    // Calculate new locked position based on current view settings
+    const centerX = terrainPosition.x;
+    const centerY = terrainPosition.y + terrainHeight * 0.35;
+    const centerZ = terrainPosition.z;
+
+    let elevationRad: number;
+    let azimuthRad: number;
+
+    if (cameraView === 'top') {
+      elevationRad = (85 * Math.PI) / 180;
+      azimuthRad = cameraRotation + (45 * Math.PI) / 180;
+    } else if (cameraView === 'side') {
+      elevationRad = 0;
+      azimuthRad = cameraRotation + (90 * Math.PI) / 180;
+    } else {
+      elevationRad = (cameraElevation * Math.PI) / 180;
+      azimuthRad = cameraRotation + (45 * Math.PI) / 180;
+    }
+
+    const distance = cameraDistance;
+    const horizontalDistance = distance * Math.cos(elevationRad);
+
+    const newPosition = new THREE.Vector3(
+      centerX + horizontalDistance * Math.sin(azimuthRad),
+      centerY + distance * Math.sin(elevationRad),
+      centerZ + horizontalDistance * Math.cos(azimuthRad)
+    );
+
+    const newTarget = new THREE.Vector3(centerX, centerY, centerZ);
+
+    // Update locked position
+    lockedCameraPositionRef.current = newPosition;
+    lockedCameraTargetRef.current = newTarget;
+
+    // Immediately apply if not auto-locking
+    if (!isAutoLockingRef.current) {
+      cameraRef.current.position.copy(newPosition);
+      controlsRef.current.target.copy(newTarget);
+      controlsRef.current.update();
+    }
+  }, [cameraView, cameraDistance, cameraElevation, cameraRotation, terrainPosition, terrainHeight]);
 
   // Switch camera type based on view mode
   useEffect(() => {
@@ -1333,49 +1527,33 @@ export function ThreeScene({
       // Calculate center of visible path points in terrain-local space (before terrainPosition offset)
       // const visiblePoints = pathPoints.slice(0, Math.ceil(pathPoints.length * timelineProgress));
 
-      // Camera anchor: terrain center (world space)
-      const centerX = terrainPosition.x;
-      const centerZ = terrainPosition.z;
+      // Handle auto-lock animation (smooth return to locked position)
+      if (isAutoLockingRef.current && lockedCameraPositionRef.current && lockedCameraTargetRef.current && controlsRef.current) {
+        const elapsed = Date.now() - autoLockStartTimeRef.current;
+        const progress = Math.min(elapsed / ANIMATION_CONFIG.AUTO_LOCK_DURATION, 1);
 
-      // Pick a stable height to look at (keeps camera from bobbing with emotion height)
-      const centerY = terrainPosition.y + terrainHeight * 0.35; // tweak 0.25–0.6
+        // Smooth easing function (ease-in-out)
+        const eased = progress < 0.5
+          ? 2 * progress * progress
+          : 1 - Math.pow(-2 * progress + 2, 2) / 2;
 
+        // Interpolate camera position
+        camera.position.lerp(lockedCameraPositionRef.current, eased * 0.1);
 
-      // Camera position based on view mode
-      // All views now support user-controlled rotation, elevation, and distance
-      if (cameraView === 'top') {
-        // Top view: directly above with optional rotation
-        const elevationRad = (85 * Math.PI) / 180; // Near-vertical (85° instead of 90° for slight angle)
-        const azimuthRad = cameraRotation + rotationYRef.current; // User rotation + drag rotation
-        const distance = cameraDistance;
-        const horizontalDistance = distance * Math.cos(elevationRad);
+        // Interpolate target
+        controlsRef.current.target.lerp(lockedCameraTargetRef.current, eased * 0.1);
 
-        camera.position.x = centerX + horizontalDistance * Math.sin(azimuthRad);
-        camera.position.z = centerZ + horizontalDistance * Math.cos(azimuthRad);
-        camera.position.y = centerY + distance * Math.sin(elevationRad);
-        camera.lookAt(centerX, centerY, centerZ);
-      } else if (cameraView === 'side') {
-        // Side view: horizontal graph view with 0° elevation
-        const elevationRad = 0; // Fixed at 0° for true side/graph view
-        const azimuthRad = cameraRotation + rotationYRef.current + (90 * Math.PI) / 180; // 90° base + drag rotation + user rotation
-        const distance = cameraDistance;
-        const horizontalDistance = distance * Math.cos(elevationRad);
+        // End animation when complete
+        if (progress >= 1) {
+          isAutoLockingRef.current = false;
+          camera.position.copy(lockedCameraPositionRef.current);
+          controlsRef.current.target.copy(lockedCameraTargetRef.current);
+        }
 
-        camera.position.x = centerX + horizontalDistance * Math.sin(azimuthRad);
-        camera.position.z = centerZ + horizontalDistance * Math.cos(azimuthRad);
-        camera.position.y = centerY + distance * Math.sin(elevationRad);
-        camera.lookAt(centerX, centerY, centerZ);
-      } else {
-        // Default view: Isometric-like with user-controlled rotation, elevation, and distance
-        const elevationRad = (cameraElevation * Math.PI) / 180;
-        const azimuthRad = cameraRotation + rotationYRef.current + (45 * Math.PI) / 180; // 45° base + drag rotation + user rotation
-        const distance = cameraDistance;
-        const horizontalDistance = distance * Math.cos(elevationRad);
-
-        camera.position.x = centerX + horizontalDistance * Math.sin(azimuthRad);
-        camera.position.z = centerZ + horizontalDistance * Math.cos(azimuthRad);
-        camera.position.y = centerY + distance * Math.sin(elevationRad);
-        camera.lookAt(centerX, centerY, centerZ);
+        controlsRef.current.update();
+      } else if (controlsRef.current) {
+        // Normal control updates (just update damping)
+        controlsRef.current.update();
       }
 
       // Animate markers

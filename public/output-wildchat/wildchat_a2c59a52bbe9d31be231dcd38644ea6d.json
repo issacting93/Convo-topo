@@ -102,5 +102,148 @@
     "state": "Punjab",
     "toxic": false,
     "redacted": false
+  },
+  "classification": {
+    "abstain": false,
+    "interactionPattern": {
+      "category": "question-answer",
+      "confidence": 0.72,
+      "evidence": [
+        "rwrite ins imple eng - Whether you are posting a job",
+        "sunoke ebg comon wrds",
+        "simpel erwd coomoin eng - If you\u2019re posting a job",
+        "in rpfashinal tone - If you\u2019re posting a job"
+      ],
+      "rationale": "Human repeatedly requests rewrites/definitions; AI provides rewritten text or a direct definition in response.",
+      "alternative": "advisory"
+    },
+    "powerDynamics": {
+      "category": "human-led",
+      "confidence": 0.78,
+      "evidence": [
+        "rwrite ins imple eng - Whether you are posting a job",
+        "simpel erwd coomoin eng - If you\u2019re posting a job",
+        "in rpfashinal tone - If you\u2019re posting a job"
+      ],
+      "rationale": "Human sets the agenda by specifying transformation tasks (simple English, common words, professional tone).",
+      "alternative": "balanced"
+    },
+    "emotionalTone": {
+      "category": "professional",
+      "confidence": 0.74,
+      "evidence": [
+        "our excellent and responsive customer service team is here to assist you.",
+        "Should you be in the process of advertising a position"
+      ],
+      "rationale": "Language centers on customer service and formal/professional phrasing rather than affective or playful content.",
+      "alternative": "neutral"
+    },
+    "engagementStyle": {
+      "category": "directive-iterative",
+      "confidence": 0.76,
+      "evidence": [
+        "rwrite ins imple eng - Whether you are posting a job",
+        "simpel erwd coomoin eng - If you\u2019re posting a job",
+        "in rpfashinal tone - If you\u2019re posting a job"
+      ],
+      "rationale": "Human gives directives and iterates on constraints (simpler/common words; then professional tone).",
+      "alternative": "reactive"
+    },
+    "knowledgeExchange": {
+      "category": "skill-sharing",
+      "confidence": 0.63,
+      "evidence": [
+        "rwrite ins imple eng",
+        "simpel erwd coomoin eng",
+        "in rpfashinal tone"
+      ],
+      "rationale": "Exchange is about language transformation skills (rewriting, simplifying, adjusting tone), not personal sharing.",
+      "alternative": "factual-info"
+    },
+    "conversationPurpose": {
+      "category": "problem-solving",
+      "confidence": 0.66,
+      "evidence": [
+        "rwrite ins imple eng",
+        "simpel erwd coomoin eng",
+        "in rpfashinal tone"
+      ],
+      "rationale": "Primary goal is to produce usable rewritten copy meeting constraints (a practical editing task).",
+      "alternative": "information-seeking"
+    },
+    "topicDepth": {
+      "category": "surface",
+      "confidence": 0.7,
+      "evidence": [
+        "If you're putting up a job, having trouble with the site",
+        "Smoke and fog combined is commonly known as \"smog.\""
+      ],
+      "rationale": "Requests are brief and focused on short rewrites/definitions without deeper exploration.",
+      "alternative": "moderate"
+    },
+    "turnTaking": {
+      "category": "assistant-dominant",
+      "confidence": 0.73,
+      "evidence": [
+        "Should you be in the process of advertising a position, encountering difficulties with our platform",
+        "If you're putting up a job, having trouble with the site"
+      ],
+      "rationale": "AI responses are substantially longer than the human prompts, which are short and directive.",
+      "alternative": "balanced"
+    },
+    "humanRole": {
+      "distribution": {
+        "information-seeker": 0.2,
+        "provider": 0.55,
+        "director": 0.2,
+        "collaborator": 0.05,
+        "social-expressor": 0.0,
+        "relational-peer": 0.0
+      },
+      "confidence": 0.74,
+      "evidence": [
+        {
+          "role": "provider",
+          "quote": "sunoke ebg comon wrds"
+        },
+        {
+          "role": "director",
+          "quote": "in rpfashinal tone - If you\u2019re posting a job"
+        }
+      ],
+      "rationale": "Human primarily requests outputs from the AI (definitions/rewrites) and also specifies constraints (tone/simplicity), mixing provider and director behaviors.",
+      "alternative": null
+    },
+    "aiRole": {
+      "distribution": {
+        "expert-system": 0.6,
+        "learning-facilitator": 0.0,
+        "advisor": 0.1,
+        "co-constructor": 0.25,
+        "social-facilitator": 0.0,
+        "relational-peer": 0.05
+      },
+      "confidence": 0.71,
+      "evidence": [
+        {
+          "role": "expert-system",
+          "quote": "Smoke and fog combined is commonly known as \"smog.\""
+        },
+        {
+          "role": "co-constructor",
+          "quote": "If you're putting up a job, having trouble with the site"
+        }
+      ],
+      "rationale": "AI provides direct answers and rewrites on request (expert-system), while also adapting text to specified constraints (co-constructor).",
+      "alternative": null
+    }
+  },
+  "classificationMetadata": {
+    "model": "gpt-5.2",
+    "provider": "openai",
+    "timestamp": "2026-01-08T17:03:06.429685",
+    "promptVersion": "2.0-social-role-theory",
+    "processingTimeMs": 15886,
+    "fewShotExamples": "yes"
   }
 }

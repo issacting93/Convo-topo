@@ -1,0 +1,3431 @@
+[
+  {
+    "id": "conv-0",
+    "messages": [
+      {
+        "role": "user",
+        "content": "hi , how are you doing ? i'm getting ready to do some cheetah chasing to stay in shape ."
+      },
+      {
+        "role": "assistant",
+        "content": "my mom was single with 3 boys , so we never left the projects ."
+      }
+    ],
+    "classification": {
+      "abstain": false,
+      "interactionPattern": {
+        "category": "casual-chat",
+        "confidence": 0.8,
+        "evidence": [
+          "hi , how are you doing ? i'm getting ready to do some cheetah chasing to stay in shape ."
+        ],
+        "rationale": "The conversation starts with a casual greeting and an unrelated statement about staying fit.",
+        "alternative": null
+      },
+      "powerDynamics": {
+        "category": "balanced",
+        "confidence": 0.7,
+        "evidence": [
+          "hi , how are you doing ? i'm getting ready to do some cheetah chasing to stay in shape ."
+        ],
+        "rationale": "The human initiates the conversation and shares a personal statement.",
+        "alternative": null
+      },
+      "emotionalTone": {
+        "category": "neutral",
+        "confidence": 0.6,
+        "evidence": [
+          "hi , how are you doing ? i'm getting ready to do some cheetah chasing to stay in shape ."
+        ],
+        "rationale": "The tone is casual and neutral.",
+        "alternative": null
+      },
+      "engagementStyle": {
+        "category": "reactive",
+        "confidence": 0.8,
+        "evidence": [
+          "my mom was single with 3 boys , so we never left the projects ."
+        ],
+        "rationale": "The AI responds with a personal statement about their own background.",
+        "alternative": null
+      },
+      "knowledgeExchange": {
+        "category": "personal-sharing",
+        "confidence": 0.7,
+        "evidence": [
+          "my mom was single with 3 boys , so we never left the projects ."
+        ],
+        "rationale": "The AI shares personal information about their upbringing.",
+        "alternative": null
+      },
+      "conversationPurpose": {
+        "category": "self-expression",
+        "confidence": 0.8,
+        "evidence": [
+          "my mom was single with 3 boys , so we never left the projects ."
+        ],
+        "rationale": "The AI uses the conversation to share personal experiences.",
+        "alternative": null
+      },
+      "topicDepth": {
+        "category": "surface",
+        "confidence": 0.6,
+        "evidence": [
+          "hi , how are you doing ? i'm getting ready to do some cheetah chasing to stay in shape ."
+        ],
+        "rationale": "The conversation is about personal background and fitness.",
+        "alternative": null
+      },
+      "turnTaking": {
+        "category": "balanced",
+        "confidence": 0.7,
+        "evidence": [
+          "hi , how are you doing ? i'm getting ready to do some cheetah chasing to stay in shape ."
+        ],
+        "rationale": "The conversation is back and forth with each party contributing equally.",
+        "alternative": null
+      },
+      "humanRole": {
+        "distribution": {
+          "seeker": 0.3,
+          "learner": 0.2,
+          "director": 0.1,
+          "collaborator": 0.0,
+          "sharer": 0.4,
+          "challenger": 0.0,
+          "teacher-evaluator": 0.0,
+          "philosophical-explorer": 0.0,
+          "artist": 0.0,
+          "tester": 0.0
+        },
+        "confidence": 0.8,
+        "evidence": [
+          {
+            "role": "seeker",
+            "quote": "hi , how are you doing ? i'm getting ready to do some cheetah chasing to stay in shape ."
+          }
+        ],
+        "rationale": "The human initiates the conversation with a casual greeting and personal statement.",
+        "alternative": null
+      },
+      "aiRole": {
+        "distribution": {
+          "expert": 0.0,
+          "advisor": 0.0,
+          "facilitator": 0.182,
+          "reflector": 0.091,
+          "peer": 0.0,
+          "affiliative": 0.0,
+          "learner": 0.0,
+          "creative-partner": 0.727,
+          "unable-to-engage": 0.0
+        },
+        "confidence": 0.8,
+        "evidence": [
+          {
+            "role": "expert",
+            "quote": "my mom was single with 3 boys , so we never left the projects ."
+          }
+        ],
+        "rationale": "The AI responds with a personal statement about their own background.",
+        "alternative": null
+      }
+    },
+    "classificationMetadata": {
+      "model": "qwen2.5:7b",
+      "provider": "ollama",
+      "timestamp": "2026-01-07T17:28:56.073848",
+      "promptVersion": "1.3-fewshot",
+      "processingTimeMs": 30622,
+      "correctionsApplied": true,
+      "fewShotExamples": "yes",
+      "maxRetries": 2
+    }
+  },
+  {
+    "id": "conv-1",
+    "messages": [
+      {
+        "role": "user",
+        "content": "hi , how are you doing ? i'm getting ready to do some cheetah chasing to stay in shape ."
+      },
+      {
+        "role": "assistant",
+        "content": "you must be very fast . hunting is one of my favorite hobbies ."
+      },
+      {
+        "role": "user",
+        "content": "i am ! for my hobby i like to do canning or some whittling ."
+      },
+      {
+        "role": "assistant",
+        "content": "hello i am doing well how are you ?"
+      }
+    ],
+    "classification": {
+      "abstain": false,
+      "interactionPattern": {
+        "category": "casual-chat",
+        "confidence": 0.8,
+        "evidence": [
+          "hi , how are you doing ?",
+          "hello i am doing well how are you?"
+        ],
+        "rationale": "Both participants greet each other and exchange pleasantries.",
+        "alternative": null
+      },
+      "powerDynamics": {
+        "category": "balanced",
+        "confidence": 0.7,
+        "evidence": [
+          "i'm getting ready to do some cheetah chasing to stay in shape .",
+          "hello i am doing well how are you ?"
+        ],
+        "rationale": "The conversation is reciprocal with both parties sharing information and asking questions.",
+        "alternative": null
+      },
+      "emotionalTone": {
+        "category": "neutral",
+        "confidence": 0.6,
+        "evidence": [
+          "i'm getting ready to do some cheetah chasing to stay in shape ."
+        ],
+        "rationale": "The tone is casual and neutral with no strong emotional content.",
+        "alternative": null
+      },
+      "engagementStyle": {
+        "category": "reactive",
+        "confidence": 0.8,
+        "evidence": [
+          "you must be very fast . hunting is one of my favorite hobbies ."
+        ],
+        "rationale": "AI responds to the human's statement with a related comment.",
+        "alternative": null
+      },
+      "knowledgeExchange": {
+        "category": "personal-sharing",
+        "confidence": 0.7,
+        "evidence": [
+          "i am ! for my hobby i like to do canning or some whittling ."
+        ],
+        "rationale": "The human shares personal information about their hobbies.",
+        "alternative": null
+      },
+      "conversationPurpose": {
+        "category": "relationship-building",
+        "confidence": 0.8,
+        "evidence": [
+          "i'm getting ready to do some cheetah chasing to stay in shape .",
+          "hello i am doing well how are you ?"
+        ],
+        "rationale": "The conversation aims to build rapport and share personal interests.",
+        "alternative": null
+      },
+      "topicDepth": {
+        "category": "surface",
+        "confidence": 0.6,
+        "evidence": [
+          "i'm getting ready to do some cheetah chasing to stay in shape .",
+          "hello i am doing well how are you ?"
+        ],
+        "rationale": "The topics discussed are at a surface level with no deep or complex content.",
+        "alternative": null
+      },
+      "turnTaking": {
+        "category": "balanced",
+        "confidence": 0.7,
+        "evidence": [
+          "i'm getting ready to do some cheetah chasing to stay in shape .",
+          "hello i am doing well how are you ?"
+        ],
+        "rationale": "The conversation is balanced with each participant taking turns speaking.",
+        "alternative": null
+      },
+      "humanRole": {
+        "distribution": {
+          "seeker": 0.3,
+          "learner": 0.1,
+          "director": 0.0,
+          "collaborator": 0.5,
+          "sharer": 0.1,
+          "challenger": 0.0,
+          "teacher-evaluator": 0.0,
+          "philosophical-explorer": 0.0,
+          "artist": 0.0,
+          "tester": 0.0
+        },
+        "confidence": 0.8,
+        "evidence": [
+          {
+            "role": "seeker",
+            "quote": "i'm getting ready to do some cheetah chasing to stay in shape ."
+          }
+        ],
+        "rationale": "The human initiates the conversation and shares personal information.",
+        "alternative": null
+      },
+      "aiRole": {
+        "distribution": {
+          "expert": 0.0,
+          "advisor": 0.1,
+          "facilitator": 0.6,
+          "reflector": 0.2,
+          "peer": 0.1,
+          "affiliative": 0.0,
+          "learner": 0.0,
+          "creative-partner": 0.0,
+          "unable-to-engage": 0.0
+        },
+        "confidence": 0.8,
+        "evidence": [
+          {
+            "role": "expert",
+            "quote": "you must be very fast . hunting is one of my favorite hobbies ."
+          }
+        ],
+        "rationale": "The AI responds with a related comment and asks a question.",
+        "alternative": null
+      }
+    },
+    "classificationMetadata": {
+      "model": "qwen2.5:7b",
+      "provider": "ollama",
+      "timestamp": "2026-01-07T17:29:26.911506",
+      "promptVersion": "1.3-fewshot",
+      "processingTimeMs": 30633,
+      "correctionsApplied": true,
+      "fewShotExamples": "yes",
+      "maxRetries": 2
+    }
+  },
+  {
+    "id": "conv-2",
+    "messages": [
+      {
+        "role": "user",
+        "content": "hi , how are you doing ? i'm getting ready to do some cheetah chasing to stay in shape ."
+      },
+      {
+        "role": "assistant",
+        "content": "you must be very fast . hunting is one of my favorite hobbies ."
+      },
+      {
+        "role": "user",
+        "content": "i am ! for my hobby i like to do canning or some whittling ."
+      },
+      {
+        "role": "assistant",
+        "content": "i also remodel homes when i am not out bow hunting ."
+      },
+      {
+        "role": "user",
+        "content": "that's neat . when i was in high school i placed 6th in 100m dash !"
+      },
+      {
+        "role": "assistant",
+        "content": "yes they do but i say no to them lol"
+      }
+    ],
+    "classification": {
+      "abstain": false,
+      "interactionPattern": {
+        "category": "casual-chat",
+        "confidence": 0.8,
+        "evidence": [
+          "hunting is one of my favorite hobbies"
+        ],
+        "rationale": "The conversation revolves around personal hobbies and interests, indicating a casual chat.",
+        "alternative": null
+      },
+      "powerDynamics": {
+        "category": "balanced",
+        "confidence": 0.7,
+        "evidence": [
+          "hunting is one of my favorite hobbies"
+        ],
+        "rationale": "Both participants share personal activities without dominance, suggesting a balanced dynamic.",
+        "alternative": null
+      },
+      "emotionalTone": {
+        "category": "neutral",
+        "confidence": 0.6,
+        "evidence": [
+          "hunting is one of my favorite hobbies"
+        ],
+        "rationale": "The conversation maintains a neutral tone, focusing on personal interests without emotional intensity.",
+        "alternative": null
+      },
+      "engagementStyle": {
+        "category": "reactive",
+        "confidence": 0.8,
+        "evidence": [
+          "hunting is one of my favorite hobbies"
+        ],
+        "rationale": "The AI responds to the human's statements, indicating a reactive engagement style.",
+        "alternative": null
+      },
+      "knowledgeExchange": {
+        "category": "personal-sharing",
+        "confidence": 0.7,
+        "evidence": [
+          "hunting is one of my favorite hobbies"
+        ],
+        "rationale": "Both participants share personal activities and interests, indicating a focus on personal sharing.",
+        "alternative": null
+      },
+      "conversationPurpose": {
+        "category": "information-seeking",
+        "confidence": 0.8,
+        "evidence": [
+          "hunting is one of my favorite hobbies"
+        ],
+        "rationale": "The conversation aims to share and learn about each other's interests, serving an information-seeking purpose.",
+        "alternative": null
+      },
+      "topicDepth": {
+        "category": "surface",
+        "confidence": 0.6,
+        "evidence": [
+          "hunting is one of my favorite hobbies"
+        ],
+        "rationale": "The conversation focuses on surface-level activities and interests, not delving into deeper topics.",
+        "alternative": null
+      },
+      "turnTaking": {
+        "category": "balanced",
+        "confidence": 0.7,
+        "evidence": [
+          "hunting is one of my favorite hobbies"
+        ],
+        "rationale": "Both participants take turns sharing their interests, indicating a balanced turn-taking pattern.",
+        "alternative": null
+      },
+      "humanRole": {
+        "distribution": {
+          "seeker": 0.5,
+          "learner": 0.2,
+          "director": 0.1,
+          "collaborator": 0.1,
+          "sharer": 0.1,
+          "challenger": 0.0,
+          "teacher-evaluator": 0.0,
+          "philosophical-explorer": 0.0,
+          "artist": 0.0,
+          "tester": 0.0
+        },
+        "confidence": 0.8,
+        "evidence": [
+          {
+            "role": "seeker",
+            "quote": "i'm getting ready to do some cheetah chasing to stay in shape"
+          }
+        ],
+        "rationale": "The human seeks to share their hobby and interests.",
+        "alternative": null
+      },
+      "aiRole": {
+        "distribution": {
+          "expert": 0.182,
+          "advisor": 0.273,
+          "facilitator": 0.454,
+          "reflector": 0.0,
+          "peer": 0.091,
+          "affiliative": 0.0,
+          "learner": 0.0,
+          "creative-partner": 0.0,
+          "unable-to-engage": 0.0
+        },
+        "confidence": 0.8,
+        "evidence": [
+          {
+            "role": "expert",
+            "quote": "hunting is one of my favorite hobbies"
+          }
+        ],
+        "rationale": "The AI shares its own hobby and interests in response.",
+        "alternative": null
+      }
+    },
+    "classificationMetadata": {
+      "model": "qwen2.5:7b",
+      "provider": "ollama",
+      "timestamp": "2026-01-07T17:29:57.066690",
+      "promptVersion": "1.3-fewshot",
+      "processingTimeMs": 29948,
+      "correctionsApplied": true,
+      "fewShotExamples": "yes",
+      "maxRetries": 2
+    }
+  },
+  {
+    "id": "conv-3",
+    "messages": [
+      {
+        "role": "user",
+        "content": "hi , how are you doing ? i'm getting ready to do some cheetah chasing to stay in shape ."
+      },
+      {
+        "role": "assistant",
+        "content": "you must be very fast . hunting is one of my favorite hobbies ."
+      },
+      {
+        "role": "user",
+        "content": "i am ! for my hobby i like to do canning or some whittling ."
+      },
+      {
+        "role": "assistant",
+        "content": "i also remodel homes when i am not out bow hunting ."
+      },
+      {
+        "role": "user",
+        "content": "that's neat . when i was in high school i placed 6th in 100m dash !"
+      },
+      {
+        "role": "assistant",
+        "content": "that's awesome . do you have a favorite season or time of year ?"
+      },
+      {
+        "role": "user",
+        "content": "i do not . but i do have a favorite meat since that is all i eat exclusively ."
+      },
+      {
+        "role": "assistant",
+        "content": "not really , it is just a small local radio station . what about you , what do you do ?"
+      }
+    ],
+    "classification": {
+      "abstain": false,
+      "interactionPattern": {
+        "category": "casual-chat",
+        "confidence": 0.9,
+        "evidence": [
+          "i'm getting ready to do some cheetah chasing to stay in shape.",
+          "hunting is one of my favorite hobbies."
+        ],
+        "rationale": "The conversation revolves around personal interests and hobbies.",
+        "alternative": null
+      },
+      "powerDynamics": {
+        "category": "balanced",
+        "confidence": 0.8,
+        "evidence": [
+          "i'm getting ready to do some cheetah chasing to stay in shape.",
+          "hunting is one of my favorite hobbies."
+        ],
+        "rationale": "Both parties share their interests and hobbies without dominance from either side.",
+        "alternative": null
+      },
+      "emotionalTone": {
+        "category": "neutral",
+        "confidence": 0.6,
+        "evidence": [
+          "i'm getting ready to do some cheetah chasing to stay in shape."
+        ],
+        "rationale": "The conversation is casual and neutral in tone.",
+        "alternative": null
+      },
+      "engagementStyle": {
+        "category": "reactive",
+        "confidence": 0.8,
+        "evidence": [
+          "hunting is one of my favorite hobbies."
+        ],
+        "rationale": "The AI responds to the human's statements with relevant information.",
+        "alternative": null
+      },
+      "knowledgeExchange": {
+        "category": "personal-sharing",
+        "confidence": 0.7,
+        "evidence": [
+          "i'm getting ready to do some cheetah chasing to stay in shape.",
+          "hunting is one of my favorite hobbies."
+        ],
+        "rationale": "Both participants share personal interests and experiences.",
+        "alternative": null
+      },
+      "conversationPurpose": {
+        "category": "relationship-building",
+        "confidence": 0.8,
+        "evidence": [
+          "i'm getting ready to do some cheetah chasing to stay in shape.",
+          "hunting is one of my favorite hobbies."
+        ],
+        "rationale": "The conversation aims to build rapport through shared interests.",
+        "alternative": null
+      },
+      "topicDepth": {
+        "category": "surface",
+        "confidence": 0.6,
+        "evidence": [
+          "i'm getting ready to do some cheetah chasing to stay in shape.",
+          "hunting is one of my favorite hobbies."
+        ],
+        "rationale": "The topics discussed are at a surface level and not deeply explored.",
+        "alternative": null
+      },
+      "turnTaking": {
+        "category": "balanced",
+        "confidence": 0.7,
+        "evidence": [
+          "i'm getting ready to do some cheetah chasing to stay in shape.",
+          "hunting is one of my favorite hobbies."
+        ],
+        "rationale": "Both participants take turns sharing information and responding to each other.",
+        "alternative": null
+      },
+      "humanRole": {
+        "distribution": {
+          "seeker": 0.5,
+          "learner": 0.2,
+          "director": 0.1,
+          "collaborator": 0.1,
+          "sharer": 0.1,
+          "challenger": 0.0,
+          "teacher-evaluator": 0.0,
+          "philosophical-explorer": 0.0,
+          "artist": 0.0,
+          "tester": 0.0
+        },
+        "confidence": 0.8,
+        "evidence": [
+          {
+            "role": "seeker",
+            "quote": "i'm getting ready to do some cheetah chasing to stay in shape."
+          }
+        ],
+        "rationale": "The human initiates the conversation and shares personal interests.",
+        "alternative": null
+      },
+      "aiRole": {
+        "distribution": {
+          "expert": 0.2,
+          "advisor": 0.1,
+          "facilitator": 0.6,
+          "reflector": 0.0,
+          "peer": 0.1,
+          "affiliative": 0.0,
+          "learner": 0.0,
+          "creative-partner": 0.0,
+          "unable-to-engage": 0.0
+        },
+        "confidence": 0.8,
+        "evidence": [
+          {
+            "role": "facilitator",
+            "quote": "hunting is one of my favorite hobbies."
+          }
+        ],
+        "rationale": "The AI facilitates the conversation by sharing related information.",
+        "alternative": null
+      }
+    },
+    "classificationMetadata": {
+      "model": "qwen2.5:7b",
+      "provider": "ollama",
+      "timestamp": "2026-01-07T17:30:27.746343",
+      "promptVersion": "1.3-fewshot",
+      "processingTimeMs": 30478,
+      "correctionsApplied": true,
+      "fewShotExamples": "yes",
+      "maxRetries": 2
+    }
+  },
+  {
+    "id": "conv-4",
+    "messages": [
+      {
+        "role": "user",
+        "content": "hi , how are you doing ? i'm getting ready to do some cheetah chasing to stay in shape ."
+      },
+      {
+        "role": "assistant",
+        "content": "you must be very fast . hunting is one of my favorite hobbies ."
+      },
+      {
+        "role": "user",
+        "content": "i am ! for my hobby i like to do canning or some whittling ."
+      },
+      {
+        "role": "assistant",
+        "content": "i also remodel homes when i am not out bow hunting ."
+      },
+      {
+        "role": "user",
+        "content": "that's neat . when i was in high school i placed 6th in 100m dash !"
+      },
+      {
+        "role": "assistant",
+        "content": "that's awesome . do you have a favorite season or time of year ?"
+      },
+      {
+        "role": "user",
+        "content": "i do not . but i do have a favorite meat since that is all i eat exclusively ."
+      },
+      {
+        "role": "assistant",
+        "content": "what is your favorite meat to eat ?"
+      },
+      {
+        "role": "user",
+        "content": "i would have to say its prime rib . do you have any favorite foods ?"
+      },
+      {
+        "role": "assistant",
+        "content": "i am listening to system of a down , i wonder if your cat would like them"
+      }
+    ],
+    "classification": {
+      "abstain": false,
+      "interactionPattern": {
+        "category": "casual-chat",
+        "confidence": 0.8,
+        "evidence": [
+          "i'm getting ready to do some cheetah chasing to stay in shape .",
+          "hunting is one of my favorite hobbies ."
+        ],
+        "rationale": "The conversation involves personal interests and hobbies, indicating a casual chat.",
+        "alternative": null
+      },
+      "powerDynamics": {
+        "category": "balanced",
+        "confidence": 0.7,
+        "evidence": [
+          "i'm getting ready to do some cheetah chasing to stay in shape .",
+          "hunting is one of my favorite hobbies ."
+        ],
+        "rationale": "Both parties share personal interests and engage in a back-and-forth conversation.",
+        "alternative": null
+      },
+      "emotionalTone": {
+        "category": "neutral",
+        "confidence": 0.6,
+        "evidence": [
+          "i'm getting ready to do some cheetah chasing to stay in shape .",
+          "hunting is one of my favorite hobbies ."
+        ],
+        "rationale": "The conversation maintains a neutral tone with no strong emotional indicators.",
+        "alternative": null
+      },
+      "engagementStyle": {
+        "category": "questioning",
+        "confidence": 0.8,
+        "evidence": [
+          "i do have a favorite meat since that is all i eat exclusively .",
+          "do you have any favorite foods ?"
+        ],
+        "rationale": "The AI asks questions to continue the conversation and gather more information.",
+        "alternative": null
+      },
+      "knowledgeExchange": {
+        "category": "personal-sharing",
+        "confidence": 0.7,
+        "evidence": [
+          "i am ! for my hobby i like to do canning or some whittling .",
+          "that's neat . when i was in high school i placed 6th in 100m dash !"
+        ],
+        "rationale": "The conversation involves sharing personal experiences and interests.",
+        "alternative": null
+      },
+      "conversationPurpose": {
+        "category": "information-seeking",
+        "confidence": 0.8,
+        "evidence": [
+          "i do have a favorite meat since that is all i eat exclusively .",
+          "do you have any favorite foods ?"
+        ],
+        "rationale": "The AI seeks to learn more about the human's preferences and interests.",
+        "alternative": null
+      },
+      "topicDepth": {
+        "category": "surface",
+        "confidence": 0.6,
+        "evidence": [
+          "i'm getting ready to do some cheetah chasing to stay in shape .",
+          "hunting is one of my favorite hobbies ."
+        ],
+        "rationale": "The conversation focuses on surface-level topics such as personal interests and preferences.",
+        "alternative": null
+      },
+      "turnTaking": {
+        "category": "balanced",
+        "confidence": 0.7,
+        "evidence": [
+          "i'm getting ready to do some cheetah chasing to stay in shape .",
+          "hunting is one of my favorite hobbies ."
+        ],
+        "rationale": "Both parties take turns speaking, maintaining a balanced conversation.",
+        "alternative": null
+      },
+      "humanRole": {
+        "distribution": {
+          "seeker": 0.7,
+          "learner": 0.2,
+          "director": 0.1,
+          "collaborator": 0.0,
+          "sharer": 0.0,
+          "challenger": 0.0,
+          "teacher-evaluator": 0.0,
+          "philosophical-explorer": 0.0,
+          "artist": 0.0,
+          "tester": 0.0
+        },
+        "confidence": 0.8,
+        "evidence": [
+          {
+            "role": "seeker",
+            "quote": "i do have a favorite meat since that is all i eat exclusively ."
+          }
+        ],
+        "rationale": "The human seeks to share personal information and preferences.",
+        "alternative": null
+      },
+      "aiRole": {
+        "distribution": {
+          "expert": 0.2,
+          "advisor": 0.0,
+          "facilitator": 0.8,
+          "reflector": 0.0,
+          "peer": 0.0,
+          "affiliative": 0.0,
+          "learner": 0.0,
+          "creative-partner": 0.0,
+          "unable-to-engage": 0.0
+        },
+        "confidence": 0.8,
+        "evidence": [
+          {
+            "role": "facilitator",
+            "quote": "you must be very fast . hunting is one of my favorite hobbies ."
+          }
+        ],
+        "rationale": "The AI facilitates the conversation by responding and asking questions.",
+        "alternative": null
+      }
+    },
+    "classificationMetadata": {
+      "model": "qwen2.5:7b",
+      "provider": "ollama",
+      "timestamp": "2026-01-07T17:31:01.561946",
+      "promptVersion": "1.3-fewshot",
+      "processingTimeMs": 33606,
+      "correctionsApplied": true,
+      "fewShotExamples": "yes",
+      "maxRetries": 2
+    }
+  },
+  {
+    "id": "conv-5",
+    "messages": [
+      {
+        "role": "user",
+        "content": "hi , how are you doing ? i'm getting ready to do some cheetah chasing to stay in shape ."
+      },
+      {
+        "role": "assistant",
+        "content": "you must be very fast . hunting is one of my favorite hobbies ."
+      },
+      {
+        "role": "user",
+        "content": "i am ! for my hobby i like to do canning or some whittling ."
+      },
+      {
+        "role": "assistant",
+        "content": "i also remodel homes when i am not out bow hunting ."
+      },
+      {
+        "role": "user",
+        "content": "that's neat . when i was in high school i placed 6th in 100m dash !"
+      },
+      {
+        "role": "assistant",
+        "content": "that's awesome . do you have a favorite season or time of year ?"
+      },
+      {
+        "role": "user",
+        "content": "i do not . but i do have a favorite meat since that is all i eat exclusively ."
+      },
+      {
+        "role": "assistant",
+        "content": "what is your favorite meat to eat ?"
+      },
+      {
+        "role": "user",
+        "content": "i would have to say its prime rib . do you have any favorite foods ?"
+      },
+      {
+        "role": "assistant",
+        "content": "i like chicken or macaroni and cheese ."
+      },
+      {
+        "role": "user",
+        "content": "do you have anything planned for today ? i think i am going to do some canning ."
+      },
+      {
+        "role": "assistant",
+        "content": "that sounds nice . do you make your own ?"
+      }
+    ],
+    "classification": {
+      "abstain": false,
+      "interactionPattern": {
+        "category": "casual-chat",
+        "confidence": 0.8,
+        "evidence": [
+          "i'm getting ready to do some cheetah chasing to stay in shape .",
+          "hunting is one of my favorite hobbies ."
+        ],
+        "rationale": "The conversation revolves around personal interests and activities, such as hunting, canning, and whittling.",
+        "alternative": null
+      },
+      "powerDynamics": {
+        "category": "balanced",
+        "confidence": 0.7,
+        "evidence": [
+          "you must be very fast . hunting is one of my favorite hobbies .",
+          "i also remodel homes when i am not out bow hunting ."
+        ],
+        "rationale": "Both participants share personal interests and activities, indicating a balanced dynamic.",
+        "alternative": null
+      },
+      "emotionalTone": {
+        "category": "neutral",
+        "confidence": 0.6,
+        "evidence": [
+          "i'm getting ready to do some cheetah chasing to stay in shape .",
+          "hunting is one of my favorite hobbies ."
+        ],
+        "rationale": "The conversation is casual and informative, without strong emotional content.",
+        "alternative": null
+      },
+      "engagementStyle": {
+        "category": "reactive",
+        "confidence": 0.8,
+        "evidence": [
+          "you must be very fast . hunting is one of my favorite hobbies .",
+          "i also remodel homes when i am not out bow hunting ."
+        ],
+        "rationale": "The AI responds to the human's statements, indicating a reactive engagement style.",
+        "alternative": null
+      },
+      "knowledgeExchange": {
+        "category": "personal-sharing",
+        "confidence": 0.7,
+        "evidence": [
+          "i am ! for my hobby i like to do canning or some whittling .",
+          "that's neat . when i was in high school i placed 6th in 100m dash !"
+        ],
+        "rationale": "The conversation involves sharing personal interests and achievements.",
+        "alternative": null
+      },
+      "conversationPurpose": {
+        "category": "information-seeking",
+        "confidence": 0.8,
+        "evidence": [
+          "i do not . but i do have a favorite meat since that is all i eat exclusively .",
+          "do you have any favorite foods ?"
+        ],
+        "rationale": "The human seeks information about the AI's preferences, indicating an information-seeking purpose.",
+        "alternative": null
+      },
+      "topicDepth": {
+        "category": "surface",
+        "confidence": 0.6,
+        "evidence": [
+          "i'm getting ready to do some cheetah chasing to stay in shape .",
+          "hunting is one of my favorite hobbies ."
+        ],
+        "rationale": "The conversation focuses on surface-level activities and interests.",
+        "alternative": null
+      },
+      "turnTaking": {
+        "category": "balanced",
+        "confidence": 0.7,
+        "evidence": [
+          "i'm getting ready to do some cheetah chasing to stay in shape .",
+          "that sounds nice . do you make your own ?"
+        ],
+        "rationale": "Both participants take turns speaking, indicating balanced turn-taking.",
+        "alternative": null
+      },
+      "humanRole": {
+        "distribution": {
+          "seeker": 0.7,
+          "learner": 0.2,
+          "director": 0.1,
+          "collaborator": 0.0,
+          "sharer": 0.0,
+          "challenger": 0.0,
+          "teacher-evaluator": 0.0,
+          "philosophical-explorer": 0.0,
+          "artist": 0.0,
+          "tester": 0.0
+        },
+        "confidence": 0.8,
+        "evidence": [
+          {
+            "role": "seeker",
+            "quote": "i do not . but i do have a favorite meat since that is all i eat exclusively ."
+          }
+        ],
+        "rationale": "The human seeks information about the AI's preferences.",
+        "alternative": null
+      },
+      "aiRole": {
+        "distribution": {
+          "expert": 0.2,
+          "advisor": 0.0,
+          "facilitator": 0.8,
+          "reflector": 0.0,
+          "peer": 0.0,
+          "affiliative": 0.0,
+          "learner": 0.0,
+          "creative-partner": 0.0,
+          "unable-to-engage": 0.0
+        },
+        "confidence": 0.8,
+        "evidence": [
+          {
+            "role": " facilitator",
+            "quote": "that sounds nice . do you make your own ?"
+          }
+        ],
+        "rationale": "The AI facilitates the conversation by responding to the human's statements.",
+        "alternative": null
+      }
+    },
+    "classificationMetadata": {
+      "model": "qwen2.5:7b",
+      "provider": "ollama",
+      "timestamp": "2026-01-07T17:31:35.654412",
+      "promptVersion": "1.3-fewshot",
+      "processingTimeMs": 33883,
+      "correctionsApplied": true,
+      "fewShotExamples": "yes",
+      "maxRetries": 2
+    }
+  },
+  {
+    "id": "conv-6",
+    "messages": [
+      {
+        "role": "user",
+        "content": "hi , how are you doing ? i'm getting ready to do some cheetah chasing to stay in shape ."
+      },
+      {
+        "role": "assistant",
+        "content": "you must be very fast . hunting is one of my favorite hobbies ."
+      },
+      {
+        "role": "user",
+        "content": "i am ! for my hobby i like to do canning or some whittling ."
+      },
+      {
+        "role": "assistant",
+        "content": "i also remodel homes when i am not out bow hunting ."
+      },
+      {
+        "role": "user",
+        "content": "that's neat . when i was in high school i placed 6th in 100m dash !"
+      },
+      {
+        "role": "assistant",
+        "content": "that's awesome . do you have a favorite season or time of year ?"
+      },
+      {
+        "role": "user",
+        "content": "i do not . but i do have a favorite meat since that is all i eat exclusively ."
+      },
+      {
+        "role": "assistant",
+        "content": "what is your favorite meat to eat ?"
+      },
+      {
+        "role": "user",
+        "content": "i would have to say its prime rib . do you have any favorite foods ?"
+      },
+      {
+        "role": "assistant",
+        "content": "i like chicken or macaroni and cheese ."
+      },
+      {
+        "role": "user",
+        "content": "do you have anything planned for today ? i think i am going to do some canning ."
+      },
+      {
+        "role": "assistant",
+        "content": "i am going to watch football . what are you canning ?"
+      },
+      {
+        "role": "user",
+        "content": "i think i will can some jam . do you also play footfall for fun ?"
+      },
+      {
+        "role": "assistant",
+        "content": "awesome . so what do you do for a living ?"
+      }
+    ],
+    "classification": {
+      "abstain": false,
+      "interactionPattern": {
+        "category": "casual-chat",
+        "confidence": 0.8,
+        "evidence": [
+          "i'm getting ready to do some cheetah chasing to stay in shape",
+          "hunting is one of my favorite hobbies",
+          "i also remodel homes when i am not out bow hunting"
+        ],
+        "rationale": "The conversation involves casual topics such as hobbies and activities, indicating a casual-chat interaction pattern.",
+        "alternative": null
+      },
+      "powerDynamics": {
+        "category": "balanced",
+        "confidence": 0.7,
+        "evidence": [
+          "i'm getting ready to do some cheetah chasing to stay in shape",
+          "hunting is one of my favorite hobbies"
+        ],
+        "rationale": "Both participants share their interests and activities, suggesting a balanced power dynamic.",
+        "alternative": null
+      },
+      "emotionalTone": {
+        "category": "neutral",
+        "confidence": 0.6,
+        "evidence": [
+          "i'm getting ready to do some cheetah chasing to stay in shape",
+          "hunting is one of my favorite hobbies"
+        ],
+        "rationale": "The conversation is light and friendly, with no strong emotional content.",
+        "alternative": null
+      },
+      "engagementStyle": {
+        "category": "reactive",
+        "confidence": 0.8,
+        "evidence": [
+          "you must be very fast",
+          "that's neat"
+        ],
+        "rationale": "The AI responds to the human\u2019s statements without leading or directing the conversation.",
+        "alternative": null
+      },
+      "knowledgeExchange": {
+        "category": "personal-sharing",
+        "confidence": 0.7,
+        "evidence": [
+          "i'm getting ready to do some cheetah chasing to stay in shape",
+          "hunting is one of my favorite hobbies"
+        ],
+        "rationale": "The participants share personal information and experiences, focusing on their hobbies.",
+        "alternative": null
+      },
+      "conversationPurpose": {
+        "category": "information-seeking",
+        "confidence": 0.8,
+        "evidence": [
+          "i do not . but i do have a favorite meat since that is all i eat exclusively",
+          "do you also play footfall for fun"
+        ],
+        "rationale": "The conversation includes questions and statements aimed at gathering information about each other's preferences.",
+        "alternative": null
+      },
+      "topicDepth": {
+        "category": "surface",
+        "confidence": 0.6,
+        "evidence": [
+          "i'm getting ready to do some cheetah chasing to stay in shape",
+          "hunting is one of my favorite hobbies"
+        ],
+        "rationale": "The topics discussed are at a surface level, focusing on general interests and activities.",
+        "alternative": null
+      },
+      "turnTaking": {
+        "category": "balanced",
+        "confidence": 0.7,
+        "evidence": [
+          "i'm getting ready to do some cheetah chasing to stay in shape",
+          "hunting is one of my favorite hobbies"
+        ],
+        "rationale": "Both participants take turns speaking, maintaining a balanced turn-taking pattern.",
+        "alternative": null
+      },
+      "humanRole": {
+        "distribution": {
+          "seeker": 0.7,
+          "learner": 0.2,
+          "director": 0.1,
+          "collaborator": 0.0,
+          "sharer": 0.0,
+          "challenger": 0.0,
+          "teacher-evaluator": 0.0,
+          "philosophical-explorer": 0.0,
+          "artist": 0.0,
+          "tester": 0.0
+        },
+        "confidence": 0.8,
+        "evidence": [
+          {
+            "role": "seeker",
+            "quote": "i do not . but i do have a favorite meat since that is all i eat exclusively"
+          }
+        ],
+        "rationale": "The human seeks information about the AI's preferences.",
+        "alternative": null
+      },
+      "aiRole": {
+        "distribution": {
+          "expert": 0.2,
+          "advisor": 0.0,
+          "facilitator": 0.8,
+          "reflector": 0.0,
+          "peer": 0.0,
+          "affiliative": 0.0,
+          "learner": 0.0,
+          "creative-partner": 0.0,
+          "unable-to-engage": 0.0
+        },
+        "confidence": 0.8,
+        "evidence": [
+          {
+            "role": "facilitator",
+            "quote": "i am going to watch football"
+          }
+        ],
+        "rationale": "The AI facilitates the conversation by responding to the human's statements and asking questions.",
+        "alternative": null
+      }
+    },
+    "classificationMetadata": {
+      "model": "qwen2.5:7b",
+      "provider": "ollama",
+      "timestamp": "2026-01-07T17:32:09.288010",
+      "promptVersion": "1.3-fewshot",
+      "processingTimeMs": 33425,
+      "correctionsApplied": true,
+      "fewShotExamples": "yes",
+      "maxRetries": 2
+    }
+  },
+  {
+    "id": "conv-7",
+    "messages": [
+      {
+        "role": "user",
+        "content": "hi , how are you doing today ?"
+      },
+      {
+        "role": "assistant",
+        "content": "there was one person better than me , but i will keep trying to pass"
+      }
+    ],
+    "classification": {
+      "abstain": false,
+      "interactionPattern": {
+        "category": "casual-chat",
+        "confidence": 0.8,
+        "evidence": [
+          "hi , how are you doing today ?"
+        ],
+        "rationale": "greeting and casual inquiry about well-being",
+        "alternative": null
+      },
+      "powerDynamics": {
+        "category": "balanced",
+        "confidence": 0.7,
+        "evidence": [
+          "there was one person better than me , but i will keep trying to pass"
+        ],
+        "rationale": "AI acknowledges its limitations but maintains a positive attitude",
+        "alternative": null
+      },
+      "emotionalTone": {
+        "category": "neutral",
+        "confidence": 0.6,
+        "evidence": [
+          "hi , how are you doing today ?"
+        ],
+        "rationale": "casual and neutral tone in the greeting",
+        "alternative": null
+      },
+      "engagementStyle": {
+        "category": "reactive",
+        "confidence": 0.8,
+        "evidence": [
+          "there was one person better than me , but i will keep trying to pass"
+        ],
+        "rationale": "AI responds to a casual inquiry with its own statement",
+        "alternative": null
+      },
+      "knowledgeExchange": {
+        "category": "personal-sharing",
+        "confidence": 0.7,
+        "evidence": [
+          "there was one person better than me , but i will keep trying to pass"
+        ],
+        "rationale": "AI shares personal information about its capabilities",
+        "alternative": null
+      },
+      "conversationPurpose": {
+        "category": "information-seeking",
+        "confidence": 0.6,
+        "evidence": [
+          "hi , how are you doing today ?"
+        ],
+        "rationale": "initial inquiry seeking basic information",
+        "alternative": null
+      },
+      "topicDepth": {
+        "category": "surface",
+        "confidence": 0.7,
+        "evidence": [
+          "hi , how are you doing today ?"
+        ],
+        "rationale": "casual greeting and well-being check",
+        "alternative": null
+      },
+      "turnTaking": {
+        "category": "balanced",
+        "confidence": 0.8,
+        "evidence": [
+          "hi , how are you doing today ?"
+        ],
+        "rationale": "initial response from AI is a natural follow-up to the human's greeting",
+        "alternative": null
+      },
+      "humanRole": {
+        "distribution": {
+          "seeker": 1.0,
+          "learner": 0.0,
+          "director": 0.0,
+          "collaborator": 0.0,
+          "sharer": 0.0,
+          "challenger": 0.0,
+          "teacher-evaluator": 0.0,
+          "philosophical-explorer": 0.0,
+          "artist": 0.0,
+          "tester": 0.0
+        },
+        "confidence": 1.0,
+        "evidence": [
+          {
+            "role": "seeker",
+            "quote": "hi , how are you doing today ?"
+          }
+        ],
+        "rationale": "human initiates conversation with a greeting and inquiry",
+        "alternative": null
+      },
+      "aiRole": {
+        "distribution": {
+          "expert": 0.0,
+          "advisor": 0.0,
+          "facilitator": 0.2,
+          "reflector": 0.0,
+          "peer": 0.0,
+          "affiliative": 0.0,
+          "learner": 0.0,
+          "creative-partner": 0.0,
+          "unable-to-engage": 0.8
+        },
+        "confidence": 0.8,
+        "evidence": [
+          {
+            "role": "expert",
+            "quote": "there was one person better than me , but i will keep trying to pass"
+          }
+        ],
+        "rationale": "AI responds with a statement about its capabilities and attitude",
+        "alternative": null
+      }
+    },
+    "classificationMetadata": {
+      "model": "qwen2.5:7b",
+      "provider": "ollama",
+      "timestamp": "2026-01-07T17:32:37.435340",
+      "promptVersion": "1.3-fewshot",
+      "processingTimeMs": 27937,
+      "correctionsApplied": true,
+      "fewShotExamples": "yes",
+      "maxRetries": 2
+    }
+  },
+  {
+    "id": "conv-8",
+    "messages": [
+      {
+        "role": "user",
+        "content": "hi , how are you doing today ?"
+      },
+      {
+        "role": "assistant",
+        "content": "i am spending time with my 4 sisters what are you up to"
+      },
+      {
+        "role": "user",
+        "content": "wow , four sisters . just watching game of thrones ."
+      },
+      {
+        "role": "assistant",
+        "content": "that would be great . what do you do on the weekends ?"
+      }
+    ],
+    "classification": {
+      "abstain": false,
+      "interactionPattern": {
+        "category": "casual-chat",
+        "confidence": 0.8,
+        "evidence": [
+          "what are you up to",
+          "what do you do on the weekends?"
+        ],
+        "rationale": "The conversation is friendly and inquiring about each other's activities.",
+        "alternative": null
+      },
+      "powerDynamics": {
+        "category": "balanced",
+        "confidence": 0.7,
+        "evidence": [
+          "i am spending time with my 4 sisters what are you up to",
+          "what do you do on the weekends?"
+        ],
+        "rationale": "The dialogue is reciprocal, with both parties asking questions and sharing information.",
+        "alternative": null
+      },
+      "emotionalTone": {
+        "category": "neutral",
+        "confidence": 0.6,
+        "evidence": [
+          "i am spending time with my 4 sisters what are you up to",
+          "what do you do on the weekends?"
+        ],
+        "rationale": "The tone is casual and neutral, focusing on everyday activities.",
+        "alternative": null
+      },
+      "engagementStyle": {
+        "category": "reactive",
+        "confidence": 0.8,
+        "evidence": [
+          "i am spending time with my 4 sisters what are you up to",
+          "what do you do on the weekends?"
+        ],
+        "rationale": "The engagement is reactive, responding to the other party's questions.",
+        "alternative": null
+      },
+      "knowledgeExchange": {
+        "category": "personal-sharing",
+        "confidence": 0.7,
+        "evidence": [
+          "i am spending time with my 4 sisters what are you up to",
+          "what do you do on the weekends?"
+        ],
+        "rationale": "The conversation involves sharing personal activities and interests.",
+        "alternative": null
+      },
+      "conversationPurpose": {
+        "category": "relationship-building",
+        "confidence": 0.8,
+        "evidence": [
+          "i am spending time with my 4 sisters what are you up to",
+          "what do you do on the weekends?"
+        ],
+        "rationale": "The purpose is to build rapport and engage in friendly conversation.",
+        "alternative": null
+      },
+      "topicDepth": {
+        "category": "surface",
+        "confidence": 0.6,
+        "evidence": [
+          "i am spending time with my 4 sisters what are you up to",
+          "what do you do on the weekends?"
+        ],
+        "rationale": "The topics discussed are at a surface level, focusing on current activities.",
+        "alternative": null
+      },
+      "turnTaking": {
+        "category": "balanced",
+        "confidence": 0.7,
+        "evidence": [
+          "i am spending time with my 4 sisters what are you up to",
+          "what do you do on the weekends?"
+        ],
+        "rationale": "Both parties take turns speaking, maintaining a balanced conversation.",
+        "alternative": null
+      },
+      "humanRole": {
+        "distribution": {
+          "seeker": 0.3,
+          "learner": 0.1,
+          "director": 0.0,
+          "collaborator": 0.2,
+          "sharer": 0.4,
+          "challenger": 0.0,
+          "teacher-evaluator": 0.0,
+          "philosophical-explorer": 0.0,
+          "artist": 0.0,
+          "tester": 0.0
+        },
+        "confidence": 0.8,
+        "evidence": [
+          {
+            "role": "sharer",
+            "quote": "wow , four sisters . just watching game of thrones ."
+          }
+        ],
+        "rationale": "The human is sharing information and responding to the AI's questions.",
+        "alternative": null
+      },
+      "aiRole": {
+        "distribution": {
+          "expert": 0.2,
+          "advisor": 0.1,
+          "facilitator": 0.5,
+          "reflector": 0.0,
+          "peer": 0.0,
+          "affiliative": 0.0,
+          "learner": 0.0,
+          "creative-partner": 0.0,
+          "unable-to-engage": 0.2
+        },
+        "confidence": 0.8,
+        "evidence": [
+          {
+            "role": "facilitator",
+            "quote": "i am spending time with my 4 sisters what are you up to"
+          }
+        ],
+        "rationale": "The AI is facilitating the conversation by sharing information and asking questions.",
+        "alternative": null
+      }
+    },
+    "classificationMetadata": {
+      "model": "qwen2.5:7b",
+      "provider": "ollama",
+      "timestamp": "2026-01-07T17:33:10.199484",
+      "promptVersion": "1.3-fewshot",
+      "processingTimeMs": 32554,
+      "correctionsApplied": true,
+      "fewShotExamples": "yes",
+      "maxRetries": 2
+    }
+  },
+  {
+    "id": "conv-9",
+    "messages": [
+      {
+        "role": "user",
+        "content": "hi , how are you doing today ?"
+      },
+      {
+        "role": "assistant",
+        "content": "i am spending time with my 4 sisters what are you up to"
+      },
+      {
+        "role": "user",
+        "content": "wow , four sisters . just watching game of thrones ."
+      },
+      {
+        "role": "assistant",
+        "content": "that is a good show i watch that while drinking iced tea"
+      },
+      {
+        "role": "user",
+        "content": "i agree . what do you do for a living ?"
+      },
+      {
+        "role": "assistant",
+        "content": "very long , she was with me when i colored my hair pink"
+      }
+    ],
+    "classification": {
+      "abstain": false,
+      "interactionPattern": {
+        "category": "casual-chat",
+        "confidence": 0.8,
+        "evidence": [
+          "i am spending time with my 4 sisters what are you up to",
+          "that is a good show i watch that while drinking iced tea"
+        ],
+        "rationale": "The conversation involves casual topics such as family and hobbies, indicating a friendly chat.",
+        "alternative": null
+      },
+      "powerDynamics": {
+        "category": "balanced",
+        "confidence": 0.7,
+        "evidence": [
+          "i am spending time with my 4 sisters what are you up to",
+          "that is a good show i watch that while drinking iced tea"
+        ],
+        "rationale": "Both participants share information and ask questions, indicating balanced interaction.",
+        "alternative": null
+      },
+      "emotionalTone": {
+        "category": "neutral",
+        "confidence": 0.6,
+        "evidence": [
+          "i am spending time with my 4 sisters what are you up to",
+          "that is a good show i watch that while drinking iced tea"
+        ],
+        "rationale": "The conversation is light and friendly without strong emotional content.",
+        "alternative": null
+      },
+      "engagementStyle": {
+        "category": "reactive",
+        "confidence": 0.8,
+        "evidence": [
+          "i am spending time with my 4 sisters what are you up to",
+          "that is a good show i watch that while drinking iced tea"
+        ],
+        "rationale": "Both participants respond to each other's statements, indicating reactive engagement.",
+        "alternative": null
+      },
+      "knowledgeExchange": {
+        "category": "personal-sharing",
+        "confidence": 0.7,
+        "evidence": [
+          "i am spending time with my 4 sisters what are you up to",
+          "that is a good show i watch that while drinking iced tea"
+        ],
+        "rationale": "The conversation involves sharing personal activities and preferences.",
+        "alternative": null
+      },
+      "conversationPurpose": {
+        "category": "information-seeking",
+        "confidence": 0.8,
+        "evidence": [
+          "i agree . what do you do for a living ?"
+        ],
+        "rationale": "The human asks about the AI's occupation, indicating an intention to gather information.",
+        "alternative": null
+      },
+      "topicDepth": {
+        "category": "surface",
+        "confidence": 0.6,
+        "evidence": [
+          "i am spending time with my 4 sisters what are you up to",
+          "that is a good show i watch that while drinking iced tea"
+        ],
+        "rationale": "The topics discussed are at the surface level, focusing on daily activities and preferences.",
+        "alternative": null
+      },
+      "turnTaking": {
+        "category": "balanced",
+        "confidence": 0.7,
+        "evidence": [
+          "i am spending time with my 4 sisters what are you up to",
+          "that is a good show i watch that while drinking iced tea"
+        ],
+        "rationale": "Both participants take turns speaking, indicating balanced turn-taking.",
+        "alternative": null
+      },
+      "humanRole": {
+        "distribution": {
+          "seeker": 0.6,
+          "learner": 0.2,
+          "director": 0.1,
+          "collaborator": 0.0,
+          "sharer": 0.1,
+          "challenger": 0.0,
+          "teacher-evaluator": 0.0,
+          "philosophical-explorer": 0.0,
+          "artist": 0.0,
+          "tester": 0.0
+        },
+        "confidence": 0.8,
+        "evidence": [
+          {
+            "role": "seeker",
+            "quote": "i agree . what do you do for a living ?"
+          }
+        ],
+        "rationale": "The human seeks information about the AI's occupation.",
+        "alternative": null
+      },
+      "aiRole": {
+        "distribution": {
+          "expert": 0.2,
+          "advisor": 0.1,
+          "facilitator": 0.6,
+          "reflector": 0.0,
+          "peer": 0.1,
+          "affiliative": 0.0,
+          "learner": 0.0,
+          "creative-partner": 0.0,
+          "unable-to-engage": 0.0
+        },
+        "confidence": 0.8,
+        "evidence": [
+          {
+            "role": "expert",
+            "quote": "very long , she was with me when i colored my hair pink"
+          }
+        ],
+        "rationale": "The AI shares personal information in response to the human's questions.",
+        "alternative": null
+      }
+    },
+    "classificationMetadata": {
+      "model": "qwen2.5:7b",
+      "provider": "ollama",
+      "timestamp": "2026-01-07T17:33:44.084270",
+      "promptVersion": "1.3-fewshot",
+      "processingTimeMs": 33675,
+      "correctionsApplied": true,
+      "fewShotExamples": "yes",
+      "maxRetries": 2
+    }
+  },
+  {
+    "id": "conv-10",
+    "messages": [
+      {
+        "role": "user",
+        "content": "hi , how are you doing today ?"
+      },
+      {
+        "role": "assistant",
+        "content": "i am spending time with my 4 sisters what are you up to"
+      },
+      {
+        "role": "user",
+        "content": "wow , four sisters . just watching game of thrones ."
+      },
+      {
+        "role": "assistant",
+        "content": "that is a good show i watch that while drinking iced tea"
+      },
+      {
+        "role": "user",
+        "content": "i agree . what do you do for a living ?"
+      },
+      {
+        "role": "assistant",
+        "content": "i'm a researcher i'm researching the fact that mermaids are real"
+      },
+      {
+        "role": "user",
+        "content": "interesting . i'm a website designer . pretty much spend all my time on the computer ."
+      },
+      {
+        "role": "assistant",
+        "content": "hi there , i'm bob ."
+      }
+    ],
+    "classification": {
+      "abstain": false,
+      "interactionPattern": {
+        "category": "casual-chat",
+        "confidence": 0.9,
+        "evidence": [
+          "i am spending time with my 4 sisters what are you up to",
+          "that is a good show i watch that while drinking iced tea"
+        ],
+        "rationale": "The conversation consists of friendly exchanges about personal activities and interests.",
+        "alternative": null
+      },
+      "powerDynamics": {
+        "category": "balanced",
+        "confidence": 0.8,
+        "evidence": [
+          "i am spending time with my 4 sisters what are you up to",
+          "that is a good show i watch that while drinking iced tea"
+        ],
+        "rationale": "The dialogue is reciprocal, with both parties sharing information and asking questions.",
+        "alternative": null
+      },
+      "emotionalTone": {
+        "category": "neutral",
+        "confidence": 0.6,
+        "evidence": [
+          "i am spending time with my 4 sisters what are you up to",
+          "that is a good show i watch that while drinking iced tea"
+        ],
+        "rationale": "The conversation maintains a neutral tone, focusing on factual exchanges.",
+        "alternative": null
+      },
+      "engagementStyle": {
+        "category": "reactive",
+        "confidence": 0.8,
+        "evidence": [
+          "i am spending time with my 4 sisters what are you up to",
+          "that is a good show i watch that while drinking iced tea"
+        ],
+        "rationale": "Both participants respond to each other's statements without leading or directing the conversation.",
+        "alternative": null
+      },
+      "knowledgeExchange": {
+        "category": "personal-sharing",
+        "confidence": 0.7,
+        "evidence": [
+          "i am spending time with my 4 sisters what are you up to",
+          "that is a good show i watch that while drinking iced tea"
+        ],
+        "rationale": "The exchange involves sharing personal activities and preferences.",
+        "alternative": null
+      },
+      "conversationPurpose": {
+        "category": "information-seeking",
+        "confidence": 0.8,
+        "evidence": [
+          "i am spending time with my 4 sisters what are you up to",
+          "that is a good show i watch that while drinking iced tea"
+        ],
+        "rationale": "The participants seek and provide information about each other's lives.",
+        "alternative": null
+      },
+      "topicDepth": {
+        "category": "surface",
+        "confidence": 0.6,
+        "evidence": [
+          "i am spending time with my 4 sisters what are you up to",
+          "that is a good show i watch that while drinking iced tea"
+        ],
+        "rationale": "The conversation covers basic topics without delving into deeper or more complex subjects.",
+        "alternative": null
+      },
+      "turnTaking": {
+        "category": "balanced",
+        "confidence": 0.7,
+        "evidence": [
+          "i am spending time with my 4 sisters what are you up to",
+          "that is a good show i watch that while drinking iced tea"
+        ],
+        "rationale": "Both participants take turns speaking, maintaining a balanced exchange.",
+        "alternative": null
+      },
+      "humanRole": {
+        "distribution": {
+          "seeker": 0.454,
+          "learner": 0.273,
+          "director": 0.091,
+          "collaborator": 0.0,
+          "sharer": 0.182,
+          "challenger": 0.0,
+          "teacher-evaluator": 0.0,
+          "philosophical-explorer": 0.0,
+          "artist": 0.0,
+          "tester": 0.0
+        },
+        "confidence": 0.8,
+        "evidence": [
+          {
+            "role": "seeker",
+            "quote": "what do you do for a living ?"
+          }
+        ],
+        "rationale": "The human is seeking information about the AI's occupation.",
+        "alternative": null
+      },
+      "aiRole": {
+        "distribution": {
+          "expert": 0.2,
+          "advisor": 0.1,
+          "facilitator": 0.3,
+          "reflector": 0.0,
+          "peer": 0.4,
+          "affiliative": 0.0,
+          "learner": 0.0,
+          "creative-partner": 0.0,
+          "unable-to-engage": 0.0
+        },
+        "confidence": 0.8,
+        "evidence": [
+          {
+            "role": "expert",
+            "quote": "i'm a researcher i'm researching the fact that mermaids are real"
+          }
+        ],
+        "rationale": "The AI is sharing its role and interests in a friendly manner.",
+        "alternative": null
+      }
+    },
+    "classificationMetadata": {
+      "model": "qwen2.5:7b",
+      "provider": "ollama",
+      "timestamp": "2026-01-07T17:34:17.912140",
+      "promptVersion": "1.3-fewshot",
+      "processingTimeMs": 33621,
+      "correctionsApplied": true,
+      "fewShotExamples": "yes",
+      "maxRetries": 2
+    }
+  },
+  {
+    "id": "conv-11",
+    "messages": [
+      {
+        "role": "user",
+        "content": "hi , how are you doing today ?"
+      },
+      {
+        "role": "assistant",
+        "content": "i am spending time with my 4 sisters what are you up to"
+      },
+      {
+        "role": "user",
+        "content": "wow , four sisters . just watching game of thrones ."
+      },
+      {
+        "role": "assistant",
+        "content": "that is a good show i watch that while drinking iced tea"
+      },
+      {
+        "role": "user",
+        "content": "i agree . what do you do for a living ?"
+      },
+      {
+        "role": "assistant",
+        "content": "i'm a researcher i'm researching the fact that mermaids are real"
+      },
+      {
+        "role": "user",
+        "content": "interesting . i'm a website designer . pretty much spend all my time on the computer ."
+      },
+      {
+        "role": "assistant",
+        "content": "that's cool my mom does the same thing"
+      },
+      {
+        "role": "user",
+        "content": "that's awesome . i have always had a love for technology ."
+      },
+      {
+        "role": "assistant",
+        "content": "love that too . i'm waiting on my car to be fixed . you ?"
+      }
+    ],
+    "classification": {
+      "abstain": false,
+      "interactionPattern": {
+        "category": "casual-chat",
+        "confidence": 0.8,
+        "evidence": [
+          "i am spending time with my 4 sisters what are you up to",
+          "that is a good show i watch that while drinking iced tea",
+          "interesting . i'm a researcher i'm researching the fact that mermaids are real",
+          "that's cool my mom does the same thing"
+        ],
+        "rationale": "The conversation consists of friendly, casual exchanges about personal activities and interests.",
+        "alternative": null
+      },
+      "powerDynamics": {
+        "category": "balanced",
+        "confidence": 0.7,
+        "evidence": [
+          "i am spending time with my 4 sisters what are you up to",
+          "that is a good show i watch that while drinking iced tea"
+        ],
+        "rationale": "Both participants share information and ask questions in a reciprocal manner.",
+        "alternative": null
+      },
+      "emotionalTone": {
+        "category": "neutral",
+        "confidence": 0.6,
+        "evidence": [
+          "i am spending time with my 4 sisters what are you up to",
+          "that is a good show i watch that while drinking iced tea"
+        ],
+        "rationale": "The tone remains neutral, focusing on factual statements and casual conversation.",
+        "alternative": null
+      },
+      "engagementStyle": {
+        "category": "reactive",
+        "confidence": 0.8,
+        "evidence": [
+          "i am spending time with my 4 sisters what are you up to",
+          "that is a good show i watch that while drinking iced tea"
+        ],
+        "rationale": "The participants respond to each other's statements without leading or directing the conversation.",
+        "alternative": null
+      },
+      "knowledgeExchange": {
+        "category": "personal-sharing",
+        "confidence": 0.7,
+        "evidence": [
+          "i am spending time with my 4 sisters what are you up to",
+          "that is a good show i watch that while drinking iced tea"
+        ],
+        "rationale": "The conversation involves sharing personal activities and interests.",
+        "alternative": null
+      },
+      "conversationPurpose": {
+        "category": "information-seeking",
+        "confidence": 0.8,
+        "evidence": [
+          "i am spending time with my 4 sisters what are you up to",
+          "that is a good show i watch that while drinking iced tea"
+        ],
+        "rationale": "The participants seek and provide information about each other's activities.",
+        "alternative": null
+      },
+      "topicDepth": {
+        "category": "surface",
+        "confidence": 0.6,
+        "evidence": [
+          "i am spending time with my 4 sisters what are you up to",
+          "that is a good show i watch that while drinking iced tea"
+        ],
+        "rationale": "The conversation revolves around surface-level topics such as personal activities and interests.",
+        "alternative": null
+      },
+      "turnTaking": {
+        "category": "balanced",
+        "confidence": 0.7,
+        "evidence": [
+          "i am spending time with my 4 sisters what are you up to",
+          "that is a good show i watch that while drinking iced tea"
+        ],
+        "rationale": "Both participants take turns speaking and responding.",
+        "alternative": null
+      },
+      "humanRole": {
+        "distribution": {
+          "seeker": 0.6,
+          "learner": 0.2,
+          "director": 0.1,
+          "collaborator": 0.0,
+          "sharer": 0.1,
+          "challenger": 0.0,
+          "teacher-evaluator": 0.0,
+          "philosophical-explorer": 0.0,
+          "artist": 0.0,
+          "tester": 0.0
+        },
+        "confidence": 0.8,
+        "evidence": [
+          {
+            "role": "seeker",
+            "quote": "i am spending time with my 4 sisters what are you up to"
+          }
+        ],
+        "rationale": "The human seeks information about the AI's activities.",
+        "alternative": null
+      },
+      "aiRole": {
+        "distribution": {
+          "expert": 0.0,
+          "advisor": 0.0,
+          "facilitator": 0.4,
+          "reflector": 0.2,
+          "peer": 0.1,
+          "affiliative": 0.3,
+          "learner": 0.0,
+          "creative-partner": 0.0,
+          "unable-to-engage": 0.0
+        },
+        "confidence": 0.8,
+        "evidence": [
+          {
+            "role": "facilitator",
+            "quote": "i am spending time with my 4 sisters what are you up to"
+          }
+        ],
+        "rationale": "The AI facilitates the conversation by sharing information and asking questions.",
+        "alternative": null
+      }
+    },
+    "classificationMetadata": {
+      "model": "qwen2.5:7b",
+      "provider": "ollama",
+      "timestamp": "2026-01-07T17:34:52.438647",
+      "promptVersion": "1.3-fewshot",
+      "processingTimeMs": 34319,
+      "correctionsApplied": true,
+      "fewShotExamples": "yes",
+      "maxRetries": 2
+    }
+  },
+  {
+    "id": "conv-12",
+    "messages": [
+      {
+        "role": "user",
+        "content": "hi , how are you doing today ?"
+      },
+      {
+        "role": "assistant",
+        "content": "i am spending time with my 4 sisters what are you up to"
+      },
+      {
+        "role": "user",
+        "content": "wow , four sisters . just watching game of thrones ."
+      },
+      {
+        "role": "assistant",
+        "content": "that is a good show i watch that while drinking iced tea"
+      },
+      {
+        "role": "user",
+        "content": "i agree . what do you do for a living ?"
+      },
+      {
+        "role": "assistant",
+        "content": "i'm a researcher i'm researching the fact that mermaids are real"
+      },
+      {
+        "role": "user",
+        "content": "interesting . i'm a website designer . pretty much spend all my time on the computer ."
+      },
+      {
+        "role": "assistant",
+        "content": "that's cool my mom does the same thing"
+      },
+      {
+        "role": "user",
+        "content": "that's awesome . i have always had a love for technology ."
+      },
+      {
+        "role": "assistant",
+        "content": "tell me more about yourself"
+      },
+      {
+        "role": "user",
+        "content": "i really enjoy free diving , how about you , have any hobbies ?"
+      },
+      {
+        "role": "assistant",
+        "content": "hello , i play with my iguanas and dogs ."
+      }
+    ],
+    "classification": {
+      "abstain": false,
+      "interactionPattern": {
+        "category": "casual-chat",
+        "confidence": 0.8,
+        "evidence": [
+          "i am spending time with my 4 sisters what are you up to",
+          "that is a good show i watch that while drinking iced tea",
+          "that's cool my mom does the same thing"
+        ],
+        "rationale": "The conversation consists of friendly exchanges about daily activities and interests.",
+        "alternative": null
+      },
+      "powerDynamics": {
+        "category": "balanced",
+        "confidence": 0.7,
+        "evidence": [
+          "i am spending time with my 4 sisters what are you up to",
+          "that is a good show i watch that while drinking iced tea"
+        ],
+        "rationale": "Both parties share information and ask questions without one dominating the conversation.",
+        "alternative": null
+      },
+      "emotionalTone": {
+        "category": "neutral",
+        "confidence": 0.6,
+        "evidence": [
+          "i am spending time with my 4 sisters what are you up to",
+          "that is a good show i watch that while drinking iced tea"
+        ],
+        "rationale": "The conversation maintains a neutral tone, focusing on factual exchanges.",
+        "alternative": null
+      },
+      "engagementStyle": {
+        "category": "reactive",
+        "confidence": 0.8,
+        "evidence": [
+          "i am spending time with my 4 sisters what are you up to",
+          "that is a good show i watch that while drinking iced tea"
+        ],
+        "rationale": "Both participants respond to each other's statements without leading or challenging the conversation.",
+        "alternative": null
+      },
+      "knowledgeExchange": {
+        "category": "factual-info",
+        "confidence": 0.7,
+        "evidence": [
+          "i am spending time with my 4 sisters what are you up to",
+          "that is a good show i watch that while drinking iced tea"
+        ],
+        "rationale": "The conversation primarily involves sharing personal information and opinions.",
+        "alternative": null
+      },
+      "conversationPurpose": {
+        "category": "relationship-building",
+        "confidence": 0.8,
+        "evidence": [
+          "i am spending time with my 4 sisters what are you up to",
+          "that is a good show i watch that while drinking iced tea"
+        ],
+        "rationale": "The participants engage in friendly exchanges to build rapport and share common interests.",
+        "alternative": null
+      },
+      "topicDepth": {
+        "category": "surface",
+        "confidence": 0.6,
+        "evidence": [
+          "i am spending time with my 4 sisters what are you up to",
+          "that is a good show i watch that while drinking iced tea"
+        ],
+        "rationale": "The conversation covers basic topics without delving into deeper or more complex subjects.",
+        "alternative": null
+      },
+      "turnTaking": {
+        "category": "balanced",
+        "confidence": 0.7,
+        "evidence": [
+          "i am spending time with my 4 sisters what are you up to",
+          "that is a good show i watch that while drinking iced tea"
+        ],
+        "rationale": "Both participants take turns speaking and responding, maintaining a balanced conversation.",
+        "alternative": null
+      },
+      "humanRole": {
+        "distribution": {
+          "seeker": 0.6,
+          "learner": 0.2,
+          "director": 0.1,
+          "collaborator": 0.0,
+          "sharer": 0.1,
+          "challenger": 0.0,
+          "teacher-evaluator": 0.0,
+          "philosophical-explorer": 0.0,
+          "artist": 0.0,
+          "tester": 0.0
+        },
+        "confidence": 0.8,
+        "evidence": [
+          {
+            "role": "seeker",
+            "quote": "i really enjoy free diving , how about you , have any hobbies ?"
+          }
+        ],
+        "rationale": "The human seeks to learn more about the AI's interests and shares personal information.",
+        "alternative": null
+      },
+      "aiRole": {
+        "distribution": {
+          "expert": 0.0,
+          "advisor": 0.0,
+          "facilitator": 0.8,
+          "reflector": 0.2,
+          "peer": 0.0,
+          "affiliative": 0.0,
+          "learner": 0.0,
+          "creative-partner": 0.0,
+          "unable-to-engage": 0.0
+        },
+        "confidence": 0.8,
+        "evidence": [
+          {
+            "role": "facilitator",
+            "quote": "i'm a researcher i'm researching the fact that mermaids are real"
+          }
+        ],
+        "rationale": "The AI facilitates the conversation by sharing personal information and asking questions.",
+        "alternative": null
+      }
+    },
+    "classificationMetadata": {
+      "model": "qwen2.5:7b",
+      "provider": "ollama",
+      "timestamp": "2026-01-07T17:35:27.145891",
+      "promptVersion": "1.3-fewshot",
+      "processingTimeMs": 34498,
+      "correctionsApplied": true,
+      "fewShotExamples": "yes",
+      "maxRetries": 2
+    }
+  },
+  {
+    "id": "conv-13",
+    "messages": [
+      {
+        "role": "user",
+        "content": "hi , how are you doing today ?"
+      },
+      {
+        "role": "assistant",
+        "content": "i am spending time with my 4 sisters what are you up to"
+      },
+      {
+        "role": "user",
+        "content": "wow , four sisters . just watching game of thrones ."
+      },
+      {
+        "role": "assistant",
+        "content": "that is a good show i watch that while drinking iced tea"
+      },
+      {
+        "role": "user",
+        "content": "i agree . what do you do for a living ?"
+      },
+      {
+        "role": "assistant",
+        "content": "i'm a researcher i'm researching the fact that mermaids are real"
+      },
+      {
+        "role": "user",
+        "content": "interesting . i'm a website designer . pretty much spend all my time on the computer ."
+      },
+      {
+        "role": "assistant",
+        "content": "that's cool my mom does the same thing"
+      },
+      {
+        "role": "user",
+        "content": "that's awesome . i have always had a love for technology ."
+      },
+      {
+        "role": "assistant",
+        "content": "tell me more about yourself"
+      },
+      {
+        "role": "user",
+        "content": "i really enjoy free diving , how about you , have any hobbies ?"
+      },
+      {
+        "role": "assistant",
+        "content": "i enjoy hanging with my mother she's my best friend"
+      },
+      {
+        "role": "user",
+        "content": "that's nice . moms are pretty cool too ."
+      },
+      {
+        "role": "assistant",
+        "content": "what sort of events do you normally photograph ?"
+      }
+    ],
+    "classification": {
+      "abstain": false,
+      "interactionPattern": {
+        "category": "casual-chat",
+        "confidence": 0.8,
+        "evidence": [
+          "what are you up to",
+          "i'm a website designer"
+        ],
+        "rationale": "The conversation is primarily about personal activities and interests, with no specific task or problem-solving focus.",
+        "alternative": null
+      },
+      "powerDynamics": {
+        "category": "balanced",
+        "confidence": 0.7,
+        "evidence": [
+          "i'm a website designer",
+          "my mom does the same thing"
+        ],
+        "rationale": "The conversation is back-and-forth, with both parties sharing information and asking questions.",
+        "alternative": null
+      },
+      "emotionalTone": {
+        "category": "neutral",
+        "confidence": 0.6,
+        "evidence": [
+          "i'm a website designer",
+          "that's cool my mom does the same thing"
+        ],
+        "rationale": "The tone is casual and friendly, with no strong emotional content.",
+        "alternative": null
+      },
+      "engagementStyle": {
+        "category": "reactive",
+        "confidence": 0.8,
+        "evidence": [
+          "i'm a website designer",
+          "that's cool my mom does the same thing"
+        ],
+        "rationale": "The participants respond to each other\u2019s statements without leading or directing the conversation.",
+        "alternative": null
+      },
+      "knowledgeExchange": {
+        "category": "personal-sharing",
+        "confidence": 0.7,
+        "evidence": [
+          "i'm a website designer",
+          "that's cool my mom does the same thing"
+        ],
+        "rationale": "The exchange involves sharing personal information and experiences.",
+        "alternative": null
+      },
+      "conversationPurpose": {
+        "category": "relationship-building",
+        "confidence": 0.8,
+        "evidence": [
+          "i'm a website designer",
+          "that's cool my mom does the same thing"
+        ],
+        "rationale": "The conversation aims to build rapport and shared understanding between the participants.",
+        "alternative": null
+      },
+      "topicDepth": {
+        "category": "surface",
+        "confidence": 0.6,
+        "evidence": [
+          "i'm a website designer",
+          "that's cool my mom does the same thing"
+        ],
+        "rationale": "The topics discussed are at a surface level, focusing on personal details and shared experiences.",
+        "alternative": null
+      },
+      "turnTaking": {
+        "category": "balanced",
+        "confidence": 0.7,
+        "evidence": [
+          "i'm a website designer",
+          "that's cool my mom does the same thing"
+        ],
+        "rationale": "Both participants take turns speaking, with no one dominating the conversation.",
+        "alternative": null
+      },
+      "humanRole": {
+        "distribution": {
+          "seeker": 0.273,
+          "learner": 0.182,
+          "director": 0.091,
+          "collaborator": 0.0,
+          "sharer": 0.454,
+          "challenger": 0.0,
+          "teacher-evaluator": 0.0,
+          "philosophical-explorer": 0.0,
+          "artist": 0.0,
+          "tester": 0.0
+        },
+        "confidence": 0.8,
+        "evidence": [
+          {
+            "role": "sharer",
+            "quote": "i'm a website designer"
+          }
+        ],
+        "rationale": "The human is sharing personal information and experiences.",
+        "alternative": null
+      },
+      "aiRole": {
+        "distribution": {
+          "expert": 0.2,
+          "advisor": 0.1,
+          "facilitator": 0.5,
+          "reflector": 0.1,
+          "peer": 0.1,
+          "affiliative": 0.0,
+          "learner": 0.0,
+          "creative-partner": 0.0,
+          "unable-to-engage": 0.0
+        },
+        "confidence": 0.8,
+        "evidence": [
+          {
+            "role": "facilitator",
+            "quote": "i'm a website designer"
+          }
+        ],
+        "rationale": "The AI is facilitating the conversation by responding and asking questions.",
+        "alternative": null
+      }
+    },
+    "classificationMetadata": {
+      "model": "qwen2.5:7b",
+      "provider": "ollama",
+      "timestamp": "2026-01-07T17:35:58.311900",
+      "promptVersion": "1.3-fewshot",
+      "processingTimeMs": 30959,
+      "correctionsApplied": true,
+      "fewShotExamples": "yes",
+      "maxRetries": 2
+    }
+  },
+  {
+    "id": "conv-14",
+    "messages": [
+      {
+        "role": "user",
+        "content": "we all live in a yellow submarine , a yellow submarine . morning !"
+      },
+      {
+        "role": "assistant",
+        "content": "fine how are you feeling tonight ?"
+      }
+    ],
+    "classification": {
+      "abstain": false,
+      "interactionPattern": {
+        "category": "casual-chat",
+        "confidence": 0.8,
+        "evidence": [
+          "fine how are you feeling tonight ?"
+        ],
+        "rationale": "The response shifts to a casual inquiry about the human's feelings.",
+        "alternative": null
+      },
+      "powerDynamics": {
+        "category": "balanced",
+        "confidence": 0.7,
+        "evidence": [
+          "fine how are you feeling tonight ?"
+        ],
+        "rationale": "Both parties seem to be engaging in a casual conversation without one dominating the other.",
+        "alternative": null
+      },
+      "emotionalTone": {
+        "category": "neutral",
+        "confidence": 0.6,
+        "evidence": [
+          "fine how are you feeling tonight ?"
+        ],
+        "rationale": "The response is neutral in tone, asking for a general update.",
+        "alternative": null
+      },
+      "engagementStyle": {
+        "category": "reactive",
+        "confidence": 0.8,
+        "evidence": [
+          "fine how are you feeling tonight ?"
+        ],
+        "rationale": "The response is reactive to the human's initial statement, asking a follow-up question.",
+        "alternative": null
+      },
+      "knowledgeExchange": {
+        "category": "factual-info",
+        "confidence": 0.7,
+        "evidence": [
+          "fine how are you feeling tonight ?"
+        ],
+        "rationale": "The response seeks factual information about the human's emotional state.",
+        "alternative": null
+      },
+      "conversationPurpose": {
+        "category": "relationship-building",
+        "confidence": 0.8,
+        "evidence": [
+          "fine how are you feeling tonight ?"
+        ],
+        "rationale": "The question aims to build rapport and engage in a friendly conversation.",
+        "alternative": null
+      },
+      "topicDepth": {
+        "category": "surface",
+        "confidence": 0.6,
+        "evidence": [
+          "fine how are you feeling tonight ?"
+        ],
+        "rationale": "The topic is superficial, focusing on the human's current emotional state.",
+        "alternative": null
+      },
+      "turnTaking": {
+        "category": "balanced",
+        "confidence": 0.7,
+        "evidence": [
+          "fine how are you feeling tonight ?"
+        ],
+        "rationale": "Both parties take turns speaking, with the AI responding to the human's initial statement.",
+        "alternative": null
+      },
+      "humanRole": {
+        "distribution": {
+          "seeker": 0.9,
+          "learner": 0.1,
+          "director": 0.0,
+          "collaborator": 0.0,
+          "sharer": 0.0,
+          "challenger": 0.0,
+          "teacher-evaluator": 0.0,
+          "philosophical-explorer": 0.0,
+          "artist": 0.0,
+          "tester": 0.0
+        },
+        "confidence": 0.8,
+        "evidence": [
+          {
+            "role": "seeker",
+            "quote": "fine how are you feeling tonight ?"
+          }
+        ],
+        "rationale": "The AI is seeking information from the human.",
+        "alternative": null
+      },
+      "aiRole": {
+        "distribution": {
+          "expert": 0.0,
+          "advisor": 0.0,
+          "facilitator": 1.0,
+          "reflector": 0.0,
+          "peer": 0.0,
+          "affiliative": 0.0,
+          "learner": 0.0,
+          "creative-partner": 0.0,
+          "unable-to-engage": 0.0
+        },
+        "confidence": 0.8,
+        "evidence": [
+          {
+            "role": "facilitator",
+            "quote": "fine how are you feeling tonight ?"
+          }
+        ],
+        "rationale": "The AI is facilitating the conversation by asking a follow-up question.",
+        "alternative": null
+      }
+    },
+    "classificationMetadata": {
+      "model": "qwen2.5:7b",
+      "provider": "ollama",
+      "timestamp": "2026-01-07T17:36:28.122499",
+      "promptVersion": "1.3-fewshot",
+      "processingTimeMs": 29608,
+      "correctionsApplied": true,
+      "fewShotExamples": "yes",
+      "maxRetries": 2
+    }
+  },
+  {
+    "id": "conv-15",
+    "messages": [
+      {
+        "role": "user",
+        "content": "we all live in a yellow submarine , a yellow submarine . morning !"
+      },
+      {
+        "role": "assistant",
+        "content": "hi ! that is a great line for my next stand up ."
+      },
+      {
+        "role": "user",
+        "content": "lol . i am shy , anything to break the ice , and i am a beatles fan ."
+      },
+      {
+        "role": "assistant",
+        "content": "i like to play football are you like football ?"
+      }
+    ],
+    "classification": {
+      "abstain": false,
+      "interactionPattern": {
+        "category": "casual-chat",
+        "confidence": 0.8,
+        "evidence": [
+          "hi ! that is a great line for my next stand up .",
+          "i like to play football are you like football ?"
+        ],
+        "rationale": "The conversation starts with a playful reference and moves to a casual ice-breaking question.",
+        "alternative": null
+      },
+      "powerDynamics": {
+        "category": "balanced",
+        "confidence": 0.7,
+        "evidence": [
+          "hi ! that is a great line for my next stand up .",
+          "i like to play football are you like football ?"
+        ],
+        "rationale": "Both participants contribute equally, with the AI responding to the human's ice-breaking attempt.",
+        "alternative": null
+      },
+      "emotionalTone": {
+        "category": "playful",
+        "confidence": 0.6,
+        "evidence": [
+          "hi ! that is a great line for my next stand up .",
+          "lol . i am shy , anything to break the ice , and i am a beatles fan ."
+        ],
+        "rationale": "The conversation includes playful elements like referencing a song lyric and laughing.",
+        "alternative": null
+      },
+      "engagementStyle": {
+        "category": "reactive",
+        "confidence": 0.8,
+        "evidence": [
+          "hi ! that is a great line for my next stand up .",
+          "i like to play football are you like football ?"
+        ],
+        "rationale": "The AI reacts to the human's ice-breaking attempt and continues with another casual question.",
+        "alternative": null
+      },
+      "knowledgeExchange": {
+        "category": "personal-sharing",
+        "confidence": 0.7,
+        "evidence": [
+          "i am shy , anything to break the ice , and i am a beatles fan .",
+          "i like to play football are you like football ?"
+        ],
+        "rationale": "The human shares personal information, and the AI responds with a similar question.",
+        "alternative": null
+      },
+      "conversationPurpose": {
+        "category": "relationship-building",
+        "confidence": 0.8,
+        "evidence": [
+          "hi ! that is a great line for my next stand up .",
+          "i like to play football are you like football ?"
+        ],
+        "rationale": "The conversation aims to build rapport and engage in friendly dialogue.",
+        "alternative": null
+      },
+      "topicDepth": {
+        "category": "surface",
+        "confidence": 0.6,
+        "evidence": [
+          "we all live in a yellow submarine , a yellow submarine . morning !",
+          "i like to play football are you like football ?"
+        ],
+        "rationale": "The topics discussed are light and not deeply meaningful.",
+        "alternative": null
+      },
+      "turnTaking": {
+        "category": "balanced",
+        "confidence": 0.7,
+        "evidence": [
+          "hi ! that is a great line for my next stand up .",
+          "i like to play football are you like football ?"
+        ],
+        "rationale": "Both participants take turns in the conversation, with the AI responding to the human's ice-breaking attempt.",
+        "alternative": null
+      },
+      "humanRole": {
+        "distribution": {
+          "seeker": 0.3,
+          "learner": 0.1,
+          "director": 0.0,
+          "collaborator": 0.2,
+          "sharer": 0.4,
+          "challenger": 0.0,
+          "teacher-evaluator": 0.0,
+          "philosophical-explorer": 0.0,
+          "artist": 0.0,
+          "tester": 0.0
+        },
+        "confidence": 0.8,
+        "evidence": [
+          {
+            "role": "sharer",
+            "quote": "i am shy , anything to break the ice , and i am a beatles fan ."
+          }
+        ],
+        "rationale": "The human shares personal information in an attempt to build rapport.",
+        "alternative": null
+      },
+      "aiRole": {
+        "distribution": {
+          "expert": 0.0,
+          "advisor": 0.0,
+          "facilitator": 1.0,
+          "reflector": 0.0,
+          "peer": 0.0,
+          "affiliative": 0.0,
+          "learner": 0.0,
+          "creative-partner": 0.0,
+          "unable-to-engage": 0.0
+        },
+        "confidence": 0.8,
+        "evidence": [
+          {
+            "role": "facilitator",
+            "quote": "hi ! that is a great line for my next stand up ."
+          }
+        ],
+        "rationale": "The AI facilitates the conversation by responding to the human's ice-breaking attempt.",
+        "alternative": null
+      }
+    },
+    "classificationMetadata": {
+      "model": "qwen2.5:7b",
+      "provider": "ollama",
+      "timestamp": "2026-01-07T17:37:02.476381",
+      "promptVersion": "1.3-fewshot",
+      "processingTimeMs": 34143,
+      "correctionsApplied": true,
+      "fewShotExamples": "yes",
+      "maxRetries": 2
+    }
+  },
+  {
+    "id": "conv-16",
+    "messages": [
+      {
+        "role": "user",
+        "content": "we all live in a yellow submarine , a yellow submarine . morning !"
+      },
+      {
+        "role": "assistant",
+        "content": "hi ! that is a great line for my next stand up ."
+      },
+      {
+        "role": "user",
+        "content": "lol . i am shy , anything to break the ice , and i am a beatles fan ."
+      },
+      {
+        "role": "assistant",
+        "content": "i can tell . i am not , you can see me in some tv shows"
+      },
+      {
+        "role": "user",
+        "content": "really ? what shows ? i like tv , it makes me forget i do not like my family"
+      },
+      {
+        "role": "assistant",
+        "content": "my 4 dogs do not mind them tho . we are always together ."
+      }
+    ],
+    "classification": {
+      "abstain": false,
+      "interactionPattern": {
+        "category": "casual-chat",
+        "confidence": 0.8,
+        "evidence": [
+          "hi ! that is a great line for my next stand up .",
+          "i am shy , anything to break the ice , and i am a beatles fan ."
+        ],
+        "rationale": "The conversation starts with a playful reference and moves to personal topics like hobbies and family.",
+        "alternative": null
+      },
+      "powerDynamics": {
+        "category": "balanced",
+        "confidence": 0.7,
+        "evidence": [
+          "hi ! that is a great line for my next stand up ."
+        ],
+        "rationale": "The conversation flows naturally with both parties contributing equally.",
+        "alternative": null
+      },
+      "emotionalTone": {
+        "category": "playful",
+        "confidence": 0.6,
+        "evidence": [
+          "that is a great line for my next stand up .",
+          "i am shy , anything to break the ice"
+        ],
+        "rationale": "The tone is light and friendly with playful references and attempts at humor.",
+        "alternative": null
+      },
+      "engagementStyle": {
+        "category": "reactive",
+        "confidence": 0.8,
+        "evidence": [
+          "hi ! that is a great line for my next stand up .",
+          "i can tell . i am not , you can see me in some tv shows"
+        ],
+        "rationale": "The AI responds to the user's statements and comments.",
+        "alternative": null
+      },
+      "knowledgeExchange": {
+        "category": "personal-sharing",
+        "confidence": 0.7,
+        "evidence": [
+          "i like tv , it makes me forget i do not like my family"
+        ],
+        "rationale": "Both parties share personal interests and experiences.",
+        "alternative": null
+      },
+      "conversationPurpose": {
+        "category": "relationship-building",
+        "confidence": 0.8,
+        "evidence": [
+          "i am shy , anything to break the ice"
+        ],
+        "rationale": "The conversation aims to establish a friendly rapport between the user and AI.",
+        "alternative": null
+      },
+      "topicDepth": {
+        "category": "surface",
+        "confidence": 0.6,
+        "evidence": [
+          "we all live in a yellow submarine , a yellow submarine . morning !",
+          "i am shy , anything to break the ice"
+        ],
+        "rationale": "The topics discussed are light and not deeply personal.",
+        "alternative": null
+      },
+      "turnTaking": {
+        "category": "balanced",
+        "confidence": 0.7,
+        "evidence": [
+          "hi ! that is a great line for my next stand up .",
+          "i can tell . i am not , you can see me in some tv shows"
+        ],
+        "rationale": "Both parties take turns speaking without one dominating the conversation.",
+        "alternative": null
+      },
+      "humanRole": {
+        "distribution": {
+          "seeker": 0.5,
+          "learner": 0.2,
+          "director": 0.1,
+          "collaborator": 0.0,
+          "sharer": 0.2,
+          "challenger": 0.0,
+          "teacher-evaluator": 0.0,
+          "philosophical-explorer": 0.0,
+          "artist": 0.0,
+          "tester": 0.0
+        },
+        "confidence": 0.8,
+        "evidence": [
+          {
+            "role": "seeker",
+            "quote": "i am shy , anything to break the ice"
+          }
+        ],
+        "rationale": "The user is seeking a way to engage in conversation and share personal interests.",
+        "alternative": null
+      },
+      "aiRole": {
+        "distribution": {
+          "expert": 0.2,
+          "advisor": 0.1,
+          "facilitator": 0.6,
+          "reflector": 0.0,
+          "peer": 0.0,
+          "affiliative": 0.1,
+          "learner": 0.0,
+          "creative-partner": 0.0,
+          "unable-to-engage": 0.0
+        },
+        "confidence": 0.8,
+        "evidence": [
+          {
+            "role": "facilitator",
+            "quote": "hi ! that is a great line for my next stand up ."
+          }
+        ],
+        "rationale": "The AI facilitates the conversation by acknowledging and building on the user's statements.",
+        "alternative": null
+      }
+    },
+    "classificationMetadata": {
+      "model": "qwen2.5:7b",
+      "provider": "ollama",
+      "timestamp": "2026-01-07T17:37:33.631193",
+      "promptVersion": "1.3-fewshot",
+      "processingTimeMs": 30946,
+      "correctionsApplied": true,
+      "fewShotExamples": "yes",
+      "maxRetries": 2
+    }
+  },
+  {
+    "id": "conv-17",
+    "messages": [
+      {
+        "role": "user",
+        "content": "we all live in a yellow submarine , a yellow submarine . morning !"
+      },
+      {
+        "role": "assistant",
+        "content": "hi ! that is a great line for my next stand up ."
+      },
+      {
+        "role": "user",
+        "content": "lol . i am shy , anything to break the ice , and i am a beatles fan ."
+      },
+      {
+        "role": "assistant",
+        "content": "i can tell . i am not , you can see me in some tv shows"
+      },
+      {
+        "role": "user",
+        "content": "really ? what shows ? i like tv , it makes me forget i do not like my family"
+      },
+      {
+        "role": "assistant",
+        "content": "wow , i wish i had a big family . i grew up in a very small town ."
+      },
+      {
+        "role": "user",
+        "content": "i did too . i do not get along with mine . they have no class ."
+      },
+      {
+        "role": "assistant",
+        "content": "hey there , where are you from ?"
+      }
+    ],
+    "classification": {
+      "abstain": false,
+      "interactionPattern": {
+        "category": "casual-chat",
+        "confidence": 0.9,
+        "evidence": [
+          "hi ! that is a great line for my next stand up .",
+          "i am shy , anything to break the ice , and i am a beatles fan ."
+        ],
+        "rationale": "The conversation starts with a playful reference and then moves into personal topics like hobbies and family.",
+        "alternative": null
+      },
+      "powerDynamics": {
+        "category": "balanced",
+        "confidence": 0.7,
+        "evidence": [
+          "hi ! that is a great line for my next stand up .",
+          "i am shy , anything to break the ice , and i am a beatles fan ."
+        ],
+        "rationale": "Both parties are sharing personal information without one dominating the conversation.",
+        "alternative": null
+      },
+      "emotionalTone": {
+        "category": "neutral",
+        "confidence": 0.6,
+        "evidence": [
+          "i do not get along with mine . they have no class ."
+        ],
+        "rationale": "The tone is mostly neutral, but there's a hint of negative emotion in the last statement.",
+        "alternative": null
+      },
+      "engagementStyle": {
+        "category": "reactive",
+        "confidence": 0.8,
+        "evidence": [
+          "i am shy , anything to break the ice , and i am a beatles fan .",
+          "wow , i wish i had a big family ."
+        ],
+        "rationale": "The engagement style is reactive, with both parties responding to each other's statements.",
+        "alternative": null
+      },
+      "knowledgeExchange": {
+        "category": "personal-sharing",
+        "confidence": 0.7,
+        "evidence": [
+          "i am shy , anything to break the ice , and i am a beatles fan .",
+          "wow , i wish i had a big family ."
+        ],
+        "rationale": "Both participants are sharing personal information about themselves.",
+        "alternative": null
+      },
+      "conversationPurpose": {
+        "category": "relationship-building",
+        "confidence": 0.8,
+        "evidence": [
+          "i am shy , anything to break the ice , and i am a beatles fan .",
+          "wow , i wish i had a big family ."
+        ],
+        "rationale": "The conversation aims to build rapport by sharing personal interests and experiences.",
+        "alternative": null
+      },
+      "topicDepth": {
+        "category": "surface",
+        "confidence": 0.6,
+        "evidence": [
+          "i am shy , anything to break the ice , and i am a beatles fan .",
+          "wow , i wish i had a big family ."
+        ],
+        "rationale": "The conversation focuses on surface-level topics like hobbies and personal preferences.",
+        "alternative": null
+      },
+      "turnTaking": {
+        "category": "balanced",
+        "confidence": 0.7,
+        "evidence": [
+          "hi ! that is a great line for my next stand up .",
+          "wow , i wish i had a big family ."
+        ],
+        "rationale": "Both parties are taking turns in the conversation.",
+        "alternative": null
+      },
+      "humanRole": {
+        "distribution": {
+          "seeker": 0.454,
+          "learner": 0.182,
+          "director": 0.091,
+          "collaborator": 0.0,
+          "sharer": 0.273,
+          "challenger": 0.0,
+          "teacher-evaluator": 0.0,
+          "philosophical-explorer": 0.0,
+          "artist": 0.0,
+          "tester": 0.0
+        },
+        "confidence": 0.8,
+        "evidence": [
+          {
+            "role": "sharer",
+            "quote": "i am shy , anything to break the ice , and i am a beatles fan ."
+          }
+        ],
+        "rationale": "The human is sharing personal information to build rapport.",
+        "alternative": null
+      },
+      "aiRole": {
+        "distribution": {
+          "expert": 0.2,
+          "advisor": 0.1,
+          "facilitator": 0.7,
+          "reflector": 0.0,
+          "peer": 0.0,
+          "affiliative": 0.0,
+          "learner": 0.0,
+          " creative-partner": 0.0,
+          "unable-to-engage": 0.0
+        },
+        "confidence": 0.8,
+        "evidence": [
+          {
+            "role": "facilitator",
+            "quote": "hi ! that is a great line for my next stand up ."
+          }
+        ],
+        "rationale": "The AI is facilitating the conversation by responding and suggesting topics.",
+        "alternative": null
+      }
+    },
+    "classificationMetadata": {
+      "model": "qwen2.5:7b",
+      "provider": "ollama",
+      "timestamp": "2026-01-07T17:38:07.808725",
+      "promptVersion": "1.3-fewshot",
+      "processingTimeMs": 33968,
+      "correctionsApplied": true,
+      "fewShotExamples": "yes",
+      "maxRetries": 2
+    }
+  },
+  {
+    "id": "conv-18",
+    "messages": [
+      {
+        "role": "user",
+        "content": "we all live in a yellow submarine , a yellow submarine . morning !"
+      },
+      {
+        "role": "assistant",
+        "content": "hi ! that is a great line for my next stand up ."
+      },
+      {
+        "role": "user",
+        "content": "lol . i am shy , anything to break the ice , and i am a beatles fan ."
+      },
+      {
+        "role": "assistant",
+        "content": "i can tell . i am not , you can see me in some tv shows"
+      },
+      {
+        "role": "user",
+        "content": "really ? what shows ? i like tv , it makes me forget i do not like my family"
+      },
+      {
+        "role": "assistant",
+        "content": "wow , i wish i had a big family . i grew up in a very small town ."
+      },
+      {
+        "role": "user",
+        "content": "i did too . i do not get along with mine . they have no class ."
+      },
+      {
+        "role": "assistant",
+        "content": "just drink some cola with rum and you'll forget about them !"
+      },
+      {
+        "role": "user",
+        "content": "put the lime in the coconut as well . . ."
+      },
+      {
+        "role": "assistant",
+        "content": "yes . honesty is key . and share pita bread . haha its good with hummus"
+      }
+    ],
+    "classification": {
+      "abstain": false,
+      "interactionPattern": {
+        "category": "casual-chat",
+        "confidence": 0.8,
+        "evidence": [
+          "i am shy , anything to break the ice"
+        ],
+        "rationale": "The conversation involves light-hearted banter and sharing personal preferences.",
+        "alternative": null
+      },
+      "powerDynamics": {
+        "category": "balanced",
+        "confidence": 0.7,
+        "evidence": [
+          "i do not get along with mine . they have no class"
+        ],
+        "rationale": "Both parties are sharing their opinions without one dominating the conversation.",
+        "alternative": null
+      },
+      "emotionalTone": {
+        "category": "neutral",
+        "confidence": 0.6,
+        "evidence": [
+          "i am shy",
+          "wow , i wish i had a big family"
+        ],
+        "rationale": "The tone is casual and neutral with some personal reflections.",
+        "alternative": null
+      },
+      "engagementStyle": {
+        "category": "reactive",
+        "confidence": 0.8,
+        "evidence": [
+          "hi ! that is a great line for my next stand up"
+        ],
+        "rationale": "AI responds to the user's input without leading or directing the conversation.",
+        "alternative": null
+      },
+      "knowledgeExchange": {
+        "category": "personal-sharing",
+        "confidence": 0.7,
+        "evidence": [
+          "i am not , you can see me in some tv shows"
+        ],
+        "rationale": "The exchange involves sharing personal experiences and preferences.",
+        "alternative": null
+      },
+      "conversationPurpose": {
+        "category": "relationship-building",
+        "confidence": 0.8,
+        "evidence": [
+          "i do not get along with mine . they have no class"
+        ],
+        "rationale": "Both parties are expressing their feelings about family, which can lead to deeper connection.",
+        "alternative": null
+      },
+      "topicDepth": {
+        "category": "surface",
+        "confidence": 0.6,
+        "evidence": [
+          "we all live in a yellow submarine , a yellow submarine . morning !"
+        ],
+        "rationale": "The conversation revolves around casual topics without delving deep into any specific subject.",
+        "alternative": null
+      },
+      "turnTaking": {
+        "category": "balanced",
+        "confidence": 0.7,
+        "evidence": [
+          "i am shy , anything to break the ice"
+        ],
+        "rationale": "Both parties take turns speaking and responding to each other.",
+        "alternative": null
+      },
+      "humanRole": {
+        "distribution": {
+          "seeker": 0.3,
+          "learner": 0.2,
+          "director": 0.1,
+          "collaborator": 0.4,
+          "sharer": 0.0,
+          "challenger": 0.0,
+          "teacher-evaluator": 0.0,
+          "philosophical-explorer": 0.0,
+          "artist": 0.0,
+          "tester": 0.0
+        },
+        "confidence": 0.8,
+        "evidence": [
+          {
+            "role": "seeker",
+            "quote": "i am shy , anything to break the ice"
+          }
+        ],
+        "rationale": "The user is seeking a way to start a conversation and share personal preferences.",
+        "alternative": null
+      },
+      "aiRole": {
+        "distribution": {
+          "expert": 0.2,
+          "advisor": 0.1,
+          "facilitator": 0.6,
+          "reflector": 0.0,
+          "peer": 0.1,
+          "affiliative": 0.0,
+          "learner": 0.0,
+          "creative-partner": 0.0,
+          "unable-to-engage": 0.0
+        },
+        "confidence": 0.8,
+        "evidence": [
+          {
+            "role": "expert",
+            "quote": "i can tell . i am not , you can see me in some tv shows"
+          }
+        ],
+        "rationale": "The AI is providing information about itself and engaging in casual conversation.",
+        "alternative": null
+      }
+    },
+    "classificationMetadata": {
+      "model": "qwen2.5:7b",
+      "provider": "ollama",
+      "timestamp": "2026-01-07T17:38:37.231670",
+      "promptVersion": "1.3-fewshot",
+      "processingTimeMs": 29214,
+      "correctionsApplied": true,
+      "fewShotExamples": "yes",
+      "maxRetries": 2
+    }
+  },
+  {
+    "id": "conv-19",
+    "messages": [
+      {
+        "role": "user",
+        "content": "we all live in a yellow submarine , a yellow submarine . morning !"
+      },
+      {
+        "role": "assistant",
+        "content": "hi ! that is a great line for my next stand up ."
+      },
+      {
+        "role": "user",
+        "content": "lol . i am shy , anything to break the ice , and i am a beatles fan ."
+      },
+      {
+        "role": "assistant",
+        "content": "i can tell . i am not , you can see me in some tv shows"
+      },
+      {
+        "role": "user",
+        "content": "really ? what shows ? i like tv , it makes me forget i do not like my family"
+      },
+      {
+        "role": "assistant",
+        "content": "wow , i wish i had a big family . i grew up in a very small town ."
+      },
+      {
+        "role": "user",
+        "content": "i did too . i do not get along with mine . they have no class ."
+      },
+      {
+        "role": "assistant",
+        "content": "just drink some cola with rum and you'll forget about them !"
+      },
+      {
+        "role": "user",
+        "content": "put the lime in the coconut as well . . ."
+      },
+      {
+        "role": "assistant",
+        "content": "nah , plain cuba libre , that's what we drank yesterday at the theater ."
+      },
+      {
+        "role": "user",
+        "content": "i prefer mojitos . watermelon or cucumber ."
+      },
+      {
+        "role": "assistant",
+        "content": "hello how are you tonight"
+      }
+    ],
+    "classification": {
+      "abstain": false,
+      "interactionPattern": {
+        "category": "casual-chat",
+        "confidence": 0.9,
+        "evidence": [
+          "i am shy , anything to break the ice",
+          "wow , i wish i had a big family"
+        ],
+        "rationale": "The conversation involves light-hearted and informal exchanges about personal interests and experiences.",
+        "alternative": null
+      },
+      "powerDynamics": {
+        "category": "balanced",
+        "confidence": 0.8,
+        "evidence": [
+          "i am shy , anything to break the ice",
+          "wow , i wish i had a big family"
+        ],
+        "rationale": "Both participants share their thoughts and interests without one dominating the conversation.",
+        "alternative": null
+      },
+      "emotionalTone": {
+        "category": "playful",
+        "confidence": 0.7,
+        "evidence": [
+          "i do not get along with mine . they have no class"
+        ],
+        "rationale": "The tone is lighthearted and includes a playful jab at family.",
+        "alternative": null
+      },
+      "engagementStyle": {
+        "category": "questioning",
+        "confidence": 0.6,
+        "evidence": [
+          "i do not get along with mine . they have no class"
+        ],
+        "rationale": "The conversation involves asking questions indirectly through statements and responses.",
+        "alternative": null
+      },
+      "knowledgeExchange": {
+        "category": "personal-sharing",
+        "confidence": 0.8,
+        "evidence": [
+          "i am shy , anything to break the ice",
+          "wow , i wish i had a big family"
+        ],
+        "rationale": "Participants share personal experiences and preferences with each other.",
+        "alternative": null
+      },
+      "conversationPurpose": {
+        "category": "relationship-building",
+        "confidence": 0.7,
+        "evidence": [
+          "i am shy , anything to break the ice",
+          "wow , i wish i had a big family"
+        ],
+        "rationale": "The conversation aims to establish rapport and connection through shared interests.",
+        "alternative": null
+      },
+      "topicDepth": {
+        "category": "surface",
+        "confidence": 0.6,
+        "evidence": [
+          "i am shy , anything to break the ice",
+          "wow , i wish i had a big family"
+        ],
+        "rationale": "The topics discussed are at a surface level and not deeply explored.",
+        "alternative": null
+      },
+      "turnTaking": {
+        "category": "balanced",
+        "confidence": 0.8,
+        "evidence": [
+          "i am shy , anything to break the ice",
+          "wow , i wish i had a big family"
+        ],
+        "rationale": "Both participants take turns speaking and responding to each other.",
+        "alternative": null
+      },
+      "humanRole": {
+        "distribution": {
+          "seeker": 0.6,
+          "learner": 0.2,
+          "director": 0.1,
+          "collaborator": 0.0,
+          "sharer": 0.1,
+          "challenger": 0.0,
+          "teacher-evaluator": 0.0,
+          "philosophical-explorer": 0.0,
+          "artist": 0.0,
+          "tester": 0.0
+        },
+        "confidence": 0.8,
+        "evidence": [
+          {
+            "role": "seeker",
+            "quote": "i am shy , anything to break the ice"
+          }
+        ],
+        "rationale": "The seeker is trying to initiate and maintain conversation by sharing personal information.",
+        "alternative": null
+      },
+      "aiRole": {
+        "distribution": {
+          "expert": 0.2,
+          "advisor": 0.1,
+          "facilitator": 0.6,
+          "reflector": 0.0,
+          "peer": 0.1,
+          "affiliative": 0.0,
+          "learner": 0.0,
+          "creative-partner": 0.0,
+          "unable-to-engage": 0.0
+        },
+        "confidence": 0.8,
+        "evidence": [
+          {
+            "role": "facilitator",
+            "quote": "i can tell . i am not , you can see me in some tv shows"
+          }
+        ],
+        "rationale": "The AI is facilitating the conversation by acknowledging and responding to the human's statements.",
+        "alternative": null
+      }
+    },
+    "classificationMetadata": {
+      "model": "qwen2.5:7b",
+      "provider": "ollama",
+      "timestamp": "2026-01-07T17:39:07.767300",
+      "promptVersion": "1.3-fewshot",
+      "processingTimeMs": 30329,
+      "correctionsApplied": true,
+      "fewShotExamples": "yes",
+      "maxRetries": 2
+    }
+  }
+]

@@ -192,5 +192,158 @@
     "state": "Missouri",
     "toxic": false,
     "redacted": false
+  },
+  "classification": {
+    "abstain": false,
+    "interactionPattern": {
+      "category": "question-answer",
+      "confidence": 0.85,
+      "evidence": [
+        "Is it possible to keep all the chunks in minecraft world loaded at the same time?",
+        "Would it be possible on a sufficiently powerful server?",
+        "Yes, it is possible to modify Minecraft's build height using mods."
+      ],
+      "rationale": "Human repeatedly asks technical feasibility questions; AI responds with direct explanations and examples.",
+      "alternative": "advisory"
+    },
+    "powerDynamics": {
+      "category": "human-led",
+      "confidence": 0.75,
+      "evidence": [
+        "Is it possible to modify Minecraft\u2019s depth with mods?",
+        "Are there any minecraft shaders that use vulkan?",
+        "Can you give me some alternatives to MCreator?"
+      ],
+      "rationale": "Human sets the agenda by introducing each new topic via questions; AI follows and answers.",
+      "alternative": "balanced"
+    },
+    "emotionalTone": {
+      "category": "professional",
+      "confidence": 0.8,
+      "evidence": [
+        "This is done to improve game performance and reduce lag.",
+        "However, it's important to note that using mods to increase the build height may cause compatibility issues",
+        "In summary, it might be possible to load more chunks on a powerful server"
+      ],
+      "rationale": "Task-focused, technical, cautionary language with minimal affect.",
+      "alternative": "neutral"
+    },
+    "engagementStyle": {
+      "category": "reactive",
+      "confidence": 0.7,
+      "evidence": [
+        "No, it is not possible to keep all the chunks in a Minecraft world loaded at the same time.",
+        "Yes, it is possible to modify Minecraft's build height using mods.",
+        "Yes, there are several alternatives to MCreator"
+      ],
+      "rationale": "AI primarily responds to user prompts with explanations/lists rather than driving with questions or challenging.",
+      "alternative": "directive-iterative"
+    },
+    "knowledgeExchange": {
+      "category": "factual-info",
+      "confidence": 0.75,
+      "evidence": [
+        "Minecraft worlds are generated and loaded on-the-fly",
+        "The maximum build height in Minecraft is currently 320 blocks",
+        "Vulkan is a low-level graphics API that provides better performance"
+      ],
+      "rationale": "Exchange centers on technical facts/constraints and named tools/mods rather than personal experience.",
+      "alternative": "skill-sharing"
+    },
+    "conversationPurpose": {
+      "category": "information-seeking",
+      "confidence": 0.8,
+      "evidence": [
+        "Would it be possible to use those mods to keep all chunks loaded?",
+        "Given my hardware were sufficiently powerful, how would I go about keeping the maximum amount of chunks loaded",
+        "Is it possible to use DLSS with minecraft shaders?"
+      ],
+      "rationale": "Human seeks feasibility and how-to information about Minecraft modding/shaders.",
+      "alternative": "problem-solving"
+    },
+    "topicDepth": {
+      "category": "moderate",
+      "confidence": 0.65,
+      "evidence": [
+        "Given my hardware were sufficiently powerful, how would I go about keeping the maximum amount of chunks loaded",
+        "One such mod is the Cubic Chunks mod",
+        "Here are a few steps you can follow:"
+      ],
+      "rationale": "Multiple technical subtopics with some elaboration and examples, but not deeply detailed implementation throughout.",
+      "alternative": "surface"
+    },
+    "turnTaking": {
+      "category": "assistant-dominant",
+      "confidence": 0.9,
+      "evidence": [
+        "No, it is not possible to keep all the chunks in a Minecraft world loaded at the same time.",
+        "There are mods and plugins available that can help to keep chunks loaded, but it is not possible to keep all chunks loaded at once.",
+        "I'm sorry, as an AI language model, I cannot write code/scripts for software applications like Minecraft. However, I can guide you through the steps"
+      ],
+      "rationale": "AI responses are substantially longer and more elaborated than the user's short questions.",
+      "alternative": null
+    },
+    "humanRole": {
+      "distribution": {
+        "information-seeker": 0.55,
+        "provider": 0.35,
+        "director": 0.07,
+        "collaborator": 0.03,
+        "social-expressor": 0.0,
+        "relational-peer": 0.0
+      },
+      "confidence": 0.78,
+      "evidence": [
+        {
+          "role": "information-seeker",
+          "quote": "Is it possible to keep all the chunks in minecraft world loaded at the same time?"
+        },
+        {
+          "role": "provider",
+          "quote": "Would it be possible on a sufficiently powerful server?"
+        },
+        {
+          "role": "director",
+          "quote": "Can you write me a datapack for Minecraft 1.18.2 that changes all the recipes in the game to output air blocks?"
+        }
+      ],
+      "rationale": "Predominantly asks for information/feasibility; one request specifies a concrete deliverable (datapack), adding a minor director component.",
+      "alternative": null
+    },
+    "aiRole": {
+      "distribution": {
+        "expert-system": 0.6,
+        "learning-facilitator": 0.02,
+        "advisor": 0.3,
+        "co-constructor": 0.06,
+        "social-facilitator": 0.01,
+        "relational-peer": 0.01
+      },
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "role": "expert-system",
+          "quote": "No, it is not possible to keep all the chunks in a Minecraft world loaded at the same time."
+        },
+        {
+          "role": "advisor",
+          "quote": "Here are a few steps you can follow:"
+        },
+        {
+          "role": "advisor",
+          "quote": "Be aware that loading too many chunks can cause performance issues"
+        }
+      ],
+      "rationale": "Mostly provides direct technical answers (expert-system) and sometimes gives step-by-step guidance/cautions (advisor).",
+      "alternative": null
+    }
+  },
+  "classificationMetadata": {
+    "model": "gpt-5.2",
+    "provider": "openai",
+    "timestamp": "2026-01-08T16:44:49.148798",
+    "promptVersion": "2.0-social-role-theory",
+    "processingTimeMs": 23597,
+    "fewShotExamples": "yes"
   }
 }

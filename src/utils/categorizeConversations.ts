@@ -15,8 +15,12 @@ export interface RoleMetadata {
   turnTaking: 'balanced' | 'user-dominant' | 'assistant-dominant';
 
   // Role characteristics
-  humanRole: 'seeker' | 'learner' | 'director' | 'collaborator' | 'sharer' | 'challenger';
-  aiRole: 'expert' | 'advisor' | 'facilitator' | 'reflector' | 'peer' | 'affiliative';
+  humanRole: 'information-seeker' | 'provider' | 'director' | 'collaborator' | 'social-expressor' | 'relational-peer' |
+             // Backward compatibility
+             'seeker' | 'learner' | 'sharer' | 'challenger';
+  aiRole: 'expert-system' | 'learning-facilitator' | 'advisor' | 'co-constructor' | 'social-facilitator' | 'relational-peer' |
+          // Backward compatibility
+          'expert' | 'facilitator' | 'reflector' | 'peer' | 'affiliative';
 }
 
 export interface PersonaChatConversation {

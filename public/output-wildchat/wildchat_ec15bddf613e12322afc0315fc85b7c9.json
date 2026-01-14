@@ -93,5 +93,163 @@
     "state": null,
     "toxic": false,
     "redacted": false
+  },
+  "classification": {
+    "abstain": false,
+    "interactionPattern": {
+      "category": "question-answer",
+      "confidence": 0.85,
+      "evidence": [
+        "What is the best setting to play csgo with cl_interp_ratio",
+        "For most players, a cl_interp_ratio of 1 is recommended.",
+        "and cl_interp?",
+        "Generally, it's recommended to set it between 0 and 0.031"
+      ],
+      "rationale": "Human repeatedly asks configuration questions; AI responds with direct explanations and recommended values.",
+      "alternative": null
+    },
+    "powerDynamics": {
+      "category": "human-led",
+      "confidence": 0.75,
+      "evidence": [
+        "What is the best setting to play csgo with cl_interp_ratio",
+        "Have any settings to play better csgo",
+        "what is the best interp for csgo?",
+        "and cl_interp?"
+      ],
+      "rationale": "Human sets the agenda via successive questions; AI follows by answering within the requested scope.",
+      "alternative": null
+    },
+    "emotionalTone": {
+      "category": "professional",
+      "confidence": 0.65,
+      "evidence": [
+        "The best setting for cl_interp_ratio in CSGO depends on a few factors",
+        "Here are some settings to consider:",
+        "Ultimately, the best setting for cl_interp_ratio will depend on your individual circumstances"
+      ],
+      "rationale": "Task-focused, instructional language with minimal affect; oriented to performance and settings optimization.",
+      "alternative": "neutral"
+    },
+    "engagementStyle": {
+      "category": "directive-iterative",
+      "confidence": 0.6,
+      "evidence": [
+        "it's recommended to use a low resolution and graphics quality",
+        "It's recommended to experiment with different values",
+        "you may need to adjust this setting based on the server's tickrate"
+      ],
+      "rationale": "AI provides recommendations and suggests iterative adjustment/experimentation rather than only reacting.",
+      "alternative": "reactive"
+    },
+    "knowledgeExchange": {
+      "category": "skill-sharing",
+      "confidence": 0.7,
+      "evidence": [
+        "Here are some settings to consider:",
+        "Adjust the mouse sensitivity and DPI to your preference.",
+        "Adjust the rate, cl_interp_ratio, and cl_interp settings to your preference."
+      ],
+      "rationale": "Exchange centers on how-to guidance for configuring gameplay and network settings.",
+      "alternative": "factual-info"
+    },
+    "conversationPurpose": {
+      "category": "problem-solving",
+      "confidence": 0.7,
+      "evidence": [
+        "Have any settings to play better csgo",
+        "This can help reduce lag and improve your gameplay experience.",
+        "what is the best interp for csgo?"
+      ],
+      "rationale": "Goal is to improve gameplay performance and reduce lag via settings choices.",
+      "alternative": "information-seeking"
+    },
+    "topicDepth": {
+      "category": "moderate",
+      "confidence": 0.65,
+      "evidence": [
+        "depends on a few factors, such as your internet connection speed and the server's tickrate.",
+        "If you're playing on a 64 tick server",
+        "set it between 0 and 0.031 depending on your internet speed and the server's tickrate."
+      ],
+      "rationale": "Includes conditional guidance (tickrate, network conditions) and multiple settings, but not exhaustive technical depth.",
+      "alternative": "surface"
+    },
+    "turnTaking": {
+      "category": "assistant-dominant",
+      "confidence": 0.8,
+      "evidence": [
+        "Here are some settings to consider:",
+        "Ultimately, the best setting for cl_interp_ratio will depend on your individual circumstances and preferences."
+      ],
+      "rationale": "AI responses are substantially longer and more elaborated than the human's short questions.",
+      "alternative": null
+    },
+    "humanRole": {
+      "distribution": {
+        "information-seeker": 0.2,
+        "provider": 0.75,
+        "director": 0.05,
+        "collaborator": 0.0,
+        "social-expressor": 0.0,
+        "relational-peer": 0.0
+      },
+      "confidence": 0.78,
+      "evidence": [
+        {
+          "role": "provider",
+          "quote": "What is the best setting to play csgo with cl_interp_ratio"
+        },
+        {
+          "role": "provider",
+          "quote": "what is the best interp for csgo?"
+        },
+        {
+          "role": "provider",
+          "quote": "and cl_interp?"
+        },
+        {
+          "role": "information-seeker",
+          "quote": "Have any settings to play better csgo"
+        }
+      ],
+      "rationale": "Human primarily requests answers from the AI about optimal settings; minimal co-building beyond asking follow-ups.",
+      "alternative": null
+    },
+    "aiRole": {
+      "distribution": {
+        "expert-system": 0.55,
+        "learning-facilitator": 0.05,
+        "advisor": 0.35,
+        "co-constructor": 0.03,
+        "social-facilitator": 0.02,
+        "relational-peer": 0.0
+      },
+      "confidence": 0.74,
+      "evidence": [
+        {
+          "role": "expert-system",
+          "quote": "For most players, a cl_interp_ratio of 1 is recommended."
+        },
+        {
+          "role": "advisor",
+          "quote": "it's recommended to use a low resolution and graphics quality to maximize performance"
+        },
+        {
+          "role": "advisor",
+          "quote": "It's recommended to experiment with different values and find the one that works best for you."
+        }
+      ],
+      "rationale": "AI provides direct informational recommendations (expert-system) plus prescriptive tuning guidance across settings (advisor).",
+      "alternative": null
+    }
+  },
+  "classificationMetadata": {
+    "model": "gpt-5.2",
+    "provider": "openai",
+    "timestamp": "2026-01-08T17:14:37.310963",
+    "promptVersion": "2.0-social-role-theory",
+    "processingTimeMs": 18376,
+    "fewShotExamples": "yes"
   }
 }

@@ -2,6 +2,7 @@ import React from 'react';
 import type { ClassifiedConversation } from '../../utils/conversationToTerrain';
 import { getColorForRole } from '../../utils/constants';
 import { getDominantHumanRole, getDominantAiRole } from '../../utils/conversationToTerrain';
+import { formatRoleName } from '../../utils/formatClassificationData';
 
 interface RolePatternsPanelProps {
     conversation: ClassifiedConversation;
@@ -35,7 +36,7 @@ export const RolePatternsPanel: React.FC<RolePatternsPanelProps> = ({
                                     color: getColorForRole(humanRole.role),
                                     fontWeight: 'bold'
                                 }}>
-                                    {humanRole.role} ({Math.round(humanRole.value * 100)}%)
+                                    {formatRoleName(humanRole.role, 'human')} ({Math.round(humanRole.value * 100)}%)
                                 </span>
                             </div>
                         )}
@@ -46,7 +47,7 @@ export const RolePatternsPanel: React.FC<RolePatternsPanelProps> = ({
                                     color: getColorForRole(aiRole.role),
                                     fontWeight: 'bold'
                                 }}>
-                                    {aiRole.role} ({Math.round(aiRole.value * 100)}%)
+                                    {formatRoleName(aiRole.role, 'ai')} ({Math.round(aiRole.value * 100)}%)
                                 </span>
                             </div>
                         )}

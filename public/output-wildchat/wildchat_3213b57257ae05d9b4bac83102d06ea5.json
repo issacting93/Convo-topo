@@ -84,5 +84,152 @@
     "state": null,
     "toxic": false,
     "redacted": true
+  },
+  "classification": {
+    "abstain": false,
+    "interactionPattern": {
+      "category": "advisory",
+      "confidence": 0.78,
+      "evidence": [
+        "\u6839\u636e\u63a8\u8350\u4fe1\u7684\u5185\u5bb9\uff0c\u8fd9\u4e9b\u95ee\u9898\u53ef\u4ee5\u5982\u4e0b\u56de\u7b54\uff1a",
+        "\u7b54\u6848\u6362\u6210\u7b2c\u4e00\u4eba\u79f0\u53e3\u543b"
+      ],
+      "rationale": "Human provides a document and requests tailored responses; AI revises and generates form-ready answers and then rewrites in first person.",
+      "alternative": "question-answer"
+    },
+    "powerDynamics": {
+      "category": "human-led",
+      "confidence": 0.74,
+      "evidence": [
+        "\u6839\u636e\u63a8\u8350\u4fe1\u56de\u7b54\u6211\u4e0b\u9762\u51e0\u4e2a\u95ee\u9898\u53ef\u4ee5\u5417",
+        "\u8bf7\u544a\u8bc9\u6211\u4f60\u9700\u8981\u56de\u7b54\u54ea\u4e9b\u5177\u4f53\u95ee\u9898\u3002",
+        "\u7b54\u6848\u6362\u6210\u7b2c\u4e00\u4eba\u79f0\u53e3\u543b"
+      ],
+      "rationale": "Human sets the agenda (answer specific application questions; change to first-person), while AI follows those constraints.",
+      "alternative": "balanced"
+    },
+    "emotionalTone": {
+      "category": "professional",
+      "confidence": 0.82,
+      "evidence": [
+        "Here's a revised version of the letter with some minor tweaks for clarity and formality:",
+        "\u6839\u636e\u63a8\u8350\u4fe1\u7684\u5185\u5bb9\uff0c\u8fd9\u4e9b\u95ee\u9898\u53ef\u4ee5\u5982\u4e0b\u56de\u7b54\uff1a"
+      ],
+      "rationale": "Task-focused, formal academic/application context with minimal affective language.",
+      "alternative": "neutral"
+    },
+    "engagementStyle": {
+      "category": "directive-iterative",
+      "confidence": 0.71,
+      "evidence": [
+        "Here's a revised version of the letter",
+        "\u8bf7\u544a\u8bc9\u6211\u4f60\u9700\u8981\u56de\u7b54\u54ea\u4e9b\u5177\u4f53\u95ee\u9898\u3002",
+        "\u8bf7\u6839\u636e\u7533\u8bf7\u7684\u5177\u4f53\u60c5\u51b5\u8c03\u6574\u8fd9\u4e9b\u4fe1\u606f"
+      ],
+      "rationale": "AI provides structured outputs and iterative refinements based on user constraints (revised letter; then answers; then first-person rewrite).",
+      "alternative": "reactive"
+    },
+    "knowledgeExchange": {
+      "category": "skill-sharing",
+      "confidence": 0.7,
+      "evidence": [
+        "Here's a revised version of the letter with some minor tweaks for clarity and formality:",
+        "\u8bf7\u6839\u636e\u7533\u8bf7\u7684\u5177\u4f53\u60c5\u51b5\u8c03\u6574\u8fd9\u4e9b\u4fe1\u606f\uff0c\u4ee5\u4fbf\u9002\u5e94\u7ebf\u4e0a\u8868\u5355\u7684\u8981\u6c42\u3002"
+      ],
+      "rationale": "Exchange centers on writing/editing technique and producing application-ready text rather than personal storytelling or pure facts.",
+      "alternative": "factual-info"
+    },
+    "conversationPurpose": {
+      "category": "problem-solving",
+      "confidence": 0.77,
+      "evidence": [
+        "\u9700\u8981\u7528\u5728\u7f51\u63a8\u95ee\u9898\u7684\u586b\u5199",
+        "\u8fd9\u4e9b\u95ee\u9898\u53ef\u4ee5\u5982\u4e0b\u56de\u7b54\uff1a"
+      ],
+      "rationale": "Primary goal is completing online recommendation-form questions using the letter content and required voice.",
+      "alternative": "collaborative-refinement"
+    },
+    "topicDepth": {
+      "category": "moderate",
+      "confidence": 0.66,
+      "evidence": [
+        "Please comment on the applicant\u2019s knowledge of economics and mathematics.",
+        "What do you consider to be the applicant\u2019s strengths?"
+      ],
+      "rationale": "Covers multiple evaluative dimensions (strengths, weaknesses, difficulty areas, economics/math), but stays at template-response level.",
+      "alternative": "surface"
+    },
+    "turnTaking": {
+      "category": "assistant-dominant",
+      "confidence": 0.73,
+      "evidence": [
+        "Here's a revised version of the letter with some minor tweaks for clarity and formality:",
+        "\u6839\u636e\u63a8\u8350\u4fe1\u7684\u5185\u5bb9\uff0c\u7528\u7b2c\u4e00\u4eba\u79f0\u53e3\u543b\u56de\u7b54\u60a8\u7684\u95ee\u9898\u5982\u4e0b\uff1a"
+      ],
+      "rationale": "AI produces substantially longer text outputs (full revised letter and multi-question responses) than the human prompts.",
+      "alternative": "balanced"
+    },
+    "humanRole": {
+      "distribution": {
+        "information-seeker": 0.25,
+        "provider": 0.1,
+        "director": 0.55,
+        "collaborator": 0.1,
+        "social-expressor": 0.0,
+        "relational-peer": 0.0
+      },
+      "confidence": 0.72,
+      "evidence": [
+        {
+          "role": "director",
+          "quote": "\u6839\u636e\u63a8\u8350\u4fe1\u56de\u7b54\u6211\u4e0b\u9762\u51e0\u4e2a\u95ee\u9898\u53ef\u4ee5\u5417\uff0c\u9700\u8981\u7528\u5728\u7f51\u63a8\u95ee\u9898\u7684\u586b\u5199"
+        },
+        {
+          "role": "director",
+          "quote": "\u7b54\u6848\u6362\u6210\u7b2c\u4e00\u4eba\u79f0\u53e3\u543b"
+        },
+        {
+          "role": "information-seeker",
+          "quote": "\u6839\u636e\u63a8\u8350\u4fe1\u56de\u7b54\u6211\u4e0b\u9762\u51e0\u4e2a\u95ee\u9898\u53ef\u4ee5\u5417"
+        }
+      ],
+      "rationale": "Human primarily directs deliverables and constraints (answer these questions; use first-person), while also seeking help completing the form.",
+      "alternative": null
+    },
+    "aiRole": {
+      "distribution": {
+        "expert-system": 0.15,
+        "learning-facilitator": 0.05,
+        "advisor": 0.55,
+        "co-constructor": 0.2,
+        "social-facilitator": 0.03,
+        "relational-peer": 0.02
+      },
+      "confidence": 0.76,
+      "evidence": [
+        {
+          "role": "advisor",
+          "quote": "\u6839\u636e\u63a8\u8350\u4fe1\u7684\u5185\u5bb9\uff0c\u8fd9\u4e9b\u95ee\u9898\u53ef\u4ee5\u5982\u4e0b\u56de\u7b54\uff1a"
+        },
+        {
+          "role": "co-constructor",
+          "quote": "\u5f53\u7136\u53ef\u4ee5\uff0c\u6211\u4f1a\u6839\u636e\u63a8\u8350\u4fe1\u5185\u5bb9\u5e2e\u4f60\u56de\u7b54\u95ee\u9898\u3002"
+        },
+        {
+          "role": "expert-system",
+          "quote": "Here's a revised version of the letter with some minor tweaks for clarity and formality:"
+        }
+      ],
+      "rationale": "AI provides prescriptive, structured responses and revisions (advisor), while jointly tailoring outputs to user constraints (co-constructor).",
+      "alternative": null
+    }
+  },
+  "classificationMetadata": {
+    "model": "gpt-5.2",
+    "provider": "openai",
+    "timestamp": "2026-01-08T16:47:10.008408",
+    "promptVersion": "2.0-social-role-theory",
+    "processingTimeMs": 14349,
+    "fewShotExamples": "yes"
   }
 }

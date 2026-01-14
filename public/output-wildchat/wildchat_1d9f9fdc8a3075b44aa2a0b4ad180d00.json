@@ -174,5 +174,154 @@
     "state": "Florida",
     "toxic": false,
     "redacted": false
+  },
+  "classification": {
+    "abstain": false,
+    "interactionPattern": {
+      "category": "advisory",
+      "confidence": 0.72,
+      "evidence": [
+        "respond  in 100 words simplicity",
+        "add points to this response in 100 words",
+        "Re write in simplicity",
+        "re write in 100 words with simplicity"
+      ],
+      "rationale": "Human repeatedly requests constrained rewrites and expansions; AI complies by producing revised versions and added points.",
+      "alternative": "question-answer"
+    },
+    "powerDynamics": {
+      "category": "human-led",
+      "confidence": 0.78,
+      "evidence": [
+        "respond  in 100 words simplicity",
+        "In 100 words response to this statement",
+        "in 100 words add more points to this statement"
+      ],
+      "rationale": "Human sets the agenda, constraints (100 words, simplicity), and repeatedly directs what the AI should produce.",
+      "alternative": "balanced"
+    },
+    "emotionalTone": {
+      "category": "professional",
+      "confidence": 0.74,
+      "evidence": [
+        "The Founding Fathers deliberately endowed Congress with legislative powers",
+        "This arrangement raises concerns regarding democratic representation"
+      ],
+      "rationale": "Academic/civics content with formal explanatory language; little affective or relational content.",
+      "alternative": "neutral"
+    },
+    "engagementStyle": {
+      "category": "directive-iterative",
+      "confidence": 0.83,
+      "evidence": [
+        "add points to this response in 100 words",
+        "Re write in simplicity",
+        "Add more points to this statement"
+      ],
+      "rationale": "Human issues repeated directives and requests iterative refinements (add points, rewrite, simplify).",
+      "alternative": "reactive"
+    },
+    "knowledgeExchange": {
+      "category": "skill-sharing",
+      "confidence": 0.63,
+      "evidence": [
+        "Re write in simplicity",
+        "re write in 100 words with simplicity"
+      ],
+      "rationale": "Exchange centers on writing/rewriting skills (summarizing, simplifying, adding supporting points) rather than personal sharing.",
+      "alternative": "factual-info"
+    },
+    "conversationPurpose": {
+      "category": "problem-solving",
+      "confidence": 0.66,
+      "evidence": [
+        "respond  in 100 words simplicity",
+        "add more points to this statement"
+      ],
+      "rationale": "Goal is to produce usable short responses/rewrites meeting constraints (word count, simplicity, added points).",
+      "alternative": "collaborative-refinement"
+    },
+    "topicDepth": {
+      "category": "moderate",
+      "confidence": 0.62,
+      "evidence": [
+        "balance democracy, effective governance, and protection of individual rights",
+        "judicial independence and prevent swings in legal interpretations"
+      ],
+      "rationale": "Covers multiple civics concepts with some elaboration, but stays at summary/paragraph level.",
+      "alternative": "surface"
+    },
+    "turnTaking": {
+      "category": "assistant-dominant",
+      "confidence": 0.86,
+      "evidence": [
+        "The Founding Fathers deliberately endowed Congress with legislative powers to strike a balance",
+        "Since a significant portion of the president's duties requires discretion, public support is often crucial"
+      ],
+      "rationale": "AI responses are consistently longer than the human\u2019s directive prompts.",
+      "alternative": "balanced"
+    },
+    "humanRole": {
+      "distribution": {
+        "information-seeker": 0.05,
+        "provider": 0.1,
+        "director": 0.8,
+        "collaborator": 0.05,
+        "social-expressor": 0.0,
+        "relational-peer": 0.0
+      },
+      "confidence": 0.82,
+      "evidence": [
+        {
+          "role": "director",
+          "quote": "add points to this response in 100 words"
+        },
+        {
+          "role": "director",
+          "quote": "Re write in simplicity"
+        },
+        {
+          "role": "director",
+          "quote": "Responsd in 100 words to this statement"
+        }
+      ],
+      "rationale": "Human primarily controls deliverables and constraints (word count, simplicity, add points), indicating a directive role.",
+      "alternative": null
+    },
+    "aiRole": {
+      "distribution": {
+        "expert-system": 0.55,
+        "learning-facilitator": 0.0,
+        "advisor": 0.35,
+        "co-constructor": 0.1,
+        "social-facilitator": 0.0,
+        "relational-peer": 0.0
+      },
+      "confidence": 0.74,
+      "evidence": [
+        {
+          "role": "expert-system",
+          "quote": "The Founding Fathers deliberately endowed Congress with legislative powers"
+        },
+        {
+          "role": "advisor",
+          "quote": "This setup leads to doubts about how well it represents the people"
+        },
+        {
+          "role": "co-constructor",
+          "quote": "Additionally, this framework promotes accountability, as lawmakers must answer to their constituents"
+        }
+      ],
+      "rationale": "AI mainly provides authoritative explanatory rewrites (expert-system) and adds prescriptive supporting points (advisor), with minor co-building by extending arguments.",
+      "alternative": null
+    }
+  },
+  "classificationMetadata": {
+    "model": "gpt-5.2",
+    "provider": "openai",
+    "timestamp": "2026-01-08T16:44:24.948195",
+    "promptVersion": "2.0-social-role-theory",
+    "processingTimeMs": 15795,
+    "fewShotExamples": "yes"
   }
 }

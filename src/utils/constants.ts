@@ -4,49 +4,60 @@ import * as THREE from 'three';
 // Using chart colors for variety and visual interest
 export const COLORS = {
   // Background - dark theme background
-  background: '#fefefe',  // Pure black (change to any hex color you prefer)
+  background: '#000000',  // Pure black
   terrain: {
-    // Terrain palette - brighter, higher contrast grays for visibility on dark background
-    low: new THREE.Color(0x606060),   // Medium-dark gray (brighter)
-    mid: new THREE.Color(0x808080),   // Medium gray (brighter)
-    high: new THREE.Color(0xa0a0a0),  // Light gray (brighter, higher contrast)
+    // Terrain palette - dark mode (deep blue-greys)
+    low: new THREE.Color(0x111827),   // Very dark blue (low elevation)
+    mid: new THREE.Color(0x1f2937),   // Dark blue-gray (mid elevation)
+    high: new THREE.Color(0x374151),  // Mid-dark gray (high elevation)
   },
   contour: {
-    // Very dark grey contours for visibility on light background
-    minor: '#303030',  // Very dark grey for minor contours
-    major: '#202020',  // Darker grey for major contours
-    index: '#101010',  // Darkest grey for index contours
+    // Light grey contours for visibility on dark background
+    minor: '#333333',  // Dark grey for minor contours
+    major: '#4b5563',  // Mid grey for major contours
+    index: '#6b7280',  // Light grey for index contours
   },
 
   marker: '#FF8400',
-  wireframe: '#000000',
-  grid: '#000000',      // Dark gray for visibility on dark background
-  gridDim: '#000000',   // Very dark gray for secondary grid lines
+  wireframe: '#ffffff',
+  grid: '#333333',      // Visible grey for grid on black
+  gridDim: '#1f2937',   // Darker grey for secondary grid lines
   fog: '#000000',
-  accent: new THREE.Color('#000000'),     // chart-1 as primary accent
-  label: '#000000',      // Light text for dark background
+  accent: new THREE.Color('#a78bfa'),     // Light purple accent
+  label: '#e5e7eb',      // Light text for dark background
 };
 
 /**
- * Role-based color mapping for visual encoding
+ * Role-based color mapping for visual encoding (Social Role Theory Taxonomy)
  * Colors represent user positioning patterns (projections), not AI capabilities
  */
 export const ROLE_COLORS: Record<string, string> = {
-  // Human roles (user projections) - using chart colors
-  'director': '#ec4899',      // chart-4 (magenta) - instructor/leader
-  'challenger': '#f97316',    // chart-5 (orange) - evaluator
-  'seeker': '#7b68ee',        // chart-1 (purple-blue) - dependent/inquirer
-  'learner': '#4ade80',       // chart-2 (green) - dependent/student
-  'sharer': '#fbbf24',        // chart-3 (yellow) - confidant
-  'collaborator': '#7b68ee',  // chart-1 variant - collaborator
-  
-  // AI roles (how user positioned AI) - using chart colors
-  'expert': '#7b68ee',        // chart-1 (purple-blue) - authority
-  'advisor': '#4ade80',       // chart-2 (green) - guidance
-  'facilitator': '#ec4899',   // chart-4 (magenta) - helper
-  'reflector': '#fbbf24',     // chart-3 (yellow) - mirror
-  'peer': '#4ade80',          // chart-2 (green) - equal
-  'affiliative': '#7b68ee',   // chart-1 (purple-blue) - friend
+  // Human roles (6 roles) - Social Role Theory taxonomy
+  'information-seeker': '#7b68ee',   // chart-1 (purple-blue) - instrumental, low authority
+  'provider': '#4ade80',             // chart-2 (green) - instrumental, low authority (seeks from AI)
+  'director': '#ec4899',             // chart-4 (magenta) - instrumental, high authority
+  'collaborator': '#06b6d4',         // chart-6 (cyan) - instrumental, equal authority
+  'social-expressor': '#fbbf24',     // chart-3 (yellow) - expressive, low authority
+  // Note: relational-peer exists for both human and AI - using same color for consistency
+  'relational-peer': '#4ade80',      // chart-2 (green) - expressive, equal authority (used by both human and AI)
+
+  // AI roles (6 roles) - Social Role Theory taxonomy
+  'expert-system': '#7b68ee',        // chart-1 (purple-blue) - instrumental, high authority
+  'learning-facilitator': '#06b6d4', // chart-6 (cyan) - instrumental, low authority
+  'advisor': '#ec4899',              // chart-4 (magenta) - instrumental, high authority (prescriptive)
+  'co-constructor': '#4ade80',       // chart-2 (green) - instrumental, equal authority
+  'social-facilitator': '#fbbf24',   // chart-3 (yellow) - expressive, low authority
+
+  // Backward compatibility: map old role names to new ones
+  'seeker': '#7b68ee',               // maps to information-seeker
+  'challenger': '#f97316',           // maps to director
+  'sharer': '#fbbf24',               // maps to social-expressor
+  'expert': '#7b68ee',               // maps to expert-system
+  'facilitator': '#06b6d4',          // maps to learning-facilitator (default)
+  'reflector': '#fbbf24',            // maps to social-facilitator
+  'peer': '#4ade80',                 // maps to relational-peer
+  'affiliative': '#7b68ee',          // maps to social-facilitator
+  'learner': '#4ade80',              // maps to provider
 };
 
 /**

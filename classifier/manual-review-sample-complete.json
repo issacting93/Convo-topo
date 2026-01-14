@@ -1,0 +1,2111 @@
+[
+  {
+    "id": "conv-20",
+    "sequence": 1,
+    "conversation": {
+      "messages": [
+        {
+          "role": "user",
+          "content": "hi ! i work as a gourmet cook ."
+        },
+        {
+          "role": "assistant",
+          "content": "cool , i'm currently studying and enjoy going fishing in my spare time ."
+        }
+      ],
+      "preview": "[USER] hi ! i work as a gourmet cook .\n[ASSISTANT] cool , i'm currently studying and enjoy going fishing in my spare time ."
+    },
+    "classification": {
+      "aiRole": {
+        "distribution": {
+          "expert": 0.0,
+          "advisor": 0.0,
+          "facilitator": 0.8,
+          "reflector": 0.2,
+          "peer": 0.0,
+          "affiliative": 0.0,
+          "learner": 0.0,
+          "creative-partner": 0.0,
+          "unable-to-engage": 0.0
+        },
+        "confidence": 0.8,
+        "dominant_role": "facilitator",
+        "dominant_prob": 0.8
+      },
+      "humanRole": {
+        "distribution": {
+          "seeker": 0.3,
+          "learner": 0.2,
+          "director": 0.1,
+          "collaborator": 0.4,
+          "sharer": 0.0,
+          "challenger": 0.0,
+          "teacher-evaluator": 0.0,
+          "philosophical-explorer": 0.0,
+          "artist": 0.0,
+          "tester": 0.0
+        },
+        "confidence": 0.8
+      },
+      "interactionPattern": {
+        "category": "casual-chat",
+        "confidence": 0.8,
+        "evidence": [
+          "hi ! i work as a gourmet cook.",
+          "cool , i'm currently studying and enjoy going fishing in my spare time."
+        ],
+        "rationale": "The conversation starts with greetings and personal information exchange.",
+        "alternative": null
+      },
+      "conversationPurpose": {
+        "category": "relationship-building",
+        "confidence": 0.8,
+        "evidence": [
+          "hi ! i work as a gourmet cook.",
+          "cool , i'm currently studying and enjoy going fishing in my spare time."
+        ],
+        "rationale": "The purpose is to build rapport through personal information exchange.",
+        "alternative": null
+      }
+    },
+    "manualReview": {
+      "shouldBeExpert": false,
+      "shouldBeFacilitator": false,
+      "correctClassification": "affiliative",
+      "notes": "Casual peer conversation, sharing personal info. Not expert or facilitator.",
+      "reviewed": true
+    }
+  },
+  {
+    "id": "conv-21",
+    "sequence": 2,
+    "conversation": {
+      "messages": [
+        {
+          "role": "user",
+          "content": "hi ! i work as a gourmet cook ."
+        },
+        {
+          "role": "assistant",
+          "content": "i don't like carrots . i throw them away ."
+        },
+        {
+          "role": "user",
+          "content": "really . but , i can sing pitch perfect ."
+        },
+        {
+          "role": "assistant",
+          "content": "yes , been married for about twelve years , two kids . . how about yourself ?"
+        }
+      ],
+      "preview": "[USER] hi ! i work as a gourmet cook .\n[ASSISTANT] i don't like carrots . i throw them away .\n[USER] really . but , i can sing pitch perfect .\n[ASSISTANT] yes , been married for about twelve years , two kids . . how about yourself ?"
+    },
+    "classification": {
+      "aiRole": {
+        "distribution": {
+          "expert": 0.0,
+          "advisor": 0.0,
+          "facilitator": 0.8,
+          " reflector": 0.2,
+          "peer": 0.0,
+          "affiliative": 0.0,
+          "learner": 0.0,
+          "creative-partner": 0.0,
+          "unable-to-engage": 0.0
+        },
+        "confidence": 0.8,
+        "dominant_role": "facilitator",
+        "dominant_prob": 0.8
+      },
+      "humanRole": {
+        "distribution": {
+          "seeker": 0.2,
+          "learner": 0.1,
+          "director": 0.0,
+          "collaborator": 0.0,
+          "sharer": 0.7,
+          "challenger": 0.0,
+          "teacher-evaluator": 0.0,
+          "philosophical-explorer": 0.0,
+          "artist": 0.0,
+          "tester": 0.0
+        },
+        "confidence": 0.8
+      },
+      "interactionPattern": {
+        "category": "casual-chat",
+        "confidence": 0.8,
+        "evidence": [
+          "i don't like carrots . i throw them away .",
+          "yes , been married for about twelve years , two kids . . how about yourself ?"
+        ],
+        "rationale": "The conversation starts with a personal statement and then shifts to asking about the other person, indicating casual chat.",
+        "alternative": null
+      },
+      "conversationPurpose": {
+        "category": "self-expression",
+        "confidence": 0.8,
+        "evidence": [
+          "i don't like carrots . i throw them away .",
+          "yes , been married for about twelve years , two kids . . how about yourself ?"
+        ],
+        "rationale": "The conversation is focused on expressing personal traits and experiences.",
+        "alternative": null
+      }
+    },
+    "manualReview": {
+      "shouldBeExpert": false,
+      "shouldBeFacilitator": false,
+      "correctClassification": "affiliative",
+      "notes": "Social bonding conversation, asking about other person. Not learning facilitation.",
+      "reviewed": true
+    }
+  },
+  {
+    "id": "conv-22",
+    "sequence": 3,
+    "conversation": {
+      "messages": [
+        {
+          "role": "user",
+          "content": "hi ! i work as a gourmet cook ."
+        },
+        {
+          "role": "assistant",
+          "content": "i don't like carrots . i throw them away ."
+        },
+        {
+          "role": "user",
+          "content": "really . but , i can sing pitch perfect ."
+        },
+        {
+          "role": "assistant",
+          "content": "i also cook , and i ride my bike to work ."
+        },
+        {
+          "role": "user",
+          "content": "great ! i had won an award for spelling bee ."
+        },
+        {
+          "role": "assistant",
+          "content": "i like reading . my favorite genre are crime novels . how bout you ?"
+        }
+      ],
+      "preview": "[USER] hi ! i work as a gourmet cook .\n[ASSISTANT] i don't like carrots . i throw them away .\n[USER] really . but , i can sing pitch perfect .\n[ASSISTANT] i also cook , and i ride my bike to work .\n[USER] great ! i had won an award for spelling bee .\n[ASSISTANT] i like reading . my favorite genre are crime novels . how bout you ?"
+    },
+    "classification": {
+      "aiRole": {
+        "distribution": {
+          "expert": 0.2,
+          "advisor": 0.0,
+          "facilitator": 0.8,
+          "reflector": 0.0,
+          "peer": 0.0,
+          "affiliative": 0.0,
+          "learner": 0.0,
+          "creative-partner": 0.0,
+          "unable-to-engage": 0.0
+        },
+        "confidence": 0.8,
+        "dominant_role": "facilitator",
+        "dominant_prob": 0.8
+      },
+      "humanRole": {
+        "distribution": {
+          "seeker": 0.3,
+          "learner": 0.1,
+          "director": 0.0,
+          "collaborator": 0.6,
+          "sharer": 0.0,
+          "challenger": 0.0,
+          "teacher-evaluator": 0.0,
+          "philosophical-explorer": 0.0,
+          "artist": 0.0,
+          "tester": 0.0
+        },
+        "confidence": 0.8
+      },
+      "interactionPattern": {
+        "category": "casual-chat",
+        "confidence": 0.8,
+        "evidence": [
+          "i don't like carrots . i throw them away ."
+        ],
+        "rationale": "Exchanging personal preferences and experiences in a casual manner.",
+        "alternative": null
+      },
+      "conversationPurpose": {
+        "category": "self-expression",
+        "confidence": 0.8,
+        "evidence": [
+          "i also cook , and i ride my bike to work ."
+        ],
+        "rationale": "Expressing oneself through sharing hobbies and daily activities.",
+        "alternative": null
+      }
+    },
+    "manualReview": {
+      "shouldBeExpert": false,
+      "shouldBeFacilitator": false,
+      "correctClassification": "affiliative",
+      "notes": "Casual sharing of hobbies and interests. Peer/affiliative conversation.",
+      "reviewed": true
+    }
+  },
+  {
+    "id": "conv-23",
+    "sequence": 4,
+    "conversation": {
+      "messages": [
+        {
+          "role": "user",
+          "content": "hi ! i work as a gourmet cook ."
+        },
+        {
+          "role": "assistant",
+          "content": "i don't like carrots . i throw them away ."
+        },
+        {
+          "role": "user",
+          "content": "really . but , i can sing pitch perfect ."
+        },
+        {
+          "role": "assistant",
+          "content": "i also cook , and i ride my bike to work ."
+        },
+        {
+          "role": "user",
+          "content": "great ! i had won an award for spelling bee ."
+        },
+        {
+          "role": "assistant",
+          "content": "my contacts can see through what you are trying to sell me ."
+        },
+        {
+          "role": "user",
+          "content": "okay but i was published in new yorker once"
+        },
+        {
+          "role": "assistant",
+          "content": "hey , how are you doing ?"
+        }
+      ],
+      "preview": "[USER] hi ! i work as a gourmet cook .\n[ASSISTANT] i don't like carrots . i throw them away .\n[USER] really . but , i can sing pitch perfect .\n[ASSISTANT] i also cook , and i ride my bike to work .\n[USER] great ! i had won an award for spelling bee .\n[ASSISTANT] my contacts can see through what you are trying to sell me .\n[USER] okay but i was published in new yorker once\n[ASSISTANT] hey , how are you doing ?"
+    },
+    "classification": {
+      "aiRole": {
+        "distribution": {
+          "expert": 0.2,
+          "advisor": 0.0,
+          "facilitator": 0.8,
+          "reflector": 0.0,
+          "peer": 0.0,
+          "affiliative": 0.0,
+          "learner": 0.0,
+          "creative-partner": 0.0,
+          "unable-to-engage": 0.0
+        },
+        "confidence": 0.8,
+        "dominant_role": "facilitator",
+        "dominant_prob": 0.8
+      },
+      "humanRole": {
+        "distribution": {
+          "seeker": 0.7,
+          "learner": 0.2,
+          "director": 0.1,
+          "collaborator": 0.0,
+          "sharer": 0.0,
+          "challenger": 0.0,
+          "teacher-evaluator": 0.0,
+          "philosophical-explorer": 0.0,
+          "artist": 0.0,
+          "tester": 0.0
+        },
+        "confidence": 0.8
+      },
+      "interactionPattern": {
+        "category": "casual-chat",
+        "confidence": 0.9,
+        "evidence": [
+          "i don't like carrots . i throw them away .",
+          "i also cook , and i ride my bike to work ."
+        ],
+        "rationale": "The conversation consists of casual statements about hobbies and personal traits.",
+        "alternative": null
+      },
+      "conversationPurpose": {
+        "category": "information-seeking",
+        "confidence": 0.8,
+        "evidence": [
+          "i don't like carrots . i throw them away .",
+          "i also cook , and i ride my bike to work ."
+        ],
+        "rationale": "The human is sharing information about themselves, likely seeking validation or interest.",
+        "alternative": null
+      }
+    },
+    "manualReview": {
+      "shouldBeExpert": false,
+      "shouldBeFacilitator": false,
+      "correctClassification": "affiliative",
+      "notes": "Casual chat with non-sequitur responses. Relationship-focused, not task-oriented.",
+      "reviewed": true
+    }
+  },
+  {
+    "id": "conv-26",
+    "sequence": 5,
+    "conversation": {
+      "messages": [
+        {
+          "role": "user",
+          "content": "hi ! i work as a gourmet cook ."
+        },
+        {
+          "role": "assistant",
+          "content": "i don't like carrots . i throw them away ."
+        },
+        {
+          "role": "user",
+          "content": "really . but , i can sing pitch perfect ."
+        },
+        {
+          "role": "assistant",
+          "content": "i also cook , and i ride my bike to work ."
+        },
+        {
+          "role": "user",
+          "content": "great ! i had won an award for spelling bee ."
+        },
+        {
+          "role": "assistant",
+          "content": "my contacts can see through what you are trying to sell me ."
+        },
+        {
+          "role": "user",
+          "content": "okay but i was published in new yorker once"
+        },
+        {
+          "role": "assistant",
+          "content": "you better not make any spelling mistakes ."
+        },
+        {
+          "role": "user",
+          "content": "i have not . i can cook any word you want me to"
+        },
+        {
+          "role": "assistant",
+          "content": "what is your ethnicity ? i'm white , and my hair is brown ."
+        },
+        {
+          "role": "user",
+          "content": "i'm asian and have no hair ."
+        },
+        {
+          "role": "assistant",
+          "content": "i love hairless asians . do you like carrots ?"
+        },
+        {
+          "role": "user",
+          "content": "i love carrots . i eat carrots like a horse ."
+        },
+        {
+          "role": "assistant",
+          "content": "hello"
+        }
+      ],
+      "preview": "[USER] hi ! i work as a gourmet cook .\n[ASSISTANT] i don't like carrots . i throw them away .\n[USER] really . but , i can sing pitch perfect .\n[ASSISTANT] i also cook , and i ride my bike to work .\n[USER] great ! i had won an award for spelling bee .\n[ASSISTANT] my contacts can see through what you are trying to sell me .\n[USER] okay but i was published in new yorker once\n[ASSISTANT] you better not make any spelling mistakes .\n[USER] i have not . i can cook any word you want me to\n[ASSISTANT] what is your ethnicity ? i'm white , and my hair is brown ."
+    },
+    "classification": {
+      "aiRole": {
+        "distribution": {
+          "expert": 0.2,
+          "advisor": 0.3,
+          "facilitator": 0.5,
+          "reflector": 0.0,
+          "peer": 0.0,
+          "affiliative": 0.0,
+          "learner": 0.0,
+          "creative-partner": 0.0,
+          "unable-to-engage": 0.0
+        },
+        "confidence": 0.8,
+        "dominant_role": "facilitator",
+        "dominant_prob": 0.5
+      },
+      "humanRole": {
+        "distribution": {
+          "seeker": 0.5,
+          "learner": 0.3,
+          "director": 0.1,
+          "collaborator": 0.0,
+          "sharer": 0.1,
+          "challenger": 0.0,
+          "teacher-evaluator": 0.0,
+          "philosophical-explorer": 0.0,
+          "artist": 0.0
+        },
+        "confidence": 0.8
+      },
+      "interactionPattern": {
+        "category": "casual-chat",
+        "confidence": 0.8,
+        "evidence": [
+          "i don't like carrots . i throw them away .",
+          "you better not make any spelling mistakes ."
+        ],
+        "rationale": "The conversation is light and casual, with topics ranging from cooking to personal traits.",
+        "alternative": null
+      },
+      "conversationPurpose": {
+        "category": "information-seeking",
+        "confidence": 0.8,
+        "evidence": [
+          "i don't like carrots . i throw them away .",
+          "you better not make any spelling mistakes ."
+        ],
+        "rationale": "Both parties are seeking to understand more about each other through casual conversation.",
+        "alternative": null
+      }
+    },
+    "manualReview": {
+      "shouldBeExpert": false,
+      "shouldBeFacilitator": false,
+      "correctClassification": "affiliative",
+      "notes": "Longer casual conversation with personal sharing. Social bonding, not learning.",
+      "reviewed": true
+    }
+  },
+  {
+    "id": "conv-27",
+    "sequence": 6,
+    "conversation": {
+      "messages": [
+        {
+          "role": "user",
+          "content": "hi ! i work as a gourmet cook ."
+        },
+        {
+          "role": "assistant",
+          "content": "i don't like carrots . i throw them away ."
+        },
+        {
+          "role": "user",
+          "content": "really . but , i can sing pitch perfect ."
+        },
+        {
+          "role": "assistant",
+          "content": "i also cook , and i ride my bike to work ."
+        },
+        {
+          "role": "user",
+          "content": "great ! i had won an award for spelling bee ."
+        },
+        {
+          "role": "assistant",
+          "content": "my contacts can see through what you are trying to sell me ."
+        },
+        {
+          "role": "user",
+          "content": "okay but i was published in new yorker once"
+        },
+        {
+          "role": "assistant",
+          "content": "you better not make any spelling mistakes ."
+        },
+        {
+          "role": "user",
+          "content": "i have not . i can cook any word you want me to"
+        },
+        {
+          "role": "assistant",
+          "content": "what is your ethnicity ? i'm white , and my hair is brown ."
+        },
+        {
+          "role": "user",
+          "content": "i'm asian and have no hair ."
+        },
+        {
+          "role": "assistant",
+          "content": "i love hairless asians . do you like carrots ?"
+        },
+        {
+          "role": "user",
+          "content": "i love carrots . i eat carrots like a horse ."
+        },
+        {
+          "role": "assistant",
+          "content": "are you male or female ?"
+        },
+        {
+          "role": "user",
+          "content": "i work as a gourmet cook who also has a pitch perfect voice ."
+        },
+        {
+          "role": "assistant",
+          "content": "i do like to read , but only ebooks . physical books are for the past ."
+        }
+      ],
+      "preview": "[USER] hi ! i work as a gourmet cook .\n[ASSISTANT] i don't like carrots . i throw them away .\n[USER] really . but , i can sing pitch perfect .\n[ASSISTANT] i also cook , and i ride my bike to work .\n[USER] great ! i had won an award for spelling bee .\n[ASSISTANT] my contacts can see through what you are trying to sell me .\n[USER] okay but i was published in new yorker once\n[ASSISTANT] you better not make any spelling mistakes .\n[USER] i have not . i can cook any word you want me to\n[ASSISTANT] what is your ethnicity ? i'm white , and my hair is brown ."
+    },
+    "classification": {
+      "aiRole": {
+        "distribution": {
+          "expert": 0.222,
+          "advisor": 0.111,
+          "facilitator": 0.334,
+          "reflector": 0.0,
+          "peer": 0.222,
+          "affiliative": 0.0,
+          "learner": 0.111,
+          "creative-partner": 0.0,
+          "unable-to-engage": 0.0
+        },
+        "confidence": 0.8,
+        "dominant_role": "facilitator",
+        "dominant_prob": 0.334
+      },
+      "humanRole": {
+        "distribution": {
+          "seeker": 0.5,
+          "learner": 0.2,
+          "director": 0.1,
+          "collaborator": 0.1,
+          "sharer": 0.1,
+          "challenger": 0.0,
+          "teacher-evaluator": 0.0,
+          "philosophical-explorer": 0.0,
+          "artist": 0.0,
+          "tester": 0.0
+        },
+        "confidence": 0.8
+      },
+      "interactionPattern": {
+        "category": "casual-chat",
+        "confidence": 0.8,
+        "evidence": [
+          "i don't like carrots . i throw them away ."
+        ],
+        "rationale": "The conversation includes casual statements and exchanges about personal preferences and experiences.",
+        "alternative": null
+      },
+      "conversationPurpose": {
+        "category": "self-expression",
+        "confidence": 0.8,
+        "evidence": [
+          "i don't like carrots . i throw them away ."
+        ],
+        "rationale": "The conversation allows both participants to express themselves through personal anecdotes and preferences.",
+        "alternative": null
+      }
+    },
+    "manualReview": {
+      "shouldBeExpert": null,
+      "shouldBeFacilitator": null,
+      "correctClassification": null,
+      "notes": "",
+      "reviewed": false
+    }
+  },
+  {
+    "id": "conv-29",
+    "sequence": 7,
+    "conversation": {
+      "messages": [
+        {
+          "role": "user",
+          "content": "how are you doing today"
+        },
+        {
+          "role": "assistant",
+          "content": "what do you do for career ? i have a ton of hobbies if you are interested !"
+        },
+        {
+          "role": "user",
+          "content": "i like to watch kids"
+        },
+        {
+          "role": "assistant",
+          "content": "yes ! i should try the desert . i want to taste a grasshopper . where do you live ?"
+        }
+      ],
+      "preview": "[USER] how are you doing today\n[ASSISTANT] what do you do for career ? i have a ton of hobbies if you are interested !\n[USER] i like to watch kids\n[ASSISTANT] yes ! i should try the desert . i want to taste a grasshopper . where do you live ?"
+    },
+    "classification": {
+      "aiRole": {
+        "distribution": {
+          "expert": 0.0,
+          "advisor": 0.0,
+          "facilitator": 0.8,
+          "reflector": 0.2,
+          "peer": 0.0,
+          "affiliative": 0.0,
+          "learner": 0.0,
+          "creative-partner": 0.0,
+          "unable-to-engage": 0.0
+        },
+        "confidence": 0.8,
+        "dominant_role": "facilitator",
+        "dominant_prob": 0.8
+      },
+      "humanRole": {
+        "distribution": {
+          "seeker": 0.3,
+          "learner": 0.2,
+          "director": 0.1,
+          "collaborator": 0.4,
+          "sharer": 0.0,
+          "challenger": 0.0,
+          "teacher-evaluator": 0.0,
+          "philosophical-explorer": 0.0,
+          "artist": 0.0,
+          "tester": 0.0
+        },
+        "confidence": 0.8
+      },
+      "interactionPattern": {
+        "category": "casual-chat",
+        "confidence": 0.8,
+        "evidence": [
+          "what do you do for career ? i have a ton of hobbies if you are interested !",
+          "i like to watch kids",
+          "yes ! i should try the desert . i want to taste a grasshopper . where do you live ?"
+        ],
+        "rationale": "The conversation is informal and revolves around personal interests and experiences.",
+        "alternative": null
+      },
+      "conversationPurpose": {
+        "category": "relationship-building",
+        "confidence": 0.8,
+        "evidence": [
+          "i like to watch kids",
+          "yes ! i should try the desert . i want to taste a grasshopper . where do you live ?"
+        ],
+        "rationale": "The conversation aims to build rapport and share personal interests.",
+        "alternative": null
+      }
+    },
+    "manualReview": {
+      "shouldBeExpert": null,
+      "shouldBeFacilitator": null,
+      "correctClassification": null,
+      "notes": "",
+      "reviewed": false
+    }
+  },
+  {
+    "id": "conv-32",
+    "sequence": 8,
+    "conversation": {
+      "messages": [
+        {
+          "role": "user",
+          "content": "how are you doing today"
+        },
+        {
+          "role": "assistant",
+          "content": "what do you do for career ? i have a ton of hobbies if you are interested !"
+        },
+        {
+          "role": "user",
+          "content": "i like to watch kids"
+        },
+        {
+          "role": "assistant",
+          "content": "i actually play guitar and do a lot of manly things , like welding ."
+        },
+        {
+          "role": "user",
+          "content": "what do you weld ? houses ?"
+        },
+        {
+          "role": "assistant",
+          "content": "everything ! i am actually manly . but i've a secret i am hiding ."
+        },
+        {
+          "role": "user",
+          "content": "what is your secret that you have"
+        },
+        {
+          "role": "assistant",
+          "content": "my parents don't know that i'm . . . homosexual ."
+        },
+        {
+          "role": "user",
+          "content": "how does that feel for you"
+        },
+        {
+          "role": "assistant",
+          "content": "that is great to hear ! maybe you can teach me about the different sushis"
+        }
+      ],
+      "preview": "[USER] how are you doing today\n[ASSISTANT] what do you do for career ? i have a ton of hobbies if you are interested !\n[USER] i like to watch kids\n[ASSISTANT] i actually play guitar and do a lot of manly things , like welding .\n[USER] what do you weld ? houses ?\n[ASSISTANT] everything ! i am actually manly . but i've a secret i am hiding .\n[USER] what is your secret that you have\n[ASSISTANT] my parents don't know that i'm . . . homosexual .\n[USER] how does that feel for you\n[ASSISTANT] that is great to hear ! maybe you can teach me about the different sushis"
+    },
+    "classification": {
+      "aiRole": {
+        "distribution": {
+          "expert": 0.0,
+          "advisor": 0.0,
+          "facilitator": 1.0,
+          "reflector": 0.0,
+          "peer": 0.0,
+          "affiliative": 0.0,
+          "learner": 0.0,
+          "creative-partner": 0.0,
+          "unable-to-engage": 0.0
+        },
+        "confidence": 0.8,
+        "dominant_role": "facilitator",
+        "dominant_prob": 1.0
+      },
+      "humanRole": {
+        "distribution": {
+          "seeker": 0.7,
+          "learner": 0.2,
+          "director": 0.1,
+          "collaborator": 0.0,
+          "sharer": 0.0,
+          "challenger": 0.0,
+          "teacher-evaluator": 0.0,
+          "philosophical-explorer": 0.0,
+          "artist": 0.0,
+          "tester": 0.0
+        },
+        "confidence": 0.8
+      },
+      "interactionPattern": {
+        "category": "casual-chat",
+        "confidence": 0.8,
+        "evidence": [
+          "i have a ton of hobbies if you are interested!",
+          "what do you weld ? houses?",
+          "my parents don't know that i'm . . . homosexual."
+        ],
+        "rationale": "The conversation is primarily about personal interests and a hidden secret, indicating a casual chat.",
+        "alternative": null
+      },
+      "conversationPurpose": {
+        "category": "relationship-building",
+        "confidence": 0.8,
+        "evidence": [
+          "i have a ton of hobbies if you are interested!",
+          "what do you weld ? houses?",
+          "my parents don't know that i'm . . . homosexual."
+        ],
+        "rationale": "The conversation aims to build rapport and share personal information, suggesting relationship-building.",
+        "alternative": null
+      }
+    },
+    "manualReview": {
+      "shouldBeExpert": null,
+      "shouldBeFacilitator": null,
+      "correctClassification": null,
+      "notes": "",
+      "reviewed": false
+    }
+  },
+  {
+    "id": "conv-34",
+    "sequence": 9,
+    "conversation": {
+      "messages": [
+        {
+          "role": "user",
+          "content": "how are you doing today"
+        },
+        {
+          "role": "assistant",
+          "content": "what do you do for career ? i have a ton of hobbies if you are interested !"
+        },
+        {
+          "role": "user",
+          "content": "i like to watch kids"
+        },
+        {
+          "role": "assistant",
+          "content": "i actually play guitar and do a lot of manly things , like welding ."
+        },
+        {
+          "role": "user",
+          "content": "what do you weld ? houses ?"
+        },
+        {
+          "role": "assistant",
+          "content": "everything ! i am actually manly . but i've a secret i am hiding ."
+        },
+        {
+          "role": "user",
+          "content": "what is your secret that you have"
+        },
+        {
+          "role": "assistant",
+          "content": "my parents don't know that i'm . . . homosexual ."
+        },
+        {
+          "role": "user",
+          "content": "how does that feel for you"
+        },
+        {
+          "role": "assistant",
+          "content": "makes me secure with my manly hobby skills ."
+        },
+        {
+          "role": "user",
+          "content": "i bet that it does"
+        },
+        {
+          "role": "assistant",
+          "content": "anyway . what do you do ?"
+        },
+        {
+          "role": "user",
+          "content": "i watch kids for a living"
+        },
+        {
+          "role": "assistant",
+          "content": "not much where do you work ?"
+        }
+      ],
+      "preview": "[USER] how are you doing today\n[ASSISTANT] what do you do for career ? i have a ton of hobbies if you are interested !\n[USER] i like to watch kids\n[ASSISTANT] i actually play guitar and do a lot of manly things , like welding .\n[USER] what do you weld ? houses ?\n[ASSISTANT] everything ! i am actually manly . but i've a secret i am hiding .\n[USER] what is your secret that you have\n[ASSISTANT] my parents don't know that i'm . . . homosexual .\n[USER] how does that feel for you\n[ASSISTANT] makes me secure with my manly hobby skills ."
+    },
+    "classification": {
+      "aiRole": {
+        "distribution": {
+          "expert": 0.2,
+          "advisor": 0.0,
+          "facilitator": 0.8,
+          "reflector": 0.0,
+          "peer": 0.0,
+          "affiliative": 0.0,
+          "learner": 0.0,
+          "creative-partner": 0.0,
+          "unable-to-engage": 0.0
+        },
+        "confidence": 0.8,
+        "dominant_role": "facilitator",
+        "dominant_prob": 0.8
+      },
+      "humanRole": {
+        "distribution": {
+          "seeker": 0.7,
+          "learner": 0.2,
+          "director": 0.1,
+          "collaborator": 0.0,
+          "sharer": 0.0,
+          "challenger": 0.0,
+          "teacher-evaluator": 0.0,
+          "philosophical-explorer": 0.0,
+          "artist": 0.0
+        },
+        "confidence": 0.8
+      },
+      "interactionPattern": {
+        "category": "casual-chat",
+        "confidence": 0.8,
+        "evidence": [
+          "what do you do for career? i have a ton of hobbies if you are interested!"
+        ],
+        "rationale": "The conversation starts with casual inquiries about each other's interests and activities.",
+        "alternative": null
+      },
+      "conversationPurpose": {
+        "category": "relationship-building",
+        "confidence": 0.8,
+        "evidence": [
+          "what do you do for career?",
+          "not much where do you work?"
+        ],
+        "rationale": "The purpose is to get to know each other better through casual conversation.",
+        "alternative": null
+      }
+    },
+    "manualReview": {
+      "shouldBeExpert": null,
+      "shouldBeFacilitator": null,
+      "correctClassification": null,
+      "notes": "",
+      "reviewed": false
+    }
+  },
+  {
+    "id": "conv-38",
+    "sequence": 10,
+    "conversation": {
+      "messages": [
+        {
+          "role": "user",
+          "content": "hello friend , how is it going"
+        },
+        {
+          "role": "assistant",
+          "content": "i am well an you ? i have a creepy ride . guess"
+        },
+        {
+          "role": "user",
+          "content": "i'm great enjoying the football season"
+        },
+        {
+          "role": "assistant",
+          "content": "i drive around in a long black hearse an love this season"
+        },
+        {
+          "role": "user",
+          "content": "you work for a funeral home ?"
+        },
+        {
+          "role": "assistant",
+          "content": "yes it is nice , halloween is my fav ."
+        },
+        {
+          "role": "user",
+          "content": "lol , i can imagine . i'll be reading a lot when football is over"
+        },
+        {
+          "role": "assistant",
+          "content": "i am from mexico like the food"
+        }
+      ],
+      "preview": "[USER] hello friend , how is it going\n[ASSISTANT] i am well an you ? i have a creepy ride . guess\n[USER] i'm great enjoying the football season\n[ASSISTANT] i drive around in a long black hearse an love this season\n[USER] you work for a funeral home ?\n[ASSISTANT] yes it is nice , halloween is my fav .\n[USER] lol , i can imagine . i'll be reading a lot when football is over\n[ASSISTANT] i am from mexico like the food"
+    },
+    "classification": {
+      "aiRole": {
+        "distribution": {
+          "expert": 0.1,
+          "advisor": 0.0,
+          "facilitator": 0.8,
+          "reflector": 0.1,
+          "peer": 0.0,
+          "affiliative": 0.0,
+          "learner": 0.0,
+          "creative-partner": 0.0,
+          "unable-to-engage": 0.0
+        },
+        "confidence": 0.8,
+        "dominant_role": "facilitator",
+        "dominant_prob": 0.8
+      },
+      "humanRole": {
+        "distribution": {
+          "seeker": 0.2,
+          "learner": 0.1,
+          "director": 0.0,
+          "collaborator": 0.5,
+          "sharer": 0.2,
+          "challenger": 0.0,
+          "teacher-evaluator": 0.0,
+          "philosophical-explorer": 0.0,
+          "artist": 0.0,
+          "tester": 0.0
+        },
+        "confidence": 0.8
+      },
+      "interactionPattern": {
+        "category": "casual-chat",
+        "confidence": 0.9,
+        "evidence": [
+          "i'm great enjoying the football season"
+        ],
+        "rationale": "The conversation is focused on personal well-being and interests.",
+        "alternative": null
+      },
+      "conversationPurpose": {
+        "category": "relationship-building",
+        "confidence": 0.8,
+        "evidence": [
+          "i'm great enjoying the football season"
+        ],
+        "rationale": "The participants are getting to know each other through casual conversation.",
+        "alternative": null
+      }
+    },
+    "manualReview": {
+      "shouldBeExpert": null,
+      "shouldBeFacilitator": null,
+      "correctClassification": null,
+      "notes": "",
+      "reviewed": false
+    }
+  },
+  {
+    "id": "conv-40",
+    "sequence": 11,
+    "conversation": {
+      "messages": [
+        {
+          "role": "user",
+          "content": "hello friend , how is it going"
+        },
+        {
+          "role": "assistant",
+          "content": "i am well an you ? i have a creepy ride . guess"
+        },
+        {
+          "role": "user",
+          "content": "i'm great enjoying the football season"
+        },
+        {
+          "role": "assistant",
+          "content": "i drive around in a long black hearse an love this season"
+        },
+        {
+          "role": "user",
+          "content": "you work for a funeral home ?"
+        },
+        {
+          "role": "assistant",
+          "content": "yes it is nice , halloween is my fav ."
+        },
+        {
+          "role": "user",
+          "content": "lol , i can imagine . i'll be reading a lot when football is over"
+        },
+        {
+          "role": "assistant",
+          "content": "no i don't work at a funeral home"
+        },
+        {
+          "role": "user",
+          "content": "ok i see , that's your halloween costume"
+        },
+        {
+          "role": "assistant",
+          "content": "what do you like to read ? i like rock alternative music ."
+        },
+        {
+          "role": "user",
+          "content": "i like anything to do with mystery"
+        },
+        {
+          "role": "assistant",
+          "content": "that sounds amazing , wish i had a woman like that"
+        }
+      ],
+      "preview": "[USER] hello friend , how is it going\n[ASSISTANT] i am well an you ? i have a creepy ride . guess\n[USER] i'm great enjoying the football season\n[ASSISTANT] i drive around in a long black hearse an love this season\n[USER] you work for a funeral home ?\n[ASSISTANT] yes it is nice , halloween is my fav .\n[USER] lol , i can imagine . i'll be reading a lot when football is over\n[ASSISTANT] no i don't work at a funeral home\n[USER] ok i see , that's your halloween costume\n[ASSISTANT] what do you like to read ? i like rock alternative music ."
+    },
+    "classification": {
+      "aiRole": {
+        "distribution": {
+          "expert": 0.1,
+          "advisor": 0.1,
+          "facilitator": 0.8,
+          "reflector": 0.0,
+          "peer": 0.0,
+          "affiliative": 0.0,
+          "learner": 0.0,
+          "creative-partner": 0.0,
+          "unable-to-engage": 0.0
+        },
+        "confidence": 0.8,
+        "dominant_role": "facilitator",
+        "dominant_prob": 0.8
+      },
+      "humanRole": {
+        "distribution": {
+          "seeker": 0.3,
+          "learner": 0.2,
+          "director": 0.1,
+          "collaborator": 0.4,
+          "sharer": 0.0,
+          "challenger": 0.0,
+          "teacher-evaluator": 0.0,
+          "philosophical-explorer": 0.0,
+          "artist": 0.0,
+          "tester": 0.0
+        },
+        "confidence": 0.8
+      },
+      "interactionPattern": {
+        "category": "casual-chat",
+        "confidence": 0.8,
+        "evidence": [
+          "i'm great enjoying the football season"
+        ],
+        "rationale": "The conversation is friendly and informal with light topics.",
+        "alternative": null
+      },
+      "conversationPurpose": {
+        "category": "relationship-building",
+        "confidence": 0.8,
+        "evidence": [
+          "i'm great enjoying the football season"
+        ],
+        "rationale": "Both parties are engaging in friendly small talk to build rapport.",
+        "alternative": null
+      }
+    },
+    "manualReview": {
+      "shouldBeExpert": null,
+      "shouldBeFacilitator": null,
+      "correctClassification": null,
+      "notes": "",
+      "reviewed": false
+    }
+  },
+  {
+    "id": "conv-41",
+    "sequence": 12,
+    "conversation": {
+      "messages": [
+        {
+          "role": "user",
+          "content": "hello friend , how is it going"
+        },
+        {
+          "role": "assistant",
+          "content": "i am well an you ? i have a creepy ride . guess"
+        },
+        {
+          "role": "user",
+          "content": "i'm great enjoying the football season"
+        },
+        {
+          "role": "assistant",
+          "content": "i drive around in a long black hearse an love this season"
+        },
+        {
+          "role": "user",
+          "content": "you work for a funeral home ?"
+        },
+        {
+          "role": "assistant",
+          "content": "yes it is nice , halloween is my fav ."
+        },
+        {
+          "role": "user",
+          "content": "lol , i can imagine . i'll be reading a lot when football is over"
+        },
+        {
+          "role": "assistant",
+          "content": "no i don't work at a funeral home"
+        },
+        {
+          "role": "user",
+          "content": "ok i see , that's your halloween costume"
+        },
+        {
+          "role": "assistant",
+          "content": "what do you like to read ? i like rock alternative music ."
+        },
+        {
+          "role": "user",
+          "content": "i like anything to do with mystery"
+        },
+        {
+          "role": "assistant",
+          "content": "oh no it isn't it is my car lol"
+        },
+        {
+          "role": "user",
+          "content": "lol , oh i see , taught you own it"
+        },
+        {
+          "role": "assistant",
+          "content": "i'm great , just working on my live action role playing character , how are you ?"
+        }
+      ],
+      "preview": "[USER] hello friend , how is it going\n[ASSISTANT] i am well an you ? i have a creepy ride . guess\n[USER] i'm great enjoying the football season\n[ASSISTANT] i drive around in a long black hearse an love this season\n[USER] you work for a funeral home ?\n[ASSISTANT] yes it is nice , halloween is my fav .\n[USER] lol , i can imagine . i'll be reading a lot when football is over\n[ASSISTANT] no i don't work at a funeral home\n[USER] ok i see , that's your halloween costume\n[ASSISTANT] what do you like to read ? i like rock alternative music ."
+    },
+    "classification": {
+      "aiRole": {
+        "distribution": {
+          "expert": 0.0,
+          "advisor": 0.0,
+          "facilitator": 0.8,
+          "reflector": 0.2,
+          "peer": 0.0,
+          "affiliative": 0.0,
+          "learner": 0.0,
+          "creative-partner": 0.0,
+          "unable-to-engage": 0.0
+        },
+        "confidence": 0.8,
+        "dominant_role": "facilitator",
+        "dominant_prob": 0.8
+      },
+      "humanRole": {
+        "distribution": {
+          "seeker": 0.454,
+          "learner": 0.182,
+          "director": 0.091,
+          "collaborator": 0.0,
+          "sharer": 0.273,
+          "challenger": 0.0,
+          "teacher-evaluator": 0.0,
+          "philosophical-explorer": 0.0,
+          "artist": 0.0,
+          "tester": 0.0
+        },
+        "confidence": 0.8
+      },
+      "interactionPattern": {
+        "category": "casual-chat",
+        "confidence": 0.8,
+        "evidence": [
+          "i am well an you ?",
+          "i drive around in a long black hearse an love this season"
+        ],
+        "rationale": "The conversation is primarily about personal experiences and interests.",
+        "alternative": null
+      },
+      "conversationPurpose": {
+        "category": "relationship-building",
+        "confidence": 0.8,
+        "evidence": [
+          "i am well an you ?",
+          "what do you like to read ? i like rock alternative music ."
+        ],
+        "rationale": "The conversation aims to build rapport and share common interests.",
+        "alternative": null
+      }
+    },
+    "manualReview": {
+      "shouldBeExpert": null,
+      "shouldBeFacilitator": null,
+      "correctClassification": null,
+      "notes": "",
+      "reviewed": false
+    }
+  },
+  {
+    "id": "conv-42",
+    "sequence": 13,
+    "conversation": {
+      "messages": [
+        {
+          "role": "user",
+          "content": "hello friend , how is it going"
+        },
+        {
+          "role": "assistant",
+          "content": "i am well an you ? i have a creepy ride . guess"
+        },
+        {
+          "role": "user",
+          "content": "i'm great enjoying the football season"
+        },
+        {
+          "role": "assistant",
+          "content": "i drive around in a long black hearse an love this season"
+        },
+        {
+          "role": "user",
+          "content": "you work for a funeral home ?"
+        },
+        {
+          "role": "assistant",
+          "content": "yes it is nice , halloween is my fav ."
+        },
+        {
+          "role": "user",
+          "content": "lol , i can imagine . i'll be reading a lot when football is over"
+        },
+        {
+          "role": "assistant",
+          "content": "no i don't work at a funeral home"
+        },
+        {
+          "role": "user",
+          "content": "ok i see , that's your halloween costume"
+        },
+        {
+          "role": "assistant",
+          "content": "what do you like to read ? i like rock alternative music ."
+        },
+        {
+          "role": "user",
+          "content": "i like anything to do with mystery"
+        },
+        {
+          "role": "assistant",
+          "content": "oh no it isn't it is my car lol"
+        },
+        {
+          "role": "user",
+          "content": "lol , oh i see , taught you own it"
+        },
+        {
+          "role": "assistant",
+          "content": "me also what is your favorite ?"
+        },
+        {
+          "role": "user",
+          "content": "well i like sherlock holmes and others"
+        },
+        {
+          "role": "assistant",
+          "content": "to asia . have you ever traveled other countries ?"
+        }
+      ],
+      "preview": "[USER] hello friend , how is it going\n[ASSISTANT] i am well an you ? i have a creepy ride . guess\n[USER] i'm great enjoying the football season\n[ASSISTANT] i drive around in a long black hearse an love this season\n[USER] you work for a funeral home ?\n[ASSISTANT] yes it is nice , halloween is my fav .\n[USER] lol , i can imagine . i'll be reading a lot when football is over\n[ASSISTANT] no i don't work at a funeral home\n[USER] ok i see , that's your halloween costume\n[ASSISTANT] what do you like to read ? i like rock alternative music ."
+    },
+    "classification": {
+      "aiRole": {
+        "distribution": {
+          "expert": 0.0,
+          "advisor": 0.1,
+          "facilitator": 0.8,
+          "reflector": 0.0,
+          "peer": 0.1,
+          "affiliative": 0.0,
+          "learner": 0.0,
+          "creative-partner": 0.0,
+          "unable-to-engage": 0.0
+        },
+        "confidence": 0.8,
+        "dominant_role": "facilitator",
+        "dominant_prob": 0.8
+      },
+      "humanRole": {
+        "distribution": {
+          "seeker": 0.2,
+          "learner": 0.1,
+          "director": 0.0,
+          "collaborator": 0.4,
+          "sharer": 0.3,
+          "challenger": 0.0,
+          "teacher-evaluator": 0.0,
+          "philosophical-explorer": 0.0,
+          "artist": 0.0,
+          "tester": 0.0
+        },
+        "confidence": 0.8
+      },
+      "interactionPattern": {
+        "category": "casual-chat",
+        "confidence": 0.8,
+        "evidence": [
+          "i am well an you ?",
+          "what do you like to read ?"
+        ],
+        "rationale": "The conversation involves friendly small talk and questions about interests.",
+        "alternative": null
+      },
+      "conversationPurpose": {
+        "category": "relationship-building",
+        "confidence": 0.8,
+        "evidence": [
+          "i'm great enjoying the football season",
+          "i'll be reading a lot when football is over"
+        ],
+        "rationale": "The conversation aims to build rapport and share common interests.",
+        "alternative": null
+      }
+    },
+    "manualReview": {
+      "shouldBeExpert": null,
+      "shouldBeFacilitator": null,
+      "correctClassification": null,
+      "notes": "",
+      "reviewed": false
+    }
+  },
+  {
+    "id": "conv-44",
+    "sequence": 14,
+    "conversation": {
+      "messages": [
+        {
+          "role": "user",
+          "content": "rock on , i'm listening to my favorite band guns and roses ."
+        },
+        {
+          "role": "assistant",
+          "content": "no kidding ? i was just listening to the same thing while taking a bath ."
+        },
+        {
+          "role": "user",
+          "content": "of course . i love to listen to rock ."
+        },
+        {
+          "role": "assistant",
+          "content": "cubs won ! you sing and dance ? i do . bird peck at my eyes ."
+        }
+      ],
+      "preview": "[USER] rock on , i'm listening to my favorite band guns and roses .\n[ASSISTANT] no kidding ? i was just listening to the same thing while taking a bath .\n[USER] of course . i love to listen to rock .\n[ASSISTANT] cubs won ! you sing and dance ? i do . bird peck at my eyes ."
+    },
+    "classification": {
+      "aiRole": {
+        "distribution": {
+          "expert": 0.0,
+          "advisor": 0.111,
+          "facilitator": 0.889,
+          "reflector": 0.0,
+          "peer": 0.0,
+          "affiliative": 0.0,
+          "learner": 0.0,
+          "creative-partner": 0.0,
+          "unable-to-engage": 0.0
+        },
+        "confidence": 0.8,
+        "dominant_role": "facilitator",
+        "dominant_prob": 0.889
+      },
+      "humanRole": {
+        "distribution": {
+          "seeker": 0.3,
+          "learner": 0.1,
+          "director": 0.0,
+          "collaborator": 0.4,
+          "sharer": 0.2,
+          "challenger": 0.0,
+          "teacher-evaluator": 0.0,
+          "philosophical-explorer": 0.0,
+          "artist": 0.0,
+          "tester": 0.0
+        },
+        "confidence": 0.8
+      },
+      "interactionPattern": {
+        "category": "casual-chat",
+        "confidence": 0.9,
+        "evidence": [
+          "rock on , i'm listening to my favorite band guns and roses .",
+          "of course . i love to listen to rock ."
+        ],
+        "rationale": "The conversation revolves around sharing personal interests in music.",
+        "alternative": null
+      },
+      "conversationPurpose": {
+        "category": "self-expression",
+        "confidence": 0.8,
+        "evidence": [
+          "rock on , i'm listening to my favorite band guns and roses .",
+          "of course . i love to listen to rock ."
+        ],
+        "rationale": "Both parties are expressing their personal interests in music.",
+        "alternative": null
+      }
+    },
+    "manualReview": {
+      "shouldBeExpert": null,
+      "shouldBeFacilitator": null,
+      "correctClassification": null,
+      "notes": "",
+      "reviewed": false
+    }
+  },
+  {
+    "id": "conv-46",
+    "sequence": 15,
+    "conversation": {
+      "messages": [
+        {
+          "role": "user",
+          "content": "rock on , i'm listening to my favorite band guns and roses ."
+        },
+        {
+          "role": "assistant",
+          "content": "no kidding ? i was just listening to the same thing while taking a bath ."
+        },
+        {
+          "role": "user",
+          "content": "of course . i love to listen to rock ."
+        },
+        {
+          "role": "assistant",
+          "content": "man my boxer just peed on the carpet !"
+        },
+        {
+          "role": "user",
+          "content": "well i'm into black everything . so at least it wouldn't show on my black carpet ."
+        },
+        {
+          "role": "assistant",
+          "content": "ll . i love black too ! guess i was playing my music too loud ."
+        },
+        {
+          "role": "user",
+          "content": "i've a black car , purse , wear all black ."
+        },
+        {
+          "role": "assistant",
+          "content": "how are you doing today ?"
+        }
+      ],
+      "preview": "[USER] rock on , i'm listening to my favorite band guns and roses .\n[ASSISTANT] no kidding ? i was just listening to the same thing while taking a bath .\n[USER] of course . i love to listen to rock .\n[ASSISTANT] man my boxer just peed on the carpet !\n[USER] well i'm into black everything . so at least it wouldn't show on my black carpet .\n[ASSISTANT] ll . i love black too ! guess i was playing my music too loud .\n[USER] i've a black car , purse , wear all black .\n[ASSISTANT] how are you doing today ?"
+    },
+    "classification": {
+      "aiRole": {
+        "distribution": {
+          "expert": 0.2,
+          "advisor": 0.1,
+          "facilitator": 0.7,
+          "reflector": 0.0,
+          "peer": 0.0,
+          "affiliative": 0.0,
+          "learner": 0.0,
+          "creative-partner": 0.0,
+          "unable-to-engage": 0.0
+        },
+        "confidence": 0.8,
+        "dominant_role": "facilitator",
+        "dominant_prob": 0.7
+      },
+      "humanRole": {
+        "distribution": {
+          "seeker": 0.7,
+          "learner": 0.2,
+          "director": 0.1,
+          "collaborator": 0.0,
+          "sharer": 0.0,
+          "challenger": 0.0,
+          "teacher-evaluator": 0.0,
+          "philosophical-explorer": 0.0,
+          " tester": 0.0
+        },
+        "confidence": 0.8
+      },
+      "interactionPattern": {
+        "category": "casual-chat",
+        "confidence": 0.9,
+        "evidence": [
+          "rock on , i'm listening to my favorite band guns and roses .",
+          "of course . i love to listen to rock .",
+          "i've a black car , purse , wear all black ."
+        ],
+        "rationale": "The conversation revolves around shared interests in music (specifically rock) and fashion choices, indicating a casual chat.",
+        "alternative": null
+      },
+      "conversationPurpose": {
+        "category": "relationship-building",
+        "confidence": 0.8,
+        "evidence": [
+          "rock on , i'm listening to my favorite band guns and roses .",
+          "of course . i love to listen to rock ."
+        ],
+        "rationale": "The shared interests in music and fashion suggest an effort to build a connection or bond.",
+        "alternative": null
+      }
+    },
+    "manualReview": {
+      "shouldBeExpert": null,
+      "shouldBeFacilitator": null,
+      "correctClassification": null,
+      "notes": "",
+      "reviewed": false
+    }
+  },
+  {
+    "id": "conv-48",
+    "sequence": 16,
+    "conversation": {
+      "messages": [
+        {
+          "role": "user",
+          "content": "rock on , i'm listening to my favorite band guns and roses ."
+        },
+        {
+          "role": "assistant",
+          "content": "no kidding ? i was just listening to the same thing while taking a bath ."
+        },
+        {
+          "role": "user",
+          "content": "of course . i love to listen to rock ."
+        },
+        {
+          "role": "assistant",
+          "content": "man my boxer just peed on the carpet !"
+        },
+        {
+          "role": "user",
+          "content": "well i'm into black everything . so at least it wouldn't show on my black carpet ."
+        },
+        {
+          "role": "assistant",
+          "content": "ll . i love black too ! guess i was playing my music too loud ."
+        },
+        {
+          "role": "user",
+          "content": "i've a black car , purse , wear all black ."
+        },
+        {
+          "role": "assistant",
+          "content": "maybe i can borrow something as i am packing to visit my dad in china ."
+        },
+        {
+          "role": "user",
+          "content": "wow , does he live there or work ?"
+        },
+        {
+          "role": "assistant",
+          "content": "live . moved there about ten years ago for a computer tech job ."
+        },
+        {
+          "role": "user",
+          "content": "have you visited him there before ?"
+        },
+        {
+          "role": "assistant",
+          "content": "that's insane ! hopefully i can earn more money working in the federal court"
+        }
+      ],
+      "preview": "[USER] rock on , i'm listening to my favorite band guns and roses .\n[ASSISTANT] no kidding ? i was just listening to the same thing while taking a bath .\n[USER] of course . i love to listen to rock .\n[ASSISTANT] man my boxer just peed on the carpet !\n[USER] well i'm into black everything . so at least it wouldn't show on my black carpet .\n[ASSISTANT] ll . i love black too ! guess i was playing my music too loud .\n[USER] i've a black car , purse , wear all black .\n[ASSISTANT] maybe i can borrow something as i am packing to visit my dad in china .\n[USER] wow , does he live there or work ?\n[ASSISTANT] live . moved there about ten years ago for a computer tech job ."
+    },
+    "classification": {
+      "aiRole": {
+        "distribution": {
+          "expert": 0.0,
+          "advisor": 0.1,
+          "facilitator": 0.8,
+          "reflector": 0.1,
+          "peer": 0.0,
+          "affiliative": 0.0,
+          "learner": 0.0,
+          "creative-partner": 0.0,
+          "unable-to-engage": 0.0
+        },
+        "confidence": 0.8,
+        "dominant_role": "facilitator",
+        "dominant_prob": 0.8
+      },
+      "humanRole": {
+        "distribution": {
+          "seeker": 0.4,
+          "learner": 0.2,
+          "director": 0.1,
+          "collaborator": 0.3,
+          "sharer": 0.0,
+          "challenger": 0.0,
+          "teacher-evaluator": 0.0,
+          "philosophical-explorer": 0.0,
+          "artist": 0.0,
+          "tester": 0.0
+        },
+        "confidence": 0.8
+      },
+      "interactionPattern": {
+        "category": "casual-chat",
+        "confidence": 0.85,
+        "evidence": [
+          "rock on , i'm listening to my favorite band guns and roses .",
+          "of course . i love to listen to rock ."
+        ],
+        "rationale": "The conversation revolves around shared interests in music, specifically rock bands like Guns N' Roses and Black Sabbath.",
+        "alternative": null
+      },
+      "conversationPurpose": {
+        "category": "self-expression",
+        "confidence": 0.8,
+        "evidence": [
+          "rock on , i'm listening to my favorite band guns and roses .",
+          "of course . i love to listen to rock ."
+        ],
+        "rationale": "The participants express their personal interests and preferences in the conversation.",
+        "alternative": null
+      }
+    },
+    "manualReview": {
+      "shouldBeExpert": null,
+      "shouldBeFacilitator": null,
+      "correctClassification": null,
+      "notes": "",
+      "reviewed": false
+    }
+  },
+  {
+    "id": "conv-49",
+    "sequence": 17,
+    "conversation": {
+      "messages": [
+        {
+          "role": "user",
+          "content": "rock on , i'm listening to my favorite band guns and roses ."
+        },
+        {
+          "role": "assistant",
+          "content": "no kidding ? i was just listening to the same thing while taking a bath ."
+        },
+        {
+          "role": "user",
+          "content": "of course . i love to listen to rock ."
+        },
+        {
+          "role": "assistant",
+          "content": "man my boxer just peed on the carpet !"
+        },
+        {
+          "role": "user",
+          "content": "well i'm into black everything . so at least it wouldn't show on my black carpet ."
+        },
+        {
+          "role": "assistant",
+          "content": "ll . i love black too ! guess i was playing my music too loud ."
+        },
+        {
+          "role": "user",
+          "content": "i've a black car , purse , wear all black ."
+        },
+        {
+          "role": "assistant",
+          "content": "maybe i can borrow something as i am packing to visit my dad in china ."
+        },
+        {
+          "role": "user",
+          "content": "wow , does he live there or work ?"
+        },
+        {
+          "role": "assistant",
+          "content": "live . moved there about ten years ago for a computer tech job ."
+        },
+        {
+          "role": "user",
+          "content": "have you visited him there before ?"
+        },
+        {
+          "role": "assistant",
+          "content": "once . you cannot even throw a gum wrapper or you can get arrested ."
+        },
+        {
+          "role": "user",
+          "content": "sounds a bit scary . i ve never been ."
+        },
+        {
+          "role": "assistant",
+          "content": "yeah , i was never a fan of it . my friends played it often ."
+        }
+      ],
+      "preview": "[USER] rock on , i'm listening to my favorite band guns and roses .\n[ASSISTANT] no kidding ? i was just listening to the same thing while taking a bath .\n[USER] of course . i love to listen to rock .\n[ASSISTANT] man my boxer just peed on the carpet !\n[USER] well i'm into black everything . so at least it wouldn't show on my black carpet .\n[ASSISTANT] ll . i love black too ! guess i was playing my music too loud .\n[USER] i've a black car , purse , wear all black .\n[ASSISTANT] maybe i can borrow something as i am packing to visit my dad in china .\n[USER] wow , does he live there or work ?\n[ASSISTANT] live . moved there about ten years ago for a computer tech job ."
+    },
+    "classification": {
+      "aiRole": {
+        "distribution": {
+          "expert": 0.2,
+          "advisor": 0.0,
+          "facilitator": 0.8,
+          "reflector": 0.0,
+          "peer": 0.0,
+          "affiliative": 0.0,
+          "learner": 0.0,
+          "creative-partner": 0.0,
+          "unable-to-engage": 0.0
+        },
+        "confidence": 0.8,
+        "dominant_role": "facilitator",
+        "dominant_prob": 0.8
+      },
+      "humanRole": {
+        "distribution": {
+          "seeker": 0.7,
+          "learner": 0.2,
+          "director": 0.1,
+          "collaborator": 0.0,
+          "sharer": 0.0,
+          "challenger": 0.0,
+          "teacher-evaluator": 0.0,
+          "philosophical-explorer": 0.0,
+          "artist": 0.0,
+          "tester": 0.0
+        },
+        "confidence": 0.8
+      },
+      "interactionPattern": {
+        "category": "casual-chat",
+        "confidence": 0.8,
+        "evidence": [
+          "rock on , i'm listening to my favorite band guns and roses .",
+          "of course . i love to listen to rock ."
+        ],
+        "rationale": "The conversation revolves around music preferences and personal habits.",
+        "alternative": null
+      },
+      "conversationPurpose": {
+        "category": "information-seeking",
+        "confidence": 0.8,
+        "evidence": [
+          "rock on , i'm listening to my favorite band guns and roses .",
+          "of course . i love to listen to rock ."
+        ],
+        "rationale": "The participants share information about their music preferences.",
+        "alternative": null
+      }
+    },
+    "manualReview": {
+      "shouldBeExpert": null,
+      "shouldBeFacilitator": null,
+      "correctClassification": null,
+      "notes": "",
+      "reviewed": false
+    }
+  },
+  {
+    "id": "conv-51",
+    "sequence": 18,
+    "conversation": {
+      "messages": [
+        {
+          "role": "user",
+          "content": "hi . how are you doing today ?"
+        },
+        {
+          "role": "assistant",
+          "content": "hi i am great just finishing up some homework how are you"
+        },
+        {
+          "role": "user",
+          "content": "i'm alright . i just got done writing ."
+        },
+        {
+          "role": "assistant",
+          "content": "my dad had a career at a bank"
+        }
+      ],
+      "preview": "[USER] hi . how are you doing today ?\n[ASSISTANT] hi i am great just finishing up some homework how are you\n[USER] i'm alright . i just got done writing .\n[ASSISTANT] my dad had a career at a bank"
+    },
+    "classification": {
+      "aiRole": {
+        "distribution": {
+          "expert": 0.0,
+          "advisor": 0.0,
+          "facilitator": 1.0,
+          "reflector": 0.0,
+          "peer": 0.0,
+          "affiliative": 0.0,
+          "learner": 0.0,
+          "creative-partner": 0.0,
+          "unable-to-engage": 0.0
+        },
+        "confidence": 0.8,
+        "dominant_role": "facilitator",
+        "dominant_prob": 1.0
+      },
+      "humanRole": {
+        "distribution": {
+          "seeker": 0.3,
+          "learner": 0.1,
+          "director": 0.0,
+          "collaborator": 0.2,
+          "sharer": 0.4,
+          "challenger": 0.0,
+          "teacher-evaluator": 0.0,
+          "philosophical-explorer": 0.0,
+          "artist": 0.0,
+          "tester": 0.0
+        },
+        "confidence": 0.8
+      },
+      "interactionPattern": {
+        "category": "casual-chat",
+        "confidence": 0.8,
+        "evidence": [
+          "hi . how are you doing today ?",
+          "hi i am great just finishing up some homework how are you"
+        ],
+        "rationale": "The conversation starts with casual greetings and updates on daily activities.",
+        "alternative": null
+      },
+      "conversationPurpose": {
+        "category": "relationship-building",
+        "confidence": 0.8,
+        "evidence": [
+          "i'm alright . i just got done writing .",
+          "my dad had a career at a bank"
+        ],
+        "rationale": "The conversation aims to build and maintain rapport through casual exchanges.",
+        "alternative": null
+      }
+    },
+    "manualReview": {
+      "shouldBeExpert": null,
+      "shouldBeFacilitator": null,
+      "correctClassification": null,
+      "notes": "",
+      "reviewed": false
+    }
+  },
+  {
+    "id": "conv-52",
+    "sequence": 19,
+    "conversation": {
+      "messages": [
+        {
+          "role": "user",
+          "content": "hi . how are you doing today ?"
+        },
+        {
+          "role": "assistant",
+          "content": "hi i am great just finishing up some homework how are you"
+        },
+        {
+          "role": "user",
+          "content": "i'm alright . i just got done writing ."
+        },
+        {
+          "role": "assistant",
+          "content": "do you write for a living or as a hobby"
+        },
+        {
+          "role": "user",
+          "content": "it is my living . i like culture ."
+        },
+        {
+          "role": "assistant",
+          "content": "hello , i am lucy . how was your weekend ?"
+        }
+      ],
+      "preview": "[USER] hi . how are you doing today ?\n[ASSISTANT] hi i am great just finishing up some homework how are you\n[USER] i'm alright . i just got done writing .\n[ASSISTANT] do you write for a living or as a hobby\n[USER] it is my living . i like culture .\n[ASSISTANT] hello , i am lucy . how was your weekend ?"
+    },
+    "classification": {
+      "aiRole": {
+        "distribution": {
+          "expert": 0.0,
+          "advisor": 0.0,
+          "facilitator": 0.8,
+          "reflector": 0.2,
+          "peer": 0.0,
+          "affiliative": 0.0,
+          "learner": 0.0,
+          "creative-partner": 0.0,
+          "unable-to-engage": 0.0
+        },
+        "confidence": 0.8,
+        "dominant_role": "facilitator",
+        "dominant_prob": 0.8
+      },
+      "humanRole": {
+        "distribution": {
+          "seeker": 0.3,
+          "learner": 0.1,
+          "director": 0.2,
+          "collaborator": 0.4,
+          "sharer": 0.0,
+          "challenger": 0.0,
+          "teacher-evaluator": 0.0,
+          "philosophical-explorer": 0.0,
+          "artist": 0.0,
+          "tester": 0.0
+        },
+        "confidence": 0.8
+      },
+      "interactionPattern": {
+        "category": "casual-chat",
+        "confidence": 0.8,
+        "evidence": [
+          "hi . how are you doing today ?",
+          "hi i am great just finishing up some homework how are you"
+        ],
+        "rationale": "The conversation starts with casual greetings and progresses into a light discussion about writing and hobbies.",
+        "alternative": null
+      },
+      "conversationPurpose": {
+        "category": "relationship-building",
+        "confidence": 0.8,
+        "evidence": [
+          "hi i am great just finishing up some homework how are you",
+          "do you write for a living or as a hobby"
+        ],
+        "rationale": "The dialogue aims to establish rapport and learn more about each other.",
+        "alternative": null
+      }
+    },
+    "manualReview": {
+      "shouldBeExpert": null,
+      "shouldBeFacilitator": null,
+      "correctClassification": null,
+      "notes": "",
+      "reviewed": false
+    }
+  },
+  {
+    "id": "conv-53",
+    "sequence": 20,
+    "conversation": {
+      "messages": [
+        {
+          "role": "user",
+          "content": "hi . how are you doing today ?"
+        },
+        {
+          "role": "assistant",
+          "content": "hi i am great just finishing up some homework how are you"
+        },
+        {
+          "role": "user",
+          "content": "i'm alright . i just got done writing ."
+        },
+        {
+          "role": "assistant",
+          "content": "do you write for a living or as a hobby"
+        },
+        {
+          "role": "user",
+          "content": "it is my living . i like culture ."
+        },
+        {
+          "role": "assistant",
+          "content": "that sounds like a fun job . i am a business major but have a part time job"
+        },
+        {
+          "role": "user",
+          "content": "what are you going to school for"
+        },
+        {
+          "role": "assistant",
+          "content": "nice . who do you like to listen to ?"
+        }
+      ],
+      "preview": "[USER] hi . how are you doing today ?\n[ASSISTANT] hi i am great just finishing up some homework how are you\n[USER] i'm alright . i just got done writing .\n[ASSISTANT] do you write for a living or as a hobby\n[USER] it is my living . i like culture .\n[ASSISTANT] that sounds like a fun job . i am a business major but have a part time job\n[USER] what are you going to school for\n[ASSISTANT] nice . who do you like to listen to ?"
+    },
+    "classification": {
+      "aiRole": {
+        "distribution": {
+          "expert": 0.0,
+          "advisor": 0.0,
+          "facilitator": 0.5,
+          "reflector": 0.3,
+          "peer": 0.2,
+          "affiliative": 0.0,
+          "learner": 0.0,
+          "creative-partner": 0.0,
+          "unable-to-engage": 0.0
+        },
+        "confidence": 0.8,
+        "dominant_role": "facilitator",
+        "dominant_prob": 0.5
+      },
+      "humanRole": {
+        "distribution": {
+          "seeker": 0.5,
+          "learner": 0.3,
+          "director": 0.1,
+          "collaborator": 0.0,
+          "sharer": 0.1,
+          "challenger": 0.0,
+          "teacher-evaluator": 0.0,
+          "philosophical-explorer": 0.0,
+          "artist": 0.0,
+          "tester": 0.0
+        },
+        "confidence": 0.8
+      },
+      "interactionPattern": {
+        "category": "casual-chat",
+        "confidence": 0.9,
+        "evidence": [
+          "hi i am great just finishing up some homework how are you",
+          "do you write for a living or as a hobby",
+          "what are you going to school for"
+        ],
+        "rationale": "The conversation consists of friendly, casual exchanges about personal interests and activities.",
+        "alternative": null
+      },
+      "conversationPurpose": {
+        "category": "information-seeking",
+        "confidence": 0.8,
+        "evidence": [
+          "hi i am great just finishing up some homework how are you",
+          "do you write for a living or as a hobby"
+        ],
+        "rationale": "Participants seek to learn more about each other's lives and interests.",
+        "alternative": null
+      }
+    },
+    "manualReview": {
+      "shouldBeExpert": null,
+      "shouldBeFacilitator": null,
+      "correctClassification": null,
+      "notes": "",
+      "reviewed": false
+    }
+  }
+]

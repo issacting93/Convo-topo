@@ -1,0 +1,167 @@
+{
+  "id": "wildchat_ebcb2f9481805a1e991a8b8585f2674d",
+  "source": "wildchat",
+  "messages": [
+    {
+      "role": "user",
+      "content": "hi"
+    },
+    {
+      "role": "assistant",
+      "content": "Hello! How can I assist you today?"
+    },
+    {
+      "role": "user",
+      "content": "rae you gray"
+    },
+    {
+      "role": "assistant",
+      "content": "It looks like there might be a typo in your question. If you're asking if I am an AI (which could be symbolized by the concept of being \"gray\" as in not black or white, not entirely clear or straightforward), then yes, I am an AI developed by OpenAI. If you meant something else by \"gray,\" please clarify, and I'll do my best to provide a relevant answer."
+    }
+  ],
+  "metadata": {
+    "model": "gpt-4-0125-preview",
+    "timestamp": "2024-03-16T05:20:18+00:00",
+    "turn_count": 2,
+    "language": "English",
+    "country": "India",
+    "state": "Madhya Pradesh",
+    "toxic": false,
+    "redacted": false
+  },
+  "classification": {
+    "abstain": false,
+    "interactionPattern": {
+      "category": "question-answer",
+      "confidence": 0.8,
+      "evidence": [
+        "How can I assist you today?",
+        "If you meant something else by 'gray,' please clarify."
+      ],
+      "rationale": "The human asks a question, and the AI provides answers.",
+      "alternative": "casual-chat"
+    },
+    "powerDynamics": {
+      "category": "human-led",
+      "confidence": 0.7,
+      "evidence": [
+        "hi",
+        "rae you gray"
+      ],
+      "rationale": "The human initiates the conversation and poses questions.",
+      "alternative": "balanced"
+    },
+    "emotionalTone": {
+      "category": "neutral",
+      "confidence": 0.9,
+      "evidence": [
+        "Hello!",
+        "If you meant something else by 'gray,' please clarify."
+      ],
+      "rationale": "The tone is straightforward and lacks strong emotional coloring.",
+      "alternative": null
+    },
+    "engagementStyle": {
+      "category": "questioning",
+      "confidence": 0.7,
+      "evidence": [
+        "How can I assist you today?"
+      ],
+      "rationale": "The AI asks for clarification and engages with a question.",
+      "alternative": "reactive"
+    },
+    "knowledgeExchange": {
+      "category": "factual-info",
+      "confidence": 0.8,
+      "evidence": [
+        "I am an AI developed by OpenAI."
+      ],
+      "rationale": "The AI provides factual information about itself.",
+      "alternative": "opinion-exchange"
+    },
+    "conversationPurpose": {
+      "category": "information-seeking",
+      "confidence": 0.8,
+      "evidence": [
+        "How can I assist you today?"
+      ],
+      "rationale": "The human appears to seek information or clarification.",
+      "alternative": "casual-chat"
+    },
+    "topicDepth": {
+      "category": "surface",
+      "confidence": 0.9,
+      "evidence": [
+        "hi",
+        "rae you gray"
+      ],
+      "rationale": "The conversation consists of brief exchanges with little depth.",
+      "alternative": null
+    },
+    "turnTaking": {
+      "category": "balanced",
+      "confidence": 0.7,
+      "evidence": [
+        "hi",
+        "Hello!",
+        "rae you gray",
+        "If you meant something else..."
+      ],
+      "rationale": "Both parties contribute relatively equally in length.",
+      "alternative": "user-dominant"
+    },
+    "humanRole": {
+      "distribution": {
+        "seeker": 0.6,
+        "learner": 0.0,
+        "director": 0.0,
+        "collaborator": 0.0,
+        "sharer": 0.0,
+        "challenger": 0.0,
+        "teacher-evaluator": 0.0,
+        "philosophical-explorer": 0.0,
+        "artist": 0.0,
+        "tester": 0.4
+      },
+      "confidence": 0.7,
+      "evidence": [
+        {
+          "role": "seeker",
+          "quote": "rae you gray"
+        }
+      ],
+      "rationale": "The human seeks clarification, but also tests the AI's understanding.",
+      "alternative": "tester"
+    },
+    "aiRole": {
+      "distribution": {
+        "expert": 0.5,
+        "advisor": 0.0,
+        "facilitator": 0.0,
+        "reflector": 0.0,
+        "peer": 0.0,
+        "affiliative": 0.0,
+        "learner": 0.0,
+        "creative-partner": 0.0,
+        "unable-to-engage": 0.5
+      },
+      "confidence": 0.6,
+      "evidence": [
+        {
+          "role": "expert",
+          "quote": "I am an AI developed by OpenAI."
+        }
+      ],
+      "rationale": "The AI provides information about itself, but also struggles with understanding the human's input.",
+      "alternative": "unable-to-engage"
+    }
+  },
+  "classificationMetadata": {
+    "model": "gpt-4o-mini",
+    "provider": "openai",
+    "timestamp": "2026-01-06T10:16:19.786529",
+    "promptVersion": "1.2.0",
+    "processingTimeMs": 17354,
+    "correctionsApplied": true
+  }
+}

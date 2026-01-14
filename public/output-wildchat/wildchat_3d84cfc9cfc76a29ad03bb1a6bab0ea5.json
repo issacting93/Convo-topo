@@ -102,5 +102,158 @@
     "state": "South Australia",
     "toxic": false,
     "redacted": false
+  },
+  "classification": {
+    "abstain": false,
+    "interactionPattern": {
+      "category": "question-answer",
+      "confidence": 0.78,
+      "evidence": [
+        "teach me some german phrases",
+        "how do you say Was empfehlen Sie auf der Speisekarte? phonetically",
+        "are nitrites in foods harmful",
+        "Nitrites are chemical compounds used as preservatives in processed meats"
+      ],
+      "rationale": "Human repeatedly requests information; AI responds with lists/explanations and a capability limitation.",
+      "alternative": "advisory"
+    },
+    "powerDynamics": {
+      "category": "human-led",
+      "confidence": 0.74,
+      "evidence": [
+        "teach me some long german phrases",
+        "can you play Was empfehlen Sie auf der Speisekarte? through my computers speaker",
+        "are nitrites in foods harmful"
+      ],
+      "rationale": "Human sets the agenda via successive requests and topic shifts; AI follows by answering.",
+      "alternative": "alternating"
+    },
+    "emotionalTone": {
+      "category": "professional",
+      "confidence": 0.66,
+      "evidence": [
+        "Sure, here are some useful German phrases:",
+        "Certainly! Here are a few longer German phrases that you can learn:",
+        "I apologize, but as a text-based AI, I do not have the capability"
+      ],
+      "rationale": "Task-focused, polite, informational responses with minimal affect.",
+      "alternative": "neutral"
+    },
+    "engagementStyle": {
+      "category": "reactive",
+      "confidence": 0.63,
+      "evidence": [
+        "Sure, here are some useful German phrases:",
+        "Certainly! Here are a few longer German phrases that you can learn:",
+        "The phrase \"Was empfehlen Sie auf der Speisekarte?\" is pronounced phonetically as:"
+      ],
+      "rationale": "AI primarily responds directly to user prompts rather than driving exploration with questions.",
+      "alternative": "directive-iterative"
+    },
+    "knowledgeExchange": {
+      "category": "skill-sharing",
+      "confidence": 0.7,
+      "evidence": [
+        "teach me some german phrases",
+        "is pronounced phonetically as",
+        "Remember to practice these phrases and listen to native speakers"
+      ],
+      "rationale": "Language learning content and pronunciation guidance dominate, though later health information appears.",
+      "alternative": "factual-info"
+    },
+    "conversationPurpose": {
+      "category": "information-seeking",
+      "confidence": 0.72,
+      "evidence": [
+        "teach me some german phrases",
+        "how do you say Was empfehlen Sie auf der Speisekarte? phonetically",
+        "are nitrites in foods harmful"
+      ],
+      "rationale": "User requests answers/knowledge across topics (German phrases, pronunciation, food additive risk).",
+      "alternative": "problem-solving"
+    },
+    "topicDepth": {
+      "category": "moderate",
+      "confidence": 0.56,
+      "evidence": [
+        "Nitrites can react with naturally occurring amines in foods and form nitrosamines.",
+        "To minimize the potential health risks associated with nitrites, it is recommended to consume processed meats in moderation"
+      ],
+      "rationale": "Some elaboration (mechanism and recommendations) beyond surface definitions, but not exhaustive.",
+      "alternative": "surface"
+    },
+    "turnTaking": {
+      "category": "assistant-dominant",
+      "confidence": 0.8,
+      "evidence": [
+        "Sure, here are some useful German phrases:",
+        "Certainly! Here are a few longer German phrases that you can learn:",
+        "Nitrites are chemical compounds used as preservatives in processed meats"
+      ],
+      "rationale": "AI responses are substantially longer than user prompts, especially lists and the nitrites explanation.",
+      "alternative": "balanced"
+    },
+    "humanRole": {
+      "distribution": {
+        "information-seeker": 0.55,
+        "provider": 0.35,
+        "director": 0.08,
+        "collaborator": 0.02,
+        "social-expressor": 0.0,
+        "relational-peer": 0.0
+      },
+      "confidence": 0.73,
+      "evidence": [
+        {
+          "role": "information-seeker",
+          "quote": "are nitrites in foods harmful"
+        },
+        {
+          "role": "provider",
+          "quote": "teach me some german phrases"
+        },
+        {
+          "role": "director",
+          "quote": "teach me some long german phrases"
+        }
+      ],
+      "rationale": "Human primarily requests information/teaching; occasionally issues imperative-style requests that function as directing the task.",
+      "alternative": null
+    },
+    "aiRole": {
+      "distribution": {
+        "expert-system": 0.72,
+        "learning-facilitator": 0.05,
+        "advisor": 0.18,
+        "co-constructor": 0.03,
+        "social-facilitator": 0.01,
+        "relational-peer": 0.01
+      },
+      "confidence": 0.76,
+      "evidence": [
+        {
+          "role": "expert-system",
+          "quote": "Nitrites are chemical compounds used as preservatives in processed meats"
+        },
+        {
+          "role": "advisor",
+          "quote": "it is recommended to consume processed meats in moderation"
+        },
+        {
+          "role": "expert-system",
+          "quote": "Sure, here are some useful German phrases:"
+        }
+      ],
+      "rationale": "AI mainly provides direct informational content (phrases, pronunciation, nitrites explanation) with some prescriptive health guidance.",
+      "alternative": null
+    }
+  },
+  "classificationMetadata": {
+    "model": "gpt-5.2",
+    "provider": "openai",
+    "timestamp": "2026-01-08T16:49:13.435325",
+    "promptVersion": "2.0-social-role-theory",
+    "processingTimeMs": 19756,
+    "fewShotExamples": "yes"
   }
 }

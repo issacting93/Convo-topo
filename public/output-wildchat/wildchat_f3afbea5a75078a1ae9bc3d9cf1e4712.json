@@ -66,5 +66,146 @@
     "state": "Mecca Region",
     "toxic": false,
     "redacted": false
+  },
+  "classification": {
+    "abstain": false,
+    "interactionPattern": {
+      "category": "advisory",
+      "confidence": 0.74,
+      "evidence": [
+        "type a code to ceate a vpn browser for android",
+        "I can provide you with some steps that could help you create a VPN browser for Android:",
+        "I can provide you with an outline of the steps you would need to take"
+      ],
+      "rationale": "Human requests code; AI responds with step-by-step guidance/outlines rather than delivering code, fitting an advisory pattern.",
+      "alternative": "question-answer"
+    },
+    "powerDynamics": {
+      "category": "human-led",
+      "confidence": 0.72,
+      "evidence": [
+        "type a code to ceate a vpn browser for android",
+        "type a code to ceate a vpn browser for android using java and xml"
+      ],
+      "rationale": "Human sets the agenda and constraints (Android, then Java/XML). AI follows with guidance.",
+      "alternative": "balanced"
+    },
+    "emotionalTone": {
+      "category": "professional",
+      "confidence": 0.66,
+      "evidence": [
+        "How can I assist you today?",
+        "It's essential to note that this method only directs the traffic",
+        "Please note that creating a robust VPN browser for Android requires significant expertise"
+      ],
+      "rationale": "Task-focused, cautionary, and formal phrasing without relational/emotional language.",
+      "alternative": "neutral"
+    },
+    "engagementStyle": {
+      "category": "directive-iterative",
+      "confidence": 0.7,
+      "evidence": [
+        "Choose a VPN service provider and sign up for a plan",
+        "Create a new Android project in Android Studio.",
+        "Add the necessary libraries to connect to a VPN service provider."
+      ],
+      "rationale": "AI provides ordered steps and directives for implementation.",
+      "alternative": "reactive"
+    },
+    "knowledgeExchange": {
+      "category": "skill-sharing",
+      "confidence": 0.78,
+      "evidence": [
+        "provide you with some steps that could help you create a VPN browser for Android",
+        "outline of the steps you would need to take to create a VPN browser app using Java and XML"
+      ],
+      "rationale": "Exchange centers on how-to guidance for building an Android VPN browser app.",
+      "alternative": "factual-info"
+    },
+    "conversationPurpose": {
+      "category": "problem-solving",
+      "confidence": 0.69,
+      "evidence": [
+        "type a code to ceate a vpn browser for android using java and xml",
+        "Test the application."
+      ],
+      "rationale": "User seeks a concrete build outcome; AI provides a process to achieve it.",
+      "alternative": "information-seeking"
+    },
+    "topicDepth": {
+      "category": "moderate",
+      "confidence": 0.63,
+      "evidence": [
+        "Add a WebView element to your activity layout file (in XML).",
+        "Add logic to your Java class to direct all WebView traffic through the VPN connection."
+      ],
+      "rationale": "Goes beyond surface mention into components (WebView, libraries, connection manager) but remains high-level.",
+      "alternative": "surface"
+    },
+    "turnTaking": {
+      "category": "assistant-dominant",
+      "confidence": 0.86,
+      "evidence": [
+        "hi",
+        "I can provide you with some steps that could help you create a VPN browser for Android:",
+        "I can provide you with an outline of the steps you would need to take"
+      ],
+      "rationale": "AI responses are substantially longer and more detailed than the human turns.",
+      "alternative": null
+    },
+    "humanRole": {
+      "distribution": {
+        "information-seeker": 0.1,
+        "provider": 0.75,
+        "director": 0.15,
+        "collaborator": 0.0,
+        "social-expressor": 0.0,
+        "relational-peer": 0.0
+      },
+      "confidence": 0.74,
+      "evidence": [
+        {
+          "role": "provider",
+          "quote": "type a code to ceate a vpn browser for android"
+        },
+        {
+          "role": "director",
+          "quote": "type a code to ceate a vpn browser for android using java and xml"
+        }
+      ],
+      "rationale": "Human primarily requests output from AI (code) and specifies constraints (Java/XML), combining provider and some directing.",
+      "alternative": null
+    },
+    "aiRole": {
+      "distribution": {
+        "expert-system": 0.15,
+        "learning-facilitator": 0.05,
+        "advisor": 0.75,
+        "co-constructor": 0.05,
+        "social-facilitator": 0.0,
+        "relational-peer": 0.0
+      },
+      "confidence": 0.77,
+      "evidence": [
+        {
+          "role": "advisor",
+          "quote": "I can provide you with some steps that could help you create a VPN browser for Android:"
+        },
+        {
+          "role": "advisor",
+          "quote": "I can provide you with an outline of the steps you would need to take"
+        }
+      ],
+      "rationale": "AI gives prescriptive step-by-step guidance and cautions rather than co-building code or purely explaining facts.",
+      "alternative": null
+    }
+  },
+  "classificationMetadata": {
+    "model": "gpt-5.2",
+    "provider": "openai",
+    "timestamp": "2026-01-08T17:17:11.905280",
+    "promptVersion": "2.0-social-role-theory",
+    "processingTimeMs": 19067,
+    "fewShotExamples": "yes"
   }
 }

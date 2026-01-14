@@ -102,5 +102,142 @@
     "state": "Riyadh Region",
     "toxic": false,
     "redacted": false
+  },
+  "classification": {
+    "abstain": false,
+    "interactionPattern": {
+      "category": "advisory",
+      "confidence": 0.74,
+      "evidence": [
+        "To help students retain their new language related to the scenarios/subjects mentioned above, here are types of exercises they can do:",
+        "Write a set of activities for two of the above situations/topics"
+      ],
+      "rationale": "The human requests pedagogical guidance and the AI responds with recommended exercises/activities and structured suggestions.",
+      "alternative": "question-answer"
+    },
+    "powerDynamics": {
+      "category": "human-led",
+      "confidence": 0.78,
+      "evidence": [
+        "The questions below only require a short response.",
+        "Q11. What words would you teach a group of elementary adults to use in the following scenarios or contexts?"
+      ],
+      "rationale": "The human sets the agenda via numbered questions and constraints; the AI follows by supplying requested content.",
+      "alternative": "balanced"
+    },
+    "emotionalTone": {
+      "category": "professional",
+      "confidence": 0.86,
+      "evidence": [
+        "The questions below only require a short response.",
+        "To help students retain their new language related to the scenarios/subjects mentioned above"
+      ],
+      "rationale": "Academic/teaching-focused, formal task framing with minimal affective language.",
+      "alternative": null
+    },
+    "engagementStyle": {
+      "category": "directive-iterative",
+      "confidence": 0.71,
+      "evidence": [
+        "Make notes of what information you would expect to find in the dictionary.",
+        "Now look up the word \u2018going in the dictionary."
+      ],
+      "rationale": "The human issues stepwise instructions and successive tasks; the AI responds in structured lists aligned to prompts.",
+      "alternative": "questioning"
+    },
+    "knowledgeExchange": {
+      "category": "skill-sharing",
+      "confidence": 0.83,
+      "evidence": [
+        "Why must there be a lot of revision when teaching vocabulary?",
+        "Briefly outline two classroom activities using dictionaries."
+      ],
+      "rationale": "Exchange centers on teaching methods (vocabulary instruction, dictionary activities, retention exercises).",
+      "alternative": "factual-info"
+    },
+    "conversationPurpose": {
+      "category": "problem-solving",
+      "confidence": 0.69,
+      "evidence": [
+        "What types of exercises for each of the scenarios/subjects mentioned above would you have students do to help them retain their new language?",
+        "Write a set of activities for two of the above situations/topics"
+      ],
+      "rationale": "The dialogue aims to generate usable classroom materials and solutions for vocabulary teaching/retention.",
+      "alternative": "information-seeking"
+    },
+    "topicDepth": {
+      "category": "moderate",
+      "confidence": 0.66,
+      "evidence": [
+        "State three ways in which vocabulary can be taught",
+        "Write a set of activities for two of the above situations/topics"
+      ],
+      "rationale": "Covers multiple pedagogical concepts and applications with some elaboration, but not deeply theoretical.",
+      "alternative": "surface"
+    },
+    "turnTaking": {
+      "category": "assistant-dominant",
+      "confidence": 0.8,
+      "evidence": [
+        "To help students retain their new language related to the scenarios/subjects mentioned above, here are types of exercises they can do:",
+        "Activity 2: Shopping"
+      ],
+      "rationale": "AI responses are substantially longer and more content-heavy (multi-item lists, activities) than human prompts.",
+      "alternative": "balanced"
+    },
+    "humanRole": {
+      "distribution": {
+        "information-seeker": 0.25,
+        "provider": 0.55,
+        "director": 0.15,
+        "collaborator": 0.05,
+        "social-expressor": 0.0,
+        "relational-peer": 0.0
+      },
+      "confidence": 0.74,
+      "evidence": [
+        {
+          "role": "provider",
+          "quote": "Q3. What are lexical sets?"
+        },
+        {
+          "role": "director",
+          "quote": "The questions below only require a short response."
+        }
+      ],
+      "rationale": "Primarily asks the AI to supply answers and teaching materials (provider/information-seeker), while also directing format and tasks (director).",
+      "alternative": null
+    },
+    "aiRole": {
+      "distribution": {
+        "expert-system": 0.25,
+        "learning-facilitator": 0.05,
+        "advisor": 0.6,
+        "co-constructor": 0.1,
+        "social-facilitator": 0.0,
+        "relational-peer": 0.0
+      },
+      "confidence": 0.77,
+      "evidence": [
+        {
+          "role": "advisor",
+          "quote": "To help students retain their new language related to the scenarios/subjects mentioned above, here are types of exercises they can do:"
+        },
+        {
+          "role": "expert-system",
+          "quote": "Lexical sets are groups of words that share a common theme or category"
+        }
+      ],
+      "rationale": "AI provides pedagogical recommendations and activity designs (advisor) plus definitional explanations (expert-system), with some co-creation of classroom activities.",
+      "alternative": null
+    }
+  },
+  "classificationMetadata": {
+    "model": "gpt-5.2",
+    "provider": "openai",
+    "timestamp": "2026-01-08T16:42:46.469587",
+    "promptVersion": "2.0-social-role-theory",
+    "processingTimeMs": 15299,
+    "fewShotExamples": "yes"
   }
 }

@@ -14,9 +14,10 @@ import { BarChart, Bar, PieChart, Pie, Cell, XAxis, YAxis, CartesianGrid, Toolti
 import { useConversationStore } from '../store/useConversationStore';
 import { determineCluster } from '../utils/determineCluster';
 import { getLanguageForCluster, CartographyCluster } from '../utils/clusterToGenUI';
-import { getCommunicationFunction, getConversationStructure } from '../utils/conversationToTerrain';
+import { getCommunicationFunction, getConversationStructure, getDominantHumanRole, getDominantAiRole, mapOldRoleToNew } from '../utils/conversationToTerrain';
 import { loadClusterAssignments } from '../utils/loadClusterAssignments';
 import { Navigation } from '../components/Navigation';
+import { formatRoleName } from '../utils/formatClassificationData';
 
 const THEME = {
   foreground: '#151515',
@@ -168,6 +169,25 @@ export function ClusterDashboardPage() {
         ? convs.reduce((sum, conv) => sum + getConversationStructure(conv), 0) / convs.length
         : 0;
 
+      // Calculate dominant roles for this cluster
+      const humanRoles: Record<string, number> = {};
+      const aiRoles: Record<string, number> = {};
+      convs.forEach(conv => {
+        const humanRole = getDominantHumanRole(conv);
+        const aiRole = getDominantAiRole(conv);
+        if (humanRole) {
+          const mapped = mapOldRoleToNew(humanRole.role, 'human');
+          humanRoles[mapped] = (humanRoles[mapped] || 0) + 1;
+        }
+        if (aiRole) {
+          const mapped = mapOldRoleToNew(aiRole.role, 'ai');
+          aiRoles[mapped] = (aiRoles[mapped] || 0) + 1;
+        }
+      });
+
+      const topHumanRole = Object.entries(humanRoles).sort((a, b) => b[1] - a[1])[0];
+      const topAiRole = Object.entries(aiRoles).sort((a, b) => b[1] - a[1])[0];
+
       return {
         cluster: clusterKey,
         label: CLUSTER_LABELS[clusterKey],
@@ -179,6 +199,12 @@ export function ClusterDashboardPage() {
         avgIntensity,
         avgX,
         avgY,
+        topHumanRole: topHumanRole ? formatRoleName(topHumanRole[0], 'human') : 'N/A',
+        topHumanRoleCount: topHumanRole ? topHumanRole[1] : 0,
+        topHumanRolePercentage: topHumanRole ? (topHumanRole[1] / convs.length * 100).toFixed(1) : '0',
+        topAiRole: topAiRole ? formatRoleName(topAiRole[0], 'ai') : 'N/A',
+        topAiRoleCount: topAiRole ? topAiRole[1] : 0,
+        topAiRolePercentage: topAiRole ? (topAiRole[1] / convs.length * 100).toFixed(1) : '0',
       };
     });
 
@@ -227,7 +253,7 @@ export function ClusterDashboardPage() {
   }
 
   return (
-    <div style={{ height: '100vh', overflowY: 'auto', overflowX: 'hidden', background: '#fafafa' }}>
+    <div style={{ minHeight: '100vh', overflowY: 'auto', overflowX: 'hidden', background: '#fafafa' }}>
       {/* Header */}
       <div style={{
         background: THEME.card,
@@ -440,6 +466,8 @@ export function ClusterDashboardPage() {
                 <tr style={{ borderBottom: `2px solid ${THEME.border}` }}>
                   <th style={{ padding: 12, textAlign: 'left', fontSize: 12, fontWeight: 600, color: THEME.foregroundMuted }}>Cluster</th>
                   <th style={{ padding: 12, textAlign: 'left', fontSize: 12, fontWeight: 600, color: THEME.foregroundMuted }}>Count</th>
+                  <th style={{ padding: 12, textAlign: 'left', fontSize: 12, fontWeight: 600, color: THEME.foregroundMuted }}>Top Human Role</th>
+                  <th style={{ padding: 12, textAlign: 'left', fontSize: 12, fontWeight: 600, color: THEME.foregroundMuted }}>Top AI Role</th>
                   <th style={{ padding: 12, textAlign: 'left', fontSize: 12, fontWeight: 600, color: THEME.foregroundMuted }}>Visual Language</th>
                   <th style={{ padding: 12, textAlign: 'left', fontSize: 12, fontWeight: 600, color: THEME.foregroundMuted }}>Trajectory</th>
                   <th style={{ padding: 12, textAlign: 'left', fontSize: 12, fontWeight: 600, color: THEME.foregroundMuted }}>Intensity</th>
@@ -475,6 +503,18 @@ export function ClusterDashboardPage() {
                     <td style={{ padding: 12 }}>
                       <div style={{ fontSize: 14, fontWeight: 600 }}>{stat.count}</div>
                       <div style={{ fontSize: 11, color: THEME.foregroundMuted }}>{stat.percentage.toFixed(1)}%</div>
+                    </td>
+                    <td style={{ padding: 12, fontSize: 13 }}>
+                      <div style={{ fontWeight: 500 }}>{stat.topHumanRole}</div>
+                      <div style={{ fontSize: 11, color: THEME.foregroundMuted }}>
+                        {stat.topHumanRoleCount} ({stat.topHumanRolePercentage}%)
+                      </div>
+                    </td>
+                    <td style={{ padding: 12, fontSize: 13 }}>
+                      <div style={{ fontWeight: 500 }}>{stat.topAiRole}</div>
+                      <div style={{ fontSize: 11, color: THEME.foregroundMuted }}>
+                        {stat.topAiRoleCount} ({stat.topAiRolePercentage}%)
+                      </div>
                     </td>
                     <td style={{ padding: 12, fontSize: 13, textTransform: 'capitalize' }}>{stat.language}</td>
                     <td style={{ padding: 12, fontSize: 13 }}>{stat.characteristics.trajectory}</td>

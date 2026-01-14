@@ -179,10 +179,11 @@ export function TerrainComparisonPage() {
   return (
     <div style={{
       width: '100vw',
-      height: '100vh',
+      minHeight: '100vh',
       background: '#ffffff',
       position: 'relative',
-      overflow: 'hidden',
+      overflowY: 'auto',
+      overflowX: 'hidden',
       display: 'flex',
       flexDirection: 'column'
     }}>
@@ -299,7 +300,9 @@ export function TerrainComparisonPage() {
         position: 'relative',
         width: '100%',
         height: isExpanded ? '100%' : 'calc(100vh - 80px)',
-        overflow: 'hidden'
+        overflow: 'hidden',
+        minHeight: 400,
+        minWidth: 400
       }}>
         <ThreeScene
           heightmap={heightmap}

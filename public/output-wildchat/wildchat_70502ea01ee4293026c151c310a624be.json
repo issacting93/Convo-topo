@@ -66,5 +66,146 @@
     "state": "North Carolina",
     "toxic": false,
     "redacted": false
+  },
+  "classification": {
+    "abstain": false,
+    "interactionPattern": {
+      "category": "advisory",
+      "confidence": 0.7,
+      "evidence": [
+        "Please provide a description on how QC Handyman provides low VOC paint and air scrubber solutions",
+        "Please provide a short paragraph about how QC Handyman can help with picking out flooring",
+        "Please shorten to read professional and percise"
+      ],
+      "rationale": "Human requests specific marketing copy deliverables; AI responds with drafted descriptions and revised text.",
+      "alternative": "question-answer"
+    },
+    "powerDynamics": {
+      "category": "human-led",
+      "confidence": 0.75,
+      "evidence": [
+        "Please provide a description",
+        "Please provide a short paragraph",
+        "Please shorten to read professional and percise"
+      ],
+      "rationale": "Human sets agenda and constraints; AI follows requested outputs.",
+      "alternative": "balanced"
+    },
+    "emotionalTone": {
+      "category": "professional",
+      "confidence": 0.85,
+      "evidence": [
+        "QC Handyman is a professional handyman service provider",
+        "QC Handyman is your trusted partner",
+        "clear communication, fast response times, and exceptional workmanship"
+      ],
+      "rationale": "Businesslike, promotional language with minimal affective content.",
+      "alternative": null
+    },
+    "engagementStyle": {
+      "category": "directive-iterative",
+      "confidence": 0.7,
+      "evidence": [
+        "Please provide a short paragraph",
+        "Please shorten to read professional and percise"
+      ],
+      "rationale": "Human gives directives and requests revision; AI iterates by rewriting.",
+      "alternative": "reactive"
+    },
+    "knowledgeExchange": {
+      "category": "skill-sharing",
+      "confidence": 0.6,
+      "evidence": [
+        "Please shorten to read professional and percise",
+        "QC Handyman provides various types of flooring options, including laminate, hardwood, vinyl, engineered, and tile."
+      ],
+      "rationale": "Exchange centers on producing and refining professional copy (a writing/communication task) rather than personal sharing.",
+      "alternative": "factual-info"
+    },
+    "conversationPurpose": {
+      "category": "problem-solving",
+      "confidence": 0.7,
+      "evidence": [
+        "Please provide a description",
+        "Please provide a short paragraph",
+        "Please shorten to read professional and percise"
+      ],
+      "rationale": "Goal is to generate and refine business descriptions for services and partnerships.",
+      "alternative": "collaborative-refinement"
+    },
+    "topicDepth": {
+      "category": "moderate",
+      "confidence": 0.6,
+      "evidence": [
+        "Low VOC Paint: VOCs are harmful chemicals that are released into the air from traditional paints",
+        "Air scrubbers are devices designed to remove contaminants, pollutants, and odors from the air"
+      ],
+      "rationale": "Provides some explanatory detail (definitions and benefits) but not exhaustive technical depth.",
+      "alternative": "surface"
+    },
+    "turnTaking": {
+      "category": "assistant-dominant",
+      "confidence": 0.85,
+      "evidence": [
+        "QC Handyman is a professional handyman service provider that is committed to offering eco-friendly solutions to its customers.",
+        "QC Handyman is your trusted partner when it comes to picking out the perfect flooring for your space."
+      ],
+      "rationale": "AI responses are substantially longer than human prompts, especially in turns [2] and [4].",
+      "alternative": null
+    },
+    "humanRole": {
+      "distribution": {
+        "information-seeker": 0.1,
+        "provider": 0.15,
+        "director": 0.7,
+        "collaborator": 0.05,
+        "social-expressor": 0.0,
+        "relational-peer": 0.0
+      },
+      "confidence": 0.75,
+      "evidence": [
+        {
+          "role": "director",
+          "quote": "Please shorten to read professional and percise"
+        },
+        {
+          "role": "director",
+          "quote": "Please provide a short paragraph about how QC Handyman can help with picking out flooring"
+        }
+      ],
+      "rationale": "Human primarily specifies deliverables and constraints (what to write, include, and how to revise).",
+      "alternative": "provider"
+    },
+    "aiRole": {
+      "distribution": {
+        "expert-system": 0.55,
+        "learning-facilitator": 0.0,
+        "advisor": 0.35,
+        "co-constructor": 0.1,
+        "social-facilitator": 0.0,
+        "relational-peer": 0.0
+      },
+      "confidence": 0.7,
+      "evidence": [
+        {
+          "role": "expert-system",
+          "quote": "VOCs are harmful chemicals that are released into the air from traditional paints"
+        },
+        {
+          "role": "advisor",
+          "quote": "QC Handyman's team will assist you in choosing the flooring type that best suits your needs"
+        }
+      ],
+      "rationale": "AI provides explanatory content and drafted marketing copy (expert-system), plus prescriptive guidance language about selection (advisor), and revises text per instruction (co-constructor).",
+      "alternative": "co-constructor"
+    }
+  },
+  "classificationMetadata": {
+    "model": "gpt-5.2",
+    "provider": "openai",
+    "timestamp": "2026-01-08T16:57:13.205155",
+    "promptVersion": "2.0-social-role-theory",
+    "processingTimeMs": 12576,
+    "fewShotExamples": "yes"
   }
 }

@@ -22,9 +22,9 @@ export interface PADContext {
 const MARKERS = {
     frustration: [
         /\b(wrong|incorrect|error|mistake|failed|broken)\b/i,
-        /\bno[,.]?\s+(that\'s|this is|it is)/i,
+        /\bno[,.]?\s+(that's|this is|it is)/i,
         /\bnot\s+(quite|right|correct|working|working properly)/i,
-        /\b(doesn\'t|does not|can\'t|cannot|won\'t|will not)\s+(work|seem|appear|make sense)/i,
+        /\b(doesn't|does not|can't|cannot|won't|will not)\s+(work|seem|appear|make sense)/i,
         /\b(issue|problem|bug)\b/i,
         /\b(actually|however|but)\s+(that|this|it)/i,
     ],
@@ -32,10 +32,10 @@ const MARKERS = {
         /\b(perfect|exactly|brilliant|excellent|amazing|awesome|fantastic)\b/i,
         /\b(thanks|thank you)\b/i,
         /\b(that|it)\s+works\b/i,
-        /\byes[!.]?\s+(that\'s|exactly|perfect|correct|right)/i,
+        /\byes[!.]?\s+(that's|exactly|perfect|correct|right)/i,
         /\bworks?\s+perfectly\b/i,
         /\bexactly\s+(what|what i|what we)/i,
-        /\bthat\'s\s+it\b/i,
+        /\bthat's\s+it\b/i,
         /\blove\s+(it|this|that)\b/i,
     ],
     urgency: [

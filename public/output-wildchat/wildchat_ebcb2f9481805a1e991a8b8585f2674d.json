@@ -4,19 +4,43 @@
   "messages": [
     {
       "role": "user",
-      "content": "hi"
+      "content": "hi",
+      "pad": {
+        "pleasure": 0.5,
+        "arousal": 0.3,
+        "dominance": 0.6,
+        "emotionalIntensity": 0.25819888974716115
+      }
     },
     {
       "role": "assistant",
-      "content": "Hello! How can I assist you today?"
+      "content": "Hello! How can I assist you today?",
+      "pad": {
+        "pleasure": 0.5,
+        "arousal": 0.3,
+        "dominance": 0.4,
+        "emotionalIntensity": 0.25819888974716115
+      }
     },
     {
       "role": "user",
-      "content": "rae you gray"
+      "content": "rae you gray",
+      "pad": {
+        "pleasure": 0.5,
+        "arousal": 0.3,
+        "dominance": 0.6,
+        "emotionalIntensity": 0.25819888974716115
+      }
     },
     {
       "role": "assistant",
-      "content": "It looks like there might be a typo in your question. If you're asking if I am an AI (which could be symbolized by the concept of being \"gray\" as in not black or white, not entirely clear or straightforward), then yes, I am an AI developed by OpenAI. If you meant something else by \"gray,\" please clarify, and I'll do my best to provide a relevant answer."
+      "content": "It looks like there might be a typo in your question. If you're asking if I am an AI (which could be symbolized by the concept of being \"gray\" as in not black or white, not entirely clear or straightforward), then yes, I am an AI developed by OpenAI. If you meant something else by \"gray,\" please clarify, and I'll do my best to provide a relevant answer.",
+      "pad": {
+        "pleasure": 0.5,
+        "arousal": 0.3,
+        "dominance": 0.4,
+        "emotionalIntensity": 0.25819888974716115
+      }
     }
   ],
   "metadata": {

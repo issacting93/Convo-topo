@@ -84,5 +84,153 @@
     "state": "Katsina State",
     "toxic": false,
     "redacted": false
+  },
+  "classification": {
+    "abstain": false,
+    "interactionPattern": {
+      "category": "question-answer",
+      "confidence": 0.78,
+      "evidence": [
+        "Why do researhers choose a sample size of two local government areas",
+        "There could be several reasons why researchers choose a sample size",
+        "What is the justification of sample size in groundwater researches with citations and references",
+        "There are several justifications for carrying out groundwater studies in cities and state capitals:"
+      ],
+      "rationale": "Human repeatedly asks domain questions; AI responds with explanatory lists and guidance.",
+      "alternative": "advisory"
+    },
+    "powerDynamics": {
+      "category": "human-led",
+      "confidence": 0.74,
+      "evidence": [
+        "Why do researhers choose a sample size",
+        "What is the justification of sample size",
+        "what is the sample size used and justification for it",
+        "What is the justification for carring out groundwater studies"
+      ],
+      "rationale": "Human sets the agenda through successive questions; AI follows and answers.",
+      "alternative": "balanced"
+    },
+    "emotionalTone": {
+      "category": "professional",
+      "confidence": 0.72,
+      "evidence": [
+        "Determining the sample size in groundwater research studies involves statistical considerations",
+        "I recommend consulting the original research articles themselves.",
+        "There are several justifications for carrying out groundwater studies"
+      ],
+      "rationale": "Technical, academic framing with formal disclaimers; little affective language.",
+      "alternative": "neutral"
+    },
+    "engagementStyle": {
+      "category": "reactive",
+      "confidence": 0.63,
+      "evidence": [
+        "There could be several reasons",
+        "I cannot provide direct citations or references",
+        "Therefore, I cannot provide the exact sample size or justification",
+        "There are several justifications"
+      ],
+      "rationale": "AI primarily responds to prompts with explanations/disclaimers rather than driving exploration with questions or directives.",
+      "alternative": "directive-iterative"
+    },
+    "knowledgeExchange": {
+      "category": "factual-info",
+      "confidence": 0.66,
+      "evidence": [
+        "Representativeness: Researchers may select these two local government areas",
+        "sample size justification is often discussed in terms of statistical power and confidence level",
+        "Water supply management: Cities and state capitals often face high water demand"
+      ],
+      "rationale": "Exchange centers on general explanations and concepts about sampling and groundwater study rationales.",
+      "alternative": "skill-sharing"
+    },
+    "conversationPurpose": {
+      "category": "information-seeking",
+      "confidence": 0.8,
+      "evidence": [
+        "Why do researhers choose a sample size",
+        "What is the justification of sample size",
+        "what is the sample size used and justification for it",
+        "What is the justification for carring out groundwater studies"
+      ],
+      "rationale": "Human requests explanations/justifications and (attempted) citations; goal is obtaining information.",
+      "alternative": "problem-solving"
+    },
+    "topicDepth": {
+      "category": "moderate",
+      "confidence": 0.67,
+      "evidence": [
+        "sample size justification is often discussed in terms of statistical power and confidence level",
+        "This includes evaluating the influence of infrastructural projects",
+        "Groundwater studies help assess the vulnerability and resilience"
+      ],
+      "rationale": "Multiple factors and methodological concepts are covered, but not deeply developed with specifics or calculations.",
+      "alternative": "surface"
+    },
+    "turnTaking": {
+      "category": "assistant-dominant",
+      "confidence": 0.86,
+      "evidence": [
+        "There could be several reasons why researchers choose a sample size of two local government areas",
+        "There are several justifications for carrying out groundwater studies in cities and state capitals:"
+      ],
+      "rationale": "AI responses are substantially longer and more elaborated than the human questions.",
+      "alternative": "balanced"
+    },
+    "humanRole": {
+      "distribution": {
+        "information-seeker": 0.7,
+        "provider": 0.25,
+        "director": 0.03,
+        "collaborator": 0.02,
+        "social-expressor": 0.0,
+        "relational-peer": 0.0
+      },
+      "confidence": 0.76,
+      "evidence": [
+        {
+          "role": "information-seeker",
+          "quote": "What is the justification for carring out groundwater studies in cities and state capitals"
+        },
+        {
+          "role": "provider",
+          "quote": "What is the justification of sample size in groundwater researches with citations and references"
+        }
+      ],
+      "rationale": "Human primarily seeks explanations; also requests specific citations/references, positioning the AI as a source.",
+      "alternative": null
+    },
+    "aiRole": {
+      "distribution": {
+        "expert-system": 0.75,
+        "learning-facilitator": 0.02,
+        "advisor": 0.18,
+        "co-constructor": 0.03,
+        "social-facilitator": 0.0,
+        "relational-peer": 0.02
+      },
+      "confidence": 0.74,
+      "evidence": [
+        {
+          "role": "expert-system",
+          "quote": "There could be several reasons why researchers choose a sample size"
+        },
+        {
+          "role": "advisor",
+          "quote": "I recommend consulting the original research articles themselves."
+        }
+      ],
+      "rationale": "AI mainly provides generalized explanatory content (expert-system) and occasionally recommends actions (advisor) when unable to cite specifics.",
+      "alternative": null
+    }
+  },
+  "classificationMetadata": {
+    "model": "gpt-5.2",
+    "provider": "openai",
+    "timestamp": "2026-01-08T17:17:47.511198",
+    "promptVersion": "2.0-social-role-theory",
+    "processingTimeMs": 18469,
+    "fewShotExamples": "yes"
   }
 }

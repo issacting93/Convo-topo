@@ -66,5 +66,158 @@
     "state": "Fes",
     "toxic": false,
     "redacted": false
+  },
+  "classification": {
+    "abstain": false,
+    "interactionPattern": {
+      "category": "question-answer",
+      "confidence": 0.85,
+      "evidence": [
+        "how run GPT-3 on colab google",
+        "give exmpl of api_key",
+        "The error you're seeing is because of the quotes used in your code."
+      ],
+      "rationale": "Human asks how-to and troubleshooting questions; AI provides direct answers and fixes.",
+      "alternative": "advisory"
+    },
+    "powerDynamics": {
+      "category": "human-led",
+      "confidence": 0.75,
+      "evidence": [
+        "how run GPT-3 on colab google",
+        "give exmpl of api_key",
+        "SyntaxError: invalid character '\u201c' (U+201C)"
+      ],
+      "rationale": "Human sets the agenda by posing successive questions and presenting an error; AI responds.",
+      "alternative": "balanced"
+    },
+    "emotionalTone": {
+      "category": "professional",
+      "confidence": 0.7,
+      "evidence": [
+        "To run GPT-3 on Colab Google, you can follow these steps:",
+        "I'm sorry, as an AI language model, I don't have access to real user API keys.",
+        "To fix this error, replace the smart quotes with standard double-quotes."
+      ],
+      "rationale": "Task-focused, instructional language with minimal affect.",
+      "alternative": "neutral"
+    },
+    "engagementStyle": {
+      "category": "directive-iterative",
+      "confidence": 0.7,
+      "evidence": [
+        "you can follow these steps:",
+        "Install the OpenAI API using the following command:",
+        "To fix this error, replace the smart quotes with standard double-quotes."
+      ],
+      "rationale": "AI gives step-by-step commands and specific corrections to iterate toward a working setup.",
+      "alternative": "reactive"
+    },
+    "knowledgeExchange": {
+      "category": "skill-sharing",
+      "confidence": 0.8,
+      "evidence": [
+        "Install the OpenAI API using the following command:",
+        "Now, you can use the OpenAI API to generate text using GPT-3.",
+        "replace the smart quotes with standard double-quotes."
+      ],
+      "rationale": "Exchange centers on procedural how-to guidance and debugging.",
+      "alternative": "factual-info"
+    },
+    "conversationPurpose": {
+      "category": "problem-solving",
+      "confidence": 0.8,
+      "evidence": [
+        "how run GPT-3 on colab google",
+        "SyntaxError: invalid character '\u201c' (U+201C)",
+        "This will resolve the syntax error in your code."
+      ],
+      "rationale": "Goal is to get GPT-3 working in Colab and fix an encountered syntax error.",
+      "alternative": "information-seeking"
+    },
+    "topicDepth": {
+      "category": "moderate",
+      "confidence": 0.65,
+      "evidence": [
+        "Under the Hardware Accelerator section, select GPU.",
+        "authenticate with the OpenAI API by providing your API key.",
+        "SyntaxError: invalid character '\u201c' (U+201C)"
+      ],
+      "rationale": "Covers setup steps, authentication, and a specific debugging issue, but not extensive depth.",
+      "alternative": "surface"
+    },
+    "turnTaking": {
+      "category": "assistant-dominant",
+      "confidence": 0.85,
+      "evidence": [
+        "To run GPT-3 on Colab Google, you can follow these steps:",
+        "I'm sorry, as an AI language model, I don't have access to real user API keys.",
+        "The error you're seeing is because of the quotes used in your code."
+      ],
+      "rationale": "AI responses are substantially longer and more detailed than human turns.",
+      "alternative": "balanced"
+    },
+    "humanRole": {
+      "distribution": {
+        "information-seeker": 0.55,
+        "provider": 0.35,
+        "director": 0.05,
+        "collaborator": 0.05,
+        "social-expressor": 0.0,
+        "relational-peer": 0.0
+      },
+      "confidence": 0.72,
+      "evidence": [
+        {
+          "role": "information-seeker",
+          "quote": "how run GPT-3 on colab google"
+        },
+        {
+          "role": "provider",
+          "quote": "give exmpl of api_key"
+        },
+        {
+          "role": "provider",
+          "quote": "SyntaxError: invalid character '\u201c' (U+201C)"
+        }
+      ],
+      "rationale": "Human primarily requests help and supplies an error message for troubleshooting, indicating a help-seeking/provider-of-context stance.",
+      "alternative": "director"
+    },
+    "aiRole": {
+      "distribution": {
+        "expert-system": 0.45,
+        "learning-facilitator": 0.05,
+        "advisor": 0.45,
+        "co-constructor": 0.05,
+        "social-facilitator": 0.0,
+        "relational-peer": 0.0
+      },
+      "confidence": 0.78,
+      "evidence": [
+        {
+          "role": "advisor",
+          "quote": "To run GPT-3 on Colab Google, you can follow these steps:"
+        },
+        {
+          "role": "expert-system",
+          "quote": "An API key is a unique identifier used to authenticate and interact with a particular API service."
+        },
+        {
+          "role": "advisor",
+          "quote": "To fix this error, replace the smart quotes with standard double-quotes."
+        }
+      ],
+      "rationale": "AI alternates between explaining concepts (expert-system) and prescribing steps/fixes (advisor).",
+      "alternative": null
+    }
+  },
+  "classificationMetadata": {
+    "model": "gpt-5.2",
+    "provider": "openai",
+    "timestamp": "2026-01-08T16:58:17.553881",
+    "promptVersion": "2.0-social-role-theory",
+    "processingTimeMs": 15094,
+    "fewShotExamples": "yes"
   }
 }

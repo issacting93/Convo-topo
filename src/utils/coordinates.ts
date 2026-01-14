@@ -18,14 +18,18 @@ function getMetadataBasedX(conv: Conversation): number {
     if (!c) return 0.5;
 
     // 1. Role-based positioning (Strongest metadata signal)
+    // Using Social Role Theory taxonomy: Instrumental (Functional, left) ↔ Expressive (Social, right)
     if (c.humanRole?.distribution) {
         const humanRole = c.humanRole.distribution;
         const roleBasedX =
-            (humanRole['challenger'] || 0) * 0.1 +
-            (humanRole['seeker'] || 0) * 0.2 +     // Seeker = asking for help -> Functional
-            (humanRole['learner'] || 0) * 0.3 +
-            (humanRole['collaborator'] || 0) * 0.6 +
-            (humanRole['sharer'] || 0) * 0.95;     // Sharer = sharing feelings -> Social
+            // Instrumental roles (Functional, left side: 0.1-0.4)
+            (humanRole['director'] || humanRole['challenger'] || 0) * 0.1 +              // Instrumental, High Authority
+            (humanRole['information-seeker'] || humanRole['seeker'] || 0) * 0.2 +        // Instrumental, Low Authority
+            (humanRole['provider'] || humanRole['learner'] || 0) * 0.3 +                 // Instrumental, Low Authority (seeks from AI)
+            (humanRole['collaborator'] || humanRole['co-constructor'] || 0) * 0.4 +      // Instrumental, Equal Authority
+            // Expressive roles (Social, right side: 0.8-0.95)
+            (humanRole['social-expressor'] || humanRole['sharer'] || 0) * 0.95 +         // Expressive, Low Authority
+            (humanRole['relational-peer'] || 0) * 0.85;                                  // Expressive, Equal Authority
 
         const maxRoleValue = Math.max(...Object.values(humanRole));
         if (maxRoleValue > 0.3) {
@@ -101,22 +105,46 @@ export function getConversationStructure(conv: Conversation): number {
     const confidence = c.interactionPattern?.confidence || 0.5;
     const strength = 0.3 * confidence;
 
-    if (pattern === 'question-answer' || pattern === 'advisory') {
-        return 0.5 + 0.2 + strength; // ~0.8-0.9 (Divergent roles)
+    // Adjusted mapping to reduce skew toward Divergent
+    // Question-answer can be more balanced if it's a back-and-forth exchange
+    if (pattern === 'question-answer') {
+        // Use confidence to determine: high confidence = more divergent, low = more balanced
+        return 0.5 + (0.15 * confidence); // ~0.5-0.65 (Balanced to Divergent)
+    }
+    if (pattern === 'advisory') {
+        return 0.5 + 0.2 + strength; // ~0.8-0.9 (Divergent roles - one-way advice)
     }
     if (pattern === 'collaborative' || pattern === 'casual-chat' || pattern === 'storytelling') {
         return 0.5 - 0.2 - strength; // ~0.1-0.2 (Aligned)
     }
 
     // 2. Role Fallback
+    // Using Social Role Theory taxonomy: High Authority (Structured, bottom) ↔ Low Authority (Emergent, top)
     if (c.aiRole?.distribution) {
         const aiRole = c.aiRole.distribution;
-        const isExpert = (aiRole['expert'] || 0) + (aiRole['advisor'] || 0);
-        const isPeer = (aiRole['peer'] || 0) + (aiRole['facilitator'] || 0);
+        // High Authority roles (Structured, bottom: 0.1-0.3)
+        const isExpert = (aiRole['expert-system'] || aiRole['expert'] || 0) +
+            (aiRole['advisor'] || 0);
+        // Low Authority roles (Emergent, top: 0.7-0.8)
+        const isFacilitator = (aiRole['learning-facilitator'] || aiRole['facilitator'] || 0) +
+            (aiRole['social-facilitator'] || aiRole['reflector'] || 0);
+        // Equal Authority roles (Balanced, middle: 0.5-0.6)
+        const isPeer = (aiRole['relational-peer'] || aiRole['peer'] || 0) +
+            (aiRole['co-constructor'] || 0);
 
-        if (isExpert > isPeer) return 0.75;
-        if (isPeer > isExpert) return 0.25;
+        if (isExpert > isFacilitator && isExpert > isPeer) return 0.2; // High authority -> Structured
+        if (isFacilitator > isExpert && isFacilitator > isPeer) return 0.8; // Low authority -> Emergent
+        if (isPeer > isExpert && isPeer > isFacilitator) return 0.5; // Equal authority -> Balanced
     }
 
     return 0.5;
+}
+
+/**
+ * Standardize mapping from [0, 1] data space to [0.1, 0.9] visualization space
+ * This ensures all elements (paths, terrain density, markers) use the exact same boundaries.
+ */
+export function toVisualizationSpace(value: number): number {
+    // 0.1 padding on each side to keep action away from edges
+    return 0.1 + value * 0.8;
 }

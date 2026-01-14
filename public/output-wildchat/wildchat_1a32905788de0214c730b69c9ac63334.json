@@ -102,5 +102,142 @@
     "state": "Province of Cavite",
     "toxic": false,
     "redacted": false
+  },
+  "classification": {
+    "abstain": false,
+    "interactionPattern": {
+      "category": "question-answer",
+      "confidence": 0.72,
+      "evidence": [
+        "write a 2009 nba season with kobe bryant mvp and championship and paul pierce injury",
+        "write a 2016 nba season with bryant retirement and warriors 2nd title"
+      ],
+      "rationale": "Human repeatedly prompts for specific season write-ups; AI responds with extended written narratives each time.",
+      "alternative": "storytelling"
+    },
+    "powerDynamics": {
+      "category": "human-led",
+      "confidence": 0.78,
+      "evidence": [
+        "write a 2017 nba season with kobe bryant coach of the lakers",
+        "write a 2018 nba season with warriors trading picks for jayson tatum and jaylen brown"
+      ],
+      "rationale": "Human sets the agenda and constraints for each output; AI follows those instructions.",
+      "alternative": null
+    },
+    "emotionalTone": {
+      "category": "professional",
+      "confidence": 0.66,
+      "evidence": [
+        "The 2009 NBA season was one of the most exciting in recent memory",
+        "The 2017 NBA season was marked by major changes and exciting developments"
+      ],
+      "rationale": "AI uses sports-journalism style narration with evaluative but non-personal language; little affective exchange.",
+      "alternative": "neutral"
+    },
+    "engagementStyle": {
+      "category": "directive-iterative",
+      "confidence": 0.62,
+      "evidence": [
+        "write a 2019 nba season with warriors signing ben simmons and buddy hield,5th championship,and butler signing with knicks",
+        "write a 2018 nba season with warriors trading picks for jayson tatum and jaylen brown,4th championship and lakers signing lebron james"
+      ],
+      "rationale": "Human issues repeated directives specifying content; AI iteratively produces requested drafts without back-and-forth questioning.",
+      "alternative": "reactive"
+    },
+    "knowledgeExchange": {
+      "category": "experience-sharing",
+      "confidence": 0.55,
+      "evidence": [
+        "The 2016 NBA season was a bittersweet one for many fans",
+        "Bryant's dominance was on full display in the playoffs"
+      ],
+      "rationale": "AI provides narrative season accounts (quasi-historical storytelling) rather than pure definitions or step-by-step skills.",
+      "alternative": "factual-info"
+    },
+    "conversationPurpose": {
+      "category": "capability-exploration",
+      "confidence": 0.6,
+      "evidence": [
+        "write a 2017 nba season with kobe bryant coach of the lakers",
+        "write a 2018 nba season with warriors trading picks for jayson tatum and jaylen brown,4th championship"
+      ],
+      "rationale": "User repeatedly tests AI's ability to generate alternate-history NBA season narratives with specified constraints.",
+      "alternative": "entertainment"
+    },
+    "topicDepth": {
+      "category": "moderate",
+      "confidence": 0.64,
+      "evidence": [
+        "led the Lakers to a league-best 65-17 record",
+        "finishing with a disappointing 32-50 record"
+      ],
+      "rationale": "Narratives include multiple teams, records, playoffs, and awards, but remain broad and not deeply analytical.",
+      "alternative": "surface"
+    },
+    "turnTaking": {
+      "category": "assistant-dominant",
+      "confidence": 0.86,
+      "evidence": [
+        "The 2009 NBA season was one of the most exciting in recent memory",
+        "The 2019 NBA season was another exciting year for basketball"
+      ],
+      "rationale": "AI responses are long multi-paragraph outputs; human turns are short prompts.",
+      "alternative": null
+    },
+    "humanRole": {
+      "distribution": {
+        "information-seeker": 0.05,
+        "provider": 0.05,
+        "director": 0.75,
+        "collaborator": 0.1,
+        "social-expressor": 0.0,
+        "relational-peer": 0.05
+      },
+      "confidence": 0.74,
+      "evidence": [
+        {
+          "role": "director",
+          "quote": "write a 2018 nba season with warriors trading picks for jayson tatum and jaylen brown,4th championship and lakers signing lebron james"
+        },
+        {
+          "role": "director",
+          "quote": "write a 2019 nba season with warriors signing ben simmons and buddy hield,5th championship,and butler signing with knicks"
+        }
+      ],
+      "rationale": "Human primarily directs content and constraints for generated narratives across multiple iterations.",
+      "alternative": null
+    },
+    "aiRole": {
+      "distribution": {
+        "expert-system": 0.25,
+        "learning-facilitator": 0.0,
+        "advisor": 0.05,
+        "co-constructor": 0.15,
+        "social-facilitator": 0.0,
+        "relational-peer": 0.55
+      },
+      "confidence": 0.58,
+      "evidence": [
+        {
+          "role": "expert-system",
+          "quote": "The Warriors, meanwhile, were the dominant team in the league for much of the season, finishing with a record of 73-9"
+        },
+        {
+          "role": "co-constructor",
+          "quote": "The 2018 NBA season was full of surprises, as several major trades and signings shook up the league."
+        }
+      ],
+      "rationale": "AI mainly produces narrative write-ups in a peer-like storyteller voice, while also asserting factual-sounding season details. Because the content blends storytelling with authoritative claims, role is mixed.",
+      "alternative": "expert-system"
+    }
+  },
+  "classificationMetadata": {
+    "model": "gpt-5.2",
+    "provider": "openai",
+    "timestamp": "2026-01-08T16:43:50.802920",
+    "promptVersion": "2.0-social-role-theory",
+    "processingTimeMs": 19816,
+    "fewShotExamples": "yes"
   }
 }

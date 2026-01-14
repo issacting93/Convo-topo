@@ -19,7 +19,10 @@ interface NavItem {
 
 const NAV_ITEMS: NavItem[] = [
   { path: '/', label: 'Map', description: 'Spatial clustering of all conversations' },
+  { path: '/cluster-terrain', label: '3D Clusters', description: '3D visualization of all conversations by cluster' },
+  { path: '/terrain-grid', label: 'Grid', description: 'Grid view of all terrain conversations' },
   { path: '/cluster-dashboard', label: 'Dashboard', description: 'Cluster statistics and analytics' },
+  { path: '/role-dashboard', label: 'Roles', description: 'Role distribution and analysis' },
   { path: '/multi-path', label: 'Flow', description: 'Multi-path conversation dynamics' },
   { path: '/relational-drift', label: 'Drift', description: 'Relational drift analysis' },
   { path: '/pad-timeline', label: 'Emotions', description: 'Emotional intensity timeline' },

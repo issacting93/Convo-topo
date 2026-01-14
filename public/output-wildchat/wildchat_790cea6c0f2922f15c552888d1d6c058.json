@@ -264,5 +264,142 @@
     "state": "California",
     "toxic": false,
     "redacted": false
+  },
+  "classification": {
+    "abstain": false,
+    "interactionPattern": {
+      "category": "question-answer",
+      "confidence": 0.78,
+      "evidence": [
+        "Give all subject, relation, and object triplets from the sentence",
+        "Subject: man\nRelation: is sitting at\nObject: picnic table"
+      ],
+      "rationale": "Human repeatedly requests a specific extraction; AI responds with extracted triplets in an answer format.",
+      "alternative": "collaborative"
+    },
+    "powerDynamics": {
+      "category": "human-led",
+      "confidence": 0.74,
+      "evidence": [
+        "Give all subject, relation, and object triplets from the sentence",
+        "Give all subject, relation, and object triplets from the sentence, 'A tennis court shows a man"
+      ],
+      "rationale": "Human sets the agenda by repeatedly issuing the same task prompt and introducing new sentences; AI follows.",
+      "alternative": "balanced"
+    },
+    "emotionalTone": {
+      "category": "neutral",
+      "confidence": 0.7,
+      "evidence": [
+        "Give all subject, relation, and object triplets",
+        "Subject: tennis court\nRelation: shows\nObject: man"
+      ],
+      "rationale": "Task-only exchanges with no explicit affective or relational language.",
+      "alternative": "professional"
+    },
+    "engagementStyle": {
+      "category": "directive-iterative",
+      "confidence": 0.76,
+      "evidence": [
+        "Give all subject, relation, and object triplets from the sentence",
+        "Give all subject, relation, and object triplets from the sentence, 'View from a few feet away"
+      ],
+      "rationale": "Human repeatedly directs the same operation across multiple inputs; AI iteratively produces outputs.",
+      "alternative": "reactive"
+    },
+    "knowledgeExchange": {
+      "category": "skill-sharing",
+      "confidence": 0.63,
+      "evidence": [
+        "Give all subject, relation, and object triplets",
+        "Subject: man\nRelation: cuts\nObject: dessert on plate"
+      ],
+      "rationale": "Exchange centers on performing an NLP-style extraction procedure (how-to/structured output), not personal content.",
+      "alternative": "factual-info"
+    },
+    "conversationPurpose": {
+      "category": "capability-exploration",
+      "confidence": 0.66,
+      "evidence": [
+        "Give all subject, relation, and object triplets from the sentence",
+        "Give all subject, relation, and object triplets from the sentence, 'A tennis court shows a man"
+      ],
+      "rationale": "Repeated identical prompts across multiple sentences suggests testing consistency/ability of triplet extraction.",
+      "alternative": "information-seeking"
+    },
+    "topicDepth": {
+      "category": "moderate",
+      "confidence": 0.6,
+      "evidence": [
+        "A man, with other people in the background, is sitting at a picnic table",
+        "View from a few feet away of the silhouette of a person standing on a surfboard"
+      ],
+      "rationale": "Multiple examples and repeated attempts, but no deeper discussion beyond producing lists of triplets.",
+      "alternative": "surface"
+    },
+    "turnTaking": {
+      "category": "assistant-dominant",
+      "confidence": 0.72,
+      "evidence": [
+        "Give all subject, relation, and object triplets from the sentence",
+        "Subject: View\nRelation: is of\nObject: silhouette of a person standing on a surfboard"
+      ],
+      "rationale": "AI responses are substantially longer due to multi-line triplet lists; human turns are short repeated prompts.",
+      "alternative": "balanced"
+    },
+    "humanRole": {
+      "distribution": {
+        "information-seeker": 0.25,
+        "provider": 0.55,
+        "director": 0.15,
+        "collaborator": 0.03,
+        "social-expressor": 0.01,
+        "relational-peer": 0.01
+      },
+      "confidence": 0.73,
+      "evidence": [
+        {
+          "role": "provider",
+          "quote": "Give all subject, relation, and object triplets from the sentence"
+        },
+        {
+          "role": "director",
+          "quote": "Give all subject, relation, and object triplets from the sentence, 'A tennis court shows a man"
+        }
+      ],
+      "rationale": "Human repeatedly issues a specific extraction request to the AI (seeking AI output) and controls inputs by supplying sentences.",
+      "alternative": "information-seeker"
+    },
+    "aiRole": {
+      "distribution": {
+        "expert-system": 0.9,
+        "learning-facilitator": 0.02,
+        "advisor": 0.03,
+        "co-constructor": 0.03,
+        "social-facilitator": 0.01,
+        "relational-peer": 0.01
+      },
+      "confidence": 0.82,
+      "evidence": [
+        {
+          "role": "expert-system",
+          "quote": "Subject: man\nRelation: is sitting at\nObject: picnic table"
+        },
+        {
+          "role": "expert-system",
+          "quote": "Subject: second player\nRelation: has\nObject: an expectant look"
+        }
+      ],
+      "rationale": "AI provides direct structured outputs (triplets) without scaffolding questions or collaborative negotiation, reflecting high epistemic authority.",
+      "alternative": null
+    }
+  },
+  "classificationMetadata": {
+    "model": "gpt-5.2",
+    "provider": "openai",
+    "timestamp": "2026-01-08T16:58:50.541996",
+    "promptVersion": "2.0-social-role-theory",
+    "processingTimeMs": 14128,
+    "fewShotExamples": "yes"
   }
 }

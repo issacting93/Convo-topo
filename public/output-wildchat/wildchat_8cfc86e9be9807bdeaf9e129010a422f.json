@@ -66,5 +66,145 @@
     "state": "California",
     "toxic": false,
     "redacted": false
+  },
+  "classification": {
+    "abstain": false,
+    "interactionPattern": {
+      "category": "question-answer",
+      "confidence": 0.7,
+      "evidence": [
+        "x^{2}-6x+8",
+        "To factor the quadratic expression x^2 - 6x + 8",
+        "What are some ways you can tell if someone is lying?"
+      ],
+      "rationale": "Human provides prompts/questions; AI responds with direct explanatory answers.",
+      "alternative": "advisory"
+    },
+    "powerDynamics": {
+      "category": "human-led",
+      "confidence": 0.7,
+      "evidence": [
+        "x2-2x-24",
+        "What are some ways you can tell if someone is lying?",
+        "in own words"
+      ],
+      "rationale": "Human sets the agenda by supplying problems and specifying a response constraint; AI follows.",
+      "alternative": "balanced"
+    },
+    "emotionalTone": {
+      "category": "professional",
+      "confidence": 0.75,
+      "evidence": [
+        "To factor the quadratic expression x^2 - 6x + 8",
+        "Detecting whether or not someone is lying can be challenging"
+      ],
+      "rationale": "Task-focused, instructional language without overt affect.",
+      "alternative": "neutral"
+    },
+    "engagementStyle": {
+      "category": "directive-iterative",
+      "confidence": 0.55,
+      "evidence": [
+        "in own words",
+        "To factor the quadratic expression x^2 - 2x - 24"
+      ],
+      "rationale": "Human issues brief prompts and a formatting constraint; AI provides structured step-by-step responses. Limited interaction makes this somewhat ambiguous.",
+      "alternative": "reactive"
+    },
+    "knowledgeExchange": {
+      "category": "skill-sharing",
+      "confidence": 0.65,
+      "evidence": [
+        "To factor the quadratic expression x^2 - 6x + 8",
+        "Therefore, we can rewrite the expression as (x - 2)(x - 4).",
+        "Detecting whether or not someone is lying can be challenging"
+      ],
+      "rationale": "AI teaches methods/indicators (factoring procedure; behavioral indicators) rather than personal sharing.",
+      "alternative": "factual-info"
+    },
+    "conversationPurpose": {
+      "category": "information-seeking",
+      "confidence": 0.7,
+      "evidence": [
+        "What are some ways you can tell if someone is lying?",
+        "x^{2}-6x+8"
+      ],
+      "rationale": "Human appears to request answers/explanations to prompts (math expressions; question about lying).",
+      "alternative": "problem-solving"
+    },
+    "topicDepth": {
+      "category": "moderate",
+      "confidence": 0.6,
+      "evidence": [
+        "we need to find two numbers that multiply to 8 and add up to -6",
+        "there is no foolproof method to determine with absolute certainty"
+      ],
+      "rationale": "Some explanation and caveats are provided, but not exhaustive or deeply nuanced.",
+      "alternative": "surface"
+    },
+    "turnTaking": {
+      "category": "assistant-dominant",
+      "confidence": 0.85,
+      "evidence": [
+        "To factor the quadratic expression x^2 - 6x + 8, we need to find two numbers",
+        "Detecting whether or not someone is lying can be challenging, as there is no foolproof method"
+      ],
+      "rationale": "AI responses are substantially longer than human prompts.",
+      "alternative": "balanced"
+    },
+    "humanRole": {
+      "distribution": {
+        "information-seeker": 0.25,
+        "provider": 0.65,
+        "director": 0.1,
+        "collaborator": 0.0,
+        "social-expressor": 0.0,
+        "relational-peer": 0.0
+      },
+      "confidence": 0.7,
+      "evidence": [
+        {
+          "role": "provider",
+          "quote": "What are some ways you can tell if someone is lying?"
+        },
+        {
+          "role": "director",
+          "quote": "in own words"
+        }
+      ],
+      "rationale": "Human primarily prompts the AI for answers (math expressions; direct question) and adds a constraint ('in own words').",
+      "alternative": null
+    },
+    "aiRole": {
+      "distribution": {
+        "expert-system": 0.75,
+        "learning-facilitator": 0.05,
+        "advisor": 0.2,
+        "co-constructor": 0.0,
+        "social-facilitator": 0.0,
+        "relational-peer": 0.0
+      },
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "role": "expert-system",
+          "quote": "Therefore, we can rewrite the expression as (x - 2)(x - 4)."
+        },
+        {
+          "role": "advisor",
+          "quote": "there are a few behavioral indicators that may suggest dishonesty."
+        }
+      ],
+      "rationale": "AI provides direct, authoritative explanations and conclusions (factoring results; list of indicators), with some cautionary guidance.",
+      "alternative": null
+    }
+  },
+  "classificationMetadata": {
+    "model": "gpt-5.2",
+    "provider": "openai",
+    "timestamp": "2026-01-08T17:00:44.309110",
+    "promptVersion": "2.0-social-role-theory",
+    "processingTimeMs": 13341,
+    "fewShotExamples": "yes"
   }
 }

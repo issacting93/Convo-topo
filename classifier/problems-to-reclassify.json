@@ -1,0 +1,128 @@
+[
+  {
+    "id": "kaggle-emo-4",
+    "messages": [
+      {
+        "role": "user",
+        "content": "24"
+      },
+      {
+        "role": "assistant",
+        "content": "25"
+      },
+      {
+        "role": "user",
+        "content": "26"
+      },
+      {
+        "role": "assistant",
+        "content": "27"
+      },
+      {
+        "role": "user",
+        "content": "28"
+      },
+      {
+        "role": "assistant",
+        "content": "29"
+      }
+    ]
+  },
+  {
+    "id": "kaggle-emo-6",
+    "messages": [
+      {
+        "role": "user",
+        "content": "36"
+      },
+      {
+        "role": "assistant",
+        "content": "37"
+      },
+      {
+        "role": "user",
+        "content": "38"
+      },
+      {
+        "role": "assistant",
+        "content": "39"
+      },
+      {
+        "role": "user",
+        "content": "40"
+      },
+      {
+        "role": "assistant",
+        "content": "41"
+      }
+    ]
+  },
+  {
+    "id": "kaggle-emo-7",
+    "messages": [
+      {
+        "role": "user",
+        "content": "42"
+      },
+      {
+        "role": "assistant",
+        "content": "43"
+      },
+      {
+        "role": "user",
+        "content": "44"
+      },
+      {
+        "role": "assistant",
+        "content": "45"
+      },
+      {
+        "role": "user",
+        "content": "46"
+      },
+      {
+        "role": "assistant",
+        "content": "47"
+      }
+    ]
+  },
+  {
+    "id": "kaggle-emo-4",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Where has she gone?"
+      },
+      {
+        "role": "assistant",
+        "content": ""
+      }
+    ]
+  },
+  {
+    "id": "kaggle-emo-6",
+    "messages": [
+      {
+        "role": "user",
+        "content": "dont you feel so.. its a wonder"
+      },
+      {
+        "role": "assistant",
+        "content": ""
+      }
+    ]
+  },
+  {
+    "id": "kaggle-emo-7",
+    "messages": [
+      {
+        "role": "user",
+        "content": "i virtually thought so.. and i used to get sweatings"
+      },
+      {
+        "role": "assistant",
+        "content": ""
+      }
+    ]
+  }
+]

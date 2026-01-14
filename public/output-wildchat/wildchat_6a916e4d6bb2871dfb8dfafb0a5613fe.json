@@ -75,5 +75,142 @@
     "state": null,
     "toxic": false,
     "redacted": false
+  },
+  "classification": {
+    "abstain": false,
+    "interactionPattern": {
+      "category": "advisory",
+      "confidence": 0.72,
+      "evidence": [
+        "We can start by having conversations in English and practicing basic phrases and grammar.",
+        "We can focus on specific areas like vocabulary, grammar, speaking, listening, and writing"
+      ],
+      "rationale": "AI primarily offers guidance and a plan for how to proceed with learning English, including proposing lesson components and next steps.",
+      "alternative": "question-answer"
+    },
+    "powerDynamics": {
+      "category": "human-led",
+      "confidence": 0.66,
+      "evidence": [
+        "I want to  learn english with you",
+        "Let's begin by introducing yourself and telling me a little bit about your English language goals."
+      ],
+      "rationale": "Human sets the overall agenda (learning English), while AI follows by proposing methods and asking clarifying questions within that user-defined goal.",
+      "alternative": "balanced"
+    },
+    "emotionalTone": {
+      "category": "supportive",
+      "confidence": 0.78,
+      "evidence": [
+        "That sounds great! I'd be happy to help you learn English.",
+        "Don't worry, we can still work together to improve your English skills."
+      ],
+      "rationale": "AI uses encouraging, reassuring language oriented toward helping and motivating the user.",
+      "alternative": "professional"
+    },
+    "engagementStyle": {
+      "category": "questioning",
+      "confidence": 0.7,
+      "evidence": [
+        "How would you like to start?",
+        "What specific areas of English do you feel you need to improve"
+      ],
+      "rationale": "AI repeatedly asks questions to elicit needs and preferences to shape the learning interaction.",
+      "alternative": "directive-iterative"
+    },
+    "knowledgeExchange": {
+      "category": "skill-sharing",
+      "confidence": 0.74,
+      "evidence": [
+        "practicing basic phrases and grammar",
+        "we can work on writing exercises and I can give you feedback"
+      ],
+      "rationale": "The exchange centers on learning methods and practice activities for improving English skills.",
+      "alternative": "personal-sharing"
+    },
+    "conversationPurpose": {
+      "category": "problem-solving",
+      "confidence": 0.62,
+      "evidence": [
+        "but the problem i'm in country the second language is french after arabic",
+        "Let's get started by identifying the areas where you feel you need the most help."
+      ],
+      "rationale": "User presents a constraint (French-dominant environment), and AI responds by proposing a way to address it through targeted practice.",
+      "alternative": "information-seeking"
+    },
+    "topicDepth": {
+      "category": "moderate",
+      "confidence": 0.6,
+      "evidence": [
+        "practicing basic phrases and grammar",
+        "focus on specific areas like vocabulary, grammar, speaking, listening, and writing"
+      ],
+      "rationale": "The dialogue goes beyond a simple request into outlining multiple learning components, but remains high-level rather than detailed.",
+      "alternative": "surface"
+    },
+    "turnTaking": {
+      "category": "assistant-dominant",
+      "confidence": 0.76,
+      "evidence": [
+        "We can start by having conversations in English and practicing basic phrases and grammar.",
+        "I understand that French is your second language and that your studies and courses are conducted in French."
+      ],
+      "rationale": "AI turns are substantially longer and more elaborated than the human turns, which are brief and informational.",
+      "alternative": "balanced"
+    },
+    "humanRole": {
+      "distribution": {
+        "information-seeker": 0.55,
+        "provider": 0.25,
+        "director": 0.1,
+        "collaborator": 0.05,
+        "social-expressor": 0.05,
+        "relational-peer": 0.0
+      },
+      "confidence": 0.68,
+      "evidence": [
+        {
+          "role": "director",
+          "quote": "I want to  learn english with you"
+        },
+        {
+          "role": "provider",
+          "quote": "but the problem i'm in country the second language is french after arabic"
+        }
+      ],
+      "rationale": "Human initiates the learning task (directive) and provides contextual constraints and background; overall stance is seeking help to learn English.",
+      "alternative": "collaborator"
+    },
+    "aiRole": {
+      "distribution": {
+        "expert-system": 0.05,
+        "learning-facilitator": 0.65,
+        "advisor": 0.2,
+        "co-constructor": 0.05,
+        "social-facilitator": 0.05,
+        "relational-peer": 0.0
+      },
+      "confidence": 0.74,
+      "evidence": [
+        {
+          "role": "learning-facilitator",
+          "quote": "Let's begin by introducing yourself and telling me a little bit about your English language goals."
+        },
+        {
+          "role": "advisor",
+          "quote": "We can start by having conversations in English and practicing basic phrases and grammar."
+        }
+      ],
+      "rationale": "AI structures a learning process with prompts and needs-assessment questions (facilitation) while also recommending specific practice modes (advisory).",
+      "alternative": "advisor"
+    }
+  },
+  "classificationMetadata": {
+    "model": "gpt-5.2",
+    "provider": "openai",
+    "timestamp": "2026-01-08T16:56:10.421272",
+    "promptVersion": "2.0-social-role-theory",
+    "processingTimeMs": 18651,
+    "fewShotExamples": "yes"
   }
 }

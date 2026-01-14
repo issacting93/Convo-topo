@@ -6,6 +6,33 @@ import { Conversation } from '../schemas/conversationSchema';
 // Re-export type for compatibility if needed, or alias it
 export type ClassifiedConversation = Conversation;
 
+// Re-export coordinate functions for convenience (used by multiple components)
+export { getCommunicationFunction, getConversationStructure };
+
+/**
+ * Determine conversation source based on its ID
+ * Returns one of: 'chatbot_arena', 'wildchat', 'oasst'
+ */
+export function getConversationSource(conversation: ClassifiedConversation): 'chatbot_arena' | 'wildchat' | 'oasst' {
+  const id = conversation.id || '';
+  
+  // Check for each dataset type
+  if (id.startsWith('chatbot_arena_')) {
+    return 'chatbot_arena';
+  }
+  
+  if (id.startsWith('wildchat_')) {
+    return 'wildchat';
+  }
+  
+  if (id.startsWith('oasst-')) {
+    return 'oasst';
+  }
+  
+  // Default to chatbot_arena for backwards compatibility
+  return 'chatbot_arena';
+}
+
 
 /**
  * Generate a deterministic seed from classification data
@@ -249,28 +276,110 @@ export function getDominantAiRole(conv: ClassifiedConversation): { role: string;
 }
 
 /**
+ * Map old role names to new Social Role Theory taxonomy roles
+ * Provides backward compatibility with old classifications
+ */
+export function mapOldRoleToNew(role: string, roleType: 'human' | 'ai'): string {
+  if (roleType === 'human') {
+    const humanMap: Record<string, string> = {
+      // Old taxonomy → New taxonomy
+      'challenger': 'director',
+      'seeker': 'information-seeker',
+      'learner': 'provider',
+      'sharer': 'social-expressor',
+
+      // Typos and variations
+      'co-constructor': 'collaborator',
+      'co-construct': 'collaborator',
+      'co-constructive': 'collaborator',
+      'co-constructer': 'collaborator',
+
+      // Edge cases
+      'artist': 'social-expressor',
+      'philosophical-explorer': 'social-expressor',
+      'teacher-evaluator': 'director',
+      'tester': 'director',
+      'story-builder': 'social-expressor',
+      'meta-commentator': 'collaborator',
+      'social-explorer': 'social-expressor',
+
+      // Already new (passthrough)
+      'information-seeker': 'information-seeker',
+      'provider': 'provider',
+      'director': 'director',
+      'collaborator': 'collaborator',
+      'social-expressor': 'social-expressor',
+      'relational-peer': 'relational-peer',
+    };
+
+    // Return full taxonomy role (6+6, not reduced to 3+3)
+    return humanMap[role] || role;
+  } else {
+    const aiMap: Record<string, string> = {
+      // Old taxonomy → New taxonomy
+      'expert': 'expert-system',
+      'facilitator': 'learning-facilitator',
+      'reflector': 'social-facilitator',
+      'peer': 'relational-peer',
+      'affiliative': 'social-facilitator',
+
+      // Edge cases
+      'learner': 'co-constructor',
+      'creative-partner': 'co-constructor',
+      'content-provider': 'expert-system',
+      'meta-commentator': 'social-facilitator',
+      'unable-to-engage': 'unable-to-engage',  // Keep as-is (special breakdown case)
+
+      // Already new (passthrough)
+      'expert-system': 'expert-system',
+      'learning-facilitator': 'learning-facilitator',
+      'advisor': 'advisor',
+      'co-constructor': 'co-constructor',
+      'social-facilitator': 'social-facilitator',
+      'relational-peer': 'relational-peer',
+    };
+
+    // Return full taxonomy role (6+6, not reduced to 3+3)
+    return aiMap[role] || role;
+  }
+}
+
+/**
  * Map goal roles (instructor, evaluator, dependent, confidant) to classification roles
- * Updated for 4-role taxonomy
+ * Updated for Social Role Theory taxonomy
  */
 export function mapToGoalRole(humanRole: string, aiRole: string | null): string {
-  // Map human roles to goal roles (updated for 4-role taxonomy)
+  // Map new human roles to goal roles
   const roleMap: Record<string, string> = {
+    'director': 'evaluator',
+    'information-seeker': 'dependent',
+    'provider': 'dependent',
+    'social-expressor': 'confidant',
+    'collaborator': 'collaborator',
+    'relational-peer': 'confidant',
+    // Backward compatibility
     'challenger': 'evaluator',
     'seeker': 'dependent',
+    'learner': 'dependent',
     'sharer': 'confidant',
-    'collaborator': 'collaborator'
+    'co-constructor': 'collaborator',
   };
 
+  const mappedRole = mapOldRoleToNew(humanRole, 'human');
+  
   // Check if human role maps to a goal role
-  if (roleMap[humanRole]) {
-    // Confidant requires AI to be reflector
-    if (roleMap[humanRole] === 'confidant' && aiRole && aiRole !== 'reflector') {
-      return 'collaborator'; // Fallback if AI role doesn't match
+  if (roleMap[mappedRole]) {
+    // Confidant requires AI to be social-facilitator or relational-peer (expressive)
+    if ((roleMap[mappedRole] === 'confidant' || roleMap[mappedRole] === 'confidant') && aiRole) {
+      const mappedAiRole = mapOldRoleToNew(aiRole, 'ai');
+      if (!['social-facilitator', 'relational-peer', 'reflector'].includes(mappedAiRole)) {
+        return 'collaborator'; // Fallback if AI role doesn't match
+      }
     }
-    return roleMap[humanRole];
+    return roleMap[mappedRole];
   }
 
-  return humanRole; // Return original if no mapping
+  return mappedRole; // Return mapped role if no goal mapping
 }
 
 /**

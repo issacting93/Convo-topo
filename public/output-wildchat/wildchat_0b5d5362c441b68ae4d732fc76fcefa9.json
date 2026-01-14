@@ -66,5 +66,151 @@
     "state": "Liverpool",
     "toxic": false,
     "redacted": false
+  },
+  "classification": {
+    "abstain": false,
+    "interactionPattern": {
+      "category": "advisory",
+      "confidence": 0.72,
+      "evidence": [
+        "Make a description of each round of the bracket in 6 paragraphs and a bit informal.",
+        "Now add it to the description and describe each round what the systems had to do."
+      ],
+      "rationale": "Human repeatedly requests specific rewrites/augmentations; AI responds with drafted descriptions, functioning as writing support.",
+      "alternative": "question-answer"
+    },
+    "powerDynamics": {
+      "category": "human-led",
+      "confidence": 0.78,
+      "evidence": [
+        "Make a description of each round of the bracket in 6 paragraphs and a bit informal.",
+        "Add the Progressbar Server Bracket mentions and descriptions of the rounds in 1 sentence.",
+        "Now add it to the description and describe each round what the systems had to do."
+      ],
+      "rationale": "Human sets constraints (length, style, content additions) and iteratively steers revisions; AI follows.",
+      "alternative": null
+    },
+    "emotionalTone": {
+      "category": "professional",
+      "confidence": 0.66,
+      "evidence": [
+        "Make a description of each round of the bracket in 6 paragraphs and a bit informal.",
+        "The PB Server Bracket was a fierce competition that pitted several Progressbar systems against each other"
+      ],
+      "rationale": "Task-focused drafting with mild hype language but primarily functional and instructional.",
+      "alternative": "neutral"
+    },
+    "engagementStyle": {
+      "category": "directive-iterative",
+      "confidence": 0.81,
+      "evidence": [
+        "Add the Progressbar Server Bracket mentions and descriptions of the rounds in 1 sentence.",
+        "Now add it to the description and describe each round what the systems had to do."
+      ],
+      "rationale": "Human issues successive directives to refine output; AI iterates on drafts accordingly.",
+      "alternative": null
+    },
+    "knowledgeExchange": {
+      "category": "skill-sharing",
+      "confidence": 0.63,
+      "evidence": [
+        "Make a description of each round of the bracket in 6 paragraphs and a bit informal.",
+        "The PB Server Bracket was a fierce competition that pitted several Progressbar systems against each other"
+      ],
+      "rationale": "Exchange centers on producing/rewriting narrative descriptions (a writing task) rather than personal sharing or debate.",
+      "alternative": "factual-info"
+    },
+    "conversationPurpose": {
+      "category": "collaborative-refinement",
+      "confidence": 0.8,
+      "evidence": [
+        "Add the Progressbar Server Bracket mentions and descriptions of the rounds in 1 sentence.",
+        "Now add it to the description and describe each round what the systems had to do."
+      ],
+      "rationale": "User requests multiple revisions and additions to improve/reshape the same description across turns.",
+      "alternative": "problem-solving"
+    },
+    "topicDepth": {
+      "category": "moderate",
+      "confidence": 0.6,
+      "evidence": [
+        "The 200x Finals were an intense showdown between Progressbar Server 2005 and Progressbar Server 2081.",
+        "In the final systems round, Progressbar Server 2005 and Progressbar Server 2021 received a bye"
+      ],
+      "rationale": "Covers multiple rounds and outcomes with some elaboration, but descriptions remain formulaic rather than deeply detailed.",
+      "alternative": "surface"
+    },
+    "turnTaking": {
+      "category": "assistant-dominant",
+      "confidence": 0.86,
+      "evidence": [
+        "The first round of the bracket saw Progressbar NOT 4.0 Server go up against Progressbar 2000 Server",
+        "The PB Server Bracket was a fierce competition that pitted several Progressbar systems against each other"
+      ],
+      "rationale": "AI produces long multi-paragraph outputs; human turns are short directives.",
+      "alternative": null
+    },
+    "humanRole": {
+      "distribution": {
+        "information-seeker": 0.05,
+        "provider": 0.1,
+        "director": 0.75,
+        "collaborator": 0.1,
+        "social-expressor": 0.0,
+        "relational-peer": 0.0
+      },
+      "confidence": 0.82,
+      "evidence": [
+        {
+          "role": "director",
+          "quote": "Make a description of each round of the bracket in 6 paragraphs and a bit informal."
+        },
+        {
+          "role": "director",
+          "quote": "Add the Progressbar Server Bracket mentions and descriptions of the rounds in 1 sentence."
+        },
+        {
+          "role": "director",
+          "quote": "Now add it to the description and describe each round what the systems had to do."
+        }
+      ],
+      "rationale": "Human primarily specifies deliverables and constraints, directing the AI\u2019s writing outputs; minor collaboration via iterative refinement requests.",
+      "alternative": null
+    },
+    "aiRole": {
+      "distribution": {
+        "expert-system": 0.15,
+        "learning-facilitator": 0.0,
+        "advisor": 0.55,
+        "co-constructor": 0.25,
+        "social-facilitator": 0.0,
+        "relational-peer": 0.05
+      },
+      "confidence": 0.7,
+      "evidence": [
+        {
+          "role": "advisor",
+          "quote": "The PB Server Bracket was a fierce competition that pitted several Progressbar systems against each other"
+        },
+        {
+          "role": "co-constructor",
+          "quote": "In the Early or Late Decision Round for 200x, Progressbar Server 2002 was up against Progressbar Server 2005"
+        },
+        {
+          "role": "expert-system",
+          "quote": "The PB Server Bracket had several rounds, from the first round with Progressbar NOT 4.0 Server versus Progressbar 2000 Server"
+        }
+      ],
+      "rationale": "AI drafts and reformats content per instructions (advisory/writing guidance) while also co-producing iterative versions; some factual summarization of bracket results.",
+      "alternative": "expert-system"
+    }
+  },
+  "classificationMetadata": {
+    "model": "gpt-5.2",
+    "provider": "openai",
+    "timestamp": "2026-01-08T16:42:13.557306",
+    "promptVersion": "2.0-social-role-theory",
+    "processingTimeMs": 18217,
+    "fewShotExamples": "yes"
   }
 }

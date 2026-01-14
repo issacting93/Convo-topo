@@ -120,5 +120,159 @@
     "state": null,
     "toxic": false,
     "redacted": false
+  },
+  "classification": {
+    "abstain": false,
+    "interactionPattern": {
+      "category": "advisory",
+      "confidence": 0.72,
+      "evidence": [
+        "Based on the above materials, write an academic paper",
+        "And offer 15 references.",
+        "This paper aims to explore the influence and specific role of oracle bone inscriptions"
+      ],
+      "rationale": "User requests an academic paper; AI responds with structured paper sections and references, providing guidance-like academic content rather than dialogue.",
+      "alternative": "question-answer"
+    },
+    "powerDynamics": {
+      "category": "human-led",
+      "confidence": 0.74,
+      "evidence": [
+        "translate the following words to english:",
+        "Based on the above materials, write an academic paper",
+        "And offer 15 references.",
+        "go on"
+      ],
+      "rationale": "Human sets tasks, constraints, and continuation prompts; AI follows the requested agenda and format.",
+      "alternative": "ai-led"
+    },
+    "emotionalTone": {
+      "category": "professional",
+      "confidence": 0.86,
+      "evidence": [
+        "Title: The Influence and Specific Role of Oracle Bone Inscriptions on the Religious Thought and Religious Culture of the Shang Dynasty",
+        "Abstract: This paper aims to explore",
+        "Methodological Considerations in the Study of Shang Religion"
+      ],
+      "rationale": "Academic register with formal headings, abstract, and methodological framing; minimal affective language.",
+      "alternative": null
+    },
+    "engagementStyle": {
+      "category": "directive-iterative",
+      "confidence": 0.78,
+      "evidence": [
+        "write an academic paper",
+        "And offer 15 references.",
+        "go on"
+      ],
+      "rationale": "User issues directives and iteratively requests continuation; AI expands the document in successive installments.",
+      "alternative": "reactive"
+    },
+    "knowledgeExchange": {
+      "category": "skill-sharing",
+      "confidence": 0.63,
+      "evidence": [
+        "write an academic paper on the influence and specific role",
+        "Methodological Considerations in the Study of Shang Religion",
+        "Future studies could explore the following topics:"
+      ],
+      "rationale": "Exchange centers on producing an academic paper structure and research framing (how to write/organize scholarly content), not personal sharing.",
+      "alternative": "factual-info"
+    },
+    "conversationPurpose": {
+      "category": "problem-solving",
+      "confidence": 0.7,
+      "evidence": [
+        "write an academic paper",
+        "And offer 15 references.",
+        "go on"
+      ],
+      "rationale": "Primary goal is completing a deliverable (paper + references) through iterative expansion.",
+      "alternative": "collaborative-refinement"
+    },
+    "topicDepth": {
+      "category": "moderate",
+      "confidence": 0.66,
+      "evidence": [
+        "4. Influence of oracle bone inscriptions on religious thought during the Shang Dynasty",
+        "8. The Significance of Material Culture in Shang Religious Practices",
+        "11. Methodological Considerations in the Study of Shang Religion"
+      ],
+      "rationale": "Covers multiple subtopics and sections but remains overview-level rather than deeply argued with detailed evidence.",
+      "alternative": "deep"
+    },
+    "turnTaking": {
+      "category": "assistant-dominant",
+      "confidence": 0.9,
+      "evidence": [
+        "go on",
+        "go on ",
+        "go on"
+      ],
+      "rationale": "AI produces long multi-section outputs; user turns are brief continuation prompts.",
+      "alternative": null
+    },
+    "humanRole": {
+      "distribution": {
+        "information-seeker": 0.05,
+        "provider": 0.05,
+        "director": 0.85,
+        "collaborator": 0.05,
+        "social-expressor": 0.0,
+        "relational-peer": 0.0
+      },
+      "confidence": 0.78,
+      "evidence": [
+        {
+          "role": "director",
+          "quote": "Based on the above materials, write an academic paper"
+        },
+        {
+          "role": "director",
+          "quote": "And offer 15 references."
+        },
+        {
+          "role": "director",
+          "quote": "go on"
+        }
+      ],
+      "rationale": "Human specifies tasks, constraints, and pacing (continue), exercising high interactional control over the deliverable.",
+      "alternative": "information-seeker"
+    },
+    "aiRole": {
+      "distribution": {
+        "expert-system": 0.35,
+        "learning-facilitator": 0.0,
+        "advisor": 0.55,
+        "co-constructor": 0.1,
+        "social-facilitator": 0.0,
+        "relational-peer": 0.0
+      },
+      "confidence": 0.73,
+      "evidence": [
+        {
+          "role": "advisor",
+          "quote": "1. Introduction 2. Background of the Shang Dynasty and oracle bone inscriptions"
+        },
+        {
+          "role": "expert-system",
+          "quote": "Oracle bone inscriptions, the earliest known form of Chinese writing, were used throughout the dynasty"
+        },
+        {
+          "role": "advisor",
+          "quote": "Future studies could explore the following topics:"
+        }
+      ],
+      "rationale": "AI provides structured academic write-up and suggested research directions (prescriptive organization), alongside factual explanatory statements about Shang religion and oracle bones.",
+      "alternative": "expert-system"
+    }
+  },
+  "classificationMetadata": {
+    "model": "gpt-5.2",
+    "provider": "openai",
+    "timestamp": "2026-01-08T16:46:21.922938",
+    "promptVersion": "2.0-social-role-theory",
+    "processingTimeMs": 14659,
+    "fewShotExamples": "yes"
   }
 }

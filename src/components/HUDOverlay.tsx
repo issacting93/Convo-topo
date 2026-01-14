@@ -11,7 +11,8 @@ import {
   getClassificationDimensions,
   getRoleDistributions,
   formatClassificationMetadata,
-  getClassificationStats
+  getClassificationStats,
+  formatRoleName
 } from '../utils/formatClassificationData';
 import {
   extractEpistemicFlags,
@@ -595,7 +596,7 @@ export function HUDOverlay({
                             fontSize: '12px',
                             fontWeight: 'bold'
                           }}>
-                            {activePoint.humanRole.toUpperCase()} {activePoint.roleConfidence ? `(${Math.round(activePoint.roleConfidence * 100)}%)` : ''}
+                            {formatRoleName(activePoint.humanRole, 'human').toUpperCase()} {activePoint.roleConfidence ? `(${Math.round(activePoint.roleConfidence * 100)}%)` : ''}
                           </div>
                         </div>
                       )}
@@ -613,7 +614,7 @@ export function HUDOverlay({
                             fontSize: '12px',
                             fontWeight: 'bold'
                           }}>
-                            {activePoint.aiRole.toUpperCase()} {activePoint.roleConfidence ? `(${Math.round(activePoint.roleConfidence * 100)}%)` : ''}
+                            {formatRoleName(activePoint.aiRole, 'ai').toUpperCase()} {activePoint.roleConfidence ? `(${Math.round(activePoint.roleConfidence * 100)}%)` : ''}
                           </div>
                         </div>
                       )}
@@ -1306,6 +1307,9 @@ export function HUDOverlay({
                     // Calculate PAD change between consecutive points
                     const padChange = calculatePadChange(prevPoint, point);
                     const color = getPadChangeColorHex(padChange);
+
+                    // Validate coordinates
+                    if (isNaN(x1) || isNaN(y1) || isNaN(x2) || isNaN(y2)) return null;
 
                     return (
                       <line

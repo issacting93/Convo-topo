@@ -264,5 +264,163 @@
     "state": "Algiers",
     "toxic": false,
     "redacted": false
+  },
+  "classification": {
+    "abstain": false,
+    "interactionPattern": {
+      "category": "question-answer",
+      "confidence": 0.72,
+      "evidence": [
+        "Top 10 niche sticker",
+        "Platform for selling sticker",
+        "Marketing plan for Sell IPTV",
+        "Give me code"
+      ],
+      "rationale": "User issues short prompts/requests; AI responds with lists, explanations, and plans.",
+      "alternative": "advisory"
+    },
+    "powerDynamics": {
+      "category": "human-led",
+      "confidence": 0.78,
+      "evidence": [
+        "More",
+        "Top 10 digital product sell online",
+        "Marketing plan for Sell IPTV",
+        "Create me WordPress plugin for one page checkout"
+      ],
+      "rationale": "Human repeatedly sets the agenda by introducing new tasks/topics; AI follows.",
+      "alternative": "alternating"
+    },
+    "emotionalTone": {
+      "category": "professional",
+      "confidence": 0.74,
+      "evidence": [
+        "Here's a marketing plan to promote IPTV service:",
+        "There are various platforms available for selling stickers online.",
+        "Here are some tips for sourcing products:"
+      ],
+      "rationale": "Businesslike, instructional responses with minimal affect.",
+      "alternative": "neutral"
+    },
+    "engagementStyle": {
+      "category": "directive-iterative",
+      "confidence": 0.66,
+      "evidence": [
+        "Here are some tips for sourcing products:",
+        "Here's a marketing plan to promote IPTV service:",
+        "Here are some steps you can follow:"
+      ],
+      "rationale": "AI provides stepwise guidance and enumerated recommendations across tasks.",
+      "alternative": "reactive"
+    },
+    "knowledgeExchange": {
+      "category": "skill-sharing",
+      "confidence": 0.7,
+      "evidence": [
+        "Here's a marketing plan to promote IPTV service:",
+        "Here are some tips on sourcing digital products:",
+        "Here are some steps you can follow:"
+      ],
+      "rationale": "Predominantly how-to guidance (marketing, sourcing, platform selection, plugin creation steps).",
+      "alternative": "factual-info"
+    },
+    "conversationPurpose": {
+      "category": "problem-solving",
+      "confidence": 0.69,
+      "evidence": [
+        "Platform for selling sticker",
+        "Marketing plan for Sell IPTV",
+        "Create me WordPress plugin for one page checkout"
+      ],
+      "rationale": "Requests focus on actionable business/creation tasks rather than social connection.",
+      "alternative": "information-seeking"
+    },
+    "topicDepth": {
+      "category": "moderate",
+      "confidence": 0.6,
+      "evidence": [
+        "Here's a marketing plan to promote IPTV service:",
+        "Here are some steps you can follow:"
+      ],
+      "rationale": "Some multi-step elaboration, but broad and not deeply technical; many topic switches.",
+      "alternative": "surface"
+    },
+    "turnTaking": {
+      "category": "assistant-dominant",
+      "confidence": 0.82,
+      "evidence": [
+        "Here are some different niche sticker ideas that you might find interesting:",
+        "There are various platforms available for selling stickers online.",
+        "Here's a marketing plan to promote IPTV service:"
+      ],
+      "rationale": "AI responses are substantially longer than the user's short prompts.",
+      "alternative": "balanced"
+    },
+    "humanRole": {
+      "distribution": {
+        "information-seeker": 0.35,
+        "provider": 0.35,
+        "director": 0.25,
+        "collaborator": 0.03,
+        "social-expressor": 0.01,
+        "relational-peer": 0.01
+      },
+      "confidence": 0.73,
+      "evidence": [
+        {
+          "role": "provider",
+          "quote": "Platform for selling sticker"
+        },
+        {
+          "role": "provider",
+          "quote": "Top 10 digital product sell online"
+        },
+        {
+          "role": "director",
+          "quote": "Create me WordPress plugin for one page checkout"
+        },
+        {
+          "role": "director",
+          "quote": "Give me code"
+        }
+      ],
+      "rationale": "User primarily requests information and deliverables; some commands indicate a director stance.",
+      "alternative": null
+    },
+    "aiRole": {
+      "distribution": {
+        "expert-system": 0.45,
+        "learning-facilitator": 0.02,
+        "advisor": 0.45,
+        "co-constructor": 0.03,
+        "social-facilitator": 0.03,
+        "relational-peer": 0.02
+      },
+      "confidence": 0.76,
+      "evidence": [
+        {
+          "role": "advisor",
+          "quote": "Here's a marketing plan to promote IPTV service:"
+        },
+        {
+          "role": "expert-system",
+          "quote": "The Selle Method is a strategy to help sales professionals increase their chances of closing a deal."
+        },
+        {
+          "role": "advisor",
+          "quote": "Here are some steps you can follow:"
+        }
+      ],
+      "rationale": "AI alternates between explaining concepts (expert-system) and prescribing steps/lists (advisor).",
+      "alternative": null
+    }
+  },
+  "classificationMetadata": {
+    "model": "gpt-5.2",
+    "provider": "openai",
+    "timestamp": "2026-01-08T17:11:04.023212",
+    "promptVersion": "2.0-social-role-theory",
+    "processingTimeMs": 15199,
+    "fewShotExamples": "yes"
   }
 }

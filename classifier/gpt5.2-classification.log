@@ -1,0 +1,913 @@
+Traceback (most recent call last):
+  File "/Users/zac/Downloads/Cartography/classifier/classifier-openai-social-role-theory.py", line 513, in classify_batch
+    result = classify_conversation(
+  File "/Users/zac/Downloads/Cartography/classifier/classifier-openai-social-role-theory.py", line 475, in classify_conversation
+    classification = classify_messages(client, conversation["messages"], few_shot_examples, model)
+  File "/Users/zac/Downloads/Cartography/classifier/classifier-openai-social-role-theory.py", line 452, in classify_messages
+    response = client.chat.completions.create(
+  File "/Users/zac/Library/Python/3.9/lib/python/site-packages/openai/_utils/_utils.py", line 286, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/zac/Library/Python/3.9/lib/python/site-packages/openai/resources/chat/completions/completions.py", line 1192, in create
+    return self._post(
+  File "/Users/zac/Library/Python/3.9/lib/python/site-packages/openai/_base_client.py", line 1259, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+  File "/Users/zac/Library/Python/3.9/lib/python/site-packages/openai/_base_client.py", line 1047, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.BadRequestError: Error code: 400 - {'error': {'message': "Unsupported parameter: 'max_tokens' is not supported with this model. Use 'max_completion_tokens' instead.", 'type': 'invalid_request_error', 'param': 'max_tokens', 'code': 'unsupported_parameter'}}
+Loading few-shot examples from few-shot-examples-social-role-theory.json...
+✅ Loaded few-shot examples (12245 characters)
+Loading from wildchat-50-sample.json...
+Found 50 conversations
+
+🎯 Classifying with gpt-5.2 (OpenAI) using Social Role Theory framework...
+
+
+❌ Error on wildchat_e88c47596a9bce312b3c256da402ae4a: Error code: 400 - {'error': {'message': "Unsupported parameter: 'max_tokens' is not supported with this model. Use 'max_completion_tokens' instead.", 'type': 'invalid_request_error', 'param': 'max_tokens', 'code': 'unsupported_parameter'}}
+Progress: 1/50 (2%)Traceback (most recent call last):
+  File "/Users/zac/Downloads/Cartography/classifier/classifier-openai-social-role-theory.py", line 513, in classify_batch
+    result = classify_conversation(
+  File "/Users/zac/Downloads/Cartography/classifier/classifier-openai-social-role-theory.py", line 475, in classify_conversation
+    classification = classify_messages(client, conversation["messages"], few_shot_examples, model)
+  File "/Users/zac/Downloads/Cartography/classifier/classifier-openai-social-role-theory.py", line 452, in classify_messages
+    response = client.chat.completions.create(
+  File "/Users/zac/Library/Python/3.9/lib/python/site-packages/openai/_utils/_utils.py", line 286, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/zac/Library/Python/3.9/lib/python/site-packages/openai/resources/chat/completions/completions.py", line 1192, in create
+    return self._post(
+  File "/Users/zac/Library/Python/3.9/lib/python/site-packages/openai/_base_client.py", line 1259, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+  File "/Users/zac/Library/Python/3.9/lib/python/site-packages/openai/_base_client.py", line 1047, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.BadRequestError: Error code: 400 - {'error': {'message': "Unsupported parameter: 'max_tokens' is not supported with this model. Use 'max_completion_tokens' instead.", 'type': 'invalid_request_error', 'param': 'max_tokens', 'code': 'unsupported_parameter'}}
+
+❌ Error on wildchat_1d8e8d6c89849ec196e500ba90bb8463: Error code: 400 - {'error': {'message': "Unsupported parameter: 'max_tokens' is not supported with this model. Use 'max_completion_tokens' instead.", 'type': 'invalid_request_error', 'param': 'max_tokens', 'code': 'unsupported_parameter'}}
+Progress: 2/50 (4%)Traceback (most recent call last):
+  File "/Users/zac/Downloads/Cartography/classifier/classifier-openai-social-role-theory.py", line 513, in classify_batch
+    result = classify_conversation(
+  File "/Users/zac/Downloads/Cartography/classifier/classifier-openai-social-role-theory.py", line 475, in classify_conversation
+    classification = classify_messages(client, conversation["messages"], few_shot_examples, model)
+  File "/Users/zac/Downloads/Cartography/classifier/classifier-openai-social-role-theory.py", line 452, in classify_messages
+    response = client.chat.completions.create(
+  File "/Users/zac/Library/Python/3.9/lib/python/site-packages/openai/_utils/_utils.py", line 286, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/zac/Library/Python/3.9/lib/python/site-packages/openai/resources/chat/completions/completions.py", line 1192, in create
+    return self._post(
+  File "/Users/zac/Library/Python/3.9/lib/python/site-packages/openai/_base_client.py", line 1259, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+  File "/Users/zac/Library/Python/3.9/lib/python/site-packages/openai/_base_client.py", line 1047, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.BadRequestError: Error code: 400 - {'error': {'message': "Unsupported parameter: 'max_tokens' is not supported with this model. Use 'max_completion_tokens' instead.", 'type': 'invalid_request_error', 'param': 'max_tokens', 'code': 'unsupported_parameter'}}
+
+❌ Error on wildchat_83f553d9b9b250e78dbe6e4d14ddf9d4: Error code: 400 - {'error': {'message': "Unsupported parameter: 'max_tokens' is not supported with this model. Use 'max_completion_tokens' instead.", 'type': 'invalid_request_error', 'param': 'max_tokens', 'code': 'unsupported_parameter'}}
+Progress: 3/50 (6%)Traceback (most recent call last):
+  File "/Users/zac/Downloads/Cartography/classifier/classifier-openai-social-role-theory.py", line 513, in classify_batch
+    result = classify_conversation(
+  File "/Users/zac/Downloads/Cartography/classifier/classifier-openai-social-role-theory.py", line 475, in classify_conversation
+    classification = classify_messages(client, conversation["messages"], few_shot_examples, model)
+  File "/Users/zac/Downloads/Cartography/classifier/classifier-openai-social-role-theory.py", line 452, in classify_messages
+    response = client.chat.completions.create(
+  File "/Users/zac/Library/Python/3.9/lib/python/site-packages/openai/_utils/_utils.py", line 286, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/zac/Library/Python/3.9/lib/python/site-packages/openai/resources/chat/completions/completions.py", line 1192, in create
+    return self._post(
+  File "/Users/zac/Library/Python/3.9/lib/python/site-packages/openai/_base_client.py", line 1259, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+  File "/Users/zac/Library/Python/3.9/lib/python/site-packages/openai/_base_client.py", line 1047, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.BadRequestError: Error code: 400 - {'error': {'message': "Unsupported parameter: 'max_tokens' is not supported with this model. Use 'max_completion_tokens' instead.", 'type': 'invalid_request_error', 'param': 'max_tokens', 'code': 'unsupported_parameter'}}
+
+❌ Error on wildchat_99c3c27462fcc071eeb053b69d2d49af: Error code: 400 - {'error': {'message': "Unsupported parameter: 'max_tokens' is not supported with this model. Use 'max_completion_tokens' instead.", 'type': 'invalid_request_error', 'param': 'max_tokens', 'code': 'unsupported_parameter'}}
+Progress: 4/50 (8%)Traceback (most recent call last):
+  File "/Users/zac/Downloads/Cartography/classifier/classifier-openai-social-role-theory.py", line 513, in classify_batch
+    result = classify_conversation(
+  File "/Users/zac/Downloads/Cartography/classifier/classifier-openai-social-role-theory.py", line 475, in classify_conversation
+    classification = classify_messages(client, conversation["messages"], few_shot_examples, model)
+  File "/Users/zac/Downloads/Cartography/classifier/classifier-openai-social-role-theory.py", line 452, in classify_messages
+    response = client.chat.completions.create(
+  File "/Users/zac/Library/Python/3.9/lib/python/site-packages/openai/_utils/_utils.py", line 286, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/zac/Library/Python/3.9/lib/python/site-packages/openai/resources/chat/completions/completions.py", line 1192, in create
+    return self._post(
+  File "/Users/zac/Library/Python/3.9/lib/python/site-packages/openai/_base_client.py", line 1259, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+  File "/Users/zac/Library/Python/3.9/lib/python/site-packages/openai/_base_client.py", line 1047, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.BadRequestError: Error code: 400 - {'error': {'message': "Unsupported parameter: 'max_tokens' is not supported with this model. Use 'max_completion_tokens' instead.", 'type': 'invalid_request_error', 'param': 'max_tokens', 'code': 'unsupported_parameter'}}
+
+❌ Error on wildchat_86a2613f17ae43231f782cfefb49c00d: Error code: 400 - {'error': {'message': "Unsupported parameter: 'max_tokens' is not supported with this model. Use 'max_completion_tokens' instead.", 'type': 'invalid_request_error', 'param': 'max_tokens', 'code': 'unsupported_parameter'}}
+Progress: 5/50 (10%)Traceback (most recent call last):
+  File "/Users/zac/Downloads/Cartography/classifier/classifier-openai-social-role-theory.py", line 513, in classify_batch
+    result = classify_conversation(
+  File "/Users/zac/Downloads/Cartography/classifier/classifier-openai-social-role-theory.py", line 475, in classify_conversation
+    classification = classify_messages(client, conversation["messages"], few_shot_examples, model)
+  File "/Users/zac/Downloads/Cartography/classifier/classifier-openai-social-role-theory.py", line 452, in classify_messages
+    response = client.chat.completions.create(
+  File "/Users/zac/Library/Python/3.9/lib/python/site-packages/openai/_utils/_utils.py", line 286, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/zac/Library/Python/3.9/lib/python/site-packages/openai/resources/chat/completions/completions.py", line 1192, in create
+    return self._post(
+  File "/Users/zac/Library/Python/3.9/lib/python/site-packages/openai/_base_client.py", line 1259, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+  File "/Users/zac/Library/Python/3.9/lib/python/site-packages/openai/_base_client.py", line 1047, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.BadRequestError: Error code: 400 - {'error': {'message': "Unsupported parameter: 'max_tokens' is not supported with this model. Use 'max_completion_tokens' instead.", 'type': 'invalid_request_error', 'param': 'max_tokens', 'code': 'unsupported_parameter'}}
+
+❌ Error on wildchat_4932b796adfeab20cf52d01aadf4727f: Error code: 400 - {'error': {'message': "Unsupported parameter: 'max_tokens' is not supported with this model. Use 'max_completion_tokens' instead.", 'type': 'invalid_request_error', 'param': 'max_tokens', 'code': 'unsupported_parameter'}}
+Progress: 6/50 (12%)Traceback (most recent call last):
+  File "/Users/zac/Downloads/Cartography/classifier/classifier-openai-social-role-theory.py", line 513, in classify_batch
+    result = classify_conversation(
+  File "/Users/zac/Downloads/Cartography/classifier/classifier-openai-social-role-theory.py", line 475, in classify_conversation
+    classification = classify_messages(client, conversation["messages"], few_shot_examples, model)
+  File "/Users/zac/Downloads/Cartography/classifier/classifier-openai-social-role-theory.py", line 452, in classify_messages
+    response = client.chat.completions.create(
+  File "/Users/zac/Library/Python/3.9/lib/python/site-packages/openai/_utils/_utils.py", line 286, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/zac/Library/Python/3.9/lib/python/site-packages/openai/resources/chat/completions/completions.py", line 1192, in create
+    return self._post(
+  File "/Users/zac/Library/Python/3.9/lib/python/site-packages/openai/_base_client.py", line 1259, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+  File "/Users/zac/Library/Python/3.9/lib/python/site-packages/openai/_base_client.py", line 1047, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.BadRequestError: Error code: 400 - {'error': {'message': "Unsupported parameter: 'max_tokens' is not supported with this model. Use 'max_completion_tokens' instead.", 'type': 'invalid_request_error', 'param': 'max_tokens', 'code': 'unsupported_parameter'}}
+
+❌ Error on wildchat_27686830cf428d7ba5ce80973519eac7: Error code: 400 - {'error': {'message': "Unsupported parameter: 'max_tokens' is not supported with this model. Use 'max_completion_tokens' instead.", 'type': 'invalid_request_error', 'param': 'max_tokens', 'code': 'unsupported_parameter'}}
+Progress: 7/50 (14%)Traceback (most recent call last):
+  File "/Users/zac/Downloads/Cartography/classifier/classifier-openai-social-role-theory.py", line 513, in classify_batch
+    result = classify_conversation(
+  File "/Users/zac/Downloads/Cartography/classifier/classifier-openai-social-role-theory.py", line 475, in classify_conversation
+    classification = classify_messages(client, conversation["messages"], few_shot_examples, model)
+  File "/Users/zac/Downloads/Cartography/classifier/classifier-openai-social-role-theory.py", line 452, in classify_messages
+    response = client.chat.completions.create(
+  File "/Users/zac/Library/Python/3.9/lib/python/site-packages/openai/_utils/_utils.py", line 286, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/zac/Library/Python/3.9/lib/python/site-packages/openai/resources/chat/completions/completions.py", line 1192, in create
+    return self._post(
+  File "/Users/zac/Library/Python/3.9/lib/python/site-packages/openai/_base_client.py", line 1259, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+  File "/Users/zac/Library/Python/3.9/lib/python/site-packages/openai/_base_client.py", line 1047, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.BadRequestError: Error code: 400 - {'error': {'message': "Unsupported parameter: 'max_tokens' is not supported with this model. Use 'max_completion_tokens' instead.", 'type': 'invalid_request_error', 'param': 'max_tokens', 'code': 'unsupported_parameter'}}
+
+❌ Error on wildchat_0135159d6e50d859f5ec784673ec1a0b: Error code: 400 - {'error': {'message': "Unsupported parameter: 'max_tokens' is not supported with this model. Use 'max_completion_tokens' instead.", 'type': 'invalid_request_error', 'param': 'max_tokens', 'code': 'unsupported_parameter'}}
+Progress: 8/50 (16%)Traceback (most recent call last):
+  File "/Users/zac/Downloads/Cartography/classifier/classifier-openai-social-role-theory.py", line 513, in classify_batch
+    result = classify_conversation(
+  File "/Users/zac/Downloads/Cartography/classifier/classifier-openai-social-role-theory.py", line 475, in classify_conversation
+    classification = classify_messages(client, conversation["messages"], few_shot_examples, model)
+  File "/Users/zac/Downloads/Cartography/classifier/classifier-openai-social-role-theory.py", line 452, in classify_messages
+    response = client.chat.completions.create(
+  File "/Users/zac/Library/Python/3.9/lib/python/site-packages/openai/_utils/_utils.py", line 286, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/zac/Library/Python/3.9/lib/python/site-packages/openai/resources/chat/completions/completions.py", line 1192, in create
+    return self._post(
+  File "/Users/zac/Library/Python/3.9/lib/python/site-packages/openai/_base_client.py", line 1259, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+  File "/Users/zac/Library/Python/3.9/lib/python/site-packages/openai/_base_client.py", line 1047, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.BadRequestError: Error code: 400 - {'error': {'message': "Unsupported parameter: 'max_tokens' is not supported with this model. Use 'max_completion_tokens' instead.", 'type': 'invalid_request_error', 'param': 'max_tokens', 'code': 'unsupported_parameter'}}
+
+❌ Error on wildchat_a8b07613407231f20ba0e0fde70eac69: Error code: 400 - {'error': {'message': "Unsupported parameter: 'max_tokens' is not supported with this model. Use 'max_completion_tokens' instead.", 'type': 'invalid_request_error', 'param': 'max_tokens', 'code': 'unsupported_parameter'}}
+Progress: 9/50 (18%)Traceback (most recent call last):
+  File "/Users/zac/Downloads/Cartography/classifier/classifier-openai-social-role-theory.py", line 513, in classify_batch
+    result = classify_conversation(
+  File "/Users/zac/Downloads/Cartography/classifier/classifier-openai-social-role-theory.py", line 475, in classify_conversation
+    classification = classify_messages(client, conversation["messages"], few_shot_examples, model)
+  File "/Users/zac/Downloads/Cartography/classifier/classifier-openai-social-role-theory.py", line 452, in classify_messages
+    response = client.chat.completions.create(
+  File "/Users/zac/Library/Python/3.9/lib/python/site-packages/openai/_utils/_utils.py", line 286, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/zac/Library/Python/3.9/lib/python/site-packages/openai/resources/chat/completions/completions.py", line 1192, in create
+    return self._post(
+  File "/Users/zac/Library/Python/3.9/lib/python/site-packages/openai/_base_client.py", line 1259, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+  File "/Users/zac/Library/Python/3.9/lib/python/site-packages/openai/_base_client.py", line 1047, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.BadRequestError: Error code: 400 - {'error': {'message': "Unsupported parameter: 'max_tokens' is not supported with this model. Use 'max_completion_tokens' instead.", 'type': 'invalid_request_error', 'param': 'max_tokens', 'code': 'unsupported_parameter'}}
+
+❌ Error on wildchat_e54cb69a68f7f5d2173a6131641351ab: Error code: 400 - {'error': {'message': "Unsupported parameter: 'max_tokens' is not supported with this model. Use 'max_completion_tokens' instead.", 'type': 'invalid_request_error', 'param': 'max_tokens', 'code': 'unsupported_parameter'}}
+Progress: 10/50 (20%)Traceback (most recent call last):
+  File "/Users/zac/Downloads/Cartography/classifier/classifier-openai-social-role-theory.py", line 513, in classify_batch
+    result = classify_conversation(
+  File "/Users/zac/Downloads/Cartography/classifier/classifier-openai-social-role-theory.py", line 475, in classify_conversation
+    classification = classify_messages(client, conversation["messages"], few_shot_examples, model)
+  File "/Users/zac/Downloads/Cartography/classifier/classifier-openai-social-role-theory.py", line 452, in classify_messages
+    response = client.chat.completions.create(
+  File "/Users/zac/Library/Python/3.9/lib/python/site-packages/openai/_utils/_utils.py", line 286, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/zac/Library/Python/3.9/lib/python/site-packages/openai/resources/chat/completions/completions.py", line 1192, in create
+    return self._post(
+  File "/Users/zac/Library/Python/3.9/lib/python/site-packages/openai/_base_client.py", line 1259, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+  File "/Users/zac/Library/Python/3.9/lib/python/site-packages/openai/_base_client.py", line 1047, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.BadRequestError: Error code: 400 - {'error': {'message': "Unsupported parameter: 'max_tokens' is not supported with this model. Use 'max_completion_tokens' instead.", 'type': 'invalid_request_error', 'param': 'max_tokens', 'code': 'unsupported_parameter'}}
+
+❌ Error on wildchat_6058e49e92328502647f3624d42782af: Error code: 400 - {'error': {'message': "Unsupported parameter: 'max_tokens' is not supported with this model. Use 'max_completion_tokens' instead.", 'type': 'invalid_request_error', 'param': 'max_tokens', 'code': 'unsupported_parameter'}}
+Progress: 11/50 (22%)Traceback (most recent call last):
+  File "/Users/zac/Downloads/Cartography/classifier/classifier-openai-social-role-theory.py", line 513, in classify_batch
+    result = classify_conversation(
+  File "/Users/zac/Downloads/Cartography/classifier/classifier-openai-social-role-theory.py", line 475, in classify_conversation
+    classification = classify_messages(client, conversation["messages"], few_shot_examples, model)
+  File "/Users/zac/Downloads/Cartography/classifier/classifier-openai-social-role-theory.py", line 452, in classify_messages
+    response = client.chat.completions.create(
+  File "/Users/zac/Library/Python/3.9/lib/python/site-packages/openai/_utils/_utils.py", line 286, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/zac/Library/Python/3.9/lib/python/site-packages/openai/resources/chat/completions/completions.py", line 1192, in create
+    return self._post(
+  File "/Users/zac/Library/Python/3.9/lib/python/site-packages/openai/_base_client.py", line 1259, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+  File "/Users/zac/Library/Python/3.9/lib/python/site-packages/openai/_base_client.py", line 1047, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.BadRequestError: Error code: 400 - {'error': {'message': "Unsupported parameter: 'max_tokens' is not supported with this model. Use 'max_completion_tokens' instead.", 'type': 'invalid_request_error', 'param': 'max_tokens', 'code': 'unsupported_parameter'}}
+
+❌ Error on wildchat_32898ee3beeb9f6e14047f426aabb91a: Error code: 400 - {'error': {'message': "Unsupported parameter: 'max_tokens' is not supported with this model. Use 'max_completion_tokens' instead.", 'type': 'invalid_request_error', 'param': 'max_tokens', 'code': 'unsupported_parameter'}}
+Progress: 12/50 (24%)Traceback (most recent call last):
+  File "/Users/zac/Downloads/Cartography/classifier/classifier-openai-social-role-theory.py", line 513, in classify_batch
+    result = classify_conversation(
+  File "/Users/zac/Downloads/Cartography/classifier/classifier-openai-social-role-theory.py", line 475, in classify_conversation
+    classification = classify_messages(client, conversation["messages"], few_shot_examples, model)
+  File "/Users/zac/Downloads/Cartography/classifier/classifier-openai-social-role-theory.py", line 452, in classify_messages
+    response = client.chat.completions.create(
+  File "/Users/zac/Library/Python/3.9/lib/python/site-packages/openai/_utils/_utils.py", line 286, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/zac/Library/Python/3.9/lib/python/site-packages/openai/resources/chat/completions/completions.py", line 1192, in create
+    return self._post(
+  File "/Users/zac/Library/Python/3.9/lib/python/site-packages/openai/_base_client.py", line 1259, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+  File "/Users/zac/Library/Python/3.9/lib/python/site-packages/openai/_base_client.py", line 1047, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.BadRequestError: Error code: 400 - {'error': {'message': "Unsupported parameter: 'max_tokens' is not supported with this model. Use 'max_completion_tokens' instead.", 'type': 'invalid_request_error', 'param': 'max_tokens', 'code': 'unsupported_parameter'}}
+
+❌ Error on wildchat_1c46dceaeb2a5e4e2dddeed36398d3d5: Error code: 400 - {'error': {'message': "Unsupported parameter: 'max_tokens' is not supported with this model. Use 'max_completion_tokens' instead.", 'type': 'invalid_request_error', 'param': 'max_tokens', 'code': 'unsupported_parameter'}}
+Progress: 13/50 (26%)Traceback (most recent call last):
+  File "/Users/zac/Downloads/Cartography/classifier/classifier-openai-social-role-theory.py", line 513, in classify_batch
+    result = classify_conversation(
+  File "/Users/zac/Downloads/Cartography/classifier/classifier-openai-social-role-theory.py", line 475, in classify_conversation
+    classification = classify_messages(client, conversation["messages"], few_shot_examples, model)
+  File "/Users/zac/Downloads/Cartography/classifier/classifier-openai-social-role-theory.py", line 452, in classify_messages
+    response = client.chat.completions.create(
+  File "/Users/zac/Library/Python/3.9/lib/python/site-packages/openai/_utils/_utils.py", line 286, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/zac/Library/Python/3.9/lib/python/site-packages/openai/resources/chat/completions/completions.py", line 1192, in create
+    return self._post(
+  File "/Users/zac/Library/Python/3.9/lib/python/site-packages/openai/_base_client.py", line 1259, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+  File "/Users/zac/Library/Python/3.9/lib/python/site-packages/openai/_base_client.py", line 1047, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.BadRequestError: Error code: 400 - {'error': {'message': "Unsupported parameter: 'max_tokens' is not supported with this model. Use 'max_completion_tokens' instead.", 'type': 'invalid_request_error', 'param': 'max_tokens', 'code': 'unsupported_parameter'}}
+
+❌ Error on wildchat_ecccdb6104e912aedc3319ce324f3953: Error code: 400 - {'error': {'message': "Unsupported parameter: 'max_tokens' is not supported with this model. Use 'max_completion_tokens' instead.", 'type': 'invalid_request_error', 'param': 'max_tokens', 'code': 'unsupported_parameter'}}
+Progress: 14/50 (28%)Traceback (most recent call last):
+  File "/Users/zac/Downloads/Cartography/classifier/classifier-openai-social-role-theory.py", line 513, in classify_batch
+    result = classify_conversation(
+  File "/Users/zac/Downloads/Cartography/classifier/classifier-openai-social-role-theory.py", line 475, in classify_conversation
+    classification = classify_messages(client, conversation["messages"], few_shot_examples, model)
+  File "/Users/zac/Downloads/Cartography/classifier/classifier-openai-social-role-theory.py", line 452, in classify_messages
+    response = client.chat.completions.create(
+  File "/Users/zac/Library/Python/3.9/lib/python/site-packages/openai/_utils/_utils.py", line 286, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/zac/Library/Python/3.9/lib/python/site-packages/openai/resources/chat/completions/completions.py", line 1192, in create
+    return self._post(
+  File "/Users/zac/Library/Python/3.9/lib/python/site-packages/openai/_base_client.py", line 1259, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+  File "/Users/zac/Library/Python/3.9/lib/python/site-packages/openai/_base_client.py", line 1047, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.BadRequestError: Error code: 400 - {'error': {'message': "Unsupported parameter: 'max_tokens' is not supported with this model. Use 'max_completion_tokens' instead.", 'type': 'invalid_request_error', 'param': 'max_tokens', 'code': 'unsupported_parameter'}}
+
+❌ Error on wildchat_30a57cc31a432eeb85a97d34417414ba: Error code: 400 - {'error': {'message': "Unsupported parameter: 'max_tokens' is not supported with this model. Use 'max_completion_tokens' instead.", 'type': 'invalid_request_error', 'param': 'max_tokens', 'code': 'unsupported_parameter'}}
+Progress: 15/50 (30%)Traceback (most recent call last):
+  File "/Users/zac/Downloads/Cartography/classifier/classifier-openai-social-role-theory.py", line 513, in classify_batch
+    result = classify_conversation(
+  File "/Users/zac/Downloads/Cartography/classifier/classifier-openai-social-role-theory.py", line 475, in classify_conversation
+    classification = classify_messages(client, conversation["messages"], few_shot_examples, model)
+  File "/Users/zac/Downloads/Cartography/classifier/classifier-openai-social-role-theory.py", line 452, in classify_messages
+    response = client.chat.completions.create(
+  File "/Users/zac/Library/Python/3.9/lib/python/site-packages/openai/_utils/_utils.py", line 286, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/zac/Library/Python/3.9/lib/python/site-packages/openai/resources/chat/completions/completions.py", line 1192, in create
+    return self._post(
+  File "/Users/zac/Library/Python/3.9/lib/python/site-packages/openai/_base_client.py", line 1259, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+  File "/Users/zac/Library/Python/3.9/lib/python/site-packages/openai/_base_client.py", line 1047, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.BadRequestError: Error code: 400 - {'error': {'message': "Unsupported parameter: 'max_tokens' is not supported with this model. Use 'max_completion_tokens' instead.", 'type': 'invalid_request_error', 'param': 'max_tokens', 'code': 'unsupported_parameter'}}
+
+❌ Error on wildchat_d6a291b6dc8c977b859a76e26a534b01: Error code: 400 - {'error': {'message': "Unsupported parameter: 'max_tokens' is not supported with this model. Use 'max_completion_tokens' instead.", 'type': 'invalid_request_error', 'param': 'max_tokens', 'code': 'unsupported_parameter'}}
+Progress: 16/50 (32%)Traceback (most recent call last):
+  File "/Users/zac/Downloads/Cartography/classifier/classifier-openai-social-role-theory.py", line 513, in classify_batch
+    result = classify_conversation(
+  File "/Users/zac/Downloads/Cartography/classifier/classifier-openai-social-role-theory.py", line 475, in classify_conversation
+    classification = classify_messages(client, conversation["messages"], few_shot_examples, model)
+  File "/Users/zac/Downloads/Cartography/classifier/classifier-openai-social-role-theory.py", line 452, in classify_messages
+    response = client.chat.completions.create(
+  File "/Users/zac/Library/Python/3.9/lib/python/site-packages/openai/_utils/_utils.py", line 286, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/zac/Library/Python/3.9/lib/python/site-packages/openai/resources/chat/completions/completions.py", line 1192, in create
+    return self._post(
+  File "/Users/zac/Library/Python/3.9/lib/python/site-packages/openai/_base_client.py", line 1259, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+  File "/Users/zac/Library/Python/3.9/lib/python/site-packages/openai/_base_client.py", line 1047, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.BadRequestError: Error code: 400 - {'error': {'message': "Unsupported parameter: 'max_tokens' is not supported with this model. Use 'max_completion_tokens' instead.", 'type': 'invalid_request_error', 'param': 'max_tokens', 'code': 'unsupported_parameter'}}
+
+❌ Error on wildchat_2f8acd6e9ac09f95bd80833fc0a54f40: Error code: 400 - {'error': {'message': "Unsupported parameter: 'max_tokens' is not supported with this model. Use 'max_completion_tokens' instead.", 'type': 'invalid_request_error', 'param': 'max_tokens', 'code': 'unsupported_parameter'}}
+Progress: 17/50 (34%)Traceback (most recent call last):
+  File "/Users/zac/Downloads/Cartography/classifier/classifier-openai-social-role-theory.py", line 513, in classify_batch
+    result = classify_conversation(
+  File "/Users/zac/Downloads/Cartography/classifier/classifier-openai-social-role-theory.py", line 475, in classify_conversation
+    classification = classify_messages(client, conversation["messages"], few_shot_examples, model)
+  File "/Users/zac/Downloads/Cartography/classifier/classifier-openai-social-role-theory.py", line 452, in classify_messages
+    response = client.chat.completions.create(
+  File "/Users/zac/Library/Python/3.9/lib/python/site-packages/openai/_utils/_utils.py", line 286, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/zac/Library/Python/3.9/lib/python/site-packages/openai/resources/chat/completions/completions.py", line 1192, in create
+    return self._post(
+  File "/Users/zac/Library/Python/3.9/lib/python/site-packages/openai/_base_client.py", line 1259, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+  File "/Users/zac/Library/Python/3.9/lib/python/site-packages/openai/_base_client.py", line 1047, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.BadRequestError: Error code: 400 - {'error': {'message': "Unsupported parameter: 'max_tokens' is not supported with this model. Use 'max_completion_tokens' instead.", 'type': 'invalid_request_error', 'param': 'max_tokens', 'code': 'unsupported_parameter'}}
+
+❌ Error on wildchat_9f2e2065d15c4d7160555bcfab809838: Error code: 400 - {'error': {'message': "Unsupported parameter: 'max_tokens' is not supported with this model. Use 'max_completion_tokens' instead.", 'type': 'invalid_request_error', 'param': 'max_tokens', 'code': 'unsupported_parameter'}}
+Progress: 18/50 (36%)Traceback (most recent call last):
+  File "/Users/zac/Downloads/Cartography/classifier/classifier-openai-social-role-theory.py", line 513, in classify_batch
+    result = classify_conversation(
+  File "/Users/zac/Downloads/Cartography/classifier/classifier-openai-social-role-theory.py", line 475, in classify_conversation
+    classification = classify_messages(client, conversation["messages"], few_shot_examples, model)
+  File "/Users/zac/Downloads/Cartography/classifier/classifier-openai-social-role-theory.py", line 452, in classify_messages
+    response = client.chat.completions.create(
+  File "/Users/zac/Library/Python/3.9/lib/python/site-packages/openai/_utils/_utils.py", line 286, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/zac/Library/Python/3.9/lib/python/site-packages/openai/resources/chat/completions/completions.py", line 1192, in create
+    return self._post(
+  File "/Users/zac/Library/Python/3.9/lib/python/site-packages/openai/_base_client.py", line 1259, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+  File "/Users/zac/Library/Python/3.9/lib/python/site-packages/openai/_base_client.py", line 1047, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.BadRequestError: Error code: 400 - {'error': {'message': "Unsupported parameter: 'max_tokens' is not supported with this model. Use 'max_completion_tokens' instead.", 'type': 'invalid_request_error', 'param': 'max_tokens', 'code': 'unsupported_parameter'}}
+
+❌ Error on wildchat_e6660e61a54243058b1c08cbe733da35: Error code: 400 - {'error': {'message': "Unsupported parameter: 'max_tokens' is not supported with this model. Use 'max_completion_tokens' instead.", 'type': 'invalid_request_error', 'param': 'max_tokens', 'code': 'unsupported_parameter'}}
+Progress: 19/50 (38%)Traceback (most recent call last):
+  File "/Users/zac/Downloads/Cartography/classifier/classifier-openai-social-role-theory.py", line 513, in classify_batch
+    result = classify_conversation(
+  File "/Users/zac/Downloads/Cartography/classifier/classifier-openai-social-role-theory.py", line 475, in classify_conversation
+    classification = classify_messages(client, conversation["messages"], few_shot_examples, model)
+  File "/Users/zac/Downloads/Cartography/classifier/classifier-openai-social-role-theory.py", line 452, in classify_messages
+    response = client.chat.completions.create(
+  File "/Users/zac/Library/Python/3.9/lib/python/site-packages/openai/_utils/_utils.py", line 286, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/zac/Library/Python/3.9/lib/python/site-packages/openai/resources/chat/completions/completions.py", line 1192, in create
+    return self._post(
+  File "/Users/zac/Library/Python/3.9/lib/python/site-packages/openai/_base_client.py", line 1259, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+  File "/Users/zac/Library/Python/3.9/lib/python/site-packages/openai/_base_client.py", line 1047, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.BadRequestError: Error code: 400 - {'error': {'message': "Unsupported parameter: 'max_tokens' is not supported with this model. Use 'max_completion_tokens' instead.", 'type': 'invalid_request_error', 'param': 'max_tokens', 'code': 'unsupported_parameter'}}
+
+❌ Error on wildchat_ed10c4992279d0f070842ea18ba93582: Error code: 400 - {'error': {'message': "Unsupported parameter: 'max_tokens' is not supported with this model. Use 'max_completion_tokens' instead.", 'type': 'invalid_request_error', 'param': 'max_tokens', 'code': 'unsupported_parameter'}}
+Progress: 20/50 (40%)Traceback (most recent call last):
+  File "/Users/zac/Downloads/Cartography/classifier/classifier-openai-social-role-theory.py", line 513, in classify_batch
+    result = classify_conversation(
+  File "/Users/zac/Downloads/Cartography/classifier/classifier-openai-social-role-theory.py", line 475, in classify_conversation
+    classification = classify_messages(client, conversation["messages"], few_shot_examples, model)
+  File "/Users/zac/Downloads/Cartography/classifier/classifier-openai-social-role-theory.py", line 452, in classify_messages
+    response = client.chat.completions.create(
+  File "/Users/zac/Library/Python/3.9/lib/python/site-packages/openai/_utils/_utils.py", line 286, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/zac/Library/Python/3.9/lib/python/site-packages/openai/resources/chat/completions/completions.py", line 1192, in create
+    return self._post(
+  File "/Users/zac/Library/Python/3.9/lib/python/site-packages/openai/_base_client.py", line 1259, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+  File "/Users/zac/Library/Python/3.9/lib/python/site-packages/openai/_base_client.py", line 1047, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.BadRequestError: Error code: 400 - {'error': {'message': "Unsupported parameter: 'max_tokens' is not supported with this model. Use 'max_completion_tokens' instead.", 'type': 'invalid_request_error', 'param': 'max_tokens', 'code': 'unsupported_parameter'}}
+
+❌ Error on wildchat_ebcb2f9481805a1e991a8b8585f2674d: Error code: 400 - {'error': {'message': "Unsupported parameter: 'max_tokens' is not supported with this model. Use 'max_completion_tokens' instead.", 'type': 'invalid_request_error', 'param': 'max_tokens', 'code': 'unsupported_parameter'}}
+Progress: 21/50 (42%)Traceback (most recent call last):
+  File "/Users/zac/Downloads/Cartography/classifier/classifier-openai-social-role-theory.py", line 513, in classify_batch
+    result = classify_conversation(
+  File "/Users/zac/Downloads/Cartography/classifier/classifier-openai-social-role-theory.py", line 475, in classify_conversation
+    classification = classify_messages(client, conversation["messages"], few_shot_examples, model)
+  File "/Users/zac/Downloads/Cartography/classifier/classifier-openai-social-role-theory.py", line 452, in classify_messages
+    response = client.chat.completions.create(
+  File "/Users/zac/Library/Python/3.9/lib/python/site-packages/openai/_utils/_utils.py", line 286, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/zac/Library/Python/3.9/lib/python/site-packages/openai/resources/chat/completions/completions.py", line 1192, in create
+    return self._post(
+  File "/Users/zac/Library/Python/3.9/lib/python/site-packages/openai/_base_client.py", line 1259, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+  File "/Users/zac/Library/Python/3.9/lib/python/site-packages/openai/_base_client.py", line 1047, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.BadRequestError: Error code: 400 - {'error': {'message': "Unsupported parameter: 'max_tokens' is not supported with this model. Use 'max_completion_tokens' instead.", 'type': 'invalid_request_error', 'param': 'max_tokens', 'code': 'unsupported_parameter'}}
+
+❌ Error on wildchat_fab21822999663d1e218c5b803126c68: Error code: 400 - {'error': {'message': "Unsupported parameter: 'max_tokens' is not supported with this model. Use 'max_completion_tokens' instead.", 'type': 'invalid_request_error', 'param': 'max_tokens', 'code': 'unsupported_parameter'}}
+Progress: 22/50 (44%)Traceback (most recent call last):
+  File "/Users/zac/Downloads/Cartography/classifier/classifier-openai-social-role-theory.py", line 513, in classify_batch
+    result = classify_conversation(
+  File "/Users/zac/Downloads/Cartography/classifier/classifier-openai-social-role-theory.py", line 475, in classify_conversation
+    classification = classify_messages(client, conversation["messages"], few_shot_examples, model)
+  File "/Users/zac/Downloads/Cartography/classifier/classifier-openai-social-role-theory.py", line 452, in classify_messages
+    response = client.chat.completions.create(
+  File "/Users/zac/Library/Python/3.9/lib/python/site-packages/openai/_utils/_utils.py", line 286, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/zac/Library/Python/3.9/lib/python/site-packages/openai/resources/chat/completions/completions.py", line 1192, in create
+    return self._post(
+  File "/Users/zac/Library/Python/3.9/lib/python/site-packages/openai/_base_client.py", line 1259, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+  File "/Users/zac/Library/Python/3.9/lib/python/site-packages/openai/_base_client.py", line 1047, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.BadRequestError: Error code: 400 - {'error': {'message': "Unsupported parameter: 'max_tokens' is not supported with this model. Use 'max_completion_tokens' instead.", 'type': 'invalid_request_error', 'param': 'max_tokens', 'code': 'unsupported_parameter'}}
+
+❌ Error on wildchat_1250880a2e4b49fa2b138933af8774c6: Error code: 400 - {'error': {'message': "Unsupported parameter: 'max_tokens' is not supported with this model. Use 'max_completion_tokens' instead.", 'type': 'invalid_request_error', 'param': 'max_tokens', 'code': 'unsupported_parameter'}}
+Progress: 23/50 (46%)Traceback (most recent call last):
+  File "/Users/zac/Downloads/Cartography/classifier/classifier-openai-social-role-theory.py", line 513, in classify_batch
+    result = classify_conversation(
+  File "/Users/zac/Downloads/Cartography/classifier/classifier-openai-social-role-theory.py", line 475, in classify_conversation
+    classification = classify_messages(client, conversation["messages"], few_shot_examples, model)
+  File "/Users/zac/Downloads/Cartography/classifier/classifier-openai-social-role-theory.py", line 452, in classify_messages
+    response = client.chat.completions.create(
+  File "/Users/zac/Library/Python/3.9/lib/python/site-packages/openai/_utils/_utils.py", line 286, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/zac/Library/Python/3.9/lib/python/site-packages/openai/resources/chat/completions/completions.py", line 1192, in create
+    return self._post(
+  File "/Users/zac/Library/Python/3.9/lib/python/site-packages/openai/_base_client.py", line 1259, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+  File "/Users/zac/Library/Python/3.9/lib/python/site-packages/openai/_base_client.py", line 1047, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.BadRequestError: Error code: 400 - {'error': {'message': "Unsupported parameter: 'max_tokens' is not supported with this model. Use 'max_completion_tokens' instead.", 'type': 'invalid_request_error', 'param': 'max_tokens', 'code': 'unsupported_parameter'}}
+
+❌ Error on wildchat_e64a5ed525afe5486a576341b71b2504: Error code: 400 - {'error': {'message': "Unsupported parameter: 'max_tokens' is not supported with this model. Use 'max_completion_tokens' instead.", 'type': 'invalid_request_error', 'param': 'max_tokens', 'code': 'unsupported_parameter'}}
+Progress: 24/50 (48%)Traceback (most recent call last):
+  File "/Users/zac/Downloads/Cartography/classifier/classifier-openai-social-role-theory.py", line 513, in classify_batch
+    result = classify_conversation(
+  File "/Users/zac/Downloads/Cartography/classifier/classifier-openai-social-role-theory.py", line 475, in classify_conversation
+    classification = classify_messages(client, conversation["messages"], few_shot_examples, model)
+  File "/Users/zac/Downloads/Cartography/classifier/classifier-openai-social-role-theory.py", line 452, in classify_messages
+    response = client.chat.completions.create(
+  File "/Users/zac/Library/Python/3.9/lib/python/site-packages/openai/_utils/_utils.py", line 286, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/zac/Library/Python/3.9/lib/python/site-packages/openai/resources/chat/completions/completions.py", line 1192, in create
+    return self._post(
+  File "/Users/zac/Library/Python/3.9/lib/python/site-packages/openai/_base_client.py", line 1259, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+  File "/Users/zac/Library/Python/3.9/lib/python/site-packages/openai/_base_client.py", line 1047, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.BadRequestError: Error code: 400 - {'error': {'message': "Unsupported parameter: 'max_tokens' is not supported with this model. Use 'max_completion_tokens' instead.", 'type': 'invalid_request_error', 'param': 'max_tokens', 'code': 'unsupported_parameter'}}
+
+❌ Error on wildchat_5ada4aa37b7086509cc40820dc476619: Error code: 400 - {'error': {'message': "Unsupported parameter: 'max_tokens' is not supported with this model. Use 'max_completion_tokens' instead.", 'type': 'invalid_request_error', 'param': 'max_tokens', 'code': 'unsupported_parameter'}}
+Progress: 25/50 (50%)Traceback (most recent call last):
+  File "/Users/zac/Downloads/Cartography/classifier/classifier-openai-social-role-theory.py", line 513, in classify_batch
+    result = classify_conversation(
+  File "/Users/zac/Downloads/Cartography/classifier/classifier-openai-social-role-theory.py", line 475, in classify_conversation
+    classification = classify_messages(client, conversation["messages"], few_shot_examples, model)
+  File "/Users/zac/Downloads/Cartography/classifier/classifier-openai-social-role-theory.py", line 452, in classify_messages
+    response = client.chat.completions.create(
+  File "/Users/zac/Library/Python/3.9/lib/python/site-packages/openai/_utils/_utils.py", line 286, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/zac/Library/Python/3.9/lib/python/site-packages/openai/resources/chat/completions/completions.py", line 1192, in create
+    return self._post(
+  File "/Users/zac/Library/Python/3.9/lib/python/site-packages/openai/_base_client.py", line 1259, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+  File "/Users/zac/Library/Python/3.9/lib/python/site-packages/openai/_base_client.py", line 1047, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.BadRequestError: Error code: 400 - {'error': {'message': "Unsupported parameter: 'max_tokens' is not supported with this model. Use 'max_completion_tokens' instead.", 'type': 'invalid_request_error', 'param': 'max_tokens', 'code': 'unsupported_parameter'}}
+
+❌ Error on wildchat_8647181d70d6e958e186caaf7f6b5a6f: Error code: 400 - {'error': {'message': "Unsupported parameter: 'max_tokens' is not supported with this model. Use 'max_completion_tokens' instead.", 'type': 'invalid_request_error', 'param': 'max_tokens', 'code': 'unsupported_parameter'}}
+Progress: 26/50 (52%)Traceback (most recent call last):
+  File "/Users/zac/Downloads/Cartography/classifier/classifier-openai-social-role-theory.py", line 513, in classify_batch
+    result = classify_conversation(
+  File "/Users/zac/Downloads/Cartography/classifier/classifier-openai-social-role-theory.py", line 475, in classify_conversation
+    classification = classify_messages(client, conversation["messages"], few_shot_examples, model)
+  File "/Users/zac/Downloads/Cartography/classifier/classifier-openai-social-role-theory.py", line 452, in classify_messages
+    response = client.chat.completions.create(
+  File "/Users/zac/Library/Python/3.9/lib/python/site-packages/openai/_utils/_utils.py", line 286, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/zac/Library/Python/3.9/lib/python/site-packages/openai/resources/chat/completions/completions.py", line 1192, in create
+    return self._post(
+  File "/Users/zac/Library/Python/3.9/lib/python/site-packages/openai/_base_client.py", line 1259, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+  File "/Users/zac/Library/Python/3.9/lib/python/site-packages/openai/_base_client.py", line 1047, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.BadRequestError: Error code: 400 - {'error': {'message': "Unsupported parameter: 'max_tokens' is not supported with this model. Use 'max_completion_tokens' instead.", 'type': 'invalid_request_error', 'param': 'max_tokens', 'code': 'unsupported_parameter'}}
+
+❌ Error on wildchat_02757617eda7b83880dcd8c43b947053: Error code: 400 - {'error': {'message': "Unsupported parameter: 'max_tokens' is not supported with this model. Use 'max_completion_tokens' instead.", 'type': 'invalid_request_error', 'param': 'max_tokens', 'code': 'unsupported_parameter'}}
+Progress: 27/50 (54%)Traceback (most recent call last):
+  File "/Users/zac/Downloads/Cartography/classifier/classifier-openai-social-role-theory.py", line 513, in classify_batch
+    result = classify_conversation(
+  File "/Users/zac/Downloads/Cartography/classifier/classifier-openai-social-role-theory.py", line 475, in classify_conversation
+    classification = classify_messages(client, conversation["messages"], few_shot_examples, model)
+  File "/Users/zac/Downloads/Cartography/classifier/classifier-openai-social-role-theory.py", line 452, in classify_messages
+    response = client.chat.completions.create(
+  File "/Users/zac/Library/Python/3.9/lib/python/site-packages/openai/_utils/_utils.py", line 286, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/zac/Library/Python/3.9/lib/python/site-packages/openai/resources/chat/completions/completions.py", line 1192, in create
+    return self._post(
+  File "/Users/zac/Library/Python/3.9/lib/python/site-packages/openai/_base_client.py", line 1259, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+  File "/Users/zac/Library/Python/3.9/lib/python/site-packages/openai/_base_client.py", line 1047, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.BadRequestError: Error code: 400 - {'error': {'message': "Unsupported parameter: 'max_tokens' is not supported with this model. Use 'max_completion_tokens' instead.", 'type': 'invalid_request_error', 'param': 'max_tokens', 'code': 'unsupported_parameter'}}
+
+❌ Error on wildchat_a437b25abe5453b96f6a5191518e02ca: Error code: 400 - {'error': {'message': "Unsupported parameter: 'max_tokens' is not supported with this model. Use 'max_completion_tokens' instead.", 'type': 'invalid_request_error', 'param': 'max_tokens', 'code': 'unsupported_parameter'}}
+Progress: 28/50 (56%)Traceback (most recent call last):
+  File "/Users/zac/Downloads/Cartography/classifier/classifier-openai-social-role-theory.py", line 513, in classify_batch
+    result = classify_conversation(
+  File "/Users/zac/Downloads/Cartography/classifier/classifier-openai-social-role-theory.py", line 475, in classify_conversation
+    classification = classify_messages(client, conversation["messages"], few_shot_examples, model)
+  File "/Users/zac/Downloads/Cartography/classifier/classifier-openai-social-role-theory.py", line 452, in classify_messages
+    response = client.chat.completions.create(
+  File "/Users/zac/Library/Python/3.9/lib/python/site-packages/openai/_utils/_utils.py", line 286, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/zac/Library/Python/3.9/lib/python/site-packages/openai/resources/chat/completions/completions.py", line 1192, in create
+    return self._post(
+  File "/Users/zac/Library/Python/3.9/lib/python/site-packages/openai/_base_client.py", line 1259, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+  File "/Users/zac/Library/Python/3.9/lib/python/site-packages/openai/_base_client.py", line 1047, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.BadRequestError: Error code: 400 - {'error': {'message': "Unsupported parameter: 'max_tokens' is not supported with this model. Use 'max_completion_tokens' instead.", 'type': 'invalid_request_error', 'param': 'max_tokens', 'code': 'unsupported_parameter'}}
+
+❌ Error on wildchat_f6c328a043a2b2d7c2fc11d709bc6151: Error code: 400 - {'error': {'message': "Unsupported parameter: 'max_tokens' is not supported with this model. Use 'max_completion_tokens' instead.", 'type': 'invalid_request_error', 'param': 'max_tokens', 'code': 'unsupported_parameter'}}
+Progress: 29/50 (57%)Traceback (most recent call last):
+  File "/Users/zac/Downloads/Cartography/classifier/classifier-openai-social-role-theory.py", line 513, in classify_batch
+    result = classify_conversation(
+  File "/Users/zac/Downloads/Cartography/classifier/classifier-openai-social-role-theory.py", line 475, in classify_conversation
+    classification = classify_messages(client, conversation["messages"], few_shot_examples, model)
+  File "/Users/zac/Downloads/Cartography/classifier/classifier-openai-social-role-theory.py", line 452, in classify_messages
+    response = client.chat.completions.create(
+  File "/Users/zac/Library/Python/3.9/lib/python/site-packages/openai/_utils/_utils.py", line 286, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/zac/Library/Python/3.9/lib/python/site-packages/openai/resources/chat/completions/completions.py", line 1192, in create
+    return self._post(
+  File "/Users/zac/Library/Python/3.9/lib/python/site-packages/openai/_base_client.py", line 1259, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+  File "/Users/zac/Library/Python/3.9/lib/python/site-packages/openai/_base_client.py", line 1047, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.BadRequestError: Error code: 400 - {'error': {'message': "Unsupported parameter: 'max_tokens' is not supported with this model. Use 'max_completion_tokens' instead.", 'type': 'invalid_request_error', 'param': 'max_tokens', 'code': 'unsupported_parameter'}}
+
+❌ Error on wildchat_9e877c72c9a03e53fba12982f4726dd6: Error code: 400 - {'error': {'message': "Unsupported parameter: 'max_tokens' is not supported with this model. Use 'max_completion_tokens' instead.", 'type': 'invalid_request_error', 'param': 'max_tokens', 'code': 'unsupported_parameter'}}
+Progress: 30/50 (60%)Traceback (most recent call last):
+  File "/Users/zac/Downloads/Cartography/classifier/classifier-openai-social-role-theory.py", line 513, in classify_batch
+    result = classify_conversation(
+  File "/Users/zac/Downloads/Cartography/classifier/classifier-openai-social-role-theory.py", line 475, in classify_conversation
+    classification = classify_messages(client, conversation["messages"], few_shot_examples, model)
+  File "/Users/zac/Downloads/Cartography/classifier/classifier-openai-social-role-theory.py", line 452, in classify_messages
+    response = client.chat.completions.create(
+  File "/Users/zac/Library/Python/3.9/lib/python/site-packages/openai/_utils/_utils.py", line 286, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/zac/Library/Python/3.9/lib/python/site-packages/openai/resources/chat/completions/completions.py", line 1192, in create
+    return self._post(
+  File "/Users/zac/Library/Python/3.9/lib/python/site-packages/openai/_base_client.py", line 1259, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+  File "/Users/zac/Library/Python/3.9/lib/python/site-packages/openai/_base_client.py", line 1047, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.BadRequestError: Error code: 400 - {'error': {'message': "Unsupported parameter: 'max_tokens' is not supported with this model. Use 'max_completion_tokens' instead.", 'type': 'invalid_request_error', 'param': 'max_tokens', 'code': 'unsupported_parameter'}}
+
+❌ Error on wildchat_1a72c94e30644769cc40f4f8b7147773: Error code: 400 - {'error': {'message': "Unsupported parameter: 'max_tokens' is not supported with this model. Use 'max_completion_tokens' instead.", 'type': 'invalid_request_error', 'param': 'max_tokens', 'code': 'unsupported_parameter'}}
+Progress: 31/50 (62%)Traceback (most recent call last):
+  File "/Users/zac/Downloads/Cartography/classifier/classifier-openai-social-role-theory.py", line 513, in classify_batch
+    result = classify_conversation(
+  File "/Users/zac/Downloads/Cartography/classifier/classifier-openai-social-role-theory.py", line 475, in classify_conversation
+    classification = classify_messages(client, conversation["messages"], few_shot_examples, model)
+  File "/Users/zac/Downloads/Cartography/classifier/classifier-openai-social-role-theory.py", line 452, in classify_messages
+    response = client.chat.completions.create(
+  File "/Users/zac/Library/Python/3.9/lib/python/site-packages/openai/_utils/_utils.py", line 286, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/zac/Library/Python/3.9/lib/python/site-packages/openai/resources/chat/completions/completions.py", line 1192, in create
+    return self._post(
+  File "/Users/zac/Library/Python/3.9/lib/python/site-packages/openai/_base_client.py", line 1259, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+  File "/Users/zac/Library/Python/3.9/lib/python/site-packages/openai/_base_client.py", line 1047, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.BadRequestError: Error code: 400 - {'error': {'message': "Unsupported parameter: 'max_tokens' is not supported with this model. Use 'max_completion_tokens' instead.", 'type': 'invalid_request_error', 'param': 'max_tokens', 'code': 'unsupported_parameter'}}
+
+❌ Error on wildchat_589bf0f7028231b39292811f4f3e553d: Error code: 400 - {'error': {'message': "Unsupported parameter: 'max_tokens' is not supported with this model. Use 'max_completion_tokens' instead.", 'type': 'invalid_request_error', 'param': 'max_tokens', 'code': 'unsupported_parameter'}}
+Progress: 32/50 (64%)Traceback (most recent call last):
+  File "/Users/zac/Downloads/Cartography/classifier/classifier-openai-social-role-theory.py", line 513, in classify_batch
+    result = classify_conversation(
+  File "/Users/zac/Downloads/Cartography/classifier/classifier-openai-social-role-theory.py", line 475, in classify_conversation
+    classification = classify_messages(client, conversation["messages"], few_shot_examples, model)
+  File "/Users/zac/Downloads/Cartography/classifier/classifier-openai-social-role-theory.py", line 452, in classify_messages
+    response = client.chat.completions.create(
+  File "/Users/zac/Library/Python/3.9/lib/python/site-packages/openai/_utils/_utils.py", line 286, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/zac/Library/Python/3.9/lib/python/site-packages/openai/resources/chat/completions/completions.py", line 1192, in create
+    return self._post(
+  File "/Users/zac/Library/Python/3.9/lib/python/site-packages/openai/_base_client.py", line 1259, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+  File "/Users/zac/Library/Python/3.9/lib/python/site-packages/openai/_base_client.py", line 1047, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.BadRequestError: Error code: 400 - {'error': {'message': "Unsupported parameter: 'max_tokens' is not supported with this model. Use 'max_completion_tokens' instead.", 'type': 'invalid_request_error', 'param': 'max_tokens', 'code': 'unsupported_parameter'}}
+
+❌ Error on wildchat_6192b3ae0816e6d5722fa5af8937d9de: Error code: 400 - {'error': {'message': "Unsupported parameter: 'max_tokens' is not supported with this model. Use 'max_completion_tokens' instead.", 'type': 'invalid_request_error', 'param': 'max_tokens', 'code': 'unsupported_parameter'}}
+Progress: 33/50 (66%)Traceback (most recent call last):
+  File "/Users/zac/Downloads/Cartography/classifier/classifier-openai-social-role-theory.py", line 513, in classify_batch
+    result = classify_conversation(
+  File "/Users/zac/Downloads/Cartography/classifier/classifier-openai-social-role-theory.py", line 475, in classify_conversation
+    classification = classify_messages(client, conversation["messages"], few_shot_examples, model)
+  File "/Users/zac/Downloads/Cartography/classifier/classifier-openai-social-role-theory.py", line 452, in classify_messages
+    response = client.chat.completions.create(
+  File "/Users/zac/Library/Python/3.9/lib/python/site-packages/openai/_utils/_utils.py", line 286, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/zac/Library/Python/3.9/lib/python/site-packages/openai/resources/chat/completions/completions.py", line 1192, in create
+    return self._post(
+  File "/Users/zac/Library/Python/3.9/lib/python/site-packages/openai/_base_client.py", line 1259, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+  File "/Users/zac/Library/Python/3.9/lib/python/site-packages/openai/_base_client.py", line 1047, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.BadRequestError: Error code: 400 - {'error': {'message': "Unsupported parameter: 'max_tokens' is not supported with this model. Use 'max_completion_tokens' instead.", 'type': 'invalid_request_error', 'param': 'max_tokens', 'code': 'unsupported_parameter'}}
+
+❌ Error on wildchat_8d8804c42d7df3ebd7801cdd5699cc24: Error code: 400 - {'error': {'message': "Unsupported parameter: 'max_tokens' is not supported with this model. Use 'max_completion_tokens' instead.", 'type': 'invalid_request_error', 'param': 'max_tokens', 'code': 'unsupported_parameter'}}
+Progress: 34/50 (68%)Traceback (most recent call last):
+  File "/Users/zac/Downloads/Cartography/classifier/classifier-openai-social-role-theory.py", line 513, in classify_batch
+    result = classify_conversation(
+  File "/Users/zac/Downloads/Cartography/classifier/classifier-openai-social-role-theory.py", line 475, in classify_conversation
+    classification = classify_messages(client, conversation["messages"], few_shot_examples, model)
+  File "/Users/zac/Downloads/Cartography/classifier/classifier-openai-social-role-theory.py", line 452, in classify_messages
+    response = client.chat.completions.create(
+  File "/Users/zac/Library/Python/3.9/lib/python/site-packages/openai/_utils/_utils.py", line 286, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/zac/Library/Python/3.9/lib/python/site-packages/openai/resources/chat/completions/completions.py", line 1192, in create
+    return self._post(
+  File "/Users/zac/Library/Python/3.9/lib/python/site-packages/openai/_base_client.py", line 1259, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+  File "/Users/zac/Library/Python/3.9/lib/python/site-packages/openai/_base_client.py", line 1047, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.BadRequestError: Error code: 400 - {'error': {'message': "Unsupported parameter: 'max_tokens' is not supported with this model. Use 'max_completion_tokens' instead.", 'type': 'invalid_request_error', 'param': 'max_tokens', 'code': 'unsupported_parameter'}}
+
+❌ Error on wildchat_7912b50700d72aebe9113988f08ddc0d: Error code: 400 - {'error': {'message': "Unsupported parameter: 'max_tokens' is not supported with this model. Use 'max_completion_tokens' instead.", 'type': 'invalid_request_error', 'param': 'max_tokens', 'code': 'unsupported_parameter'}}
+Progress: 35/50 (70%)Traceback (most recent call last):
+  File "/Users/zac/Downloads/Cartography/classifier/classifier-openai-social-role-theory.py", line 513, in classify_batch
+    result = classify_conversation(
+  File "/Users/zac/Downloads/Cartography/classifier/classifier-openai-social-role-theory.py", line 475, in classify_conversation
+    classification = classify_messages(client, conversation["messages"], few_shot_examples, model)
+  File "/Users/zac/Downloads/Cartography/classifier/classifier-openai-social-role-theory.py", line 452, in classify_messages
+    response = client.chat.completions.create(
+  File "/Users/zac/Library/Python/3.9/lib/python/site-packages/openai/_utils/_utils.py", line 286, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/zac/Library/Python/3.9/lib/python/site-packages/openai/resources/chat/completions/completions.py", line 1192, in create
+    return self._post(
+  File "/Users/zac/Library/Python/3.9/lib/python/site-packages/openai/_base_client.py", line 1259, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+  File "/Users/zac/Library/Python/3.9/lib/python/site-packages/openai/_base_client.py", line 1047, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.BadRequestError: Error code: 400 - {'error': {'message': "Unsupported parameter: 'max_tokens' is not supported with this model. Use 'max_completion_tokens' instead.", 'type': 'invalid_request_error', 'param': 'max_tokens', 'code': 'unsupported_parameter'}}
+
+❌ Error on wildchat_a1d0d6eb652ceed256cfdb704b731ab6: Error code: 400 - {'error': {'message': "Unsupported parameter: 'max_tokens' is not supported with this model. Use 'max_completion_tokens' instead.", 'type': 'invalid_request_error', 'param': 'max_tokens', 'code': 'unsupported_parameter'}}
+Progress: 36/50 (72%)Traceback (most recent call last):
+  File "/Users/zac/Downloads/Cartography/classifier/classifier-openai-social-role-theory.py", line 513, in classify_batch
+    result = classify_conversation(
+  File "/Users/zac/Downloads/Cartography/classifier/classifier-openai-social-role-theory.py", line 475, in classify_conversation
+    classification = classify_messages(client, conversation["messages"], few_shot_examples, model)
+  File "/Users/zac/Downloads/Cartography/classifier/classifier-openai-social-role-theory.py", line 452, in classify_messages
+    response = client.chat.completions.create(
+  File "/Users/zac/Library/Python/3.9/lib/python/site-packages/openai/_utils/_utils.py", line 286, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/zac/Library/Python/3.9/lib/python/site-packages/openai/resources/chat/completions/completions.py", line 1192, in create
+    return self._post(
+  File "/Users/zac/Library/Python/3.9/lib/python/site-packages/openai/_base_client.py", line 1259, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+  File "/Users/zac/Library/Python/3.9/lib/python/site-packages/openai/_base_client.py", line 1047, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.BadRequestError: Error code: 400 - {'error': {'message': "Unsupported parameter: 'max_tokens' is not supported with this model. Use 'max_completion_tokens' instead.", 'type': 'invalid_request_error', 'param': 'max_tokens', 'code': 'unsupported_parameter'}}
+
+❌ Error on wildchat_cca67bd122e091565b5327eae488ee10: Error code: 400 - {'error': {'message': "Unsupported parameter: 'max_tokens' is not supported with this model. Use 'max_completion_tokens' instead.", 'type': 'invalid_request_error', 'param': 'max_tokens', 'code': 'unsupported_parameter'}}
+Progress: 37/50 (74%)Traceback (most recent call last):
+  File "/Users/zac/Downloads/Cartography/classifier/classifier-openai-social-role-theory.py", line 513, in classify_batch
+    result = classify_conversation(
+  File "/Users/zac/Downloads/Cartography/classifier/classifier-openai-social-role-theory.py", line 475, in classify_conversation
+    classification = classify_messages(client, conversation["messages"], few_shot_examples, model)
+  File "/Users/zac/Downloads/Cartography/classifier/classifier-openai-social-role-theory.py", line 452, in classify_messages
+    response = client.chat.completions.create(
+  File "/Users/zac/Library/Python/3.9/lib/python/site-packages/openai/_utils/_utils.py", line 286, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/zac/Library/Python/3.9/lib/python/site-packages/openai/resources/chat/completions/completions.py", line 1192, in create
+    return self._post(
+  File "/Users/zac/Library/Python/3.9/lib/python/site-packages/openai/_base_client.py", line 1259, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+  File "/Users/zac/Library/Python/3.9/lib/python/site-packages/openai/_base_client.py", line 1047, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.BadRequestError: Error code: 400 - {'error': {'message': "Unsupported parameter: 'max_tokens' is not supported with this model. Use 'max_completion_tokens' instead.", 'type': 'invalid_request_error', 'param': 'max_tokens', 'code': 'unsupported_parameter'}}
+
+❌ Error on wildchat_0120c934837e9254a3605de3a2c1d28a: Error code: 400 - {'error': {'message': "Unsupported parameter: 'max_tokens' is not supported with this model. Use 'max_completion_tokens' instead.", 'type': 'invalid_request_error', 'param': 'max_tokens', 'code': 'unsupported_parameter'}}
+Progress: 38/50 (76%)Traceback (most recent call last):
+  File "/Users/zac/Downloads/Cartography/classifier/classifier-openai-social-role-theory.py", line 513, in classify_batch
+    result = classify_conversation(
+  File "/Users/zac/Downloads/Cartography/classifier/classifier-openai-social-role-theory.py", line 475, in classify_conversation
+    classification = classify_messages(client, conversation["messages"], few_shot_examples, model)
+  File "/Users/zac/Downloads/Cartography/classifier/classifier-openai-social-role-theory.py", line 452, in classify_messages
+    response = client.chat.completions.create(
+  File "/Users/zac/Library/Python/3.9/lib/python/site-packages/openai/_utils/_utils.py", line 286, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/zac/Library/Python/3.9/lib/python/site-packages/openai/resources/chat/completions/completions.py", line 1192, in create
+    return self._post(
+  File "/Users/zac/Library/Python/3.9/lib/python/site-packages/openai/_base_client.py", line 1259, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+  File "/Users/zac/Library/Python/3.9/lib/python/site-packages/openai/_base_client.py", line 1047, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.BadRequestError: Error code: 400 - {'error': {'message': "Unsupported parameter: 'max_tokens' is not supported with this model. Use 'max_completion_tokens' instead.", 'type': 'invalid_request_error', 'param': 'max_tokens', 'code': 'unsupported_parameter'}}
+
+❌ Error on wildchat_0bb137661f7530a42315b701977cd957: Error code: 400 - {'error': {'message': "Unsupported parameter: 'max_tokens' is not supported with this model. Use 'max_completion_tokens' instead.", 'type': 'invalid_request_error', 'param': 'max_tokens', 'code': 'unsupported_parameter'}}
+Progress: 39/50 (78%)Traceback (most recent call last):
+  File "/Users/zac/Downloads/Cartography/classifier/classifier-openai-social-role-theory.py", line 513, in classify_batch
+    result = classify_conversation(
+  File "/Users/zac/Downloads/Cartography/classifier/classifier-openai-social-role-theory.py", line 475, in classify_conversation
+    classification = classify_messages(client, conversation["messages"], few_shot_examples, model)
+  File "/Users/zac/Downloads/Cartography/classifier/classifier-openai-social-role-theory.py", line 452, in classify_messages
+    response = client.chat.completions.create(
+  File "/Users/zac/Library/Python/3.9/lib/python/site-packages/openai/_utils/_utils.py", line 286, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/zac/Library/Python/3.9/lib/python/site-packages/openai/resources/chat/completions/completions.py", line 1192, in create
+    return self._post(
+  File "/Users/zac/Library/Python/3.9/lib/python/site-packages/openai/_base_client.py", line 1259, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+  File "/Users/zac/Library/Python/3.9/lib/python/site-packages/openai/_base_client.py", line 1047, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.BadRequestError: Error code: 400 - {'error': {'message': "Unsupported parameter: 'max_tokens' is not supported with this model. Use 'max_completion_tokens' instead.", 'type': 'invalid_request_error', 'param': 'max_tokens', 'code': 'unsupported_parameter'}}
+
+❌ Error on wildchat_f0d535927d3124595a96bfe487e8c1b4: Error code: 400 - {'error': {'message': "Unsupported parameter: 'max_tokens' is not supported with this model. Use 'max_completion_tokens' instead.", 'type': 'invalid_request_error', 'param': 'max_tokens', 'code': 'unsupported_parameter'}}
+Progress: 40/50 (80%)Traceback (most recent call last):
+  File "/Users/zac/Downloads/Cartography/classifier/classifier-openai-social-role-theory.py", line 513, in classify_batch
+    result = classify_conversation(
+  File "/Users/zac/Downloads/Cartography/classifier/classifier-openai-social-role-theory.py", line 475, in classify_conversation
+    classification = classify_messages(client, conversation["messages"], few_shot_examples, model)
+  File "/Users/zac/Downloads/Cartography/classifier/classifier-openai-social-role-theory.py", line 452, in classify_messages
+    response = client.chat.completions.create(
+  File "/Users/zac/Library/Python/3.9/lib/python/site-packages/openai/_utils/_utils.py", line 286, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/zac/Library/Python/3.9/lib/python/site-packages/openai/resources/chat/completions/completions.py", line 1192, in create
+    return self._post(
+  File "/Users/zac/Library/Python/3.9/lib/python/site-packages/openai/_base_client.py", line 1259, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+  File "/Users/zac/Library/Python/3.9/lib/python/site-packages/openai/_base_client.py", line 1047, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.BadRequestError: Error code: 400 - {'error': {'message': "Unsupported parameter: 'max_tokens' is not supported with this model. Use 'max_completion_tokens' instead.", 'type': 'invalid_request_error', 'param': 'max_tokens', 'code': 'unsupported_parameter'}}
+
+❌ Error on wildchat_95d00aaac2885fc07388d5f9e09d81ea: Error code: 400 - {'error': {'message': "Unsupported parameter: 'max_tokens' is not supported with this model. Use 'max_completion_tokens' instead.", 'type': 'invalid_request_error', 'param': 'max_tokens', 'code': 'unsupported_parameter'}}
+Progress: 41/50 (82%)Traceback (most recent call last):
+  File "/Users/zac/Downloads/Cartography/classifier/classifier-openai-social-role-theory.py", line 513, in classify_batch
+    result = classify_conversation(
+  File "/Users/zac/Downloads/Cartography/classifier/classifier-openai-social-role-theory.py", line 475, in classify_conversation
+    classification = classify_messages(client, conversation["messages"], few_shot_examples, model)
+  File "/Users/zac/Downloads/Cartography/classifier/classifier-openai-social-role-theory.py", line 452, in classify_messages
+    response = client.chat.completions.create(
+  File "/Users/zac/Library/Python/3.9/lib/python/site-packages/openai/_utils/_utils.py", line 286, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/zac/Library/Python/3.9/lib/python/site-packages/openai/resources/chat/completions/completions.py", line 1192, in create
+    return self._post(
+  File "/Users/zac/Library/Python/3.9/lib/python/site-packages/openai/_base_client.py", line 1259, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+  File "/Users/zac/Library/Python/3.9/lib/python/site-packages/openai/_base_client.py", line 1047, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.BadRequestError: Error code: 400 - {'error': {'message': "Unsupported parameter: 'max_tokens' is not supported with this model. Use 'max_completion_tokens' instead.", 'type': 'invalid_request_error', 'param': 'max_tokens', 'code': 'unsupported_parameter'}}
+
+❌ Error on wildchat_001e1a4dd4c924f778c40054e19b0be6: Error code: 400 - {'error': {'message': "Unsupported parameter: 'max_tokens' is not supported with this model. Use 'max_completion_tokens' instead.", 'type': 'invalid_request_error', 'param': 'max_tokens', 'code': 'unsupported_parameter'}}
+Progress: 42/50 (84%)Traceback (most recent call last):
+  File "/Users/zac/Downloads/Cartography/classifier/classifier-openai-social-role-theory.py", line 513, in classify_batch
+    result = classify_conversation(
+  File "/Users/zac/Downloads/Cartography/classifier/classifier-openai-social-role-theory.py", line 475, in classify_conversation
+    classification = classify_messages(client, conversation["messages"], few_shot_examples, model)
+  File "/Users/zac/Downloads/Cartography/classifier/classifier-openai-social-role-theory.py", line 452, in classify_messages
+    response = client.chat.completions.create(
+  File "/Users/zac/Library/Python/3.9/lib/python/site-packages/openai/_utils/_utils.py", line 286, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/zac/Library/Python/3.9/lib/python/site-packages/openai/resources/chat/completions/completions.py", line 1192, in create
+    return self._post(
+  File "/Users/zac/Library/Python/3.9/lib/python/site-packages/openai/_base_client.py", line 1259, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+  File "/Users/zac/Library/Python/3.9/lib/python/site-packages/openai/_base_client.py", line 1047, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.BadRequestError: Error code: 400 - {'error': {'message': "Unsupported parameter: 'max_tokens' is not supported with this model. Use 'max_completion_tokens' instead.", 'type': 'invalid_request_error', 'param': 'max_tokens', 'code': 'unsupported_parameter'}}
+
+❌ Error on wildchat_b1fcc946202a3d9d6175dca17debe1aa: Error code: 400 - {'error': {'message': "Unsupported parameter: 'max_tokens' is not supported with this model. Use 'max_completion_tokens' instead.", 'type': 'invalid_request_error', 'param': 'max_tokens', 'code': 'unsupported_parameter'}}
+Progress: 43/50 (86%)Traceback (most recent call last):
+  File "/Users/zac/Downloads/Cartography/classifier/classifier-openai-social-role-theory.py", line 513, in classify_batch
+    result = classify_conversation(
+  File "/Users/zac/Downloads/Cartography/classifier/classifier-openai-social-role-theory.py", line 475, in classify_conversation
+    classification = classify_messages(client, conversation["messages"], few_shot_examples, model)
+  File "/Users/zac/Downloads/Cartography/classifier/classifier-openai-social-role-theory.py", line 452, in classify_messages
+    response = client.chat.completions.create(
+  File "/Users/zac/Library/Python/3.9/lib/python/site-packages/openai/_utils/_utils.py", line 286, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/zac/Library/Python/3.9/lib/python/site-packages/openai/resources/chat/completions/completions.py", line 1192, in create
+    return self._post(
+  File "/Users/zac/Library/Python/3.9/lib/python/site-packages/openai/_base_client.py", line 1259, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+  File "/Users/zac/Library/Python/3.9/lib/python/site-packages/openai/_base_client.py", line 1047, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.BadRequestError: Error code: 400 - {'error': {'message': "Unsupported parameter: 'max_tokens' is not supported with this model. Use 'max_completion_tokens' instead.", 'type': 'invalid_request_error', 'param': 'max_tokens', 'code': 'unsupported_parameter'}}
+
+❌ Error on wildchat_e78fcd33a180d08913ed186674bcbbd9: Error code: 400 - {'error': {'message': "Unsupported parameter: 'max_tokens' is not supported with this model. Use 'max_completion_tokens' instead.", 'type': 'invalid_request_error', 'param': 'max_tokens', 'code': 'unsupported_parameter'}}
+Progress: 44/50 (88%)Traceback (most recent call last):
+  File "/Users/zac/Downloads/Cartography/classifier/classifier-openai-social-role-theory.py", line 513, in classify_batch
+    result = classify_conversation(
+  File "/Users/zac/Downloads/Cartography/classifier/classifier-openai-social-role-theory.py", line 475, in classify_conversation
+    classification = classify_messages(client, conversation["messages"], few_shot_examples, model)
+  File "/Users/zac/Downloads/Cartography/classifier/classifier-openai-social-role-theory.py", line 452, in classify_messages
+    response = client.chat.completions.create(
+  File "/Users/zac/Library/Python/3.9/lib/python/site-packages/openai/_utils/_utils.py", line 286, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/zac/Library/Python/3.9/lib/python/site-packages/openai/resources/chat/completions/completions.py", line 1192, in create
+    return self._post(
+  File "/Users/zac/Library/Python/3.9/lib/python/site-packages/openai/_base_client.py", line 1259, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+  File "/Users/zac/Library/Python/3.9/lib/python/site-packages/openai/_base_client.py", line 1047, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.BadRequestError: Error code: 400 - {'error': {'message': "Unsupported parameter: 'max_tokens' is not supported with this model. Use 'max_completion_tokens' instead.", 'type': 'invalid_request_error', 'param': 'max_tokens', 'code': 'unsupported_parameter'}}
+
+❌ Error on wildchat_028fbc5691e528f09387ae2a0e3f7f3d: Error code: 400 - {'error': {'message': "Unsupported parameter: 'max_tokens' is not supported with this model. Use 'max_completion_tokens' instead.", 'type': 'invalid_request_error', 'param': 'max_tokens', 'code': 'unsupported_parameter'}}
+Progress: 45/50 (90%)Traceback (most recent call last):
+  File "/Users/zac/Downloads/Cartography/classifier/classifier-openai-social-role-theory.py", line 513, in classify_batch
+    result = classify_conversation(
+  File "/Users/zac/Downloads/Cartography/classifier/classifier-openai-social-role-theory.py", line 475, in classify_conversation
+    classification = classify_messages(client, conversation["messages"], few_shot_examples, model)
+  File "/Users/zac/Downloads/Cartography/classifier/classifier-openai-social-role-theory.py", line 452, in classify_messages
+    response = client.chat.completions.create(
+  File "/Users/zac/Library/Python/3.9/lib/python/site-packages/openai/_utils/_utils.py", line 286, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/zac/Library/Python/3.9/lib/python/site-packages/openai/resources/chat/completions/completions.py", line 1192, in create
+    return self._post(
+  File "/Users/zac/Library/Python/3.9/lib/python/site-packages/openai/_base_client.py", line 1259, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+  File "/Users/zac/Library/Python/3.9/lib/python/site-packages/openai/_base_client.py", line 1047, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.BadRequestError: Error code: 400 - {'error': {'message': "Unsupported parameter: 'max_tokens' is not supported with this model. Use 'max_completion_tokens' instead.", 'type': 'invalid_request_error', 'param': 'max_tokens', 'code': 'unsupported_parameter'}}
+
+❌ Error on wildchat_95576b6c26c13d29fe085295bcfdcdc5: Error code: 400 - {'error': {'message': "Unsupported parameter: 'max_tokens' is not supported with this model. Use 'max_completion_tokens' instead.", 'type': 'invalid_request_error', 'param': 'max_tokens', 'code': 'unsupported_parameter'}}
+Progress: 46/50 (92%)Traceback (most recent call last):
+  File "/Users/zac/Downloads/Cartography/classifier/classifier-openai-social-role-theory.py", line 513, in classify_batch
+    result = classify_conversation(
+  File "/Users/zac/Downloads/Cartography/classifier/classifier-openai-social-role-theory.py", line 475, in classify_conversation
+    classification = classify_messages(client, conversation["messages"], few_shot_examples, model)
+  File "/Users/zac/Downloads/Cartography/classifier/classifier-openai-social-role-theory.py", line 452, in classify_messages
+    response = client.chat.completions.create(
+  File "/Users/zac/Library/Python/3.9/lib/python/site-packages/openai/_utils/_utils.py", line 286, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/zac/Library/Python/3.9/lib/python/site-packages/openai/resources/chat/completions/completions.py", line 1192, in create
+    return self._post(
+  File "/Users/zac/Library/Python/3.9/lib/python/site-packages/openai/_base_client.py", line 1259, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+  File "/Users/zac/Library/Python/3.9/lib/python/site-packages/openai/_base_client.py", line 1047, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.BadRequestError: Error code: 400 - {'error': {'message': "Unsupported parameter: 'max_tokens' is not supported with this model. Use 'max_completion_tokens' instead.", 'type': 'invalid_request_error', 'param': 'max_tokens', 'code': 'unsupported_parameter'}}
+
+❌ Error on wildchat_da481b6d92f3275a88234d2eb6aee82d: Error code: 400 - {'error': {'message': "Unsupported parameter: 'max_tokens' is not supported with this model. Use 'max_completion_tokens' instead.", 'type': 'invalid_request_error', 'param': 'max_tokens', 'code': 'unsupported_parameter'}}
+Progress: 47/50 (94%)Traceback (most recent call last):
+  File "/Users/zac/Downloads/Cartography/classifier/classifier-openai-social-role-theory.py", line 513, in classify_batch
+    result = classify_conversation(
+  File "/Users/zac/Downloads/Cartography/classifier/classifier-openai-social-role-theory.py", line 475, in classify_conversation
+    classification = classify_messages(client, conversation["messages"], few_shot_examples, model)
+  File "/Users/zac/Downloads/Cartography/classifier/classifier-openai-social-role-theory.py", line 452, in classify_messages
+    response = client.chat.completions.create(
+  File "/Users/zac/Library/Python/3.9/lib/python/site-packages/openai/_utils/_utils.py", line 286, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/zac/Library/Python/3.9/lib/python/site-packages/openai/resources/chat/completions/completions.py", line 1192, in create
+    return self._post(
+  File "/Users/zac/Library/Python/3.9/lib/python/site-packages/openai/_base_client.py", line 1259, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+  File "/Users/zac/Library/Python/3.9/lib/python/site-packages/openai/_base_client.py", line 1047, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.BadRequestError: Error code: 400 - {'error': {'message': "Unsupported parameter: 'max_tokens' is not supported with this model. Use 'max_completion_tokens' instead.", 'type': 'invalid_request_error', 'param': 'max_tokens', 'code': 'unsupported_parameter'}}
+
+❌ Error on wildchat_53816f2ccf92d479bb7f2427ee501f70: Error code: 400 - {'error': {'message': "Unsupported parameter: 'max_tokens' is not supported with this model. Use 'max_completion_tokens' instead.", 'type': 'invalid_request_error', 'param': 'max_tokens', 'code': 'unsupported_parameter'}}
+Progress: 48/50 (96%)Traceback (most recent call last):
+  File "/Users/zac/Downloads/Cartography/classifier/classifier-openai-social-role-theory.py", line 513, in classify_batch
+    result = classify_conversation(
+  File "/Users/zac/Downloads/Cartography/classifier/classifier-openai-social-role-theory.py", line 475, in classify_conversation
+    classification = classify_messages(client, conversation["messages"], few_shot_examples, model)
+  File "/Users/zac/Downloads/Cartography/classifier/classifier-openai-social-role-theory.py", line 452, in classify_messages
+    response = client.chat.completions.create(
+  File "/Users/zac/Library/Python/3.9/lib/python/site-packages/openai/_utils/_utils.py", line 286, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/zac/Library/Python/3.9/lib/python/site-packages/openai/resources/chat/completions/completions.py", line 1192, in create
+    return self._post(
+  File "/Users/zac/Library/Python/3.9/lib/python/site-packages/openai/_base_client.py", line 1259, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+  File "/Users/zac/Library/Python/3.9/lib/python/site-packages/openai/_base_client.py", line 1047, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.BadRequestError: Error code: 400 - {'error': {'message': "Unsupported parameter: 'max_tokens' is not supported with this model. Use 'max_completion_tokens' instead.", 'type': 'invalid_request_error', 'param': 'max_tokens', 'code': 'unsupported_parameter'}}
+
+❌ Error on wildchat_44245989eabcd206c7c9b77e3c89613f: Error code: 400 - {'error': {'message': "Unsupported parameter: 'max_tokens' is not supported with this model. Use 'max_completion_tokens' instead.", 'type': 'invalid_request_error', 'param': 'max_tokens', 'code': 'unsupported_parameter'}}
+Progress: 49/50 (98%)Traceback (most recent call last):
+  File "/Users/zac/Downloads/Cartography/classifier/classifier-openai-social-role-theory.py", line 513, in classify_batch
+    result = classify_conversation(
+  File "/Users/zac/Downloads/Cartography/classifier/classifier-openai-social-role-theory.py", line 475, in classify_conversation
+    classification = classify_messages(client, conversation["messages"], few_shot_examples, model)
+  File "/Users/zac/Downloads/Cartography/classifier/classifier-openai-social-role-theory.py", line 452, in classify_messages
+    response = client.chat.completions.create(
+  File "/Users/zac/Library/Python/3.9/lib/python/site-packages/openai/_utils/_utils.py", line 286, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/zac/Library/Python/3.9/lib/python/site-packages/openai/resources/chat/completions/completions.py", line 1192, in create
+    return self._post(
+  File "/Users/zac/Library/Python/3.9/lib/python/site-packages/openai/_base_client.py", line 1259, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+  File "/Users/zac/Library/Python/3.9/lib/python/site-packages/openai/_base_client.py", line 1047, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.BadRequestError: Error code: 400 - {'error': {'message': "Unsupported parameter: 'max_tokens' is not supported with this model. Use 'max_completion_tokens' instead.", 'type': 'invalid_request_error', 'param': 'max_tokens', 'code': 'unsupported_parameter'}}
+
+❌ Error on wildchat_b7db90277f8f59a64930a5fcc3d812a1: Error code: 400 - {'error': {'message': "Unsupported parameter: 'max_tokens' is not supported with this model. Use 'max_completion_tokens' instead.", 'type': 'invalid_request_error', 'param': 'max_tokens', 'code': 'unsupported_parameter'}}
+Progress: 50/50 (100%)
+
+Writing to wildchat-50-results-gpt5.2.json...
+✅ Combined results saved to wildchat-50-results-gpt5.2.json
+
+✅ Classification complete! Processed 0/50 conversations successfully

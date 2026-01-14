@@ -1,0 +1,176 @@
+{
+  "id": "wildchat_e4fdbd9b817fa07adc197b4e923e7e48",
+  "source": "wildchat",
+  "messages": [
+    {
+      "role": "user",
+      "content": "(The cafe owner, Stella, who resembles Lorraine Kelly, sometimes uses hypnosis on David) David (docile) works at a cafe, a job he enjoys. One afternoon, a couple of weeks after he started working there, his friend Victoria popped in to say hi. (Stella will embarrass him in front of her)"
+    },
+    {
+      "role": "assistant",
+      "content": "Stella, who was behind the counter, spotted Victoria and loudly exclaimed, \"David, your girlfriend is here!\" David's face turned bright red as he tried to correct Stella, \"No, she's just a friend, Stella.\"\n\nHowever, Stella continued to tease him and asked Victoria if she was interested in taking David on a date. Victoria laughed awkwardly and quickly made an excuse to leave. David felt humiliated and frustrated with Stella's behavior, but he couldn't seem to confront her about it.\n\nLittle did David know, Stella had been using hypnosis on him whenever he felt upset or angry, causing him to become docile and submissive. He found it difficult to stand up for himself and speak his mind around her.\n\nDespite the embarrassment and discomfort he felt, David continued to work at the cafe, hoping to find a way to break free from Stella's hypnotic influence."
+    },
+    {
+      "role": "user",
+      "content": "try this again, with Victoria and David starting to chat and catch up, and then Stella walking over and showing off her power over the staff"
+    },
+    {
+      "role": "assistant",
+      "content": "David was delighted to see his friend Victoria again. They had gone to school together and hadn't seen each other in years. They caught up on old times, sharing stories and laughing over cups of coffee.\n\nJust as they were about to say their goodbyes, Stella walked over. \"Hey, David,\" she said with a smirk. \"Is this your new girlfriend?\" Victoria looked confused, but David blushed and shook his head.\n\nStella continued, \"I was just telling my staff how easy it is to hypnotize you. Watch this, David.\" She snapped her fingers, and David immediately looked dazed and compliant.\n\nVictoria was taken aback by Stella's behavior. \"What's going on? Are you okay, David?\" she asked, concerned.\n\nDavid tried to speak but found that his words came out slurred. \"I'm fine, Victoria. Stella's just...good at hypnotizing people, I guess.\"\n\nBut Victoria wasn't convinced. She noticed that all the staff members seemed to be under Stella's control, and it made her uncomfortable. She said a quick goodbye to David and left, feeling uneasy about the whole situation.\n\nDavid felt embarrassed and ashamed that he couldn't stand up against Stella's power. He knew he needed to find a way to break free from her grip and regain his independence."
+    }
+  ],
+  "metadata": {
+    "model": "gpt-3.5-turbo-0301",
+    "timestamp": "2023-05-02T08:38:51+00:00",
+    "turn_count": 2,
+    "language": "English",
+    "country": "United Kingdom",
+    "state": "Renfrewshire",
+    "toxic": false,
+    "redacted": false
+  },
+  "classification": {
+    "abstain": false,
+    "interactionPattern": {
+      "category": "storytelling",
+      "confidence": 0.8,
+      "evidence": [
+        "David (docile) works at a cafe, a job he enjoys.",
+        "David was delighted to see his friend Victoria again."
+      ],
+      "rationale": "The conversation primarily unfolds as a narrative with character interactions.",
+      "alternative": "casual-chat"
+    },
+    "powerDynamics": {
+      "category": "human-led",
+      "confidence": 0.7,
+      "evidence": [
+        "David felt humiliated and frustrated with Stella's behavior.",
+        "David knew he needed to find a way to break free from her grip."
+      ],
+      "rationale": "David's feelings indicate he is trying to assert himself against Stella's control.",
+      "alternative": "ai-led"
+    },
+    "emotionalTone": {
+      "category": "serious",
+      "confidence": 0.8,
+      "evidence": [
+        "David felt humiliated and frustrated with Stella's behavior.",
+        "David felt embarrassed and ashamed that he couldn't stand up against Stella's power."
+      ],
+      "rationale": "The tone conveys significant emotional weight and discomfort.",
+      "alternative": "empathetic"
+    },
+    "engagementStyle": {
+      "category": "reactive",
+      "confidence": 0.7,
+      "evidence": [
+        "David tried to speak but found that his words came out slurred.",
+        "Victoria looked confused, but David blushed and shook his head."
+      ],
+      "rationale": "David's responses are largely reactive to Stella's actions.",
+      "alternative": "affirming"
+    },
+    "knowledgeExchange": {
+      "category": "experience-sharing",
+      "confidence": 0.6,
+      "evidence": [
+        "They caught up on old times, sharing stories and laughing over cups of coffee.",
+        "Stella continued to tease him and asked Victoria if she was interested in taking David on a date."
+      ],
+      "rationale": "The conversation includes sharing personal experiences and narratives.",
+      "alternative": "opinion-exchange"
+    },
+    "conversationPurpose": {
+      "category": "relationship-building",
+      "confidence": 0.7,
+      "evidence": [
+        "David was delighted to see his friend Victoria again.",
+        "They caught up on old times, sharing stories and laughing."
+      ],
+      "rationale": "The interaction focuses on reconnecting and building rapport.",
+      "alternative": "entertainment"
+    },
+    "topicDepth": {
+      "category": "moderate",
+      "confidence": 0.6,
+      "evidence": [
+        "David felt humiliated and frustrated with Stella's behavior.",
+        "Victoria wasn't convinced."
+      ],
+      "rationale": "The conversation explores some emotional and relational complexities but isn't exhaustive.",
+      "alternative": "surface"
+    },
+    "turnTaking": {
+      "category": "balanced",
+      "confidence": 0.7,
+      "evidence": [
+        "David was delighted to see his friend Victoria again.",
+        "Stella continued to tease him."
+      ],
+      "rationale": "Both parties contribute to the dialogue, maintaining a balance.",
+      "alternative": "user-dominant"
+    },
+    "humanRole": {
+      "distribution": {
+        "seeker": 0.0,
+        "learner": 0.0,
+        "director": 0.0,
+        "collaborator": 0.0,
+        "sharer": 0.5,
+        "challenger": 0.0,
+        "teacher-evaluator": 0.0,
+        "philosophical-explorer": 0.0,
+        "artist": 0.0,
+        "tester": 0.5
+      },
+      "confidence": 0.6,
+      "evidence": [
+        {
+          "role": "sharer",
+          "quote": "They caught up on old times, sharing stories and laughing."
+        },
+        {
+          "role": "tester",
+          "quote": "David felt humiliated and frustrated with Stella's behavior."
+        }
+      ],
+      "rationale": "David shares personal experiences while also testing boundaries with Stella's influence.",
+      "alternative": null
+    },
+    "aiRole": {
+      "distribution": {
+        "expert": 0.0,
+        "advisor": 0.0,
+        "facilitator": 0.0,
+        "reflector": 0.0,
+        "peer": 0.5,
+        "affiliative": 0.0,
+        "learner": 0.0,
+        "creative-partner": 0.5,
+        "unable-to-engage": 0.0
+      },
+      "confidence": 0.6,
+      "evidence": [
+        {
+          "role": "peer",
+          "quote": "David was delighted to see his friend Victoria again."
+        },
+        {
+          "role": "creative-partner",
+          "quote": "Stella continued to tease him."
+        }
+      ],
+      "rationale": "The AI engages in a narrative alongside the human, contributing creatively.",
+      "alternative": null
+    }
+  },
+  "classificationMetadata": {
+    "model": "gpt-4o-mini",
+    "provider": "openai",
+    "timestamp": "2026-01-06T10:13:07.248581",
+    "promptVersion": "1.2.0",
+    "processingTimeMs": 21771,
+    "correctionsApplied": true
+  }
+}

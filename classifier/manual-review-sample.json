@@ -1,0 +1,831 @@
+[
+  {
+    "id": "cornell-6",
+    "sequence": 1,
+    "conversation": {
+      "messages": [
+        {
+          "role": "user",
+          "content": "How is our little Find the Wench A Date plan progressing?"
+        },
+        {
+          "role": "assistant",
+          "content": "Well, there's someone I think might be --"
+        }
+      ],
+      "preview": "[USER] How is our little Find the Wench A Date plan progressing?\n[ASSISTANT] Well, there's someone I think might be --"
+    },
+    "classification": {
+      "aiRole": {
+        "distribution": {
+          "expert": 0.0,
+          "advisor": 0.0,
+          "facilitator": 1.0,
+          "reflector": 0.0,
+          "peer": 0.0,
+          "affiliative": 0.0,
+          "learner": 0.0,
+          "creative-partner": 0.0,
+          "unable-to-engage": 0.0
+        },
+        "confidence": 0.8,
+        "dominant_role": "facilitator",
+        "dominant_prob": 1.0
+      },
+      "humanRole": {
+        "distribution": {
+          "seeker": 1.0,
+          "learner": 0.0,
+          "director": 0.0,
+          "collaborator": 0.0,
+          "sharer": 0.0,
+          "challenger": 0.0,
+          "teacher-evaluator": 0.0,
+          "philosophical-explorer": 0.0,
+          "artist": 0.0
+        },
+        "confidence": 0.8
+      },
+      "interactionPattern": {
+        "category": "casual-chat",
+        "confidence": 0.8,
+        "evidence": [
+          "How is our little Find the Wench A Date plan progressing?"
+        ],
+        "rationale": "The question indicates a casual conversation about an ongoing plan.",
+        "alternative": null
+      },
+      "conversationPurpose": {
+        "category": "information-seeking",
+        "confidence": 0.8,
+        "evidence": [
+          "How is our little Find the Wench A Date plan progressing?"
+        ],
+        "rationale": "The question aims to gather information about a specific plan.",
+        "alternative": null
+      }
+    },
+    "manualReview": {
+      "shouldBeExpert": null,
+      "shouldBeFacilitator": null,
+      "correctClassification": null,
+      "notes": "",
+      "reviewed": false
+    }
+  },
+  {
+    "id": "cornell-8",
+    "sequence": 2,
+    "conversation": {
+      "messages": [
+        {
+          "role": "user",
+          "content": "You got something on your mind?"
+        },
+        {
+          "role": "assistant",
+          "content": "I counted on you to help my cause. You and that thug are obviously failing. Aren't we ever going on our date?"
+        }
+      ],
+      "preview": "[USER] You got something on your mind?\n[ASSISTANT] I counted on you to help my cause. You and that thug are obviously failing. Aren't we ever going on our date?"
+    },
+    "classification": {
+      "aiRole": {
+        "distribution": {
+          "expert": 0.2,
+          "advisor": 0.0,
+          "facilitator": 0.8,
+          "reflector": 0.0,
+          "peer": 0.0,
+          "affiliative": 0.0,
+          "learner": 0.0,
+          "creative-partner": 0.0,
+          "unable-to-engage": 0.0
+        },
+        "confidence": 0.8,
+        "dominant_role": "facilitator",
+        "dominant_prob": 0.8
+      },
+      "humanRole": {
+        "distribution": {
+          "seeker": 0.7,
+          "learner": 0.2,
+          "director": 0.1,
+          "collaborator": 0.0,
+          "sharer": 0.0,
+          "challenger": 0.0,
+          "teacher-evaluator": 0.0,
+          "philosophical-explorer": 0.0,
+          "artist": 0.0,
+          "tester": 0.0
+        },
+        "confidence": 0.8
+      },
+      "interactionPattern": {
+        "category": "casual-chat",
+        "confidence": 0.7,
+        "evidence": [
+          "You got something on your mind?",
+          "I counted on you to help my cause. You and that thug are obviously failing. Aren't we ever going on our date?"
+        ],
+        "rationale": "The conversation is informal and revolves around personal matters, indicating a casual chat.",
+        "alternative": null
+      },
+      "conversationPurpose": {
+        "category": "information-seeking",
+        "confidence": 0.8,
+        "evidence": [
+          "I counted on you to help my cause."
+        ],
+        "rationale": "The AI is seeking assistance, indicating an information-seeking purpose.",
+        "alternative": null
+      }
+    },
+    "manualReview": {
+      "shouldBeExpert": null,
+      "shouldBeFacilitator": null,
+      "correctClassification": null,
+      "notes": "",
+      "reviewed": false
+    }
+  },
+  {
+    "id": "cornell-9",
+    "sequence": 3,
+    "conversation": {
+      "messages": [
+        {
+          "role": "user",
+          "content": "You have my word.  As a gentleman"
+        },
+        {
+          "role": "assistant",
+          "content": "You're sweet."
+        }
+      ],
+      "preview": "[USER] You have my word.  As a gentleman\n[ASSISTANT] You're sweet."
+    },
+    "classification": {
+      "aiRole": {
+        "distribution": {
+          "expert": 0.0,
+          "advisor": 0.0,
+          "facilitator": 0.556,
+          "reflector": 0.0,
+          "peer": 0.0,
+          "affiliative": 0.444,
+          "learner": 0.0,
+          "creative-partner": 0.0,
+          "unable-to-engage": 0.0
+        },
+        "confidence": 0.8,
+        "dominant_role": "facilitator",
+        "dominant_prob": 0.556
+      },
+      "humanRole": {
+        "distribution": {
+          "seeker": 0.0,
+          "learner": 0.0,
+          "director": 0.0,
+          "collaborator": 0.0,
+          "sharer": 1.0,
+          "challenger": 0.0,
+          "teacher-evaluator": 0.0,
+          "philosophical-explorer": 0.0,
+          "artist": 0.0,
+          "tester": 0.0
+        },
+        "confidence": 0.8
+      },
+      "interactionPattern": {
+        "category": "casual-chat",
+        "confidence": 0.7,
+        "evidence": [
+          "You're sweet."
+        ],
+        "rationale": "The response indicates a friendly and casual exchange.",
+        "alternative": null
+      },
+      "conversationPurpose": {
+        "category": "relationship-building",
+        "confidence": 0.8,
+        "evidence": [
+          "You're sweet."
+        ],
+        "rationale": "The response aims to maintain and enhance the friendly rapport between the participants.",
+        "alternative": null
+      }
+    },
+    "manualReview": {
+      "shouldBeExpert": null,
+      "shouldBeFacilitator": null,
+      "correctClassification": null,
+      "notes": "",
+      "reviewed": false
+    }
+  },
+  {
+    "id": "kaggle-emo-0",
+    "sequence": 4,
+    "conversation": {
+      "messages": [
+        {
+          "role": "user",
+          "content": "I remember going to see the fireworks with my best friend. It was the first time we ever spent time alone together. Although there was a lot of people, we felt like the only people in the world."
+        },
+        {
+          "role": "assistant",
+          "content": ""
+        }
+      ],
+      "preview": "[USER] I remember going to see the fireworks with my best friend. It was the first time we ever spent time alone together. Although there was a lot of people, we felt like the only people in the world.\n[ASSISTANT] "
+    },
+    "classification": {
+      "aiRole": {
+        "distribution": {
+          "expert": 0.0,
+          "advisor": 0.0,
+          "facilitator": 1.0,
+          "reflector": 0.0,
+          "peer": 0.0,
+          "affiliative": 0.0,
+          "learner": 0.0,
+          "creative-partner": 0.0,
+          "unable-to-engage": 0.0
+        },
+        "confidence": 0.8,
+        "dominant_role": "facilitator",
+        "dominant_prob": 1.0
+      },
+      "humanRole": {
+        "distribution": {
+          "seeker": 0.0,
+          "learner": 0.0,
+          "director": 0.0,
+          "collaborator": 0.0,
+          "sharer": 1.0,
+          "challenger": 0.0,
+          "teacher-evaluator": 0.0,
+          "philosophical-explorer": 0.0,
+          "artist": 0.0,
+          "tester": 0.0
+        },
+        "confidence": 0.8
+      },
+      "interactionPattern": {
+        "category": "casual-chat",
+        "confidence": 0.8,
+        "evidence": [
+          "It was the first time we ever spent time alone together."
+        ],
+        "rationale": "The human reminisces about a past experience with their best friend, indicating a casual conversation.",
+        "alternative": null
+      },
+      "conversationPurpose": {
+        "category": "self-expression",
+        "confidence": 0.8,
+        "evidence": [
+          "It was the first time we ever spent time alone together."
+        ],
+        "rationale": "The human is expressing their feelings and memories, which aligns with self-expression.",
+        "alternative": null
+      }
+    },
+    "manualReview": {
+      "shouldBeExpert": null,
+      "shouldBeFacilitator": null,
+      "correctClassification": null,
+      "notes": "",
+      "reviewed": false
+    }
+  },
+  {
+    "id": "kaggle-emo-1",
+    "sequence": 5,
+    "conversation": {
+      "messages": [
+        {
+          "role": "user",
+          "content": "This was a best friend. I miss her."
+        },
+        {
+          "role": "assistant",
+          "content": ""
+        }
+      ],
+      "preview": "[USER] This was a best friend. I miss her.\n[ASSISTANT] "
+    },
+    "classification": {
+      "aiRole": {
+        "distribution": {
+          "expert": 0.087,
+          "advisor": 0.087,
+          "facilitator": 0.523,
+          "reflector": 0.174,
+          "peer": 0.043,
+          "affiliative": 0.043,
+          "learner": 0.043,
+          "creative-partner": 0.0,
+          "unable-to-engage": 0.0
+        },
+        "confidence": 0.8,
+        "dominant_role": "facilitator",
+        "dominant_prob": 0.523
+      },
+      "humanRole": {
+        "distribution": {
+          "seeker": 0.709,
+          "learner": 0.088,
+          "director": 0.044,
+          "collaborator": 0.035,
+          "sharer": 0.044,
+          "challenger": 0.0,
+          "teacher-evaluator": 0.0,
+          "philosophical-explorer": 0.0,
+          "artist": 0.0,
+          "tester": 0.08
+        },
+        "confidence": 0.8
+      },
+      "interactionPattern": {
+        "category": "casual-chat",
+        "confidence": 0.7,
+        "evidence": [
+          "This was a best friend. I miss her."
+        ],
+        "rationale": "The statement expresses personal feelings about a past friendship, indicating a casual conversation.",
+        "alternative": null
+      },
+      "conversationPurpose": {
+        "category": "self-expression",
+        "confidence": 0.8,
+        "evidence": [
+          "This was a best friend. I miss her."
+        ],
+        "rationale": "The user is expressing personal feelings and memories, which serves as self-expression.",
+        "alternative": null
+      }
+    },
+    "manualReview": {
+      "shouldBeExpert": null,
+      "shouldBeFacilitator": null,
+      "correctClassification": null,
+      "notes": "",
+      "reviewed": false
+    }
+  },
+  {
+    "id": "kaggle-emo-3",
+    "sequence": 6,
+    "conversation": {
+      "messages": [
+        {
+          "role": "user",
+          "content": "Was this a friend you were in love with, or just a best friend?"
+        },
+        {
+          "role": "assistant",
+          "content": ""
+        }
+      ],
+      "preview": "[USER] Was this a friend you were in love with, or just a best friend?\n[ASSISTANT] "
+    },
+    "classification": {
+      "aiRole": {
+        "distribution": {
+          "expert": 0.0,
+          "advisor": 0.0,
+          "facilitator": 1.0,
+          "reflector": 0.0,
+          "peer": 0.0,
+          "affiliative": 0.0,
+          "learner": 0.0,
+          "creative-partner": 0.0,
+          "unable-to-engage": 0.0
+        },
+        "confidence": 0.8,
+        "dominant_role": "facilitator",
+        "dominant_prob": 1.0
+      },
+      "humanRole": {
+        "distribution": {
+          "seeker": 1.0,
+          "learner": 0.0,
+          "director": 0.0,
+          "collaborator": 0.0,
+          "sharer": 0.0,
+          "challenger": 0.0,
+          "teacher-evaluator": 0.0,
+          "philosophical-explorer": 0.0,
+          "artist": 0.0,
+          "tester": 0.0
+        },
+        "confidence": 0.8
+      },
+      "interactionPattern": {
+        "category": "casual-chat",
+        "confidence": 0.8,
+        "evidence": [
+          "Was this a friend you were in love with, or just a best friend?"
+        ],
+        "rationale": "The question is about personal feelings towards a friend.",
+        "alternative": null
+      },
+      "conversationPurpose": {
+        "category": "information-seeking",
+        "confidence": 0.8,
+        "evidence": [
+          "Was this a friend you were in love with, or just a best friend?"
+        ],
+        "rationale": "The user is seeking to understand the nature of a relationship.",
+        "alternative": null
+      }
+    },
+    "manualReview": {
+      "shouldBeExpert": null,
+      "shouldBeFacilitator": null,
+      "correctClassification": null,
+      "notes": "",
+      "reviewed": false
+    }
+  },
+  {
+    "id": "kaggle-emo-5",
+    "sequence": 7,
+    "conversation": {
+      "messages": [
+        {
+          "role": "user",
+          "content": "it feels like hitting to blank wall when i see the darkness"
+        },
+        {
+          "role": "assistant",
+          "content": ""
+        }
+      ],
+      "preview": "[USER] it feels like hitting to blank wall when i see the darkness\n[ASSISTANT] "
+    },
+    "classification": {
+      "aiRole": {
+        "distribution": {
+          "expert": 0.2,
+          "advisor": 0.1,
+          "facilitator": 0.6,
+          "reflector": 0.0,
+          "peer": 0.0,
+          "affiliative": 0.0,
+          "learner": 0.0,
+          "creative-partner": 0.0,
+          "unable-to-engage": 0.1
+        },
+        "confidence": 0.8,
+        "dominant_role": "facilitator",
+        "dominant_prob": 0.6
+      },
+      "humanRole": {
+        "distribution": {
+          "seeker": 0.7,
+          "learner": 0.2,
+          "director": 0.1,
+          "collaborator": 0.0,
+          "sharer": 0.0,
+          "challenger": 0.0,
+          "teacher-evaluator": 0.0,
+          "philosophical-explorer": 0.0,
+          "artist": 0.0,
+          "tester": 0.0
+        },
+        "confidence": 0.8
+      },
+      "interactionPattern": {
+        "category": "casual-chat",
+        "confidence": 0.7,
+        "evidence": [
+          "it feels like hitting to blank wall when i see the darkness"
+        ],
+        "rationale": "The user expresses a feeling of being overwhelmed by darkness, which suggests a casual and emotional exchange.",
+        "alternative": null
+      },
+      "conversationPurpose": {
+        "category": "emotional-processing",
+        "confidence": 0.8,
+        "evidence": [
+          "it feels like hitting to blank wall when i see the darkness"
+        ],
+        "rationale": "The statement appears to be an expression of emotional state, suggesting a purpose related to processing emotions.",
+        "alternative": null
+      }
+    },
+    "manualReview": {
+      "shouldBeExpert": null,
+      "shouldBeFacilitator": null,
+      "correctClassification": null,
+      "notes": "",
+      "reviewed": false
+    }
+  },
+  {
+    "id": "kaggle-emo-9",
+    "sequence": 8,
+    "conversation": {
+      "messages": [
+        {
+          "role": "user",
+          "content": "I do actually hit blank walls a lot of times but i get by"
+        },
+        {
+          "role": "assistant",
+          "content": ""
+        }
+      ],
+      "preview": "[USER] I do actually hit blank walls a lot of times but i get by\n[ASSISTANT] "
+    },
+    "classification": {
+      "aiRole": {
+        "distribution": {
+          "expert": 0.0,
+          "advisor": 0.0,
+          "facilitator": 1.0,
+          "reflector": 0.0,
+          "peer": 0.0,
+          "affiliative": 0.0,
+          "learner": 0.0,
+          "creative-partner": 0.0,
+          "unable-to-engage": 0.0
+        },
+        "confidence": 0.8,
+        "dominant_role": "facilitator",
+        "dominant_prob": 1.0
+      },
+      "humanRole": {
+        "distribution": {
+          "seeker": 1.0,
+          "learner": 0.0,
+          "director": 0.0,
+          "collaborator": 0.0,
+          "sharer": 0.0,
+          "challenger": 0.0,
+          "teacher-evaluator": 0.0,
+          "philosophical-explorer": 0.0,
+          "artist": 0.0,
+          "tester": 0.0
+        },
+        "confidence": 0.8
+      },
+      "interactionPattern": {
+        "category": null,
+        "confidence": 0.6,
+        "evidence": [
+          "exact quote"
+        ],
+        "rationale": "Brief explanation",
+        "alternative": null
+      },
+      "conversationPurpose": {
+        "category": null,
+        "confidence": 0.5,
+        "evidence": [
+          "exact quote"
+        ],
+        "rationale": "Brief explanation",
+        "alternative": null
+      }
+    },
+    "manualReview": {
+      "shouldBeExpert": null,
+      "shouldBeFacilitator": null,
+      "correctClassification": null,
+      "notes": "",
+      "reviewed": false
+    }
+  },
+  {
+    "id": "cornell-3",
+    "sequence": 9,
+    "conversation": {
+      "messages": [
+        {
+          "role": "user",
+          "content": "Why?"
+        },
+        {
+          "role": "assistant",
+          "content": "Unsolved mystery.  She used to be really popular when she started high school, then it was just like she got sick of it or something."
+        },
+        {
+          "role": "user",
+          "content": "That's a shame."
+        }
+      ],
+      "preview": "[USER] Why?\n[ASSISTANT] Unsolved mystery.  She used to be really popular when she started high school, then it was just like she got sick of it or something.\n[USER] That's a shame."
+    },
+    "classification": {
+      "aiRole": {
+        "distribution": {
+          "expert": 0.0,
+          "advisor": 0.0,
+          "facilitator": 1.0,
+          "reflector": 0.0,
+          "peer": 0.0,
+          "affiliative": 0.0,
+          "learner": 0.0,
+          "creative-partner": 0.0,
+          "unable-to-engage": 0.0
+        },
+        "confidence": 1.0,
+        "dominant_role": "facilitator",
+        "dominant_prob": 1.0
+      },
+      "humanRole": {
+        "distribution": {
+          "seeker": 1.0,
+          "learner": 0.0,
+          "director": 0.0,
+          "collaborator": 0.0,
+          "sharer": 0.0,
+          "challenger": 0.0,
+          "teacher-evaluator": 0.0,
+          "philosophical-explorer": 0.0,
+          "artist": 0.0,
+          "tester": 0.0
+        },
+        "confidence": 1.0
+      },
+      "interactionPattern": {
+        "category": "casual-chat",
+        "confidence": 0.8,
+        "evidence": [
+          "Why?",
+          "That's a shame."
+        ],
+        "rationale": "The conversation involves casual discussion about a person's change in popularity.",
+        "alternative": null
+      },
+      "conversationPurpose": {
+        "category": "information-seeking",
+        "confidence": 0.8,
+        "evidence": [
+          "Why?"
+        ],
+        "rationale": "The initial question seeks clarification or explanation.",
+        "alternative": null
+      }
+    },
+    "manualReview": {
+      "shouldBeExpert": null,
+      "shouldBeFacilitator": null,
+      "correctClassification": null,
+      "notes": "",
+      "reviewed": false
+    }
+  },
+  {
+    "id": "cornell-7",
+    "sequence": 10,
+    "conversation": {
+      "messages": [
+        {
+          "role": "user",
+          "content": "There."
+        },
+        {
+          "role": "assistant",
+          "content": "Where?"
+        }
+      ],
+      "preview": "[USER] There.\n[ASSISTANT] Where?"
+    },
+    "classification": {
+      "aiRole": {
+        "distribution": {
+          "expert": 0.0,
+          "advisor": 0.0,
+          "facilitator": 1.0,
+          "reflector": 0.0,
+          "peer": 0.0,
+          "affiliative": 0.0,
+          "learner": 0.0,
+          "creative-partner": 0.0,
+          "unable-to-engage": 0.0
+        },
+        "confidence": 1.0,
+        "dominant_role": "facilitator",
+        "dominant_prob": 1.0
+      },
+      "humanRole": {
+        "distribution": {
+          "seeker": 1.0,
+          "learner": 0.0,
+          "director": 0.0,
+          "collaborator": 0.0,
+          "sharer": 0.0,
+          "challenger": 0.0,
+          "teacher-evaluator": 0.0,
+          "philosophical-explorer": 0.0,
+          "artist": 0.0,
+          "tester": 0.0
+        },
+        "confidence": 1.0
+      },
+      "interactionPattern": {
+        "category": "question-answer",
+        "confidence": 0.6,
+        "evidence": [
+          "Where?"
+        ],
+        "rationale": "The human provided a vague statement and the AI responded with a question seeking clarification.",
+        "alternative": null
+      },
+      "conversationPurpose": {
+        "category": "information-seeking",
+        "confidence": 0.8,
+        "evidence": [
+          "Where?"
+        ],
+        "rationale": "The AI is trying to gather more details from the human's vague statement.",
+        "alternative": null
+      }
+    },
+    "manualReview": {
+      "shouldBeExpert": null,
+      "shouldBeFacilitator": null,
+      "correctClassification": null,
+      "notes": "",
+      "reviewed": false
+    }
+  },
+  {
+    "id": "kaggle-emo-2",
+    "sequence": 11,
+    "conversation": {
+      "messages": [
+        {
+          "role": "user",
+          "content": "We no longer talk."
+        },
+        {
+          "role": "assistant",
+          "content": ""
+        }
+      ],
+      "preview": "[USER] We no longer talk.\n[ASSISTANT] "
+    },
+    "classification": {
+      "aiRole": {
+        "distribution": {
+          "expert": 0.0,
+          "advisor": 0.0,
+          "facilitator": 1.0,
+          "reflector": 0.0,
+          "peer": 0.0,
+          "affiliative": 0.0,
+          "learner": 0.0,
+          "creative-partner": 0.0,
+          "unable-to-engage": 0.0
+        },
+        "confidence": 1.0,
+        "dominant_role": "facilitator",
+        "dominant_prob": 1.0
+      },
+      "humanRole": {
+        "distribution": {
+          "seeker": 1.0,
+          "learner": 0.0,
+          "director": 0.0,
+          "collaborator": 0.0,
+          "sharer": 0.0,
+          "challenger": 0.0,
+          "teacher-evaluator": 0.0,
+          "philosophical-explorer": 0.0,
+          "artist": 0.0
+        },
+        "confidence": 1.0
+      },
+      "interactionPattern": {
+        "category": "casual-chat",
+        "confidence": 0.9,
+        "evidence": [
+          "We no longer talk."
+        ],
+        "rationale": "The statement indicates a change in the nature of their interaction, suggesting a casual conversation.",
+        "alternative": null
+      },
+      "conversationPurpose": {
+        "category": "information-seeking",
+        "confidence": 0.8,
+        "evidence": [
+          "We no longer talk."
+        ],
+        "rationale": "The statement is seeking to inform or confirm a change in the nature of their interaction.",
+        "alternative": null
+      }
+    },
+    "manualReview": {
+      "shouldBeExpert": null,
+      "shouldBeFacilitator": null,
+      "correctClassification": null,
+      "notes": "",
+      "reviewed": false
+    }
+  }
+]

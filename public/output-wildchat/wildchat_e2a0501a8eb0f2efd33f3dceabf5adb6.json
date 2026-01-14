@@ -84,5 +84,158 @@
     "state": "Guangdong",
     "toxic": false,
     "redacted": false
+  },
+  "classification": {
+    "abstain": false,
+    "interactionPattern": {
+      "category": "advisory",
+      "confidence": 0.78,
+      "evidence": [
+        "please give a matlab example to achieve this function",
+        "Modify and optimize the above program so that the program can work properly",
+        "Here's a step-by-step procedure to process"
+      ],
+      "rationale": "Human requests a MATLAB solution and later asks for modification/optimization; AI responds with step-by-step guidance and code.",
+      "alternative": "question-answer"
+    },
+    "powerDynamics": {
+      "category": "human-led",
+      "confidence": 0.74,
+      "evidence": [
+        "your responsibility is to help me solve the technical problems",
+        "Please proceed with the above answer",
+        "Modify the above procedure"
+      ],
+      "rationale": "Human sets the agenda, constraints, and directs continuation and revisions; AI follows those instructions.",
+      "alternative": "balanced"
+    },
+    "emotionalTone": {
+      "category": "professional",
+      "confidence": 0.86,
+      "evidence": [
+        "You are an expert in the field of data processing and software programming.",
+        "Use the easy-to-understand language in your answer",
+        "Here's the updated program:"
+      ],
+      "rationale": "Task-focused technical exchange with formal, instructional language and no explicit emotional content.",
+      "alternative": "neutral"
+    },
+    "engagementStyle": {
+      "category": "directive-iterative",
+      "confidence": 0.77,
+      "evidence": [
+        "Step-by-step to explain and implement your solution.",
+        "Please proceed with the above answer",
+        "Modify and optimize the above program"
+      ],
+      "rationale": "Human repeatedly directs iterative refinements; AI iterates by providing revised procedures and code.",
+      "alternative": "reactive"
+    },
+    "knowledgeExchange": {
+      "category": "skill-sharing",
+      "confidence": 0.84,
+      "evidence": [
+        "please give a matlab example to achieve this function",
+        "Here's an example code that you can use to process the data:",
+        "I made some modifications and optimization to the code."
+      ],
+      "rationale": "Exchange centers on how-to programming methods and implementation steps in MATLAB.",
+      "alternative": "factual-info"
+    },
+    "conversationPurpose": {
+      "category": "problem-solving",
+      "confidence": 0.82,
+      "evidence": [
+        "help me solve the technical problems",
+        "the purpose is to get the steering wheel Angle and the vehicle yawrate",
+        "so that the program can work properly"
+      ],
+      "rationale": "Goal is to produce working data-processing code and obtain frequency-response curves.",
+      "alternative": "collaborative-refinement"
+    },
+    "topicDepth": {
+      "category": "moderate",
+      "confidence": 0.66,
+      "evidence": [
+        "the ultimate purpose is to get the amplitude and frequency characteristic curve",
+        "Calculate the transfer functions",
+        "bode(sys_sa);"
+      ],
+      "rationale": "Includes concrete signals, preprocessing, transfer-function estimation, and plotting, but not deeply detailed modeling/validation discussion.",
+      "alternative": "deep"
+    },
+    "turnTaking": {
+      "category": "assistant-dominant",
+      "confidence": 0.71,
+      "evidence": [
+        "Sure, I can help you with that. Here's a step-by-step procedure",
+        "Sure, here's the complete code with the appropriate functions included",
+        "Based on the code and requirements you provided, I made some modifications"
+      ],
+      "rationale": "AI contributions are substantially longer (multi-step procedures and full code blocks) than human turns.",
+      "alternative": "balanced"
+    },
+    "humanRole": {
+      "distribution": {
+        "information-seeker": 0.1,
+        "provider": 0.05,
+        "director": 0.75,
+        "collaborator": 0.1,
+        "social-expressor": 0.0,
+        "relational-peer": 0.0
+      },
+      "confidence": 0.78,
+      "evidence": [
+        {
+          "role": "director",
+          "quote": "Modify and optimize the above program so that the program can work properly"
+        },
+        {
+          "role": "director",
+          "quote": "Please proceed with the above answer"
+        },
+        {
+          "role": "information-seeker",
+          "quote": "please give a matlab example to achieve this function"
+        }
+      ],
+      "rationale": "Human primarily specifies requirements, constraints, and directs revisions; also requests information/code initially.",
+      "alternative": "information-seeker"
+    },
+    "aiRole": {
+      "distribution": {
+        "expert-system": 0.35,
+        "learning-facilitator": 0.05,
+        "advisor": 0.55,
+        "co-constructor": 0.05,
+        "social-facilitator": 0.0,
+        "relational-peer": 0.0
+      },
+      "confidence": 0.8,
+      "evidence": [
+        {
+          "role": "advisor",
+          "quote": "Here's a step-by-step procedure to process the vehicle steering wheel angle pulse input experimental data in MATLAB:"
+        },
+        {
+          "role": "expert-system",
+          "quote": "Here's the updated program:"
+        },
+        {
+          "role": "advisor",
+          "quote": "The following are the changes I made:"
+        }
+      ],
+      "rationale": "AI prescribes steps and modifications (advisory) while also providing direct code solutions (expert-system).",
+      "alternative": "expert-system"
+    }
+  },
+  "classificationMetadata": {
+    "model": "gpt-5.2",
+    "provider": "openai",
+    "timestamp": "2026-01-08T17:12:56.456540",
+    "promptVersion": "2.0-social-role-theory",
+    "processingTimeMs": 18960,
+    "fewShotExamples": "yes"
   }
 }

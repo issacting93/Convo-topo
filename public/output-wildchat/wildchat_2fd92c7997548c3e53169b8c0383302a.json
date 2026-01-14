@@ -84,5 +84,158 @@
     "state": "Brandenburg",
     "toxic": false,
     "redacted": false
+  },
+  "classification": {
+    "abstain": false,
+    "interactionPattern": {
+      "category": "advisory",
+      "confidence": 0.72,
+      "evidence": [
+        "can you output proper detailed scheme for this eco-friendly site structure",
+        "Sure, here is a possible outline for the eco-friendly site structure",
+        "Yes, it would be better to organize the information into paragraphs"
+      ],
+      "rationale": "User requests guidance and deliverables (scheme, skeleton). AI responds with recommendations and structured outlines.",
+      "alternative": "question-answer"
+    },
+    "powerDynamics": {
+      "category": "human-led",
+      "confidence": 0.78,
+      "evidence": [
+        "expand eco-friendliness in a whole and reformat all the thing properly",
+        "can you output proper detailed scheme for this eco-friendly site structure",
+        "now output just the site skeleton html markings"
+      ],
+      "rationale": "Human sets the agenda via successive directives and requests; AI follows those instructions.",
+      "alternative": "balanced"
+    },
+    "emotionalTone": {
+      "category": "professional",
+      "confidence": 0.74,
+      "evidence": [
+        "Yes, it would be better to organize the information into paragraphs",
+        "Sure, here is a possible outline",
+        "Note that this is just a basic outline of the HTML markup"
+      ],
+      "rationale": "Task-focused, instructional language with minimal affect.",
+      "alternative": "neutral"
+    },
+    "engagementStyle": {
+      "category": "directive-iterative",
+      "confidence": 0.7,
+      "evidence": [
+        "Yes, it would be better to organize the information into paragraphs",
+        "You can group related information together and use headings",
+        "here is a possible outline for the eco-friendly site structure"
+      ],
+      "rationale": "AI gives prescriptive guidance and iteratively refines outputs (paragraph advice \u2192 outline \u2192 HTML skeleton).",
+      "alternative": "reactive"
+    },
+    "knowledgeExchange": {
+      "category": "skill-sharing",
+      "confidence": 0.76,
+      "evidence": [
+        "organize the information into paragraphs to make it more readable",
+        "provide an example of the basic HTML markup for the site structure",
+        "you would need to fill in the content for each section"
+      ],
+      "rationale": "Exchange centers on how to structure content and implement a site skeleton (procedural/how-to).",
+      "alternative": "factual-info"
+    },
+    "conversationPurpose": {
+      "category": "problem-solving",
+      "confidence": 0.73,
+      "evidence": [
+        "reformat all the thing properly",
+        "output proper detailed scheme for this eco-friendly site structure",
+        "now output just the site skeleton html markings"
+      ],
+      "rationale": "The interaction aims to produce usable artifacts (scheme and HTML skeleton) to complete a website-structuring task.",
+      "alternative": "collaborative-refinement"
+    },
+    "topicDepth": {
+      "category": "moderate",
+      "confidence": 0.62,
+      "evidence": [
+        "output proper detailed scheme for this eco-friendly site structure",
+        "here is a possible outline for the eco-friendly site structure",
+        "provide an example of the basic HTML markup for the site structure"
+      ],
+      "rationale": "Goes beyond surface chat into structured planning and implementation, but not deeply technical or exhaustive.",
+      "alternative": "surface"
+    },
+    "turnTaking": {
+      "category": "assistant-dominant",
+      "confidence": 0.8,
+      "evidence": [
+        "Environmental awareness and sustainability are crucial to ensuring a sustainable future",
+        "Sure, here is a possible outline for the eco-friendly site structure",
+        "Sure, I can provide an example of the basic HTML markup for the site structure"
+      ],
+      "rationale": "AI responses are substantially longer and contain most of the content.",
+      "alternative": "balanced"
+    },
+    "humanRole": {
+      "distribution": {
+        "information-seeker": 0.22,
+        "provider": 0.08,
+        "director": 0.62,
+        "collaborator": 0.06,
+        "social-expressor": 0.01,
+        "relational-peer": 0.01
+      },
+      "confidence": 0.77,
+      "evidence": [
+        {
+          "role": "director",
+          "quote": "now output just the site skeleton html markings"
+        },
+        {
+          "role": "director",
+          "quote": "expand eco-friendliness in a whole and reformat all the thing properly."
+        },
+        {
+          "role": "information-seeker",
+          "quote": "so I should to fill all that into paragraphs?"
+        }
+      ],
+      "rationale": "Human primarily directs outputs and constraints (reformat, scheme, skeleton), with occasional clarification questions.",
+      "alternative": "information-seeker"
+    },
+    "aiRole": {
+      "distribution": {
+        "expert-system": 0.34,
+        "learning-facilitator": 0.03,
+        "advisor": 0.55,
+        "co-constructor": 0.06,
+        "social-facilitator": 0.01,
+        "relational-peer": 0.01
+      },
+      "confidence": 0.79,
+      "evidence": [
+        {
+          "role": "advisor",
+          "quote": "Yes, it would be better to organize the information into paragraphs"
+        },
+        {
+          "role": "advisor",
+          "quote": "Sure, here is a possible outline for the eco-friendly site structure"
+        },
+        {
+          "role": "expert-system",
+          "quote": "I can provide an example of the basic HTML markup for the site structure."
+        }
+      ],
+      "rationale": "AI mainly prescribes organization and provides structured outlines (advisor), while also supplying direct informational content and example markup (expert-system).",
+      "alternative": "expert-system"
+    }
+  },
+  "classificationMetadata": {
+    "model": "gpt-5.2",
+    "provider": "openai",
+    "timestamp": "2026-01-08T16:46:55.049383",
+    "promptVersion": "2.0-social-role-theory",
+    "processingTimeMs": 17625,
+    "fewShotExamples": "yes"
   }
 }

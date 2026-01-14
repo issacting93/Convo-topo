@@ -1,0 +1,103 @@
+Traceback (most recent call last):
+  File "/Users/zac/Downloads/Cartography/classifier/classifier-openai-social-role-theory.py", line 494, in classify_batch
+    result = classify_conversation(
+  File "/Users/zac/Downloads/Cartography/classifier/classifier-openai-social-role-theory.py", line 461, in classify_conversation
+    classification = classify_messages(client, conversation["messages"], few_shot_examples, model)
+  File "/Users/zac/Downloads/Cartography/classifier/classifier-openai-social-role-theory.py", line 438, in classify_messages
+    response = client.chat.completions.create(
+  File "/Users/zac/Library/Python/3.9/lib/python/site-packages/openai/_utils/_utils.py", line 286, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/zac/Library/Python/3.9/lib/python/site-packages/openai/resources/chat/completions/completions.py", line 1192, in create
+    return self._post(
+  File "/Users/zac/Library/Python/3.9/lib/python/site-packages/openai/_base_client.py", line 1259, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+  File "/Users/zac/Library/Python/3.9/lib/python/site-packages/openai/_base_client.py", line 1047, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.AuthenticationError: Error code: 401 - {'error': {'message': "You didn't provide an API key. You need to provide your API key in an Authorization header using Bearer auth (i.e. Authorization: Bearer YOUR_KEY), or as the password field (with blank username) if you're accessing the API from your browser and are prompted for a username and password. You can obtain an API key from https://platform.openai.com/account/api-keys.", 'type': 'invalid_request_error', 'param': None, 'code': None}}
+Loading few-shot examples from few-shot-examples-social-role-theory.json...
+✅ Loaded few-shot examples (12245 characters)
+Loading from test-misclassified.json...
+Found 5 conversations
+
+🎯 Classifying with gpt-4o (OpenAI) using Social Role Theory framework...
+
+
+❌ Error on conv-20: Error code: 401 - {'error': {'message': "You didn't provide an API key. You need to provide your API key in an Authorization header using Bearer auth (i.e. Authorization: Bearer YOUR_KEY), or as the password field (with blank username) if you're accessing the API from your browser and are prompted for a username and password. You can obtain an API key from https://platform.openai.com/account/api-keys.", 'type': 'invalid_request_error', 'param': None, 'code': None}}
+Progress: 1/5 (20%)Traceback (most recent call last):
+  File "/Users/zac/Downloads/Cartography/classifier/classifier-openai-social-role-theory.py", line 494, in classify_batch
+    result = classify_conversation(
+  File "/Users/zac/Downloads/Cartography/classifier/classifier-openai-social-role-theory.py", line 461, in classify_conversation
+    classification = classify_messages(client, conversation["messages"], few_shot_examples, model)
+  File "/Users/zac/Downloads/Cartography/classifier/classifier-openai-social-role-theory.py", line 438, in classify_messages
+    response = client.chat.completions.create(
+  File "/Users/zac/Library/Python/3.9/lib/python/site-packages/openai/_utils/_utils.py", line 286, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/zac/Library/Python/3.9/lib/python/site-packages/openai/resources/chat/completions/completions.py", line 1192, in create
+    return self._post(
+  File "/Users/zac/Library/Python/3.9/lib/python/site-packages/openai/_base_client.py", line 1259, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+  File "/Users/zac/Library/Python/3.9/lib/python/site-packages/openai/_base_client.py", line 1047, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.AuthenticationError: Error code: 401 - {'error': {'message': "You didn't provide an API key. You need to provide your API key in an Authorization header using Bearer auth (i.e. Authorization: Bearer YOUR_KEY), or as the password field (with blank username) if you're accessing the API from your browser and are prompted for a username and password. You can obtain an API key from https://platform.openai.com/account/api-keys.", 'type': 'invalid_request_error', 'param': None, 'code': None}}
+
+❌ Error on conv-21: Error code: 401 - {'error': {'message': "You didn't provide an API key. You need to provide your API key in an Authorization header using Bearer auth (i.e. Authorization: Bearer YOUR_KEY), or as the password field (with blank username) if you're accessing the API from your browser and are prompted for a username and password. You can obtain an API key from https://platform.openai.com/account/api-keys.", 'type': 'invalid_request_error', 'param': None, 'code': None}}
+Progress: 2/5 (40%)Traceback (most recent call last):
+  File "/Users/zac/Downloads/Cartography/classifier/classifier-openai-social-role-theory.py", line 494, in classify_batch
+    result = classify_conversation(
+  File "/Users/zac/Downloads/Cartography/classifier/classifier-openai-social-role-theory.py", line 461, in classify_conversation
+    classification = classify_messages(client, conversation["messages"], few_shot_examples, model)
+  File "/Users/zac/Downloads/Cartography/classifier/classifier-openai-social-role-theory.py", line 438, in classify_messages
+    response = client.chat.completions.create(
+  File "/Users/zac/Library/Python/3.9/lib/python/site-packages/openai/_utils/_utils.py", line 286, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/zac/Library/Python/3.9/lib/python/site-packages/openai/resources/chat/completions/completions.py", line 1192, in create
+    return self._post(
+  File "/Users/zac/Library/Python/3.9/lib/python/site-packages/openai/_base_client.py", line 1259, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+  File "/Users/zac/Library/Python/3.9/lib/python/site-packages/openai/_base_client.py", line 1047, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.AuthenticationError: Error code: 401 - {'error': {'message': "You didn't provide an API key. You need to provide your API key in an Authorization header using Bearer auth (i.e. Authorization: Bearer YOUR_KEY), or as the password field (with blank username) if you're accessing the API from your browser and are prompted for a username and password. You can obtain an API key from https://platform.openai.com/account/api-keys.", 'type': 'invalid_request_error', 'param': None, 'code': None}}
+
+❌ Error on conv-22: Error code: 401 - {'error': {'message': "You didn't provide an API key. You need to provide your API key in an Authorization header using Bearer auth (i.e. Authorization: Bearer YOUR_KEY), or as the password field (with blank username) if you're accessing the API from your browser and are prompted for a username and password. You can obtain an API key from https://platform.openai.com/account/api-keys.", 'type': 'invalid_request_error', 'param': None, 'code': None}}
+Progress: 3/5 (60%)Traceback (most recent call last):
+  File "/Users/zac/Downloads/Cartography/classifier/classifier-openai-social-role-theory.py", line 494, in classify_batch
+    result = classify_conversation(
+  File "/Users/zac/Downloads/Cartography/classifier/classifier-openai-social-role-theory.py", line 461, in classify_conversation
+    classification = classify_messages(client, conversation["messages"], few_shot_examples, model)
+  File "/Users/zac/Downloads/Cartography/classifier/classifier-openai-social-role-theory.py", line 438, in classify_messages
+    response = client.chat.completions.create(
+  File "/Users/zac/Library/Python/3.9/lib/python/site-packages/openai/_utils/_utils.py", line 286, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/zac/Library/Python/3.9/lib/python/site-packages/openai/resources/chat/completions/completions.py", line 1192, in create
+    return self._post(
+  File "/Users/zac/Library/Python/3.9/lib/python/site-packages/openai/_base_client.py", line 1259, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+  File "/Users/zac/Library/Python/3.9/lib/python/site-packages/openai/_base_client.py", line 1047, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.AuthenticationError: Error code: 401 - {'error': {'message': "You didn't provide an API key. You need to provide your API key in an Authorization header using Bearer auth (i.e. Authorization: Bearer YOUR_KEY), or as the password field (with blank username) if you're accessing the API from your browser and are prompted for a username and password. You can obtain an API key from https://platform.openai.com/account/api-keys.", 'type': 'invalid_request_error', 'param': None, 'code': None}}
+
+❌ Error on conv-23: Error code: 401 - {'error': {'message': "You didn't provide an API key. You need to provide your API key in an Authorization header using Bearer auth (i.e. Authorization: Bearer YOUR_KEY), or as the password field (with blank username) if you're accessing the API from your browser and are prompted for a username and password. You can obtain an API key from https://platform.openai.com/account/api-keys.", 'type': 'invalid_request_error', 'param': None, 'code': None}}
+Progress: 4/5 (80%)Traceback (most recent call last):
+  File "/Users/zac/Downloads/Cartography/classifier/classifier-openai-social-role-theory.py", line 494, in classify_batch
+    result = classify_conversation(
+  File "/Users/zac/Downloads/Cartography/classifier/classifier-openai-social-role-theory.py", line 461, in classify_conversation
+    classification = classify_messages(client, conversation["messages"], few_shot_examples, model)
+  File "/Users/zac/Downloads/Cartography/classifier/classifier-openai-social-role-theory.py", line 438, in classify_messages
+    response = client.chat.completions.create(
+  File "/Users/zac/Library/Python/3.9/lib/python/site-packages/openai/_utils/_utils.py", line 286, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/zac/Library/Python/3.9/lib/python/site-packages/openai/resources/chat/completions/completions.py", line 1192, in create
+    return self._post(
+  File "/Users/zac/Library/Python/3.9/lib/python/site-packages/openai/_base_client.py", line 1259, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+  File "/Users/zac/Library/Python/3.9/lib/python/site-packages/openai/_base_client.py", line 1047, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.AuthenticationError: Error code: 401 - {'error': {'message': "You didn't provide an API key. You need to provide your API key in an Authorization header using Bearer auth (i.e. Authorization: Bearer YOUR_KEY), or as the password field (with blank username) if you're accessing the API from your browser and are prompted for a username and password. You can obtain an API key from https://platform.openai.com/account/api-keys.", 'type': 'invalid_request_error', 'param': None, 'code': None}}
+
+❌ Error on conv-26: Error code: 401 - {'error': {'message': "You didn't provide an API key. You need to provide your API key in an Authorization header using Bearer auth (i.e. Authorization: Bearer YOUR_KEY), or as the password field (with blank username) if you're accessing the API from your browser and are prompted for a username and password. You can obtain an API key from https://platform.openai.com/account/api-keys.", 'type': 'invalid_request_error', 'param': None, 'code': None}}
+Progress: 5/5 (100%)
+
+Writing to test-results-social-role-theory.json...
+✅ Combined results saved to test-results-social-role-theory.json
+
+✅ Classification complete! Processed 0/5 conversations successfully

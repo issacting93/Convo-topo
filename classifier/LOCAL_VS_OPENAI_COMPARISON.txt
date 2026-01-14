@@ -1,0 +1,82 @@
+📊 Loading classifications...
+   Local: 154 conversations
+   OpenAI: 25 conversations
+
+======================================================================
+LOCAL LLM vs OPENAI GPT-4o-mini CLASSIFICATION COMPARISON
+======================================================================
+
+📊 Dataset Size:
+   Local (Ollama qwen2.5:7b): 154 conversations
+   OpenAI (GPT-4o-mini): 25 conversations
+
+======================================================================
+AMBIGUITY COMPARISON
+======================================================================
+
+👤 Human Roles:
+   Local:    3 ambiguous (  1.9%)
+   OpenAI:   1 ambiguous (  4.0%)
+   Difference: +2.1%
+
+🤖 AI Roles:
+   Local:    0 ambiguous (  0.0%)
+   OpenAI:   1 ambiguous (  4.0%)
+   Difference: +4.0%
+
+======================================================================
+CONFIDENCE SCORES
+======================================================================
+
+👤 Human Roles:
+   Local:  Avg confidence: 0.800, Avg max prob: 0.845
+   OpenAI: Avg confidence: 0.860, Avg max prob: 0.958
+
+🤖 AI Roles:
+   Local:  Avg confidence: 0.800, Avg max prob: 0.830
+   OpenAI: Avg confidence: 0.836, Avg max prob: 0.879
+
+======================================================================
+ROLE DISTRIBUTIONS
+======================================================================
+
+👤 Human Roles - Average Probabilities:
+   information-seeker        Local: 0.701  OpenAI: 0.908  Diff: +0.207
+   social-expressor          Local: 0.101  OpenAI: 0.044  Diff: -0.057
+   co-constructor            Local: 0.032  OpenAI: 0.048  Diff: +0.016
+
+👤 Human Roles - Dominant Counts:
+   information-seeker        Local: 129 ( 83.8%)  OpenAI:  24 ( 96.0%)
+   social-expressor          Local:   0 (  0.0%)  OpenAI:   0 (  0.0%)
+   co-constructor            Local:   0 (  0.0%)  OpenAI:   1 (  4.0%)
+
+🤖 AI Roles - Average Probabilities:
+   facilitator               Local: 0.692  OpenAI: 0.480  Diff: -0.212
+   expert-system             Local: 0.144  OpenAI: 0.488  Diff: +0.344
+   relational-peer           Local: 0.002  OpenAI: 0.032  Diff: +0.030
+
+🤖 AI Roles - Dominant Counts:
+   facilitator               Local: 128 ( 83.1%)  OpenAI:  15 ( 60.0%)
+   expert-system             Local:   1 (  0.6%)  OpenAI:   9 ( 36.0%)
+   relational-peer           Local:   0 (  0.0%)  OpenAI:   1 (  4.0%)
+
+======================================================================
+ROLE PAIRS (Human → AI)
+======================================================================
+
+   information-seeker→facilitator           Local: 128 ( 83.1%)  OpenAI:  15 ( 60.0%)
+   information-seeker→expert-system         Local:   1 (  0.6%)  OpenAI:   9 ( 36.0%)
+   co-constructor→relational-peer           Local:   0 (  0.0%)  OpenAI:   1 (  4.0%)
+
+======================================================================
+SUMMARY
+======================================================================
+
+✅ Key Findings:
+   ⚠️  Local has lower human role ambiguity (1.9% vs 4.0%)
+   ⚠️  Local has lower AI role ambiguity (0.0% vs 4.0%)
+   ✅ OpenAI has higher human role confidence (0.860 vs 0.800)
+   ✅ OpenAI has higher AI role confidence (0.836 vs 0.800)
+   📊 Dominant pair - Local: information-seeker→facilitator, OpenAI: information-seeker→facilitator
+
+💾 Report saved to: classifier/LOCAL_VS_OPENAI_COMPARISON.md

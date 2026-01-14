@@ -174,5 +174,150 @@
     "state": "Uusimaa",
     "toxic": false,
     "redacted": false
+  },
+  "classification": {
+    "abstain": false,
+    "interactionPattern": {
+      "category": "question-answer",
+      "confidence": 0.85,
+      "evidence": [
+        "What are the foundational building blocks of human problem solving?",
+        "The foundational building blocks of human problem solving are:",
+        "What are problem-solving strategies for humans to use in complex problems?",
+        "When faced with complex problems, humans can employ several problem-solving strategies"
+      ],
+      "rationale": "Human repeatedly asks definitional/contrast questions; AI responds with structured explanations and lists.",
+      "alternative": null
+    },
+    "powerDynamics": {
+      "category": "human-led",
+      "confidence": 0.75,
+      "evidence": [
+        "What is perception in the context of human problem solving",
+        "What is the difference between reasoning and strategic thinking?",
+        "Allocate the following sources of human errors"
+      ],
+      "rationale": "Human sets the agenda through successive questions and a classification instruction; AI follows.",
+      "alternative": null
+    },
+    "emotionalTone": {
+      "category": "professional",
+      "confidence": 0.8,
+      "evidence": [
+        "The foundational building blocks of human problem solving are:",
+        "Here are some main sources of human errors in such scenarios:",
+        "In summary, intuition refers to the intuitive or instinctive feeling"
+      ],
+      "rationale": "Academic, explanatory language with no relational or affective content.",
+      "alternative": "neutral"
+    },
+    "engagementStyle": {
+      "category": "questioning",
+      "confidence": 0.7,
+      "evidence": [
+        "What are the main sources of human errors in complex problem solving?",
+        "What is the difference between emotions and unconscious intelligence?"
+      ],
+      "rationale": "Conversation advances primarily via the human's repeated questions; AI responds rather than challenges.",
+      "alternative": null
+    },
+    "knowledgeExchange": {
+      "category": "factual-info",
+      "confidence": 0.75,
+      "evidence": [
+        "Perception, in the context of human problem solving, refers to the process",
+        "Algorithms are step-by-step procedures or precise instructions"
+      ],
+      "rationale": "AI provides definitions, distinctions, and categorized lists (conceptual factual content).",
+      "alternative": "skill-sharing"
+    },
+    "conversationPurpose": {
+      "category": "information-seeking",
+      "confidence": 0.8,
+      "evidence": [
+        "What are the foundational building blocks of human problem solving?",
+        "What is the difference between intuition and unconscious intelligence?"
+      ],
+      "rationale": "Human seeks explanations/definitions and conceptual distinctions rather than personal support or co-creation.",
+      "alternative": "capability-exploration"
+    },
+    "topicDepth": {
+      "category": "moderate",
+      "confidence": 0.65,
+      "evidence": [
+        "It involves several cognitive processes, including pattern recognition, attention, and interpretation.",
+        "Complex problems are often interconnected and influenced by multiple factors."
+      ],
+      "rationale": "Multiple subtopics and elaborations, but largely survey-level rather than deeply technical or contested.",
+      "alternative": "deep"
+    },
+    "turnTaking": {
+      "category": "assistant-dominant",
+      "confidence": 0.85,
+      "evidence": [
+        "When faced with complex problems, humans can employ several problem-solving strategies to aid in finding effective solutions.",
+        "In complex problem-solving tasks, several factors can contribute to human errors."
+      ],
+      "rationale": "AI responses are substantially longer and more elaborated than the human's short questions.",
+      "alternative": null
+    },
+    "humanRole": {
+      "distribution": {
+        "information-seeker": 0.55,
+        "provider": 0.35,
+        "director": 0.1,
+        "collaborator": 0.0,
+        "social-expressor": 0.0,
+        "relational-peer": 0.0
+      },
+      "confidence": 0.72,
+      "evidence": [
+        {
+          "role": "information-seeker",
+          "quote": "What are problem-solving strategies for humans to use in complex problems?"
+        },
+        {
+          "role": "director",
+          "quote": "Allocate the following sources of human errors"
+        }
+      ],
+      "rationale": "Predominantly asks for information/definitions; one turn gives an explicit instruction to categorize items.",
+      "alternative": null
+    },
+    "aiRole": {
+      "distribution": {
+        "expert-system": 0.75,
+        "learning-facilitator": 0.0,
+        "advisor": 0.15,
+        "co-constructor": 0.1,
+        "social-facilitator": 0.0,
+        "relational-peer": 0.0
+      },
+      "confidence": 0.78,
+      "evidence": [
+        {
+          "role": "expert-system",
+          "quote": "Algorithms are step-by-step procedures or precise instructions that guarantee a solution"
+        },
+        {
+          "role": "advisor",
+          "quote": "Break it Down: Complex problems can be overwhelming, so breaking them down into smaller, manageable parts"
+        },
+        {
+          "role": "co-constructor",
+          "quote": "Chapter 1: Cognitive Factors in Human Errors"
+        }
+      ],
+      "rationale": "Mostly provides direct explanatory content (expert-system), with some prescriptive strategy suggestions and one structured allocation output.",
+      "alternative": null
+    }
+  },
+  "classificationMetadata": {
+    "model": "gpt-5.2",
+    "provider": "openai",
+    "timestamp": "2026-01-08T16:46:06.654696",
+    "promptVersion": "2.0-social-role-theory",
+    "processingTimeMs": 13048,
+    "fewShotExamples": "yes"
   }
 }

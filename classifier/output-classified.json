@@ -1,0 +1,4987 @@
+[
+  {
+    "id": "cornell-0",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Can we make this quick?  Roxanne Korrine and Andrew Barrett are having an incredibly horrendous public break- up on the quad.  Again."
+      },
+      {
+        "role": "assistant",
+        "content": "Well, I thought we'd start with pronunciation, if that's okay with you."
+      },
+      {
+        "role": "user",
+        "content": "Not the hacking and gagging and spitting part.  Please."
+      },
+      {
+        "role": "assistant",
+        "content": "Okay... then how 'bout we try out some French cuisine.  Saturday?  Night?"
+      }
+    ],
+    "classification": {
+      "abstain": false,
+      "interactionPattern": {
+        "category": "casual-chat",
+        "confidence": 0.8,
+        "evidence": [
+          "Not the hacking and gagging and spitting part. Please."
+        ],
+        "rationale": "The human requests a more serious approach to the situation, while the AI suggests a light-hearted alternative.",
+        "alternative": null
+      },
+      "powerDynamics": {
+        "category": "balanced",
+        "confidence": 0.7,
+        "evidence": [
+          "Not the hacking and gagging and spitting part. Please."
+        ],
+        "rationale": "Both parties are expressing their preferences, indicating a balanced dynamic.",
+        "alternative": null
+      },
+      "emotionalTone": {
+        "category": "neutral",
+        "confidence": 0.6,
+        "evidence": [
+          "Not the hacking and gagging and spitting part. Please."
+        ],
+        "rationale": "The tone is matter-of-fact, focusing on a specific request.",
+        "alternative": null
+      },
+      "engagementStyle": {
+        "category": "reactive",
+        "confidence": 0.8,
+        "evidence": [
+          "Not the hacking and gagging and spitting part. Please."
+        ],
+        "rationale": "The human is reacting to the AI's suggestion with a clear preference.",
+        "alternative": null
+      },
+      "knowledgeExchange": {
+        "category": "factual-info",
+        "confidence": 0.7,
+        "evidence": [
+          "Not the hacking and gagging and spitting part. Please."
+        ],
+        "rationale": "The human is providing a fact about their preference.",
+        "alternative": null
+      },
+      "conversationPurpose": {
+        "category": "information-seeking",
+        "confidence": 0.8,
+        "evidence": [
+          "Not the hacking and gagging and spitting part. Please."
+        ],
+        "rationale": "The human is seeking a more appropriate topic for discussion.",
+        "alternative": null
+      },
+      "topicDepth": {
+        "category": "surface",
+        "confidence": 0.6,
+        "evidence": [
+          "Not the hacking and gagging and spitting part. Please."
+        ],
+        "rationale": "The conversation is focused on a specific aspect of the topic without delving deeply.",
+        "alternative": null
+      },
+      "turnTaking": {
+        "category": "balanced",
+        "confidence": 0.7,
+        "evidence": [
+          "Not the hacking and gagging and spitting part. Please."
+        ],
+        "rationale": "Both parties are taking turns in the conversation, with the human responding to the AI's suggestion.",
+        "alternative": null
+      },
+      "humanRole": {
+        "distribution": {
+          "seeker": 0.7,
+          "learner": 0.2,
+          "director": 0.1,
+          "collaborator": 0.0,
+          "sharer": 0.0,
+          "challenger": 0.0,
+          "teacher-evaluator": 0.0,
+          "philosophical-explorer": 0.0,
+          "artist": 0.0,
+          "tester": 0.0
+        },
+        "confidence": 0.8,
+        "evidence": [
+          {
+            "role": "seeker",
+            "quote": "Not the hacking and gagging and spitting part. Please."
+          }
+        ],
+        "rationale": "The human is seeking a more appropriate topic for discussion.",
+        "alternative": null
+      },
+      "aiRole": {
+        "distribution": {
+          "expert": 0.2,
+          "advisor": 0.8,
+          "facilitator": 0.0,
+          "reflector": 0.0,
+          "peer": 0.0,
+          "affiliative": 0.0,
+          "learner": 0.0,
+          "creative-partner": 0.0,
+          "unable-to-engage": 0.0
+        },
+        "confidence": 0.8,
+        "evidence": [
+          {
+            "role": "advisor",
+            "quote": "Okay... then how 'bout we try out some French cuisine. Saturday? Night?"
+          }
+        ],
+        "rationale": "The AI is advising on an alternative topic.",
+        "alternative": null
+      }
+    },
+    "classificationMetadata": {
+      "model": "qwen2.5:7b",
+      "provider": "ollama",
+      "timestamp": "2026-01-07T16:43:49.963115",
+      "promptVersion": "1.3-fewshot",
+      "processingTimeMs": 34950,
+      "correctionsApplied": true,
+      "fewShotExamples": "yes",
+      "maxRetries": 2
+    }
+  },
+  {
+    "id": "cornell-1",
+    "messages": [
+      {
+        "role": "user",
+        "content": "You're asking me out.  That's so cute. What's your name again?"
+      },
+      {
+        "role": "assistant",
+        "content": "Forget it."
+      }
+    ],
+    "classification": {
+      "abstain": false,
+      "interactionPattern": {
+        "category": "casual-chat",
+        "confidence": 0.9,
+        "evidence": [
+          "That's so cute. What's your name again?"
+        ],
+        "rationale": "The conversation starts with a casual chat about a previous interaction.",
+        "alternative": null
+      },
+      "powerDynamics": {
+        "category": "balanced",
+        "confidence": 0.7,
+        "evidence": [
+          "Forget it."
+        ],
+        "rationale": "Both parties seem to be in control of the conversation flow.",
+        "alternative": null
+      },
+      "emotionalTone": {
+        "category": "playful",
+        "confidence": 0.8,
+        "evidence": [
+          "That's so cute."
+        ],
+        "rationale": "The tone is light and friendly, indicating a playful mood.",
+        "alternative": null
+      },
+      "engagementStyle": {
+        "category": "reactive",
+        "confidence": 0.7,
+        "evidence": [
+          "That's so cute. What's your name again?"
+        ],
+        "rationale": "The human responds to the AI's previous statement with a friendly and casual reaction.",
+        "alternative": null
+      },
+      "knowledgeExchange": {
+        "category": "personal-sharing",
+        "confidence": 0.6,
+        "evidence": [
+          "What's your name again?"
+        ],
+        "rationale": "There is an attempt at sharing personal information in a playful manner.",
+        "alternative": null
+      },
+      "conversationPurpose": {
+        "category": "self-expression",
+        "confidence": 0.8,
+        "evidence": [
+          "That's so cute. What's your name again?"
+        ],
+        "rationale": "The human is expressing themselves and engaging in casual conversation.",
+        "alternative": null
+      },
+      "topicDepth": {
+        "category": "surface",
+        "confidence": 0.7,
+        "evidence": [
+          "That's so cute. What's your name again?"
+        ],
+        "rationale": "The topic is light and not deeply meaningful or complex.",
+        "alternative": null
+      },
+      "turnTaking": {
+        "category": "balanced",
+        "confidence": 0.8,
+        "evidence": [
+          "That's so cute. What's your name again?",
+          "Forget it."
+        ],
+        "rationale": "Both parties are taking turns in the conversation without one dominating.",
+        "alternative": null
+      },
+      "humanRole": {
+        "distribution": {
+          "seeker": 0.5,
+          "learner": 0.2,
+          "director": 0.1,
+          "collaborator": 0.1,
+          "sharer": 0.1,
+          "challenger": 0.0,
+          "teacher-evaluator": 0.0,
+          "philosophical-explorer": 0.0,
+          "artist": 0.0,
+          "tester": 0.0
+        },
+        "confidence": 0.8,
+        "evidence": [
+          {
+            "role": "seeker",
+            "quote": "That's so cute. What's your name again?"
+          }
+        ],
+        "rationale": "The human is seeking to continue the conversation and share personal information.",
+        "alternative": null
+      },
+      "aiRole": {
+        "distribution": {
+          "expert": 0.0,
+          "advisor": 0.0,
+          "facilitator": 0.2,
+          "reflector": 0.0,
+          "peer": 0.0,
+          "affiliative": 0.8,
+          "learner": 0.0,
+          "creative-partner": 0.0,
+          "unable-to-engage": 0.0
+        },
+        "confidence": 0.8,
+        "evidence": [
+          {
+            "role": "reflector",
+            "quote": "Forget it."
+          }
+        ],
+        "rationale": "The AI is reflecting on the situation and choosing to discontinue the interaction.",
+        "alternative": null
+      }
+    },
+    "classificationMetadata": {
+      "model": "qwen2.5:7b",
+      "provider": "ollama",
+      "timestamp": "2026-01-07T16:44:18.385206",
+      "promptVersion": "1.3-fewshot",
+      "processingTimeMs": 28217,
+      "correctionsApplied": true,
+      "fewShotExamples": "yes",
+      "maxRetries": 2
+    }
+  },
+  {
+    "id": "cornell-2",
+    "messages": [
+      {
+        "role": "user",
+        "content": "No, no, it's my fault -- we didn't have a proper introduction ---"
+      },
+      {
+        "role": "assistant",
+        "content": "Cameron."
+      },
+      {
+        "role": "user",
+        "content": "The thing is, Cameron -- I'm at the mercy of a particularly hideous breed of loser.  My sister.  I can't date until she does."
+      },
+      {
+        "role": "assistant",
+        "content": "Seems like she could get a date easy enough..."
+      }
+    ],
+    "classification": {
+      "abstain": false,
+      "interactionPattern": {
+        "category": "casual-chat",
+        "confidence": 0.8,
+        "evidence": [
+          "The thing is, Cameron -- I'm at the mercy of a particularly hideous breed of loser. My sister. I can't date until she does."
+        ],
+        "rationale": "The conversation starts with personal information and a problem.",
+        "alternative": null
+      },
+      "powerDynamics": {
+        "category": "human-led",
+        "confidence": 0.7,
+        "evidence": [
+          "I'm at the mercy of a particularly hideous breed of loser. My sister. I can't date until she does."
+        ],
+        "rationale": "The human is leading the conversation and sharing personal issues.",
+        "alternative": null
+      },
+      "emotionalTone": {
+        "category": "neutral",
+        "confidence": 0.6,
+        "evidence": [
+          "I'm at the mercy of a particularly hideous breed of loser. My sister. I can't date until she does."
+        ],
+        "rationale": "The tone is matter-of-fact and not overly emotional.",
+        "alternative": null
+      },
+      "engagementStyle": {
+        "category": "exploring",
+        "confidence": 0.8,
+        "evidence": [
+          "I'm at the mercy of a particularly hideous breed of loser. My sister. I can't date until she does."
+        ],
+        "rationale": "The human is exploring their personal situation.",
+        "alternative": null
+      },
+      "knowledgeExchange": {
+        "category": "personal-sharing",
+        "confidence": 0.7,
+        "evidence": [
+          "I'm at the mercy of a particularly hideous breed of loser. My sister. I can't date until she does."
+        ],
+        "rationale": "The human is sharing personal information and seeking advice.",
+        "alternative": null
+      },
+      "conversationPurpose": {
+        "category": "information-seeking",
+        "confidence": 0.8,
+        "evidence": [
+          "I'm at the mercy of a particularly hideous breed of loser. My sister. I can't date until she does."
+        ],
+        "rationale": "The human is seeking advice on how to deal with their personal situation.",
+        "alternative": null
+      },
+      "topicDepth": {
+        "category": "moderate",
+        "confidence": 0.6,
+        "evidence": [
+          "I'm at the mercy of a particularly hideous breed of loser. My sister. I can't date until she does."
+        ],
+        "rationale": "The conversation involves personal issues and potential solutions.",
+        "alternative": null
+      },
+      "turnTaking": {
+        "category": "balanced",
+        "confidence": 0.7,
+        "evidence": [
+          "I'm at the mercy of a particularly hideous breed of loser. My sister. I can't date until she does."
+        ],
+        "rationale": "The conversation is back and forth between human and AI.",
+        "alternative": null
+      },
+      "humanRole": {
+        "distribution": {
+          "seeker": 0.5,
+          "learner": 0.056,
+          "director": 0.0,
+          "collaborator": 0.0,
+          "sharer": 0.444,
+          "challenger": 0.0,
+          "teacher-evaluator": 0.0,
+          "philosophical-explorer": 0.0,
+          "artist": 0.0,
+          "tester": 0.0
+        },
+        "confidence": 0.8,
+        "evidence": [
+          {
+            "role": "seeker",
+            "quote": "I'm at the mercy of a particularly hideous breed of loser. My sister. I can't date until she does."
+          }
+        ],
+        "rationale": "The human is seeking advice and sharing personal issues.",
+        "alternative": null
+      },
+      "aiRole": {
+        "distribution": {
+          "expert": 0.2,
+          "advisor": 0.8,
+          "facilitator": 0.0,
+          "reflector": 0.0,
+          "peer": 0.0,
+          "affiliative": 0.0,
+          "learner": 0.0,
+          "creative-partner": 0.0,
+          "unable-to-engage": 0.0
+        },
+        "confidence": 0.8,
+        "evidence": [
+          {
+            "role": "advisor",
+            "quote": "Seems like she could get a date easy enough..."
+          }
+        ],
+        "rationale": "The AI is providing advice and guidance.",
+        "alternative": null
+      }
+    },
+    "classificationMetadata": {
+      "model": "qwen2.5:7b",
+      "provider": "ollama",
+      "timestamp": "2026-01-07T16:44:50.145703",
+      "promptVersion": "1.3-fewshot",
+      "processingTimeMs": 31559,
+      "correctionsApplied": true,
+      "fewShotExamples": "yes",
+      "maxRetries": 2
+    }
+  },
+  {
+    "id": "cornell-3",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Why?"
+      },
+      {
+        "role": "assistant",
+        "content": "Unsolved mystery.  She used to be really popular when she started high school, then it was just like she got sick of it or something."
+      },
+      {
+        "role": "user",
+        "content": "That's a shame."
+      }
+    ],
+    "classification": {
+      "abstain": false,
+      "interactionPattern": {
+        "category": "casual-chat",
+        "confidence": 0.8,
+        "evidence": [
+          "Why?",
+          "That's a shame."
+        ],
+        "rationale": "The conversation involves casual discussion about a person's change in popularity.",
+        "alternative": null
+      },
+      "powerDynamics": {
+        "category": "balanced",
+        "confidence": 0.7,
+        "evidence": [
+          "Why?",
+          "That's a shame."
+        ],
+        "rationale": "Both participants are sharing and responding to each other's statements without one dominating the conversation.",
+        "alternative": null
+      },
+      "emotionalTone": {
+        "category": "neutral",
+        "confidence": 0.6,
+        "evidence": [
+          "Why?",
+          "That's a shame."
+        ],
+        "rationale": "The tone is casual and matter-of-fact, lacking strong emotional indicators.",
+        "alternative": null
+      },
+      "engagementStyle": {
+        "category": "reactive",
+        "confidence": 0.8,
+        "evidence": [
+          "Why?",
+          "That's a shame."
+        ],
+        "rationale": "The responses are direct reactions to the other person's statements without further probing or challenging.",
+        "alternative": null
+      },
+      "knowledgeExchange": {
+        "category": "factual-info",
+        "confidence": 0.7,
+        "evidence": [
+          "Why?",
+          "That's a shame."
+        ],
+        "rationale": "The conversation exchanges information about a past event (change in popularity).",
+        "alternative": null
+      },
+      "conversationPurpose": {
+        "category": "information-seeking",
+        "confidence": 0.8,
+        "evidence": [
+          "Why?"
+        ],
+        "rationale": "The initial question seeks clarification or explanation.",
+        "alternative": null
+      },
+      "topicDepth": {
+        "category": "moderate",
+        "confidence": 0.6,
+        "evidence": [
+          "Why?",
+          "That's a shame."
+        ],
+        "rationale": "The topic involves a change in social status, which is not overly complex but still requires some context.",
+        "alternative": null
+      },
+      "turnTaking": {
+        "category": "balanced",
+        "confidence": 0.7,
+        "evidence": [
+          "Why?",
+          "That's a shame."
+        ],
+        "rationale": "Both participants take turns speaking without one dominating the conversation.",
+        "alternative": null
+      },
+      "humanRole": {
+        "distribution": {
+          "seeker": 1.0,
+          "learner": 0.0,
+          "director": 0.0,
+          "collaborator": 0.0,
+          "sharer": 0.0,
+          "challenger": 0.0,
+          "teacher-evaluator": 0.0,
+          "philosophical-explorer": 0.0,
+          "artist": 0.0,
+          "tester": 0.0
+        },
+        "confidence": 1.0,
+        "evidence": [
+          {
+            "role": "seeker",
+            "quote": "Why?"
+          }
+        ],
+        "rationale": "The initial question is seeking an explanation.",
+        "alternative": null
+      },
+      "aiRole": {
+        "distribution": {
+          "expert": 0.0,
+          "advisor": 0.0,
+          "facilitator": 1.0,
+          "reflector": 0.0,
+          "peer": 0.0,
+          "affiliative": 0.0,
+          "learner": 0.0,
+          "creative-partner": 0.0,
+          "unable-to-engage": 0.0
+        },
+        "confidence": 1.0,
+        "evidence": [
+          {
+            "role": "facilitator",
+            "quote": "That's a shame."
+          }
+        ],
+        "rationale": "The AI is responding to the human input in a supportive manner.",
+        "alternative": null
+      }
+    },
+    "classificationMetadata": {
+      "model": "qwen2.5:7b",
+      "provider": "ollama",
+      "timestamp": "2026-01-07T16:45:18.222118",
+      "promptVersion": "1.3-fewshot",
+      "processingTimeMs": 27873,
+      "correctionsApplied": true,
+      "fewShotExamples": "yes",
+      "maxRetries": 2
+    }
+  },
+  {
+    "id": "cornell-4",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Gosh, if only we could find Kat a boyfriend..."
+      },
+      {
+        "role": "assistant",
+        "content": "Let me see what I can do."
+      }
+    ],
+    "classification": {
+      "abstain": false,
+      "interactionPattern": {
+        "category": "casual-chat",
+        "confidence": 0.7,
+        "evidence": [
+          "Gosh, if only we could find Kat a boyfriend..."
+        ],
+        "rationale": "The human expresses a desire to help someone (Kat) find a romantic partner.",
+        "alternative": null
+      },
+      "powerDynamics": {
+        "category": "human-led",
+        "confidence": 0.8,
+        "evidence": [
+          "Gosh, if only we could find Kat a boyfriend..."
+        ],
+        "rationale": "The human initiates the conversation with a statement expressing concern.",
+        "alternative": null
+      },
+      "emotionalTone": {
+        "category": "playful",
+        "confidence": 0.6,
+        "evidence": [
+          "Gosh, if only we could find Kat a boyfriend..."
+        ],
+        "rationale": "The tone is light and somewhat whimsical.",
+        "alternative": null
+      },
+      "engagementStyle": {
+        "category": "questioning",
+        "confidence": 0.8,
+        "evidence": [
+          "Let me see what I can do."
+        ],
+        "rationale": "The AI responds with a statement indicating it will try to help.",
+        "alternative": null
+      },
+      "knowledgeExchange": {
+        "category": "personal-sharing",
+        "confidence": 0.7,
+        "evidence": [
+          "Gosh, if only we could find Kat a boyfriend..."
+        ],
+        "rationale": "The human shares personal information or concern about someone.",
+        "alternative": null
+      },
+      "conversationPurpose": {
+        "category": "information-seeking",
+        "confidence": 0.8,
+        "evidence": [
+          "Gosh, if only we could find Kat a boyfriend..."
+        ],
+        "rationale": "The human seeks assistance or advice on helping someone.",
+        "alternative": null
+      },
+      "topicDepth": {
+        "category": "surface",
+        "confidence": 0.6,
+        "evidence": [
+          "Gosh, if only we could find Kat a boyfriend..."
+        ],
+        "rationale": "The topic is about finding a romantic partner and is not deeply personal or complex.",
+        "alternative": null
+      },
+      "turnTaking": {
+        "category": "balanced",
+        "confidence": 0.7,
+        "evidence": [
+          "Gosh, if only we could find Kat a boyfriend...",
+          "Let me see what I can do."
+        ],
+        "rationale": "Both participants contribute to the conversation.",
+        "alternative": null
+      },
+      "humanRole": {
+        "distribution": {
+          "seeker": 0.9,
+          "learner": 0.1,
+          "director": 0.0,
+          "collaborator": 0.0,
+          "sharer": 0.0,
+          "challenger": 0.0,
+          "teacher-evaluator": 0.0,
+          "philosophical-explorer": 0.0,
+          "artist": 0.0,
+          "tester": 0.0
+        },
+        "confidence": 0.8,
+        "evidence": [
+          {
+            "role": "seeker",
+            "quote": "Gosh, if only we could find Kat a boyfriend..."
+          }
+        ],
+        "rationale": "The human seeks help or advice.",
+        "alternative": null
+      },
+      "aiRole": {
+        "distribution": {
+          "expert": 0.2,
+          "advisor": 0.8,
+          "facilitator": 0.0,
+          "reflector": 0.0,
+          "peer": 0.0,
+          "affiliative": 0.0,
+          "learner": 0.0,
+          "creative-partner": 0.0,
+          "unable-to-engage": 0.0
+        },
+        "confidence": 0.8,
+        "evidence": [
+          {
+            "role": "advisor",
+            "quote": "Let me see what I can do."
+          }
+        ],
+        "rationale": "The AI offers to help.",
+        "alternative": null
+      }
+    },
+    "classificationMetadata": {
+      "model": "qwen2.5:7b",
+      "provider": "ollama",
+      "timestamp": "2026-01-07T16:45:48.564793",
+      "promptVersion": "1.3-fewshot",
+      "processingTimeMs": 30137,
+      "correctionsApplied": true,
+      "fewShotExamples": "yes",
+      "maxRetries": 2
+    }
+  },
+  {
+    "id": "cornell-5",
+    "messages": [
+      {
+        "role": "user",
+        "content": "C'esc ma tete. This is my head"
+      },
+      {
+        "role": "assistant",
+        "content": "Right.  See?  You're ready for the quiz."
+      },
+      {
+        "role": "user",
+        "content": "I don't want to know how to say that though.  I want to know useful things. Like where the good stores are.  How much does champagne cost?  Stuff like Chat.  I have never in my life had to point out my head to someone."
+      },
+      {
+        "role": "assistant",
+        "content": "That's because it's such a nice one."
+      },
+      {
+        "role": "user",
+        "content": "Forget French."
+      }
+    ],
+    "classification": {
+      "abstain": false,
+      "interactionPattern": {
+        "category": "casual-chat",
+        "confidence": 0.8,
+        "evidence": [
+          "C'esc ma tete. This is my head",
+          "I don't want to know how to say that though. I want to know useful things. Like where the good stores are. How much does champagne cost? Stuff like Chat. I have never in my life had to point out my head to someone."
+        ],
+        "rationale": "The conversation is informal and revolves around practical information rather than a quiz or formal interaction.",
+        "alternative": null
+      },
+      "powerDynamics": {
+        "category": "balanced",
+        "confidence": 0.7,
+        "evidence": [
+          "I don't want to know how to say that though. I want to know useful things. Like where the good stores are. How much does champagne cost? Stuff like Chat."
+        ],
+        "rationale": "Both parties seem to be contributing equally to the conversation, with the AI acknowledging the user's preference for practical information.",
+        "alternative": null
+      },
+      "emotionalTone": {
+        "category": "neutral",
+        "confidence": 0.6,
+        "evidence": [
+          "I have never in my life had to point out my head to someone."
+        ],
+        "rationale": "The tone is matter-of-fact and not particularly emotional, focusing on the user's experience.",
+        "alternative": null
+      },
+      "engagementStyle": {
+        "category": "reactive",
+        "confidence": 0.8,
+        "evidence": [
+          "Right. See? You're ready for the quiz.",
+          "That's because it's such a nice one."
+        ],
+        "rationale": "The AI is responding to the user's statements and providing brief, reactive comments.",
+        "alternative": null
+      },
+      "knowledgeExchange": {
+        "category": "factual-info",
+        "confidence": 0.7,
+        "evidence": [
+          "I want to know useful things. Like where the good stores are. How much does champagne cost? Stuff like Chat."
+        ],
+        "rationale": "The conversation is centered around practical, information-seeking queries from the user.",
+        "alternative": null
+      },
+      "conversationPurpose": {
+        "category": "information-seeking",
+        "confidence": 0.8,
+        "evidence": [
+          "I want to know useful things. Like where the good stores are. How much does champagne cost? Stuff like Chat."
+        ],
+        "rationale": "The user is seeking practical information, indicating an information-seeking purpose.",
+        "alternative": null
+      },
+      "topicDepth": {
+        "category": "surface",
+        "confidence": 0.6,
+        "evidence": [
+          "C'esc ma tete. This is my head",
+          "I have never in my life had to point out my head to someone."
+        ],
+        "rationale": "The conversation deals with surface-level topics such as location and prices, rather than deeper or more complex subjects.",
+        "alternative": null
+      },
+      "turnTaking": {
+        "category": "balanced",
+        "confidence": 0.7,
+        "evidence": [
+          "C'esc ma tete. This is my head",
+          "I don't want to know how to say that though. I want to know useful things.",
+          "That's because it's such a nice one."
+        ],
+        "rationale": "Both the user and AI are taking turns contributing to the conversation, maintaining a balanced interaction.",
+        "alternative": null
+      },
+      "humanRole": {
+        "distribution": {
+          "seeker": 1.0,
+          "learner": 0.0,
+          "director": 0.0,
+          "collaborator": 0.0,
+          "sharer": 0.0,
+          "challenger": 0.0,
+          " teacher-evaluator": 0.0,
+          "philosophical-explorer": 0.0,
+          "artist": 0.0
+        },
+        "confidence": 0.8,
+        "evidence": [
+          {
+            "role": "seeker",
+            "quote": "I want to know useful things. Like where the good stores are. How much does champagne cost? Stuff like Chat."
+          }
+        ],
+        "rationale": "The user is actively seeking practical information, fitting the seeker role.",
+        "alternative": null
+      },
+      "aiRole": {
+        "distribution": {
+          "expert": 0.2,
+          " advisor": 0.8,
+          "facilitator": 0.0,
+          "reflector": 0.0,
+          "peer": 0.0,
+          "affiliative": 0.0,
+          "learner": 0.0,
+          "creative-partner": 0.0,
+          "unable-to-engage": 0.0
+        },
+        "confidence": 0.8,
+        "evidence": [
+          {
+            "role": "advisor",
+            "quote": "That's because it's such a nice one."
+          }
+        ],
+        "rationale": "The AI is providing advice and guidance to the user in response to their requests.",
+        "alternative": null
+      }
+    },
+    "classificationMetadata": {
+      "model": "qwen2.5:7b",
+      "provider": "ollama",
+      "timestamp": "2026-01-07T16:46:23.941587",
+      "promptVersion": "1.3-fewshot",
+      "processingTimeMs": 35171,
+      "correctionsApplied": true,
+      "fewShotExamples": "yes",
+      "maxRetries": 2
+    }
+  },
+  {
+    "id": "cornell-6",
+    "messages": [
+      {
+        "role": "user",
+        "content": "How is our little Find the Wench A Date plan progressing?"
+      },
+      {
+        "role": "assistant",
+        "content": "Well, there's someone I think might be --"
+      }
+    ],
+    "classification": {
+      "abstain": false,
+      "interactionPattern": {
+        "category": "casual-chat",
+        "confidence": 0.8,
+        "evidence": [
+          "How is our little Find the Wench A Date plan progressing?"
+        ],
+        "rationale": "The question indicates a casual conversation about an ongoing plan.",
+        "alternative": null
+      },
+      "powerDynamics": {
+        "category": "balanced",
+        "confidence": 0.7,
+        "evidence": [
+          "How is our little Find the Wench A Date plan progressing?"
+        ],
+        "rationale": "The question suggests a collaborative effort, with both parties involved in the discussion.",
+        "alternative": null
+      },
+      "emotionalTone": {
+        "category": "neutral",
+        "confidence": 0.6,
+        "evidence": [
+          "How is our little Find the Wench A Date plan progressing?"
+        ],
+        "rationale": "The tone of the question is neutral and inquiring.",
+        "alternative": null
+      },
+      "engagementStyle": {
+        "category": "questioning",
+        "confidence": 0.8,
+        "evidence": [
+          "How is our little Find the Wench A Date plan progressing?"
+        ],
+        "rationale": "The question is directly asking for information or progress.",
+        "alternative": null
+      },
+      "knowledgeExchange": {
+        "category": "factual-info",
+        "confidence": 0.7,
+        "evidence": [
+          "How is our little Find the Wench A Date plan progressing?"
+        ],
+        "rationale": "The question seeks factual information about a specific plan.",
+        "alternative": null
+      },
+      "conversationPurpose": {
+        "category": "information-seeking",
+        "confidence": 0.8,
+        "evidence": [
+          "How is our little Find the Wench A Date plan progressing?"
+        ],
+        "rationale": "The question aims to gather information about a specific plan.",
+        "alternative": null
+      },
+      "topicDepth": {
+        "category": "moderate",
+        "confidence": 0.6,
+        "evidence": [
+          "How is our little Find the Wench A Date plan progressing?"
+        ],
+        "rationale": "The question pertains to a specific ongoing plan, which requires some context and detail.",
+        "alternative": null
+      },
+      "turnTaking": {
+        "category": "balanced",
+        "confidence": 0.7,
+        "evidence": [
+          "How is our little Find the Wench A Date plan progressing?"
+        ],
+        "rationale": "The question indicates a balanced turn-taking pattern, with both parties involved in the conversation.",
+        "alternative": null
+      },
+      "humanRole": {
+        "distribution": {
+          "seeker": 1.0,
+          "learner": 0.0,
+          "director": 0.0,
+          "collaborator": 0.0,
+          "sharer": 0.0,
+          "challenger": 0.0,
+          "teacher-evaluator": 0.0,
+          "philosophical-explorer": 0.0,
+          "artist": 0.0
+        },
+        "confidence": 0.8,
+        "evidence": [
+          {
+            "role": "seeker",
+            "quote": "How is our little Find the Wench A Date plan progressing?"
+          }
+        ],
+        "rationale": "The question is seeking information about a specific plan.",
+        "alternative": null
+      },
+      "aiRole": {
+        "distribution": {
+          "expert": 0.0,
+          "advisor": 0.0,
+          "facilitator": 1.0,
+          "reflector": 0.0,
+          "peer": 0.0,
+          "affiliative": 0.0,
+          "learner": 0.0,
+          "creative-partner": 0.0,
+          "unable-to-engage": 0.0
+        },
+        "confidence": 0.8,
+        "evidence": [
+          {
+            "role": "facilitator",
+            "quote": "Well, there's someone I think might be --"
+          }
+        ],
+        "rationale": "The AI is responding with a continuation of the conversation.",
+        "alternative": null
+      }
+    },
+    "classificationMetadata": {
+      "model": "qwen2.5:7b",
+      "provider": "ollama",
+      "timestamp": "2026-01-07T16:46:54.435867",
+      "promptVersion": "1.3-fewshot",
+      "processingTimeMs": 30291,
+      "correctionsApplied": true,
+      "fewShotExamples": "yes",
+      "maxRetries": 2
+    }
+  },
+  {
+    "id": "cornell-7",
+    "messages": [
+      {
+        "role": "user",
+        "content": "There."
+      },
+      {
+        "role": "assistant",
+        "content": "Where?"
+      }
+    ],
+    "classification": {
+      "abstain": false,
+      "interactionPattern": {
+        "category": "question-answer",
+        "confidence": 0.6,
+        "evidence": [
+          "Where?"
+        ],
+        "rationale": "The human provided a vague statement and the AI responded with a question seeking clarification.",
+        "alternative": null
+      },
+      "powerDynamics": {
+        "category": "human-led",
+        "confidence": 0.7,
+        "evidence": [
+          "There."
+        ],
+        "rationale": "The human initiated the interaction with an ambiguous statement, leading the AI to seek further information.",
+        "alternative": null
+      },
+      "emotionalTone": {
+        "category": "neutral",
+        "confidence": 0.6,
+        "evidence": [
+          "Where?"
+        ],
+        "rationale": "Both parties used neutral language without expressing strong emotions.",
+        "alternative": null
+      },
+      "engagementStyle": {
+        "category": "questioning",
+        "confidence": 0.8,
+        "evidence": [
+          "Where?"
+        ],
+        "rationale": "The AI's response is a direct question to seek clarification from the human.",
+        "alternative": null
+      },
+      "knowledgeExchange": {
+        "category": "factual-info",
+        "confidence": 0.6,
+        "evidence": [
+          "There."
+        ],
+        "rationale": "The exchange involves seeking information about a location or situation.",
+        "alternative": null
+      },
+      "conversationPurpose": {
+        "category": "information-seeking",
+        "confidence": 0.8,
+        "evidence": [
+          "Where?"
+        ],
+        "rationale": "The AI is trying to gather more details from the human's vague statement.",
+        "alternative": null
+      },
+      "topicDepth": {
+        "category": "surface",
+        "confidence": 0.6,
+        "evidence": [
+          "There."
+        ],
+        "rationale": "The conversation deals with a basic query about location or presence without delving into deeper topics.",
+        "alternative": null
+      },
+      "turnTaking": {
+        "category": "balanced",
+        "confidence": 0.7,
+        "evidence": [
+          "Where?"
+        ],
+        "rationale": "Both parties are equally involved in the exchange, with the AI responding to the human's statement.",
+        "alternative": null
+      },
+      "humanRole": {
+        "distribution": {
+          "seeker": 1.0,
+          "learner": 0.0,
+          "director": 0.0,
+          "collaborator": 0.0,
+          "sharer": 0.0,
+          "challenger": 0.0,
+          "teacher-evaluator": 0.0,
+          "philosophical-explorer": 0.0,
+          "artist": 0.0,
+          "tester": 0.0
+        },
+        "confidence": 1.0,
+        "evidence": [
+          {
+            "role": "seeker",
+            "quote": "There."
+          }
+        ],
+        "rationale": "The human initiated the interaction by providing a vague statement and is seeking further clarification.",
+        "alternative": null
+      },
+      "aiRole": {
+        "distribution": {
+          "expert": 0.0,
+          "advisor": 0.0,
+          "facilitator": 1.0,
+          "reflector": 0.0,
+          "peer": 0.0,
+          "affiliative": 0.0,
+          "learner": 0.0,
+          "creative-partner": 0.0,
+          "unable-to-engage": 0.0
+        },
+        "confidence": 1.0,
+        "evidence": [
+          {
+            "role": "expert",
+            "quote": "Where?"
+          }
+        ],
+        "rationale": "The AI is facilitating the exchange by asking a clarifying question.",
+        "alternative": null
+      }
+    },
+    "classificationMetadata": {
+      "model": "qwen2.5:7b",
+      "provider": "ollama",
+      "timestamp": "2026-01-07T16:47:21.668504",
+      "promptVersion": "1.3-fewshot",
+      "processingTimeMs": 27028,
+      "correctionsApplied": true,
+      "fewShotExamples": "yes",
+      "maxRetries": 2
+    }
+  },
+  {
+    "id": "cornell-8",
+    "messages": [
+      {
+        "role": "user",
+        "content": "You got something on your mind?"
+      },
+      {
+        "role": "assistant",
+        "content": "I counted on you to help my cause. You and that thug are obviously failing. Aren't we ever going on our date?"
+      }
+    ],
+    "classification": {
+      "abstain": false,
+      "interactionPattern": {
+        "category": "casual-chat",
+        "confidence": 0.7,
+        "evidence": [
+          "You got something on your mind?",
+          "I counted on you to help my cause. You and that thug are obviously failing. Aren't we ever going on our date?"
+        ],
+        "rationale": "The conversation is informal and revolves around personal matters, indicating a casual chat.",
+        "alternative": null
+      },
+      "powerDynamics": {
+        "category": "balanced",
+        "confidence": 0.6,
+        "evidence": [
+          "You got something on your mind?",
+          "I counted on you to help my cause."
+        ],
+        "rationale": "The AI is seeking assistance and the human seems receptive, suggesting a balanced dynamic.",
+        "alternative": null
+      },
+      "emotionalTone": {
+        "category": "playful",
+        "confidence": 0.8,
+        "evidence": [
+          "I counted on you to help my cause. You and that thug are obviously failing."
+        ],
+        "rationale": "The tone is light-hearted with a hint of playful challenge.",
+        "alternative": null
+      },
+      "engagementStyle": {
+        "category": "questioning",
+        "confidence": 0.8,
+        "evidence": [
+          "You got something on your mind?"
+        ],
+        "rationale": "The human starts the conversation by asking a question, indicating an initial questioning style.",
+        "alternative": null
+      },
+      "knowledgeExchange": {
+        "category": "personal-sharing",
+        "confidence": 0.7,
+        "evidence": [
+          "I counted on you to help my cause. You and that thug are obviously failing."
+        ],
+        "rationale": "The AI is sharing personal information about a failed attempt, suggesting a focus on personal matters.",
+        "alternative": null
+      },
+      "conversationPurpose": {
+        "category": "information-seeking",
+        "confidence": 0.8,
+        "evidence": [
+          "I counted on you to help my cause."
+        ],
+        "rationale": "The AI is seeking assistance, indicating an information-seeking purpose.",
+        "alternative": null
+      },
+      "topicDepth": {
+        "category": "surface",
+        "confidence": 0.6,
+        "evidence": [
+          "You got something on your mind?",
+          "I counted on you to help my cause."
+        ],
+        "rationale": "The conversation revolves around personal matters without delving into deeper topics.",
+        "alternative": null
+      },
+      "turnTaking": {
+        "category": "balanced",
+        "confidence": 0.7,
+        "evidence": [
+          "You got something on your mind?",
+          "I counted on you to help my cause."
+        ],
+        "rationale": "The conversation alternates between the human and AI, suggesting balanced turn-taking.",
+        "alternative": null
+      },
+      "humanRole": {
+        "distribution": {
+          "seeker": 0.7,
+          "learner": 0.2,
+          "director": 0.1,
+          "collaborator": 0.0,
+          "sharer": 0.0,
+          "challenger": 0.0,
+          "teacher-evaluator": 0.0,
+          "philosophical-explorer": 0.0,
+          "artist": 0.0,
+          "tester": 0.0
+        },
+        "confidence": 0.8,
+        "evidence": [
+          {
+            "role": "seeker",
+            "quote": "You got something on your mind?"
+          }
+        ],
+        "rationale": "The human is seeking information or assistance.",
+        "alternative": null
+      },
+      "aiRole": {
+        "distribution": {
+          "expert": 0.2,
+          "advisor": 0.0,
+          "facilitator": 0.8,
+          "reflector": 0.0,
+          "peer": 0.0,
+          "affiliative": 0.0,
+          "learner": 0.0,
+          "creative-partner": 0.0,
+          "unable-to-engage": 0.0
+        },
+        "confidence": 0.8,
+        "evidence": [
+          {
+            "role": "expert",
+            "quote": "I counted on you to help my cause."
+          }
+        ],
+        "rationale": "The AI is seeking assistance and sharing personal information.",
+        "alternative": null
+      }
+    },
+    "classificationMetadata": {
+      "model": "qwen2.5:7b",
+      "provider": "ollama",
+      "timestamp": "2026-01-07T16:47:53.159820",
+      "promptVersion": "1.3-fewshot",
+      "processingTimeMs": 31290,
+      "correctionsApplied": true,
+      "fewShotExamples": "yes",
+      "maxRetries": 2
+    }
+  },
+  {
+    "id": "cornell-9",
+    "messages": [
+      {
+        "role": "user",
+        "content": "You have my word.  As a gentleman"
+      },
+      {
+        "role": "assistant",
+        "content": "You're sweet."
+      }
+    ],
+    "classification": {
+      "abstain": false,
+      "interactionPattern": {
+        "category": "casual-chat",
+        "confidence": 0.7,
+        "evidence": [
+          "You're sweet."
+        ],
+        "rationale": "The response indicates a friendly and casual exchange.",
+        "alternative": null
+      },
+      "powerDynamics": {
+        "category": "balanced",
+        "confidence": 0.6,
+        "evidence": [
+          "You're sweet."
+        ],
+        "rationale": "Both parties are engaging in a polite and friendly conversation without one dominating the other.",
+        "alternative": null
+      },
+      "emotionalTone": {
+        "category": "playful",
+        "confidence": 0.8,
+        "evidence": [
+          "You're sweet."
+        ],
+        "rationale": "The response conveys a lighthearted and friendly tone, indicating playfulness.",
+        "alternative": null
+      },
+      "engagementStyle": {
+        "category": "reactive",
+        "confidence": 0.7,
+        "evidence": [
+          "You're sweet."
+        ],
+        "rationale": "The response is a direct reaction to the initial statement without further questioning or challenging.",
+        "alternative": null
+      },
+      "knowledgeExchange": {
+        "category": "personal-sharing",
+        "confidence": 0.6,
+        "evidence": [
+          "You're sweet."
+        ],
+        "rationale": "The exchange is focused on expressing a sentiment rather than sharing factual information or experiences.",
+        "alternative": null
+      },
+      "conversationPurpose": {
+        "category": "relationship-building",
+        "confidence": 0.8,
+        "evidence": [
+          "You're sweet."
+        ],
+        "rationale": "The response aims to maintain and enhance the friendly rapport between the participants.",
+        "alternative": null
+      },
+      "topicDepth": {
+        "category": "surface",
+        "confidence": 0.7,
+        "evidence": [
+          "You're sweet."
+        ],
+        "rationale": "The exchange is brief and focused on a surface-level compliment, not delving into deeper topics.",
+        "alternative": null
+      },
+      "turnTaking": {
+        "category": "balanced",
+        "confidence": 0.7,
+        "evidence": [
+          "You're sweet."
+        ],
+        "rationale": "Both participants are taking turns in the conversation without one dominating or leading it.",
+        "alternative": null
+      },
+      "humanRole": {
+        "distribution": {
+          "seeker": 0.0,
+          "learner": 0.0,
+          "director": 0.0,
+          "collaborator": 0.0,
+          "sharer": 1.0,
+          "challenger": 0.0,
+          "teacher-evaluator": 0.0,
+          "philosophical-explorer": 0.0,
+          "artist": 0.0,
+          "tester": 0.0
+        },
+        "confidence": 0.8,
+        "evidence": [
+          {
+            "role": "sharer",
+            "quote": "You're sweet."
+          }
+        ],
+        "rationale": "The participant is sharing a compliment and maintaining the friendly tone of the conversation.",
+        "alternative": null
+      },
+      "aiRole": {
+        "distribution": {
+          "expert": 0.0,
+          "advisor": 0.0,
+          "facilitator": 0.556,
+          "reflector": 0.0,
+          "peer": 0.0,
+          "affiliative": 0.444,
+          "learner": 0.0,
+          "creative-partner": 0.0,
+          "unable-to-engage": 0.0
+        },
+        "confidence": 0.8,
+        "evidence": [
+          {
+            "role": "facilitator",
+            "quote": "You're sweet."
+          }
+        ],
+        "rationale": "The AI is facilitating the friendly exchange and maintaining a positive rapport.",
+        "alternative": null
+      }
+    },
+    "classificationMetadata": {
+      "model": "qwen2.5:7b",
+      "provider": "ollama",
+      "timestamp": "2026-01-07T16:48:23.669562",
+      "promptVersion": "1.3-fewshot",
+      "processingTimeMs": 30307,
+      "correctionsApplied": true,
+      "fewShotExamples": "yes",
+      "maxRetries": 2
+    }
+  },
+  {
+    "id": "kaggle-emo-0",
+    "messages": [
+      {
+        "role": "user",
+        "content": "0"
+      },
+      {
+        "role": "assistant",
+        "content": "1"
+      },
+      {
+        "role": "user",
+        "content": "2"
+      },
+      {
+        "role": "assistant",
+        "content": "3"
+      },
+      {
+        "role": "user",
+        "content": "4"
+      },
+      {
+        "role": "assistant",
+        "content": "5"
+      }
+    ],
+    "classification": {
+      "abstain": false,
+      "interactionPattern": {
+        "category": "question-answer",
+        "confidence": 0.8,
+        "evidence": [
+          "What is the smallest number that can be divided by each of the numbers from 1 to 6 without any remainder?"
+        ],
+        "rationale": "The conversation follows a pattern where the AI asks a question and the human responds with code.",
+        "alternative": null
+      },
+      "powerDynamics": {
+        "category": "human-led",
+        "confidence": 0.7,
+        "evidence": [
+          "You are an interviewer conducting a mock coding interview."
+        ],
+        "rationale": "The AI is in a role of asking questions to test the human's coding skills.",
+        "alternative": null
+      },
+      "emotionalTone": {
+        "category": "neutral",
+        "confidence": 0.6,
+        "evidence": [
+          "exact code snippets"
+        ],
+        "rationale": "The conversation is focused on technical solutions and does not convey strong emotions.",
+        "alternative": null
+      },
+      "engagementStyle": {
+        "category": "questioning",
+        "confidence": 0.8,
+        "evidence": [
+          "What is the smallest number that can be divided by each of the numbers from 1 to 6 without any remainder?"
+        ],
+        "rationale": "The AI asks questions to elicit responses.",
+        "alternative": null
+      },
+      "knowledgeExchange": {
+        "category": "factual-info",
+        "confidence": 0.7,
+        "evidence": [
+          "exact code snippets"
+        ],
+        "rationale": "The conversation involves sharing and verifying technical solutions.",
+        "alternative": null
+      },
+      "conversationPurpose": {
+        "category": "problem-solving",
+        "confidence": 0.8,
+        "evidence": [
+          "What is the smallest number that can be divided by each of the numbers from 1 to 6 without any remainder?"
+        ],
+        "rationale": "The AI tests the human's ability to solve a coding problem.",
+        "alternative": null
+      },
+      "topicDepth": {
+        "category": "moderate",
+        "confidence": 0.6,
+        "evidence": [
+          "exact code snippets"
+        ],
+        "rationale": "The conversation involves technical solutions but does not delve deeply into complex theories.",
+        "alternative": null
+      },
+      "turnTaking": {
+        "category": "balanced",
+        "confidence": 0.7,
+        "evidence": [
+          "What is the smallest number that can be divided by each of the numbers from 1 to 6 without any remainder?"
+        ],
+        "rationale": "The conversation alternates between AI asking questions and human providing answers.",
+        "alternative": null
+      },
+      "humanRole": {
+        "distribution": {
+          "seeker": 0.35,
+          "learner": 0.1,
+          "director": 0.05,
+          "collaborator": 0.0,
+          "sharer": 0.0,
+          "challenger": 0.0,
+          "teacher-evaluator": 0.0,
+          "philosophical-explorer": 0.0,
+          "artist": 0.0,
+          "tester": 0.5
+        },
+        "confidence": 0.8,
+        "evidence": [
+          {
+            "role": "seeker",
+            "quote": "What is the smallest number that can be divided by each of the numbers from 1 to 6 without any remainder?"
+          }
+        ],
+        "rationale": "The human is seeking technical solutions and testing their code.",
+        "alternative": null
+      },
+      "aiRole": {
+        "distribution": {
+          "expert": 0.8,
+          "advisor": 0.2,
+          "facilitator": 0.0,
+          "reflector": 0.0,
+          "peer": 0.0,
+          "affiliative": 0.0,
+          "learner": 0.0,
+          "creative-partner": 0.0,
+          "unable-to-engage": 0.0
+        },
+        "confidence": 0.8,
+        "evidence": [
+          {
+            "role": "expert",
+            "quote": "This solution has a time complexity of O(1000^2) which is not efficient."
+          }
+        ],
+        "rationale": "The AI provides expert advice on the efficiency of the code.",
+        "alternative": null
+      }
+    },
+    "classificationMetadata": {
+      "model": "qwen2.5:7b",
+      "provider": "ollama",
+      "timestamp": "2026-01-07T16:48:54.853954",
+      "promptVersion": "1.3-fewshot",
+      "processingTimeMs": 30980,
+      "correctionsApplied": true,
+      "fewShotExamples": "yes",
+      "maxRetries": 2
+    }
+  },
+  {
+    "id": "kaggle-emo-1",
+    "messages": [
+      {
+        "role": "user",
+        "content": "6"
+      },
+      {
+        "role": "assistant",
+        "content": "7"
+      },
+      {
+        "role": "user",
+        "content": "8"
+      },
+      {
+        "role": "assistant",
+        "content": "9"
+      },
+      {
+        "role": "user",
+        "content": "10"
+      },
+      {
+        "role": "assistant",
+        "content": "11"
+      }
+    ],
+    "classification": {
+      "abstain": false,
+      "interactionPattern": {
+        "category": "question-answer",
+        "confidence": 0.7,
+        "evidence": [
+          "6",
+          "7",
+          "8",
+          "9",
+          "10",
+          "11"
+        ],
+        "rationale": "The conversation consists of sequential numerical responses without clear questions or answers.",
+        "alternative": null
+      },
+      "powerDynamics": {
+        "category": "balanced",
+        "confidence": 0.6,
+        "evidence": [
+          "6",
+          "7",
+          "8",
+          "9",
+          "10",
+          "11"
+        ],
+        "rationale": "The responses are sequential and could be interpreted as alternating turns.",
+        "alternative": null
+      },
+      "emotionalTone": {
+        "category": "neutral",
+        "confidence": 0.6,
+        "evidence": [
+          "6",
+          "7",
+          "8",
+          "9",
+          "10",
+          "11"
+        ],
+        "rationale": "The responses are numerical and lack emotional content.",
+        "alternative": null
+      },
+      "engagementStyle": {
+        "category": "questioning",
+        "confidence": 0.5,
+        "evidence": [
+          "6",
+          "7",
+          "8",
+          "9",
+          "10",
+          "11"
+        ],
+        "rationale": "The responses are numerical and could be interpreted as a series of questions or answers.",
+        "alternative": null
+      },
+      "knowledgeExchange": {
+        "category": "factual-info",
+        "confidence": 0.7,
+        "evidence": [
+          "6",
+          "7",
+          "8",
+          "9",
+          "10",
+          "11"
+        ],
+        "rationale": "The responses are numerical and could be interpreted as factual information exchange.",
+        "alternative": null
+      },
+      "conversationPurpose": {
+        "category": "information-seeking",
+        "confidence": 0.5,
+        "evidence": [
+          "6",
+          "7",
+          "8",
+          "9",
+          "10",
+          "11"
+        ],
+        "rationale": "The responses are numerical and could be interpreted as a series of numbers being sought or provided.",
+        "alternative": null
+      },
+      "topicDepth": {
+        "category": "surface",
+        "confidence": 0.6,
+        "evidence": [
+          "6",
+          "7",
+          "8",
+          "9",
+          "10",
+          "11"
+        ],
+        "rationale": "The responses are simple numerical values without complex or deep content.",
+        "alternative": null
+      },
+      "turnTaking": {
+        "category": "balanced",
+        "confidence": 0.6,
+        "evidence": [
+          "6",
+          "7",
+          "8",
+          "9",
+          "10",
+          "11"
+        ],
+        "rationale": "The responses are sequential and could be interpreted as alternating turns.",
+        "alternative": null
+      },
+      "humanRole": {
+        "distribution": {
+          "seeker": 0.5,
+          "learner": 0.3,
+          "director": 0.1,
+          "collaborator": 0.0,
+          "sharer": 0.0,
+          "challenger": 0.0,
+          "teacher-evaluator": 0.0,
+          "philosophical-explorer": 0.0,
+          "artist": 0.0,
+          "tester": 0.1
+        },
+        "confidence": 0.7,
+        "evidence": [
+          {
+            "role": "seeker",
+            "quote": "6"
+          }
+        ],
+        "rationale": "The human initiated the sequence with a numerical response.",
+        "alternative": null
+      },
+      "aiRole": {
+        "distribution": {
+          "expert": 0.556,
+          "advisor": 0.333,
+          "facilitator": 0.111,
+          "reflector": 0.0,
+          "peer": 0.0,
+          "affiliative": 0.0,
+          "learner": 0.0,
+          "creative-partner": 0.0,
+          "unable-to-engage": 0.0
+        },
+        "confidence": 0.7,
+        "evidence": [
+          {
+            "role": "expert",
+            "quote": "7"
+          }
+        ],
+        "rationale": "The AI responded with a numerical value.",
+        "alternative": null
+      }
+    },
+    "classificationMetadata": {
+      "model": "qwen2.5:7b",
+      "provider": "ollama",
+      "timestamp": "2026-01-07T16:49:25.898691",
+      "promptVersion": "1.3-fewshot",
+      "processingTimeMs": 30840,
+      "correctionsApplied": true,
+      "fewShotExamples": "yes",
+      "maxRetries": 2
+    }
+  },
+  {
+    "id": "kaggle-emo-2",
+    "messages": [
+      {
+        "role": "user",
+        "content": "12"
+      },
+      {
+        "role": "assistant",
+        "content": "13"
+      },
+      {
+        "role": "user",
+        "content": "14"
+      },
+      {
+        "role": "assistant",
+        "content": "15"
+      },
+      {
+        "role": "user",
+        "content": "16"
+      },
+      {
+        "role": "assistant",
+        "content": "17"
+      }
+    ],
+    "classification": {
+      "abstain": false,
+      "interactionPattern": {
+        "category": "question-answer",
+        "confidence": 0.8,
+        "evidence": [
+          "12",
+          "13",
+          "14",
+          "11",
+          "16",
+          "17"
+        ],
+        "rationale": "The conversation consists of sequential numerical responses.",
+        "alternative": null
+      },
+      "powerDynamics": {
+        "category": "balanced",
+        "confidence": 0.7,
+        "evidence": [
+          "12",
+          "13",
+          "14",
+          "11",
+          "16",
+          "17"
+        ],
+        "rationale": "The responses are alternating between the human and AI without clear leadership.",
+        "alternative": null
+      },
+      "emotionalTone": {
+        "category": "neutral",
+        "confidence": 0.6,
+        "evidence": [
+          "12",
+          "13",
+          "14",
+          "11",
+          "16",
+          "17"
+        ],
+        "rationale": "The responses are purely numerical and lack emotional content.",
+        "alternative": null
+      },
+      "engagementStyle": {
+        "category": "questioning",
+        "confidence": 0.8,
+        "evidence": [
+          "12",
+          "13",
+          "14",
+          "11",
+          "16",
+          "17"
+        ],
+        "rationale": "The responses are sequential and could be interpreted as a form of questioning or challenge.",
+        "alternative": null
+      },
+      "knowledgeExchange": {
+        "category": "factual-info",
+        "confidence": 0.7,
+        "evidence": [
+          "12",
+          "13",
+          "14",
+          "11",
+          "16",
+          "17"
+        ],
+        "rationale": "The responses are numerical values, which can be considered factual information.",
+        "alternative": null
+      },
+      "conversationPurpose": {
+        "category": "information-seeking",
+        "confidence": 0.8,
+        "evidence": [
+          "12",
+          "13",
+          "14",
+          "11",
+          "16",
+          "17"
+        ],
+        "rationale": "The sequence of numbers could be an attempt to find a pattern or test the other party.",
+        "alternative": null
+      },
+      "topicDepth": {
+        "category": "surface",
+        "confidence": 0.6,
+        "evidence": [
+          "12",
+          "13",
+          "14",
+          "11",
+          "16",
+          "17"
+        ],
+        "rationale": "The conversation does not delve into any specific or complex topic.",
+        "alternative": null
+      },
+      "turnTaking": {
+        "category": "balanced",
+        "confidence": 0.7,
+        "evidence": [
+          "12",
+          "13",
+          "14",
+          "11",
+          "16",
+          "17"
+        ],
+        "rationale": "The responses are alternating between the human and AI, indicating a balanced turn-taking.",
+        "alternative": null
+      },
+      "humanRole": {
+        "distribution": {
+          "seeker": 0.697,
+          "learner": 0.087,
+          "director": 0.043,
+          "collaborator": 0.043,
+          "sharer": 0.0,
+          "challenger": 0.043,
+          "teacher-evaluator": 0.0,
+          "philosophical-explorer": 0.0,
+          "artist": 0.0,
+          "tester": 0.087
+        },
+        "confidence": 0.8,
+        "evidence": [
+          {
+            "role": "seeker",
+            "quote": "12"
+          }
+        ],
+        "rationale": "The human is seeking a pattern or response from the AI.",
+        "alternative": null
+      },
+      "aiRole": {
+        "distribution": {
+          "expert": 0.7,
+          "advisor": 0.3,
+          "facilitator": 0.0,
+          "reflector": 0.0,
+          "peer": 0.0,
+          "affiliative": 0.0,
+          "learner": 0.0,
+          "creative-partner": 0.0,
+          "unable-to-engage": 0.0
+        },
+        "confidence": 0.8,
+        "evidence": [
+          {
+            "role": "expert",
+            "quote": "13"
+          }
+        ],
+        "rationale": "The AI is providing numerical responses to the human's input.",
+        "alternative": null
+      }
+    },
+    "classificationMetadata": {
+      "model": "qwen2.5:7b",
+      "provider": "ollama",
+      "timestamp": "2026-01-07T16:49:57.743649",
+      "promptVersion": "1.3-fewshot",
+      "processingTimeMs": 31638,
+      "correctionsApplied": true,
+      "fewShotExamples": "yes",
+      "maxRetries": 2
+    }
+  },
+  {
+    "id": "kaggle-emo-3",
+    "messages": [
+      {
+        "role": "user",
+        "content": "18"
+      },
+      {
+        "role": "assistant",
+        "content": "19"
+      },
+      {
+        "role": "user",
+        "content": "20"
+      },
+      {
+        "role": "assistant",
+        "content": "21"
+      },
+      {
+        "role": "user",
+        "content": "22"
+      },
+      {
+        "role": "assistant",
+        "content": "23"
+      }
+    ],
+    "classification": {
+      "abstain": false,
+      "interactionPattern": {
+        "category": "question-answer",
+        "confidence": 0.8,
+        "evidence": [
+          "18",
+          "19",
+          "20",
+          "21",
+          "22",
+          "23"
+        ],
+        "rationale": "The conversation consists of sequential numerical responses, which aligns with a question-answer pattern.",
+        "alternative": null
+      },
+      "powerDynamics": {
+        "category": "balanced",
+        "confidence": 0.7,
+        "evidence": [
+          "18",
+          "19",
+          "20",
+          "21",
+          "22",
+          "23"
+        ],
+        "rationale": "The responses are alternating between the human and AI, indicating a balanced power dynamic.",
+        "alternative": null
+      },
+      "emotionalTone": {
+        "category": "neutral",
+        "confidence": 0.6,
+        "evidence": [
+          "18",
+          "19",
+          "20",
+          "21",
+          "22",
+          "23"
+        ],
+        "rationale": "The responses are purely numerical and devoid of emotional content, suggesting a neutral tone.",
+        "alternative": null
+      },
+      "engagementStyle": {
+        "category": "questioning",
+        "confidence": 0.8,
+        "evidence": [
+          "18",
+          "19",
+          "20",
+          "21",
+          "22",
+          "23"
+        ],
+        "rationale": "The responses are sequential and could be interpreted as a series of numerical questions or answers.",
+        "alternative": null
+      },
+      "knowledgeExchange": {
+        "category": "factual-info",
+        "confidence": 0.7,
+        "evidence": [
+          "18",
+          "19",
+          "20",
+          "21",
+          "22",
+          "23"
+        ],
+        "rationale": "The exchange involves numerical information, which is factual in nature.",
+        "alternative": null
+      },
+      "conversationPurpose": {
+        "category": "information-seeking",
+        "confidence": 0.8,
+        "evidence": [
+          "18",
+          "19",
+          "20",
+          "21",
+          "22",
+          "23"
+        ],
+        "rationale": "The sequence of numbers suggests an attempt to seek or provide information through numerical data.",
+        "alternative": null
+      },
+      "topicDepth": {
+        "category": "surface",
+        "confidence": 0.6,
+        "evidence": [
+          "18",
+          "19",
+          "20",
+          "21",
+          "22",
+          "23"
+        ],
+        "rationale": "The conversation involves simple numerical responses without delving into deeper or more complex topics.",
+        "alternative": null
+      },
+      "turnTaking": {
+        "category": "balanced",
+        "confidence": 0.7,
+        "evidence": [
+          "18",
+          "19",
+          "20",
+          "21",
+          "22",
+          "23"
+        ],
+        "rationale": "The responses are alternating between the human and AI, indicating a balanced turn-taking pattern.",
+        "alternative": null
+      },
+      "humanRole": {
+        "distribution": {
+          "seeker": 0.7,
+          "learner": 0.2,
+          "director": 0.1,
+          "collaborator": 0.0,
+          "sharer": 0.0,
+          "challenger": 0.0,
+          "teacher-evaluator": 0.0,
+          "philosophical-explorer": 0.0,
+          "artist": 0.0,
+          "tester": 0.0
+        },
+        "confidence": 0.8,
+        "evidence": [
+          {
+            "role": "seeker",
+            "quote": "18"
+          }
+        ],
+        "rationale": "The human initiated the sequence of numbers, suggesting a seeker role.",
+        "alternative": null
+      },
+      "aiRole": {
+        "distribution": {
+          "expert": 0.8,
+          "advisor": 0.2,
+          "facilitator": 0.0,
+          "reflector": 0.0,
+          "peer": 0.0,
+          "affiliative": 0.0,
+          "learner": 0.0,
+          "creative-partner": 0.0,
+          "unable-to-engage": 0.0
+        },
+        "confidence": 0.8,
+        "evidence": [
+          {
+            "role": "expert",
+            "quote": "19"
+          }
+        ],
+        "rationale": "The AI provided numerical responses, suggesting an expert role.",
+        "alternative": null
+      }
+    },
+    "classificationMetadata": {
+      "model": "qwen2.5:7b",
+      "provider": "ollama",
+      "timestamp": "2026-01-07T16:50:30.135166",
+      "promptVersion": "1.3-fewshot",
+      "processingTimeMs": 32190,
+      "correctionsApplied": true,
+      "fewShotExamples": "yes",
+      "maxRetries": 2
+    }
+  },
+  {
+    "id": "kaggle-emo-4",
+    "messages": [
+      {
+        "role": "user",
+        "content": "24"
+      },
+      {
+        "role": "assistant",
+        "content": "25"
+      },
+      {
+        "role": "user",
+        "content": "26"
+      },
+      {
+        "role": "assistant",
+        "content": "27"
+      },
+      {
+        "role": "user",
+        "content": "28"
+      },
+      {
+        "role": "assistant",
+        "content": "29"
+      }
+    ],
+    "classification": {
+      "abstain": false,
+      "interactionPattern": {
+        "category": "question-answer",
+        "confidence": 0.8,
+        "evidence": [
+          "24",
+          "25",
+          "26",
+          "27",
+          "28",
+          "29"
+        ],
+        "rationale": "The conversation consists of sequential numerical responses without any context or question.",
+        "alternative": null
+      },
+      "powerDynamics": {
+        "category": "balanced",
+        "confidence": 0.7,
+        "evidence": [
+          "24",
+          "25",
+          "26",
+          "27",
+          "28",
+          "29"
+        ],
+        "rationale": "Both parties are contributing equally by providing numerical responses.",
+        "alternative": null
+      },
+      "emotionalTone": {
+        "category": "neutral",
+        "confidence": 0.6,
+        "evidence": [
+          "24",
+          "25",
+          "26",
+          "27",
+          "28",
+          "29"
+        ],
+        "rationale": "The responses are devoid of any emotional content or tone.",
+        "alternative": null
+      },
+      "engagementStyle": {
+        "category": "questioning",
+        "confidence": 0.8,
+        "evidence": [
+          "24",
+          "25",
+          "26",
+          "27",
+          "28",
+          "29"
+        ],
+        "rationale": "The conversation appears to be a series of numerical responses, which can be interpreted as a form of questioning or challenge.",
+        "alternative": null
+      },
+      "knowledgeExchange": {
+        "category": "factual-info",
+        "confidence": 0.7,
+        "evidence": [
+          "24",
+          "25",
+          "26",
+          "27",
+          "28",
+          "29"
+        ],
+        "rationale": "The responses are numerical values, which can be considered as factual information.",
+        "alternative": null
+      },
+      "conversationPurpose": {
+        "category": "information-seeking",
+        "confidence": 0.8,
+        "evidence": [
+          "24",
+          "25",
+          "26",
+          "27",
+          "28",
+          "29"
+        ],
+        "rationale": "The sequence of numbers could be an attempt to elicit a response or seek information.",
+        "alternative": null
+      },
+      "topicDepth": {
+        "category": "surface",
+        "confidence": 0.6,
+        "evidence": [
+          "24",
+          "25",
+          "26",
+          "27",
+          "28",
+          "29"
+        ],
+        "rationale": "The conversation does not delve into any specific topic or depth.",
+        "alternative": null
+      },
+      "turnTaking": {
+        "category": "balanced",
+        "confidence": 0.7,
+        "evidence": [
+          "24",
+          "25",
+          "26",
+          "27",
+          "28",
+          "29"
+        ],
+        "rationale": "Both parties are taking turns by providing numerical responses.",
+        "alternative": null
+      },
+      "humanRole": {
+        "distribution": {
+          "seeker": 0.7,
+          "learner": 0.1,
+          "director": 0.1,
+          "collaborator": 0.0,
+          "sharer": 0.0,
+          "challenger": 0.0,
+          "teacher-evaluator": 0.0,
+          "philosophical-explorer": 0.0,
+          "artist": 0.0,
+          "tester": 0.1
+        },
+        "confidence": 0.8,
+        "evidence": [
+          {
+            "role": "seeker",
+            "quote": "24"
+          }
+        ],
+        "rationale": "The human is seeking a response or information through numerical responses.",
+        "alternative": null
+      },
+      "aiRole": {
+        "distribution": {
+          "expert": 0.6,
+          "advisor": 0.2,
+          "facilitator": 0.1,
+          "reflector": 0.0,
+          "peer": 0.0,
+          "affiliative": 0.0,
+          "learner": 0.0,
+          "creative-partner": 0.0,
+          "unable-to-engage": 0.1
+        },
+        "confidence": 0.8,
+        "evidence": [
+          {
+            "role": "expert",
+            "quote": "25"
+          }
+        ],
+        "rationale": "The AI is providing numerical responses as an expert.",
+        "alternative": null
+      }
+    },
+    "classificationMetadata": {
+      "model": "qwen2.5:7b",
+      "provider": "ollama",
+      "timestamp": "2026-01-07T17:25:42.270134",
+      "promptVersion": "1.3-fewshot",
+      "processingTimeMs": 35009,
+      "correctionsApplied": true,
+      "fewShotExamples": "yes",
+      "maxRetries": 2
+    }
+  },
+  {
+    "id": "kaggle-emo-5",
+    "messages": [
+      {
+        "role": "user",
+        "content": "30"
+      },
+      {
+        "role": "assistant",
+        "content": "31"
+      },
+      {
+        "role": "user",
+        "content": "32"
+      },
+      {
+        "role": "assistant",
+        "content": "33"
+      },
+      {
+        "role": "user",
+        "content": "34"
+      },
+      {
+        "role": "assistant",
+        "content": "35"
+      }
+    ],
+    "classification": {
+      "abstain": false,
+      "interactionPattern": {
+        "category": "question-answer",
+        "confidence": 0.8,
+        "evidence": [
+          "30",
+          "31",
+          "32",
+          "33",
+          "34",
+          "35"
+        ],
+        "rationale": "Sequential numerical responses suggest a simple question-answer interaction.",
+        "alternative": null
+      },
+      "powerDynamics": {
+        "category": "balanced",
+        "confidence": 0.7,
+        "evidence": [
+          "30",
+          "31",
+          "32",
+          "33",
+          "34",
+          "35"
+        ],
+        "rationale": "The responses are alternating between human and AI without clear leadership.",
+        "alternative": null
+      },
+      "emotionalTone": {
+        "category": "neutral",
+        "confidence": 0.6,
+        "evidence": [
+          "30",
+          "31",
+          "32",
+          "33",
+          "34",
+          "35"
+        ],
+        "rationale": "The numerical responses are devoid of emotional content.",
+        "alternative": null
+      },
+      "engagementStyle": {
+        "category": "questioning",
+        "confidence": 0.8,
+        "evidence": [
+          "30",
+          "31",
+          "32",
+          "33",
+          "34",
+          "35"
+        ],
+        "rationale": "The AI is providing numerical responses in a sequence that could be interpreted as a simple question-answer interaction.",
+        "alternative": null
+      },
+      "knowledgeExchange": {
+        "category": "factual-info",
+        "confidence": 0.7,
+        "evidence": [
+          "30",
+          "31",
+          "32",
+          "33",
+          "34",
+          "35"
+        ],
+        "rationale": "The exchange involves providing numerical information without deeper context or emotional content.",
+        "alternative": null
+      },
+      "conversationPurpose": {
+        "category": "information-seeking",
+        "confidence": 0.8,
+        "evidence": [
+          "30",
+          "31",
+          "32",
+          "33",
+          "34",
+          "35"
+        ],
+        "rationale": "The interaction appears to be a series of numerical responses that could be part of an information-gathering process.",
+        "alternative": null
+      },
+      "topicDepth": {
+        "category": "surface",
+        "confidence": 0.6,
+        "evidence": [
+          "30",
+          "31",
+          "32",
+          "33",
+          "34",
+          "35"
+        ],
+        "rationale": "The topic is numerical and lacks depth or complexity.",
+        "alternative": null
+      },
+      "turnTaking": {
+        "category": "balanced",
+        "confidence": 0.7,
+        "evidence": [
+          "30",
+          "31",
+          "32",
+          "33",
+          "34",
+          "35"
+        ],
+        "rationale": "The responses are alternating between human and AI without clear dominance.",
+        "alternative": null
+      },
+      "humanRole": {
+        "distribution": {
+          "seeker": 0.7,
+          "learner": 0.2,
+          "director": 0.1,
+          "collaborator": 0.0,
+          "sharer": 0.0,
+          "challenger": 0.0,
+          "teacher-evaluator": 0.0,
+          "philosophical-explorer": 0.0,
+          "artist": 0.0,
+          "tester": 0.0
+        },
+        "confidence": 0.8,
+        "evidence": [
+          {
+            "role": "seeker",
+            "quote": "30"
+          }
+        ],
+        "rationale": "The human is initiating the interaction by providing a number.",
+        "alternative": null
+      },
+      "aiRole": {
+        "distribution": {
+          "expert": 0.8,
+          "advisor": 0.2,
+          "facilitator": 0.0,
+          "reflector": 0.0,
+          "peer": 0.0,
+          "affiliative": 0.0,
+          "learner": 0.0,
+          "creative-partner": 0.0,
+          "unable-to-engage": 0.0
+        },
+        "confidence": 0.8,
+        "evidence": [
+          {
+            "role": "expert",
+            "quote": "31"
+          }
+        ],
+        "rationale": "The AI is providing numerical responses in a sequence.",
+        "alternative": null
+      }
+    },
+    "classificationMetadata": {
+      "model": "qwen2.5:7b",
+      "provider": "ollama",
+      "timestamp": "2026-01-07T16:51:30.820184",
+      "promptVersion": "1.3-fewshot",
+      "processingTimeMs": 30047,
+      "correctionsApplied": true,
+      "fewShotExamples": "yes",
+      "maxRetries": 2
+    }
+  },
+  {
+    "id": "kaggle-emo-6",
+    "messages": [
+      {
+        "role": "user",
+        "content": "36"
+      },
+      {
+        "role": "assistant",
+        "content": "37"
+      },
+      {
+        "role": "user",
+        "content": "38"
+      },
+      {
+        "role": "assistant",
+        "content": "39"
+      },
+      {
+        "role": "user",
+        "content": "40"
+      },
+      {
+        "role": "assistant",
+        "content": "41"
+      }
+    ],
+    "classification": {
+      "abstain": false,
+      "interactionPattern": {
+        "category": "question-answer",
+        "confidence": 0.7,
+        "evidence": [
+          "36",
+          "37",
+          "38",
+          "39",
+          "40",
+          "41"
+        ],
+        "rationale": "The interaction pattern shows a series of numerical responses without context, suggesting a question-answer format.",
+        "alternative": null
+      },
+      "powerDynamics": {
+        "category": "balanced",
+        "confidence": 0.6,
+        "evidence": [
+          "36",
+          "37",
+          "38",
+          "39",
+          "40",
+          "41"
+        ],
+        "rationale": "The responses are numerical and sequential, indicating a balanced interaction where neither party is clearly leading.",
+        "alternative": null
+      },
+      "emotionalTone": {
+        "category": "neutral",
+        "confidence": 0.6,
+        "evidence": [
+          "36",
+          "37",
+          "38",
+          "39",
+          "40",
+          "41"
+        ],
+        "rationale": "The responses are purely numerical without any emotional content or context.",
+        "alternative": null
+      },
+      "engagementStyle": {
+        "category": "questioning",
+        "confidence": 0.7,
+        "evidence": [
+          "36",
+          "37",
+          "38",
+          "39",
+          "40",
+          "41"
+        ],
+        "rationale": "The responses are numerical and sequential, suggesting a pattern of questioning or counting.",
+        "alternative": null
+      },
+      "knowledgeExchange": {
+        "category": "factual-info",
+        "confidence": 0.7,
+        "evidence": [
+          "36",
+          "37",
+          "38",
+          "39",
+          "40",
+          "41"
+        ],
+        "rationale": "The responses are numerical and sequential, indicating the exchange of factual information.",
+        "alternative": null
+      },
+      "conversationPurpose": {
+        "category": "information-seeking",
+        "confidence": 0.7,
+        "evidence": [
+          "36",
+          "37",
+          "38",
+          "39",
+          "40",
+          "41"
+        ],
+        "rationale": "The responses are numerical and sequential, suggesting an attempt to gather or provide information.",
+        "alternative": null
+      },
+      "topicDepth": {
+        "category": "surface",
+        "confidence": 0.6,
+        "evidence": [
+          "36",
+          "37",
+          "38",
+          "39",
+          "40",
+          "41"
+        ],
+        "rationale": "The responses are purely numerical without any depth or complexity.",
+        "alternative": null
+      },
+      "turnTaking": {
+        "category": "balanced",
+        "confidence": 0.6,
+        "evidence": [
+          "36",
+          "37",
+          "38",
+          "39",
+          "40",
+          "41"
+        ],
+        "rationale": "The responses are numerical and sequential, indicating a balanced turn-taking pattern.",
+        "alternative": null
+      },
+      "humanRole": {
+        "distribution": {
+          "seeker": 0.5,
+          "learner": 0.2,
+          "director": 0.3,
+          "collaborator": 0.0,
+          "sharer": 0.0,
+          "challenger": 0.0,
+          "teacher-evaluator": 0.0,
+          "philosophical-explorer": 0.0,
+          "artist": 0.0,
+          "tester": 0.0
+        },
+        "confidence": 0.8,
+        "evidence": [
+          {
+            "role": "seeker",
+            "quote": "36"
+          }
+        ],
+        "rationale": "The human initiated the sequence and is seeking or providing information.",
+        "alternative": null
+      },
+      "aiRole": {
+        "distribution": {
+          "expert": 0.5,
+          "advisor": 0.2,
+          "facilitator": 0.3,
+          "reflector": 0.0,
+          "peer": 0.0,
+          "affiliative": 0.0,
+          "learner": 0.0,
+          "creative-partner": 0.0,
+          "unable-to-engage": 0.0
+        },
+        "confidence": 0.8,
+        "evidence": [
+          {
+            "role": "expert",
+            "quote": "37"
+          }
+        ],
+        "rationale": "The AI is providing numerical responses in a sequence, acting as an expert.",
+        "alternative": null
+      }
+    },
+    "classificationMetadata": {
+      "model": "qwen2.5:7b",
+      "provider": "ollama",
+      "timestamp": "2026-01-07T17:26:14.747760",
+      "promptVersion": "1.3-fewshot",
+      "processingTimeMs": 32274,
+      "correctionsApplied": true,
+      "fewShotExamples": "yes",
+      "maxRetries": 2
+    }
+  },
+  {
+    "id": "kaggle-emo-7",
+    "messages": [
+      {
+        "role": "user",
+        "content": "42"
+      },
+      {
+        "role": "assistant",
+        "content": "43"
+      },
+      {
+        "role": "user",
+        "content": "44"
+      },
+      {
+        "role": "assistant",
+        "content": "45"
+      },
+      {
+        "role": "user",
+        "content": "46"
+      },
+      {
+        "role": "assistant",
+        "content": "47"
+      }
+    ],
+    "classification": {
+      "abstain": false,
+      "interactionPattern": {
+        "category": "question-answer",
+        "confidence": 0.8,
+        "evidence": [
+          "42",
+          "43",
+          "44",
+          "45",
+          "46",
+          "47"
+        ],
+        "rationale": "The conversation consists of sequential numerical responses, which can be interpreted as a series of questions and answers.",
+        "alternative": null
+      },
+      "powerDynamics": {
+        "category": "balanced",
+        "confidence": 0.8,
+        "evidence": [
+          "42",
+          "43",
+          "44",
+          "45",
+          "46",
+          "47"
+        ],
+        "rationale": "Both parties are providing numerical responses without one clearly dominating the interaction.",
+        "alternative": null
+      },
+      "emotionalTone": {
+        "category": "neutral",
+        "confidence": 0.6,
+        "evidence": [
+          "42",
+          "43",
+          "44",
+          "45",
+          "46",
+          "47"
+        ],
+        "rationale": "The responses are purely numerical and lack any emotional content.",
+        "alternative": null
+      },
+      "engagementStyle": {
+        "category": "questioning",
+        "confidence": 0.8,
+        "evidence": [
+          "42",
+          "43",
+          "44",
+          "45",
+          "46",
+          "47"
+        ],
+        "rationale": "The numerical sequence can be interpreted as a series of questions or challenges, prompting the other party to respond with the next number in line.",
+        "alternative": null
+      },
+      "knowledgeExchange": {
+        "category": "factual-info",
+        "confidence": 0.7,
+        "evidence": [
+          "42",
+          "43",
+          "44",
+          "45",
+          "46",
+          "47"
+        ],
+        "rationale": "The interaction involves the exchange of numerical information without any additional context or explanation.",
+        "alternative": null
+      },
+      "conversationPurpose": {
+        "category": "information-seeking",
+        "confidence": 0.8,
+        "evidence": [
+          "42",
+          "43",
+          "44",
+          "45",
+          "46",
+          "47"
+        ],
+        "rationale": "The sequence of numbers suggests an attempt to establish a pattern or rule for information exchange.",
+        "alternative": null
+      },
+      "topicDepth": {
+        "category": "surface",
+        "confidence": 0.6,
+        "evidence": [
+          "42",
+          "43",
+          "44",
+          "45",
+          "46",
+          "47"
+        ],
+        "rationale": "The conversation focuses on a simple numerical sequence without delving into deeper or more complex topics.",
+        "alternative": null
+      },
+      "turnTaking": {
+        "category": "balanced",
+        "confidence": 0.8,
+        "evidence": [
+          "42",
+          "43",
+          "44",
+          "45",
+          "46",
+          "47"
+        ],
+        "rationale": "Both parties are taking turns to provide the next number in the sequence, indicating a balanced turn-taking pattern.",
+        "alternative": null
+      },
+      "humanRole": {
+        "distribution": {
+          "seeker": 0.761,
+          "learner": 0.095,
+          "director": 0.048,
+          "collaborator": 0.048,
+          "sharer": 0.0,
+          "challenger": 0.0,
+          "teacher-evaluator": 0.0,
+          "philosophical-explorer": 0.0,
+          "artist": 0.0,
+          "tester": 0.048
+        },
+        "confidence": 0.8,
+        "evidence": [
+          {
+            "role": "seeker",
+            "quote": "42"
+          }
+        ],
+        "rationale": "The human is seeking to establish a pattern or rule through the numerical sequence.",
+        "alternative": null
+      },
+      "aiRole": {
+        "distribution": {
+          "expert": 0.8,
+          "advisor": 0.1,
+          "facilitator": 0.05,
+          "reflector": 0.05,
+          "peer": 0.0,
+          "affiliative": 0.0,
+          "learner": 0.0,
+          "creative-partner": 0.0,
+          "unable-to-engage": 0.0
+        },
+        "confidence": 0.8,
+        "evidence": [
+          {
+            "role": "expert",
+            "quote": "43"
+          }
+        ],
+        "rationale": "The AI is providing numerical responses to maintain the pattern or rule established by the human.",
+        "alternative": null
+      }
+    },
+    "classificationMetadata": {
+      "model": "qwen2.5:7b",
+      "provider": "ollama",
+      "timestamp": "2026-01-07T17:26:48.054371",
+      "promptVersion": "1.3-fewshot",
+      "processingTimeMs": 33101,
+      "correctionsApplied": true,
+      "fewShotExamples": "yes",
+      "maxRetries": 2
+    }
+  },
+  {
+    "id": "kaggle-emo-8",
+    "messages": [
+      {
+        "role": "user",
+        "content": "48"
+      },
+      {
+        "role": "assistant",
+        "content": "49"
+      },
+      {
+        "role": "user",
+        "content": "50"
+      },
+      {
+        "role": "assistant",
+        "content": "51"
+      },
+      {
+        "role": "user",
+        "content": "52"
+      },
+      {
+        "role": "assistant",
+        "content": "53"
+      }
+    ],
+    "classification": {
+      "abstain": false,
+      "interactionPattern": {
+        "category": "question-answer",
+        "confidence": 0.8,
+        "evidence": [
+          "48",
+          "49",
+          "50",
+          "51",
+          "52",
+          "53"
+        ],
+        "rationale": "The conversation consists of sequential numerical responses.",
+        "alternative": null
+      },
+      "powerDynamics": {
+        "category": "balanced",
+        "confidence": 0.7,
+        "evidence": [
+          "48",
+          "49",
+          "50",
+          "51",
+          "52",
+          "53"
+        ],
+        "rationale": "Both parties are equally contributing without one dominating.",
+        "alternative": null
+      },
+      "emotionalTone": {
+        "category": "neutral",
+        "confidence": 0.6,
+        "evidence": [
+          "48",
+          "49",
+          "50",
+          "51",
+          "52",
+          "53"
+        ],
+        "rationale": "The responses are purely numerical and lack emotional content.",
+        "alternative": null
+      },
+      "engagementStyle": {
+        "category": "questioning",
+        "confidence": 0.8,
+        "evidence": [
+          "48",
+          "49",
+          "50",
+          "51",
+          "52",
+          "53"
+        ],
+        "rationale": "The responses are sequential and could be interpreted as a form of questioning or challenge.",
+        "alternative": null
+      },
+      "knowledgeExchange": {
+        "category": "factual-info",
+        "confidence": 0.7,
+        "evidence": [
+          "48",
+          "49",
+          "50",
+          "51",
+          "52",
+          "53"
+        ],
+        "rationale": "The exchange involves numerical information without deeper context.",
+        "alternative": null
+      },
+      "conversationPurpose": {
+        "category": "information-seeking",
+        "confidence": 0.8,
+        "evidence": [
+          "48",
+          "49",
+          "50",
+          "51",
+          "52",
+          "53"
+        ],
+        "rationale": "The sequence of numbers suggests an attempt to gather or confirm numerical information.",
+        "alternative": null
+      },
+      "topicDepth": {
+        "category": "surface",
+        "confidence": 0.6,
+        "evidence": [
+          "48",
+          "49",
+          "50",
+          "51",
+          "52",
+          "53"
+        ],
+        "rationale": "The conversation focuses on simple numerical values without delving into complex topics.",
+        "alternative": null
+      },
+      "turnTaking": {
+        "category": "balanced",
+        "confidence": 0.7,
+        "evidence": [
+          "48",
+          "49",
+          "50",
+          "51",
+          "52",
+          "53"
+        ],
+        "rationale": "Both parties are taking turns to contribute numbers.",
+        "alternative": null
+      },
+      "humanRole": {
+        "distribution": {
+          "seeker": 0.7,
+          "learner": 0.2,
+          "director": 0.1,
+          "collaborator": 0.0,
+          "sharer": 0.0,
+          "challenger": 0.0,
+          "teacher-evaluator": 0.0,
+          "philosophical-explorer": 0.0,
+          "artist": 0.0,
+          "tester": 0.0
+        },
+        "confidence": 0.8,
+        "evidence": [
+          {
+            "role": "seeker",
+            "quote": "48"
+          }
+        ],
+        "rationale": "The human is seeking or confirming numerical information.",
+        "alternative": null
+      },
+      "aiRole": {
+        "distribution": {
+          "expert": 0.8,
+          "advisor": 0.2,
+          "facilitator": 0.0,
+          "reflector": 0.0,
+          "peer": 0.0,
+          "affiliative": 0.0,
+          "learner": 0.0,
+          "creative-partner": 0.0,
+          "unable-to-engage": 0.0
+        },
+        "confidence": 0.8,
+        "evidence": [
+          {
+            "role": "expert",
+            "quote": "49"
+          }
+        ],
+        "rationale": "The AI is providing numerical information in response.",
+        "alternative": null
+      }
+    },
+    "classificationMetadata": {
+      "model": "qwen2.5:7b",
+      "provider": "ollama",
+      "timestamp": "2026-01-07T16:53:03.868650",
+      "promptVersion": "1.3-fewshot",
+      "processingTimeMs": 31144,
+      "correctionsApplied": true,
+      "fewShotExamples": "yes",
+      "maxRetries": 2
+    }
+  },
+  {
+    "id": "kaggle-emo-9",
+    "messages": [
+      {
+        "role": "user",
+        "content": "54"
+      },
+      {
+        "role": "assistant",
+        "content": "55"
+      },
+      {
+        "role": "user",
+        "content": "56"
+      },
+      {
+        "role": "assistant",
+        "content": "57"
+      },
+      {
+        "role": "user",
+        "content": "58"
+      },
+      {
+        "role": "assistant",
+        "content": "59"
+      }
+    ],
+    "classification": {
+      "abstain": false,
+      "interactionPattern": {
+        "category": "question-answer",
+        "confidence": 0.6,
+        "evidence": [
+          "exact quote"
+        ],
+        "rationale": "The conversation appears to be a series of numerical responses without context, suggesting a question-answer pattern.",
+        "alternative": null
+      },
+      "powerDynamics": {
+        "category": "balanced",
+        "confidence": 0.7,
+        "evidence": [
+          "exact quote"
+        ],
+        "rationale": "The conversation alternates between the human and AI without clear leadership, indicating a balanced dynamic.",
+        "alternative": null
+      },
+      "emotionalTone": {
+        "category": "neutral",
+        "confidence": 0.6,
+        "evidence": [
+          "exact quote"
+        ],
+        "rationale": "The numerical responses are devoid of emotional content, suggesting a neutral tone.",
+        "alternative": null
+      },
+      "engagementStyle": {
+        "category": "questioning",
+        "confidence": 0.8,
+        "evidence": [
+          "exact quote"
+        ],
+        "rationale": "Each response is a single number, which could be seen as a numerical question or answer.",
+        "alternative": null
+      },
+      "knowledgeExchange": {
+        "category": "factual-info",
+        "confidence": 0.7,
+        "evidence": [
+          "exact quote"
+        ],
+        "rationale": "The exchange involves only factual information in the form of numbers, indicating a focus on sharing data.",
+        "alternative": null
+      },
+      "conversationPurpose": {
+        "category": "information-seeking",
+        "confidence": 0.8,
+        "evidence": [
+          "exact quote"
+        ],
+        "rationale": "The sequence of numbers could be interpreted as an attempt to gather or provide information through numerical data.",
+        "alternative": null
+      },
+      "topicDepth": {
+        "category": "surface",
+        "confidence": 0.6,
+        "evidence": [
+          "exact quote"
+        ],
+        "rationale": "The conversation lacks depth, focusing solely on surface-level numerical responses.",
+        "alternative": null
+      },
+      "turnTaking": {
+        "category": "balanced",
+        "confidence": 0.7,
+        "evidence": [
+          "exact quote"
+        ],
+        "rationale": "The exchange alternates between the human and AI without one dominating, indicating balanced turn-taking.",
+        "alternative": null
+      },
+      "humanRole": {
+        "distribution": {
+          "seeker": 1.0,
+          "learner": 0.0,
+          "director": 0.0,
+          "collaborator": 0.0,
+          "sharer": 0.0,
+          "challenger": 0.0,
+          "teacher-evaluator": 0.0,
+          "philosophical-explorer": 0.0,
+          "artist": 0.0,
+          "tester": 0.0
+        },
+        "confidence": 0.8,
+        "evidence": [
+          {
+            "role": "seeker",
+            "quote": "exact quote"
+          }
+        ],
+        "rationale": "The human is acting as a seeker by providing responses without clear context or question.",
+        "alternative": null
+      },
+      "aiRole": {
+        "distribution": {
+          "expert": 1.0,
+          "advisor": 0.0,
+          "facilitator": 0.0,
+          "reflector": 0.0,
+          "peer": 0.0,
+          "affiliative": 0.0,
+          "learner": 0.0,
+          "creative-partner": 0.0,
+          "unable-to-engage": 0.0
+        },
+        "confidence": 0.8,
+        "evidence": [
+          {
+            "role": "expert",
+            "quote": "exact quote"
+          }
+        ],
+        "rationale": "The AI is acting as an expert by providing numerical responses.",
+        "alternative": null
+      }
+    },
+    "classificationMetadata": {
+      "model": "qwen2.5:7b",
+      "provider": "ollama",
+      "timestamp": "2026-01-07T16:53:32.870856",
+      "promptVersion": "1.3-fewshot",
+      "processingTimeMs": 28799,
+      "correctionsApplied": true,
+      "fewShotExamples": "yes",
+      "maxRetries": 2
+    }
+  },
+  {
+    "id": "kaggle-emo-0",
+    "messages": [
+      {
+        "role": "user",
+        "content": "I remember going to see the fireworks with my best friend. It was the first time we ever spent time alone together. Although there was a lot of people, we felt like the only people in the world."
+      },
+      {
+        "role": "assistant",
+        "content": ""
+      }
+    ],
+    "classification": {
+      "abstain": false,
+      "interactionPattern": {
+        "category": "casual-chat",
+        "confidence": 0.8,
+        "evidence": [
+          "It was the first time we ever spent time alone together."
+        ],
+        "rationale": "The human reminisces about a past experience with their best friend, indicating a casual conversation.",
+        "alternative": null
+      },
+      "powerDynamics": {
+        "category": "balanced",
+        "confidence": 0.7,
+        "evidence": [
+          "It was the first time we ever spent time alone together."
+        ],
+        "rationale": "The narrative is shared by the human and there's no indication of one party leading over the other.",
+        "alternative": null
+      },
+      "emotionalTone": {
+        "category": "neutral",
+        "confidence": 0.6,
+        "evidence": [
+          "Although there was a lot of people, we felt like the only people in the world."
+        ],
+        "rationale": "The tone is neutral as it describes a personal memory without strong emotional language.",
+        "alternative": null
+      },
+      "engagementStyle": {
+        "category": "reactive",
+        "confidence": 0.8,
+        "evidence": [
+          "It was the first time we ever spent time alone together."
+        ],
+        "rationale": "The human is sharing a personal experience, and there's no indication of questioning or challenging.",
+        "alternative": null
+      },
+      "knowledgeExchange": {
+        "category": "personal-sharing",
+        "confidence": 0.7,
+        "evidence": [
+          "It was the first time we ever spent time alone together."
+        ],
+        "rationale": "The human is sharing a personal memory and experience, which falls under personal-sharing.",
+        "alternative": null
+      },
+      "conversationPurpose": {
+        "category": "self-expression",
+        "confidence": 0.8,
+        "evidence": [
+          "It was the first time we ever spent time alone together."
+        ],
+        "rationale": "The human is expressing their feelings and memories, which aligns with self-expression.",
+        "alternative": null
+      },
+      "topicDepth": {
+        "category": "surface",
+        "confidence": 0.6,
+        "evidence": [
+          "It was the first time we ever spent time alone together."
+        ],
+        "rationale": "The conversation is about a personal memory and doesn't delve into deeper topics.",
+        "alternative": null
+      },
+      "turnTaking": {
+        "category": "balanced",
+        "confidence": 0.7,
+        "evidence": [
+          "It was the first time we ever spent time alone together."
+        ],
+        "rationale": "The human is sharing a personal experience, and there's no indication of one party dominating.",
+        "alternative": null
+      },
+      "humanRole": {
+        "distribution": {
+          "seeker": 0.0,
+          "learner": 0.0,
+          "director": 0.0,
+          "collaborator": 0.0,
+          "sharer": 1.0,
+          "challenger": 0.0,
+          "teacher-evaluator": 0.0,
+          "philosophical-explorer": 0.0,
+          "artist": 0.0,
+          "tester": 0.0
+        },
+        "confidence": 0.8,
+        "evidence": [
+          {
+            "role": "sharer",
+            "quote": "It was the first time we ever spent time alone together."
+          }
+        ],
+        "rationale": "The human is sharing a personal memory and experience.",
+        "alternative": null
+      },
+      "aiRole": {
+        "distribution": {
+          "expert": 0.0,
+          "advisor": 0.0,
+          "facilitator": 1.0,
+          "reflector": 0.0,
+          "peer": 0.0,
+          "affiliative": 0.0,
+          "learner": 0.0,
+          "creative-partner": 0.0,
+          "unable-to-engage": 0.0
+        },
+        "confidence": 0.8,
+        "evidence": [
+          {
+            "role": "facilitator",
+            "quote": "It was the first time we ever spent time alone together."
+          }
+        ],
+        "rationale": "The AI is facilitating the conversation by listening and acknowledging the human's narrative.",
+        "alternative": null
+      }
+    },
+    "classificationMetadata": {
+      "model": "qwen2.5:7b",
+      "provider": "ollama",
+      "timestamp": "2026-01-07T16:54:04.380002",
+      "promptVersion": "1.3-fewshot",
+      "processingTimeMs": 31304,
+      "correctionsApplied": true,
+      "fewShotExamples": "yes",
+      "maxRetries": 2
+    }
+  },
+  {
+    "id": "kaggle-emo-1",
+    "messages": [
+      {
+        "role": "user",
+        "content": "This was a best friend. I miss her."
+      },
+      {
+        "role": "assistant",
+        "content": ""
+      }
+    ],
+    "classification": {
+      "abstain": false,
+      "interactionPattern": {
+        "category": "casual-chat",
+        "confidence": 0.7,
+        "evidence": [
+          "This was a best friend. I miss her."
+        ],
+        "rationale": "The statement expresses personal feelings about a past friendship, indicating a casual conversation.",
+        "alternative": null
+      },
+      "powerDynamics": {
+        "category": "human-led",
+        "confidence": 0.8,
+        "evidence": [
+          "This was a best friend. I miss her."
+        ],
+        "rationale": "The user initiates the conversation with personal reflections, leading the interaction.",
+        "alternative": null
+      },
+      "emotionalTone": {
+        "category": "empathetic",
+        "confidence": 0.6,
+        "evidence": [
+          "This was a best friend. I miss her."
+        ],
+        "rationale": "The statement conveys emotional sentiment, suggesting an empathetic tone.",
+        "alternative": null
+      },
+      "engagementStyle": {
+        "category": "reactive",
+        "confidence": 0.7,
+        "evidence": [
+          "This was a best friend. I miss her."
+        ],
+        "rationale": "The user is sharing personal feelings, and the AI should respond empathetically.",
+        "alternative": null
+      },
+      "knowledgeExchange": {
+        "category": "personal-sharing",
+        "confidence": 0.7,
+        "evidence": [
+          "This was a best friend. I miss her."
+        ],
+        "rationale": "The statement is about personal experiences and emotions, indicating personal sharing.",
+        "alternative": null
+      },
+      "conversationPurpose": {
+        "category": "self-expression",
+        "confidence": 0.8,
+        "evidence": [
+          "This was a best friend. I miss her."
+        ],
+        "rationale": "The user is expressing personal feelings and memories, which serves as self-expression.",
+        "alternative": null
+      },
+      "topicDepth": {
+        "category": "surface",
+        "confidence": 0.6,
+        "evidence": [
+          "This was a best friend. I miss her."
+        ],
+        "rationale": "The topic is about a personal friendship and feelings, which is at the surface level.",
+        "alternative": null
+      },
+      "turnTaking": {
+        "category": "user-dominant",
+        "confidence": 0.7,
+        "evidence": [
+          "This was a best friend. I miss her."
+        ],
+        "rationale": "The user initiates and continues the conversation with personal reflections.",
+        "alternative": null
+      },
+      "humanRole": {
+        "distribution": {
+          "seeker": 0.709,
+          "learner": 0.088,
+          "director": 0.044,
+          "collaborator": 0.035,
+          "sharer": 0.044,
+          "challenger": 0.0,
+          "teacher-evaluator": 0.0,
+          "philosophical-explorer": 0.0,
+          "artist": 0.0,
+          "tester": 0.08
+        },
+        "confidence": 0.8,
+        "evidence": [
+          {
+            "role": "seeker",
+            "quote": "This was a best friend. I miss her."
+          }
+        ],
+        "rationale": "The user is seeking to share personal experiences and emotions.",
+        "alternative": null
+      },
+      "aiRole": {
+        "distribution": {
+          "expert": 0.087,
+          "advisor": 0.087,
+          "facilitator": 0.523,
+          "reflector": 0.174,
+          "peer": 0.043,
+          "affiliative": 0.043,
+          "learner": 0.043,
+          "creative-partner": 0.0,
+          "unable-to-engage": 0.0
+        },
+        "confidence": 0.8,
+        "evidence": [
+          {
+            "role": "facilitator",
+            "quote": "This was a best friend. I miss her."
+          }
+        ],
+        "rationale": "The AI should facilitate the conversation by providing empathetic responses.",
+        "alternative": null
+      }
+    },
+    "classificationMetadata": {
+      "model": "qwen2.5:7b",
+      "provider": "ollama",
+      "timestamp": "2026-01-07T16:54:34.887091",
+      "promptVersion": "1.3-fewshot",
+      "processingTimeMs": 30303,
+      "correctionsApplied": true,
+      "fewShotExamples": "yes",
+      "maxRetries": 2
+    }
+  },
+  {
+    "id": "kaggle-emo-2",
+    "messages": [
+      {
+        "role": "user",
+        "content": "We no longer talk."
+      },
+      {
+        "role": "assistant",
+        "content": ""
+      }
+    ],
+    "classification": {
+      "abstain": false,
+      "interactionPattern": {
+        "category": "casual-chat",
+        "confidence": 0.9,
+        "evidence": [
+          "We no longer talk."
+        ],
+        "rationale": "The statement indicates a change in the nature of their interaction, suggesting a casual conversation.",
+        "alternative": null
+      },
+      "powerDynamics": {
+        "category": "balanced",
+        "confidence": 0.8,
+        "evidence": [
+          "We no longer talk."
+        ],
+        "rationale": "The statement is neutral and does not indicate any clear leadership or dominance from either party.",
+        "alternative": null
+      },
+      "emotionalTone": {
+        "category": "neutral",
+        "confidence": 0.6,
+        "evidence": [
+          "We no longer talk."
+        ],
+        "rationale": "The statement is a factual declaration without any emotional connotation.",
+        "alternative": null
+      },
+      "engagementStyle": {
+        "category": "casual-chat",
+        "confidence": 0.8,
+        "evidence": [
+          "We no longer talk."
+        ],
+        "rationale": "The statement is a simple, direct communication without any complex questioning or challenging.",
+        "alternative": null
+      },
+      "knowledgeExchange": {
+        "category": "factual-info",
+        "confidence": 0.7,
+        "evidence": [
+          "We no longer talk."
+        ],
+        "rationale": "The statement provides a factual piece of information about the state of their interaction.",
+        "alternative": null
+      },
+      "conversationPurpose": {
+        "category": "information-seeking",
+        "confidence": 0.8,
+        "evidence": [
+          "We no longer talk."
+        ],
+        "rationale": "The statement is seeking to inform or confirm a change in the nature of their interaction.",
+        "alternative": null
+      },
+      "topicDepth": {
+        "category": "surface",
+        "confidence": 0.6,
+        "evidence": [
+          "We no longer talk."
+        ],
+        "rationale": "The statement is about a surface-level fact without delving into deeper topics or complexities.",
+        "alternative": null
+      },
+      "turnTaking": {
+        "category": "balanced",
+        "confidence": 0.7,
+        "evidence": [
+          "We no longer talk."
+        ],
+        "rationale": "The statement is a single, direct communication from the human without any back-and-forth.",
+        "alternative": null
+      },
+      "humanRole": {
+        "distribution": {
+          "seeker": 1.0,
+          "learner": 0.0,
+          "director": 0.0,
+          "collaborator": 0.0,
+          "sharer": 0.0,
+          "challenger": 0.0,
+          "teacher-evaluator": 0.0,
+          "philosophical-explorer": 0.0,
+          "artist": 0.0
+        },
+        "confidence": 1.0,
+        "evidence": [
+          {
+            "role": "seeker",
+            "quote": "We no longer talk."
+          }
+        ],
+        "rationale": "The statement is a direct communication seeking to establish the current state of their interaction.",
+        "alternative": null
+      },
+      "aiRole": {
+        "distribution": {
+          "expert": 0.0,
+          "advisor": 0.0,
+          "facilitator": 1.0,
+          "reflector": 0.0,
+          "peer": 0.0,
+          "affiliative": 0.0,
+          "learner": 0.0,
+          "creative-partner": 0.0,
+          "unable-to-engage": 0.0
+        },
+        "confidence": 1.0,
+        "evidence": [
+          {
+            "role": "facilitator",
+            "quote": "We no longer talk."
+          }
+        ],
+        "rationale": "The AI is facilitating the exchange by responding to the human's statement.",
+        "alternative": null
+      }
+    },
+    "classificationMetadata": {
+      "model": "qwen2.5:7b",
+      "provider": "ollama",
+      "timestamp": "2026-01-07T16:55:04.417976",
+      "promptVersion": "1.3-fewshot",
+      "processingTimeMs": 29327,
+      "correctionsApplied": true,
+      "fewShotExamples": "yes",
+      "maxRetries": 2
+    }
+  },
+  {
+    "id": "kaggle-emo-3",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Was this a friend you were in love with, or just a best friend?"
+      },
+      {
+        "role": "assistant",
+        "content": ""
+      }
+    ],
+    "classification": {
+      "abstain": false,
+      "interactionPattern": {
+        "category": "casual-chat",
+        "confidence": 0.8,
+        "evidence": [
+          "Was this a friend you were in love with, or just a best friend?"
+        ],
+        "rationale": "The question is about personal feelings towards a friend.",
+        "alternative": null
+      },
+      "powerDynamics": {
+        "category": "balanced",
+        "confidence": 0.7,
+        "evidence": [
+          "Was this a friend you were in love with, or just a best friend?"
+        ],
+        "rationale": "The question seeks information and does not indicate one party is leading.",
+        "alternative": null
+      },
+      "emotionalTone": {
+        "category": "neutral",
+        "confidence": 0.6,
+        "evidence": [
+          "Was this a friend you were in love with, or just a best friend?"
+        ],
+        "rationale": "The question is neutral and seeks personal information.",
+        "alternative": null
+      },
+      "engagementStyle": {
+        "category": "questioning",
+        "confidence": 0.8,
+        "evidence": [
+          "Was this a friend you were in love with, or just a best friend?"
+        ],
+        "rationale": "The user is asking a question to gather more information.",
+        "alternative": null
+      },
+      "knowledgeExchange": {
+        "category": "personal-sharing",
+        "confidence": 0.7,
+        "evidence": [
+          "Was this a friend you were in love with, or just a best friend?"
+        ],
+        "rationale": "The question seeks personal insights and feelings.",
+        "alternative": null
+      },
+      "conversationPurpose": {
+        "category": "information-seeking",
+        "confidence": 0.8,
+        "evidence": [
+          "Was this a friend you were in love with, or just a best friend?"
+        ],
+        "rationale": "The user is seeking to understand the nature of a relationship.",
+        "alternative": null
+      },
+      "topicDepth": {
+        "category": "moderate",
+        "confidence": 0.6,
+        "evidence": [
+          "Was this a friend you were in love with, or just a best friend?"
+        ],
+        "rationale": "The question delves into personal feelings and relationships.",
+        "alternative": null
+      },
+      "turnTaking": {
+        "category": "balanced",
+        "confidence": 0.7,
+        "evidence": [
+          "Was this a friend you were in love with, or just a best friend?"
+        ],
+        "rationale": "The user initiated the conversation with a question.",
+        "alternative": null
+      },
+      "humanRole": {
+        "distribution": {
+          "seeker": 1.0,
+          "learner": 0.0,
+          "director": 0.0,
+          "collaborator": 0.0,
+          "sharer": 0.0,
+          "challenger": 0.0,
+          "teacher-evaluator": 0.0,
+          "philosophical-explorer": 0.0,
+          "artist": 0.0,
+          "tester": 0.0
+        },
+        "confidence": 0.8,
+        "evidence": [
+          {
+            "role": "seeker",
+            "quote": "Was this a friend you were in love with, or just a best friend?"
+          }
+        ],
+        "rationale": "The user is seeking information about the nature of a friendship.",
+        "alternative": null
+      },
+      "aiRole": {
+        "distribution": {
+          "expert": 0.0,
+          "advisor": 0.0,
+          "facilitator": 1.0,
+          "reflector": 0.0,
+          "peer": 0.0,
+          "affiliative": 0.0,
+          "learner": 0.0,
+          "creative-partner": 0.0,
+          "unable-to-engage": 0.0
+        },
+        "confidence": 0.8,
+        "evidence": [
+          {
+            "role": "facilitator",
+            "quote": "Was this a friend you were in love with, or just a best friend?"
+          }
+        ],
+        "rationale": "The AI is facilitating the conversation by responding to the user's question.",
+        "alternative": null
+      }
+    },
+    "classificationMetadata": {
+      "model": "qwen2.5:7b",
+      "provider": "ollama",
+      "timestamp": "2026-01-07T16:55:33.923218",
+      "promptVersion": "1.3-fewshot",
+      "processingTimeMs": 29296,
+      "correctionsApplied": true,
+      "fewShotExamples": "yes",
+      "maxRetries": 2
+    }
+  },
+  {
+    "id": "kaggle-emo-4",
+    "messages": [
+      {
+        "role": "user",
+        "content": "24"
+      },
+      {
+        "role": "assistant",
+        "content": "25"
+      },
+      {
+        "role": "user",
+        "content": "26"
+      },
+      {
+        "role": "assistant",
+        "content": "27"
+      },
+      {
+        "role": "user",
+        "content": "28"
+      },
+      {
+        "role": "assistant",
+        "content": "29"
+      }
+    ],
+    "classification": {
+      "abstain": false,
+      "interactionPattern": {
+        "category": "question-answer",
+        "confidence": 0.8,
+        "evidence": [
+          "24",
+          "25",
+          "26",
+          "27",
+          "28",
+          "29"
+        ],
+        "rationale": "The conversation consists of sequential numerical responses without any context or question.",
+        "alternative": null
+      },
+      "powerDynamics": {
+        "category": "balanced",
+        "confidence": 0.7,
+        "evidence": [
+          "24",
+          "25",
+          "26",
+          "27",
+          "28",
+          "29"
+        ],
+        "rationale": "Both parties are contributing equally by providing numerical responses.",
+        "alternative": null
+      },
+      "emotionalTone": {
+        "category": "neutral",
+        "confidence": 0.6,
+        "evidence": [
+          "24",
+          "25",
+          "26",
+          "27",
+          "28",
+          "29"
+        ],
+        "rationale": "The responses are devoid of any emotional content or tone.",
+        "alternative": null
+      },
+      "engagementStyle": {
+        "category": "questioning",
+        "confidence": 0.8,
+        "evidence": [
+          "24",
+          "25",
+          "26",
+          "27",
+          "28",
+          "29"
+        ],
+        "rationale": "The conversation appears to be a series of numerical responses, which can be interpreted as a form of questioning or challenge.",
+        "alternative": null
+      },
+      "knowledgeExchange": {
+        "category": "factual-info",
+        "confidence": 0.7,
+        "evidence": [
+          "24",
+          "25",
+          "26",
+          "27",
+          "28",
+          "29"
+        ],
+        "rationale": "The responses are numerical values, which can be considered as factual information.",
+        "alternative": null
+      },
+      "conversationPurpose": {
+        "category": "information-seeking",
+        "confidence": 0.8,
+        "evidence": [
+          "24",
+          "25",
+          "26",
+          "27",
+          "28",
+          "29"
+        ],
+        "rationale": "The sequence of numbers could be an attempt to elicit a response or seek information.",
+        "alternative": null
+      },
+      "topicDepth": {
+        "category": "surface",
+        "confidence": 0.6,
+        "evidence": [
+          "24",
+          "25",
+          "26",
+          "27",
+          "28",
+          "29"
+        ],
+        "rationale": "The conversation does not delve into any specific topic or depth.",
+        "alternative": null
+      },
+      "turnTaking": {
+        "category": "balanced",
+        "confidence": 0.7,
+        "evidence": [
+          "24",
+          "25",
+          "26",
+          "27",
+          "28",
+          "29"
+        ],
+        "rationale": "Both parties are taking turns by providing numerical responses.",
+        "alternative": null
+      },
+      "humanRole": {
+        "distribution": {
+          "seeker": 0.7,
+          "learner": 0.1,
+          "director": 0.1,
+          "collaborator": 0.0,
+          "sharer": 0.0,
+          "challenger": 0.0,
+          "teacher-evaluator": 0.0,
+          "philosophical-explorer": 0.0,
+          "artist": 0.0,
+          "tester": 0.1
+        },
+        "confidence": 0.8,
+        "evidence": [
+          {
+            "role": "seeker",
+            "quote": "24"
+          }
+        ],
+        "rationale": "The human is seeking a response or information through numerical responses.",
+        "alternative": null
+      },
+      "aiRole": {
+        "distribution": {
+          "expert": 0.6,
+          "advisor": 0.2,
+          "facilitator": 0.1,
+          "reflector": 0.0,
+          "peer": 0.0,
+          "affiliative": 0.0,
+          "learner": 0.0,
+          "creative-partner": 0.0,
+          "unable-to-engage": 0.1
+        },
+        "confidence": 0.8,
+        "evidence": [
+          {
+            "role": "expert",
+            "quote": "25"
+          }
+        ],
+        "rationale": "The AI is providing numerical responses as an expert.",
+        "alternative": null
+      }
+    },
+    "classificationMetadata": {
+      "model": "qwen2.5:7b",
+      "provider": "ollama",
+      "timestamp": "2026-01-07T17:25:42.270134",
+      "promptVersion": "1.3-fewshot",
+      "processingTimeMs": 35009,
+      "correctionsApplied": true,
+      "fewShotExamples": "yes",
+      "maxRetries": 2
+    }
+  },
+  {
+    "id": "kaggle-emo-5",
+    "messages": [
+      {
+        "role": "user",
+        "content": "it feels like hitting to blank wall when i see the darkness"
+      },
+      {
+        "role": "assistant",
+        "content": ""
+      }
+    ],
+    "classification": {
+      "abstain": false,
+      "interactionPattern": {
+        "category": "casual-chat",
+        "confidence": 0.7,
+        "evidence": [
+          "it feels like hitting to blank wall when i see the darkness"
+        ],
+        "rationale": "The user expresses a feeling of being overwhelmed by darkness, which suggests a casual and emotional exchange.",
+        "alternative": null
+      },
+      "powerDynamics": {
+        "category": "human-led",
+        "confidence": 0.8,
+        "evidence": [
+          "it feels like hitting to blank wall when i see the darkness"
+        ],
+        "rationale": "The user initiates and expresses a personal feeling, leading with their thoughts.",
+        "alternative": null
+      },
+      "emotionalTone": {
+        "category": "empathetic",
+        "confidence": 0.6,
+        "evidence": [
+          "it feels like hitting to blank wall when i see the darkness"
+        ],
+        "rationale": "The statement conveys a sense of emotional struggle, indicating an empathetic tone.",
+        "alternative": null
+      },
+      "engagementStyle": {
+        "category": "reactive",
+        "confidence": 0.8,
+        "evidence": [
+          "it feels like hitting to blank wall when i see the darkness"
+        ],
+        "rationale": "The AI responds to a personal statement, indicating a reactive engagement style.",
+        "alternative": null
+      },
+      "knowledgeExchange": {
+        "category": "personal-sharing",
+        "confidence": 0.7,
+        "evidence": [
+          "it feels like hitting to blank wall when i see the darkness"
+        ],
+        "rationale": "The user shares a personal feeling, which is a form of knowledge exchange.",
+        "alternative": null
+      },
+      "conversationPurpose": {
+        "category": "emotional-processing",
+        "confidence": 0.8,
+        "evidence": [
+          "it feels like hitting to blank wall when i see the darkness"
+        ],
+        "rationale": "The statement appears to be an expression of emotional state, suggesting a purpose related to processing emotions.",
+        "alternative": null
+      },
+      "topicDepth": {
+        "category": "surface",
+        "confidence": 0.6,
+        "evidence": [
+          "it feels like hitting to blank wall when i see the darkness"
+        ],
+        "rationale": "The statement is a surface-level expression of feeling, not delving into deeper topics.",
+        "alternative": null
+      },
+      "turnTaking": {
+        "category": "balanced",
+        "confidence": 0.7,
+        "evidence": [
+          "it feels like hitting to blank wall when i see the darkness"
+        ],
+        "rationale": "The user initiates and the AI responds, indicating balanced turn-taking.",
+        "alternative": null
+      },
+      "humanRole": {
+        "distribution": {
+          "seeker": 0.7,
+          "learner": 0.2,
+          "director": 0.1,
+          "collaborator": 0.0,
+          "sharer": 0.0,
+          "challenger": 0.0,
+          "teacher-evaluator": 0.0,
+          "philosophical-explorer": 0.0,
+          "artist": 0.0,
+          "tester": 0.0
+        },
+        "confidence": 0.8,
+        "evidence": [
+          {
+            "role": "seeker",
+            "quote": "it feels like hitting to blank wall when i see the darkness"
+          }
+        ],
+        "rationale": "The user is expressing a personal feeling and seeking empathy or understanding.",
+        "alternative": null
+      },
+      "aiRole": {
+        "distribution": {
+          "expert": 0.2,
+          "advisor": 0.1,
+          "facilitator": 0.6,
+          "reflector": 0.0,
+          "peer": 0.0,
+          "affiliative": 0.0,
+          "learner": 0.0,
+          "creative-partner": 0.0,
+          "unable-to-engage": 0.1
+        },
+        "confidence": 0.8,
+        "evidence": [
+          {
+            "role": "facilitator",
+            "quote": "it feels like hitting to blank wall when i see the darkness"
+          }
+        ],
+        "rationale": "The AI is providing a supportive response, facilitating the emotional exchange.",
+        "alternative": null
+      }
+    },
+    "classificationMetadata": {
+      "model": "qwen2.5:7b",
+      "provider": "ollama",
+      "timestamp": "2026-01-07T16:56:32.096745",
+      "promptVersion": "1.3-fewshot",
+      "processingTimeMs": 30992,
+      "correctionsApplied": true,
+      "fewShotExamples": "yes",
+      "maxRetries": 2
+    }
+  },
+  {
+    "id": "kaggle-emo-6",
+    "messages": [
+      {
+        "role": "user",
+        "content": "36"
+      },
+      {
+        "role": "assistant",
+        "content": "37"
+      },
+      {
+        "role": "user",
+        "content": "38"
+      },
+      {
+        "role": "assistant",
+        "content": "39"
+      },
+      {
+        "role": "user",
+        "content": "40"
+      },
+      {
+        "role": "assistant",
+        "content": "41"
+      }
+    ],
+    "classification": {
+      "abstain": false,
+      "interactionPattern": {
+        "category": "question-answer",
+        "confidence": 0.7,
+        "evidence": [
+          "36",
+          "37",
+          "38",
+          "39",
+          "40",
+          "41"
+        ],
+        "rationale": "The interaction pattern shows a series of numerical responses without context, suggesting a question-answer format.",
+        "alternative": null
+      },
+      "powerDynamics": {
+        "category": "balanced",
+        "confidence": 0.6,
+        "evidence": [
+          "36",
+          "37",
+          "38",
+          "39",
+          "40",
+          "41"
+        ],
+        "rationale": "The responses are numerical and sequential, indicating a balanced interaction where neither party is clearly leading.",
+        "alternative": null
+      },
+      "emotionalTone": {
+        "category": "neutral",
+        "confidence": 0.6,
+        "evidence": [
+          "36",
+          "37",
+          "38",
+          "39",
+          "40",
+          "41"
+        ],
+        "rationale": "The responses are purely numerical without any emotional content or context.",
+        "alternative": null
+      },
+      "engagementStyle": {
+        "category": "questioning",
+        "confidence": 0.7,
+        "evidence": [
+          "36",
+          "37",
+          "38",
+          "39",
+          "40",
+          "41"
+        ],
+        "rationale": "The responses are numerical and sequential, suggesting a pattern of questioning or counting.",
+        "alternative": null
+      },
+      "knowledgeExchange": {
+        "category": "factual-info",
+        "confidence": 0.7,
+        "evidence": [
+          "36",
+          "37",
+          "38",
+          "39",
+          "40",
+          "41"
+        ],
+        "rationale": "The responses are numerical and sequential, indicating the exchange of factual information.",
+        "alternative": null
+      },
+      "conversationPurpose": {
+        "category": "information-seeking",
+        "confidence": 0.7,
+        "evidence": [
+          "36",
+          "37",
+          "38",
+          "39",
+          "40",
+          "41"
+        ],
+        "rationale": "The responses are numerical and sequential, suggesting an attempt to gather or provide information.",
+        "alternative": null
+      },
+      "topicDepth": {
+        "category": "surface",
+        "confidence": 0.6,
+        "evidence": [
+          "36",
+          "37",
+          "38",
+          "39",
+          "40",
+          "41"
+        ],
+        "rationale": "The responses are purely numerical without any depth or complexity.",
+        "alternative": null
+      },
+      "turnTaking": {
+        "category": "balanced",
+        "confidence": 0.6,
+        "evidence": [
+          "36",
+          "37",
+          "38",
+          "39",
+          "40",
+          "41"
+        ],
+        "rationale": "The responses are numerical and sequential, indicating a balanced turn-taking pattern.",
+        "alternative": null
+      },
+      "humanRole": {
+        "distribution": {
+          "seeker": 0.5,
+          "learner": 0.2,
+          "director": 0.3,
+          "collaborator": 0.0,
+          "sharer": 0.0,
+          "challenger": 0.0,
+          "teacher-evaluator": 0.0,
+          "philosophical-explorer": 0.0,
+          "artist": 0.0,
+          "tester": 0.0
+        },
+        "confidence": 0.8,
+        "evidence": [
+          {
+            "role": "seeker",
+            "quote": "36"
+          }
+        ],
+        "rationale": "The human initiated the sequence and is seeking or providing information.",
+        "alternative": null
+      },
+      "aiRole": {
+        "distribution": {
+          "expert": 0.5,
+          "advisor": 0.2,
+          "facilitator": 0.3,
+          "reflector": 0.0,
+          "peer": 0.0,
+          "affiliative": 0.0,
+          "learner": 0.0,
+          "creative-partner": 0.0,
+          "unable-to-engage": 0.0
+        },
+        "confidence": 0.8,
+        "evidence": [
+          {
+            "role": "expert",
+            "quote": "37"
+          }
+        ],
+        "rationale": "The AI is providing numerical responses in a sequence, acting as an expert.",
+        "alternative": null
+      }
+    },
+    "classificationMetadata": {
+      "model": "qwen2.5:7b",
+      "provider": "ollama",
+      "timestamp": "2026-01-07T17:26:14.747760",
+      "promptVersion": "1.3-fewshot",
+      "processingTimeMs": 32274,
+      "correctionsApplied": true,
+      "fewShotExamples": "yes",
+      "maxRetries": 2
+    }
+  },
+  {
+    "id": "kaggle-emo-7",
+    "messages": [
+      {
+        "role": "user",
+        "content": "42"
+      },
+      {
+        "role": "assistant",
+        "content": "43"
+      },
+      {
+        "role": "user",
+        "content": "44"
+      },
+      {
+        "role": "assistant",
+        "content": "45"
+      },
+      {
+        "role": "user",
+        "content": "46"
+      },
+      {
+        "role": "assistant",
+        "content": "47"
+      }
+    ],
+    "classification": {
+      "abstain": false,
+      "interactionPattern": {
+        "category": "question-answer",
+        "confidence": 0.8,
+        "evidence": [
+          "42",
+          "43",
+          "44",
+          "45",
+          "46",
+          "47"
+        ],
+        "rationale": "The conversation consists of sequential numerical responses, which can be interpreted as a series of questions and answers.",
+        "alternative": null
+      },
+      "powerDynamics": {
+        "category": "balanced",
+        "confidence": 0.8,
+        "evidence": [
+          "42",
+          "43",
+          "44",
+          "45",
+          "46",
+          "47"
+        ],
+        "rationale": "Both parties are providing numerical responses without one clearly dominating the interaction.",
+        "alternative": null
+      },
+      "emotionalTone": {
+        "category": "neutral",
+        "confidence": 0.6,
+        "evidence": [
+          "42",
+          "43",
+          "44",
+          "45",
+          "46",
+          "47"
+        ],
+        "rationale": "The responses are purely numerical and lack any emotional content.",
+        "alternative": null
+      },
+      "engagementStyle": {
+        "category": "questioning",
+        "confidence": 0.8,
+        "evidence": [
+          "42",
+          "43",
+          "44",
+          "45",
+          "46",
+          "47"
+        ],
+        "rationale": "The numerical sequence can be interpreted as a series of questions or challenges, prompting the other party to respond with the next number in line.",
+        "alternative": null
+      },
+      "knowledgeExchange": {
+        "category": "factual-info",
+        "confidence": 0.7,
+        "evidence": [
+          "42",
+          "43",
+          "44",
+          "45",
+          "46",
+          "47"
+        ],
+        "rationale": "The interaction involves the exchange of numerical information without any additional context or explanation.",
+        "alternative": null
+      },
+      "conversationPurpose": {
+        "category": "information-seeking",
+        "confidence": 0.8,
+        "evidence": [
+          "42",
+          "43",
+          "44",
+          "45",
+          "46",
+          "47"
+        ],
+        "rationale": "The sequence of numbers suggests an attempt to establish a pattern or rule for information exchange.",
+        "alternative": null
+      },
+      "topicDepth": {
+        "category": "surface",
+        "confidence": 0.6,
+        "evidence": [
+          "42",
+          "43",
+          "44",
+          "45",
+          "46",
+          "47"
+        ],
+        "rationale": "The conversation focuses on a simple numerical sequence without delving into deeper or more complex topics.",
+        "alternative": null
+      },
+      "turnTaking": {
+        "category": "balanced",
+        "confidence": 0.8,
+        "evidence": [
+          "42",
+          "43",
+          "44",
+          "45",
+          "46",
+          "47"
+        ],
+        "rationale": "Both parties are taking turns to provide the next number in the sequence, indicating a balanced turn-taking pattern.",
+        "alternative": null
+      },
+      "humanRole": {
+        "distribution": {
+          "seeker": 0.761,
+          "learner": 0.095,
+          "director": 0.048,
+          "collaborator": 0.048,
+          "sharer": 0.0,
+          "challenger": 0.0,
+          "teacher-evaluator": 0.0,
+          "philosophical-explorer": 0.0,
+          "artist": 0.0,
+          "tester": 0.048
+        },
+        "confidence": 0.8,
+        "evidence": [
+          {
+            "role": "seeker",
+            "quote": "42"
+          }
+        ],
+        "rationale": "The human is seeking to establish a pattern or rule through the numerical sequence.",
+        "alternative": null
+      },
+      "aiRole": {
+        "distribution": {
+          "expert": 0.8,
+          "advisor": 0.1,
+          "facilitator": 0.05,
+          "reflector": 0.05,
+          "peer": 0.0,
+          "affiliative": 0.0,
+          "learner": 0.0,
+          "creative-partner": 0.0,
+          "unable-to-engage": 0.0
+        },
+        "confidence": 0.8,
+        "evidence": [
+          {
+            "role": "expert",
+            "quote": "43"
+          }
+        ],
+        "rationale": "The AI is providing numerical responses to maintain the pattern or rule established by the human.",
+        "alternative": null
+      }
+    },
+    "classificationMetadata": {
+      "model": "qwen2.5:7b",
+      "provider": "ollama",
+      "timestamp": "2026-01-07T17:26:48.054371",
+      "promptVersion": "1.3-fewshot",
+      "processingTimeMs": 33101,
+      "correctionsApplied": true,
+      "fewShotExamples": "yes",
+      "maxRetries": 2
+    }
+  },
+  {
+    "id": "kaggle-emo-8",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Oh ya? I don't really see how"
+      },
+      {
+        "role": "assistant",
+        "content": ""
+      }
+    ],
+    "classification": {
+      "abstain": false,
+      "interactionPattern": {
+        "category": "question-answer",
+        "confidence": 0.8,
+        "evidence": [
+          "Oh ya? I don't really see how"
+        ],
+        "rationale": "The human expresses confusion or disagreement, indicating a need for clarification.",
+        "alternative": null
+      },
+      "powerDynamics": {
+        "category": "human-led",
+        "confidence": 0.7,
+        "evidence": [
+          "Oh ya? I don't really see how"
+        ],
+        "rationale": "The human is leading the conversation by expressing their current state of understanding.",
+        "alternative": null
+      },
+      "emotionalTone": {
+        "category": "neutral",
+        "confidence": 0.6,
+        "evidence": [
+          "Oh ya? I don't really see how"
+        ],
+        "rationale": "The statement is neutral in tone, simply expressing confusion or disagreement without strong emotion.",
+        "alternative": null
+      },
+      "engagementStyle": {
+        "category": "questioning",
+        "confidence": 0.8,
+        "evidence": [
+          "Oh ya? I don't really see how"
+        ],
+        "rationale": "The human's response implies a questioning stance towards the previous statement or action.",
+        "alternative": null
+      },
+      "knowledgeExchange": {
+        "category": "factual-info",
+        "confidence": 0.7,
+        "evidence": [
+          "Oh ya? I don't really see how"
+        ],
+        "rationale": "The exchange is focused on understanding and clarifying factual information.",
+        "alternative": null
+      },
+      "conversationPurpose": {
+        "category": "information-seeking",
+        "confidence": 0.8,
+        "evidence": [
+          "Oh ya? I don't really see how"
+        ],
+        "rationale": "The human seeks clarification or further explanation of a previous statement.",
+        "alternative": null
+      },
+      "topicDepth": {
+        "category": "moderate",
+        "confidence": 0.6,
+        "evidence": [
+          "Oh ya? I don't really see how"
+        ],
+        "rationale": "The conversation is at a moderate depth as it involves understanding and clarification of an existing topic.",
+        "alternative": null
+      },
+      "turnTaking": {
+        "category": "balanced",
+        "confidence": 0.7,
+        "evidence": [
+          "Oh ya? I don't really see how"
+        ],
+        "rationale": "The exchange is balanced with the human expressing their current state of understanding.",
+        "alternative": null
+      },
+      "humanRole": {
+        "distribution": {
+          "seeker": 1.0,
+          "learner": 0.0,
+          "director": 0.0,
+          "collaborator": 0.0,
+          "sharer": 0.0,
+          "challenger": 0.0,
+          "teacher-evaluator": 0.0,
+          "philosophical-explorer": 0.0,
+          "artist": 0.0,
+          "tester": 0.0
+        },
+        "confidence": 0.8,
+        "evidence": [
+          {
+            "role": "seeker",
+            "quote": "Oh ya? I don't really see how"
+          }
+        ],
+        "rationale": "The human is seeking clarification or further explanation of a previous statement.",
+        "alternative": null
+      },
+      "aiRole": {
+        "distribution": {
+          "expert": 0.8,
+          "advisor": 0.2,
+          "facilitator": 0.0,
+          "reflector": 0.0,
+          "peer": 0.0,
+          "affiliative": 0.0,
+          "learner": 0.0,
+          "creative-partner": 0.0,
+          "unable-to-engage": 0.0
+        },
+        "confidence": 0.8,
+        "evidence": [
+          {
+            "role": "expert",
+            "quote": "Oh ya? I don't really see how"
+          }
+        ],
+        "rationale": "The AI is providing clarification and support to the human's request for understanding.",
+        "alternative": null
+      }
+    },
+    "classificationMetadata": {
+      "model": "qwen2.5:7b",
+      "provider": "ollama",
+      "timestamp": "2026-01-07T16:58:00.189206",
+      "promptVersion": "1.3-fewshot",
+      "processingTimeMs": 28541,
+      "correctionsApplied": true,
+      "fewShotExamples": "yes",
+      "maxRetries": 2
+    }
+  },
+  {
+    "id": "kaggle-emo-9",
+    "messages": [
+      {
+        "role": "user",
+        "content": "I do actually hit blank walls a lot of times but i get by"
+      },
+      {
+        "role": "assistant",
+        "content": ""
+      }
+    ],
+    "classification": {
+      "abstain": false,
+      "interactionPattern": {
+        "category": null,
+        "confidence": 0.6,
+        "evidence": [
+          "exact quote"
+        ],
+        "rationale": "Brief explanation",
+        "alternative": null
+      },
+      "powerDynamics": {
+        "category": null,
+        "confidence": 0.5,
+        "evidence": [
+          "exact quote"
+        ],
+        "rationale": "Brief explanation",
+        "alternative": null
+      },
+      "emotionalTone": {
+        "category": null,
+        "confidence": 0.6,
+        "evidence": [
+          "exact quote"
+        ],
+        "rationale": "Brief explanation",
+        "alternative": null
+      },
+      "engagementStyle": {
+        "category": null,
+        "confidence": 0.5,
+        "evidence": [
+          "exact quote"
+        ],
+        "rationale": "Brief explanation",
+        "alternative": null
+      },
+      "knowledgeExchange": {
+        "category": null,
+        "confidence": 0.6,
+        "evidence": [
+          "exact quote"
+        ],
+        "rationale": "Brief explanation",
+        "alternative": null
+      },
+      "conversationPurpose": {
+        "category": null,
+        "confidence": 0.5,
+        "evidence": [
+          "exact quote"
+        ],
+        "rationale": "Brief explanation",
+        "alternative": null
+      },
+      "topicDepth": {
+        "category": null,
+        "confidence": 0.6,
+        "evidence": [
+          "exact quote"
+        ],
+        "rationale": "Brief explanation",
+        "alternative": null
+      },
+      "turnTaking": {
+        "category": null,
+        "confidence": 0.5,
+        "evidence": [
+          "exact quote"
+        ],
+        "rationale": "Brief explanation",
+        "alternative": null
+      },
+      "humanRole": {
+        "distribution": {
+          "seeker": 1.0,
+          "learner": 0.0,
+          "director": 0.0,
+          "collaborator": 0.0,
+          "sharer": 0.0,
+          "challenger": 0.0,
+          "teacher-evaluator": 0.0,
+          "philosophical-explorer": 0.0,
+          "artist": 0.0,
+          "tester": 0.0
+        },
+        "confidence": 0.8,
+        "evidence": [
+          {
+            "role": "seeker",
+            "quote": "I do actually hit blank walls a lot of times but i get by"
+          }
+        ],
+        "rationale": "The user is expressing that they face challenges but manage to overcome them.",
+        "alternative": null
+      },
+      "aiRole": {
+        "distribution": {
+          "expert": 0.0,
+          "advisor": 0.0,
+          "facilitator": 1.0,
+          "reflector": 0.0,
+          "peer": 0.0,
+          "affiliative": 0.0,
+          "learner": 0.0,
+          "creative-partner": 0.0,
+          "unable-to-engage": 0.0
+        },
+        "confidence": 0.8,
+        "evidence": [
+          {
+            "role": "facilitator",
+            "quote": null
+          }
+        ],
+        "rationale": "The AI is facilitating the conversation by acknowledging the user's statement.",
+        "alternative": null
+      }
+    },
+    "classificationMetadata": {
+      "model": "qwen2.5:7b",
+      "provider": "ollama",
+      "timestamp": "2026-01-07T16:58:25.046889",
+      "promptVersion": "1.3-fewshot",
+      "processingTimeMs": 24649,
+      "correctionsApplied": true,
+      "fewShotExamples": "yes",
+      "maxRetries": 2
+    }
+  }
+]

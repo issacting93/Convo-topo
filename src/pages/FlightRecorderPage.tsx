@@ -2,13 +2,7 @@ import React, { useMemo, useState } from 'react';
 import { useConversationStore } from '../store/useConversationStore';
 import { calculateVolatility } from '../utils/volatility';
 
-interface Incident {
-    id: string;
-    volatility: number;
-    messageCount: number;
-    peakIntensity: number;
-    timestamp: string;
-}
+
 
 const FlightRecorderPage: React.FC = () => {
     const { conversations } = useConversationStore();
@@ -39,12 +33,13 @@ const FlightRecorderPage: React.FC = () => {
     return (
         <div style={{
             width: '100vw',
-            height: '100vh',
+            minHeight: '100vh',
             background: '#050505',
             color: '#e0e0e0',
             fontFamily: '"JetBrains Mono", "Courier New", monospace',
             display: 'flex',
-            overflow: 'hidden'
+            overflowY: 'auto',
+            overflowX: 'hidden'
         }}>
             {/* LEFT PANEL: INCIDENT LIST */}
             <div style={{

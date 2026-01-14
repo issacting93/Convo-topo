@@ -1,0 +1,183 @@
+{
+  "datasets": {
+    "OASST": {
+      "count": 32,
+      "stats": {
+        "mean_x": 0.0,
+        "mean_y": 0.0,
+        "mean_z": 0.2255833424304542,
+        "std_x": 0.0,
+        "std_y": 0.0,
+        "std_z": 0.06731434409134238,
+        "variance_x": 0.0,
+        "variance_y": 0.0,
+        "variance_z": 0.00453122092044764,
+        "total_variance": 0.00453122092044764,
+        "range_x": 0.0,
+        "range_y": 0.0,
+        "range_z": 0.24967831783218564,
+        "avg_nearest_neighbor_distance": 0.0036837366846060333,
+        "median_nearest_neighbor_distance": 0.00023989613644115996
+      },
+      "quadrant_distribution": {
+        "Social-Divergent": 100.0
+      }
+    },
+    "WildChat": {
+      "count": 63,
+      "stats": {
+        "mean_x": 0.0,
+        "mean_y": 0.0,
+        "mean_z": 0.2317640820893999,
+        "std_x": 0.0,
+        "std_y": 0.0,
+        "std_z": 0.12086889159346201,
+        "variance_x": 0.0,
+        "variance_y": 0.0,
+        "variance_z": 0.014609288955032072,
+        "total_variance": 0.014609288955032072,
+        "range_x": 0.0,
+        "range_y": 0.0,
+        "range_z": 0.423719033657093,
+        "avg_nearest_neighbor_distance": 0.0032906462542580087,
+        "median_nearest_neighbor_distance": 0.0
+      },
+      "quadrant_distribution": {
+        "Social-Divergent": 100.0
+      }
+    },
+    "Chatbot Arena": {
+      "count": 327,
+      "stats": {
+        "mean_x": 0.0,
+        "mean_y": 0.0,
+        "mean_z": 0.27168477860128504,
+        "std_x": 0.0,
+        "std_y": 0.0,
+        "std_z": 0.10138260396034018,
+        "variance_x": 0.0,
+        "variance_y": 0.0,
+        "variance_z": 0.010278432385779185,
+        "total_variance": 0.010278432385779185,
+        "range_x": 0.0,
+        "range_y": 0.0,
+        "range_z": 0.4190754007075295,
+        "avg_nearest_neighbor_distance": 0.002326783326000029,
+        "median_nearest_neighbor_distance": 0.0
+      },
+      "quadrant_distribution": {
+        "Social-Divergent": 100.0
+      }
+    }
+  },
+  "comparisons": [
+    {
+      "dataset1": "OASST",
+      "dataset2": "WildChat",
+      "tests": {
+        "x_dimension": {
+          "t_statistic": NaN,
+          "p_value": NaN,
+          "significant": false
+        },
+        "y_dimension": {
+          "t_statistic": NaN,
+          "p_value": NaN,
+          "significant": false
+        },
+        "z_dimension": {
+          "t_statistic": -0.2660187482396173,
+          "p_value": 0.7908136325005236,
+          "significant": false
+        },
+        "x_ks_test": {
+          "ks_statistic": 0.0,
+          "p_value": 1.0,
+          "significant": false
+        },
+        "y_ks_test": {
+          "ks_statistic": 0.0,
+          "p_value": 1.0,
+          "significant": false
+        },
+        "z_ks_test": {
+          "ks_statistic": 0.2857142857142857,
+          "p_value": 0.05101746304513279,
+          "significant": false
+        }
+      }
+    },
+    {
+      "dataset1": "OASST",
+      "dataset2": "Chatbot Arena",
+      "tests": {
+        "x_dimension": {
+          "t_statistic": NaN,
+          "p_value": NaN,
+          "significant": false
+        },
+        "y_dimension": {
+          "t_statistic": NaN,
+          "p_value": NaN,
+          "significant": false
+        },
+        "z_dimension": {
+          "t_statistic": -2.5115473529408905,
+          "p_value": 0.012461104116936383,
+          "significant": false
+        },
+        "x_ks_test": {
+          "ks_statistic": 0.0,
+          "p_value": 1.0,
+          "significant": false
+        },
+        "y_ks_test": {
+          "ks_statistic": 0.0,
+          "p_value": 1.0,
+          "significant": false
+        },
+        "z_ks_test": {
+          "ks_statistic": 0.25315366972477066,
+          "p_value": 0.03886976751993294,
+          "significant": false
+        }
+      }
+    },
+    {
+      "dataset1": "WildChat",
+      "dataset2": "Chatbot Arena",
+      "tests": {
+        "x_dimension": {
+          "t_statistic": NaN,
+          "p_value": NaN,
+          "significant": false
+        },
+        "y_dimension": {
+          "t_statistic": NaN,
+          "p_value": NaN,
+          "significant": false
+        },
+        "z_dimension": {
+          "t_statistic": -2.7620482745621304,
+          "p_value": 0.006017129328244044,
+          "significant": false
+        },
+        "x_ks_test": {
+          "ks_statistic": 0.0,
+          "p_value": 1.0,
+          "significant": false
+        },
+        "y_ks_test": {
+          "ks_statistic": 0.0,
+          "p_value": 1.0,
+          "significant": false
+        },
+        "z_ks_test": {
+          "ks_statistic": 0.38968982088248144,
+          "p_value": 1.0308881191938152e-07,
+          "significant": true
+        }
+      }
+    }
+  ]
+}

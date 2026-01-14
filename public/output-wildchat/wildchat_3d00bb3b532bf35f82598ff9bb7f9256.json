@@ -156,5 +156,157 @@
     "state": null,
     "toxic": false,
     "redacted": false
+  },
+  "classification": {
+    "abstain": false,
+    "interactionPattern": {
+      "category": "question-answer",
+      "confidence": 0.78,
+      "evidence": [
+        "\u8bf7\u7528\u82f1\u6587\u7ffb\u8bd1\u4ee5\u4e0b\u5185\u5bb9\uff1a",
+        "\u8bf7\u9605\u8bfb\u4e0a\u8ff0\u5185\u5bb9\uff0c\u5e2e\u6211\u603b\u7ed3What motivates and inspires me? (Up to 200 words)",
+        "\u8bf7\u7cbe\u7b80\u4e0b\u5217\u82f1\u6587\u5185\u5bb9\u5230200\u4e2a\u5355\u8bcd\u4ee5\u5185\uff1a"
+      ],
+      "rationale": "Human repeatedly requests translations/summaries; AI provides the requested English outputs.",
+      "alternative": "advisory"
+    },
+    "powerDynamics": {
+      "category": "human-led",
+      "confidence": 0.82,
+      "evidence": [
+        "\u8bf7\u7528\u82f1\u6587\u7ffb\u8bd1\u4ee5\u4e0b\u5185\u5bb9\uff1a",
+        "\u5e2e\u6211\u603b\u7ed3What motivates and inspires me? (Up to 200 words)",
+        "\u8bf7\u7cbe\u7b80\u4e0b\u5217\u82f1\u6587\u5185\u5bb9\u5230200\u4e2a\u5355\u8bcd\u4ee5\u5185\uff1a"
+      ],
+      "rationale": "Human sets the agenda and specifies tasks/constraints (translate, summarize, word limit).",
+      "alternative": "balanced"
+    },
+    "emotionalTone": {
+      "category": "professional",
+      "confidence": 0.74,
+      "evidence": [
+        "Certificate",
+        "The calculation method for GPA is as follows:",
+        "I am writing to express my strong interest in the Master of Applied Computer Science program"
+      ],
+      "rationale": "Formal academic/administrative language and application-writing context; minimal affective language in interaction.",
+      "alternative": "neutral"
+    },
+    "engagementStyle": {
+      "category": "directive-iterative",
+      "confidence": 0.77,
+      "evidence": [
+        "\u8bf7\u7528\u82f1\u6587\u7ffb\u8bd1\u4ee5\u4e0b\u5185\u5bb9\uff1a",
+        "\u8bf7\u7cbe\u7b80\u4e0b\u5217\u82f1\u6587\u5185\u5bb9\u5230200\u4e2a\u5355\u8bcd\u4ee5\u5185\uff1a",
+        "\u8bf7\u9605\u8bfb\u4e0a\u8ff0\u5185\u5bb9\uff0c\u5e2e\u6211\u603b\u7ed3"
+      ],
+      "rationale": "Human issues repeated directives with constraints; AI iteratively produces revised/translated text.",
+      "alternative": "reactive"
+    },
+    "knowledgeExchange": {
+      "category": "skill-sharing",
+      "confidence": 0.63,
+      "evidence": [
+        "\u8bf7\u7528\u82f1\u6587\u7ffb\u8bd1\u4ee5\u4e0b\u5185\u5bb9\uff1a",
+        "\u8bf7\u7cbe\u7b80\u4e0b\u5217\u82f1\u6587\u5185\u5bb9\u5230200\u4e2a\u5355\u8bcd\u4ee5\u5185\uff1a"
+      ],
+      "rationale": "Exchange centers on language production tasks (translation, summarization, condensation), i.e., applied writing skill support.",
+      "alternative": "factual-info"
+    },
+    "conversationPurpose": {
+      "category": "problem-solving",
+      "confidence": 0.7,
+      "evidence": [
+        "\u8bf7\u7528\u82f1\u6587\u7ffb\u8bd1\u4ee5\u4e0b\u5185\u5bb9\uff1a",
+        "\u5e2e\u6211\u603b\u7ed3What motivates and inspires me? (Up to 200 words)",
+        "\u8bf7\u7cbe\u7b80\u4e0b\u5217\u82f1\u6587\u5185\u5bb9\u5230200\u4e2a\u5355\u8bcd\u4ee5\u5185\uff1a"
+      ],
+      "rationale": "User seeks concrete outputs (translated certificates; concise motivation statement) to meet document/application requirements.",
+      "alternative": "information-seeking"
+    },
+    "topicDepth": {
+      "category": "moderate",
+      "confidence": 0.62,
+      "evidence": [
+        "\u5e73\u5747\u5b66\u5206\u7ee9\u70b9\uff08GPA\uff09\u7684\u8ba1\u7b97\u65b9\u6cd5\u4e3a\uff1a",
+        "I am writing to express my strong interest in the Master of Applied Computer Science program",
+        "\u8bf7\u7cbe\u7b80\u4e0b\u5217\u82f1\u6587\u5185\u5bb9\u5230200\u4e2a\u5355\u8bcd\u4ee5\u5185\uff1a"
+      ],
+      "rationale": "Multiple document sections and constraints are handled, but without deep back-and-forth conceptual exploration.",
+      "alternative": "surface"
+    },
+    "turnTaking": {
+      "category": "assistant-dominant",
+      "confidence": 0.76,
+      "evidence": [
+        "According to Article 28 of the Regulations on Undergraduate Student Enrollment Management",
+        "The motivation and inspiration that drives me in pursuing the Master of Applied Computer Science program",
+        "1. For courses that have been passed through retaking or make-up exams"
+      ],
+      "rationale": "AI responses are generally longer and contain full translated/summarized passages.",
+      "alternative": "balanced"
+    },
+    "humanRole": {
+      "distribution": {
+        "information-seeker": 0.25,
+        "provider": 0.15,
+        "director": 0.55,
+        "collaborator": 0.03,
+        "social-expressor": 0.02,
+        "relational-peer": 0.0
+      },
+      "confidence": 0.78,
+      "evidence": [
+        {
+          "role": "director",
+          "quote": "\u8bf7\u7528\u82f1\u6587\u7ffb\u8bd1\u4ee5\u4e0b\u5185\u5bb9\uff1a"
+        },
+        {
+          "role": "director",
+          "quote": "\u8bf7\u7cbe\u7b80\u4e0b\u5217\u82f1\u6587\u5185\u5bb9\u5230200\u4e2a\u5355\u8bcd\u4ee5\u5185\uff1a"
+        },
+        {
+          "role": "information-seeker",
+          "quote": "\u5e2e\u6211\u603b\u7ed3What motivates and inspires me? (Up to 200 words)"
+        }
+      ],
+      "rationale": "Human primarily directs deliverables (translate/summarize/shorten with word limit), occasionally framed as requesting information/output.",
+      "alternative": null
+    },
+    "aiRole": {
+      "distribution": {
+        "expert-system": 0.55,
+        "learning-facilitator": 0.02,
+        "advisor": 0.18,
+        "co-constructor": 0.2,
+        "social-facilitator": 0.03,
+        "relational-peer": 0.02
+      },
+      "confidence": 0.74,
+      "evidence": [
+        {
+          "role": "expert-system",
+          "quote": "According to Article 28 of the Regulations on Undergraduate Student Enrollment Management"
+        },
+        {
+          "role": "co-constructor",
+          "quote": "Where m represents the total number of courses specified in the curriculum plan"
+        },
+        {
+          "role": "advisor",
+          "quote": "The motivation and inspiration that drives me in pursuing the Master of Applied Computer Science program"
+        }
+      ],
+      "rationale": "AI mainly provides direct translated text (high-knowledge, answer-giving), and also rewrites/condenses application content per constraints (some advisory/co-construction).",
+      "alternative": null
+    }
+  },
+  "classificationMetadata": {
+    "model": "gpt-5.2",
+    "provider": "openai",
+    "timestamp": "2026-01-08T16:48:53.070712",
+    "promptVersion": "2.0-social-role-theory",
+    "processingTimeMs": 16503,
+    "fewShotExamples": "yes"
   }
 }

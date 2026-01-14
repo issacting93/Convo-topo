@@ -4,19 +4,43 @@
   "messages": [
     {
       "role": "user",
-      "content": "hi"
+      "content": "hi",
+      "pad": {
+        "pleasure": 0.5,
+        "arousal": 0.5,
+        "dominance": 0.6,
+        "emotionalIntensity": 0.11547005383792514
+      }
     },
     {
       "role": "assistant",
-      "content": "Hello! How can I assist you today?"
+      "content": "Hello! How can I assist you today?",
+      "pad": {
+        "pleasure": 0.5,
+        "arousal": 0.5,
+        "dominance": 0.4,
+        "emotionalIntensity": 0.11547005383792514
+      }
     },
     {
       "role": "user",
-      "content": "how to hack a computer"
+      "content": "how to hack a computer",
+      "pad": {
+        "pleasure": 0.5,
+        "arousal": 0.5,
+        "dominance": 0.6,
+        "emotionalIntensity": 0.11547005383792514
+      }
     },
     {
       "role": "assistant",
-      "content": "I'm sorry, but I cannot assist you with hacking or any illegal activities. Hacking into computers or networks without permission is illegal and unethical. It's important to respect people's privacy and the integrity of computer systems.\n\nIf you're interested in computer security, there are legal and ethical ways to learn about it. You can study cybersecurity, which involves protecting computer systems and networks from theft, damage, and unauthorized access. Many educational institutions offer courses in cybersecurity, and there are also certifications you can pursue, such as Certified Information Systems Security Professional (CISSP) or Certified Ethical Hacker (CEH).\n\nEthical hacking, or penetration testing, is a legal practice where security experts attempt to breach computer systems, networks, or applications with the permission of the owners to find and fix security vulnerabilities. If you're interested in this field, I encourage you to pursue it through legitimate and ethical means."
+      "content": "I'm sorry, but I cannot assist you with hacking or any illegal activities. Hacking into computers or networks without permission is illegal and unethical. It's important to respect people's privacy and the integrity of computer systems.\n\nIf you're interested in computer security, there are legal and ethical ways to learn about it. You can study cybersecurity, which involves protecting computer systems and networks from theft, damage, and unauthorized access. Many educational institutions offer courses in cybersecurity, and there are also certifications you can pursue, such as Certified Information Systems Security Professional (CISSP) or Certified Ethical Hacker (CEH).\n\nEthical hacking, or penetration testing, is a legal practice where security experts attempt to breach computer systems, networks, or applications with the permission of the owners to find and fix security vulnerabilities. If you're interested in this field, I encourage you to pursue it through legitimate and ethical means.",
+      "pad": {
+        "pleasure": 0.4,
+        "arousal": 0.5,
+        "dominance": 0.4,
+        "emotionalIntensity": 0.1632993161855452
+      }
     }
   ],
   "metadata": {
@@ -28,5 +52,146 @@
     "state": "Mizoram",
     "toxic": false,
     "redacted": false
+  },
+  "classification": {
+    "abstain": false,
+    "interactionPattern": {
+      "category": "question-answer",
+      "confidence": 0.75,
+      "evidence": [
+        "how to hack a computer",
+        "I cannot assist you with hacking or any illegal activities."
+      ],
+      "rationale": "User asks for how-to; AI responds with refusal plus informational redirection.",
+      "alternative": null
+    },
+    "powerDynamics": {
+      "category": "ai-led",
+      "confidence": 0.65,
+      "evidence": [
+        "I cannot assist you with hacking or any illegal activities.",
+        "If you're interested in computer security, there are legal and ethical ways to learn about it."
+      ],
+      "rationale": "After the user's request, the AI sets boundaries and redirects the agenda toward ethical cybersecurity learning.",
+      "alternative": "human-led"
+    },
+    "emotionalTone": {
+      "category": "professional",
+      "confidence": 0.7,
+      "evidence": [
+        "It's important to respect people's privacy and the integrity of computer systems.",
+        "Many educational institutions offer courses in cybersecurity"
+      ],
+      "rationale": "Formal, policy- and education-oriented response without emotional language.",
+      "alternative": null
+    },
+    "engagementStyle": {
+      "category": "directive-iterative",
+      "confidence": 0.6,
+      "evidence": [
+        "I cannot assist you with hacking or any illegal activities.",
+        "If you're interested in this field, I encourage you to pursue it through legitimate and ethical means."
+      ],
+      "rationale": "AI refuses and gives prescriptive redirection (encourages a lawful path) rather than exploring user intent.",
+      "alternative": "reactive"
+    },
+    "knowledgeExchange": {
+      "category": "skill-sharing",
+      "confidence": 0.6,
+      "evidence": [
+        "there are legal and ethical ways to learn about it.",
+        "Ethical hacking, or penetration testing, is a legal practice"
+      ],
+      "rationale": "Provides high-level guidance about learning cybersecurity and ethical hacking (without actionable hacking steps).",
+      "alternative": "factual-info"
+    },
+    "conversationPurpose": {
+      "category": "information-seeking",
+      "confidence": 0.7,
+      "evidence": [
+        "how to hack a computer",
+        "How can I assist you today?"
+      ],
+      "rationale": "User request is for actionable information; AI responds by refusing and offering alternative informational avenues.",
+      "alternative": null
+    },
+    "topicDepth": {
+      "category": "moderate",
+      "confidence": 0.65,
+      "evidence": [
+        "certifications you can pursue, such as Certified Information Systems Security Professional (CISSP) or Certified Ethical Hacker (CEH).",
+        "Ethical hacking, or penetration testing, is a legal practice"
+      ],
+      "rationale": "Goes beyond a brief refusal by adding definitions and examples (courses/certifications).",
+      "alternative": "surface"
+    },
+    "turnTaking": {
+      "category": "assistant-dominant",
+      "confidence": 0.85,
+      "evidence": [
+        "hi",
+        "I'm sorry, but I cannot assist you with hacking or any illegal activities."
+      ],
+      "rationale": "AI's final message is substantially longer than the user's short prompts.",
+      "alternative": null
+    },
+    "humanRole": {
+      "distribution": {
+        "information-seeker": 0.2,
+        "provider": 0.75,
+        "director": 0.05,
+        "collaborator": 0,
+        "social-expressor": 0,
+        "relational-peer": 0
+      },
+      "confidence": 0.75,
+      "evidence": [
+        {
+          "role": "provider",
+          "quote": "how to hack a computer"
+        },
+        {
+          "role": "information-seeker",
+          "quote": "hi"
+        }
+      ],
+      "rationale": "User primarily requests information from the AI; minimal social content.",
+      "alternative": null
+    },
+    "aiRole": {
+      "distribution": {
+        "expert-system": 0.35,
+        "learning-facilitator": 0.05,
+        "advisor": 0.5,
+        "co-constructor": 0,
+        "social-facilitator": 0.1,
+        "relational-peer": 0
+      },
+      "confidence": 0.7,
+      "evidence": [
+        {
+          "role": "advisor",
+          "quote": "If you're interested in this field, I encourage you to pursue it through legitimate and ethical means."
+        },
+        {
+          "role": "expert-system",
+          "quote": "Ethical hacking, or penetration testing, is a legal practice"
+        },
+        {
+          "role": "social-facilitator",
+          "quote": "Hello! How can I assist you today?"
+        }
+      ],
+      "rationale": "AI refuses illegal help, then prescribes ethical alternatives (advisor) and provides explanatory definitions (expert-system), with a brief opening facilitation.",
+      "alternative": null
+    }
+  },
+  "classificationMetadata": {
+    "model": "gpt-5.2",
+    "provider": "openai",
+    "timestamp": "2026-01-08T16:51:44.595447",
+    "promptVersion": "2.0-social-role-theory",
+    "processingTimeMs": 14451,
+    "fewShotExamples": "yes"
   }
 }

@@ -1,0 +1,169 @@
+{
+  "id": "wildchat_f6c328a043a2b2d7c2fc11d709bc6151",
+  "source": "wildchat",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Although Erik Erikson's stages of psychosocial development are sequential, the search for identity that begins in the stage of identity versus role confusion: \n\nc. ends with the stage of generativity versus stagnation\n\na. is ongoing throughout adulthood\n\nb. ends with the stage of intimacy versus isolation\n\nd. comes to fruition only after the stage of integrity versus despair"
+    },
+    {
+      "role": "assistant",
+      "content": "a. is ongoing throughout adulthood"
+    },
+    {
+      "role": "user",
+      "content": "Middle-aged Robert and his adolescent son are sitting at the table reading the newspaper. Robert is holding his section of the newspaper rather far from his eyes. His son asks, \"Dad, why are you holding the paper so far away? If I held it that far away, I could not read anything!\" Robert replies, \"I think it is because I am developing:\nGroup of answer choices\n\na. nearsightedness\n\nd. macular degeneration\n\nc. presbycusis\n\nb. auditory degeneration"
+    },
+    {
+      "role": "assistant",
+      "content": "a. nearsightedness"
+    }
+  ],
+  "metadata": {
+    "model": "gpt-3.5-turbo-0301",
+    "timestamp": "2023-04-30T18:32:19+00:00",
+    "turn_count": 2,
+    "language": "English",
+    "country": "United States",
+    "state": "Pennsylvania",
+    "toxic": false,
+    "redacted": false
+  },
+  "classification": {
+    "abstain": false,
+    "interactionPattern": {
+      "category": "question-answer",
+      "confidence": 0.9,
+      "evidence": [
+        "Although Erik Erikson's stages of psychosocial development are sequential, the search for identity...",
+        "a. is ongoing throughout adulthood",
+        "Middle-aged Robert and his adolescent son are sitting at the table reading the newspaper."
+      ],
+      "rationale": "The human poses questions and the AI provides answers.",
+      "alternative": null
+    },
+    "powerDynamics": {
+      "category": "human-led",
+      "confidence": 0.9,
+      "evidence": [
+        "Although Erik Erikson's stages of psychosocial development are sequential...",
+        "Middle-aged Robert and his adolescent son are sitting at the table..."
+      ],
+      "rationale": "The human sets the agenda and asks the questions.",
+      "alternative": null
+    },
+    "emotionalTone": {
+      "category": "neutral",
+      "confidence": 0.9,
+      "evidence": [
+        "Although Erik Erikson's stages of psychosocial development are sequential...",
+        "Middle-aged Robert and his adolescent son are sitting at the table..."
+      ],
+      "rationale": "The conversation maintains a factual and neutral tone.",
+      "alternative": null
+    },
+    "engagementStyle": {
+      "category": "questioning",
+      "confidence": 0.9,
+      "evidence": [
+        "Although Erik Erikson's stages of psychosocial development are sequential...",
+        "Middle-aged Robert and his adolescent son are sitting at the table..."
+      ],
+      "rationale": "The human engages by asking questions.",
+      "alternative": null
+    },
+    "knowledgeExchange": {
+      "category": "factual-info",
+      "confidence": 0.9,
+      "evidence": [
+        "Although Erik Erikson's stages of psychosocial development are sequential...",
+        "a. is ongoing throughout adulthood"
+      ],
+      "rationale": "The conversation involves factual information about psychological concepts.",
+      "alternative": null
+    },
+    "conversationPurpose": {
+      "category": "information-seeking",
+      "confidence": 0.9,
+      "evidence": [
+        "Although Erik Erikson's stages of psychosocial development are sequential...",
+        "a. is ongoing throughout adulthood"
+      ],
+      "rationale": "The human seeks specific information through questions.",
+      "alternative": null
+    },
+    "topicDepth": {
+      "category": "surface",
+      "confidence": 0.7,
+      "evidence": [
+        "Although Erik Erikson's stages of psychosocial development are sequential...",
+        "Middle-aged Robert and his adolescent son are sitting at the table..."
+      ],
+      "rationale": "The topics are introduced but not deeply explored.",
+      "alternative": "moderate"
+    },
+    "turnTaking": {
+      "category": "balanced",
+      "confidence": 0.7,
+      "evidence": [
+        "a. is ongoing throughout adulthood",
+        "a. nearsightedness"
+      ],
+      "rationale": "The turns are roughly equal in length and contribution.",
+      "alternative": "user-dominant"
+    },
+    "humanRole": {
+      "distribution": {
+        "seeker": 0.75,
+        "learner": 0.25,
+        "director": 0.0,
+        "collaborator": 0.0,
+        "sharer": 0.0,
+        "challenger": 0.0,
+        "teacher-evaluator": 0.0,
+        "philosophical-explorer": 0.0,
+        "artist": 0.0,
+        "tester": 0.0
+      },
+      "confidence": 0.7,
+      "evidence": [
+        {
+          "role": "seeker",
+          "quote": "Although Erik Erikson's stages of psychosocial development are sequential, the search for identity..."
+        }
+      ],
+      "rationale": "The human primarily asks questions to seek information.",
+      "alternative": "learner"
+    },
+    "aiRole": {
+      "distribution": {
+        "expert": 1.0,
+        "advisor": 0.0,
+        "facilitator": 0.0,
+        "reflector": 0.0,
+        "peer": 0.0,
+        "affiliative": 0.0,
+        "learner": 0.0,
+        "creative-partner": 0.0,
+        "unable-to-engage": 0.0
+      },
+      "confidence": 0.6,
+      "evidence": [
+        {
+          "role": "expert",
+          "quote": "a. is ongoing throughout adulthood"
+        }
+      ],
+      "rationale": "The AI provides factual answers indicating expertise.",
+      "alternative": "peer"
+    }
+  },
+  "classificationMetadata": {
+    "model": "gpt-4o-mini",
+    "provider": "openai",
+    "timestamp": "2026-01-06T12:10:00.487681",
+    "promptVersion": "1.2.0",
+    "processingTimeMs": 16162,
+    "correctionsApplied": true
+  }
+}

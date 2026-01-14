@@ -84,5 +84,153 @@
     "state": "Addis Ababa",
     "toxic": false,
     "redacted": false
+  },
+  "classification": {
+    "abstain": false,
+    "interactionPattern": {
+      "category": "advisory",
+      "confidence": 0.78,
+      "evidence": [
+        "Here are the key steps and components you should consider while crafting your proposal:",
+        "I would suggest employing a combination of the following needs assessment methods:"
+      ],
+      "rationale": "The AI primarily provides structured guidance and recommendations (steps, components, suggested methods) in response to user requests.",
+      "alternative": "question-answer"
+    },
+    "powerDynamics": {
+      "category": "human-led",
+      "confidence": 0.74,
+      "evidence": [
+        "Can you help me in preparing a training proposal for an organization",
+        "procide me the introduction and Backgroundes  and objectives",
+        "okay please proceed by discussing the Needs Assessment type"
+      ],
+      "rationale": "The human sets the agenda and requests specific deliverables; the AI follows those instructions with content.",
+      "alternative": "balanced"
+    },
+    "emotionalTone": {
+      "category": "professional",
+      "confidence": 0.8,
+      "evidence": [
+        "Here are the key steps and components you should consider",
+        "Certainly! Here's an example of how you can structure"
+      ],
+      "rationale": "Language is formal, task-focused, and oriented to proposal-writing rather than affect or rapport.",
+      "alternative": "supportive"
+    },
+    "engagementStyle": {
+      "category": "directive-iterative",
+      "confidence": 0.72,
+      "evidence": [
+        "Start by introducing yourself",
+        "Clearly outline the background and context",
+        "Develop a comprehensive survey questionnaire"
+      ],
+      "rationale": "The AI gives step-by-step directives and prescriptive instructions that the user iteratively extends (intro/background/objectives, then needs assessment).",
+      "alternative": "reactive"
+    },
+    "knowledgeExchange": {
+      "category": "skill-sharing",
+      "confidence": 0.77,
+      "evidence": [
+        "key steps and components you should consider while crafting your proposal",
+        "choose a method that aligns with the goals and context of the organization"
+      ],
+      "rationale": "The exchange centers on how to write a training proposal and how to conduct needs assessment methods.",
+      "alternative": "factual-info"
+    },
+    "conversationPurpose": {
+      "category": "problem-solving",
+      "confidence": 0.76,
+      "evidence": [
+        "help me in preparing a training proposal",
+        "please proceed by discussing the Needs Assessment type"
+      ],
+      "rationale": "The user is trying to produce a concrete deliverable (a training proposal) and requests successive sections to complete it.",
+      "alternative": "collaborative-refinement"
+    },
+    "topicDepth": {
+      "category": "moderate",
+      "confidence": 0.66,
+      "evidence": [
+        "The primary objectives of the training program are as follows:",
+        "suggest employing a combination of the following needs assessment methods:"
+      ],
+      "rationale": "Multiple proposal components are developed with some detail (objectives list, multi-method needs assessment), but not exhaustive implementation detail.",
+      "alternative": "surface"
+    },
+    "turnTaking": {
+      "category": "assistant-dominant",
+      "confidence": 0.85,
+      "evidence": [
+        "Here are the key steps and components you should consider while crafting your proposal:",
+        "Certainly! Here's an example of how you can structure the introduction, background, and objectives",
+        "I would suggest employing a combination of the following needs assessment methods:"
+      ],
+      "rationale": "AI turns are substantially longer and content-heavy compared to short user prompts and clarifications.",
+      "alternative": null
+    },
+    "humanRole": {
+      "distribution": {
+        "information-seeker": 0.15,
+        "provider": 0.25,
+        "director": 0.45,
+        "collaborator": 0.15,
+        "social-expressor": 0.0,
+        "relational-peer": 0.0
+      },
+      "confidence": 0.73,
+      "evidence": [
+        {
+          "role": "director",
+          "quote": "procide me the introduction and Backgroundes  and objectives"
+        },
+        {
+          "role": "director",
+          "quote": "okay please proceed by discussing the Needs Assessment type"
+        },
+        {
+          "role": "collaborator",
+          "quote": "the training is for youths who serve in youth assosiation of the coutry."
+        }
+      ],
+      "rationale": "The human specifies deliverables and constraints (what sections to write; context of training), while also supplying project details that shape the output.",
+      "alternative": "provider"
+    },
+    "aiRole": {
+      "distribution": {
+        "expert-system": 0.1,
+        "learning-facilitator": 0.05,
+        "advisor": 0.75,
+        "co-constructor": 0.1,
+        "social-facilitator": 0.0,
+        "relational-peer": 0.0
+      },
+      "confidence": 0.78,
+      "evidence": [
+        {
+          "role": "advisor",
+          "quote": "Here are the key steps and components you should consider while crafting your proposal:"
+        },
+        {
+          "role": "advisor",
+          "quote": "I would suggest employing a combination of the following needs assessment methods:"
+        },
+        {
+          "role": "co-constructor",
+          "quote": "Feel free to modify and customize it according to your specific needs and objectives."
+        }
+      ],
+      "rationale": "The AI prescribes steps and recommends methods (survey, focus groups, interviews, document review), with minor co-construction by inviting customization.",
+      "alternative": "expert-system"
+    }
+  },
+  "classificationMetadata": {
+    "model": "gpt-5.2",
+    "provider": "openai",
+    "timestamp": "2026-01-08T16:40:43.482075",
+    "promptVersion": "2.0-social-role-theory",
+    "processingTimeMs": 27065,
+    "fewShotExamples": "yes"
   }
 }

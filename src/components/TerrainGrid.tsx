@@ -2,10 +2,10 @@ import { useState, useEffect, useMemo } from 'react';
 import { Grid } from 'react-window';
 import type { TerrainParams } from '../utils/terrain';
 import { generate2DPathPoints } from '../utils/terrain';
-import { getCommunicationFunction, getConversationStructure, type ClassifiedConversation, getDominantHumanRole, getDominantAiRole } from '../utils/conversationToTerrain';
+import { getCommunicationFunction, getConversationStructure, type ClassifiedConversation, getDominantHumanRole, getDominantAiRole, getConversationSource, mapOldRoleToNew } from '../utils/conversationToTerrain';
 import { getPadChangeColorHex } from '../utils/padPathColors';
 import { Navigation } from './Navigation';
-import { getClassificationStats, formatConfidence, getConfidenceColor, getClassificationDimensions, formatCategoryName } from '../utils/formatClassificationData';
+import { getClassificationStats, formatConfidence, getConfidenceColor, getClassificationDimensions, formatRoleName } from '../utils/formatClassificationData';
 import {
   extractEpistemicFlags,
   getEpistemicStatusColor,
@@ -463,14 +463,14 @@ function TerrainPreviewCard({ terrain, conversation, onSelect }: TerrainPreviewC
             {dominantHumanRole && (
               <span style={{ color: '#1a1a1a', flex: 1 }}>
                 <span style={{ opacity: 0.6 }}>Human: </span>
-                <span style={{ fontWeight: 'bold' }}>{formatCategoryName(dominantHumanRole.role)}</span>
+                <span style={{ fontWeight: 'bold' }}>{formatRoleName(dominantHumanRole.role, 'human')}</span>
                 <span style={{ opacity: 0.5, marginLeft: 4 }}>({Math.round(dominantHumanRole.value * 100)}%)</span>
               </span>
             )}
             {dominantAiRole && (
               <span style={{ color: '#1a1a1a', flex: 1, textAlign: 'right' }}>
                 <span style={{ opacity: 0.6 }}>AI: </span>
-                <span style={{ fontWeight: 'bold' }}>{formatCategoryName(dominantAiRole.role)}</span>
+                <span style={{ fontWeight: 'bold' }}>{formatRoleName(dominantAiRole.role, 'ai')}</span>
                 <span style={{ opacity: 0.5, marginLeft: 4 }}>({Math.round(dominantAiRole.value * 100)}%)</span>
               </span>
             )}
@@ -605,6 +605,7 @@ export function TerrainGridView({ terrains, conversations, onSelectTerrain }: Te
   const [selectedMessageCount, setSelectedMessageCount] = useState<string>('all');
   const [selectedEpistemic, setSelectedEpistemic] = useState<string>('all');
   const [selectedFailure, setSelectedFailure] = useState<string>('all');
+  const [selectedSource, setSelectedSource] = useState<string>('all'); // 'all' | 'old' | 'new'
 
   // Theme state (always light mode for terrain grid)
   const [isDarkMode] = useState(false);
@@ -641,18 +642,32 @@ export function TerrainGridView({ terrains, conversations, onSelectTerrain }: Te
       .filter(({ conversation }) => {
         if (!conversation) return false;
 
-        // Filter by human role
+        // Filter by human role (handle both old and new taxonomy)
         if (selectedHumanRole !== 'all') {
           const dominantHumanRole = getDominantHumanRole(conversation);
-          if (!dominantHumanRole || dominantHumanRole.role !== selectedHumanRole) {
+          if (!dominantHumanRole) {
+            return false;
+          }
+          // Map old role names to new taxonomy for comparison
+          const mappedRole = mapOldRoleToNew(dominantHumanRole.role, 'human');
+          const mappedSelected = mapOldRoleToNew(selectedHumanRole, 'human');
+          // Check both original and mapped names for backward compatibility
+          if (dominantHumanRole.role !== selectedHumanRole && mappedRole !== mappedSelected && mappedRole !== selectedHumanRole) {
             return false;
           }
         }
 
-        // Filter by AI role
+        // Filter by AI role (handle both old and new taxonomy)
         if (selectedAiRole !== 'all') {
           const dominantAiRole = getDominantAiRole(conversation);
-          if (!dominantAiRole || dominantAiRole.role !== selectedAiRole) {
+          if (!dominantAiRole) {
+            return false;
+          }
+          // Map old role names to new taxonomy for comparison
+          const mappedRole = mapOldRoleToNew(dominantAiRole.role, 'ai');
+          const mappedSelected = mapOldRoleToNew(selectedAiRole, 'ai');
+          // Check both original and mapped names for backward compatibility
+          if (dominantAiRole.role !== selectedAiRole && mappedRole !== mappedSelected && mappedRole !== selectedAiRole) {
             return false;
           }
         }
@@ -682,9 +697,15 @@ export function TerrainGridView({ terrains, conversations, onSelectTerrain }: Te
           if (selectedFailure === 'none' && failureFlags.hasBreakdown) return false;
         }
 
+        // Filter by source (old vs new)
+        if (selectedSource !== 'all') {
+          const source = getConversationSource(conversation);
+          if (source !== selectedSource) return false;
+        }
+
         return true;
       });
-  }, [terrains, conversations, selectedHumanRole, selectedAiRole, selectedMessageCount, selectedEpistemic, selectedFailure]);
+  }, [terrains, conversations, selectedHumanRole, selectedAiRole, selectedMessageCount, selectedEpistemic, selectedFailure, selectedSource]);
 
   const filteredTerrains = filteredData.map(({ terrain }) => terrain);
   const filteredConversations = filteredData.map(({ conversation }) => conversation);
@@ -692,7 +713,7 @@ export function TerrainGridView({ terrains, conversations, onSelectTerrain }: Te
   // Reset to page 0 when filters change
   useEffect(() => {
     setCurrentPage(0);
-  }, [selectedHumanRole, selectedAiRole, selectedMessageCount, selectedEpistemic, selectedFailure]);
+  }, [selectedHumanRole, selectedAiRole, selectedMessageCount, selectedEpistemic, selectedFailure, selectedSource]);
 
   // Use fixed items per page (30)
   const itemsPerPage = ITEMS_PER_PAGE;
@@ -817,7 +838,7 @@ export function TerrainGridView({ terrains, conversations, onSelectTerrain }: Te
                 marginBottom: 8
               }}>
                 {filteredTerrains.length > 0
-                  ? `SELECT A CLASSIFIED CONVERSATION (${filteredTerrains.length} of ${terrains.length}${selectedHumanRole !== 'all' || selectedAiRole !== 'all' || selectedMessageCount !== 'all' || selectedEpistemic !== 'all' || selectedFailure !== 'all' ? ' filtered' : ''}${totalPages > 1 ? `, page ${currentPage + 1}/${totalPages}` : ''}) • Virtualized Grid`
+                  ? `SELECT A CLASSIFIED CONVERSATION (${filteredTerrains.length} of ${terrains.length}${selectedHumanRole !== 'all' || selectedAiRole !== 'all' || selectedMessageCount !== 'all' || selectedEpistemic !== 'all' || selectedFailure !== 'all' || selectedSource !== 'all' ? ' filtered' : ''}${totalPages > 1 ? `, page ${currentPage + 1}/${totalPages}` : ''}) • Virtualized Grid`
                   : terrains.length > 0
                     ? 'NO CONVERSATIONS MATCH FILTERS'
                     : 'LOADING CLASSIFIED CONVERSATIONS...'}
@@ -854,10 +875,16 @@ export function TerrainGridView({ terrains, conversations, onSelectTerrain }: Te
                     }}
                   >
                     <option value="all">All</option>
-                    <option value="challenger">Challenger</option>
-                    <option value="seeker">Seeker</option>
+                    <option value="information-seeker">Information-Seeker</option>
+                    <option value="provider">Provider</option>
+                    <option value="director">Director</option>
                     <option value="collaborator">Collaborator</option>
-                    <option value="sharer">Sharer</option>
+                    <option value="social-expressor">Social-Expressor</option>
+                    <option value="relational-peer">Relational-Peer</option>
+                    {/* Backward compatibility */}
+                    <option value="challenger">Challenger (Old)</option>
+                    <option value="seeker">Seeker (Old)</option>
+                    <option value="sharer">Sharer (Old)</option>
                   </select>
                 </div>
                 <div style={{ display: 'flex', gap: 6, alignItems: 'center' }}>
@@ -885,10 +912,17 @@ export function TerrainGridView({ terrains, conversations, onSelectTerrain }: Te
                     }}
                   >
                     <option value="all">All</option>
-                    <option value="expert">Expert</option>
-                    <option value="facilitator">Facilitator</option>
-                    <option value="reflector">Reflector</option>
-                    <option value="peer">Peer</option>
+                    <option value="expert-system">Expert-System</option>
+                    <option value="learning-facilitator">Learning-Facilitator</option>
+                    <option value="advisor">Advisor</option>
+                    <option value="co-constructor">Co-Constructor</option>
+                    <option value="social-facilitator">Social-Facilitator</option>
+                    <option value="relational-peer">Relational-Peer</option>
+                    {/* Backward compatibility */}
+                    <option value="expert">Expert (Old)</option>
+                    <option value="facilitator">Facilitator (Old)</option>
+                    <option value="reflector">Reflector (Old)</option>
+                    <option value="peer">Peer (Old)</option>
                   </select>
                 </div>
                 {/* Message Count Filter */}
@@ -987,8 +1021,38 @@ export function TerrainGridView({ terrains, conversations, onSelectTerrain }: Te
                     <option value="none">No Breakdown</option>
                   </select>
                 </div>
+                {/* Source Filter */}
+                <div style={{ display: 'flex', gap: 6, alignItems: 'center' }}>
+                  <label style={{
+                    fontSize: '11px',
+                    color: THEME.foreground,
+                    opacity: 0.7,
+                    fontWeight: 600
+                  }}>
+                    Source:
+                  </label>
+                  <select
+                    value={selectedSource}
+                    onChange={(e) => setSelectedSource(e.target.value)}
+                    style={{
+                      background: THEME.cardRgba(0.5),
+                      border: `1px solid ${THEME.borderRgba(0.3)}`,
+                      borderRadius: 4,
+                      color: THEME.foreground,
+                      padding: '4px 8px',
+                      fontSize: '11px',
+                      cursor: 'pointer',
+                      fontFamily: 'inherit',
+                      minWidth: 120
+                    }}
+                  >
+                    <option value="all">All</option>
+                    <option value="old">Old (Arena + OASST)</option>
+                    <option value="new">New (WildChat)</option>
+                  </select>
+                </div>
 
-                {(selectedHumanRole !== 'all' || selectedAiRole !== 'all' || selectedMessageCount !== 'all' || selectedEpistemic !== 'all' || selectedFailure !== 'all') && (
+                {(selectedHumanRole !== 'all' || selectedAiRole !== 'all' || selectedMessageCount !== 'all' || selectedEpistemic !== 'all' || selectedFailure !== 'all' || selectedSource !== 'all') && (
                   <button
                     onClick={() => {
                       setSelectedHumanRole('all');
@@ -996,6 +1060,7 @@ export function TerrainGridView({ terrains, conversations, onSelectTerrain }: Te
                       setSelectedMessageCount('all');
                       setSelectedEpistemic('all');
                       setSelectedFailure('all');
+                      setSelectedSource('all');
                     }}
                     style={{
                       padding: '4px 10px',

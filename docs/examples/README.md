@@ -1,30 +1,16 @@
-# Example Files
+# Examples and Case Studies
 
-This directory contains example files for reference and documentation.
+This folder contains concrete examples, case studies, and classification error documentation.
 
-## Contents
+## Files
 
-### `exampleClassificationOutput.json`
-Example of a classified conversation output structure.
+- **FIGURE_PAIRS_SAME_ROLES_DIFFERENT_CLUSTERS.md** - Side-by-side examples showing same roles, different terrain patterns
+- **CLASSIFICATION_ERRORS.md** - Documented classification errors and mislabelings
 
-**Format:** Single classified conversation with:
-- Full message array
-- Complete classification data (all 9 dimensions)
-- Classification metadata
-- Role distributions
+## Purpose
 
-**Use Case:** 
-- Documentation reference
-- Testing
-- Understanding expected output format
-
----
-
-## Usage
-
-You can import this file to see the structure:
-
-```typescript
-import example from '../examples/exampleClassificationOutput.json';
-```
-
+These documents provide:
+- Concrete examples demonstrating core concepts
+- Case studies for DIS submissions
+- Error analysis for system improvement
+- Visual comparison materials

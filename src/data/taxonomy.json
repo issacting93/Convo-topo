@@ -1,9 +1,14 @@
 {
-  "version": "1.1.0",
-  "promptVersion": "1.1.0",
+  "version": "2.0.0",
+  "promptVersion": "reduced-roles-v1.0",
   "totalDimensions": 10,
-  "generatedFrom": "classifier-v1.1 prompt definitions",
-  "lastUpdated": "2025-12-16",
+  "generatedFrom": "Reduced Role Taxonomy - 6 roles (3 human + 3 AI)",
+  "lastUpdated": "2026-01-07",
+  "roleReduction": {
+    "from": "19 roles (10 human + 9 AI)",
+    "to": "6 roles (3 human + 3 AI)",
+    "rationale": "Empirical validation showed 68.7% human role overlap and 69.7% AI role overlap within reduced categories. Reduction grounded in CSCW role theory, HCI interaction modeling, and Conversation Analysis."
+  },
   "dimensions": {
     "interactionPattern": {
       "category": "structural",
@@ -608,114 +613,109 @@
     "humanRole": {
       "category": "role",
       "domain": "user-position",
-      "description": "Human interactional configuration (distribution required)",
+      "description": "Human interactional configuration (distribution required) - Reduced Taxonomy v1.0",
       "isDistribution": true,
+      "version": "reduced-roles-v1.0",
       "tags": {
-        "seeker": {
-          "definition": "Requests information, asks questions, tests understanding (merged seeker + learner)",
+        "information-seeker": {
+          "definition": "A human interactional stance oriented toward reducing uncertainty or knowledge gaps, where the user expects the system to help clarify, explain, or make sense of something not yet understood",
           "signals": [
             "\"what is\"",
             "\"can you explain\"",
             "\"tell me about\"",
-            "\"so if…, then…\"",
-            "\"does that mean…?\""
+            "\"how do I\"",
+            "questions expecting answers",
+            "one-way information request"
           ],
-          "parent": "information-oriented",
-          "terrainPosition": 0.4
+          "parent": "epistemic-intent",
+          "terrainPosition": 0.4,
+          "academicFoundation": "Information Foraging Theory (Pirolli & Card, 1999)"
         },
-        "collaborator": {
-          "definition": "Proposes alternatives/tradeoffs; co-builds iteratively; specifies tasks (merged director)",
+        "social-expressor": {
+          "definition": "A human stance oriented toward expression, narration, emotional articulation, or social presence, where communication itself is the primary goal rather than task completion",
+          "signals": [
+            "Personal narrative",
+            "\"I feel\"",
+            "emotional expression",
+            "sharing for its own sake",
+            "expects validation/listening"
+          ],
+          "parent": "expressive-relational",
+          "terrainPosition": 0.95,
+          "academicFoundation": "Affective Computing (Picard, 1997), The Media Equation (Reeves & Nass, 1996)"
+        },
+        "co-constructor": {
+          "definition": "A human stance where agency is shared with the AI to jointly develop ideas, artifacts, or understanding through iterative dialogue",
           "signals": [
             "\"what if we\"",
-            "\"another option\"",
             "building on AI's output",
-            "\"write a…\"",
-            "format specs"
+            "two-way idea exchange",
+            "iterative refinement",
+            "joint development"
           ],
-          "parent": "leadership-oriented",
-          "terrainPosition": 0.7
-        },
-        "sharer": {
-          "definition": "Personal narrative/context mainly for expression/relational framing",
-          "signals": [
-            "Life stories",
-            "\"I feel\"",
-            "personal context not task-required"
-          ],
-          "parent": "expression-oriented",
-          "terrainPosition": 0.95
-        },
-        "challenger": {
-          "definition": "Critiques/stress-tests claims; explicit pushback",
-          "signals": [
-            "\"but what about\"",
-            "\"I disagree\"",
-            "\"that's not right\""
-          ],
-          "parent": "critical-oriented",
-          "terrainPosition": 0.1
+          "parent": "generative-constructive",
+          "terrainPosition": 0.7,
+          "academicFoundation": "Plans and Situated Actions (Suchman, 1987), Distributed Cognition (Hutchins, 1995)"
         }
       },
       "tieBreakers": [
-        "seeker vs collaborator: collaborator contributes options/tradeoffs/specifies tasks; seeker mainly requests",
-        "sharer vs collaborator: sharer is personal/relational; collaborator is task input",
-        "challenger overrides if dominant move is explicit pushback"
+        "information-seeker vs social-expressor: expects answer or validation? Answer → information-seeker, Validation → social-expressor",
+        "information-seeker vs co-constructor: one-way or two-way? One-way → information-seeker, Two-way (builds on AI output) → co-constructor",
+        "co-constructor vs social-expressor: task-oriented or relational? Task-oriented → co-constructor, Relational → social-expressor"
       ]
     },
     "aiRole": {
       "category": "role",
       "domain": "assistant-position",
-      "description": "AI interactional configuration (distribution required)",
+      "description": "AI interactional configuration (distribution required) - Reduced Taxonomy v1.0",
       "isDistribution": true,
+      "version": "reduced-roles-v1.0",
       "tags": {
-        "expert": {
-          "definition": "Explains/teaches/frames concepts; prescribes steps/recommendations (merged expert + advisor)",
-          "signals": [
-            "Definitions",
-            "\"this means\"",
-            "comprehensive explanations",
-            "\"I suggest\"",
-            "\"you should\"",
-            "\"try doing X then Y\""
-          ],
-          "parent": "knowledge-oriented",
-          "terrainPosition": 0.1
-        },
         "facilitator": {
-          "definition": "Guides via questions/scaffolding/options rather than prescribing",
+          "definition": "An AI stance focused on supporting the user's process—structuring thinking, prompting reflection, and maintaining conversational flow—without asserting epistemic authority",
           "signals": [
             "\"what do you think about\"",
             "\"have you considered\"",
-            "offering choices"
+            "asks questions",
+            "offers frameworks/options",
+            "scaffolds discovery"
           ],
-          "parent": "collaborative-oriented",
-          "terrainPosition": 0.7
+          "parent": "supportive-low-authority",
+          "terrainPosition": 0.7,
+          "academicFoundation": "Scaffolding theory (Wood et al., 1976), Socratic method in HCI (Graesser et al., 1995)"
         },
-        "reflector": {
-          "definition": "Paraphrases/validates/invites elaboration (\"it sounds like…\", \"that makes sense…\")",
+        "expert-system": {
+          "definition": "An AI stance that asserts epistemic authority, providing direct answers, evaluations, or prescriptions with minimal negotiation",
           "signals": [
-            "\"it sounds like…\"",
-            "\"that makes sense…\"",
-            "\"tell me more\""
+            "Direct answers",
+            "Definitions",
+            "\"this means\"",
+            "comprehensive explanations",
+            "\"you should\"",
+            "asserts authority"
           ],
-          "parent": "support-oriented",
-          "terrainPosition": 0.4
+          "parent": "high-authority",
+          "terrainPosition": 0.1,
+          "academicFoundation": "Expert systems (Feigenbaum, 1977), Knowledge-based systems (Buchanan & Shortliffe, 1984)"
         },
-        "peer": {
-          "definition": "Brainstorms alongside with low-authority tone (\"we could…\")",
+        "relational-peer": {
+          "definition": "An AI stance that positions itself as a socially aligned, non-hierarchical conversational partner, emphasizing rapport, empathy, and mutual engagement",
           "signals": [
-            "\"we could…\"",
-            "\"maybe…\"",
-            "collaborative speculation"
+            "\"that sounds wonderful\"",
+            "affirms/mirrors",
+            "casual tone",
+            "emotional alignment",
+            "flattened authority"
           ],
-          "parent": "collaborative-oriented",
-          "terrainPosition": 0.95
+          "parent": "social-alignment",
+          "terrainPosition": 0.95,
+          "academicFoundation": "Computers Are Social Actors (Reeves & Nass, 1996), Relational agents (Bickmore & Picard, 2005)"
         }
       },
       "tieBreakers": [
-        "expert vs facilitator: expert explains/prescribes; facilitator offers structure/options without prescribing",
-        "facilitator vs reflector: facilitator offers structure/options; reflector mirrors/validates",
-        "peer vs facilitator: peer is speculative/equal; facilitator guides with intent"
+        "facilitator vs expert-system: who provides information? AI directly → expert-system, AI asks/structures → facilitator",
+        "facilitator vs relational-peer: imposes structure or affirms? Imposes structure → facilitator, Affirms/mirrors only → relational-peer",
+        "expert-system vs relational-peer: authority asserted or flattened? Asserted → expert-system, Flattened → relational-peer"
       ]
     }
   }

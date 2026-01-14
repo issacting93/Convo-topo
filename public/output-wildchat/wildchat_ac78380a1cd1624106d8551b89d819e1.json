@@ -390,5 +390,174 @@
     "state": "Texas",
     "toxic": false,
     "redacted": false
+  },
+  "classification": {
+    "abstain": false,
+    "interactionPattern": {
+      "category": "question-answer",
+      "confidence": 0.78,
+      "evidence": [
+        "Which of the following is the most likely diagnosis?",
+        "generate a similar question about cholangitis",
+        "answer it",
+        "why not C",
+        "give me 2 similar questions",
+        "answers to both"
+      ],
+      "rationale": "Human repeatedly requests questions/answers; AI responds with generated vignettes and explanations.",
+      "alternative": "advisory"
+    },
+    "powerDynamics": {
+      "category": "human-led",
+      "confidence": 0.82,
+      "evidence": [
+        "make a similar question",
+        "generate a similar question about cholangitis",
+        "make 2 similar questions where B and E would be the correct answers",
+        "build 4  similar question where  A B E and D are the correct answers",
+        "give a short answer explaion"
+      ],
+      "rationale": "Human sets agenda and deliverables (generate similar questions, provide answers/explanations).",
+      "alternative": "balanced"
+    },
+    "emotionalTone": {
+      "category": "professional",
+      "confidence": 0.86,
+      "evidence": [
+        "Which of the following is the most appropriate next step in diagnosis?",
+        "The patient's presentation ... is suggestive of alcohol withdrawal syndrome",
+        "Hepatic adenomas are benign liver tumors"
+      ],
+      "rationale": "Clinical/educational register with diagnostic reasoning; minimal affective language.",
+      "alternative": "neutral"
+    },
+    "engagementStyle": {
+      "category": "directive-iterative",
+      "confidence": 0.84,
+      "evidence": [
+        "make a similar question",
+        "generate a similar question",
+        "answer it",
+        "make 2 similar questions where B and E would be the correct answers",
+        "build 4  similar question where  A B E and D are the correct answers"
+      ],
+      "rationale": "Human issues iterative instructions; AI complies by producing successive drafts and answers.",
+      "alternative": "questioning"
+    },
+    "knowledgeExchange": {
+      "category": "skill-sharing",
+      "confidence": 0.8,
+      "evidence": [
+        "create a similar step 2 level question on hepatic adenoma",
+        "make 2 similar questions where B and E would be the correct answers",
+        "The recommended management for a hepatic adenoma"
+      ],
+      "rationale": "Exchange centers on clinical reasoning practice and item-writing (how to construct/answer vignettes).",
+      "alternative": "factual-info"
+    },
+    "conversationPurpose": {
+      "category": "collaborative-refinement",
+      "confidence": 0.77,
+      "evidence": [
+        "make a similar question",
+        "generate a similar question about cholangitis",
+        "can you make a question with more clarity where D would be the answer",
+        "make 2 similar questions where B and E would be the correct answers"
+      ],
+      "rationale": "User iteratively refines generated exam-style questions and requested answer keys.",
+      "alternative": "problem-solving"
+    },
+    "topicDepth": {
+      "category": "moderate",
+      "confidence": 0.74,
+      "evidence": [
+        "The option \"C) Measurement of urine sodium and creatinine concentrations\" is indeed a useful test",
+        "Benzodiazepines are first-line treatment for alcohol withdrawal seizures",
+        "Hepatic adenomas are benign liver tumors that can grow in response to hormonal stimulation"
+      ],
+      "rationale": "Multiple clinical scenarios with brief rationales; not exhaustive but beyond surface.",
+      "alternative": "deep"
+    },
+    "turnTaking": {
+      "category": "assistant-dominant",
+      "confidence": 0.83,
+      "evidence": [
+        "The presentation of severe abdominal pain in the right upper quadrant, fever, and chills",
+        "A 55-year-old man presents to the emergency department with a 6-hour history",
+        "The patient's presentation with restlessness, agitation, disorientation"
+      ],
+      "rationale": "AI responses are substantially longer (full vignettes + explanations) than user prompts.",
+      "alternative": "balanced"
+    },
+    "humanRole": {
+      "distribution": {
+        "information-seeker": 0.22,
+        "provider": 0.08,
+        "director": 0.58,
+        "collaborator": 0.12,
+        "social-expressor": 0.0,
+        "relational-peer": 0.0
+      },
+      "confidence": 0.79,
+      "evidence": [
+        {
+          "role": "director",
+          "quote": "build 4  similar question where  A B E and D are the correct answers in their own respective questions"
+        },
+        {
+          "role": "director",
+          "quote": "make 2 similar questions where B and E would be the correct answers"
+        },
+        {
+          "role": "information-seeker",
+          "quote": "why not C"
+        },
+        {
+          "role": "collaborator",
+          "quote": "can you make a question with more clarity where D would be the answer"
+        }
+      ],
+      "rationale": "Human primarily directs outputs (question generation, answer keys) while occasionally seeking clarification.",
+      "alternative": null
+    },
+    "aiRole": {
+      "distribution": {
+        "expert-system": 0.52,
+        "learning-facilitator": 0.04,
+        "advisor": 0.12,
+        "co-constructor": 0.3,
+        "social-facilitator": 0.0,
+        "relational-peer": 0.02
+      },
+      "confidence": 0.76,
+      "evidence": [
+        {
+          "role": "expert-system",
+          "quote": "Therefore, the most appropriate next step in diagnosis is: B) Echocardiography"
+        },
+        {
+          "role": "co-constructor",
+          "quote": "Question 1:"
+        },
+        {
+          "role": "co-constructor",
+          "quote": "Question 2:"
+        },
+        {
+          "role": "expert-system",
+          "quote": "The option \"C) Measurement of urine sodium and creatinine concentrations\" is indeed a useful test"
+        }
+      ],
+      "rationale": "AI alternates between providing authoritative answers/explanations and generating tailored practice questions per user constraints.",
+      "alternative": null
+    }
+  },
+  "classificationMetadata": {
+    "model": "gpt-5.2",
+    "provider": "openai",
+    "timestamp": "2026-01-08T17:04:41.395639",
+    "promptVersion": "2.0-social-role-theory",
+    "processingTimeMs": 20047,
+    "fewShotExamples": "yes"
   }
 }

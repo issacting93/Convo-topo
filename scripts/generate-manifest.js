@@ -19,22 +19,23 @@ const MANIFEST_FILE = path.join(OUTPUT_DIR, 'manifest.json');
 function generateManifest() {
   console.log('📋 Generating manifest for public/output/...\n');
 
-  const manifest = {
-    version: '1.0.0',
-    lastUpdated: new Date().toISOString(),
-    generatedBy: 'generate-manifest.js',
-    totalConversations: 0,
-    conversations: {
-      conv: [],
-      sample: [],
-      emo: [],
-      cornell: [],
-      'kaggle-emo': [],
-      'chatbot-arena': [],
-      'combined-long': [],
-      'oasst': []
-    }
-  };
+    const manifest = {
+      version: '1.0.0',
+      lastUpdated: new Date().toISOString(),
+      generatedBy: 'generate-manifest.js',
+      totalConversations: 0,
+      conversations: {
+        conv: [],
+        sample: [],
+        emo: [],
+        cornell: [],
+        'kaggle-emo': [],
+        'chatbot-arena': [],
+        'combined-long': [],
+        'oasst': [],
+        'wildchat': []
+      }
+    };
 
   try {
     // Check if output directory exists
@@ -111,6 +112,17 @@ function generateManifest() {
           size: stats.size,
           modified: stats.mtime.toISOString()
         });
+      } else if (file.startsWith('wildchat_')) {
+        // WildChat files use wildchat_ prefix
+        if (!manifest.conversations['wildchat']) {
+          manifest.conversations['wildchat'] = [];
+        }
+        manifest.conversations['wildchat'].push({
+          file: file,
+          id: file.replace('.json', ''),
+          size: stats.size,
+          modified: stats.mtime.toISOString()
+        });
       }
     });
 
@@ -123,7 +135,8 @@ function generateManifest() {
       manifest.conversations['kaggle-emo'].length +
       manifest.conversations['chatbot-arena'].length +
       manifest.conversations['combined-long'].length +
-      manifest.conversations['oasst'].length;
+      manifest.conversations['oasst'].length +
+      (manifest.conversations['wildchat'] ? manifest.conversations['wildchat'].length : 0);
 
     // Sort by ID for consistency
     manifest.conversations.conv.sort((a, b) => {
@@ -166,6 +179,9 @@ function generateManifest() {
     console.log(`   - chatbot_arena_*.json: ${manifest.conversations['chatbot-arena'].length}`);
     console.log(`   - combined-long-*.json: ${manifest.conversations['combined-long'].length}`);
     console.log(`   - oasst-*.json: ${manifest.conversations['oasst'].length}`);
+    if (manifest.conversations['wildchat']) {
+      console.log(`   - wildchat_*.json: ${manifest.conversations['wildchat'].length}`);
+    }
     console.log(`\n   Manifest saved to: ${MANIFEST_FILE}\n`);
 
   } catch (error) {

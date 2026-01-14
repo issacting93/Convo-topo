@@ -84,5 +84,143 @@
     "state": "Gharbia",
     "toxic": false,
     "redacted": false
+  },
+  "classification": {
+    "abstain": false,
+    "interactionPattern": {
+      "category": "question-answer",
+      "confidence": 0.65,
+      "evidence": [
+        "could you please provide more context or information about what you would like me to do for you?",
+        "RadiusManager is a software package for managing and billing ISP services",
+        "Is there anything specific you would like me to help you with in regards to RadiusManager?"
+      ],
+      "rationale": "Human provides brief prompts/requests; AI responds with explanations and follow-up questions to clarify.",
+      "alternative": "advisory"
+    },
+    "powerDynamics": {
+      "category": "human-led",
+      "confidence": 0.7,
+      "evidence": [
+        "radiusmanager",
+        "Build RadiusManager Administration File Manager"
+      ],
+      "rationale": "Human sets the agenda via topic prompts and a direct build request; AI mainly reacts and clarifies/declines.",
+      "alternative": "alternating"
+    },
+    "emotionalTone": {
+      "category": "professional",
+      "confidence": 0.75,
+      "evidence": [
+        "RadiusManager is a software package for managing and billing ISP services",
+        "I can suggest that you refer to the RadiusManager documentation"
+      ],
+      "rationale": "Task-focused, formal language with minimal affect; includes procedural suggestions.",
+      "alternative": "neutral"
+    },
+    "engagementStyle": {
+      "category": "reactive",
+      "confidence": 0.7,
+      "evidence": [
+        "Can you please provide more context or information about what you would like to achieve",
+        "I'm sorry, but as an AI language model, I do not have the ability to build"
+      ],
+      "rationale": "AI responds to user inputs with clarification requests and capability limits rather than driving exploration or giving stepwise directives.",
+      "alternative": "questioning"
+    },
+    "knowledgeExchange": {
+      "category": "factual-info",
+      "confidence": 0.7,
+      "evidence": [
+        "RadiusManager is a software package for managing and billing ISP services",
+        "Some of the key features of RadiusManager include:"
+      ],
+      "rationale": "AI provides definitional/product overview information and feature lists.",
+      "alternative": "skill-sharing"
+    },
+    "conversationPurpose": {
+      "category": "information-seeking",
+      "confidence": 0.6,
+      "evidence": [
+        "radiusmanager",
+        "askrpt admin hph RadiusManager"
+      ],
+      "rationale": "User appears to be requesting help/understanding around RadiusManager and a command reference, though requests are underspecified.",
+      "alternative": "problem-solving"
+    },
+    "topicDepth": {
+      "category": "moderate",
+      "confidence": 0.65,
+      "evidence": [
+        "Some of the key features of RadiusManager include:",
+        "Billing and payment management: RadiusManager allows an ISP to set up billing plans"
+      ],
+      "rationale": "AI provides a multi-point overview beyond a one-line definition, but not deep technical implementation detail.",
+      "alternative": "surface"
+    },
+    "turnTaking": {
+      "category": "assistant-dominant",
+      "confidence": 0.85,
+      "evidence": [
+        "RadiusManager is a software package for managing and billing ISP services",
+        "Overall, RadiusManager is a powerful tool for managing and billing ISP services"
+      ],
+      "rationale": "AI messages are substantially longer and more elaborated than the human's short prompts.",
+      "alternative": null
+    },
+    "humanRole": {
+      "distribution": {
+        "information-seeker": 0.25,
+        "provider": 0.55,
+        "director": 0.2,
+        "collaborator": 0.0,
+        "social-expressor": 0.0,
+        "relational-peer": 0.0
+      },
+      "confidence": 0.68,
+      "evidence": [
+        {
+          "role": "provider",
+          "quote": "radiusmanager"
+        },
+        {
+          "role": "director",
+          "quote": "Build RadiusManager Administration File Manager"
+        }
+      ],
+      "rationale": "Human primarily prompts the AI for information/help (provider/information-seeker) and also issues a direct build instruction (director).",
+      "alternative": "information-seeker"
+    },
+    "aiRole": {
+      "distribution": {
+        "expert-system": 0.7,
+        "learning-facilitator": 0.05,
+        "advisor": 0.2,
+        "co-constructor": 0.0,
+        "social-facilitator": 0.05,
+        "relational-peer": 0.0
+      },
+      "confidence": 0.75,
+      "evidence": [
+        {
+          "role": "expert-system",
+          "quote": "RadiusManager is a software package for managing and billing ISP services"
+        },
+        {
+          "role": "advisor",
+          "quote": "refer to the RadiusManager documentation or user community"
+        }
+      ],
+      "rationale": "AI mainly provides explanatory information (expert-system) and offers recommendations for next steps/resources when it cannot perform the requested build (advisor).",
+      "alternative": "advisor"
+    }
+  },
+  "classificationMetadata": {
+    "model": "gpt-5.2",
+    "provider": "openai",
+    "timestamp": "2026-01-08T17:04:57.286750",
+    "promptVersion": "2.0-social-role-theory",
+    "processingTimeMs": 15281,
+    "fewShotExamples": "yes"
   }
 }

@@ -5,7 +5,7 @@ import taxonomyData from '../data/taxonomy.json';
 export interface TaxonomyTag {
     definition: string;
     signals: string[];
-    parent: string;
+    parent?: string;
     valence?: string;
     nature?: string;
     outcome?: string;

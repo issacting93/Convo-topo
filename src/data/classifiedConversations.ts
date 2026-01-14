@@ -1,5 +1,6 @@
 // This file will be populated with the classified conversation data
 import { Conversation, ConversationSchema } from '../schemas/conversationSchema';
+import { filterNewTaxonomy } from '../utils/taxonomyFilter';
 
 // In development, we can import JSON files directly
 // In production, these would be loaded from a server or bundled
@@ -117,7 +118,7 @@ async function loadConversationFile(filename: string): Promise<Conversation | nu
     }
 
     const text = await response.text();
-    
+
     // Quick check: if it starts with <, it's probably HTML
     if (text.trim().startsWith('<')) {
       return null;
@@ -136,7 +137,22 @@ async function loadConversationFile(filename: string): Promise<Conversation | nu
 
     if (!result.success) {
       if (import.meta.env.DEV) {
-        console.error(`❌ Schema validation failed for ${filename}:`, result.error.format());
+        console.error(`❌ Schema validation failed for ${filename}:`);
+        // Show specific errors in detail
+        if ((result.error as any).errors && (result.error as any).errors.length > 0) {
+          (result.error as any).errors.slice(0, 5).forEach((err: any, i: number) => {
+            const path = err.path.length > 0 ? err.path.join('.') : 'root';
+            console.error(`  [${i + 1}] ${path}: ${err.message}`);
+            if (err.code === 'invalid_type') {
+              console.error(`      Expected: ${err.expected}, Got: ${err.received}`);
+            }
+          });
+          if ((result.error as any).errors.length > 5) {
+            console.error(`  ... and ${(result.error as any).errors.length - 5} more errors`);
+          }
+        } else {
+          console.error('  Error:', result.error);
+        }
       }
       return null;
     }
@@ -178,13 +194,22 @@ async function loadWithManifest(manifest: Manifest): Promise<Conversation[]> {
   const results = await Promise.all(loadPromises);
 
   // Filter out null results (failed loads + non-English conversations)
-  const conversations = results.filter((conv): conv is Conversation => conv !== null);
+  let conversations = results.filter((conv): conv is Conversation => conv !== null);
   const filteredCount = allFiles.length - conversations.length;
+
+  // Filter to only new taxonomy (GPT-5.2 + 2.0-social-role-theory)
+  const beforeTaxonomyFilter = conversations.length;
+  conversations = filterNewTaxonomy(conversations);
+  const taxonomyFilteredCount = beforeTaxonomyFilter - conversations.length;
 
   if (import.meta.env.DEV) {
     console.log(`📋 Loaded ${conversations.length}/${allFiles.length} conversations from manifest`);
     if (filteredCount > 0) {
-      console.log(`  - Filtered out ${filteredCount} non-English conversation(s)`);
+      console.log(`  - Filtered out ${filteredCount} non-English/invalid conversation(s)`);
+    }
+    if (taxonomyFilteredCount > 0) {
+      console.log(`  - Filtered out ${taxonomyFilteredCount} old taxonomy conversation(s)`);
+      console.log(`  - Using only GPT-5.2 + 2.0-social-role-theory taxonomy`);
     }
     console.log(`  - With classification: ${conversations.filter(c => c.classification).length}`);
     console.log(`  - Without classification: ${conversations.filter(c => !c.classification).length}`);
@@ -198,7 +223,7 @@ async function loadWithManifest(manifest: Manifest): Promise<Conversation[]> {
  * Used when manifest is not available
  */
 async function loadSequentially(): Promise<Conversation[]> {
-  const conversations: Conversation[] = [];
+  let conversations: Conversation[] = [];
 
   // Only load chatbot_arena files (old data hidden)
   let index = 1;
@@ -215,8 +240,17 @@ async function loadSequentially(): Promise<Conversation[]> {
     }
   }
 
+  // Filter to only new taxonomy (GPT-5.2 + 2.0-social-role-theory)
+  const beforeTaxonomyFilter = conversations.length;
+  conversations = filterNewTaxonomy(conversations);
+  const taxonomyFilteredCount = beforeTaxonomyFilter - conversations.length;
+
   if (import.meta.env.DEV) {
     console.log(`📋 Loaded ${conversations.length} conversations (sequential fallback, English only)`);
+    if (taxonomyFilteredCount > 0) {
+      console.log(`  - Filtered out ${taxonomyFilteredCount} old taxonomy conversation(s)`);
+      console.log(`  - Using only GPT-5.2 + 2.0-social-role-theory taxonomy`);
+    }
   }
 
   return conversations;

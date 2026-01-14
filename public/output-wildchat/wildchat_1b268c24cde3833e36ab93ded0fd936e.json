@@ -84,5 +84,158 @@
     "state": "New York",
     "toxic": false,
     "redacted": false
+  },
+  "classification": {
+    "abstain": false,
+    "interactionPattern": {
+      "category": "collaborative",
+      "confidence": 0.72,
+      "evidence": [
+        "Create a roleplaying game fantasy scenario",
+        "I will tell you what spells I cast and you decide how successful I am",
+        "Only I decide what spells Sapphire casts. You decide spells for Lily."
+      ],
+      "rationale": "User specifies a co-created roleplay system and division of control; AI implements and adjudicates turns.",
+      "alternative": "advisory"
+    },
+    "powerDynamics": {
+      "category": "human-led",
+      "confidence": 0.74,
+      "evidence": [
+        "Create a roleplaying game fantasy scenario",
+        "On a difficulty scale of 1 to 10, make it a 10",
+        "Restart the duel from turn 1."
+      ],
+      "rationale": "Human sets constraints, rules, and can reset the activity; AI follows the requested structure.",
+      "alternative": "balanced"
+    },
+    "emotionalTone": {
+      "category": "professional",
+      "confidence": 0.62,
+      "evidence": [
+        "Come up with a complex formula",
+        "Before Cast Stat Check:",
+        "Points Awarded:"
+      ],
+      "rationale": "Tone is task-focused and procedural (stats, checks, points), with limited affective language.",
+      "alternative": "neutral"
+    },
+    "engagementStyle": {
+      "category": "directive-iterative",
+      "confidence": 0.78,
+      "evidence": [
+        "Give a list of 20 spells we have access to",
+        "I try to cast Celestial Bridges",
+        "Now it's your turn to cast again. Which spell will you choose next?"
+      ],
+      "rationale": "User issues directives and iterative moves; AI runs an iterative adjudication loop with prompts for next action.",
+      "alternative": "exploring"
+    },
+    "knowledgeExchange": {
+      "category": "skill-sharing",
+      "confidence": 0.55,
+      "evidence": [
+        "Come up with a complex formula that dictates by how much my stats decrease",
+        "Give a list of 20 spells we have access to",
+        "Tell me my spellcasting stats"
+      ],
+      "rationale": "Exchange centers on constructing a rules system (formula, requirements, stats) rather than personal disclosure.",
+      "alternative": "factual-info"
+    },
+    "conversationPurpose": {
+      "category": "collaborative-refinement",
+      "confidence": 0.76,
+      "evidence": [
+        "I will tell you what spells I cast and you decide how successful I am",
+        "Keep track of points earned.",
+        "Restart the duel from turn 1."
+      ],
+      "rationale": "Ongoing co-managed game where outputs are iteratively updated (turns, points, reset).",
+      "alternative": "entertainment"
+    },
+    "topicDepth": {
+      "category": "moderate",
+      "confidence": 0.66,
+      "evidence": [
+        "There are 10 rounds.",
+        "Come up with a complex formula",
+        "List of 20 Spells (Complexity Rating & Minimum Stat Requirements)"
+      ],
+      "rationale": "Substantial system detail (multi-stat formula, requirements, rounds) but not exhaustive formalization.",
+      "alternative": "deep"
+    },
+    "turnTaking": {
+      "category": "assistant-dominant",
+      "confidence": 0.84,
+      "evidence": [
+        "Welcome to the grand arena of Valtoria, where magic dueling is an art and the competition fierce.",
+        "**List of 20 Spells (Complexity Rating & Minimum Stat Requirements)**",
+        "**SRAF Adjustment:**"
+      ],
+      "rationale": "AI turns are much longer, containing extensive narrative plus mechanics and bookkeeping.",
+      "alternative": "balanced"
+    },
+    "humanRole": {
+      "distribution": {
+        "information-seeker": 0.05,
+        "provider": 0.05,
+        "director": 0.65,
+        "collaborator": 0.25,
+        "social-expressor": 0.0,
+        "relational-peer": 0.0
+      },
+      "confidence": 0.73,
+      "evidence": [
+        {
+          "role": "director",
+          "quote": "Make the scenario difficult for me to win."
+        },
+        {
+          "role": "director",
+          "quote": "Give a list of 20 spells we have access to"
+        },
+        {
+          "role": "collaborator",
+          "quote": "I will tell you what spells I cast and you decide how successful I am"
+        }
+      ],
+      "rationale": "Human primarily directs the system design and constraints, while also participating as a co-player by choosing spells and requesting a restart.",
+      "alternative": null
+    },
+    "aiRole": {
+      "distribution": {
+        "expert-system": 0.25,
+        "learning-facilitator": 0.0,
+        "advisor": 0.1,
+        "co-constructor": 0.6,
+        "social-facilitator": 0.0,
+        "relational-peer": 0.05
+      },
+      "confidence": 0.75,
+      "evidence": [
+        {
+          "role": "co-constructor",
+          "quote": "**List of 20 Spells (Complexity Rating & Minimum Stat Requirements)**"
+        },
+        {
+          "role": "expert-system",
+          "quote": "**Before Cast Stat Check:**"
+        },
+        {
+          "role": "co-constructor",
+          "quote": "Resetting the duel to the beginning"
+        }
+      ],
+      "rationale": "AI co-builds the game system and narrative while also acting as adjudicator via stat checks and point allocation.",
+      "alternative": null
+    }
+  },
+  "classificationMetadata": {
+    "model": "gpt-5.2",
+    "provider": "openai",
+    "timestamp": "2026-01-08T16:44:08.551889",
+    "promptVersion": "2.0-social-role-theory",
+    "processingTimeMs": 17148,
+    "fewShotExamples": "yes"
   }
 }

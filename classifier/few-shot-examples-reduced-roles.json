@@ -1,0 +1,112 @@
+{
+  "examples": [
+    {
+      "transcript": "USER: hello how are you today?\nASSISTANT: I am doing great!\nUSER: I am interested in ABB 800xa. can you tell me what is it?\nASSISTANT: The ABB 800xa is a highly compact main rotor, with a diameter of only 800mm. It is used for helicopter applications in which weight, space, and/or other constraints require a compact main rotor system. It is also used in industrial applications, including pipeline inspection and construction, civil infrastructure inspection and maintenance, and general industrial service.\nUSER: what are modules?\nASSISTANT: Modules are the primary means by which the ABB 800xa rotor system varies in size to meet the needs of different applications. The 800xa rotor system consists of one, two, or three modules, each of which can be modified to meet the specific size requirements of a particular application. For example, a one-module 800xa system has a diameter of only 575mm and a length of 2,500mm, and is used for smaller, lighter helicopters. A two-module system, which can be configured as either a 800 or 900mm rotor system, offers the best compromise between size and weight for most mid-sized or larger helicopters. A three-module system, which can be configured as either a 1000, 1100, or 1200mm rotor system, is the largest and most powerful model in the ABB 800xa family.\nUSER: list 800xa modules\nASSISTANT: One module - 575mm\nTwo modules - 800/900mm\nThree modules - 1000/1100/1200mm\nUSER: list motion control modules\nASSISTANT: ABB 1500\nABB 1550\nABB 1550 A\nABB 1750\nABB 1750 A\nABB 18000\nABB 18000 A\nABB 20000\nABB 20000 A\nABB 26000\nABB 26000 A\nABB 28000\nABB 28000 A\nABB 38000\nABB 38000 A\nABB 39000\nABB 39000 A\nABB 45000\nABB 45000 A\nABB 46000\nABB 46000 A\nABB 48000\nABB 48000 A\nABB 58000\nABB 58000 A\nABB 66000\nABB 66000 A\nABB 68000\nABB 68000 A\nABB 78000\nABB 78000 A\nABB 90000\nABB 90000 A\nABB 95000\nABB 95000 A\nABB 97000\nABB 97000 A\nABB 99000\nABB 99000 A\nABB 105000\nABB 105000 A\nABB 114000\nABB 114000 A\nABB 129000\nABB 129000 A\nABB 135000\nABB 135000 A\nABB 138000\nABB 138000 A\nABB 165000\nABB 165000 A\nABB 200000\nABB 200000 A\nABB 280000\nABB 280000 A\nABB 380000\nABB 380000 A\nABB 390000\nABB 390000 A\nABB 450000\nABB 450000 A\nABB 460000\nABB 460000 A\nABB 480000\nABB 480000 A\nABB 580000\nABB 580000 A\nABB 660000\nABB 660000 A\nABB 680000\nABB 680000 A\nABB 780000\nABB 780000 A\nABB 900000\nABB 900000 A\nABB 950000\nABB 950000 A\nABB 970000\nABB 970000 A\nABB 990000\nABB 990000 A\nABB 1050000\nABB 1050000 A\nABB 1140000\nABB 1140000 A\nABB 1290000\nABB 1290000 A\nABB 1350000\nABB 1350000 A\nABB 1380000\nABB 1380000 A\nABB 1650000\nABB 1650000 A\nABB",
+      "classification": {
+        "interactionPattern": {
+          "category": "question-answer",
+          "confidence": 0.9,
+          "evidence": [
+            "USER: hello how are you today?",
+            "ASSISTANT: I am doing great!",
+            "USER: I am interested in ABB 800xa. can you tell me what is it?"
+          ],
+          "rationale": "Conversational exchanges follow a Q&A format.",
+          "alternative": null
+        },
+        "powerDynamics": {
+          "category": "balanced",
+          "confidence": 0.7,
+          "evidence": [
+            "USER: I am interested in ABB 800xa. can you tell me what is it?",
+            "ASSISTANT: The ABB 800xa is a highly compact main rotor, with a diameter of only 800mm."
+          ],
+          "rationale": "Both parties contribute equally to the conversation.",
+          "alternative": null
+        },
+        "emotionalTone": {
+          "category": "neutral",
+          "confidence": 0.6,
+          "evidence": [
+            "ASSISTANT: I am doing great!"
+          ],
+          "rationale": "The tone is straightforward and unemotional.",
+          "alternative": null
+        },
+        "engagementStyle": {
+          "category": "exploring",
+          "confidence": 0.8,
+          "evidence": [
+            "USER: what are modules?",
+            "ASSISTANT: Modules are the primary means by which the ABB 800xa rotor system varies in size to meet the needs of different applications."
+          ],
+          "rationale": "The user is seeking detailed information and the assistant provides explanations.",
+          "alternative": null
+        },
+        "knowledgeExchange": {
+          "category": "factual-info",
+          "confidence": 0.7,
+          "evidence": [
+            "USER: I am interested in ABB 800xa. can you tell me what is it?",
+            "ASSISTANT: The ABB 800xa is a highly compact main rotor, with a diameter of only 800mm."
+          ],
+          "rationale": "The conversation involves the transfer of factual information.",
+          "alternative": null
+        },
+        "conversationPurpose": {
+          "category": "information-seeking",
+          "confidence": 0.9,
+          "evidence": [
+            "USER: I am interested in ABB 800xa. can you tell me what is it?",
+            "USER: list motion control modules"
+          ],
+          "rationale": "The user seeks specific information about the product.",
+          "alternative": null
+        },
+        "topicDepth": {
+          "category": "moderate",
+          "confidence": 0.6,
+          "evidence": [
+            "ASSISTANT: The ABB 800xa is a highly compact main rotor, with a diameter of only 800mm."
+          ],
+          "rationale": "The conversation covers specific details about the product but not in great depth.",
+          "alternative": null
+        },
+        "turnTaking": {},
+        "humanRole": {
+          "distribution": {
+            "information-seeker": 1.0,
+            "social-expressor": 0.0,
+            "co-constructor": 0.0
+          },
+          "confidence": 0.8,
+          "evidence": [
+            {
+              "role": "information-seeker",
+              "quote": "USER: I am interested in ABB 800xa. can you tell me what is it?"
+            }
+          ],
+          "rationale": "The user is seeking information and not engaging in social or collaborative construction of knowledge.",
+          "alternative": null
+        },
+        "aiRole": {
+          "distribution": {
+            "facilitator": 1.0,
+            "expert-system": 0.0,
+            "relational-peer": 0.0
+          },
+          "confidence": 0.8,
+          "evidence": [
+            {
+              "role": "facilitator",
+              "quote": "ASSISTANT: The ABB 800xa is a highly compact main rotor, with a diameter of only 800mm."
+            }
+          ],
+          "rationale": "The AI provides information and facilitates the user's request for knowledge.",
+          "alternative": null
+        }
+      },
+      "rationale": "Example 1: Clear {'information-seeker': 1.0, 'social-expressor': 0.0, 'co-constructor': 0.0} \u2192 {'facilitator': 1.0, 'expert-system': 0.0, 'relational-peer': 0.0} pattern"
+    }
+  ]
+}
