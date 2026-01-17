@@ -12,7 +12,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: var(--background, #ffffff);
+  background: transparent;
   color: var(--foreground, oklch(0.145 0 0));
 }
 

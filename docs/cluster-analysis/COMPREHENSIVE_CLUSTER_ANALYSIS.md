@@ -1,22 +1,22 @@
    # Comprehensive Path Cluster Analysis
 
-   **Analysis Date:** 2026-01-06 (updated)  
-   **Total Conversations:** 345  
+   **Analysis Date:** 2026-01-14 (aligned with DIS Submission)  
+   **Total Conversations:** 562 (analyzed subset of 570)  
    **Clustering Method:** K-Means (primary), Hierarchical (validation)  
    **Number of Clusters:** 7  
    **Feature Space:** 45 features (trajectory + classification)
-
+ 
    ---
-
+ 
    ## Executive Summary
-
-   Analysis of 345 classified conversations reveals **7 distinct relational positioning archetypes** in human-AI conversations. These clusters represent systematic patterns in how conversations move through relational-affective space.
-
+ 
+   Analysis of **562 analyzed conversations** reveals **7 distinct relational positioning archetypes** in human-AI conversations. These clusters represent systematic patterns in how conversations move through relational-affective space.
+ 
    ### Primary Finding: Trajectory Features Drive Cluster Separation
-
-   **Across runs, trajectory features explain ~82% of discriminative power (81.8–82.7%)**. Categorical classification features (pattern, purpose, tone) contribute only 17–18%. This directly supports the thesis that **how conversations move through relational space matters more than what they're about**.
-
-   This finding is counterintuitive—one might expect "what the conversation is about" (its purpose, pattern, topic) to drive clustering. Instead, **trajectory dynamics** (drift direction, path characteristics, emotional intensity patterns) are the primary differentiators. This suggests that relational positioning is a fundamental dimension of human-AI interaction, independent of conversational content.
+ 
+   **Trajectory characteristics (spatial drift, path straightness, emotional intensity patterns) account for 83.3% of what distinguishes one visualization from another**, while categorical classification features contribute only 16.7%.
+ 
+   **Critical Interpretation:** This is not a claim about conversations themselves, but about what the spatial encoding makes visible. The finding reveals that our encoding privileges relational dynamics over categorical content—a design choice that stages a particular way of seeing. It supports the thesis that **how conversations move through relational space matters more than what they're about**.
 
    ### Cluster Characteristics
 
@@ -175,7 +175,7 @@
    **Category Totals:**
    - **Spatial Trajectory:** 46.2% of importance
    - **Emotional Intensity:** 36.5% of importance
-   - **Together:** ~82% of discriminative power (81.8–82.7% across runs)
+   - **Together:** ~83% of discriminative power (82.7–83.3% across runs)
 
    **Insight:** Trajectory features (spatial + emotional) drive cluster separation, validating the feature selection methodology. This is the **strongest finding**—how conversations move through relational space matters more than what they're about.
 
@@ -359,7 +359,7 @@ See `WILDCHAT_DATASET.md` for details.
    ## Methodological Validation
 
    ### ✅ Feature Importance
-   - Trajectory features (~82%, 81.8–82.7% across runs) drive separation
+   - Trajectory features (~83%, 83.3% final run) drive separation
    - Validates feature selection methodology
 
    ### ✅ Sensitivity Analysis
@@ -444,7 +444,7 @@ See `WILDCHAT_DATASET.md` for details.
 
    ## Conclusion
 
-   The comprehensive analysis reveals **7 distinct relational positioning archetypes** in human-AI conversations, grounded in Watzlawick's relational communication theory. The cluster structure is methodologically robust, with trajectory features (spatial + emotional) driving ~82% of separation. While most conversations (77.7%) prioritize content over relationship, a significant minority (19.7%) engage in explicit relational work. The low silhouette score (0.160) reflects continuous variation rather than discrete types—clusters are **archetypal attractors** in a continuous space, useful for interpretation, comparison, and anomaly surfacing.
+   The comprehensive analysis reveals **7 distinct relational positioning archetypes** in 562 analyzed human-AI conversations, grounded in Watzlawick's relational communication theory. The cluster structure is methodologically robust, with trajectory features (spatial + emotional) driving 83.3% of separation. While most conversations (77.7%) prioritize content over relationship, a significant minority engage in explicit relational work. The low silhouette score (0.198) reflects continuous variation rather than discrete types—clusters are **archetypal attractors** in a continuous space, useful for interpretation, comparison, and anomaly surfacing.
 
    This analysis provides a foundation for understanding human-AI relational communication and can inform the design of more nuanced, relationally-aware AI systems.
 

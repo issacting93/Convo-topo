@@ -10,7 +10,8 @@ import {
   getTerrainParams,
   getDominantHumanRole,
   getDominantAiRole,
-  calculateMessagePAD
+  calculateMessagePAD,
+  calculateUserAuthority
 } from '../utils/conversationToTerrain';
 import type { TerrainParams } from '../utils/terrain';
 
@@ -156,8 +157,11 @@ export function TerrainComparisonPage() {
   }, [selectedConversation]);
 
   const pathPoints = useMemo(
-    () => generatePathPoints(heightmap, TERRAIN_SIZE, messages.length, messages),
-    [heightmap, messages]
+    () => {
+      const authorityScore = selectedConversation ? calculateUserAuthority(selectedConversation) : undefined;
+      return generatePathPoints(heightmap, TERRAIN_SIZE, messages.length, messages, { authorityScore });
+    },
+    [heightmap, messages, selectedConversation]
   );
 
   const contours = useMemo(

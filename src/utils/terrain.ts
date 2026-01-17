@@ -519,7 +519,8 @@ export function generatePathPoints(
       dominance: number;
       emotionalIntensity: number;
     };
-  }>
+  }>,
+  options?: { authorityScore?: number }
 ): PathPoint[] {
   // 1. Generate geometry
   const coords = generatePathCoordinates(messages, count);
@@ -535,7 +536,12 @@ export function generatePathPoints(
     // Calculate PAD-based height if PAD data is available
     // emotionalIntensity drives Z-height: high = frustration peaks, low = affiliation valleys
     // Fallback: If no PAD data (e.g. human/raw datasets), use expressiveScore as a proxy for intensity
-    const padHeight = pt.pad?.emotionalIntensity ?? (pt.analysis.expressiveScore * 0.8);
+    let padHeight = pt.pad?.emotionalIntensity ?? (pt.analysis.expressiveScore * 0.8);
+
+    // Override: Use User Authority Score if provided (Vertical Stratification)
+    if (options?.authorityScore !== undefined) {
+      padHeight = options.authorityScore;
+    }
 
     // Destructure to remove 'analysis' from final object if not needed in PathPoint, 
     // or just pass it locally. PathPoint interface doesn't have 'analysis', so we exclude it.
@@ -574,4 +580,86 @@ export function getHeightAt(
   const h1 = h01 * (1 - fx) + h11 * fx;
 
   return h0 * (1 - fy) + h1 * fy;
+}
+
+/**
+ * Generate a density-based heightmap from a collection of paths.
+ * Used for the global cluster visualization and potentially single-view context.
+ */
+export function generateDensityHeightmap(
+  size: number,
+  paths: { points: { x: number; y: number; pad?: { emotionalIntensity: number }; padHeight?: number }[] }[],
+  options?: {
+    useAuthorityForDensity?: boolean; // If true, uses Authority Score. If false/undefined, uses Emotional Intensity.
+    intensityScale?: number;
+  }
+): Float32Array {
+  const densityMap = new Float32Array(size * size).fill(0);
+  const countMap = new Float32Array(size * size).fill(0);
+  // const intensityScale = options?.intensityScale ?? 0.8; // Unused for now
+
+  paths.forEach(({ points }) => {
+    points.forEach(pt => {
+      // Determine intensity value for Z-accumulation
+      let intensity = 0;
+
+      if (options?.useAuthorityForDensity && pt.padHeight !== undefined) {
+        // If explicitly requested to use Authority (and it's stored in padHeight by caller), use it.
+        intensity = pt.padHeight;
+      } else {
+        // Default: Emotional Intensity (Previous Heatmap Logic)
+        // Fallback to expressiveScore if PAD not available
+        // Note: casting to any to access analysis if needed, or check pad presence
+        intensity = pt.pad?.emotionalIntensity ?? ((pt as any).analysis?.expressiveScore ? (pt as any).analysis.expressiveScore * 0.8 : 0.5);
+      }
+
+      const gridX = Math.floor(pt.x * (size - 1));
+      const gridY = Math.floor(pt.y * (size - 1));
+      const idx = gridY * size + gridX;
+
+      if (idx >= 0 && idx < densityMap.length) {
+        densityMap[idx] += intensity;
+        countMap[idx] += 1;
+      }
+
+      // Gaussian spread
+      const radius = 2;
+      for (let dy = -radius; dy <= radius; dy++) {
+        for (let dx = -radius; dx <= radius; dx++) {
+          const nx = gridX + dx;
+          const ny = gridY + dy;
+          if (nx >= 0 && nx < size && ny >= 0 && ny < size) {
+            const nidx = ny * size + nx;
+            const dist = Math.sqrt(dx * dx + dy * dy);
+            const weight = Math.exp(-(dist * dist) / (2 * radius * radius));
+            densityMap[nidx] += intensity * weight * 0.5;
+            countMap[nidx] += weight * 0.5;
+          }
+        }
+      }
+    });
+  });
+
+  // Normalize
+  for (let i = 0; i < densityMap.length; i++) {
+    if (countMap[i] > 0) densityMap[i] /= countMap[i];
+  }
+
+  // Smooth
+  const smoothed = new Float32Array(densityMap);
+  const smoothRadius = 1;
+  for (let y = smoothRadius; y < size - smoothRadius; y++) {
+    for (let x = smoothRadius; x < size - smoothRadius; x++) {
+      let sum = 0, count = 0;
+      for (let dy = -smoothRadius; dy <= smoothRadius; dy++) {
+        for (let dx = -smoothRadius; dx <= smoothRadius; dx++) {
+          sum += densityMap[(y + dy) * size + (x + dx)];
+          count++;
+        }
+      }
+      smoothed[y * size + x] = sum / count;
+    }
+  }
+
+  return smoothed;
 }

@@ -1,41 +1,30 @@
 # Cluster Analysis Update Status
-
-**Last Updated:** 2026-01-XX
-
+ 
+**Last Updated:** 2026-01-14
+ 
 ---
-
+ 
 ## Current Status
-
+ 
 ### ✅ Updated Documents
-- `README.md` - Updated with current metrics (379 conversations, 81.8% trajectory)
-- `PATH_CLUSTER_ANALYSIS_KMEANS.md` - Current analysis (in parent `docs/` folder)
-- `PATH_CLUSTER_ANALYSIS_HIERARCHICAL.md` - Current analysis (in parent `docs/` folder)
-- `FEATURE_IMPORTANCE_KMEANS.md` - Current analysis (in parent `docs/` folder)
-
-### ⚠️ Needs Update (Outdated)
-
-**Documents with old data (160 conversations, 82.7%):**
-- `COMPREHENSIVE_CLUSTER_ANALYSIS.md` - References 160 conversations, 82.7% trajectory
-- `FEATURE_IMPORTANCE_ANALYSIS.md` - References 82.7% trajectory
-- `DASHBOARD_SUMMARY.md` - References 160 conversations, 82.7% trajectory
-- `SENSITIVITY_ANALYSIS.md` - References 0.160 silhouette score
-- `CLUSTER_SEPARATION_METRICS.md` - References 0.160 silhouette score
-
-**Still Valid (Theoretical/General):**
-- `THEORETICAL_SYNTHESIS.md` - Theoretical framework (still valid)
-- `METHODOLOGY_AND_BUG_FIXES.md` - Methodology (still valid)
-- `CLUSTER_VALIDATION_MANUAL.md` - Validation framework (still valid)
-- `CLUSTER_5_DEEP_ANALYSIS.md` - Specific cluster analysis (may need update if cluster changed)
-
+- `README.md` - Updated with current metrics (562 filtered conversations, 83.3% trajectory)
+- `COMPREHENSIVE_CLUSTER_ANALYSIS.md` - Updated with current count (562) and "critical design" framing
+- `UPDATE_STATUS.md` - Updated to reflect Jan 14 cleanup
+ 
+### 📦 Archived (in `archive/`)
+- `INSIGHT_STABILITY_160_VS_345.md` -> `archive/INSIGHT_STABILITY_ANALYSIS.md`
+- `SENSITIVITY_ANALYSIS.md` -> `archive/SENSITIVITY_ANALYSIS.md`
+- `FEATURE_IMPORTANCE_ANALYSIS.md` -> `archive/FEATURE_IMPORTANCE_ANALYSIS.md`
+ 
 ---
-
-## Current Metrics (v1.2 Reclassified Data)
-
-- **Total Conversations:** 379 (340 successfully reclassified)
-- **Feature Importance:** 81.8% trajectory, 18.2% categorical
-- **Silhouette Score:** 0.207 (K-Means), 0.200 (Hierarchical)
+ 
+## Current Metrics (Jan 15 Submission Data)
+ 
+- **Total Conversations:** 562 (from 570 loaded)
+- **Feature Importance:** 83.3% trajectory, 16.7% classification
+- **Silhouette Score:** 0.198
 - **Number of Clusters:** 7
-- **Analysis Date:** 2026-01-XX
+- **Analysis Date:** 2026-01-15
 
 ---
 

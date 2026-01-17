@@ -7,7 +7,7 @@
 
 ## Your Refined Abstract
 
-What relational possibilities are foreclosed when human–AI interaction collapses into instrumental tool-use? Conversational Cartography maps 345 conversations as movement through relational-affective space, encoding social role orientation, structural alignment, and emotional intensity. Using a 12-role Social Role Theory taxonomy, we reveal that interactions with identical role pairings take dramatically different trajectories (82x variance), yet clustering identifies only 7 relational positioning patterns—72% functional/structured, expressive human roles nearly absent (<3%). Current paradigms systematically reduce AI interaction to instrumental exchange. The visualization externalizes this constraint as navigable terrain: most conversations cluster in narrow functional corridors, revealing what's missing rather than what exists. By using GPT-5.2 to classify AI-mediated interactions, we create methodological circularity exposing how AI systems interpret their own relational possibilities. The visualization is not diagnostic but critical—a tool for confronting what current interaction paradigms foreclose.
+What relational possibilities are foreclosed when human–AI interaction collapses into instrumental tool-use? Conversational Cartography maps 562 conversations as movement through relational-affective space, encoding social role orientation, structural alignment, and emotional intensity. Using a 12-role Social Role Theory taxonomy, we reveal that interactions with identical role pairings take dramatically different trajectories (82x variance), yet clustering identifies only 7 relational positioning patterns—72% functional/structured, expressive human roles nearly absent (<3%). Current paradigms systematically reduce AI interaction to instrumental exchange. The visualization externalizes this constraint as navigable terrain: most conversations cluster in narrow functional corridors, revealing what's missing rather than what exists. By using GPT-5.2 to classify AI-mediated interactions, we create methodological circularity exposing how AI systems interpret their own relational possibilities. The visualization is not diagnostic but critical—a tool for confronting what current interaction paradigms foreclose.
 
 ---
 
@@ -23,7 +23,7 @@ What relational possibilities are foreclosed when human–AI interaction collaps
 
 ### ✅ All Key Claims Verified
 
-- ✅ 345 conversations
+- ✅ 562 conversations
 - ✅ 12-role Social Role Theory taxonomy
 - ✅ 82x variance
 - ✅ 7 patterns, 72% functional/structured

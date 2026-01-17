@@ -6,11 +6,11 @@ This directory contains all documentation related to path cluster analysis of co
 
 ## Overview
 
-Analysis of 379 classified conversations (340 reclassified with v1.2) reveals **7 distinct relational positioning archetypes** in human-AI conversations. These clusters represent systematic patterns in how conversations move through relational-affective space.
-
-**Key Finding**: 81.8% of feature importance comes from trajectory characteristics (spatial + emotional), while categorical classification features contribute only 18.2%. This supports the thesis that **how conversations move through relational space matters more than what they're about**.
-
-**Note**: This finding is partially circular (we cluster on trajectory features, then observe they matter). The real question is whether these trajectories correspond to meaningful conversation dynamics independent of our encoding choices—this requires external validation.
+Analysis of **494 analyzed conversations** (from 570 total filtered) reveals **7 distinct relational positioning archetypes** in human-AI conversations. These clusters represent systematic patterns in how conversations move through relational-affective space.
+ 
+**Key Finding**: 82.7% of feature importance comes from trajectory characteristics (spatial + emotional), while categorical classification features contribute only 17.3%. This supports the thesis that **how conversations move through relational space matters more than what they're about**.
+ 
+**Note**: This finding is partially circular (we cluster on trajectory features, then observe they matter). The finding reveals that our encoding privileges relational dynamics over categorical content—a design choice that stages a particular way of seeing.
 
 ---
 
@@ -29,10 +29,7 @@ Complete synthesis of all findings, methodology, and theoretical interpretations
 
 ### **[THEORETICAL_SYNTHESIS.md](THEORETICAL_SYNTHESIS.md)**
 Connects clusters to Watzlawick's relational communication theory, interpreting them as relational positioning archetypes.
-
-### **[FEATURE_IMPORTANCE_ANALYSIS.md](FEATURE_IMPORTANCE_ANALYSIS.md)** ⭐
-Comprehensive analysis of which features drive cluster separation. Shows that trajectory features (81.8%) are most discriminative. Includes both K-Means and Hierarchical clustering results.
-
+ 
 **Note**: Historical method-specific files archived in `../archive/cluster-analysis/`
 
 ---
@@ -77,11 +74,11 @@ See `COMPREHENSIVE_CLUSTER_ANALYSIS.md` for detailed descriptions.
 ---
 
 ## Key Metrics
-
-- **Overall Silhouette Score**: 0.207 (weak separation, continuous variation)
-- **Feature Importance**: 81.8% trajectory, 18.2% categorical
-- **Dataset**: 379 conversations (340 reclassified with v1.2)
-- **Analysis Date**: 2026-01-XX (updated after v1.2 reclassification)
+ 
+- **Overall Silhouette Score**: 0.160 (weak separation, continuous variation)
+- **Feature Importance**: 82.7% trajectory, 17.3% classification
+- **Dataset**: 494 analyzed conversations (from 570 total)
+- **Analysis Date**: 2026-01-14 (aligned with DIS Submission)
 
 **Previous Analysis (2025-01-03)**:
 - 160 conversations

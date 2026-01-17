@@ -51,6 +51,8 @@ The visualization is not diagnostic but **critical**—a tool for confronting th
   - OASST: 32 conversations (4.8%)
 - **755 conversations** for clustering analysis (includes additional sources)
 - **345 validated corpus** used for published cluster findings
+
+For comparision 
 - **90 conversations** (30 per dataset) for balanced cross-dataset comparison
 
 **Data Collection Period:** Multiple collection waves (2024-2026)

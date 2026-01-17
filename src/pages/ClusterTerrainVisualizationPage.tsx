@@ -14,8 +14,9 @@ import { ThreeScene } from '../components/ThreeScene';
 import { Navigation } from '../components/Navigation';
 import { determineCluster } from '../utils/determineCluster';
 import type { CartographyCluster } from '../utils/clusterToGenUI';
-import { generateContours, generatePathCoordinates, getHeightAt } from '../utils/terrain';
+import { generateContours, generatePathCoordinates, getHeightAt, generateDensityHeightmap } from '../utils/terrain';
 import { getCommunicationFunction, getConversationStructure } from '../utils/coordinates';
+import { calculateUserAuthority, getDominantHumanRole, getDominantAiRole, mapOldRoleToNew } from '../utils/conversationToTerrain';
 import type { PathPoint } from '../utils/terrain';
 
 const THEME = {
@@ -86,6 +87,29 @@ const VALENCE_COLORS = {
   negative: '#ef4444', // red-500
 };
 
+// Human Role colors (Social Role Theory taxonomy)
+const HUMAN_ROLE_COLORS: Record<string, string> = {
+  'information-seeker': '#3b82f6',  // blue-500
+  'provider': '#8b5cf6',             // violet-500
+  'director': '#ef4444',             // red-500
+  'collaborator': '#10b981',         // emerald-500
+  'social-expressor': '#ec4899',     // pink-500
+  'relational-peer': '#f59e0b',      // amber-500
+};
+
+// AI Role colors
+const AI_ROLE_COLORS: Record<string, string> = {
+  'expert-system': '#3b82f6',        // blue-500
+  'learning-facilitator': '#8b5cf6', // violet-500
+  'advisor': '#ef4444',              // red-500
+  'co-constructor': '#10b981',       // emerald-500
+  'social-facilitator': '#ec4899',   // pink-500
+  'relational-peer': '#f59e0b',      // amber-500
+};
+
+const ALL_HUMAN_ROLES = Object.keys(HUMAN_ROLE_COLORS);
+const ALL_AI_ROLES = Object.keys(AI_ROLE_COLORS);
+
 interface PathWithColor {
   points: PathPoint[];
   color: string;
@@ -153,6 +177,20 @@ const determineValence = (conv: any): string => {
   return 'neutral';
 };
 
+// Helper: Get dominant human role
+const getHumanRole = (conv: any): string | null => {
+  const roleData = getDominantHumanRole(conv);
+  if (!roleData || roleData.value < 0.3) return null;
+  return mapOldRoleToNew(roleData.role, 'human');
+};
+
+// Helper: Get dominant AI role
+const getAiRole = (conv: any): string | null => {
+  const roleData = getDominantAiRole(conv);
+  if (!roleData || roleData.value < 0.3) return null;
+  return mapOldRoleToNew(roleData.role, 'ai');
+};
+
 const ALL_SOURCES = ['Chatbot Arena', 'WildChat', 'OASST', 'Human', 'Other'];
 
 const CheckboxItem = ({ id, label, color, count, checked, onChange }: any) => (
@@ -205,6 +243,12 @@ export function ClusterTerrainVisualizationPage() {
   const [selectedValences, setSelectedValences] = useState<Set<string>>(
     new Set(Object.keys(VALENCE_COLORS))
   );
+  const [selectedHumanRoles, setSelectedHumanRoles] = useState<Set<string>>(
+    new Set(ALL_HUMAN_ROLES)
+  );
+  const [selectedAiRoles, setSelectedAiRoles] = useState<Set<string>>(
+    new Set(ALL_AI_ROLES)
+  );
 
   // Data Sampling Mode (30 per source)
   const [samplingEnabled, setSamplingEnabled] = useState(false);
@@ -247,7 +291,15 @@ export function ClusterTerrainVisualizationPage() {
         // 1. Global Filter: Source (Always active as a dataset filter)
         if (!selectedSources.has(determineSource(conv))) return false;
 
-        // 2. View Mode Specific Filters
+        // 2. Role Filters (Always active)
+        const humanRole = getHumanRole(conv);
+        const aiRole = getAiRole(conv);
+
+        // If conversation has identifiable roles, filter by them
+        if (humanRole && !selectedHumanRoles.has(humanRole)) return false;
+        if (aiRole && !selectedAiRoles.has(aiRole)) return false;
+
+        // 3. View Mode Specific Filters
         // Depending on which VIEW we are in, we filter by that dimension
         // This makes the terrain "react" to the toggles of the current view
         if (coloringMode === 'cluster') {
@@ -275,71 +327,15 @@ export function ClusterTerrainVisualizationPage() {
         };
       })
       .filter((item): item is NonNullable<typeof item> => item !== null);
-  }, [displayConversations, selectedSources, selectedClusters, selectedPatterns, selectedPurposes, selectedValences, coloringMode]);
+  }, [displayConversations, selectedSources, selectedHumanRoles, selectedAiRoles, selectedClusters, selectedPatterns, selectedPurposes, selectedValences, coloringMode]);
 
   // Generate density-based heightmap (Z-axis = Emotional Intensity)
   // Now accumulated from ALL points along the paths, not just endpoints
   const heightmap = useMemo(() => {
     const size = 128;
-    const densityMap = new Float32Array(size * size).fill(0);
-    const countMap = new Float32Array(size * size).fill(0);
-
-    precomputedPaths.forEach(({ points }) => {
-      // Iterate over points to build density
-      points.forEach(pt => {
-        // Use emotional intensity for Z-height accumulation
-        // Fallback to expressiveScore if PAD not available
-        const intensity = pt.pad?.emotionalIntensity ?? (pt.analysis.expressiveScore * 0.8);
-
-        const gridX = Math.floor(pt.x * (size - 1));
-        const gridY = Math.floor(pt.y * (size - 1));
-        const idx = gridY * size + gridX;
-
-        if (idx >= 0 && idx < densityMap.length) {
-          densityMap[idx] += intensity;
-          countMap[idx] += 1;
-        }
-
-        // Gaussian spread (slightly reduced radius since we have many more points now)
-        const radius = 2; // Reduced from 3 to 2 for cleaner paths
-        for (let dy = -radius; dy <= radius; dy++) {
-          for (let dx = -radius; dx <= radius; dx++) {
-            const nx = gridX + dx;
-            const ny = gridY + dy;
-            if (nx >= 0 && nx < size && ny >= 0 && ny < size) {
-              const nidx = ny * size + nx;
-              const dist = Math.sqrt(dx * dx + dy * dy);
-              const weight = Math.exp(-(dist * dist) / (2 * radius * radius));
-              densityMap[nidx] += intensity * weight * 0.5;
-              countMap[nidx] += weight * 0.5;
-            }
-          }
-        }
-      });
-    });
-
-    // Normalize
-    for (let i = 0; i < densityMap.length; i++) {
-      if (countMap[i] > 0) densityMap[i] /= countMap[i];
-    }
-
-    // Smooth
-    const smoothed = new Float32Array(densityMap);
-    const smoothRadius = 1; // Reduced from 2 to 1 for sharper features
-    for (let y = smoothRadius; y < size - smoothRadius; y++) {
-      for (let x = smoothRadius; x < size - smoothRadius; x++) {
-        let sum = 0, count = 0;
-        for (let dy = -smoothRadius; dy <= smoothRadius; dy++) {
-          for (let dx = -smoothRadius; dx <= smoothRadius; dx++) {
-            sum += densityMap[(y + dy) * size + (x + dx)];
-            count++;
-          }
-        }
-        smoothed[y * size + x] = sum / count;
-      }
-    }
-
-    return smoothed;
+    // Use reusable density generation
+    // Default: Emotional Intensity (Previous Heatmap Logic)
+    return generateDensityHeightmap(size, precomputedPaths);
   }, [precomputedPaths]);
 
   // Generate paths colored by cluster
@@ -360,8 +356,8 @@ export function ClusterTerrainVisualizationPage() {
         const gridY = pt.y * (terrainSize - 1);
         const height = getHeightAt(heightmap, terrainSize, gridX, gridY);
 
-        // Re-calculate padHeight equivalent
-        const padHeight = pt.pad?.emotionalIntensity ?? (pt.analysis.expressiveScore * 0.8);
+        // Use Authority Score for Z-height (consistent with density map)
+        const padHeight = calculateUserAuthority(conv);
 
         // Remove analysis from object to match PathPoint
         const { analysis, ...rest } = pt;
@@ -475,6 +471,30 @@ export function ClusterTerrainVisualizationPage() {
     });
     return stats;
   }, [displayConversations]);
+
+  const humanRoleStats = useMemo(() => {
+    const stats: Record<string, number> = {};
+    ALL_HUMAN_ROLES.forEach(r => stats[r] = 0);
+    displayConversations.forEach(conv => {
+      if (selectedSources.has(determineSource(conv))) {
+        const role = getHumanRole(conv);
+        if (role && stats[role] !== undefined) stats[role]++;
+      }
+    });
+    return stats;
+  }, [displayConversations, selectedSources]);
+
+  const aiRoleStats = useMemo(() => {
+    const stats: Record<string, number> = {};
+    ALL_AI_ROLES.forEach(r => stats[r] = 0);
+    displayConversations.forEach(conv => {
+      if (selectedSources.has(determineSource(conv))) {
+        const role = getAiRole(conv);
+        if (role && stats[role] !== undefined) stats[role]++;
+      }
+    });
+    return stats;
+  }, [displayConversations, selectedSources]);
 
   if (loading) {
     return (
@@ -689,6 +709,82 @@ export function ClusterTerrainVisualizationPage() {
                 </label>
               );
             })}
+          </div>
+
+          {/* Human Roles Filter */}
+          <div style={{ marginTop: '2rem' }}>
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1rem' }}>
+              <h3 style={{
+                margin: 0, fontSize: '0.875rem', fontWeight: 600, color: THEME.foreground,
+                textTransform: 'uppercase', letterSpacing: '0.05em',
+              }}>Human Roles ({selectedHumanRoles.size}/{ALL_HUMAN_ROLES.length})</h3>
+              <div style={{ display: 'flex', gap: '0.5rem' }}>
+                <button onClick={() => setSelectedHumanRoles(new Set(ALL_HUMAN_ROLES))}
+                  style={{
+                    padding: '0.375rem 0.75rem', fontSize: '0.75rem', border: `1px solid ${THEME.border}`,
+                    borderRadius: '0.375rem', background: THEME.card, color: THEME.foreground, cursor: 'pointer',
+                  }}>All</button>
+                <button onClick={() => setSelectedHumanRoles(new Set())}
+                  style={{
+                    padding: '0.375rem 0.75rem', fontSize: '0.75rem', border: `1px solid ${THEME.border}`,
+                    borderRadius: '0.375rem', background: THEME.card, color: THEME.foreground, cursor: 'pointer',
+                  }}>None</button>
+              </div>
+            </div>
+
+            {ALL_HUMAN_ROLES.map(role => (
+              <CheckboxItem
+                key={role}
+                id={role}
+                label={role.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ')}
+                color={HUMAN_ROLE_COLORS[role]}
+                count={humanRoleStats[role]}
+                checked={selectedHumanRoles.has(role)}
+                onChange={() => {
+                  const newSet = new Set(selectedHumanRoles);
+                  newSet.has(role) ? newSet.delete(role) : newSet.add(role);
+                  setSelectedHumanRoles(newSet);
+                }}
+              />
+            ))}
+          </div>
+
+          {/* AI Roles Filter */}
+          <div style={{ marginTop: '2rem' }}>
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1rem' }}>
+              <h3 style={{
+                margin: 0, fontSize: '0.875rem', fontWeight: 600, color: THEME.foreground,
+                textTransform: 'uppercase', letterSpacing: '0.05em',
+              }}>AI Roles ({selectedAiRoles.size}/{ALL_AI_ROLES.length})</h3>
+              <div style={{ display: 'flex', gap: '0.5rem' }}>
+                <button onClick={() => setSelectedAiRoles(new Set(ALL_AI_ROLES))}
+                  style={{
+                    padding: '0.375rem 0.75rem', fontSize: '0.75rem', border: `1px solid ${THEME.border}`,
+                    borderRadius: '0.375rem', background: THEME.card, color: THEME.foreground, cursor: 'pointer',
+                  }}>All</button>
+                <button onClick={() => setSelectedAiRoles(new Set())}
+                  style={{
+                    padding: '0.375rem 0.75rem', fontSize: '0.75rem', border: `1px solid ${THEME.border}`,
+                    borderRadius: '0.375rem', background: THEME.card, color: THEME.foreground, cursor: 'pointer',
+                  }}>None</button>
+              </div>
+            </div>
+
+            {ALL_AI_ROLES.map(role => (
+              <CheckboxItem
+                key={role}
+                id={role}
+                label={role.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ')}
+                color={AI_ROLE_COLORS[role]}
+                count={aiRoleStats[role]}
+                checked={selectedAiRoles.has(role)}
+                onChange={() => {
+                  const newSet = new Set(selectedAiRoles);
+                  newSet.has(role) ? newSet.delete(role) : newSet.add(role);
+                  setSelectedAiRoles(newSet);
+                }}
+              />
+            ))}
           </div>
 
           {/* Dynamic View Filtering */}

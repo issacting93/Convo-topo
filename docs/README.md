@@ -50,7 +50,7 @@ This directory contains comprehensive documentation for the Conversational Carto
 
 ### `cluster-analysis/` - Cluster Analysis
 - **COMPREHENSIVE_CLUSTER_ANALYSIS.md** - Complete 7 archetype analysis
-- **FEATURE_IMPORTANCE_ANALYSIS.md** - 82.7% trajectory feature importance
+- **FEATURE_IMPORTANCE_ANALYSIS.md** - 83.3% trajectory feature importance
 - **CLUSTER_VALIDATION_MANUAL.md** - Manual validation of clusters
 - Plus additional cluster analysis documents
 

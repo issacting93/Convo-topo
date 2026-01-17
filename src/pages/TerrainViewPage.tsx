@@ -2,7 +2,7 @@ import { useMemo, useCallback, useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { ThreeScene } from '../components/ThreeScene';
 import { HUDOverlay } from '../components/HUDOverlay';
-import { generateHeightmap, generateContours, generatePathPoints, type MetricMode } from '../utils/terrain';
+import { generateContours, generatePathPoints, generateDensityHeightmap, type MetricMode } from '../utils/terrain';
 import type { ClassifiedConversation } from '../utils/conversationToTerrain';
 import { useConversationStore } from '../store/useConversationStore';
 import {
@@ -11,7 +11,8 @@ import {
   getTerrainParams,
   getDominantHumanRole,
   getDominantAiRole,
-  calculateMessagePAD
+  calculateMessagePAD,
+  calculateUserAuthority
 } from '../utils/conversationToTerrain';
 import type { TerrainParams } from '../utils/terrain';
 
@@ -66,7 +67,6 @@ export function TerrainViewPage() {
   const conversations = useConversationStore(state => state.conversations);
   const loading = useConversationStore(state => state.loading);
 
-  const [seed, setSeed] = useState(42);
   const [timelineProgress, setTimelineProgress] = useState(1);
   const [hoveredPoint, setHoveredPoint] = useState<number | null>(null);
   const [lockedPoint, setLockedPoint] = useState<number | null>(null);
@@ -113,7 +113,6 @@ export function TerrainViewPage() {
     // If loading, wait. If done loading and not found, redirect.
     if (!loading) {
       if (selectedTerrain) {
-        setSeed(selectedTerrain.seed);
         const convIndex = terrains.findIndex(t => t.id === selectedTerrain.id);
         const conversation = convIndex >= 0 ? conversations[convIndex] : null;
         setSelectedConversation(conversation || null);
@@ -124,28 +123,36 @@ export function TerrainViewPage() {
     }
   }, [selectedTerrain, terrainId, terrains, conversations, navigate, loading]);
 
-  // Get terrain parameters from selected conversation for heightmap generation
-  const terrainParams = useMemo((): Partial<TerrainParams> | undefined => {
-    if (selectedConversation) {
-      return {
-        ...getTerrainParams(selectedConversation),
-        metricMode
-      };
-    }
-    return { metricMode };
-  }, [selectedConversation, metricMode]);
+  // Use Global Density Heatmap as background
+  // This helps visualize where this conversation fits in the broader landscape
+  const globalPathsSample = useMemo(() => {
+    // Sample diverse conversations for the background context
+    // We limit to ~50 for performance while maintaining global structure
+    return conversations
+      .filter((_, i) => i % Math.max(1, Math.floor(conversations.length / 50)) === 0)
+      .map(c => {
+        const msgs = processConversationMessages(c, MAX_MESSAGES);
+        return {
+          points: generatePathPoints(new Float32Array(0), TERRAIN_SIZE, msgs.length, msgs) // Dummy heightmap for pre-generation
+        };
+      });
+  }, [conversations]);
 
   const heightmap = useMemo(() => {
-    return generateHeightmap(TERRAIN_SIZE, seed, terrainParams);
-  }, [seed, terrainParams]);
+    // Generate density map from global sample
+    return generateDensityHeightmap(TERRAIN_SIZE, globalPathsSample);
+  }, [globalPathsSample]);
 
   const messages = useMemo(() => {
     return processConversationMessages(selectedConversation, MAX_MESSAGES);
   }, [selectedConversation]);
 
   const pathPoints = useMemo(
-    () => generatePathPoints(heightmap, TERRAIN_SIZE, messages.length, messages),
-    [heightmap, messages]
+    () => {
+      const authorityScore = selectedConversation ? calculateUserAuthority(selectedConversation) : undefined;
+      return generatePathPoints(heightmap, TERRAIN_SIZE, messages.length, messages, { authorityScore });
+    },
+    [heightmap, messages, selectedConversation]
   );
 
   const comparisonMessages = useMemo(() => {
@@ -242,6 +249,7 @@ export function TerrainViewPage() {
           markerColors={markerColors}
           timelineProgress={timelineProgress}
           showContours={showContours}
+          showPathPoints={true} // Enable nodes for single view
           onPointHover={setHoveredPoint}
           onPointClick={handlePointClick}
           backgroundColor="#000000"
@@ -256,7 +264,7 @@ export function TerrainViewPage() {
         timelineProgress={timelineProgress}
         onTimelineChange={setTimelineProgress}
         onBackToGrid={handleBackToGrid}
-        terrainName={selectedTerrain.name}
+        terrainName={selectedTerrain?.name || 'Unknown'}
         selectedConversation={selectedConversation}
         comparisonConversation={comparisonConversation}
         cameraView={cameraView}

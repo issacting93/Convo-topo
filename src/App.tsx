@@ -9,6 +9,7 @@ import { RelationalDriftPage } from './pages/RelationalDriftPage';
 import { ClusterDashboardPage } from './pages/ClusterDashboardPage';
 import { ClusterTerrainVisualizationPage } from './pages/ClusterTerrainVisualizationPage';
 import { RoleDashboardPage } from './pages/RoleDashboardPage';
+import { RoleNetworkPage } from './pages/RoleNetworkPage';
 import { TerrainGridPage } from './pages/TerrainGridPage';
 import { DISPictorialPage } from './pages/DISPictorialPage';
 import FlightRecorderPage from './pages/FlightRecorderPage';
@@ -34,6 +35,7 @@ function App() {
         <Route path="/cluster-dashboard" element={<ClusterDashboardPage />} />
         <Route path="/cluster-terrain" element={<ClusterTerrainVisualizationPage />} />
         <Route path="/role-dashboard" element={<RoleDashboardPage />} />
+        <Route path="/role-network" element={<RoleNetworkPage />} />
         <Route path="/terrain-grid" element={<TerrainGridPage />} />
         <Route path="/dis-pictorial" element={<DISPictorialPage />} />
         <Route path="/flight-recorder" element={<FlightRecorderPage />} />

@@ -1,0 +1,104 @@
+================================================================================
+COMPREHENSIVE DATA VERIFICATION
+================================================================================
+
+Total JSON files found: 570
+
+================================================================================
+DATASET OVERVIEW
+================================================================================
+Files with classification: 562
+Files with identifiable roles: 562
+Files with high confidence (>0.3): 557
+Files with messages: 569
+Total messages: 4479
+Average messages per conversation: 7.9
+Files with cluster assignments: 0
+
+================================================================================
+FULL DATASET - HUMAN ROLES (n=562)
+================================================================================
+provider                   250 ( 44.5%)
+director                   157 ( 27.9%)
+information-seeker         138 ( 24.6%)
+social-expressor            17 (  3.0%)
+
+--------------------------------------------------------------------------------
+INSTRUMENTAL (Provider/Director/Seeker/Collab): 545 (97.0%)
+EXPRESSIVE (Social-Expressor/Relational-Peer): 17 (3.0%)
+
+================================================================================
+FULL DATASET - AI ROLES (n=562)
+================================================================================
+expert-system              366 ( 65.1%)
+advisor                    108 ( 19.2%)
+co-constructor              36 (  6.4%)
+social-facilitator          23 (  4.1%)
+relational-peer             21 (  3.7%)
+learning-facilitator         4 (  0.7%)
+facilitator                  4 (  0.7%)
+
+--------------------------------------------------------------------------------
+EXPERT/ADVISOR: 474 (84.3%)
+FACILITATIVE (Learning/Social/Peer): 48 (8.5%)
+
+================================================================================
+TOP 10 ROLE PAIRINGS (n=562)
+================================================================================
+provider->expert-system                             186 ( 33.1%)
+information-seeker->expert-system                   117 ( 20.8%)
+director->expert-system                              62 ( 11.0%)
+provider->advisor                                    54 (  9.6%)
+director->advisor                                    39 (  6.9%)
+director->co-constructor                             35 (  6.2%)
+director->relational-peer                            14 (  2.5%)
+information-seeker->advisor                          12 (  2.1%)
+director->social-facilitator                          7 (  1.2%)
+provider->social-facilitator                          7 (  1.2%)
+
+================================================================================
+HIGH CONFIDENCE SUBSET (n=557, confidence >0.3)
+================================================================================
+
+Human Roles:
+provider                   249 ( 44.7%)
+director                   156 ( 28.0%)
+information-seeker         137 ( 24.6%)
+social-expressor            15 (  2.7%)
+
+AI Roles:
+expert-system              363 ( 65.2%)
+advisor                    108 ( 19.4%)
+co-constructor              36 (  6.5%)
+social-facilitator          22 (  3.9%)
+relational-peer             21 (  3.8%)
+facilitator                  4 (  0.7%)
+learning-facilitator         3 (  0.5%)
+
+Top 10 Pairings:
+provider->expert-system                             185 ( 33.2%)
+information-seeker->expert-system                   117 ( 21.0%)
+director->expert-system                              61 ( 11.0%)
+provider->advisor                                    54 (  9.7%)
+director->advisor                                    39 (  7.0%)
+director->co-constructor                             35 (  6.3%)
+director->relational-peer                            14 (  2.5%)
+information-seeker->advisor                          12 (  2.2%)
+director->social-facilitator                          7 (  1.3%)
+provider->social-facilitator                          7 (  1.3%)
+
+================================================================================
+VERIFICATION SUMMARY
+================================================================================
+
+CLAIMS TO VERIFY:
+✓ Total conversations: 562 (should be ~562 in reports)
+✓ Human instrumental: 97.0% (claimed: 97%)
+✓ Human expressive: 3.0% (claimed: 3%)
+✓ AI Expert-System: 65.1% (claimed: 65%)
+✓ Provider role: 44.5% (claimed: 44.5%)
+✓ Director role: 27.9% (claimed: 27.9%)
+✓ Information-Seeker: 24.6% (claimed: 24.6%)
+✓ Top pairing: provider->expert-system at 33.1% (claimed: 33.1%)
+
+================================================================================

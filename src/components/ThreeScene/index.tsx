@@ -28,6 +28,7 @@ export interface ThreeSceneProps {
     showTerrain?: boolean;
     showMarkers?: boolean;
     showPaths?: boolean;
+    showPathPoints?: boolean;
     coloringMode?: 'path' | 'role';
     visibleRoles?: { user: boolean; assistant: boolean };
     showDistanceLines?: boolean;
@@ -57,6 +58,7 @@ export function ThreeScene({
     showTerrain = false,
     showMarkers = true,
     showPaths = true,
+    showPathPoints = false,
     coloringMode = 'path',
     visibleRoles = { user: true, assistant: true },
     showDistanceLines = false,
@@ -116,6 +118,7 @@ export function ThreeScene({
         pathPoints,
         paths,
         showPaths,
+        showPathPoints,
         showDistanceLines,
         distanceThreshold: distanceThreshold || 2.0,
         connectSamePatternOnly,

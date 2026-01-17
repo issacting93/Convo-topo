@@ -22,21 +22,21 @@
 
 **Version: Final (147 words) - Verified and Accurate**
 
-We present "Conversational Cartography," a visual framework that maps human-AI interaction as movement through relational-affective space. Analysis of 345 validated conversations reveals a core insight: interactions with identical role classifications often take dramatically different affective journeys, with variance ratios up to 82x between calm information-seeking and volatile adversarial testing. By mapping conversations onto 3D terrain (functional/social, aligned/divergent, emotional intensity via PAD model), we expose these invisible dynamics—demonstrating that 82.7% of clustering variance is driven by trajectory features rather than static labels. Using spatial metaphors, we visualize how authority and emotion distribute over time, making visible patterns like relational drift and frustration peaks that aggregate metrics obscure. The visualization reveals that same-labeled conversations (e.g., "information-seeker → expert-system") can range from flat detached browsing (variance 0.0004) to volatile adversarial testing (variance 0.0164, 41x higher). This work contributes to C&C's theme of *Creativity and Change* by proposing a new form of knowledge: treating conversation not as a log to be read, but as a terrain to be traversed, revealing the hidden emotional labor and power dynamics of human-AI relations.
+We present "Conversational Cartography," a visual framework that maps human-AI interaction as movement through relational-affective space. Analysis of 562 validated conversations reveals a core insight: interactions with identical role classifications often take dramatically different affective journeys, with variance ratios up to 82x between calm information-seeking and volatile adversarial testing. By mapping conversations onto 3D terrain (functional/social, aligned/divergent, emotional intensity via PAD model), we expose these invisible dynamics—demonstrating that 83.3% of clustering variance is driven by trajectory features rather than static labels. Using spatial metaphors, we visualize how authority and emotion distribute over time, making visible patterns like relational drift and frustration peaks that aggregate metrics obscure. The visualization reveals that same-labeled conversations (e.g., "information-seeker → expert-system") can range from flat detached browsing (variance 0.0004) to volatile adversarial testing (variance 0.0164, 41x higher). This work contributes to C&C's theme of *Creativity and Change* by proposing a new form of knowledge: treating conversation not as a log to be read, but as a terrain to be traversed, revealing the hidden emotional labor and power dynamics of human-AI relations.
 
 **Word Count:** 147/150 ✅
 
 **Key Claims Verified:**
-- ✅ 345 validated conversations (subset used for cluster analysis)
+- ✅ 562 validated conversations (subset used for cluster analysis)
 - ✅ Variance ratios up to 82x (0.0164 / 0.0002 = 82x)
-- ✅ 82.7% trajectory feature importance
+- ✅ 83.3% trajectory feature importance
 - ✅ PAD model for emotional intensity
 - ✅ Specific example: 41x difference (0.0164 / 0.0004)
 
-**Dataset Status (2026-01-10):**
-- 569 total conversations classified (includes 345 validated corpus)
+**Dataset Status (2026-01-14):**
+- 570 total conversations classified (includes 562 validated corpus)
 - 333 Chatbot Arena, 186 WildChat, 32 OASST, 18 human-human
-- 538 conversations (94.6%) with new taxonomy (GPT-5.2 + 2.0-social-role-theory)
+- 562 conversations (98.6%) with new taxonomy (GPT-5.2 + 2.0-social-role-theory)
 
 ---
 

@@ -15,22 +15,74 @@ export { getCommunicationFunction, getConversationStructure };
  */
 export function getConversationSource(conversation: ClassifiedConversation): 'chatbot_arena' | 'wildchat' | 'oasst' {
   const id = conversation.id || '';
-  
+
   // Check for each dataset type
   if (id.startsWith('chatbot_arena_')) {
     return 'chatbot_arena';
   }
-  
+
   if (id.startsWith('wildchat_')) {
     return 'wildchat';
   }
-  
+
   if (id.startsWith('oasst-')) {
     return 'oasst';
   }
-  
+
   // Default to chatbot_arena for backwards compatibility
   return 'chatbot_arena';
+}
+
+/**
+ * Calculate User Authority Score (0.0 - 1.0)
+ * Proxies for agency and power in the interaction
+ */
+export function calculateUserAuthority(conv: Conversation): number {
+  let score = 0;
+
+  // 1. Power Dynamics Modifier
+  const pd = conv.classification?.powerDynamics?.category;
+  if (pd === 'human-led') score += 0.3;
+  else if (pd === 'balanced' || pd === 'symmetric') score += 0.15;
+  // ai-led gets 0 bonus
+
+  // 2. Role-Based Authority
+  // Get dominant human role
+  let role = 'information-seeker'; // Default low authority
+  let maxVal = 0;
+
+  if (conv.classification?.humanRole?.distribution) {
+    const dist = conv.classification.humanRole.distribution;
+    for (const [r, v] of Object.entries(dist)) {
+      if ((v as number) > maxVal) {
+        maxVal = v as number;
+        role = r;
+      }
+    }
+  }
+
+  // Role Authority Mapping
+  const roleWeights: Record<string, number> = {
+    'director': 0.7,      // High authority (directing)
+    'evaluator': 0.7,     // High authority (judging)
+    'provider': 0.6,      // High-ish (providing info)
+    'expert': 0.6,
+    'social-expressor': 0.3, // Personal agency
+    'relational-peer': 0.3, // Shared agency
+    'collaborator': 0.3,    // Shared agency
+    'information-seeker': 0.0, // Low authority (asking)
+    'dependent': 0.0,
+    'passive': 0.0
+  };
+
+  // Map old/typo roles if needed
+  const mappedRole = mapOldRoleToNew(role, 'human');
+  const roleScore = roleWeights[mappedRole] ?? 0.2; // Default to low-mid if unknown
+
+  score += roleScore;
+
+  // Clamp to 0-1
+  return Math.max(0.0, Math.min(1.0, score));
 }
 
 
@@ -178,24 +230,10 @@ export function conversationToTerrain(
   const x = getCommunicationFunction(conversation); // X: Functional ↔ Social (Linguistic Markers)
   const y = getConversationStructure(conversation); // Y: Aligned ↔ Divergent (Linguistic Alignment)
 
-  // Z: Affective Intensity (Calm ↔ Agitated)
-  // Use average emotional intensity from message PAD scores if available, otherwise use conversation-level estimate
-  let z: number;
-  if (conversation.messages && conversation.messages.length > 0) {
-    // Calculate average emotional intensity from per-message PAD scores
-    const messagesWithPad = conversation.messages.filter(msg => msg.pad?.emotionalIntensity !== undefined);
-    if (messagesWithPad.length > 0) {
-      const avgIntensity = messagesWithPad.reduce((sum, msg) =>
-        sum + (msg.pad?.emotionalIntensity || 0), 0) / messagesWithPad.length;
-      z = Math.max(0, Math.min(1, avgIntensity));
-    } else {
-      // Fallback: use conversation-level emotional intensity from classification
-      z = heightParams.emotionalIntensity;
-    }
-  } else {
-    // No messages: use conversation-level estimate
-    z = heightParams.emotionalIntensity;
-  }
+  // Z: Authority Level (Agency/Power)
+  // Replaces previous Emotional Intensity (PAD) mapping
+  // Low Z = Low Authority (Seeker), High Z = High Authority (Director)
+  const z = calculateUserAuthority(conversation);
 
   // Pre-compute 2D path points for minimap
   let pathPoints2D: Array<{ x: number; y: number; role: 'user' | 'assistant' }> = [];
@@ -366,7 +404,7 @@ export function mapToGoalRole(humanRole: string, aiRole: string | null): string 
   };
 
   const mappedRole = mapOldRoleToNew(humanRole, 'human');
-  
+
   // Check if human role maps to a goal role
   if (roleMap[mappedRole]) {
     // Confidant requires AI to be social-facilitator or relational-peer (expressive)
@@ -416,38 +454,11 @@ export function getTerrainParams(conv: ClassifiedConversation): {
     ? confidences.reduce((sum, c) => sum + c, 0) / confidences.length
     : 0.7;
 
-  // Calculate emotional intensity based on PAD model (Affective/Evaluative Lens)
-  // Z-height increases with high Arousal (agitation) + low Pleasure (frustration)
-  // Current implementation: Text-based approximation using tone and engagement
-  // Envisioned: Multimodal fusion (face analysis, voice analysis, sentiment)
-
-  const tone = c.emotionalTone?.category || 'neutral';
-  const engagement = c.engagementStyle?.category || 'reactive';
-
-  // PAD Model: Pleasure-Arousal-Dominance
-  // High Arousal + Low Pleasure = Frustration/Agitation = Peaks
-  // Low Arousal + High Pleasure = Affiliation = Valleys
-
-  // Map tone to Pleasure dimension (P)
-  // Low Pleasure (frustration) = serious, neutral when challenging
-  // High Pleasure (affiliation) = supportive, playful, empathetic
-  const pleasure =
-    (tone === 'playful' || tone === 'supportive' || tone === 'empathetic') ? 0.8 : // High pleasure
-      (tone === 'serious' || (tone === 'neutral' && engagement === 'challenging')) ? 0.2 : // Low pleasure
-        0.5; // Neutral
-
-  // Map engagement to Arousal dimension (A)
-  // High Arousal = challenging, questioning (agitation)
-  // Low Arousal = reactive, affirming (calm)
-  const arousal =
-    (engagement === 'challenging' || engagement === 'questioning') ? 0.8 : // High arousal
-      (engagement === 'reactive') ? 0.3 : // Low arousal
-        0.5; // Moderate
-
-  // Emotional intensity = (1 - Pleasure) + Arousal
-  // High intensity = low pleasure (frustration) + high arousal (agitation) = peaks
-  // Low intensity = high pleasure (affiliation) + low arousal (calm) = valleys
-  const emotionalIntensity = (1 - pleasure) * 0.6 + arousal * 0.4;
+  // Authority-Based Intensity (Replaces PAD)
+  // Maps User Authority directly to terrain height/intensity params
+  // High Authority = High Peaks (Director)
+  // Low Authority = Low Valleys (Seeker)
+  const emotionalIntensity = calculateUserAuthority(conv);
 
   return {
     avgConfidence: Math.max(0.3, Math.min(1.0, avgConfidence)),
